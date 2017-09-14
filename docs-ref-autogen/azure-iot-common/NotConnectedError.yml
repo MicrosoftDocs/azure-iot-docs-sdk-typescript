@@ -1,0 +1,51 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-common.NotConnectedError
+    name: NotConnectedError
+    fullName: NotConnectedError
+    children:
+      - azure-iot-common.NotConnectedError.constructor
+      - azure-iot-common.NotConnectedError.Error
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+      Error thrown when the device is disconnected and the operation cannot be
+      completed.
+    extends:
+      - Error
+    source:
+      path: errors.ts
+      startLine: 110
+      remote:
+        path: common/core/src\errors.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: doc-patches
+    package: azure-iot-common
+  - uid: azure-iot-common.NotConnectedError.constructor
+    name: 'NotConnectedError(message?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+          optional: true
+      content: 'new NotConnectedError(message?: string)'
+    type: constructor
+  - uid: azure-iot-common.NotConnectedError.Error
+    name: Error
+    fullName: Error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - ErrorConstructor

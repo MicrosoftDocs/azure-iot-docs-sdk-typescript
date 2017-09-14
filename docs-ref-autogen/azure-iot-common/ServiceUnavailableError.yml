@@ -1,0 +1,51 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-common.ServiceUnavailableError
+    name: ServiceUnavailableError
+    fullName: ServiceUnavailableError
+    children:
+      - azure-iot-common.ServiceUnavailableError.constructor
+      - azure-iot-common.ServiceUnavailableError.Error
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+      Error thrown when the service is unavailable. The operation should be
+      retried.
+    extends:
+      - Error
+    source:
+      path: errors.ts
+      startLine: 167
+      remote:
+        path: common/core/src\errors.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: doc-patches
+    package: azure-iot-common
+  - uid: azure-iot-common.ServiceUnavailableError.constructor
+    name: 'ServiceUnavailableError(message?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+          optional: true
+      content: 'new ServiceUnavailableError(message?: string)'
+    type: constructor
+  - uid: azure-iot-common.ServiceUnavailableError.Error
+    name: Error
+    fullName: Error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - ErrorConstructor

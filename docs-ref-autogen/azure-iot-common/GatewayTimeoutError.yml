@@ -1,0 +1,51 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-common.GatewayTimeoutError
+    name: GatewayTimeoutError
+    fullName: GatewayTimeoutError
+    children:
+      - azure-iot-common.GatewayTimeoutError.constructor
+      - azure-iot-common.GatewayTimeoutError.Error
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+      Error thrown when the IoT Hub instance doesn't process the device method
+      call in time.
+    extends:
+      - Error
+    source:
+      path: errors.ts
+      startLine: 351
+      remote:
+        path: common/core/src\errors.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: doc-patches
+    package: azure-iot-common
+  - uid: azure-iot-common.GatewayTimeoutError.constructor
+    name: 'GatewayTimeoutError(message?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+          optional: true
+      content: 'new GatewayTimeoutError(message?: string)'
+    type: constructor
+  - uid: azure-iot-common.GatewayTimeoutError.Error
+    name: Error
+    fullName: Error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - ErrorConstructor

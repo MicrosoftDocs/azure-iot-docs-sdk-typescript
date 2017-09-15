@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-common.JobNotFoundError
+    name: JobNotFoundError
+    fullName: JobNotFoundError
+    children:
+      - azure-iot-common.JobNotFoundError.constructor
+      - azure-iot-common.JobNotFoundError.Error
+    langs:
+      - typeScript
+    type: class
+    summary: Error thrown when the job with the specified identifier was not found.
+    extends:
+      - Error
+    source:
+      path: errors.ts
+      startLine: 209
+      remote:
+        path: common/core/src\errors.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: doc-patches
+    package: azure-iot-common
+  - uid: azure-iot-common.JobNotFoundError.constructor
+    name: 'JobNotFoundError(message?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+          optional: true
+      content: 'new JobNotFoundError(message?: string)'
+    type: constructor
+  - uid: azure-iot-common.JobNotFoundError.Error
+    name: Error
+    fullName: Error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - ErrorConstructor

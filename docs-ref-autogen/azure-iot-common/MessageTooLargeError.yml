@@ -1,0 +1,51 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-common.MessageTooLargeError
+    name: MessageTooLargeError
+    fullName: MessageTooLargeError
+    children:
+      - azure-iot-common.MessageTooLargeError.constructor
+      - azure-iot-common.MessageTooLargeError.Error
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+      Error thrown when the message sent is too large: the maximum size is
+      256Kb.
+    extends:
+      - Error
+    source:
+      path: errors.ts
+      startLine: 139
+      remote:
+        path: common/core/src\errors.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: doc-patches
+    package: azure-iot-common
+  - uid: azure-iot-common.MessageTooLargeError.constructor
+    name: 'MessageTooLargeError(message?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+          optional: true
+      content: 'new MessageTooLargeError(message?: string)'
+    type: constructor
+  - uid: azure-iot-common.MessageTooLargeError.Error
+    name: Error
+    fullName: Error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - ErrorConstructor

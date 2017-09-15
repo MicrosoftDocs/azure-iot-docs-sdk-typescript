@@ -1,0 +1,51 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-common.InternalServerError
+    name: InternalServerError
+    fullName: InternalServerError
+    children:
+      - azure-iot-common.InternalServerError.constructor
+      - azure-iot-common.InternalServerError.Error
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+      Error thrown when an internal server error occured. You may have found a
+      bug?
+    extends:
+      - Error
+    source:
+      path: errors.ts
+      startLine: 153
+      remote:
+        path: common/core/src\errors.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: doc-patches
+    package: azure-iot-common
+  - uid: azure-iot-common.InternalServerError.constructor
+    name: 'InternalServerError(message?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+          optional: true
+      content: 'new InternalServerError(message?: string)'
+    type: constructor
+  - uid: azure-iot-common.InternalServerError.Error
+    name: Error
+    fullName: Error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - ErrorConstructor

@@ -1,0 +1,51 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-common.InvalidEtagError
+    name: InvalidEtagError
+    fullName: InvalidEtagError
+    children:
+      - azure-iot-common.InvalidEtagError.constructor
+      - azure-iot-common.InvalidEtagError.Error
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+      Error thrown when the eTag specified is incorrectly formatted or out of
+      date.
+    extends:
+      - Error
+    source:
+      path: errors.ts
+      startLine: 280
+      remote:
+        path: common/core/src\errors.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: doc-patches
+    package: azure-iot-common
+  - uid: azure-iot-common.InvalidEtagError.constructor
+    name: 'InvalidEtagError(message?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+          optional: true
+      content: 'new InvalidEtagError(message?: string)'
+    type: constructor
+  - uid: azure-iot-common.InvalidEtagError.Error
+    name: Error
+    fullName: Error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - ErrorConstructor

@@ -3,8 +3,10 @@
     "content": [
       {
         "files": [
-          "**/*.md"
+          "**/*.md",
+          "**/*.yml"
         ],
+        "src": "docs-ref-autogen",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
@@ -16,21 +18,15 @@
       }
     ],
     "resource": [
-      {
-        "files": [
-          "**/*.png",
-          "**/*.jpg"
-        ],
-        "exclude": [
-          "**/obj/**",
-          "**/includes/**"
-        ]
-      }
     ],
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {},
-    "fileMetadata": {},
+    "fileMetadata": {
+      "ms.topic": {
+        "docs-ref-autogen/**": "reference"
+      }
+    },
     "template": [],
     "dest": "azure-iot-docs-sdk-typescript"
   }

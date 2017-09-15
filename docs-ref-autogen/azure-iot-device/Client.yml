@@ -1,0 +1,881 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-device.Client
+    name: Client
+    fullName: Client
+    children:
+      - azure-iot-device.Client.BlobUpload
+      - azure-iot-device.Client.Config
+      - azure-iot-device.Client.DeviceMethodRequest
+      - azure-iot-device.Client.DeviceMethodResponse
+      - azure-iot-device.Client.Transport
+      - azure-iot-device.Client.constructor
+      - azure-iot-device.Client.abandon
+      - azure-iot-device.Client.close
+      - azure-iot-device.Client.complete
+      - azure-iot-device.Client.getTwin
+      - azure-iot-device.Client.onDeviceMethod
+      - azure-iot-device.Client.open
+      - azure-iot-device.Client.reject
+      - azure-iot-device.Client.sendEvent
+      - azure-iot-device.Client.sendEventBatch
+      - azure-iot-device.Client.setOptions
+      - azure-iot-device.Client.setTransportOptions
+      - azure-iot-device.Client.updateSharedAccessSignature
+      - azure-iot-device.Client.uploadToBlob
+      - azure-iot-device.Client.fromConnectionString
+      - azure-iot-device.Client.fromSharedAccessSignature
+    langs:
+      - typeScript
+    type: class
+    summary: >
+      IoT Hub device client used to connect a device with an Azure IoT hub.
+
+      Users of the SDK should call one of the factory methods,
+
+      [fromConnectionString](xref:azure-iot-device.Client.fromConnectionString)
+
+      or
+      [fromSharedAccessSignature](xref:azure-iot-device.Client.fromSharedAccessSignature)
+
+      to create an IoT Hub device client.
+    extends:
+      - EventEmitter
+    source:
+      path: client.ts
+      startLine: 32
+      remote:
+        path: device/core/src\client.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: doc-patches
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.BlobUpload
+    name: BlobUpload
+    fullName: BlobUpload
+    children:
+      - azure-iot-device.Client.BlobUpload.updateSharedAccessSignature
+      - azure-iot-device.Client.BlobUpload.uploadToBlob
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    source:
+      path: client.ts
+      startLine: 818
+      remote:
+        path: device/core/src\client.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: doc-patches
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.BlobUpload.updateSharedAccessSignature
+    name: 'updateSharedAccessSignature(sharedAccessSignature: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: sharedAccessSignature
+          type:
+            - string
+          description: ''
+      content: 'function updateSharedAccessSignature(sharedAccessSignature: string)'
+    type: method
+  - uid: azure-iot-device.Client.BlobUpload.uploadToBlob
+    name: >-
+      uploadToBlob(blobName: string, stream: Stream, steamLength: number, done:
+      function)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: blobName
+          type:
+            - string
+          description: ''
+        - id: stream
+          type:
+            - Stream
+          description: ''
+        - id: steamLength
+          type:
+            - number
+          description: ''
+        - id: done
+          type:
+            - function
+          description: ''
+      content: >-
+        function uploadToBlob(blobName: string, stream: Stream, steamLength:
+        number, done: function)
+    type: method
+  - uid: azure-iot-device.Client.Config
+    name: Config
+    fullName: Config
+    children:
+      - azure-iot-device.Client.Config.hubName
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    extends:
+      - any
+    source:
+      path: client.ts
+      startLine: 803
+      remote:
+        path: device/core/src\client.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: doc-patches
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.Config.hubName
+    name: hubName
+    fullName: hubName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: azure-iot-device.Client.DeviceMethodRequest
+    name: DeviceMethodRequest
+    fullName: DeviceMethodRequest
+    children:
+      - azure-iot-device.Client.DeviceMethodRequest.methodName
+      - azure-iot-device.Client.DeviceMethodRequest.payload
+      - azure-iot-device.Client.DeviceMethodRequest.requestId
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    source:
+      path: client.ts
+      startLine: 823
+      remote:
+        path: device/core/src\client.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: doc-patches
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.DeviceMethodRequest.methodName
+    name: methodName
+    fullName: methodName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: azure-iot-device.Client.DeviceMethodRequest.payload
+    name: payload
+    fullName: payload
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - Buffer
+  - uid: azure-iot-device.Client.DeviceMethodRequest.requestId
+    name: requestId
+    fullName: requestId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: azure-iot-device.Client.DeviceMethodResponse
+    name: DeviceMethodResponse
+    fullName: DeviceMethodResponse
+    children:
+      - azure-iot-device.Client.DeviceMethodResponse.isResponseComplete
+      - azure-iot-device.Client.DeviceMethodResponse.payload
+      - azure-iot-device.Client.DeviceMethodResponse.requestId
+      - azure-iot-device.Client.DeviceMethodResponse.status
+      - azure-iot-device.Client.DeviceMethodResponse.send
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    source:
+      path: client.ts
+      startLine: 829
+      remote:
+        path: device/core/src\client.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: doc-patches
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.DeviceMethodResponse.isResponseComplete
+    name: isResponseComplete
+    fullName: isResponseComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: azure-iot-device.Client.DeviceMethodResponse.payload
+    name: payload
+    fullName: payload
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - any
+  - uid: azure-iot-device.Client.DeviceMethodResponse.requestId
+    name: requestId
+    fullName: requestId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: azure-iot-device.Client.DeviceMethodResponse.status
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - number
+  - uid: azure-iot-device.Client.DeviceMethodResponse.send
+    name: 'send(status: number, payload?: any, done?: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: status
+          type:
+            - number
+          description: ''
+        - id: payload
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: done
+          type:
+            - function
+          description: ''
+          optional: true
+      content: 'function send(status: number, payload?: any, done?: function)'
+    type: method
+  - uid: azure-iot-device.Client.Transport
+    name: Transport
+    fullName: Transport
+    children:
+      - azure-iot-device.Client.Transport.abandon
+      - azure-iot-device.Client.Transport.complete
+      - azure-iot-device.Client.Transport.getReceiver
+      - azure-iot-device.Client.Transport.reject
+      - azure-iot-device.Client.Transport.sendEvent
+      - azure-iot-device.Client.Transport.sendEventBatch
+      - azure-iot-device.Client.Transport.setOptions
+      - azure-iot-device.Client.Transport.updateSharedAccessSignature
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    extends:
+      - EventEmitter
+    source:
+      path: client.ts
+      startLine: 807
+      remote:
+        path: device/core/src\client.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: doc-patches
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.Transport.abandon
+    name: 'abandon(message: Message, done: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+        - id: done
+          type:
+            - function
+          description: ''
+      content: 'function abandon(message: Message, done: function)'
+    type: method
+  - uid: azure-iot-device.Client.Transport.complete
+    name: 'complete(message: Message, done: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+        - id: done
+          type:
+            - function
+          description: ''
+      content: 'function complete(message: Message, done: function)'
+    type: method
+  - uid: azure-iot-device.Client.Transport.getReceiver
+    name: 'getReceiver(func: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: func
+          type:
+            - function
+          description: ''
+      content: 'function getReceiver(func: function)'
+    type: method
+  - uid: azure-iot-device.Client.Transport.reject
+    name: 'reject(message: Message, done: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+        - id: done
+          type:
+            - function
+          description: ''
+      content: 'function reject(message: Message, done: function)'
+    type: method
+  - uid: azure-iot-device.Client.Transport.sendEvent
+    name: 'sendEvent(message: Message, done: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+        - id: done
+          type:
+            - function
+          description: ''
+      content: 'function sendEvent(message: Message, done: function)'
+    type: method
+  - uid: azure-iot-device.Client.Transport.sendEventBatch
+    name: 'sendEventBatch(messages: Message[], done: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: messages
+          type:
+            - 'Message[]'
+          description: ''
+        - id: done
+          type:
+            - function
+          description: ''
+      content: 'function sendEventBatch(messages: Message[], done: function)'
+    type: method
+  - uid: azure-iot-device.Client.Transport.setOptions
+    name: 'setOptions(options: any, done: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: options
+          type:
+            - any
+          description: ''
+        - id: done
+          type:
+            - function
+          description: ''
+      content: 'function setOptions(options: any, done: function)'
+    type: method
+  - uid: azure-iot-device.Client.Transport.updateSharedAccessSignature
+    name: 'updateSharedAccessSignature(sharedAccessSignature: string, done: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: sharedAccessSignature
+          type:
+            - string
+          description: ''
+        - id: done
+          type:
+            - function
+          description: ''
+      content: >-
+        function updateSharedAccessSignature(sharedAccessSignature: string,
+        done: function)
+    type: method
+  - uid: azure-iot-device.Client.constructor
+    name: >-
+      Client(transport: Transport, connStr?: string, blobUploadClient?:
+      BlobUploadClient)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: transport
+          type:
+            - '@azure-iot-device.Client.Transport'
+          description: |-
+            An object that implements the interface
+                                               expected of a transport object, e.g.,
+                                               [Http](xref:azure-iot-device-http.Http).
+        - id: connStr
+          type:
+            - string
+          description: >-
+            A connection string (optional: when not provided,
+            updateSharedAccessSignature must be called to set the
+            SharedAccessSignature token directly).
+          optional: true
+        - id: blobUploadClient
+          type:
+            - BlobUploadClient
+          description: |
+            An object that is capable of uploading a stream to a blob.
+          optional: true
+      content: >-
+        new Client(transport: Transport, connStr?: string, blobUploadClient?:
+        BlobUploadClient)
+    type: constructor
+  - uid: azure-iot-device.Client.abandon
+    name: 'abandon(message: Message, abandonCallback: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The `abandon` method directs the transport to settle the message passed as
+      argument as 'abandoned'.
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: The message to settle.
+        - id: abandonCallback
+          type:
+            - function
+          description: |
+            The callback to call when the message is abandoned.
+      content: 'function abandon(message: Message, abandonCallback: function)'
+    exceptions:
+      - type: ReferenceException
+        description: If the message is falsy.
+    type: method
+  - uid: azure-iot-device.Client.close
+    name: 'close(closeCallback?: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The `close` method directs the transport to close the current connection
+      to the IoT Hub instance
+    syntax:
+      parameters:
+        - id: closeCallback
+          type:
+            - function
+          description: |
+            The callback to be invoked when the connection has been closed.
+          optional: true
+      content: 'function close(closeCallback?: function)'
+    type: method
+  - uid: azure-iot-device.Client.complete
+    name: 'complete(message: Message, completeCallback: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The `complete` method directs the transport to settle the message passed
+      as argument as 'completed'.
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: The message to settle.
+        - id: completeCallback
+          type:
+            - function
+          description: |
+            The callback to call when the message is completed.
+      content: 'function complete(message: Message, completeCallback: function)'
+    exceptions:
+      - type: ReferenceError
+        description: If the message is falsy.
+    type: method
+  - uid: azure-iot-device.Client.getTwin
+    name: 'getTwin(done: function, twin?: Twin)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The `getTwin` method creates a Twin object and establishes a connection
+      with the Twin service.
+    syntax:
+      parameters:
+        - id: done
+          type:
+            - function
+          description: |+
+            The callback to call when the connection is established.
+
+        - id: twin
+          type:
+            - '@azure-iot-device.Twin'
+          description: ''
+          optional: true
+      content: 'function getTwin(done: function, twin?: Twin)'
+    type: method
+  - uid: azure-iot-device.Client.onDeviceMethod
+    name: 'onDeviceMethod(methodName: string, callback: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      Registers the `callback` to be invoked when a
+                         cloud-to-device method call is received by the client
+                         for the given `methodName`.
+    syntax:
+      parameters:
+        - id: methodName
+          type:
+            - string
+          description: |-
+            The name of the method for which the callback
+                                           is to be registered.
+        - id: callback
+          type:
+            - function
+          description: |
+            The callback to be invoked when the C2D method
+                                           call is received.
+      content: 'function onDeviceMethod(methodName: string, callback: function)'
+    exceptions:
+      - type: ReferenceError
+        description: If the `methodName` or `callback` parameter
+      - type: TypeError
+        description: If the `methodName` parameter is not a string
+    type: method
+  - uid: azure-iot-device.Client.open
+    name: 'open(openCallback: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      Call the transport layer CONNECT function if the
+                         transport layer implements it
+    syntax:
+      parameters:
+        - id: openCallback
+          type:
+            - function
+          description: |
+            The callback to be invoked when `open`
+                                            completes execution.
+      content: 'function open(openCallback: function)'
+    type: method
+  - uid: azure-iot-device.Client.reject
+    name: 'reject(message: Message, rejectCallback: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The `reject` method directs the transport to settle the message passed as
+      argument as 'rejected'.
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: The message to settle.
+        - id: rejectCallback
+          type:
+            - function
+          description: |
+            The callback to call when the message is rejected.
+      content: 'function reject(message: Message, rejectCallback: function)'
+    exceptions:
+      - type: ReferenceException
+        description: If the message is falsy.
+    type: method
+  - uid: azure-iot-device.Client.sendEvent
+    name: 'sendEvent(message: Message, sendEventCallback?: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The [sendEvent](xref:azure-iot-device.Client.sendEvent) method sends an
+      event message
+                         to the IoT Hub as the device indicated by the connection string passed
+                         via the constructor.
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: 'The [message](xref:azure-iot-common.Message) to be sent.'
+        - id: sendEventCallback
+          type:
+            - function
+          description: |
+            The callback to be invoked when `sendEvent` completes execution.
+          optional: true
+      content: 'function sendEvent(message: Message, sendEventCallback?: function)'
+    type: method
+  - uid: azure-iot-device.Client.sendEventBatch
+    name: 'sendEventBatch(messages: Message[], sendEventBatchCallback?: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The [sendEventBatch](xref:azure-iot-device.Client.sendEventBatch) method
+      sends a list
+                         of event messages to the IoT Hub as the device indicated by the connection
+                         string passed via the constructor.
+    syntax:
+      parameters:
+        - id: messages
+          type:
+            - 'Message[]'
+          description: |-
+            Array of [Message](xref:azure-iot-common.Message)
+                                                           objects to be sent as a batch.
+        - id: sendEventBatchCallback
+          type:
+            - function
+          description: |
+            The callback to be invoked when
+                                                           `sendEventBatch` completes execution.
+          optional: true
+      content: >-
+        function sendEventBatch(messages: Message[], sendEventBatchCallback?:
+        function)
+    type: method
+  - uid: azure-iot-device.Client.setOptions
+    name: 'setOptions(options: any, done?: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: The `setOptions` method let the user configure the client.
+    syntax:
+      parameters:
+        - id: options
+          type:
+            - any
+          description: The options structure
+        - id: done
+          type:
+            - function
+          description: |
+            The callback that shall be called when setOptions is finished.
+          optional: true
+      content: 'function setOptions(options: any, done?: function)'
+    exceptions:
+      - type: ReferenceError
+        description: If the options structure is falsy
+    type: method
+  - uid: azure-iot-device.Client.setTransportOptions
+    name: 'setTransportOptions(options: any, done?: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The `setTransportOptions` method configures transport-specific options for
+      the client and its underlying transport object.
+    syntax:
+      parameters:
+        - id: options
+          type:
+            - any
+          description: The options that shall be set (see transports documentation).
+        - id: done
+          type:
+            - function
+          description: >
+            The callback that shall be invoked with either an error or a result
+            object.
+          optional: true
+      content: 'function setTransportOptions(options: any, done?: function)'
+    type: method
+  - uid: azure-iot-device.Client.updateSharedAccessSignature
+    name: >-
+      updateSharedAccessSignature(sharedAccessSignature: string,
+      updateSasCallback?: function)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Updates the Shared Access Signature token used by the transport to
+      authenticate with the IoT Hub service.
+    syntax:
+      parameters:
+        - id: sharedAccessSignature
+          type:
+            - string
+          description: The new SAS token to use.
+        - id: updateSasCallback
+          type:
+            - function
+          description: ''
+          optional: true
+      content: >-
+        function updateSharedAccessSignature(sharedAccessSignature: string,
+        updateSasCallback?: function)
+    exceptions:
+      - type: ReferenceError
+        description: If the sharedAccessSignature parameter is falsy.
+      - type: ReferenceError
+        description: If the client uses x509 authentication.
+    type: method
+  - uid: azure-iot-device.Client.uploadToBlob
+    name: >-
+      uploadToBlob(blobName: string, stream: Stream, streamLength: number, done:
+      function)
+    children: []
+    langs:
+      - typeScript
+    summary: The `uploadToBlob` method uploads a stream to a blob.
+    syntax:
+      parameters:
+        - id: blobName
+          type:
+            - string
+          description: >-
+            The name to use for the blob that will be created with the content
+            of the stream.
+        - id: stream
+          type:
+            - Stream
+          description: The data to that should be uploaded to the blob.
+        - id: streamLength
+          type:
+            - number
+          description: The size of the data to that should be uploaded to the blob.
+        - id: done
+          type:
+            - function
+          description: |
+            The callback to call when the upload is complete.
+      content: >-
+        function uploadToBlob(blobName: string, stream: Stream, streamLength:
+        number, done: function)
+    exceptions:
+      - type: ReferenceException
+        description: If blobName or stream or streamLength is falsy.
+    type: method
+  - uid: azure-iot-device.Client.fromConnectionString
+    name: 'fromConnectionString(connStr: string, transportCtor: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      Creates an IoT Hub device client from the given
+                         connection string using the given transport type.
+    syntax:
+      parameters:
+        - id: connStr
+          type:
+            - string
+          description: |-
+            A connection string which encapsulates "device
+                                             connect" permissions on an IoT hub.
+        - id: transportCtor
+          type:
+            - any
+          description: ''
+      content: 'function fromConnectionString(connStr: string, transportCtor: any)'
+      return:
+        type:
+          - '@azure-iot-device.Client'
+    exceptions:
+      - type: ReferenceError
+        description: If the connStr parameter is falsy.
+    type: method
+  - uid: azure-iot-device.Client.fromSharedAccessSignature
+    name: >-
+      fromSharedAccessSignature(sharedAccessSignature: string, transportCtor:
+      any)
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      Creates an IoT Hub device client from the given
+                         shared access signature using the given transport type.
+    syntax:
+      parameters:
+        - id: sharedAccessSignature
+          type:
+            - string
+          description: |-
+            A shared access signature which encapsulates "device
+                                             connect" permissions on an IoT hub.
+        - id: transportCtor
+          type:
+            - any
+          description: ''
+      content: >-
+        function fromSharedAccessSignature(sharedAccessSignature: string,
+        transportCtor: any)
+      return:
+        type:
+          - '@azure-iot-device.Client'
+    exceptions:
+      - type: ReferenceError
+        description: If the connStr parameter is falsy.
+    type: method

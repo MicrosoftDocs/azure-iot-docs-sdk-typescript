@@ -1,0 +1,51 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-common.PreconditionFailedError
+    name: PreconditionFailedError
+    fullName: PreconditionFailedError
+    children:
+      - azure-iot-common.PreconditionFailedError.constructor
+      - azure-iot-common.PreconditionFailedError.Error
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+      Error thrown when a condition that should have been met in order to
+      execute an operation was not.
+    extends:
+      - Error
+    source:
+      path: errors.ts
+      startLine: 308
+      remote:
+        path: common/core/src\errors.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: doc-patches
+    package: azure-iot-common
+  - uid: azure-iot-common.PreconditionFailedError.constructor
+    name: 'PreconditionFailedError(message?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+          optional: true
+      content: 'new PreconditionFailedError(message?: string)'
+    type: constructor
+  - uid: azure-iot-common.PreconditionFailedError.Error
+    name: Error
+    fullName: Error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - ErrorConstructor

@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-common.BadDeviceResponseError
+    name: BadDeviceResponseError
+    fullName: BadDeviceResponseError
+    children:
+      - azure-iot-common.BadDeviceResponseError.constructor
+      - azure-iot-common.BadDeviceResponseError.Error
+    langs:
+      - typeScript
+    type: class
+    summary: Error thrown when a device sends a bad response to a device method call.
+    extends:
+      - Error
+    source:
+      path: errors.ts
+      startLine: 336
+      remote:
+        path: common/core/src\errors.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: doc-patches
+    package: azure-iot-common
+  - uid: azure-iot-common.BadDeviceResponseError.constructor
+    name: 'BadDeviceResponseError(message?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+          optional: true
+      content: 'new BadDeviceResponseError(message?: string)'
+    type: constructor
+  - uid: azure-iot-common.BadDeviceResponseError.Error
+    name: Error
+    fullName: Error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - ErrorConstructor

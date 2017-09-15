@@ -1,0 +1,51 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-common.UnauthorizedError
+    name: UnauthorizedError
+    fullName: UnauthorizedError
+    children:
+      - azure-iot-common.UnauthorizedError.constructor
+      - azure-iot-common.UnauthorizedError.Error
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+      Error thrown when the connection parameters are wrong and the server
+      refused the connection.
+    extends:
+      - Error
+    source:
+      path: errors.ts
+      startLine: 82
+      remote:
+        path: common/core/src\errors.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: doc-patches
+    package: azure-iot-common
+  - uid: azure-iot-common.UnauthorizedError.constructor
+    name: 'UnauthorizedError(message?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+          optional: true
+      content: 'new UnauthorizedError(message?: string)'
+    type: constructor
+  - uid: azure-iot-common.UnauthorizedError.Error
+    name: Error
+    fullName: Error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - ErrorConstructor

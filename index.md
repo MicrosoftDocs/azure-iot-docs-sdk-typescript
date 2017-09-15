@@ -1,1 +1,0 @@
-# Welcome to azure-iot-docs-sdk-typescript!

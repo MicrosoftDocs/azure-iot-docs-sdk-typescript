@@ -85,8 +85,8 @@ items:
             an integer value representing the number of seconds since the epoch
             00:00:00 UTC on 1 January 1970.
       content: >-
-        function create(resourceUri: string, keyName: string, key: string,
-        expiry: number)
+        static function create(resourceUri: string, keyName: string, key:
+        string, expiry: number)
       return:
         type:
           - '@azure-iot-common.SharedAccessSignature'
@@ -114,7 +114,7 @@ items:
           description: |
             an array of fields that we expect to find in the source string.
           optional: true
-      content: 'function parse(source: string, requiredFields?: string[])'
+      content: 'static function parse(source: string, requiredFields?: string[])'
       return:
         type:
           - '@azure-iot-common.SharedAccessSignature'

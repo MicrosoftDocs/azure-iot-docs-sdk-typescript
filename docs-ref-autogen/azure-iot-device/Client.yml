@@ -139,6 +139,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string hubName
       return:
         type:
           - string
@@ -170,6 +171,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string methodName
       return:
         type:
           - string
@@ -182,6 +184,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: Buffer payload
       return:
         type:
           - Buffer
@@ -194,6 +197,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string requestId
       return:
         type:
           - string
@@ -227,6 +231,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean isResponseComplete
       return:
         type:
           - boolean
@@ -239,6 +244,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: any payload
       return:
         type:
           - any
@@ -251,6 +257,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string requestId
       return:
         type:
           - string
@@ -263,6 +270,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number status
       return:
         type:
           - number
@@ -839,7 +847,9 @@ items:
           type:
             - any
           description: ''
-      content: 'function fromConnectionString(connStr: string, transportCtor: any)'
+      content: >-
+        static function fromConnectionString(connStr: string, transportCtor:
+        any)
       return:
         type:
           - '@azure-iot-device.Client'
@@ -870,7 +880,7 @@ items:
             - any
           description: ''
       content: >-
-        function fromSharedAccessSignature(sharedAccessSignature: string,
+        static function fromSharedAccessSignature(sharedAccessSignature: string,
         transportCtor: any)
       return:
         type:

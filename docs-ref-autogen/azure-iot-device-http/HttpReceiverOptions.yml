@@ -53,6 +53,7 @@ items:
       Use this option to configure the receiver to receive only once at a
       specific time.
     syntax:
+      content: Date at
       return:
         type:
           - Date
@@ -65,6 +66,7 @@ items:
     type: property
     summary: Use a cron-formatted string
     syntax:
+      content: string cron
       return:
         type:
           - string
@@ -79,6 +81,7 @@ items:
       Boolean indicating whether only one message should be received all
       messages should be drained.
     syntax:
+      content: boolean drain
       return:
         type:
           - boolean
@@ -91,6 +94,7 @@ items:
     type: property
     summary: Interval **in seconds** at which the Azure IoT hub is going to be polled.
     syntax:
+      content: number interval
       return:
         type:
           - number
@@ -103,6 +107,7 @@ items:
     type: property
     summary: Does not poll and instead rely on the user calling the `receive` method.
     syntax:
+      content: boolean manualPolling
       return:
         type:
           - boolean

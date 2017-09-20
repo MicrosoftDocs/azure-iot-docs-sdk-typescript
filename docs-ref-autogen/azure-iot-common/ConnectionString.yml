@@ -36,6 +36,7 @@ items:
       Unique device identifier as it exists in the device identity registry.
       This is only used for device connection strings.
     syntax:
+      content: string DeviceId
       return:
         type:
           - string
@@ -53,6 +54,7 @@ items:
       Now that MQTT is supported natively in Azure IoT Hub, this parameter is
       ignored and kept only for compatibility purposes.
     syntax:
+      content: string GatewayHostName
       return:
         type:
           - string
@@ -67,6 +69,7 @@ items:
     type: property
     summary: Hostname of the Azure IoT hub.
     syntax:
+      content: string HostName
       return:
         type:
           - string
@@ -82,6 +85,7 @@ items:
       turn used to authenticate the connection. Associated either with a
       specific device or a specific service policy.
     syntax:
+      content: string SharedAccessKey
       return:
         type:
           - string
@@ -97,6 +101,7 @@ items:
       in the case of the service SDK, unused with the Device SDK (which uses
       `DeviceId` instead).
     syntax:
+      content: string SharedAccessKeyName
       return:
         type:
           - string
@@ -111,6 +116,7 @@ items:
       This property exists only if a device uses x509 certificates for
       authentication and if it exists, will be set to True.
     syntax:
+      content: string x509
       return:
         type:
           - string
@@ -134,7 +140,7 @@ items:
           description: |
             array of strings listing the fields that are expected to be found.
           optional: true
-      content: 'function parse(source: string, requiredFields?: string[])'
+      content: 'static function parse(source: string, requiredFields?: string[])'
       return:
         type:
           - '@azure-iot-common.ConnectionString'

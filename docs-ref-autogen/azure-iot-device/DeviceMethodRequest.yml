@@ -59,6 +59,7 @@ items:
     type: property
     summary: The name of the method to be called.
     syntax:
+      content: string methodName
       return:
         type:
           - string
@@ -71,6 +72,7 @@ items:
     type: property
     summary: A Node `Buffer` representing the payload of the method call request.
     syntax:
+      content: any payload
       return:
         type:
           - any
@@ -85,6 +87,7 @@ items:
       The request identifier supplied by the service for this device method
       call.
     syntax:
+      content: string requestId
       return:
         type:
           - string

@@ -37,6 +37,7 @@ items:
     type: property
     summary: Token used to iterate over multiple pages of results.
     syntax:
+      content: string continuationToken
       return:
         type:
           - string
@@ -49,6 +50,7 @@ items:
     type: property
     summary: Boolean indicating whether there are more results pages.
     syntax:
+      content: boolean hasMoreResults
       return:
         type:
           - boolean

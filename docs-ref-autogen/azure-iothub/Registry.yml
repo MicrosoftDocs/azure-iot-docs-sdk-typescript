@@ -78,6 +78,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@azure-iothub.Registry.DeviceRegistryOperationError[] errors'
       return:
         type:
           - '@azure-iothub.Registry.DeviceRegistryOperationError[]'
@@ -90,6 +91,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean isSuccessful
       return:
         type:
           - boolean
@@ -119,6 +121,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string deviceId
       return:
         type:
           - string
@@ -150,6 +153,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string deviceId
       return:
         type:
           - string
@@ -162,6 +166,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: Error errorCode
       return:
         type:
           - Error
@@ -174,6 +179,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string errorStatus
       return:
         type:
           - string
@@ -219,6 +225,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string query
       return:
         type:
           - string
@@ -250,6 +257,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number disabledDeviceCount
       return:
         type:
           - number
@@ -262,6 +270,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number enabledDeviceCount
       return:
         type:
           - number
@@ -274,6 +283,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number totalDeviceCount
       return:
         type:
           - number
@@ -304,6 +314,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string host
       return:
         type:
           - string
@@ -316,6 +327,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string sharedAccessSignature
       return:
         type:
           - string
@@ -806,7 +818,7 @@ items:
             A connection string which encapsulates the
                                          appropriate (read and/or write) Registry
                                          permissions.
-      content: 'function fromConnectionString(value: string)'
+      content: 'static function fromConnectionString(value: string)'
       return:
         type:
           - '@azure-iothub.Registry'
@@ -826,7 +838,7 @@ items:
             A shared access signature which encapsulates
                                          the appropriate (read and/or write) Registry
                                          permissions.
-      content: 'function fromSharedAccessSignature(value: string)'
+      content: 'static function fromSharedAccessSignature(value: string)'
       return:
         type:
           - '@azure-iothub.Registry'

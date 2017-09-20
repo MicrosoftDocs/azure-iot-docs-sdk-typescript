@@ -61,6 +61,7 @@ items:
     type: property
     summary: Type of feedback requested (in case of cloud-to-device command)
     syntax:
+      content: string ack
       return:
         type:
           - string
@@ -73,6 +74,7 @@ items:
     type: property
     summary: Used in message responses and feedback
     syntax:
+      content: string correlationId
       return:
         type:
           - string
@@ -85,6 +87,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: any data
       return:
         type:
           - any
@@ -99,6 +102,7 @@ items:
       Expiry time in UTC interpreted by hub on C2D messages. Ignored in other
       cases.
     syntax:
+      content: any expiryTimeUtc
       return:
         type:
           - any
@@ -111,6 +115,7 @@ items:
     type: property
     summary: 'Used to Abandon, Reject or Accept the message'
     syntax:
+      content: string lockToken
       return:
         type:
           - string
@@ -126,6 +131,7 @@ items:
       (up to 128 char long) of ASCII 7-bit alphanumeric chars and the following
       special symbols: <br/>`- : . + % _ # * ? ! ( ) , = @ ; $ '`.
     syntax:
+      content: string messageId
       return:
         type:
           - string
@@ -140,6 +146,7 @@ items:
       A map containing string keys and values for storing custom message
       properties.
     syntax:
+      content: '@azure-iot-common.Properties properties'
       return:
         type:
           - '@azure-iot-common.Properties'
@@ -152,6 +159,7 @@ items:
     type: property
     summary: Destination of the message.
     syntax:
+      content: string to
       return:
         type:
           - string
@@ -164,6 +172,7 @@ items:
     type: property
     summary: Used to specify the entity creating the message
     syntax:
+      content: string userId
       return:
         type:
           - string

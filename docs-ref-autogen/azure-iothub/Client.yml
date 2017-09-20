@@ -257,6 +257,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string host
       return:
         type:
           - string
@@ -269,6 +270,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string hubName
       return:
         type:
           - string
@@ -281,6 +283,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string keyName
       return:
         type:
           - string
@@ -293,6 +296,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string sharedAccessSignature
       return:
         type:
           - string
@@ -467,7 +471,7 @@ items:
           description: ''
           optional: true
       content: >-
-        function fromConnectionString(connStr: string, transportCtor?:
+        static function fromConnectionString(connStr: string, transportCtor?:
         TransportCtor)
       return:
         type:
@@ -498,7 +502,7 @@ items:
           description: ''
           optional: true
       content: >-
-        function fromSharedAccessSignature(sharedAccessSignature: string,
+        static function fromSharedAccessSignature(sharedAccessSignature: string,
         transportCtor?: TransportCtor)
       return:
         type:

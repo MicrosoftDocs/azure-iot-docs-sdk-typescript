@@ -53,6 +53,7 @@ items:
       The desired and reported properties dictionnaries (respectively in
       `properties.desired` and `properties.reported`).
     syntax:
+      content: any properties
       return:
         type:
           - any
@@ -65,6 +66,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string desiredPath
       return:
         type:
           - string
@@ -77,6 +79,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string errorEvent
       return:
         type:
           - string
@@ -89,6 +92,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string postEvent
       return:
         type:
           - string
@@ -101,6 +105,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string responseEvent
       return:
         type:
           - string
@@ -113,6 +118,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string subscribedEvent
       return:
         type:
           - string
@@ -125,6 +131,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static number timeout
       return:
         type:
           - number

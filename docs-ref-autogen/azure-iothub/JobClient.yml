@@ -250,7 +250,7 @@ items:
             A connection string which encapsulates the
                                                               appropriate (read and/or write) Registry
                                                               permissions.
-      content: 'function fromConnectionString(connectionString: string)'
+      content: 'static function fromConnectionString(connectionString: string)'
       return:
         type:
           - '@azure-iothub.JobClient'
@@ -273,7 +273,7 @@ items:
             A shared access signature which encapsulates
                                                          the appropriate (read and/or write) Registry
                                                          permissions.
-      content: 'function fromSharedAccessSignature(sharedAccessSignature: string)'
+      content: 'static function fromSharedAccessSignature(sharedAccessSignature: string)'
       return:
         type:
           - '@azure-iothub.JobClient'

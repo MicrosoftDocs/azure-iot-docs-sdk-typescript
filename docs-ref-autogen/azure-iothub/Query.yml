@@ -61,6 +61,7 @@ items:
       - typeScript
     summary: Gets the next page of results for this query.
     syntax:
+      content: 'function next(continuationTokenOrCallback: string, done?: Callback<any>)'
       parameters:
         - id: continuationTokenOrCallback
           type:
@@ -73,7 +74,6 @@ items:
             The callback that will be called with either an Error object or
                                                       the results of the query.
           optional: true
-      content: 'function next(continuationTokenOrCallback: string, done?: Callback<any>)'
     type: method
   - uid: azure-iothub.Query.nextAsTwin
     name: 'nextAsTwin(continuationToken: string, done: Callback<Twin[]>)'
@@ -82,6 +82,7 @@ items:
       - typeScript
     summary: Gets the next page of results for this query and cast them as Twins.
     syntax:
+      content: 'function nextAsTwin(continuationToken: string, done: Callback<Twin[]>)'
       parameters:
         - id: continuationToken
           type:
@@ -93,5 +94,4 @@ items:
           description: |
             The callback that will be called with either an Error object or
                                                       the results of the query.
-      content: 'function nextAsTwin(continuationToken: string, done: Callback<Twin[]>)'
     type: method

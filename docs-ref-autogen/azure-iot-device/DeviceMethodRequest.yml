@@ -32,6 +32,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new DeviceMethodRequest(requestId: string, methodName: string, body?:
+        any)
       parameters:
         - id: requestId
           type:
@@ -46,9 +49,6 @@ items:
             - any
           description: ''
           optional: true
-      content: >-
-        new DeviceMethodRequest(requestId: string, methodName: string, body?:
-        any)
     type: constructor
   - uid: azure-iot-device.DeviceMethodRequest.methodName
     name: methodName

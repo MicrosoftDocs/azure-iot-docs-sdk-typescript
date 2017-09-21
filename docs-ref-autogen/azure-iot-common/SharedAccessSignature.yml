@@ -30,6 +30,7 @@ items:
       - typeScript
     summary: Extend the Sas and return the string form of it.
     syntax:
+      content: 'function extend(expiry: number)'
       parameters:
         - id: expiry
           type:
@@ -37,7 +38,6 @@ items:
           description: >
             an integer value representing the number of seconds since the epoch
             00:00:00 UTC on 1 January 1970.
-      content: 'function extend(expiry: number)'
       return:
         type:
           - string
@@ -52,8 +52,8 @@ items:
       - typeScript
     summary: Formats a SharedAccessSignatureObject into a properly formatted string.
     syntax:
-      parameters: []
       content: function toString()
+      parameters: []
       return:
         type:
           - string
@@ -65,6 +65,9 @@ items:
       - typeScript
     summary: Instantiate a SharedAccessSignature token with the given parameters.
     syntax:
+      content: >-
+        static function create(resourceUri: string, keyName: string, key:
+        string, expiry: number)
       parameters:
         - id: resourceUri
           type:
@@ -84,9 +87,6 @@ items:
           description: >
             an integer value representing the number of seconds since the epoch
             00:00:00 UTC on 1 January 1970.
-      content: >-
-        static function create(resourceUri: string, keyName: string, key:
-        string, expiry: number)
       return:
         type:
           - '@azure-iot-common.SharedAccessSignature'
@@ -101,6 +101,7 @@ items:
       - typeScript
     summary: Instantiate a SharedAccessSignature token from a string.
     syntax:
+      content: 'static function parse(source: string, requiredFields?: string[])'
       parameters:
         - id: source
           type:
@@ -114,7 +115,6 @@ items:
           description: |
             an array of fields that we expect to find in the source string.
           optional: true
-      content: 'static function parse(source: string, requiredFields?: string[])'
       return:
         type:
           - '@azure-iot-common.SharedAccessSignature'

@@ -37,6 +37,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new DeviceMethodResponse(requestId: string, transport: Transport)'
       parameters:
         - id: requestId
           type:
@@ -46,7 +47,6 @@ items:
           type:
             - '@azure-iot-device.Client.Transport'
           description: ''
-      content: 'new DeviceMethodResponse(requestId: string, transport: Transport)'
     type: constructor
   - uid: azure-iot-device.DeviceMethodResponse.isResponseComplete
     name: isResponseComplete
@@ -114,6 +114,7 @@ items:
                          the underlying transport object using the status parameter
                          as the status of the method call.
     syntax:
+      content: 'function send(status: number, payload?: any, done?: function)'
       parameters:
         - id: status
           type:
@@ -136,7 +137,6 @@ items:
                                            argument to the function in case an error
                                            occurs.
           optional: true
-      content: 'function send(status: number, payload?: any, done?: function)'
     exceptions:
       - type: ReferenceError
         description: If the `status` parameter is not a number.

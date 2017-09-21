@@ -129,6 +129,7 @@ items:
       Parses a string and returns the corresponding
       <xref:azure-iot-common.ConnectionString> object.
     syntax:
+      content: 'static function parse(source: string, requiredFields?: string[])'
       parameters:
         - id: source
           type:
@@ -140,7 +141,6 @@ items:
           description: |
             array of strings listing the fields that are expected to be found.
           optional: true
-      content: 'static function parse(source: string, requiredFields?: string[])'
       return:
         type:
           - '@azure-iot-common.ConnectionString'

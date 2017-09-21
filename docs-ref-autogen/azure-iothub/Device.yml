@@ -156,6 +156,7 @@ items:
       - typeScript
     summary: 'Instantiate a new <xref:azure-iothub.Device> object.'
     syntax:
+      content: 'new Device(jsonData?: any)'
       parameters:
         - id: jsonData
           type:
@@ -165,7 +166,6 @@ items:
             to properties in the object. If no argument is provided, Device
             roperties will be assigned default values.
           optional: true
-      content: 'new Device(jsonData?: any)'
     type: constructor
   - uid: azure-iothub.Device.authentication
     name: authentication

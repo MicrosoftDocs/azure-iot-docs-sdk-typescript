@@ -58,6 +58,7 @@ items:
       and `'iothub-to'` are considered as reserved key names and will cause the
       function to return `false` if those key names are used.
     syntax:
+      content: 'function add(itemKey: string, itemValue: string)'
       parameters:
         - id: itemKey
           type:
@@ -67,7 +68,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function add(itemKey: string, itemValue: string)'
       return:
         type:
           - boolean
@@ -79,8 +79,8 @@ items:
       - typeScript
     summary: Returns the number of items in the collection.
     syntax:
-      parameters: []
       content: function count()
+      parameters: []
       return:
         type:
           - number
@@ -92,12 +92,12 @@ items:
       - typeScript
     summary: Returns the key-value pair corresponding to the given index.
     syntax:
+      content: 'function getItem(index: number)'
       parameters:
         - id: index
           type:
             - number
           description: ''
-      content: 'function getItem(index: number)'
     type: method
   - uid: azure-iot-common.Properties.getValue
     name: 'getValue(key: string)'
@@ -106,12 +106,12 @@ items:
       - typeScript
     summary: Returns the value property of the element that has the given key.
     syntax:
+      content: 'function getValue(key: string)'
       parameters:
         - id: key
           type:
             - string
           description: ''
-      content: 'function getValue(key: string)'
       return:
         type:
           - any

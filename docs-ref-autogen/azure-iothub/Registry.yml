@@ -338,6 +338,9 @@ items:
       - typeScript
     summary: Adds an array of devices.
     syntax:
+      content: >-
+        function addDevices(devices: DeviceDescription[], done:
+        BulkDeviceIdentityCallback)
       parameters:
         - id: devices
           type:
@@ -356,9 +359,6 @@ items:
                                            BulkRegistryOperationResult
                                            and a transport-specific response object useful
                                            for logging or debugging.
-      content: >-
-        function addDevices(devices: DeviceDescription[], done:
-        BulkDeviceIdentityCallback)
     type: method
   - uid: azure-iothub.Registry.cancelJob
     name: 'cancelJob(jobId: string, done: JobCallback)'
@@ -367,6 +367,7 @@ items:
       - typeScript
     summary: Cancel a bulk import/export job.
     syntax:
+      content: 'function cancelJob(jobId: string, done: JobCallback)'
       parameters:
         - id: jobId
           type:
@@ -381,7 +382,6 @@ items:
             The function to call with two arguments: an error object if an error
             happened,
                                          (null otherwise) and the (cancelled) status of the job whose identifier was passed as an argument.
-      content: 'function cancelJob(jobId: string, done: JobCallback)'
     type: method
   - uid: azure-iothub.Registry.create
     name: 'create(deviceInfo: DeviceDescription, done: DeviceCallback)'
@@ -390,6 +390,7 @@ items:
       - typeScript
     summary: Creates a new device identity on an IoT hub.
     syntax:
+      content: 'function create(deviceInfo: DeviceDescription, done: DeviceCallback)'
       parameters:
         - id: deviceInfo
           type:
@@ -408,7 +409,6 @@ items:
                                            object representing the created device
                                            identity, and a transport-specific response
                                            object useful for logging or debugging.
-      content: 'function create(deviceInfo: DeviceDescription, done: DeviceCallback)'
     type: method
   - uid: azure-iothub.Registry.createQuery
     name: 'createQuery(sqlQuery: string, pageSize?: number)'
@@ -419,6 +419,7 @@ items:
       Creates a query that can be run on the IoT Hub instance to find
       information about devices or jobs.
     syntax:
+      content: 'function createQuery(sqlQuery: string, pageSize?: number)'
       parameters:
         - id: sqlQuery
           type:
@@ -431,7 +432,6 @@ items:
             The desired number of results per page (optional. default: 1000,
             max: 10000).
           optional: true
-      content: 'function createQuery(sqlQuery: string, pageSize?: number)'
       return:
         type:
           - '@azure-iothub.Query'
@@ -450,6 +450,7 @@ items:
       - typeScript
     summary: Removes an existing device identity from an IoT hub.
     syntax:
+      content: 'function delete(deviceId: string, done: ResponseCallback)'
       parameters:
         - id: deviceId
           type:
@@ -466,7 +467,6 @@ items:
                                            the other methods), and a transport-specific
                                            response object useful for logging or
                                            debugging.
-      content: 'function delete(deviceId: string, done: ResponseCallback)'
     type: method
   - uid: azure-iothub.Registry.exportDevicesToBlob
     name: >-
@@ -477,6 +477,9 @@ items:
       - typeScript
     summary: Export devices to a blob in a bulk job.
     syntax:
+      content: >-
+        function exportDevicesToBlob(outputBlobContainerUri: string,
+        excludeKeys: boolean, done: JobCallback)
       parameters:
         - id: outputBlobContainerUri
           type:
@@ -497,9 +500,6 @@ items:
             The function to call when the job has been created, with two
             arguments: an error object if an
                                                          an error happened, (null otherwise) and the job status that can be used to track progress of the devices export.
-      content: >-
-        function exportDevicesToBlob(outputBlobContainerUri: string,
-        excludeKeys: boolean, done: JobCallback)
     type: method
   - uid: azure-iothub.Registry.get
     name: 'get(deviceId: string, done: DeviceCallback)'
@@ -510,6 +510,7 @@ items:
       Requests information about an existing device identity
                          on an IoT hub.
     syntax:
+      content: 'function get(deviceId: string, done: DeviceCallback)'
       parameters:
         - id: deviceId
           type:
@@ -526,7 +527,6 @@ items:
                                            object representing the created device
                                            identity, and a transport-specific response
                                            object useful for logging or debugging.
-      content: 'function get(deviceId: string, done: DeviceCallback)'
     type: method
   - uid: azure-iothub.Registry.getJob
     name: 'getJob(jobId: string, done: JobCallback)'
@@ -535,6 +535,7 @@ items:
       - typeScript
     summary: Get the status of a bulk import/export job.
     syntax:
+      content: 'function getJob(jobId: string, done: JobCallback)'
       parameters:
         - id: jobId
           type:
@@ -549,7 +550,6 @@ items:
             The function to call with two arguments: an error object if an error
             happened,
                                          (null otherwise) and the status of the job whose identifier was passed as an argument.
-      content: 'function getJob(jobId: string, done: JobCallback)'
     type: method
   - uid: azure-iothub.Registry.getRegistryStatistics
     name: 'getRegistryStatistics(done: Callback<RegistryStatistics>)'
@@ -558,6 +558,7 @@ items:
       - typeScript
     summary: Gets statistics about the devices in the device identity registry.
     syntax:
+      content: 'function getRegistryStatistics(done: Callback<RegistryStatistics>)'
       parameters:
         - id: done
           type:
@@ -565,7 +566,6 @@ items:
           description: |
             The callback that will be called with either an Error object or
                                           the device registry statistics.
-      content: 'function getRegistryStatistics(done: Callback<RegistryStatistics>)'
     type: method
   - uid: azure-iothub.Registry.getTwin
     name: 'getTwin(deviceId: string, done: ResponseCallback)'
@@ -574,6 +574,7 @@ items:
       - typeScript
     summary: Gets the Device Twin of the device with the specified device identifier.
     syntax:
+      content: 'function getTwin(deviceId: string, done: ResponseCallback)'
       parameters:
         - id: deviceId
           type:
@@ -585,7 +586,6 @@ items:
           description: |
             The callback that will be called with either an Error object or
                                             the device twin instance.
-      content: 'function getTwin(deviceId: string, done: ResponseCallback)'
     type: method
   - uid: azure-iothub.Registry.importDevicesFromBlob
     name: >-
@@ -596,6 +596,9 @@ items:
       - typeScript
     summary: Imports devices from a blob in bulk job.
     syntax:
+      content: >-
+        function importDevicesFromBlob(inputBlobContainerUri: string,
+        outputBlobContainerUri: string, done: JobCallback)
       parameters:
         - id: inputBlobContainerUri
           type:
@@ -616,9 +619,6 @@ items:
             The function to call when the job has been created, with two
             arguments: an error object if an
                                                          an error happened, (null otherwise) and the job status that can be used to track progress of the devices import.
-      content: >-
-        function importDevicesFromBlob(inputBlobContainerUri: string,
-        outputBlobContainerUri: string, done: JobCallback)
     type: method
   - uid: azure-iothub.Registry.list
     name: 'list(done: Callback<Device[]>)'
@@ -629,6 +629,7 @@ items:
       Requests information about the first 1000 device
                          identities on an IoT hub.
     syntax:
+      content: 'function list(done: Callback<Device[]>)'
       parameters:
         - id: done
           type:
@@ -642,7 +643,6 @@ items:
                                            objects representing the listed device
                                            identities, and a transport-specific response
                                            object useful for logging or debugging.
-      content: 'function list(done: Callback<Device[]>)'
     type: method
   - uid: azure-iothub.Registry.listJobs
     name: 'listJobs(done: Callback<any>)'
@@ -651,6 +651,7 @@ items:
       - typeScript
     summary: 'List the last import/export jobs (including the active one, if any).'
     syntax:
+      content: 'function listJobs(done: Callback<any>)'
       parameters:
         - id: done
           type:
@@ -659,7 +660,6 @@ items:
             The function to call with two arguments: an error object if an error
             happened,
                                          (null otherwise) and the list of past jobs as an argument.
-      content: 'function listJobs(done: Callback<any>)'
     type: method
   - uid: azure-iothub.Registry.removeDevices
     name: >-
@@ -670,6 +670,9 @@ items:
       - typeScript
     summary: Updates an array of devices.
     syntax:
+      content: >-
+        function removeDevices(devices: DeviceDescription[], forceRemove:
+        boolean, done: BulkDeviceIdentityCallback)
       parameters:
         - id: devices
           type:
@@ -695,9 +698,6 @@ items:
                                            BulkRegistryOperationResult
                                            and a transport-specific response object useful
                                            for logging or debugging.
-      content: >-
-        function removeDevices(devices: DeviceDescription[], forceRemove:
-        boolean, done: BulkDeviceIdentityCallback)
     type: method
   - uid: azure-iothub.Registry.update
     name: 'update(deviceInfo: DeviceDescription, done: DeviceCallback)'
@@ -708,6 +708,7 @@ items:
       Updates an existing device identity on an IoT hub with
                          the given device information.
     syntax:
+      content: 'function update(deviceInfo: DeviceDescription, done: DeviceCallback)'
       parameters:
         - id: deviceInfo
           type:
@@ -727,7 +728,6 @@ items:
                                            object representing the updated device
                                            identity, and a transport-specific response
                                            object useful for logging or debugging.
-      content: 'function update(deviceInfo: DeviceDescription, done: DeviceCallback)'
     type: method
   - uid: azure-iothub.Registry.updateDevices
     name: >-
@@ -738,6 +738,9 @@ items:
       - typeScript
     summary: Updates an array of devices.
     syntax:
+      content: >-
+        function updateDevices(devices: DeviceDescription[], forceUpdate:
+        boolean, done?: BulkDeviceIdentityCallback)
       parameters:
         - id: devices
           type:
@@ -764,9 +767,6 @@ items:
                                            and a transport-specific response object useful
                                            for logging or debugging.
           optional: true
-      content: >-
-        function updateDevices(devices: DeviceDescription[], forceUpdate:
-        boolean, done?: BulkDeviceIdentityCallback)
     type: method
   - uid: azure-iothub.Registry.updateTwin
     name: >-
@@ -777,6 +777,9 @@ items:
       - typeScript
     summary: Updates the Device Twin of a specific device with the given patch.
     syntax:
+      content: >-
+        function updateTwin(deviceId: string, patch: any, etag: string, done:
+        ResponseCallback)
       parameters:
         - id: deviceId
           type:
@@ -799,9 +802,6 @@ items:
           description: |
             The callback that will be called with either an Error object or
                                             the device twin instance.
-      content: >-
-        function updateTwin(deviceId: string, patch: any, etag: string, done:
-        ResponseCallback)
     type: method
   - uid: azure-iothub.Registry.fromConnectionString
     name: 'fromConnectionString(value: string)'
@@ -810,6 +810,7 @@ items:
       - typeScript
     summary: Constructs a Registry object from the given connection string.
     syntax:
+      content: 'static function fromConnectionString(value: string)'
       parameters:
         - id: value
           type:
@@ -818,7 +819,6 @@ items:
             A connection string which encapsulates the
                                          appropriate (read and/or write) Registry
                                          permissions.
-      content: 'static function fromConnectionString(value: string)'
       return:
         type:
           - '@azure-iothub.Registry'
@@ -830,6 +830,7 @@ items:
       - typeScript
     summary: Constructs a Registry object from the given shared access signature.
     syntax:
+      content: 'static function fromSharedAccessSignature(value: string)'
       parameters:
         - id: value
           type:
@@ -838,7 +839,6 @@ items:
             A shared access signature which encapsulates
                                          the appropriate (read and/or write) Registry
                                          permissions.
-      content: 'static function fromSharedAccessSignature(value: string)'
       return:
         type:
           - '@azure-iothub.Registry'

@@ -54,6 +54,7 @@ items:
       new <xref:azure-iothub.Twin> object is to use the
       <xref:azure-iothub.Registry.getTwin> method.
     syntax:
+      content: 'new Twin(device: DeviceIdentity, registryClient: Registry)'
       parameters:
         - id: device
           type:
@@ -67,7 +68,6 @@ items:
             - '@azure-iothub.Registry'
           description: |
             The HTTP registry client used to execute REST API calls.
-      content: 'new Twin(device: DeviceIdentity, registryClient: Registry)'
     type: constructor
   - uid: azure-iothub.Twin.deviceId
     name: deviceId
@@ -136,6 +136,7 @@ items:
       - typeScript
     summary: Gets the latest version of this device twin from the IoT Hub service.
     syntax:
+      content: 'function get(done: Callback<Twin>)'
       parameters:
         - id: done
           type:
@@ -148,7 +149,6 @@ items:
                                            object representing the created device
                                            identity, and a transport-specific response
                                            object useful for logging or debugging.
-      content: 'function get(done: Callback<Twin>)'
     type: method
   - uid: azure-iothub.Twin.toJSON
     name: toJSON()
@@ -157,8 +157,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function toJSON()
+      parameters: []
       return:
         type:
           - object
@@ -170,6 +170,7 @@ items:
       - typeScript
     summary: Update the device twin with the patch provided as argument.
     syntax:
+      content: 'function update(patch: any, done: Callback<Twin>)'
       parameters:
         - id: patch
           type:
@@ -186,5 +187,4 @@ items:
                                            object representing the created device
                                            identity, and a transport-specific response
                                            object useful for logging or debugging.
-      content: 'function update(patch: any, done: Callback<Twin>)'
     type: method

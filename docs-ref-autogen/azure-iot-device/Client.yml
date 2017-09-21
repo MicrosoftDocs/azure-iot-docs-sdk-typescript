@@ -40,7 +40,7 @@ items:
 
       to create an IoT Hub device client.
     extends:
-      - EventEmitter
+      name: EventEmitter
     source:
       path: client.ts
       startLine: 31
@@ -121,7 +121,7 @@ items:
     type: interface
     summary: ''
     extends:
-      - any
+      name: any
     source:
       path: client.ts
       startLine: 802
@@ -315,7 +315,7 @@ items:
     type: interface
     summary: ''
     extends:
-      - EventEmitter
+      name: EventEmitter
     source:
       path: client.ts
       startLine: 806

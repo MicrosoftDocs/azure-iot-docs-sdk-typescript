@@ -36,7 +36,7 @@ items:
 
       to create an IoT Hub service Client.
     extends:
-      - EventEmitter
+      name: EventEmitter
     source:
       path: client.ts
       startLine: 26
@@ -57,7 +57,7 @@ items:
     type: interface
     summary: ''
     extends:
-      - Receiver
+      name: Receiver
     source:
       path: client.ts
       startLine: 292
@@ -137,7 +137,7 @@ items:
     type: interface
     summary: ''
     extends:
-      - EventEmitter
+      name: EventEmitter
     source:
       path: client.ts
       startLine: 298

@@ -15,13 +15,27 @@
           "LICENSE-CODE",
           "ThirdPartyNotices"
         ]
+      },
+      {
+        "files": [
+          "**/*.yml"
+        ],
+        "src": "bread",
+        "dest": "javascript/api/bread",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
       }
     ],
     "resource": [
     ],
     "overwrite": [],
     "externalReference": [],
-    "globalMetadata": {},
+    "globalMetadata": {
+      "breadcrumb_path": "/javascript/api/bread/toc.json",
+      "brand": "azure"
+    },
     "fileMetadata": {
       "author": {
         "docs-ref-autogen/**": "pierreca"

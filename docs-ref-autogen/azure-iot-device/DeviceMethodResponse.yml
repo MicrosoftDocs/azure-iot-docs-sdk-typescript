@@ -105,7 +105,7 @@ items:
         type:
           - number
   - uid: azure-iot-device.DeviceMethodResponse.send
-    name: 'send(status: number, payload?: any, done?: function)'
+    name: 'send(status: number, payload?: any, done?: (err?: Error) => void)'
     children: []
     langs:
       - typeScript
@@ -114,7 +114,9 @@ items:
                          the underlying transport object using the status parameter
                          as the status of the method call.
     syntax:
-      content: 'function send(status: number, payload?: any, done?: function)'
+      content: >-
+        function send(status: number, payload?: any, done?: (err?: Error) =>
+        void)
       parameters:
         - id: status
           type:
@@ -129,7 +131,7 @@ items:
           optional: true
         - id: done
           type:
-            - function
+            - '(err?: Error) => void'
           description: |
             A callback function which will be
                                            called once the response has been sent back to

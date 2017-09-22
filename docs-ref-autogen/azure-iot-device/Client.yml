@@ -84,7 +84,7 @@ items:
   - uid: azure-iot-device.Client.BlobUpload.uploadToBlob
     name: >-
       uploadToBlob(blobName: string, stream: Stream, steamLength: number, done:
-      function)
+      (err?: Error) => void)
     children: []
     langs:
       - typeScript
@@ -92,7 +92,7 @@ items:
     syntax:
       content: >-
         function uploadToBlob(blobName: string, stream: Stream, steamLength:
-        number, done: function)
+        number, done: (err?: Error) => void)
       parameters:
         - id: blobName
           type:
@@ -108,7 +108,7 @@ items:
           description: ''
         - id: done
           type:
-            - function
+            - '(err?: Error) => void'
           description: ''
     type: method
   - uid: azure-iot-device.Client.Config
@@ -275,13 +275,15 @@ items:
         type:
           - number
   - uid: azure-iot-device.Client.DeviceMethodResponse.send
-    name: 'send(status: number, payload?: any, done?: function)'
+    name: 'send(status: number, payload?: any, done?: (err?: Error) => void)'
     children: []
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'function send(status: number, payload?: any, done?: function)'
+      content: >-
+        function send(status: number, payload?: any, done?: (err?: Error) =>
+        void)
       parameters:
         - id: status
           type:
@@ -294,7 +296,7 @@ items:
           optional: true
         - id: done
           type:
-            - function
+            - '(err?: Error) => void'
           description: ''
           optional: true
     type: method
@@ -325,13 +327,17 @@ items:
         branch: doc-patches
     package: azure-iot-device
   - uid: azure-iot-device.Client.Transport.abandon
-    name: 'abandon(message: Message, done: function)'
+    name: >-
+      abandon(message: Message, done: (err: Error, results?: MessageAbandoned)
+      => void)
     children: []
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'function abandon(message: Message, done: function)'
+      content: >-
+        function abandon(message: Message, done: (err: Error, results?:
+        MessageAbandoned) => void)
       parameters:
         - id: message
           type:
@@ -339,17 +345,21 @@ items:
           description: ''
         - id: done
           type:
-            - function
+            - '(err: Error, results?: MessageAbandoned) => void'
           description: ''
     type: method
   - uid: azure-iot-device.Client.Transport.complete
-    name: 'complete(message: Message, done: function)'
+    name: >-
+      complete(message: Message, done: (err: Error, result?: MessageCompleted)
+      => void)
     children: []
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'function complete(message: Message, done: function)'
+      content: >-
+        function complete(message: Message, done: (err: Error, result?:
+        MessageCompleted) => void)
       parameters:
         - id: message
           type:
@@ -357,31 +367,35 @@ items:
           description: ''
         - id: done
           type:
-            - function
+            - '(err: Error, result?: MessageCompleted) => void'
           description: ''
     type: method
   - uid: azure-iot-device.Client.Transport.getReceiver
-    name: 'getReceiver(func: function)'
+    name: 'getReceiver(func: (err: Error, receiver?: Receiver) => void)'
     children: []
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'function getReceiver(func: function)'
+      content: 'function getReceiver(func: (err: Error, receiver?: Receiver) => void)'
       parameters:
         - id: func
           type:
-            - function
+            - '(err: Error, receiver?: Receiver) => void'
           description: ''
     type: method
   - uid: azure-iot-device.Client.Transport.reject
-    name: 'reject(message: Message, done: function)'
+    name: >-
+      reject(message: Message, done: (err: Error, results?: MessageRejected) =>
+      void)
     children: []
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'function reject(message: Message, done: function)'
+      content: >-
+        function reject(message: Message, done: (err: Error, results?:
+        MessageRejected) => void)
       parameters:
         - id: message
           type:
@@ -389,17 +403,21 @@ items:
           description: ''
         - id: done
           type:
-            - function
+            - '(err: Error, results?: MessageRejected) => void'
           description: ''
     type: method
   - uid: azure-iot-device.Client.Transport.sendEvent
-    name: 'sendEvent(message: Message, done: function)'
+    name: >-
+      sendEvent(message: Message, done: (err: Error, result?: MessageEnqueued)
+      => void)
     children: []
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'function sendEvent(message: Message, done: function)'
+      content: >-
+        function sendEvent(message: Message, done: (err: Error, result?:
+        MessageEnqueued) => void)
       parameters:
         - id: message
           type:
@@ -407,17 +425,21 @@ items:
           description: ''
         - id: done
           type:
-            - function
+            - '(err: Error, result?: MessageEnqueued) => void'
           description: ''
     type: method
   - uid: azure-iot-device.Client.Transport.sendEventBatch
-    name: 'sendEventBatch(messages: Message[], done: function)'
+    name: >-
+      sendEventBatch(messages: Message[], done: (err: Error, result?:
+      MessageEnqueued) => void)
     children: []
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'function sendEventBatch(messages: Message[], done: function)'
+      content: >-
+        function sendEventBatch(messages: Message[], done: (err: Error, result?:
+        MessageEnqueued) => void)
       parameters:
         - id: messages
           type:
@@ -425,17 +447,21 @@ items:
           description: ''
         - id: done
           type:
-            - function
+            - '(err: Error, result?: MessageEnqueued) => void'
           description: ''
     type: method
   - uid: azure-iot-device.Client.Transport.setOptions
-    name: 'setOptions(options: any, done: function)'
+    name: >-
+      setOptions(options: any, done: (err?: Error, result?: TransportConfigured)
+      => void)
     children: []
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'function setOptions(options: any, done: function)'
+      content: >-
+        function setOptions(options: any, done: (err?: Error, result?:
+        TransportConfigured) => void)
       parameters:
         - id: options
           type:
@@ -443,11 +469,13 @@ items:
           description: ''
         - id: done
           type:
-            - function
+            - '(err?: Error, result?: TransportConfigured) => void'
           description: ''
     type: method
   - uid: azure-iot-device.Client.Transport.updateSharedAccessSignature
-    name: 'updateSharedAccessSignature(sharedAccessSignature: string, done: function)'
+    name: >-
+      updateSharedAccessSignature(sharedAccessSignature: string, done: (err:
+      Error, result?: SharedAccessSignatureUpdated) => void)
     children: []
     langs:
       - typeScript
@@ -455,7 +483,7 @@ items:
     syntax:
       content: >-
         function updateSharedAccessSignature(sharedAccessSignature: string,
-        done: function)
+        done: (err: Error, result?: SharedAccessSignatureUpdated) => void)
       parameters:
         - id: sharedAccessSignature
           type:
@@ -463,7 +491,7 @@ items:
           description: ''
         - id: done
           type:
-            - function
+            - '(err: Error, result?: SharedAccessSignatureUpdated) => void'
           description: ''
     type: method
   - uid: azure-iot-device.Client.constructor
@@ -502,7 +530,9 @@ items:
           optional: true
     type: constructor
   - uid: azure-iot-device.Client.abandon
-    name: 'abandon(message: Message, abandonCallback: function)'
+    name: >-
+      abandon(message: Message, abandonCallback: (err?: Error, result?:
+      MessageAbandoned) => void)
     children: []
     langs:
       - typeScript
@@ -510,7 +540,9 @@ items:
       The `abandon` method directs the transport to settle the message passed as
       argument as 'abandoned'.
     syntax:
-      content: 'function abandon(message: Message, abandonCallback: function)'
+      content: >-
+        function abandon(message: Message, abandonCallback: (err?: Error,
+        result?: MessageAbandoned) => void)
       parameters:
         - id: message
           type:
@@ -518,7 +550,7 @@ items:
           description: The message to settle.
         - id: abandonCallback
           type:
-            - function
+            - '(err?: Error, result?: MessageAbandoned) => void'
           description: |
             The callback to call when the message is abandoned.
     exceptions:
@@ -527,7 +559,7 @@ items:
           If the message is falsy.
     type: method
   - uid: azure-iot-device.Client.close
-    name: 'close(closeCallback?: function)'
+    name: 'close(closeCallback?: (err?: Error, result?: Disconnected) => void)'
     children: []
     langs:
       - typeScript
@@ -535,17 +567,21 @@ items:
       The `close` method directs the transport to close the current connection
       to the IoT Hub instance
     syntax:
-      content: 'function close(closeCallback?: function)'
+      content: >-
+        function close(closeCallback?: (err?: Error, result?: Disconnected) =>
+        void)
       parameters:
         - id: closeCallback
           type:
-            - function
+            - '(err?: Error, result?: Disconnected) => void'
           description: |
             The callback to be invoked when the connection has been closed.
           optional: true
     type: method
   - uid: azure-iot-device.Client.complete
-    name: 'complete(message: Message, completeCallback: function)'
+    name: >-
+      complete(message: Message, completeCallback: (err?: Error, result?:
+      MessageCompleted) => void)
     children: []
     langs:
       - typeScript
@@ -553,7 +589,9 @@ items:
       The `complete` method directs the transport to settle the message passed
       as argument as 'completed'.
     syntax:
-      content: 'function complete(message: Message, completeCallback: function)'
+      content: >-
+        function complete(message: Message, completeCallback: (err?: Error,
+        result?: MessageCompleted) => void)
       parameters:
         - id: message
           type:
@@ -561,7 +599,7 @@ items:
           description: The message to settle.
         - id: completeCallback
           type:
-            - function
+            - '(err?: Error, result?: MessageCompleted) => void'
           description: |
             The callback to call when the message is completed.
     exceptions:
@@ -570,7 +608,7 @@ items:
           If the message is falsy.
     type: method
   - uid: azure-iot-device.Client.getTwin
-    name: 'getTwin(done: function, twin?: Twin)'
+    name: 'getTwin(done: (err?: Error, twin?: Twin) => void, twin?: Twin)'
     children: []
     langs:
       - typeScript
@@ -578,11 +616,11 @@ items:
       The `getTwin` method creates a Twin object and establishes a connection
       with the Twin service.
     syntax:
-      content: 'function getTwin(done: function, twin?: Twin)'
+      content: 'function getTwin(done: (err?: Error, twin?: Twin) => void, twin?: Twin)'
       parameters:
         - id: done
           type:
-            - function
+            - '(err?: Error, twin?: Twin) => void'
           description: |+
             The callback to call when the connection is established.
 
@@ -593,7 +631,9 @@ items:
           optional: true
     type: method
   - uid: azure-iot-device.Client.onDeviceMethod
-    name: 'onDeviceMethod(methodName: string, callback: function)'
+    name: >-
+      onDeviceMethod(methodName: string, callback: (request:
+      DeviceMethodRequest, response: DeviceMethodResponse) => void)
     children: []
     langs:
       - typeScript
@@ -602,7 +642,9 @@ items:
                          cloud-to-device method call is received by the client
                          for the given `methodName`.
     syntax:
-      content: 'function onDeviceMethod(methodName: string, callback: function)'
+      content: >-
+        function onDeviceMethod(methodName: string, callback: (request:
+        DeviceMethodRequest, response: DeviceMethodResponse) => void)
       parameters:
         - id: methodName
           type:
@@ -612,7 +654,9 @@ items:
                                            is to be registered.
         - id: callback
           type:
-            - function
+            - >-
+              (request: DeviceMethodRequest, response: DeviceMethodResponse) =>
+              void
           description: |
             The callback to be invoked when the C2D method
                                            call is received.
@@ -627,7 +671,7 @@ items:
                                          or if the `callback` is not a function.
     type: method
   - uid: azure-iot-device.Client.open
-    name: 'open(openCallback: function)'
+    name: 'open(openCallback: (err?: Error, result?: Connected) => void)'
     children: []
     langs:
       - typeScript
@@ -635,17 +679,19 @@ items:
       Call the transport layer CONNECT function if the
                          transport layer implements it
     syntax:
-      content: 'function open(openCallback: function)'
+      content: 'function open(openCallback: (err?: Error, result?: Connected) => void)'
       parameters:
         - id: openCallback
           type:
-            - function
+            - '(err?: Error, result?: Connected) => void'
           description: |
             The callback to be invoked when `open`
                                             completes execution.
     type: method
   - uid: azure-iot-device.Client.reject
-    name: 'reject(message: Message, rejectCallback: function)'
+    name: >-
+      reject(message: Message, rejectCallback: (err?: Error, result?:
+      MessageRejected) => void)
     children: []
     langs:
       - typeScript
@@ -653,7 +699,9 @@ items:
       The `reject` method directs the transport to settle the message passed as
       argument as 'rejected'.
     syntax:
-      content: 'function reject(message: Message, rejectCallback: function)'
+      content: >-
+        function reject(message: Message, rejectCallback: (err?: Error, result?:
+        MessageRejected) => void)
       parameters:
         - id: message
           type:
@@ -661,7 +709,7 @@ items:
           description: The message to settle.
         - id: rejectCallback
           type:
-            - function
+            - '(err?: Error, result?: MessageRejected) => void'
           description: |
             The callback to call when the message is rejected.
     exceptions:
@@ -670,7 +718,9 @@ items:
           If the message is falsy.
     type: method
   - uid: azure-iot-device.Client.sendEvent
-    name: 'sendEvent(message: Message, sendEventCallback?: function)'
+    name: >-
+      sendEvent(message: Message, sendEventCallback?: (err?: Error, result?:
+      MessageEnqueued) => void)
     children: []
     langs:
       - typeScript
@@ -680,7 +730,9 @@ items:
                          to the IoT Hub as the device indicated by the connection string passed
                          via the constructor.
     syntax:
-      content: 'function sendEvent(message: Message, sendEventCallback?: function)'
+      content: >-
+        function sendEvent(message: Message, sendEventCallback?: (err?: Error,
+        result?: MessageEnqueued) => void)
       parameters:
         - id: message
           type:
@@ -688,13 +740,15 @@ items:
           description: 'The [message](xref:azure-iot-common.Message) to be sent.'
         - id: sendEventCallback
           type:
-            - function
+            - '(err?: Error, result?: MessageEnqueued) => void'
           description: |
             The callback to be invoked when `sendEvent` completes execution.
           optional: true
     type: method
   - uid: azure-iot-device.Client.sendEventBatch
-    name: 'sendEventBatch(messages: Message[], sendEventBatchCallback?: function)'
+    name: >-
+      sendEventBatch(messages: Message[], sendEventBatchCallback?: (err?: Error,
+      result?: MessageEnqueued) => void)
     children: []
     langs:
       - typeScript
@@ -706,7 +760,7 @@ items:
     syntax:
       content: >-
         function sendEventBatch(messages: Message[], sendEventBatchCallback?:
-        function)
+        (err?: Error, result?: MessageEnqueued) => void)
       parameters:
         - id: messages
           type:
@@ -716,20 +770,24 @@ items:
                                                            objects to be sent as a batch.
         - id: sendEventBatchCallback
           type:
-            - function
+            - '(err?: Error, result?: MessageEnqueued) => void'
           description: |
             The callback to be invoked when
                                                            `sendEventBatch` completes execution.
           optional: true
     type: method
   - uid: azure-iot-device.Client.setOptions
-    name: 'setOptions(options: any, done?: function)'
+    name: >-
+      setOptions(options: any, done?: (err?: Error, result?:
+      TransportConfigured) => void)
     children: []
     langs:
       - typeScript
     summary: The `setOptions` method let the user configure the client.
     syntax:
-      content: 'function setOptions(options: any, done?: function)'
+      content: >-
+        function setOptions(options: any, done?: (err?: Error, result?:
+        TransportConfigured) => void)
       parameters:
         - id: options
           type:
@@ -737,7 +795,7 @@ items:
           description: The options structure
         - id: done
           type:
-            - function
+            - '(err?: Error, result?: TransportConfigured) => void'
           description: |
             The callback that shall be called when setOptions is finished.
           optional: true
@@ -747,7 +805,9 @@ items:
           If the options structure is falsy
     type: method
   - uid: azure-iot-device.Client.setTransportOptions
-    name: 'setTransportOptions(options: any, done?: function)'
+    name: >-
+      setTransportOptions(options: any, done?: (err?: Error, result?:
+      TransportConfigured) => void)
     children: []
     langs:
       - typeScript
@@ -755,7 +815,9 @@ items:
       The `setTransportOptions` method configures transport-specific options for
       the client and its underlying transport object.
     syntax:
-      content: 'function setTransportOptions(options: any, done?: function)'
+      content: >-
+        function setTransportOptions(options: any, done?: (err?: Error, result?:
+        TransportConfigured) => void)
       parameters:
         - id: options
           type:
@@ -763,7 +825,7 @@ items:
           description: The options that shall be set (see transports documentation).
         - id: done
           type:
-            - function
+            - '(err?: Error, result?: TransportConfigured) => void'
           description: >
             The callback that shall be invoked with either an error or a result
             object.
@@ -772,7 +834,8 @@ items:
   - uid: azure-iot-device.Client.updateSharedAccessSignature
     name: >-
       updateSharedAccessSignature(sharedAccessSignature: string,
-      updateSasCallback?: function)
+      updateSasCallback?: (err?: Error, result?: SharedAccessSignatureUpdated)
+      => void)
     children: []
     langs:
       - typeScript
@@ -782,7 +845,8 @@ items:
     syntax:
       content: >-
         function updateSharedAccessSignature(sharedAccessSignature: string,
-        updateSasCallback?: function)
+        updateSasCallback?: (err?: Error, result?: SharedAccessSignatureUpdated)
+        => void)
       parameters:
         - id: sharedAccessSignature
           type:
@@ -790,7 +854,7 @@ items:
           description: The new SAS token to use.
         - id: updateSasCallback
           type:
-            - function
+            - '(err?: Error, result?: SharedAccessSignatureUpdated) => void'
           description: ''
           optional: true
     exceptions:
@@ -803,7 +867,7 @@ items:
   - uid: azure-iot-device.Client.uploadToBlob
     name: >-
       uploadToBlob(blobName: string, stream: Stream, streamLength: number, done:
-      function)
+      (err?: Error) => void)
     children: []
     langs:
       - typeScript
@@ -811,7 +875,7 @@ items:
     syntax:
       content: >-
         function uploadToBlob(blobName: string, stream: Stream, streamLength:
-        number, done: function)
+        number, done: (err?: Error) => void)
       parameters:
         - id: blobName
           type:
@@ -829,7 +893,7 @@ items:
           description: The size of the data to that should be uploaded to the blob.
         - id: done
           type:
-            - function
+            - '(err?: Error) => void'
           description: |
             The callback to call when the upload is complete.
     exceptions:

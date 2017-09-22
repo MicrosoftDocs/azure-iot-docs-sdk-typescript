@@ -40,6 +40,7 @@ items:
       - typeScript
     summary: Cancels an existing job.
     syntax:
+      content: 'function cancelJob(jobId: string, done: JobCallback)'
       parameters:
         - id: jobId
           type:
@@ -54,7 +55,6 @@ items:
                                            arguments: an Error object (can be null), a
                                            job object, and a transport-specific response
                                            object useful for logging or debugging.
-      content: 'function cancelJob(jobId: string, done: JobCallback)'
     type: method
   - uid: azure-iothub.JobClient.createQuery
     name: 'createQuery(jobType?: JobType, jobStatus?: JobStatus, pageSize?: number)'
@@ -65,6 +65,9 @@ items:
       Creates a query that can be used to return pages of existing job based on
       type and status.
     syntax:
+      content: >-
+        function createQuery(jobType?: JobType, jobStatus?: JobStatus,
+        pageSize?: number)
       parameters:
         - id: jobType
           type:
@@ -82,9 +85,6 @@ items:
           description: |
             The number of elements to return per page.
           optional: true
-      content: >-
-        function createQuery(jobType?: JobType, jobStatus?: JobStatus,
-        pageSize?: number)
       return:
         type:
           - '@azure-iothub.Query'
@@ -96,6 +96,7 @@ items:
       - typeScript
     summary: Requests information about an existing job.
     syntax:
+      content: 'function getJob(jobId: string, done: JobCallback)'
       parameters:
         - id: jobId
           type:
@@ -110,7 +111,6 @@ items:
                                            arguments: an Error object (can be null), a
                                            job object, and a transport-specific response
                                            object useful for logging or debugging.
-      content: 'function getJob(jobId: string, done: JobCallback)'
     type: method
   - uid: azure-iothub.JobClient.scheduleDeviceMethod
     name: >-
@@ -122,6 +122,10 @@ items:
       - typeScript
     summary: Schedules a job that will execute a device method on a set of devices.
     syntax:
+      content: >-
+        function scheduleDeviceMethod(jobId: string, queryCondition: string,
+        methodParams: DeviceMethodParams, jobStartTime?: Date,
+        maxExecutionTimeInSeconds?: number, done?: JobCallback)
       parameters:
         - id: jobId
           type:
@@ -162,10 +166,6 @@ items:
                                                  job object, and a transport-specific response
                                                  object useful for logging or debugging.
           optional: true
-      content: >-
-        function scheduleDeviceMethod(jobId: string, queryCondition: string,
-        methodParams: DeviceMethodParams, jobStartTime?: Date,
-        maxExecutionTimeInSeconds?: number, done?: JobCallback)
     exceptions:
       - type: ReferenceError
         description: >-
@@ -188,6 +188,10 @@ items:
       Schedule a job that will update a set of twins with the patch provided as
       a parameter.
     syntax:
+      content: >-
+        function scheduleTwinUpdate(jobId: string, queryCondition: string,
+        patch: any, jobStartTime?: Date, maxExecutionTimeInSeconds?: number,
+        done?: JobCallback)
       parameters:
         - id: jobId
           type:
@@ -223,10 +227,6 @@ items:
                                                  job object, and a transport-specific response
                                                  object useful for logging or debugging.
           optional: true
-      content: >-
-        function scheduleTwinUpdate(jobId: string, queryCondition: string,
-        patch: any, jobStartTime?: Date, maxExecutionTimeInSeconds?: number,
-        done?: JobCallback)
     exceptions:
       - type: ReferenceError
         description: >-
@@ -242,6 +242,7 @@ items:
       - typeScript
     summary: Constructs a JobClient object from the given connection string.
     syntax:
+      content: 'static function fromConnectionString(connectionString: string)'
       parameters:
         - id: connectionString
           type:
@@ -250,7 +251,6 @@ items:
             A connection string which encapsulates the
                                                               appropriate (read and/or write) Registry
                                                               permissions.
-      content: 'static function fromConnectionString(connectionString: string)'
       return:
         type:
           - '@azure-iothub.JobClient'
@@ -265,6 +265,7 @@ items:
       - typeScript
     summary: Constructs a JobClient object from the given shared access signature.
     syntax:
+      content: 'static function fromSharedAccessSignature(sharedAccessSignature: string)'
       parameters:
         - id: sharedAccessSignature
           type:
@@ -273,7 +274,6 @@ items:
             A shared access signature which encapsulates
                                                          the appropriate (read and/or write) Registry
                                                          permissions.
-      content: 'static function fromSharedAccessSignature(sharedAccessSignature: string)'
       return:
         type:
           - '@azure-iothub.JobClient'

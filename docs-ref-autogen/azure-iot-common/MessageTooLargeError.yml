@@ -13,7 +13,7 @@ items:
       Error thrown when the message sent is too large: the maximum size is
       256Kb.
     extends:
-      - Error
+      name: Error
     source:
       path: errors.ts
       startLine: 138
@@ -29,13 +29,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new MessageTooLargeError(message?: string)'
       parameters:
         - id: message
           type:
             - string
           description: ''
           optional: true
-      content: 'new MessageTooLargeError(message?: string)'
     type: constructor
   - uid: azure-iot-common.MessageTooLargeError.Error
     name: Error

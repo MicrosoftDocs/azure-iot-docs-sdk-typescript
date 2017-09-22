@@ -13,7 +13,7 @@ items:
       Error thrown when the connection parameters are wrong and the server
       refused the connection.
     extends:
-      - Error
+      name: Error
     source:
       path: errors.ts
       startLine: 81
@@ -29,13 +29,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new UnauthorizedError(message?: string)'
       parameters:
         - id: message
           type:
             - string
           description: ''
           optional: true
-      content: 'new UnauthorizedError(message?: string)'
     type: constructor
   - uid: azure-iot-common.UnauthorizedError.Error
     name: Error

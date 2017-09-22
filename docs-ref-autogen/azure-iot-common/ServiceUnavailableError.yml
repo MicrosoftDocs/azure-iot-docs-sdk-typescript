@@ -13,7 +13,7 @@ items:
       Error thrown when the service is unavailable. The operation should be
       retried.
     extends:
-      - Error
+      name: Error
     source:
       path: errors.ts
       startLine: 166
@@ -29,13 +29,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new ServiceUnavailableError(message?: string)'
       parameters:
         - id: message
           type:
             - string
           description: ''
           optional: true
-      content: 'new ServiceUnavailableError(message?: string)'
     type: constructor
   - uid: azure-iot-common.ServiceUnavailableError.Error
     name: Error

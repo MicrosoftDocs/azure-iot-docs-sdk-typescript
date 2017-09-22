@@ -13,7 +13,7 @@ items:
       Error thrown when an internal server error occured. You may have found a
       bug?
     extends:
-      - Error
+      name: Error
     source:
       path: errors.ts
       startLine: 152
@@ -29,13 +29,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new InternalServerError(message?: string)'
       parameters:
         - id: message
           type:
             - string
           description: ''
           optional: true
-      content: 'new InternalServerError(message?: string)'
     type: constructor
   - uid: azure-iot-common.InternalServerError.Error
     name: Error

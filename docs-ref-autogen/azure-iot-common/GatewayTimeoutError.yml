@@ -13,7 +13,7 @@ items:
       Error thrown when the IoT Hub instance doesn't process the device method
       call in time.
     extends:
-      - Error
+      name: Error
     source:
       path: errors.ts
       startLine: 350
@@ -29,13 +29,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new GatewayTimeoutError(message?: string)'
       parameters:
         - id: message
           type:
             - string
           description: ''
           optional: true
-      content: 'new GatewayTimeoutError(message?: string)'
     type: constructor
   - uid: azure-iot-common.GatewayTimeoutError.Error
     name: Error

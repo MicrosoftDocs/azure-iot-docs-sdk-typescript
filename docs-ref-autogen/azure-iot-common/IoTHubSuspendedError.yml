@@ -11,7 +11,7 @@ items:
     type: class
     summary: Error thrown when IoT Hub has been suspended.
     extends:
-      - Error
+      name: Error
     source:
       path: errors.ts
       startLine: 194
@@ -27,13 +27,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new IoTHubSuspendedError(message?: string)'
       parameters:
         - id: message
           type:
             - string
           description: ''
           optional: true
-      content: 'new IoTHubSuspendedError(message?: string)'
     type: constructor
   - uid: azure-iot-common.IoTHubSuspendedError.Error
     name: Error

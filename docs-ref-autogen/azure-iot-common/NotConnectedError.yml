@@ -13,7 +13,7 @@ items:
       Error thrown when the device is disconnected and the operation cannot be
       completed.
     extends:
-      - Error
+      name: Error
     source:
       path: errors.ts
       startLine: 109
@@ -29,13 +29,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new NotConnectedError(message?: string)'
       parameters:
         - id: message
           type:
             - string
           description: ''
           optional: true
-      content: 'new NotConnectedError(message?: string)'
     type: constructor
   - uid: azure-iot-common.NotConnectedError.Error
     name: Error

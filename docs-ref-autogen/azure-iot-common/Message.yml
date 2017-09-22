@@ -41,6 +41,7 @@ items:
       - typeScript
     summary: 'Creates a new <xref:azure-iot-common.Message> object'
     syntax:
+      content: 'new Message(data: BufferConvertible)'
       parameters:
         - id: data
           type:
@@ -50,7 +51,6 @@ items:
             [Buffer](https://nodejs.org/api/globals.html#globals_class_buffer)
                         object or anything that can be passed to the [Buffer](https://nodejs.org/api/globals.html#globals_class_buffer) constructor
                         to construct a [Buffer](https://nodejs.org/api/globals.html#globals_class_buffer) from.
-      content: 'new Message(data: BufferConvertible)'
     type: constructor
   - uid: azure-iot-common.Message.ack
     name: ack
@@ -185,8 +185,8 @@ items:
       Gets the data passed to the constructor as a
       [Buffer](https://nodejs.org/api/globals.html#globals_class_buffer)
     syntax:
-      parameters: []
       content: function getBytes()
+      parameters: []
       return:
         type:
           - Buffer
@@ -198,8 +198,8 @@ items:
       - typeScript
     summary: 'Gets the content (body) of the <xref:azure-iot-common.Message>.'
     syntax:
-      parameters: []
       content: function getData()
+      parameters: []
       return:
         type:
           - BufferConvertible

@@ -36,7 +36,8 @@ items:
 
       to create an IoT Hub service Client.
     extends:
-      - EventEmitter
+      name: EventEmitter
+      href: https://nodejs.org/api/events.html#events_class_eventemitter
     source:
       path: client.ts
       startLine: 26
@@ -57,7 +58,7 @@ items:
     type: interface
     summary: ''
     extends:
-      - Receiver
+      name: Receiver
     source:
       path: client.ts
       startLine: 292
@@ -73,6 +74,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function abandon(message: Message, done?: Callback<MessageAbandoned>)'
       parameters:
         - id: message
           type:
@@ -83,7 +85,6 @@ items:
             - Callback<MessageAbandoned>
           description: ''
           optional: true
-      content: 'function abandon(message: Message, done?: Callback<MessageAbandoned>)'
     type: method
   - uid: azure-iothub.Client.ServiceReceiver.complete
     name: 'complete(message: Message, done?: Callback<MessageCompleted>)'
@@ -92,6 +93,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function complete(message: Message, done?: Callback<MessageCompleted>)'
       parameters:
         - id: message
           type:
@@ -102,7 +104,6 @@ items:
             - Callback<MessageCompleted>
           description: ''
           optional: true
-      content: 'function complete(message: Message, done?: Callback<MessageCompleted>)'
     type: method
   - uid: azure-iothub.Client.ServiceReceiver.reject
     name: 'reject(message: Message, done?: Callback<MessageRejected>)'
@@ -111,6 +112,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function reject(message: Message, done?: Callback<MessageRejected>)'
       parameters:
         - id: message
           type:
@@ -121,7 +123,6 @@ items:
             - Callback<MessageRejected>
           description: ''
           optional: true
-      content: 'function reject(message: Message, done?: Callback<MessageRejected>)'
     type: method
   - uid: azure-iothub.Client.Transport
     name: Transport
@@ -137,7 +138,7 @@ items:
     type: interface
     summary: ''
     extends:
-      - EventEmitter
+      name: EventEmitter
     source:
       path: client.ts
       startLine: 298
@@ -153,13 +154,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function connect(done?: Callback<Connected>)'
       parameters:
         - id: done
           type:
             - Callback<Connected>
           description: ''
           optional: true
-      content: 'function connect(done?: Callback<Connected>)'
     type: method
   - uid: azure-iothub.Client.Transport.disconnect
     name: 'disconnect(done: Callback<Disconnected>)'
@@ -168,12 +169,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function disconnect(done: Callback<Disconnected>)'
       parameters:
         - id: done
           type:
             - Callback<Disconnected>
           description: ''
-      content: 'function disconnect(done: Callback<Disconnected>)'
     type: method
   - uid: azure-iothub.Client.Transport.getFeedbackReceiver
     name: 'getFeedbackReceiver(done: Callback<ServiceReceiver>)'
@@ -182,12 +183,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getFeedbackReceiver(done: Callback<ServiceReceiver>)'
       parameters:
         - id: done
           type:
             - Callback<@azure-iothub.Client.ServiceReceiver>
           description: ''
-      content: 'function getFeedbackReceiver(done: Callback<ServiceReceiver>)'
     type: method
   - uid: azure-iothub.Client.Transport.getFileNotificationReceiver
     name: 'getFileNotificationReceiver(done: Callback<ServiceReceiver>)'
@@ -196,12 +197,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getFileNotificationReceiver(done: Callback<ServiceReceiver>)'
       parameters:
         - id: done
           type:
             - Callback<@azure-iothub.Client.ServiceReceiver>
           description: ''
-      content: 'function getFileNotificationReceiver(done: Callback<ServiceReceiver>)'
     type: method
   - uid: azure-iothub.Client.Transport.send
     name: 'send(deviceId: string, message: Message, done?: Callback<MessageEnqueued>)'
@@ -210,6 +211,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function send(deviceId: string, message: Message, done?:
+        Callback<MessageEnqueued>)
       parameters:
         - id: deviceId
           type:
@@ -224,9 +228,6 @@ items:
             - Callback<MessageEnqueued>
           description: ''
           optional: true
-      content: >-
-        function send(deviceId: string, message: Message, done?:
-        Callback<MessageEnqueued>)
     type: method
   - uid: azure-iothub.Client.TransportConfigOptions
     name: TransportConfigOptions
@@ -307,6 +308,7 @@ items:
       - typeScript
     summary: Closes the connection to an IoT hub.
     syntax:
+      content: 'function close(done?: Callback<Disconnected>)'
       parameters:
         - id: done
           type:
@@ -317,7 +319,6 @@ items:
                                        argument, which will be null if the operation
                                        completed successfully.
           optional: true
-      content: 'function close(done?: Callback<Disconnected>)'
     type: method
   - uid: azure-iothub.Client.getFeedbackReceiver
     name: 'getFeedbackReceiver(done: Callback<ServiceReceiver>)'
@@ -328,6 +329,7 @@ items:
       Returns a AmqpReceiver object which emits events when new feedback
       messages are received by the client.
     syntax:
+      content: 'function getFeedbackReceiver(done: Callback<ServiceReceiver>)'
       parameters:
         - id: done
           type:
@@ -337,7 +339,6 @@ items:
                                          complete. `done` will be called with two
                                          arguments: an Error object (can be null) and a
                                          AmqpReceiver object.
-      content: 'function getFeedbackReceiver(done: Callback<ServiceReceiver>)'
     type: method
   - uid: azure-iothub.Client.getFileNotificationReceiver
     name: 'getFileNotificationReceiver(done: Callback<ServiceReceiver>)'
@@ -348,6 +349,7 @@ items:
       Returns a AmqpReceiver object which emits events when new file upload
       notifications are received by the client.
     syntax:
+      content: 'function getFileNotificationReceiver(done: Callback<ServiceReceiver>)'
       parameters:
         - id: done
           type:
@@ -357,7 +359,6 @@ items:
                                          complete. `done` will be called with two
                                          arguments: an Error object (can be null) and a
                                          AmqpReceiver object.
-      content: 'function getFileNotificationReceiver(done: Callback<ServiceReceiver>)'
     type: method
   - uid: azure-iothub.Client.invokeDeviceMethod
     name: >-
@@ -368,6 +369,9 @@ items:
       - typeScript
     summary: Invokes a method on a particular device.
     syntax:
+      content: >-
+        function invokeDeviceMethod(deviceId: string, methodParams:
+        DeviceMethodParams, done?: Callback<any>)
       parameters:
         - id: deviceId
           type:
@@ -383,9 +387,6 @@ items:
           description: |
             The callback to call with the result of the method execution.
           optional: true
-      content: >-
-        function invokeDeviceMethod(deviceId: string, methodParams:
-        DeviceMethodParams, done?: Callback<any>)
     exceptions:
       - type: ReferenceError
         description: 'If one of the required parameters is null, undefined or empty.'
@@ -399,6 +400,7 @@ items:
       - typeScript
     summary: Opens the connection to an IoT hub.
     syntax:
+      content: 'function open(done?: Callback<Connected>)'
       parameters:
         - id: done
           type:
@@ -409,7 +411,6 @@ items:
                                        argument, which will be null if the operation
                                        completed successfully.
           optional: true
-      content: 'function open(done?: Callback<Connected>)'
     type: method
   - uid: azure-iothub.Client.send
     name: 'send(deviceId: string, message: Message, done?: Callback<MessageEnqueued>)'
@@ -418,6 +419,9 @@ items:
       - typeScript
     summary: Sends a message to a device.
     syntax:
+      content: >-
+        function send(deviceId: string, message: Message, done?:
+        Callback<MessageEnqueued>)
       parameters:
         - id: deviceId
           type:
@@ -441,9 +445,6 @@ items:
                                          transport-specific response object useful for
                                          logging or debugging.
           optional: true
-      content: >-
-        function send(deviceId: string, message: Message, done?:
-        Callback<MessageEnqueued>)
     exceptions:
       - type: ReferenceError
         description: 'If `deviceId` or `message` is null, undefined or empty.'
@@ -458,6 +459,9 @@ items:
                          connection string using the default transport
                          (Amqp) or the one specified in the second argument.
     syntax:
+      content: >-
+        static function fromConnectionString(connStr: string, transportCtor?:
+        TransportCtor)
       parameters:
         - id: connStr
           type:
@@ -470,9 +474,6 @@ items:
             - TransportCtor
           description: ''
           optional: true
-      content: >-
-        static function fromConnectionString(connStr: string, transportCtor?:
-        TransportCtor)
       return:
         type:
           - '@azure-iothub.Client'
@@ -489,6 +490,9 @@ items:
                          shared access signature using the default transport
                          (Amqp) or the one specified in the second argument.
     syntax:
+      content: >-
+        static function fromSharedAccessSignature(sharedAccessSignature: string,
+        transportCtor?: TransportCtor)
       parameters:
         - id: sharedAccessSignature
           type:
@@ -501,9 +505,6 @@ items:
             - TransportCtor
           description: ''
           optional: true
-      content: >-
-        static function fromSharedAccessSignature(sharedAccessSignature: string,
-        transportCtor?: TransportCtor)
       return:
         type:
           - '@azure-iothub.Client'

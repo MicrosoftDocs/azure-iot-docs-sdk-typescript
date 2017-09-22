@@ -14,7 +14,7 @@ items:
       This class is not meant to be used directly, instead it should just be
       passed to the [client](xref:azure-iot-device.Client) object.
     extends:
-      - '@azure-iot-device-mqtt.Mqtt'
+      name: '@azure-iot-device-mqtt.Mqtt'
     source:
       path: mqtt_ws.ts
       startLine: 15

@@ -11,7 +11,7 @@ items:
     type: class
     summary: Error thrown when an argument is invalid.
     extends:
-      - Error
+      name: Error
     source:
       path: errors.ts
       startLine: 11
@@ -27,13 +27,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new ArgumentError(message?: string)'
       parameters:
         - id: message
           type:
             - string
           description: ''
           optional: true
-      content: 'new ArgumentError(message?: string)'
     type: constructor
   - uid: azure-iot-common.ArgumentError.Error
     name: Error

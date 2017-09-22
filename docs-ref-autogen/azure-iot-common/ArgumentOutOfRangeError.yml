@@ -13,7 +13,7 @@ items:
       Error thrown when an argument has a value that is out of the admissible
       range.
     extends:
-      - Error
+      name: Error
     source:
       path: errors.ts
       startLine: 25
@@ -29,13 +29,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new ArgumentOutOfRangeError(message?: string)'
       parameters:
         - id: message
           type:
             - string
           description: ''
           optional: true
-      content: 'new ArgumentOutOfRangeError(message?: string)'
     type: constructor
   - uid: azure-iot-common.ArgumentOutOfRangeError.Error
     name: Error

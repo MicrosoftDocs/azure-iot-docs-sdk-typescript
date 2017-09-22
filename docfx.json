@@ -15,16 +15,53 @@
           "LICENSE-CODE",
           "ThirdPartyNotices"
         ]
+      },
+      {
+        "files": [
+          "**/*.yml"
+        ],
+        "src": "bread",
+        "dest": "bread",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
       }
     ],
     "resource": [
     ],
     "overwrite": [],
     "externalReference": [],
-    "globalMetadata": {},
+    "globalMetadata": {
+      "breadcrumb_path": "/javascript/api/bread/toc.json",
+      "brand": "azure"
+    },
     "fileMetadata": {
+      "author": {
+        "docs-ref-autogen/**": "pierreca"
+      },
+      "ms.manager":{
+        "docs-ref-autogen/**":"pierreca"
+      },
+      "ms.author":{
+        "docs-ref-autogen/**":"pierreca"
+      },
+      "ms.devlang": {
+        "docs-ref-autogen/**": "typescript"
+      },
+      "ms.date": {
+        "docs-ref-autogen/**": "9/22/2017"
+      },
       "ms.topic": {
         "docs-ref-autogen/**": "reference"
+      },
+      "ms.service":{
+        "docs-ref-autogen/azure-iot-common/**": "common",
+        "docs-ref-autogen/azure-iot-device-amqp/**": "amqp",
+        "docs-ref-autogen/azure-iot-device-http/**": "http",
+        "docs-ref-autogen/azure-iot-device-mqtt/**": "mqtt",
+        "docs-ref-autogen/azure-iot-device/**": "device",
+        "docs-ref-autogen/azure-iothub/**": "service"
       }
     },
     "template": [],

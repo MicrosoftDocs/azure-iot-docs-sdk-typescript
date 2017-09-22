@@ -11,7 +11,7 @@ items:
     type: class
     summary: Error thrown when a device sends a bad response to a device method call.
     extends:
-      - Error
+      name: Error
     source:
       path: errors.ts
       startLine: 335
@@ -27,13 +27,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new BadDeviceResponseError(message?: string)'
       parameters:
         - id: message
           type:
             - string
           description: ''
           optional: true
-      content: 'new BadDeviceResponseError(message?: string)'
     type: constructor
   - uid: azure-iot-common.BadDeviceResponseError.Error
     name: Error

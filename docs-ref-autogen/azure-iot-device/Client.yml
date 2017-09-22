@@ -523,7 +523,8 @@ items:
             The callback to call when the message is abandoned.
     exceptions:
       - type: ReferenceException
-        description: If the message is falsy.
+        description: |
+          If the message is falsy.
     type: method
   - uid: azure-iot-device.Client.close
     name: 'close(closeCallback?: function)'
@@ -565,7 +566,8 @@ items:
             The callback to call when the message is completed.
     exceptions:
       - type: ReferenceError
-        description: If the message is falsy.
+        description: |
+          If the message is falsy.
     type: method
   - uid: azure-iot-device.Client.getTwin
     name: 'getTwin(done: function, twin?: Twin)'
@@ -616,9 +618,13 @@ items:
                                            call is received.
     exceptions:
       - type: ReferenceError
-        description: If the `methodName` or `callback` parameter
+        description: |-
+          If the `methodName` or `callback` parameter
+                                         is falsy.
       - type: TypeError
-        description: If the `methodName` parameter is not a string
+        description: |
+          If the `methodName` parameter is not a string
+                                         or if the `callback` is not a function.
     type: method
   - uid: azure-iot-device.Client.open
     name: 'open(openCallback: function)'
@@ -660,7 +666,8 @@ items:
             The callback to call when the message is rejected.
     exceptions:
       - type: ReferenceException
-        description: If the message is falsy.
+        description: |
+          If the message is falsy.
     type: method
   - uid: azure-iot-device.Client.sendEvent
     name: 'sendEvent(message: Message, sendEventCallback?: function)'
@@ -736,7 +743,8 @@ items:
           optional: true
     exceptions:
       - type: ReferenceError
-        description: If the options structure is falsy
+        description: |
+          If the options structure is falsy
     type: method
   - uid: azure-iot-device.Client.setTransportOptions
     name: 'setTransportOptions(options: any, done?: function)'
@@ -789,7 +797,8 @@ items:
       - type: ReferenceError
         description: If the sharedAccessSignature parameter is falsy.
       - type: ReferenceError
-        description: If the client uses x509 authentication.
+        description: |
+          If the client uses x509 authentication.
     type: method
   - uid: azure-iot-device.Client.uploadToBlob
     name: >-
@@ -825,7 +834,8 @@ items:
             The callback to call when the upload is complete.
     exceptions:
       - type: ReferenceException
-        description: If blobName or stream or streamLength is falsy.
+        description: |
+          If blobName or stream or streamLength is falsy.
     type: method
   - uid: azure-iot-device.Client.fromConnectionString
     name: 'fromConnectionString(connStr: string, transportCtor: any)'
@@ -855,7 +865,8 @@ items:
           - '@azure-iot-device.Client'
     exceptions:
       - type: ReferenceError
-        description: If the connStr parameter is falsy.
+        description: |
+          If the connStr parameter is falsy.
     type: method
   - uid: azure-iot-device.Client.fromSharedAccessSignature
     name: >-
@@ -887,5 +898,6 @@ items:
           - '@azure-iot-device.Client'
     exceptions:
       - type: ReferenceError
-        description: If the connStr parameter is falsy.
+        description: |
+          If the connStr parameter is falsy.
     type: method

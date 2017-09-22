@@ -141,5 +141,8 @@ items:
       - type: ReferenceError
         description: If the `status` parameter is not a number.
       - type: Error
-        description: If this response has already been sent to the
+        description: |
+          If this response has already been sent to the
+                                         service in a previous call to it. This method
+                                         should be called only once.
     type: method

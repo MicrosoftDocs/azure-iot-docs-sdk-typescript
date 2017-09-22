@@ -174,7 +174,8 @@ items:
       - type: ReferenceError
         description: If methodParams.methodName is falsy.
       - type: TypeError
-        description: If the callback is not the last parameter
+        description: |
+          If the callback is not the last parameter
     type: method
   - uid: azure-iothub.JobClient.scheduleTwinUpdate
     name: >-
@@ -233,7 +234,8 @@ items:
           If one or more of the jobId, queryCondition or patch arguments are
           falsy.
       - type: TypeError
-        description: If the callback is not the last parameter
+        description: |
+          If the callback is not the last parameter
     type: method
   - uid: azure-iothub.JobClient.fromConnectionString
     name: 'fromConnectionString(connectionString: string)'
@@ -256,7 +258,8 @@ items:
           - '@azure-iothub.JobClient'
     exceptions:
       - type: ReferenceError
-        description: If the connectionString argument is falsy.
+        description: |
+          If the connectionString argument is falsy.
     type: method
   - uid: azure-iothub.JobClient.fromSharedAccessSignature
     name: 'fromSharedAccessSignature(sharedAccessSignature: string)'
@@ -279,5 +282,6 @@ items:
           - '@azure-iothub.JobClient'
     exceptions:
       - type: ReferenceError
-        description: If the sharedAccessSignature argument is falsy.
+        description: |
+          If the sharedAccessSignature argument is falsy.
     type: method

@@ -37,7 +37,6 @@ items:
       to create an IoT Hub service Client.
     extends:
       name: EventEmitter
-      href: https://nodejs.org/api/events.html#events_class_eventemitter
     source:
       path: client.ts
       startLine: 26
@@ -391,7 +390,8 @@ items:
       - type: ReferenceError
         description: 'If one of the required parameters is null, undefined or empty.'
       - type: TypeError
-        description: If one of the parameters is of the wrong type.
+        description: |
+          If one of the parameters is of the wrong type.
     type: method
   - uid: azure-iothub.Client.open
     name: 'open(done?: Callback<Connected>)'
@@ -447,7 +447,8 @@ items:
           optional: true
     exceptions:
       - type: ReferenceError
-        description: 'If `deviceId` or `message` is null, undefined or empty.'
+        description: |
+          If `deviceId` or `message` is null, undefined or empty.
     type: method
   - uid: azure-iothub.Client.fromConnectionString
     name: 'fromConnectionString(connStr: string, transportCtor?: TransportCtor)'

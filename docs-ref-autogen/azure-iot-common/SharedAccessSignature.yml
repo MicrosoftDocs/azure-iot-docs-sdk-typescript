@@ -43,7 +43,8 @@ items:
           - string
     exceptions:
       - type: ReferenceError
-        description: Will be thrown if the argument is falsy.
+        description: |
+          Will be thrown if the argument is falsy.
     type: method
   - uid: azure-iot-common.SharedAccessSignature.toString
     name: toString()
@@ -92,7 +93,8 @@ items:
           - '@azure-iot-common.SharedAccessSignature'
     exceptions:
       - type: ReferenceError
-        description: Will be thrown if one of the arguments is falsy.
+        description: |
+          Will be thrown if one of the arguments is falsy.
     type: method
   - uid: azure-iot-common.SharedAccessSignature.parse
     name: 'parse(source: string, requiredFields?: string[])'
@@ -120,5 +122,6 @@ items:
           - '@azure-iot-common.SharedAccessSignature'
     exceptions:
       - type: FormatError
-        description: Will be thrown if the source string is malformed.
+        description: |
+          Will be thrown if the source string is malformed.
     type: method

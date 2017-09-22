@@ -37,7 +37,6 @@ items:
       to create an IoT Hub service Client.
     extends:
       name: EventEmitter
-      href: https://nodejs.org/api/events.html#events_class_eventemitter
     source:
       path: client.ts
       startLine: 26
@@ -68,7 +67,7 @@ items:
         branch: doc-patches
     package: azure-iothub
   - uid: azure-iothub.Client.ServiceReceiver.abandon
-    name: 'abandon(message: Message, done?: Callback<MessageAbandoned>)'
+    name: abandon
     children: []
     langs:
       - typeScript
@@ -87,7 +86,7 @@ items:
           optional: true
     type: method
   - uid: azure-iothub.Client.ServiceReceiver.complete
-    name: 'complete(message: Message, done?: Callback<MessageCompleted>)'
+    name: complete
     children: []
     langs:
       - typeScript
@@ -106,7 +105,7 @@ items:
           optional: true
     type: method
   - uid: azure-iothub.Client.ServiceReceiver.reject
-    name: 'reject(message: Message, done?: Callback<MessageRejected>)'
+    name: reject
     children: []
     langs:
       - typeScript
@@ -148,7 +147,7 @@ items:
         branch: doc-patches
     package: azure-iothub
   - uid: azure-iothub.Client.Transport.connect
-    name: 'connect(done?: Callback<Connected>)'
+    name: connect
     children: []
     langs:
       - typeScript
@@ -163,7 +162,7 @@ items:
           optional: true
     type: method
   - uid: azure-iothub.Client.Transport.disconnect
-    name: 'disconnect(done: Callback<Disconnected>)'
+    name: disconnect
     children: []
     langs:
       - typeScript
@@ -177,7 +176,7 @@ items:
           description: ''
     type: method
   - uid: azure-iothub.Client.Transport.getFeedbackReceiver
-    name: 'getFeedbackReceiver(done: Callback<ServiceReceiver>)'
+    name: getFeedbackReceiver
     children: []
     langs:
       - typeScript
@@ -191,7 +190,7 @@ items:
           description: ''
     type: method
   - uid: azure-iothub.Client.Transport.getFileNotificationReceiver
-    name: 'getFileNotificationReceiver(done: Callback<ServiceReceiver>)'
+    name: getFileNotificationReceiver
     children: []
     langs:
       - typeScript
@@ -205,7 +204,7 @@ items:
           description: ''
     type: method
   - uid: azure-iothub.Client.Transport.send
-    name: 'send(deviceId: string, message: Message, done?: Callback<MessageEnqueued>)'
+    name: send
     children: []
     langs:
       - typeScript
@@ -302,7 +301,7 @@ items:
         type:
           - string
   - uid: azure-iothub.Client.close
-    name: 'close(done?: Callback<Disconnected>)'
+    name: close
     children: []
     langs:
       - typeScript
@@ -321,7 +320,7 @@ items:
           optional: true
     type: method
   - uid: azure-iothub.Client.getFeedbackReceiver
-    name: 'getFeedbackReceiver(done: Callback<ServiceReceiver>)'
+    name: getFeedbackReceiver
     children: []
     langs:
       - typeScript
@@ -341,7 +340,7 @@ items:
                                          AmqpReceiver object.
     type: method
   - uid: azure-iothub.Client.getFileNotificationReceiver
-    name: 'getFileNotificationReceiver(done: Callback<ServiceReceiver>)'
+    name: getFileNotificationReceiver
     children: []
     langs:
       - typeScript
@@ -361,9 +360,7 @@ items:
                                          AmqpReceiver object.
     type: method
   - uid: azure-iothub.Client.invokeDeviceMethod
-    name: >-
-      invokeDeviceMethod(deviceId: string, methodParams: DeviceMethodParams,
-      done?: Callback<any>)
+    name: invokeDeviceMethod
     children: []
     langs:
       - typeScript
@@ -395,7 +392,7 @@ items:
           If one of the parameters is of the wrong type.
     type: method
   - uid: azure-iothub.Client.open
-    name: 'open(done?: Callback<Connected>)'
+    name: open
     children: []
     langs:
       - typeScript
@@ -414,7 +411,7 @@ items:
           optional: true
     type: method
   - uid: azure-iothub.Client.send
-    name: 'send(deviceId: string, message: Message, done?: Callback<MessageEnqueued>)'
+    name: send
     children: []
     langs:
       - typeScript
@@ -452,7 +449,7 @@ items:
           If `deviceId` or `message` is null, undefined or empty.
     type: method
   - uid: azure-iothub.Client.fromConnectionString
-    name: 'fromConnectionString(connStr: string, transportCtor?: TransportCtor)'
+    name: fromConnectionString
     children: []
     langs:
       - typeScript
@@ -481,9 +478,7 @@ items:
           - '@azure-iothub.Client'
     type: method
   - uid: azure-iothub.Client.fromSharedAccessSignature
-    name: >-
-      fromSharedAccessSignature(sharedAccessSignature: string, transportCtor?:
-      TransportCtor)
+    name: fromSharedAccessSignature
     children: []
     langs:
       - typeScript

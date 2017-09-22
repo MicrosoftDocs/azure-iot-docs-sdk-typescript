@@ -45,7 +45,7 @@ items:
         branch: doc-patches
     package: azure-iothub
   - uid: azure-iothub.Twin.constructor
-    name: 'Twin(device: DeviceIdentity, registryClient: Registry)'
+    name: Twin
     children: []
     langs:
       - typeScript
@@ -130,7 +130,7 @@ items:
         type:
           - '[key: string]: string'
   - uid: azure-iothub.Twin.get
-    name: 'get(done: Callback<Twin>)'
+    name: get
     children: []
     langs:
       - typeScript
@@ -151,7 +151,7 @@ items:
                                            object useful for logging or debugging.
     type: method
   - uid: azure-iothub.Twin.toJSON
-    name: toJSON()
+    name: toJSON
     children: []
     langs:
       - typeScript
@@ -164,7 +164,7 @@ items:
           - object
     type: method
   - uid: azure-iothub.Twin.update
-    name: 'update(patch: any, done: Callback<Twin>)'
+    name: update
     children: []
     langs:
       - typeScript

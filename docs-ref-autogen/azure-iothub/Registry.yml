@@ -332,7 +332,7 @@ items:
         type:
           - string
   - uid: azure-iothub.Registry.addDevices
-    name: 'addDevices(devices: DeviceDescription[], done: BulkDeviceIdentityCallback)'
+    name: addDevices
     children: []
     langs:
       - typeScript
@@ -361,7 +361,7 @@ items:
                                            for logging or debugging.
     type: method
   - uid: azure-iothub.Registry.cancelJob
-    name: 'cancelJob(jobId: string, done: JobCallback)'
+    name: cancelJob
     children: []
     langs:
       - typeScript
@@ -384,7 +384,7 @@ items:
                                          (null otherwise) and the (cancelled) status of the job whose identifier was passed as an argument.
     type: method
   - uid: azure-iothub.Registry.create
-    name: 'create(deviceInfo: DeviceDescription, done: DeviceCallback)'
+    name: create
     children: []
     langs:
       - typeScript
@@ -411,7 +411,7 @@ items:
                                            object useful for logging or debugging.
     type: method
   - uid: azure-iothub.Registry.createQuery
-    name: 'createQuery(sqlQuery: string, pageSize?: number)'
+    name: createQuery
     children: []
     langs:
       - typeScript
@@ -444,7 +444,7 @@ items:
           a number, null or undefined.
     type: method
   - uid: azure-iothub.Registry.delete
-    name: 'delete(deviceId: string, done: ResponseCallback)'
+    name: delete
     children: []
     langs:
       - typeScript
@@ -469,9 +469,7 @@ items:
                                            debugging.
     type: method
   - uid: azure-iothub.Registry.exportDevicesToBlob
-    name: >-
-      exportDevicesToBlob(outputBlobContainerUri: string, excludeKeys: boolean,
-      done: JobCallback)
+    name: exportDevicesToBlob
     children: []
     langs:
       - typeScript
@@ -502,7 +500,7 @@ items:
                                                          an error happened, (null otherwise) and the job status that can be used to track progress of the devices export.
     type: method
   - uid: azure-iothub.Registry.get
-    name: 'get(deviceId: string, done: DeviceCallback)'
+    name: get
     children: []
     langs:
       - typeScript
@@ -529,7 +527,7 @@ items:
                                            object useful for logging or debugging.
     type: method
   - uid: azure-iothub.Registry.getJob
-    name: 'getJob(jobId: string, done: JobCallback)'
+    name: getJob
     children: []
     langs:
       - typeScript
@@ -552,7 +550,7 @@ items:
                                          (null otherwise) and the status of the job whose identifier was passed as an argument.
     type: method
   - uid: azure-iothub.Registry.getRegistryStatistics
-    name: 'getRegistryStatistics(done: Callback<RegistryStatistics>)'
+    name: getRegistryStatistics
     children: []
     langs:
       - typeScript
@@ -568,7 +566,7 @@ items:
                                           the device registry statistics.
     type: method
   - uid: azure-iothub.Registry.getTwin
-    name: 'getTwin(deviceId: string, done: ResponseCallback)'
+    name: getTwin
     children: []
     langs:
       - typeScript
@@ -588,9 +586,7 @@ items:
                                             the device twin instance.
     type: method
   - uid: azure-iothub.Registry.importDevicesFromBlob
-    name: >-
-      importDevicesFromBlob(inputBlobContainerUri: string,
-      outputBlobContainerUri: string, done: JobCallback)
+    name: importDevicesFromBlob
     children: []
     langs:
       - typeScript
@@ -621,7 +617,7 @@ items:
                                                          an error happened, (null otherwise) and the job status that can be used to track progress of the devices import.
     type: method
   - uid: azure-iothub.Registry.list
-    name: 'list(done: Callback<Device[]>)'
+    name: list
     children: []
     langs:
       - typeScript
@@ -645,7 +641,7 @@ items:
                                            object useful for logging or debugging.
     type: method
   - uid: azure-iothub.Registry.listJobs
-    name: 'listJobs(done: Callback<any>)'
+    name: listJobs
     children: []
     langs:
       - typeScript
@@ -662,9 +658,7 @@ items:
                                          (null otherwise) and the list of past jobs as an argument.
     type: method
   - uid: azure-iothub.Registry.removeDevices
-    name: >-
-      removeDevices(devices: DeviceDescription[], forceRemove: boolean, done:
-      BulkDeviceIdentityCallback)
+    name: removeDevices
     children: []
     langs:
       - typeScript
@@ -700,7 +694,7 @@ items:
                                            for logging or debugging.
     type: method
   - uid: azure-iothub.Registry.update
-    name: 'update(deviceInfo: DeviceDescription, done: DeviceCallback)'
+    name: update
     children: []
     langs:
       - typeScript
@@ -730,9 +724,7 @@ items:
                                            object useful for logging or debugging.
     type: method
   - uid: azure-iothub.Registry.updateDevices
-    name: >-
-      updateDevices(devices: DeviceDescription[], forceUpdate: boolean, done?:
-      BulkDeviceIdentityCallback)
+    name: updateDevices
     children: []
     langs:
       - typeScript
@@ -769,9 +761,7 @@ items:
           optional: true
     type: method
   - uid: azure-iothub.Registry.updateTwin
-    name: >-
-      updateTwin(deviceId: string, patch: any, etag: string, done:
-      ResponseCallback)
+    name: updateTwin
     children: []
     langs:
       - typeScript
@@ -804,7 +794,7 @@ items:
                                             the device twin instance.
     type: method
   - uid: azure-iothub.Registry.fromConnectionString
-    name: 'fromConnectionString(value: string)'
+    name: fromConnectionString
     children: []
     langs:
       - typeScript
@@ -824,7 +814,7 @@ items:
           - '@azure-iothub.Registry'
     type: method
   - uid: azure-iothub.Registry.fromSharedAccessSignature
-    name: 'fromSharedAccessSignature(value: string)'
+    name: fromSharedAccessSignature
     children: []
     langs:
       - typeScript

@@ -1,0 +1,182 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-device.Client.Transport
+    name: Transport
+    fullName: Transport
+    children:
+      - azure-iot-device.Client.Transport.abandon
+      - azure-iot-device.Client.Transport.complete
+      - azure-iot-device.Client.Transport.getReceiver
+      - azure-iot-device.Client.Transport.reject
+      - azure-iot-device.Client.Transport.sendEvent
+      - azure-iot-device.Client.Transport.sendEventBatch
+      - azure-iot-device.Client.Transport.setOptions
+      - azure-iot-device.Client.Transport.updateSharedAccessSignature
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    extends:
+      name: EventEmitter
+    source:
+      path: client.ts
+      startLine: 806
+      remote:
+        path: device/core/src\client.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: doc-patches
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.Transport.abandon
+    name: abandon
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function abandon(message: Message, done: (err: Error, results?:
+        MessageAbandoned) => void)
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+        - id: done
+          type:
+            - '(err: Error, results?: MessageAbandoned) => void'
+          description: ''
+    type: method
+  - uid: azure-iot-device.Client.Transport.complete
+    name: complete
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function complete(message: Message, done: (err: Error, result?:
+        MessageCompleted) => void)
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+        - id: done
+          type:
+            - '(err: Error, result?: MessageCompleted) => void'
+          description: ''
+    type: method
+  - uid: azure-iot-device.Client.Transport.getReceiver
+    name: getReceiver
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getReceiver(func: (err: Error, receiver?: Receiver) => void)'
+      parameters:
+        - id: func
+          type:
+            - '(err: Error, receiver?: Receiver) => void'
+          description: ''
+    type: method
+  - uid: azure-iot-device.Client.Transport.reject
+    name: reject
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function reject(message: Message, done: (err: Error, results?:
+        MessageRejected) => void)
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+        - id: done
+          type:
+            - '(err: Error, results?: MessageRejected) => void'
+          description: ''
+    type: method
+  - uid: azure-iot-device.Client.Transport.sendEvent
+    name: sendEvent
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function sendEvent(message: Message, done: (err: Error, result?:
+        MessageEnqueued) => void)
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+        - id: done
+          type:
+            - '(err: Error, result?: MessageEnqueued) => void'
+          description: ''
+    type: method
+  - uid: azure-iot-device.Client.Transport.sendEventBatch
+    name: sendEventBatch
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function sendEventBatch(messages: Message[], done: (err: Error, result?:
+        MessageEnqueued) => void)
+      parameters:
+        - id: messages
+          type:
+            - 'Message[]'
+          description: ''
+        - id: done
+          type:
+            - '(err: Error, result?: MessageEnqueued) => void'
+          description: ''
+    type: method
+  - uid: azure-iot-device.Client.Transport.setOptions
+    name: setOptions
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function setOptions(options: any, done: (err?: Error, result?:
+        TransportConfigured) => void)
+      parameters:
+        - id: options
+          type:
+            - any
+          description: ''
+        - id: done
+          type:
+            - '(err?: Error, result?: TransportConfigured) => void'
+          description: ''
+    type: method
+  - uid: azure-iot-device.Client.Transport.updateSharedAccessSignature
+    name: updateSharedAccessSignature
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateSharedAccessSignature(sharedAccessSignature: string,
+        done: (err: Error, result?: SharedAccessSignatureUpdated) => void)
+      parameters:
+        - id: sharedAccessSignature
+          type:
+            - string
+          description: ''
+        - id: done
+          type:
+            - '(err: Error, result?: SharedAccessSignatureUpdated) => void'
+          description: ''
+    type: method

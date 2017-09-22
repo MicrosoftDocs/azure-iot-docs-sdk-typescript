@@ -1,0 +1,101 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-device.Client.DeviceMethodResponse
+    name: DeviceMethodResponse
+    fullName: DeviceMethodResponse
+    children:
+      - azure-iot-device.Client.DeviceMethodResponse.isResponseComplete
+      - azure-iot-device.Client.DeviceMethodResponse.payload
+      - azure-iot-device.Client.DeviceMethodResponse.requestId
+      - azure-iot-device.Client.DeviceMethodResponse.status
+      - azure-iot-device.Client.DeviceMethodResponse.send
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    source:
+      path: client.ts
+      startLine: 828
+      remote:
+        path: device/core/src\client.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: doc-patches
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.DeviceMethodResponse.isResponseComplete
+    name: isResponseComplete
+    fullName: isResponseComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: boolean isResponseComplete
+      return:
+        type:
+          - boolean
+  - uid: azure-iot-device.Client.DeviceMethodResponse.payload
+    name: payload
+    fullName: payload
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: any payload
+      return:
+        type:
+          - any
+  - uid: azure-iot-device.Client.DeviceMethodResponse.requestId
+    name: requestId
+    fullName: requestId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: string requestId
+      return:
+        type:
+          - string
+  - uid: azure-iot-device.Client.DeviceMethodResponse.status
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: number status
+      return:
+        type:
+          - number
+  - uid: azure-iot-device.Client.DeviceMethodResponse.send
+    name: send
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function send(status: number, payload?: any, done?: (err?: Error) =>
+        void)
+      parameters:
+        - id: status
+          type:
+            - number
+          description: ''
+        - id: payload
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: done
+          type:
+            - '(err?: Error) => void'
+          description: ''
+          optional: true
+    type: method

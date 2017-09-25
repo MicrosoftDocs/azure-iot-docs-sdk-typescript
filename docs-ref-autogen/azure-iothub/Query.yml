@@ -1,0 +1,97 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iothub.Query
+    name: Query
+    fullName: Query
+    children:
+      - azure-iothub.Query.continuationToken
+      - azure-iothub.Query.hasMoreResults
+      - azure-iothub.Query.next
+      - azure-iothub.Query.nextAsTwin
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+      Constructs a Query object that provides APIs to trigger the execution of a
+      device query.
+
+      SDK users should create queries using the
+      <xref:azure-iothub.JobClient.createQuery> and
+      <xref:azure-iothub.Registry.createQuery> APIs
+
+      and should not try to instantiate this class directly.
+    source:
+      path: query.ts
+      startLine: 14
+      remote:
+        path: service/src\query.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: doc-patches
+    package: azure-iothub
+  - uid: azure-iothub.Query.continuationToken
+    name: continuationToken
+    fullName: continuationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Token used to iterate over multiple pages of results.
+    syntax:
+      content: string continuationToken
+      return:
+        type:
+          - string
+  - uid: azure-iothub.Query.hasMoreResults
+    name: hasMoreResults
+    fullName: hasMoreResults
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Boolean indicating whether there are more results pages.
+    syntax:
+      content: boolean hasMoreResults
+      return:
+        type:
+          - boolean
+  - uid: azure-iothub.Query.next
+    name: next
+    children: []
+    langs:
+      - typeScript
+    summary: Gets the next page of results for this query.
+    syntax:
+      content: 'function next(continuationTokenOrCallback: string, done?: Callback<any>)'
+      parameters:
+        - id: continuationTokenOrCallback
+          type:
+            - string
+          description: ''
+        - id: done
+          type:
+            - Callback<any>
+          description: |
+            The callback that will be called with either an Error object or
+                                                      the results of the query.
+          optional: true
+    type: method
+  - uid: azure-iothub.Query.nextAsTwin
+    name: nextAsTwin
+    children: []
+    langs:
+      - typeScript
+    summary: Gets the next page of results for this query and cast them as Twins.
+    syntax:
+      content: 'function nextAsTwin(continuationToken: string, done: Callback<Twin[]>)'
+      parameters:
+        - id: continuationToken
+          type:
+            - string
+          description: Continuation Token used for paging through results (optional)
+        - id: done
+          type:
+            - 'Callback<@azure-iothub.Twin[]>'
+          description: |
+            The callback that will be called with either an Error object or
+                                                      the results of the query.
+    type: method

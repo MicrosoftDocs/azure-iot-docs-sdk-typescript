@@ -13,7 +13,8 @@
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
-          "ThirdPartyNotices"
+          "ThirdPartyNotices",
+          "toc.yml"
         ]
       },
       {
@@ -21,11 +22,19 @@
           "**/*.yml"
         ],
         "src": "bread",
-        "dest": "bread",
+        "dest": "azure-iot-docs-sdk-typescript/bread",
         "exclude": [
           "**/obj/**",
           "**/includes/**"
         ]
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "docs-ref-autogen",
+        "dest": "azure-iot-docs-sdk-typescript",
+        "exclude": []
       }
     ],
     "resource": [
@@ -33,7 +42,8 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/javascript/api/bread/toc.json",
+      "breadcrumb_path": "/javascript/api/azure-iot-docs-sdk-typescript/bread/toc.json",
+      "toc_path": "/javascript/api/azure-iot-docs-sdk-typescript/toc.json",
       "brand": "azure"
     },
     "fileMetadata": {

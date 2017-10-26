@@ -4,8 +4,8 @@ items:
     name: NotConnectedError
     fullName: NotConnectedError
     children:
-      - azure-iot-common.NotConnectedError.constructor
       - azure-iot-common.NotConnectedError.Error
+      - azure-iot-common.NotConnectedError.constructor
     langs:
       - typeScript
     type: class
@@ -14,29 +14,7 @@ items:
       completed.
     extends:
       name: Error
-    source:
-      path: errors.ts
-      startLine: 109
-      remote:
-        path: common/core/src\errors.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
     package: azure-iot-common
-  - uid: azure-iot-common.NotConnectedError.constructor
-    name: NotConnectedError
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'new NotConnectedError(message?: string)'
-      parameters:
-        - id: message
-          type:
-            - string
-          description: ''
-          optional: true
-    type: constructor
   - uid: azure-iot-common.NotConnectedError.Error
     name: Error
     fullName: Error
@@ -50,3 +28,18 @@ items:
       return:
         type:
           - ErrorConstructor
+  - uid: azure-iot-common.NotConnectedError.constructor
+    name: NotConnectedError
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new NotConnectedError(message?: string)'
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+          optional: true

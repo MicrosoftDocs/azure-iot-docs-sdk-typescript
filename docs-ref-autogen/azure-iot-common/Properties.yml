@@ -4,11 +4,11 @@ items:
     name: Properties
     fullName: Properties
     children:
-      - azure-iot-common.Properties.propertyList
       - azure-iot-common.Properties.add
       - azure-iot-common.Properties.count
       - azure-iot-common.Properties.getItem
       - azure-iot-common.Properties.getValue
+      - azure-iot-common.Properties.propertyList
     langs:
       - typeScript
     type: class
@@ -20,37 +20,11 @@ items:
       [routing](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-csharp-csharp-process-d2c).
 
       Values can only be strings.
-    source:
-      path: properties.ts
-      startLine: 11
-      remote:
-        path: common/core/src\properties.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
     package: azure-iot-common
-  - uid: azure-iot-common.Properties.propertyList
-    name: propertyList
-    fullName: propertyList
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: |-
-      Array containing the properties stored as key/value pairs
-      ```json
-      [
-        { key: 'prop1', value: 'value1' },
-        { key: 'prop2', value: 'value2' }
-      ]
-      ```
-    syntax:
-      content: 'any[] propertyList'
-      return:
-        type:
-          - 'any[]'
   - uid: azure-iot-common.Properties.add
     name: add
     children: []
+    type: method
     langs:
       - typeScript
     summary: |-
@@ -71,10 +45,10 @@ items:
       return:
         type:
           - boolean
-    type: method
   - uid: azure-iot-common.Properties.count
     name: count
     children: []
+    type: method
     langs:
       - typeScript
     summary: Returns the number of items in the collection.
@@ -84,10 +58,10 @@ items:
       return:
         type:
           - number
-    type: method
   - uid: azure-iot-common.Properties.getItem
     name: getItem
     children: []
+    type: method
     langs:
       - typeScript
     summary: Returns the key-value pair corresponding to the given index.
@@ -98,10 +72,13 @@ items:
           type:
             - number
           description: ''
-    type: method
+      return:
+        type:
+          - function
   - uid: azure-iot-common.Properties.getValue
     name: getValue
     children: []
+    type: method
     langs:
       - typeScript
     summary: Returns the value property of the element that has the given key.
@@ -115,4 +92,23 @@ items:
       return:
         type:
           - any
-    type: method
+  - uid: azure-iot-common.Properties.propertyList
+    name: propertyList
+    fullName: propertyList
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Array containing the properties stored as key/value pairs
+      ```json
+      [
+        { key: 'prop1', value: 'value1' },
+        { key: 'prop2', value: 'value2' }
+      ]
+      ```
+    syntax:
+      content: 'any[] propertyList'
+      return:
+        type:
+          - 'any[]'

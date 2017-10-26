@@ -12,18 +12,12 @@ items:
     type: interface
     summary: ''
     extends:
-      name: Receiver
-    source:
-      path: client.ts
-      startLine: 292
-      remote:
-        path: service/src\client.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
+      name: any
     package: azure-iothub
   - uid: azure-iothub.Client.ServiceReceiver.abandon
     name: abandon
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
@@ -39,10 +33,10 @@ items:
             - Callback<MessageAbandoned>
           description: ''
           optional: true
-    type: method
   - uid: azure-iothub.Client.ServiceReceiver.complete
     name: complete
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
@@ -58,10 +52,10 @@ items:
             - Callback<MessageCompleted>
           description: ''
           optional: true
-    type: method
   - uid: azure-iothub.Client.ServiceReceiver.reject
     name: reject
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
@@ -77,4 +71,3 @@ items:
             - Callback<MessageRejected>
           description: ''
           optional: true
-    type: method

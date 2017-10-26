@@ -4,8 +4,8 @@ items:
     name: UnauthorizedError
     fullName: UnauthorizedError
     children:
-      - azure-iot-common.UnauthorizedError.constructor
       - azure-iot-common.UnauthorizedError.Error
+      - azure-iot-common.UnauthorizedError.constructor
     langs:
       - typeScript
     type: class
@@ -14,29 +14,7 @@ items:
       refused the connection.
     extends:
       name: Error
-    source:
-      path: errors.ts
-      startLine: 81
-      remote:
-        path: common/core/src\errors.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
     package: azure-iot-common
-  - uid: azure-iot-common.UnauthorizedError.constructor
-    name: UnauthorizedError
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'new UnauthorizedError(message?: string)'
-      parameters:
-        - id: message
-          type:
-            - string
-          description: ''
-          optional: true
-    type: constructor
   - uid: azure-iot-common.UnauthorizedError.Error
     name: Error
     fullName: Error
@@ -50,3 +28,18 @@ items:
       return:
         type:
           - ErrorConstructor
+  - uid: azure-iot-common.UnauthorizedError.constructor
+    name: UnauthorizedError
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new UnauthorizedError(message?: string)'
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+          optional: true

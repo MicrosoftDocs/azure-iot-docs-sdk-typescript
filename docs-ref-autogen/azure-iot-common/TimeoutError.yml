@@ -4,37 +4,15 @@ items:
     name: TimeoutError
     fullName: TimeoutError
     children:
-      - azure-iot-common.TimeoutError.constructor
       - azure-iot-common.TimeoutError.Error
+      - azure-iot-common.TimeoutError.constructor
     langs:
       - typeScript
     type: class
     summary: Error thrown when a timeout occurs
     extends:
       name: Error
-    source:
-      path: errors.ts
-      startLine: 321
-      remote:
-        path: common/core/src\errors.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
     package: azure-iot-common
-  - uid: azure-iot-common.TimeoutError.constructor
-    name: TimeoutError
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'new TimeoutError(message?: string)'
-      parameters:
-        - id: message
-          type:
-            - string
-          description: ''
-          optional: true
-    type: constructor
   - uid: azure-iot-common.TimeoutError.Error
     name: Error
     fullName: Error
@@ -48,3 +26,18 @@ items:
       return:
         type:
           - ErrorConstructor
+  - uid: azure-iot-common.TimeoutError.constructor
+    name: TimeoutError
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new TimeoutError(message?: string)'
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+          optional: true

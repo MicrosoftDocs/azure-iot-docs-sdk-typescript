@@ -4,8 +4,8 @@ items:
     name: ServiceUnavailableError
     fullName: ServiceUnavailableError
     children:
-      - azure-iot-common.ServiceUnavailableError.constructor
       - azure-iot-common.ServiceUnavailableError.Error
+      - azure-iot-common.ServiceUnavailableError.constructor
     langs:
       - typeScript
     type: class
@@ -14,29 +14,7 @@ items:
       retried.
     extends:
       name: Error
-    source:
-      path: errors.ts
-      startLine: 166
-      remote:
-        path: common/core/src\errors.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
     package: azure-iot-common
-  - uid: azure-iot-common.ServiceUnavailableError.constructor
-    name: ServiceUnavailableError
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'new ServiceUnavailableError(message?: string)'
-      parameters:
-        - id: message
-          type:
-            - string
-          description: ''
-          optional: true
-    type: constructor
   - uid: azure-iot-common.ServiceUnavailableError.Error
     name: Error
     fullName: Error
@@ -50,3 +28,18 @@ items:
       return:
         type:
           - ErrorConstructor
+  - uid: azure-iot-common.ServiceUnavailableError.constructor
+    name: ServiceUnavailableError
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new ServiceUnavailableError(message?: string)'
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+          optional: true

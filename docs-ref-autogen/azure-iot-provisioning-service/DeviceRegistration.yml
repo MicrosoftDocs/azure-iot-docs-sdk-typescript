@@ -1,0 +1,39 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-service.DeviceRegistration
+    name: DeviceRegistration
+    fullName: DeviceRegistration
+    children:
+      - azure-iot-provisioning-service.DeviceRegistration.registrationId
+      - azure-iot-provisioning-service.DeviceRegistration.tpm
+    langs:
+      - typeScript
+    type: interface
+    summary: Device registration.
+    package: azure-iot-provisioning-service
+  - uid: azure-iot-provisioning-service.DeviceRegistration.registrationId
+    name: registrationId
+    fullName: registrationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: string registrationId
+      return:
+        type:
+          - string
+  - uid: azure-iot-provisioning-service.DeviceRegistration.tpm
+    name: tpm
+    fullName: tpm
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: TpmAttestation tpm
+      return:
+        type:
+          - '@azure-iot-provisioning-service.TpmAttestation'

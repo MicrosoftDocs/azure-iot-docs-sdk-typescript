@@ -4,37 +4,15 @@ items:
     name: IoTHubSuspendedError
     fullName: IoTHubSuspendedError
     children:
-      - azure-iot-common.IoTHubSuspendedError.constructor
       - azure-iot-common.IoTHubSuspendedError.Error
+      - azure-iot-common.IoTHubSuspendedError.constructor
     langs:
       - typeScript
     type: class
     summary: Error thrown when IoT Hub has been suspended.
     extends:
       name: Error
-    source:
-      path: errors.ts
-      startLine: 194
-      remote:
-        path: common/core/src\errors.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
     package: azure-iot-common
-  - uid: azure-iot-common.IoTHubSuspendedError.constructor
-    name: IoTHubSuspendedError
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'new IoTHubSuspendedError(message?: string)'
-      parameters:
-        - id: message
-          type:
-            - string
-          description: ''
-          optional: true
-    type: constructor
   - uid: azure-iot-common.IoTHubSuspendedError.Error
     name: Error
     fullName: Error
@@ -48,3 +26,18 @@ items:
       return:
         type:
           - ErrorConstructor
+  - uid: azure-iot-common.IoTHubSuspendedError.constructor
+    name: IoTHubSuspendedError
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new IoTHubSuspendedError(message?: string)'
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+          optional: true

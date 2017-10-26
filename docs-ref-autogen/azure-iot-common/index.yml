@@ -8,9 +8,11 @@ items:
       - azure-iot-common.ArgumentError
       - azure-iot-common.ArgumentOutOfRangeError
       - azure-iot-common.BadDeviceResponseError
+      - azure-iot-common.CloudToDeviceDetachedError
       - azure-iot-common.DeviceAlreadyExistsError
       - azure-iot-common.DeviceMaximumQueueDepthExceededError
       - azure-iot-common.DeviceMessageLockLostError
+      - azure-iot-common.DeviceMethodsDetachedError
       - azure-iot-common.DeviceNotFoundError
       - azure-iot-common.DeviceTimeoutError
       - azure-iot-common.FormatError
@@ -25,11 +27,13 @@ items:
       - azure-iot-common.MessageTooLargeError
       - azure-iot-common.NotConnectedError
       - azure-iot-common.NotImplementedError
+      - azure-iot-common.OperationCancelledError
       - azure-iot-common.PreconditionFailedError
       - azure-iot-common.ServiceUnavailableError
       - azure-iot-common.ThrottlingError
       - azure-iot-common.TimeoutError
       - azure-iot-common.TooManyDevicesError
+      - azure-iot-common.TwinDetachedError
       - azure-iot-common.UnauthorizedError
       - azure-iot-common.Message
       - azure-iot-common.Properties
@@ -41,7 +45,13 @@ items:
       - azure-iot-common.MessageRejected
       - azure-iot-common.SharedAccessSignatureUpdated
       - azure-iot-common.TransportConfigured
+      - azure-iot-common.RetryOperation
+      - azure-iot-common.ExponentialBackOffWithJitter
+      - azure-iot-common.ExponentialBackoffWithJitterParameters
+      - azure-iot-common.NoRetry
+      - azure-iot-common.RetryPolicy
       - azure-iot-common.SharedAccessSignature
+      - azure-iot-common.Global
     type: package
     langs:
       - typeScript
@@ -54,12 +64,16 @@ references:
     name: ArgumentOutOfRangeError
   - uid: azure-iot-common.BadDeviceResponseError
     name: BadDeviceResponseError
+  - uid: azure-iot-common.CloudToDeviceDetachedError
+    name: CloudToDeviceDetachedError
   - uid: azure-iot-common.DeviceAlreadyExistsError
     name: DeviceAlreadyExistsError
   - uid: azure-iot-common.DeviceMaximumQueueDepthExceededError
     name: DeviceMaximumQueueDepthExceededError
   - uid: azure-iot-common.DeviceMessageLockLostError
     name: DeviceMessageLockLostError
+  - uid: azure-iot-common.DeviceMethodsDetachedError
+    name: DeviceMethodsDetachedError
   - uid: azure-iot-common.DeviceNotFoundError
     name: DeviceNotFoundError
   - uid: azure-iot-common.DeviceTimeoutError
@@ -88,6 +102,8 @@ references:
     name: NotConnectedError
   - uid: azure-iot-common.NotImplementedError
     name: NotImplementedError
+  - uid: azure-iot-common.OperationCancelledError
+    name: OperationCancelledError
   - uid: azure-iot-common.PreconditionFailedError
     name: PreconditionFailedError
   - uid: azure-iot-common.ServiceUnavailableError
@@ -98,6 +114,8 @@ references:
     name: TimeoutError
   - uid: azure-iot-common.TooManyDevicesError
     name: TooManyDevicesError
+  - uid: azure-iot-common.TwinDetachedError
+    name: TwinDetachedError
   - uid: azure-iot-common.UnauthorizedError
     name: UnauthorizedError
   - uid: azure-iot-common.Message
@@ -120,5 +138,17 @@ references:
     name: SharedAccessSignatureUpdated
   - uid: azure-iot-common.TransportConfigured
     name: TransportConfigured
+  - uid: azure-iot-common.RetryOperation
+    name: RetryOperation
+  - uid: azure-iot-common.ExponentialBackOffWithJitter
+    name: ExponentialBackOffWithJitter
+  - uid: azure-iot-common.ExponentialBackoffWithJitterParameters
+    name: ExponentialBackoffWithJitterParameters
+  - uid: azure-iot-common.NoRetry
+    name: NoRetry
+  - uid: azure-iot-common.RetryPolicy
+    name: RetryPolicy
   - uid: azure-iot-common.SharedAccessSignature
     name: SharedAccessSignature
+  - uid: azure-iot-common.Global
+    name: Global

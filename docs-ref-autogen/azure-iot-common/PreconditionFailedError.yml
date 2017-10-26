@@ -4,8 +4,8 @@ items:
     name: PreconditionFailedError
     fullName: PreconditionFailedError
     children:
-      - azure-iot-common.PreconditionFailedError.constructor
       - azure-iot-common.PreconditionFailedError.Error
+      - azure-iot-common.PreconditionFailedError.constructor
     langs:
       - typeScript
     type: class
@@ -14,29 +14,7 @@ items:
       execute an operation was not.
     extends:
       name: Error
-    source:
-      path: errors.ts
-      startLine: 307
-      remote:
-        path: common/core/src\errors.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
     package: azure-iot-common
-  - uid: azure-iot-common.PreconditionFailedError.constructor
-    name: PreconditionFailedError
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'new PreconditionFailedError(message?: string)'
-      parameters:
-        - id: message
-          type:
-            - string
-          description: ''
-          optional: true
-    type: constructor
   - uid: azure-iot-common.PreconditionFailedError.Error
     name: Error
     fullName: Error
@@ -50,3 +28,18 @@ items:
       return:
         type:
           - ErrorConstructor
+  - uid: azure-iot-common.PreconditionFailedError.constructor
+    name: PreconditionFailedError
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new PreconditionFailedError(message?: string)'
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+          optional: true

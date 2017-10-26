@@ -4,8 +4,8 @@ items:
     name: MessageTooLargeError
     fullName: MessageTooLargeError
     children:
-      - azure-iot-common.MessageTooLargeError.constructor
       - azure-iot-common.MessageTooLargeError.Error
+      - azure-iot-common.MessageTooLargeError.constructor
     langs:
       - typeScript
     type: class
@@ -14,29 +14,7 @@ items:
       256Kb.
     extends:
       name: Error
-    source:
-      path: errors.ts
-      startLine: 138
-      remote:
-        path: common/core/src\errors.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
     package: azure-iot-common
-  - uid: azure-iot-common.MessageTooLargeError.constructor
-    name: MessageTooLargeError
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'new MessageTooLargeError(message?: string)'
-      parameters:
-        - id: message
-          type:
-            - string
-          description: ''
-          optional: true
-    type: constructor
   - uid: azure-iot-common.MessageTooLargeError.Error
     name: Error
     fullName: Error
@@ -50,3 +28,18 @@ items:
       return:
         type:
           - ErrorConstructor
+  - uid: azure-iot-common.MessageTooLargeError.constructor
+    name: MessageTooLargeError
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new MessageTooLargeError(message?: string)'
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+          optional: true

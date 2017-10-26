@@ -4,11 +4,11 @@ items:
     name: Device
     fullName: Device
     children:
-      - azure-iothub.Device.constructor
       - azure-iothub.Device.authentication
       - azure-iothub.Device.cloudToDeviceMessageCount
       - azure-iothub.Device.connectionState
       - azure-iothub.Device.connectionStateUpdatedTime
+      - azure-iothub.Device.constructor
       - azure-iothub.Device.deviceId
       - azure-iothub.Device.etag
       - azure-iothub.Device.generationId
@@ -35,34 +35,9 @@ items:
 
       but this will be removed in a future major version update and customers
       should instead use plain JSON objects.
-    source:
-      path: device.ts
-      startLine: 36
-      remote:
-        path: service/src\device.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
     package: azure-iothub
     deprecated:
       content: ''
-  - uid: azure-iothub.Device.constructor
-    name: Device
-    children: []
-    langs:
-      - typeScript
-    summary: 'Instantiate a new <xref:azure-iothub.Device> object.'
-    syntax:
-      content: 'new Device(jsonData?: any)'
-      parameters:
-        - id: jsonData
-          type:
-            - any
-          description: >
-            An optional JSON representation of the device, which will be mapped
-            to properties in the object. If no argument is provided, Device
-            roperties will be assigned default values.
-          optional: true
-    type: constructor
   - uid: azure-iothub.Device.authentication
     name: authentication
     fullName: authentication
@@ -72,7 +47,7 @@ items:
     type: property
     summary: Contains the symmetric keys used to authenticate this device.
     syntax:
-      content: '@azure-iothub.Device.Authentication authentication'
+      content: Authentication authentication
       return:
         type:
           - '@azure-iothub.Device.Authentication'
@@ -126,6 +101,24 @@ items:
       return:
         type:
           - string
+  - uid: azure-iothub.Device.constructor
+    name: Device
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 'Instantiate a new <xref:azure-iothub.Device> object.'
+    syntax:
+      content: 'new Device(jsonData?: any)'
+      parameters:
+        - id: jsonData
+          type:
+            - any
+          description: >
+            An optional JSON representation of the device, which will be mapped
+            to properties in the object. If no argument is provided, Device
+            roperties will be assigned default values.
+          optional: true
   - uid: azure-iothub.Device.deviceId
     name: deviceId
     fullName: deviceId

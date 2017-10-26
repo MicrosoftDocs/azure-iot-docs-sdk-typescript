@@ -4,8 +4,8 @@ items:
     name: InternalServerError
     fullName: InternalServerError
     children:
-      - azure-iot-common.InternalServerError.constructor
       - azure-iot-common.InternalServerError.Error
+      - azure-iot-common.InternalServerError.constructor
     langs:
       - typeScript
     type: class
@@ -14,29 +14,7 @@ items:
       bug?
     extends:
       name: Error
-    source:
-      path: errors.ts
-      startLine: 152
-      remote:
-        path: common/core/src\errors.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
     package: azure-iot-common
-  - uid: azure-iot-common.InternalServerError.constructor
-    name: InternalServerError
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'new InternalServerError(message?: string)'
-      parameters:
-        - id: message
-          type:
-            - string
-          description: ''
-          optional: true
-    type: constructor
   - uid: azure-iot-common.InternalServerError.Error
     name: Error
     fullName: Error
@@ -50,3 +28,18 @@ items:
       return:
         type:
           - ErrorConstructor
+  - uid: azure-iot-common.InternalServerError.constructor
+    name: InternalServerError
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new InternalServerError(message?: string)'
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+          optional: true

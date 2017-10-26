@@ -6,10 +6,24 @@ items:
     children:
       - azure-iot-device.Client.Transport.abandon
       - azure-iot-device.Client.Transport.complete
-      - azure-iot-device.Client.Transport.getReceiver
+      - azure-iot-device.Client.Transport.connect
+      - azure-iot-device.Client.Transport.disableC2D
+      - azure-iot-device.Client.Transport.disableMethods
+      - azure-iot-device.Client.Transport.disableTwin
+      - azure-iot-device.Client.Transport.disconnect
+      - azure-iot-device.Client.Transport.enableC2D
+      - azure-iot-device.Client.Transport.enableMethods
+      - azure-iot-device.Client.Transport.enableTwin
+      - azure-iot-device.Client.Transport.getTwinReceiver
+      - azure-iot-device.Client.Transport.on
+      - azure-iot-device.Client.Transport.on_1
+      - azure-iot-device.Client.Transport.on_2
+      - azure-iot-device.Client.Transport.onDeviceMethod
       - azure-iot-device.Client.Transport.reject
       - azure-iot-device.Client.Transport.sendEvent
       - azure-iot-device.Client.Transport.sendEventBatch
+      - azure-iot-device.Client.Transport.sendMethodResponse
+      - azure-iot-device.Client.Transport.sendTwinRequest
       - azure-iot-device.Client.Transport.setOptions
       - azure-iot-device.Client.Transport.updateSharedAccessSignature
     langs:
@@ -17,24 +31,18 @@ items:
     type: interface
     summary: ''
     extends:
-      name: EventEmitter
-    source:
-      path: client.ts
-      startLine: 806
-      remote:
-        path: device/core/src\client.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
+      name: any
     package: azure-iot-device
   - uid: azure-iot-device.Client.Transport.abandon
     name: abandon
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
     syntax:
       content: >-
-        function abandon(message: Message, done: (err: Error, results?:
+        function abandon(message: Message, done: (err?: Error, results?:
         MessageAbandoned) => void)
       parameters:
         - id: message
@@ -43,18 +51,18 @@ items:
           description: ''
         - id: done
           type:
-            - '(err: Error, results?: MessageAbandoned) => void'
+            - '(err?: Error, results?: MessageAbandoned) => void'
           description: ''
-    type: method
   - uid: azure-iot-device.Client.Transport.complete
     name: complete
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
     syntax:
       content: >-
-        function complete(message: Message, done: (err: Error, result?:
+        function complete(message: Message, done: (err?: Error, result?:
         MessageCompleted) => void)
       parameters:
         - id: message
@@ -63,32 +71,227 @@ items:
           description: ''
         - id: done
           type:
-            - '(err: Error, result?: MessageCompleted) => void'
+            - '(err?: Error, result?: MessageCompleted) => void'
           description: ''
-    type: method
-  - uid: azure-iot-device.Client.Transport.getReceiver
-    name: getReceiver
+  - uid: azure-iot-device.Client.Transport.connect
+    name: connect
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'function getReceiver(func: (err: Error, receiver?: Receiver) => void)'
+      content: 'function connect(done: (err?: Error, result?: Connected) => void)'
       parameters:
+        - id: done
+          type:
+            - '(err?: Error, result?: Connected) => void'
+          description: ''
+  - uid: azure-iot-device.Client.Transport.disableC2D
+    name: disableC2D
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disableC2D(callback: (err?: Error) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''
+  - uid: azure-iot-device.Client.Transport.disableMethods
+    name: disableMethods
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disableMethods(callback: (err?: Error) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''
+  - uid: azure-iot-device.Client.Transport.disableTwin
+    name: disableTwin
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disableTwin(callback: (err?: Error) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''
+  - uid: azure-iot-device.Client.Transport.disconnect
+    name: disconnect
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disconnect(done: (err?: Error, result?: Disconnected) => void)'
+      parameters:
+        - id: done
+          type:
+            - '(err?: Error, result?: Disconnected) => void'
+          description: ''
+  - uid: azure-iot-device.Client.Transport.enableC2D
+    name: enableC2D
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function enableC2D(callback: (err?: Error) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''
+  - uid: azure-iot-device.Client.Transport.enableMethods
+    name: enableMethods
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function enableMethods(callback: (err?: Error) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''
+  - uid: azure-iot-device.Client.Transport.enableTwin
+    name: enableTwin
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function enableTwin(callback: (err?: Error) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''
+  - uid: azure-iot-device.Client.Transport.getTwinReceiver
+    name: getTwinReceiver
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getTwinReceiver(done: (err?: Error, receiver?: any) => void)'
+      parameters:
+        - id: done
+          type:
+            - '(err?: Error, receiver?: any) => void'
+          description: ''
+  - uid: azure-iot-device.Client.Transport.on
+    name: 'on'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function on(type: function, func: (err: Error) => void)'
+      parameters:
+        - id: type
+          type:
+            - function
+          description: ''
         - id: func
           type:
-            - '(err: Error, receiver?: Receiver) => void'
+            - '(err: Error) => void'
           description: ''
-    type: method
-  - uid: azure-iot-device.Client.Transport.reject
-    name: reject
+      return:
+        type:
+          - this
+  - uid: azure-iot-device.Client.Transport.on_1
+    name: 'on'
     children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function on(type: function, func: (err?: Error) => void)'
+      parameters:
+        - id: type
+          type:
+            - function
+          description: ''
+        - id: func
+          type:
+            - '(err?: Error) => void'
+          description: ''
+      return:
+        type:
+          - this
+  - uid: azure-iot-device.Client.Transport.on_2
+    name: 'on'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function on(type: function, func: (msg: Message) => void)'
+      parameters:
+        - id: type
+          type:
+            - function
+          description: ''
+        - id: func
+          type:
+            - '(msg: Message) => void'
+          description: ''
+      return:
+        type:
+          - this
+  - uid: azure-iot-device.Client.Transport.onDeviceMethod
+    name: onDeviceMethod
+    children: []
+    type: method
     langs:
       - typeScript
     summary: ''
     syntax:
       content: >-
-        function reject(message: Message, done: (err: Error, results?:
+        function onDeviceMethod(methodName: string, methodCallback: (request:
+        MethodMessage, response: DeviceMethodResponse) => void)
+      parameters:
+        - id: methodName
+          type:
+            - string
+          description: ''
+        - id: methodCallback
+          type:
+            - '(request: MethodMessage, response: DeviceMethodResponse) => void'
+          description: ''
+  - uid: azure-iot-device.Client.Transport.reject
+    name: reject
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function reject(message: Message, done: (err?: Error, results?:
         MessageRejected) => void)
       parameters:
         - id: message
@@ -97,18 +300,18 @@ items:
           description: ''
         - id: done
           type:
-            - '(err: Error, results?: MessageRejected) => void'
+            - '(err?: Error, results?: MessageRejected) => void'
           description: ''
-    type: method
   - uid: azure-iot-device.Client.Transport.sendEvent
     name: sendEvent
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
     syntax:
       content: >-
-        function sendEvent(message: Message, done: (err: Error, result?:
+        function sendEvent(message: Message, done: (err?: Error, result?:
         MessageEnqueued) => void)
       parameters:
         - id: message
@@ -117,19 +320,19 @@ items:
           description: ''
         - id: done
           type:
-            - '(err: Error, result?: MessageEnqueued) => void'
+            - '(err?: Error, result?: MessageEnqueued) => void'
           description: ''
-    type: method
   - uid: azure-iot-device.Client.Transport.sendEventBatch
     name: sendEventBatch
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
     syntax:
       content: >-
-        function sendEventBatch(messages: Message[], done: (err: Error, result?:
-        MessageEnqueued) => void)
+        function sendEventBatch(messages: Message[], done: (err?: Error,
+        result?: MessageEnqueued) => void)
       parameters:
         - id: messages
           type:
@@ -137,12 +340,67 @@ items:
           description: ''
         - id: done
           type:
-            - '(err: Error, result?: MessageEnqueued) => void'
+            - '(err?: Error, result?: MessageEnqueued) => void'
           description: ''
+  - uid: azure-iot-device.Client.Transport.sendMethodResponse
+    name: sendMethodResponse
+    children: []
     type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function sendMethodResponse(response: DeviceMethodResponse, done?:
+        (err?: Error, result?: any) => void)
+      parameters:
+        - id: response
+          type:
+            - '@azure-iot-device.DeviceMethodResponse'
+          description: ''
+        - id: done
+          type:
+            - '(err?: Error, result?: any) => void'
+          description: ''
+          optional: true
+  - uid: azure-iot-device.Client.Transport.sendTwinRequest
+    name: sendTwinRequest
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function sendTwinRequest(method: string, resource: string, properties:
+        [key: string]: any, body: any, done?: (err?: Error, result?: any) =>
+        void)
+      parameters:
+        - id: method
+          type:
+            - string
+          description: ''
+        - id: resource
+          type:
+            - string
+          description: ''
+        - id: properties
+          type:
+            - '[key: string]: any'
+          description: ''
+        - id: body
+          type:
+            - any
+          description: ''
+        - id: done
+          type:
+            - '(err?: Error, result?: any) => void'
+          description: ''
+          optional: true
   - uid: azure-iot-device.Client.Transport.setOptions
     name: setOptions
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
@@ -159,17 +417,17 @@ items:
           type:
             - '(err?: Error, result?: TransportConfigured) => void'
           description: ''
-    type: method
   - uid: azure-iot-device.Client.Transport.updateSharedAccessSignature
     name: updateSharedAccessSignature
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
     syntax:
       content: >-
         function updateSharedAccessSignature(sharedAccessSignature: string,
-        done: (err: Error, result?: SharedAccessSignatureUpdated) => void)
+        done: (err?: Error, result?: SharedAccessSignatureUpdated) => void)
       parameters:
         - id: sharedAccessSignature
           type:
@@ -177,6 +435,5 @@ items:
           description: ''
         - id: done
           type:
-            - '(err: Error, result?: SharedAccessSignatureUpdated) => void'
+            - '(err?: Error, result?: SharedAccessSignatureUpdated) => void'
           description: ''
-    type: method

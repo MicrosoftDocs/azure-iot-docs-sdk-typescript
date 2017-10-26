@@ -1,0 +1,39 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-service.BulkOperation
+    name: BulkOperation
+    fullName: BulkOperation
+    children:
+      - azure-iot-provisioning-service.BulkOperation.enrollments
+      - azure-iot-provisioning-service.BulkOperation.mode
+    langs:
+      - typeScript
+    type: interface
+    summary: Bulk operation
+    package: azure-iot-provisioning-service
+  - uid: azure-iot-provisioning-service.BulkOperation.enrollments
+    name: enrollments
+    fullName: enrollments
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: Array<Enrollment> enrollments
+      return:
+        type:
+          - Array<@azure-iot-provisioning-service.Enrollment>
+  - uid: azure-iot-provisioning-service.BulkOperation.mode
+    name: mode
+    fullName: mode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: BulkOperationMode mode
+      return:
+        type:
+          - BulkOperationMode

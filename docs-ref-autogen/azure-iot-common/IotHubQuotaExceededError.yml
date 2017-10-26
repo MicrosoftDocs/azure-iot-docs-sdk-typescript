@@ -4,8 +4,8 @@ items:
     name: IotHubQuotaExceededError
     fullName: IotHubQuotaExceededError
     children:
-      - azure-iot-common.IotHubQuotaExceededError.constructor
       - azure-iot-common.IotHubQuotaExceededError.Error
+      - azure-iot-common.IotHubQuotaExceededError.constructor
     langs:
       - typeScript
     type: class
@@ -17,29 +17,7 @@ items:
       throttling](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-quotas-throttling)
     extends:
       name: Error
-    source:
-      path: errors.ts
-      startLine: 124
-      remote:
-        path: common/core/src\errors.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
     package: azure-iot-common
-  - uid: azure-iot-common.IotHubQuotaExceededError.constructor
-    name: IotHubQuotaExceededError
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'new IotHubQuotaExceededError(message?: string)'
-      parameters:
-        - id: message
-          type:
-            - string
-          description: ''
-          optional: true
-    type: constructor
   - uid: azure-iot-common.IotHubQuotaExceededError.Error
     name: Error
     fullName: Error
@@ -53,3 +31,18 @@ items:
       return:
         type:
           - ErrorConstructor
+  - uid: azure-iot-common.IotHubQuotaExceededError.constructor
+    name: IotHubQuotaExceededError
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new IotHubQuotaExceededError(message?: string)'
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+          optional: true

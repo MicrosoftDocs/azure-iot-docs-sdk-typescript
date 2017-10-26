@@ -4,26 +4,26 @@ items:
     name: Registry
     fullName: Registry
     children:
-      - azure-iothub.Registry.JobStatus
       - azure-iothub.Registry.addDevices
       - azure-iothub.Registry.cancelJob
       - azure-iothub.Registry.create
       - azure-iothub.Registry.createQuery
       - azure-iothub.Registry.delete
       - azure-iothub.Registry.exportDevicesToBlob
+      - azure-iothub.Registry.fromConnectionString
+      - azure-iothub.Registry.fromSharedAccessSignature
       - azure-iothub.Registry.get
       - azure-iothub.Registry.getJob
       - azure-iothub.Registry.getRegistryStatistics
       - azure-iothub.Registry.getTwin
       - azure-iothub.Registry.importDevicesFromBlob
+      - azure-iothub.Registry.JobStatus
       - azure-iothub.Registry.list
       - azure-iothub.Registry.listJobs
       - azure-iothub.Registry.removeDevices
       - azure-iothub.Registry.update
       - azure-iothub.Registry.updateDevices
       - azure-iothub.Registry.updateTwin
-      - azure-iothub.Registry.fromConnectionString
-      - azure-iothub.Registry.fromSharedAccessSignature
     langs:
       - typeScript
     type: class
@@ -37,33 +37,11 @@ items:
       [fromSharedAccessSignature](xref:azure-iothub.Registry.fromSharedAccessSignature).
 
       The protocol used for device identity registry operations is HTTPS.
-    source:
-      path: registry.ts
-      startLine: 23
-      remote:
-        path: service/src\registry.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
-    package: azure-iothub
-  - uid: azure-iothub.Registry.JobStatus
-    name: JobStatus
-    fullName: JobStatus
-    children: []
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    source:
-      path: registry.ts
-      startLine: 783
-      remote:
-        path: service/src\registry.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
     package: azure-iothub
   - uid: azure-iothub.Registry.addDevices
     name: addDevices
     children: []
+    type: method
     langs:
       - typeScript
     summary: Adds an array of devices.
@@ -89,10 +67,10 @@ items:
                                            BulkRegistryOperationResult
                                            and a transport-specific response object useful
                                            for logging or debugging.
-    type: method
   - uid: azure-iothub.Registry.cancelJob
     name: cancelJob
     children: []
+    type: method
     langs:
       - typeScript
     summary: Cancel a bulk import/export job.
@@ -112,10 +90,10 @@ items:
             The function to call with two arguments: an error object if an error
             happened,
                                          (null otherwise) and the (cancelled) status of the job whose identifier was passed as an argument.
-    type: method
   - uid: azure-iothub.Registry.create
     name: create
     children: []
+    type: method
     langs:
       - typeScript
     summary: Creates a new device identity on an IoT hub.
@@ -139,10 +117,10 @@ items:
                                            object representing the created device
                                            identity, and a transport-specific response
                                            object useful for logging or debugging.
-    type: method
   - uid: azure-iothub.Registry.createQuery
     name: createQuery
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -172,10 +150,10 @@ items:
         description: >
           If the sqlQuery argument is not a string or the pageSize argument not
           a number, null or undefined.
-    type: method
   - uid: azure-iothub.Registry.delete
     name: delete
     children: []
+    type: method
     langs:
       - typeScript
     summary: Removes an existing device identity from an IoT hub.
@@ -197,10 +175,10 @@ items:
                                            the other methods), and a transport-specific
                                            response object useful for logging or
                                            debugging.
-    type: method
   - uid: azure-iothub.Registry.exportDevicesToBlob
     name: exportDevicesToBlob
     children: []
+    type: method
     langs:
       - typeScript
     summary: Export devices to a blob in a bulk job.
@@ -228,10 +206,50 @@ items:
             The function to call when the job has been created, with two
             arguments: an error object if an
                                                          an error happened, (null otherwise) and the job status that can be used to track progress of the devices export.
+  - uid: azure-iothub.Registry.fromConnectionString
+    name: fromConnectionString
+    children: []
     type: method
+    langs:
+      - typeScript
+    summary: Constructs a Registry object from the given connection string.
+    syntax:
+      content: 'static function fromConnectionString(value: string)'
+      parameters:
+        - id: value
+          type:
+            - string
+          description: |-
+            A connection string which encapsulates the
+                                         appropriate (read and/or write) Registry
+                                         permissions.
+      return:
+        type:
+          - '@azure-iothub.Registry'
+  - uid: azure-iothub.Registry.fromSharedAccessSignature
+    name: fromSharedAccessSignature
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Constructs a Registry object from the given shared access signature.
+    syntax:
+      content: 'static function fromSharedAccessSignature(value: string)'
+      parameters:
+        - id: value
+          type:
+            - string
+          description: |-
+            A shared access signature which encapsulates
+                                         the appropriate (read and/or write) Registry
+                                         permissions.
+      return:
+        type:
+          - '@azure-iothub.Registry'
   - uid: azure-iothub.Registry.get
     name: get
     children: []
+    type: method
     langs:
       - typeScript
     summary: |-
@@ -255,10 +273,10 @@ items:
                                            object representing the created device
                                            identity, and a transport-specific response
                                            object useful for logging or debugging.
-    type: method
   - uid: azure-iothub.Registry.getJob
     name: getJob
     children: []
+    type: method
     langs:
       - typeScript
     summary: Get the status of a bulk import/export job.
@@ -278,10 +296,10 @@ items:
             The function to call with two arguments: an error object if an error
             happened,
                                          (null otherwise) and the status of the job whose identifier was passed as an argument.
-    type: method
   - uid: azure-iothub.Registry.getRegistryStatistics
     name: getRegistryStatistics
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets statistics about the devices in the device identity registry.
@@ -294,10 +312,10 @@ items:
           description: |
             The callback that will be called with either an Error object or
                                           the device registry statistics.
-    type: method
   - uid: azure-iothub.Registry.getTwin
     name: getTwin
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets the Device Twin of the device with the specified device identifier.
@@ -314,10 +332,10 @@ items:
           description: |
             The callback that will be called with either an Error object or
                                             the device twin instance.
-    type: method
   - uid: azure-iothub.Registry.importDevicesFromBlob
     name: importDevicesFromBlob
     children: []
+    type: method
     langs:
       - typeScript
     summary: Imports devices from a blob in bulk job.
@@ -345,10 +363,19 @@ items:
             The function to call when the job has been created, with two
             arguments: an error object if an
                                                          an error happened, (null otherwise) and the job status that can be used to track progress of the devices import.
-    type: method
+  - uid: azure-iothub.Registry.JobStatus
+    name: JobStatus
+    fullName: JobStatus
+    children: []
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-iothub
   - uid: azure-iothub.Registry.list
     name: list
     children: []
+    type: method
     langs:
       - typeScript
     summary: |-
@@ -369,10 +396,10 @@ items:
                                            objects representing the listed device
                                            identities, and a transport-specific response
                                            object useful for logging or debugging.
-    type: method
   - uid: azure-iothub.Registry.listJobs
     name: listJobs
     children: []
+    type: method
     langs:
       - typeScript
     summary: 'List the last import/export jobs (including the active one, if any).'
@@ -386,10 +413,10 @@ items:
             The function to call with two arguments: an error object if an error
             happened,
                                          (null otherwise) and the list of past jobs as an argument.
-    type: method
   - uid: azure-iothub.Registry.removeDevices
     name: removeDevices
     children: []
+    type: method
     langs:
       - typeScript
     summary: Updates an array of devices.
@@ -422,10 +449,10 @@ items:
                                            BulkRegistryOperationResult
                                            and a transport-specific response object useful
                                            for logging or debugging.
-    type: method
   - uid: azure-iothub.Registry.update
     name: update
     children: []
+    type: method
     langs:
       - typeScript
     summary: |-
@@ -452,10 +479,10 @@ items:
                                            object representing the updated device
                                            identity, and a transport-specific response
                                            object useful for logging or debugging.
-    type: method
   - uid: azure-iothub.Registry.updateDevices
     name: updateDevices
     children: []
+    type: method
     langs:
       - typeScript
     summary: Updates an array of devices.
@@ -489,10 +516,10 @@ items:
                                            and a transport-specific response object useful
                                            for logging or debugging.
           optional: true
-    type: method
   - uid: azure-iothub.Registry.updateTwin
     name: updateTwin
     children: []
+    type: method
     langs:
       - typeScript
     summary: Updates the Device Twin of a specific device with the given patch.
@@ -522,44 +549,3 @@ items:
           description: |
             The callback that will be called with either an Error object or
                                             the device twin instance.
-    type: method
-  - uid: azure-iothub.Registry.fromConnectionString
-    name: fromConnectionString
-    children: []
-    langs:
-      - typeScript
-    summary: Constructs a Registry object from the given connection string.
-    syntax:
-      content: 'static function fromConnectionString(value: string)'
-      parameters:
-        - id: value
-          type:
-            - string
-          description: |-
-            A connection string which encapsulates the
-                                         appropriate (read and/or write) Registry
-                                         permissions.
-      return:
-        type:
-          - '@azure-iothub.Registry'
-    type: method
-  - uid: azure-iothub.Registry.fromSharedAccessSignature
-    name: fromSharedAccessSignature
-    children: []
-    langs:
-      - typeScript
-    summary: Constructs a Registry object from the given shared access signature.
-    syntax:
-      content: 'static function fromSharedAccessSignature(value: string)'
-      parameters:
-        - id: value
-          type:
-            - string
-          description: |-
-            A shared access signature which encapsulates
-                                         the appropriate (read and/or write) Registry
-                                         permissions.
-      return:
-        type:
-          - '@azure-iothub.Registry'
-    type: method

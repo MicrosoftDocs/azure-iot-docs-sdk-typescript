@@ -4,8 +4,8 @@ items:
     name: InvalidEtagError
     fullName: InvalidEtagError
     children:
-      - azure-iot-common.InvalidEtagError.constructor
       - azure-iot-common.InvalidEtagError.Error
+      - azure-iot-common.InvalidEtagError.constructor
     langs:
       - typeScript
     type: class
@@ -14,29 +14,7 @@ items:
       date.
     extends:
       name: Error
-    source:
-      path: errors.ts
-      startLine: 279
-      remote:
-        path: common/core/src\errors.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
     package: azure-iot-common
-  - uid: azure-iot-common.InvalidEtagError.constructor
-    name: InvalidEtagError
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'new InvalidEtagError(message?: string)'
-      parameters:
-        - id: message
-          type:
-            - string
-          description: ''
-          optional: true
-    type: constructor
   - uid: azure-iot-common.InvalidEtagError.Error
     name: Error
     fullName: Error
@@ -50,3 +28,18 @@ items:
       return:
         type:
           - ErrorConstructor
+  - uid: azure-iot-common.InvalidEtagError.constructor
+    name: InvalidEtagError
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new InvalidEtagError(message?: string)'
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+          optional: true

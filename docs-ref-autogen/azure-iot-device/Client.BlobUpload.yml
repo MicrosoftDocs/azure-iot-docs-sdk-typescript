@@ -10,17 +10,11 @@ items:
       - typeScript
     type: interface
     summary: ''
-    source:
-      path: client.ts
-      startLine: 817
-      remote:
-        path: device/core/src\client.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
     package: azure-iot-device
   - uid: azure-iot-device.Client.BlobUpload.updateSharedAccessSignature
     name: updateSharedAccessSignature
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
@@ -31,10 +25,10 @@ items:
           type:
             - string
           description: ''
-    type: method
   - uid: azure-iot-device.Client.BlobUpload.uploadToBlob
     name: uploadToBlob
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
@@ -59,4 +53,3 @@ items:
           type:
             - '(err?: Error) => void'
           description: ''
-    type: method

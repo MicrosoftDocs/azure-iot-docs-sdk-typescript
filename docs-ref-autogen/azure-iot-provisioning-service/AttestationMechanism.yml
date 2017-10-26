@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-service.AttestationMechanism
+    name: AttestationMechanism
+    fullName: AttestationMechanism
+    children:
+      - azure-iot-provisioning-service.AttestationMechanism.tpm
+      - azure-iot-provisioning-service.AttestationMechanism.type
+      - azure-iot-provisioning-service.AttestationMechanism.x509
+    langs:
+      - typeScript
+    type: interface
+    summary: Device attestation method.
+    source:
+      path: interfaces.ts
+      startLine: 9
+      remote:
+        path: azure-iot-sdk/provisioning/service/src\interfaces.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-provisioning-service
+  - uid: azure-iot-provisioning-service.AttestationMechanism.tpm
+    name: tpm
+    fullName: tpm
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: TpmAttestation tpm
+      return:
+        type:
+          - '@azure-iot-provisioning-service.TpmAttestation'
+  - uid: azure-iot-provisioning-service.AttestationMechanism.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: AttestationTypes type
+      return:
+        type:
+          - AttestationTypes
+  - uid: azure-iot-provisioning-service.AttestationMechanism.x509
+    name: x509
+    fullName: x509
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: X509Attestation x509
+      return:
+        type:
+          - '@azure-iot-provisioning-service.X509Attestation'

@@ -1,0 +1,130 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-service.EnrollmentGroup
+    name: EnrollmentGroup
+    fullName: EnrollmentGroup
+    children:
+      - azure-iot-provisioning-service.EnrollmentGroup.attestation
+      - azure-iot-provisioning-service.EnrollmentGroup.createdDateTimeUtc
+      - azure-iot-provisioning-service.EnrollmentGroup.enrollmentGroupId
+      - azure-iot-provisioning-service.EnrollmentGroup.etag
+      - azure-iot-provisioning-service.EnrollmentGroup.initialTwinState
+      - azure-iot-provisioning-service.EnrollmentGroup.iotHubHostName
+      - azure-iot-provisioning-service.EnrollmentGroup.lastUpdatedDateTimeUtc
+      - azure-iot-provisioning-service.EnrollmentGroup.provisioningStatus
+    langs:
+      - typeScript
+    type: interface
+    summary: The enrollment group record.
+    source:
+      path: interfaces.ts
+      startLine: 136
+      remote:
+        path: azure-iot-sdk/provisioning/service/src\interfaces.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-provisioning-service
+  - uid: azure-iot-provisioning-service.EnrollmentGroup.attestation
+    name: attestation
+    fullName: attestation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: AttestationMechanism attestation
+      return:
+        type:
+          - '@azure-iot-provisioning-service.AttestationMechanism'
+  - uid: azure-iot-provisioning-service.EnrollmentGroup.createdDateTimeUtc
+    name: createdDateTimeUtc
+    fullName: createdDateTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: string createdDateTimeUtc
+      return:
+        type:
+          - string
+  - uid: azure-iot-provisioning-service.EnrollmentGroup.enrollmentGroupId
+    name: enrollmentGroupId
+    fullName: enrollmentGroupId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: string enrollmentGroupId
+      return:
+        type:
+          - string
+  - uid: azure-iot-provisioning-service.EnrollmentGroup.etag
+    name: etag
+    fullName: etag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: string etag
+      return:
+        type:
+          - string
+  - uid: azure-iot-provisioning-service.EnrollmentGroup.initialTwinState
+    name: initialTwinState
+    fullName: initialTwinState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: TwinState initialTwinState
+      return:
+        type:
+          - '@azure-iot-provisioning-service.TwinState'
+  - uid: azure-iot-provisioning-service.EnrollmentGroup.iotHubHostName
+    name: iotHubHostName
+    fullName: iotHubHostName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: string iotHubHostName
+      return:
+        type:
+          - string
+  - uid: azure-iot-provisioning-service.EnrollmentGroup.lastUpdatedDateTimeUtc
+    name: lastUpdatedDateTimeUtc
+    fullName: lastUpdatedDateTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: string lastUpdatedDateTimeUtc
+      return:
+        type:
+          - string
+  - uid: azure-iot-provisioning-service.EnrollmentGroup.provisioningStatus
+    name: provisioningStatus
+    fullName: provisioningStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: ProvisioningStatus provisioningStatus
+      return:
+        type:
+          - ProvisioningStatus

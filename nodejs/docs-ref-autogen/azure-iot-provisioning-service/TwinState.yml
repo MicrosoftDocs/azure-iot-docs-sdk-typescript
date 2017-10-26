@@ -1,0 +1,46 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-service.TwinState
+    name: TwinState
+    fullName: TwinState
+    children:
+      - azure-iot-provisioning-service.TwinState.desiredProperties
+      - azure-iot-provisioning-service.TwinState.tags
+    langs:
+      - typeScript
+    type: interface
+    summary: Device twin state.
+    source:
+      path: interfaces.ts
+      startLine: 173
+      remote:
+        path: azure-iot-sdk/provisioning/service/src\interfaces.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-provisioning-service
+  - uid: azure-iot-provisioning-service.TwinState.desiredProperties
+    name: desiredProperties
+    fullName: desiredProperties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: TwinCollection desiredProperties
+      return:
+        type:
+          - '@azure-iot-provisioning-service.TwinCollection'
+  - uid: azure-iot-provisioning-service.TwinState.tags
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: TwinCollection tags
+      return:
+        type:
+          - '@azure-iot-provisioning-service.TwinCollection'

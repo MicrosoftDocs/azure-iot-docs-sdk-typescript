@@ -1,0 +1,32 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-service.ProvisioningServiceQueryResult
+    name: ProvisioningServiceQueryResult
+    fullName: ProvisioningServiceQueryResult
+    children:
+      - azure-iot-provisioning-service.ProvisioningServiceQueryResult.items
+    langs:
+      - typeScript
+    type: interface
+    summary: The query result.
+    source:
+      path: query.ts
+      startLine: 11
+      remote:
+        path: provisioning/service/src\query.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-provisioning-service
+  - uid: azure-iot-provisioning-service.ProvisioningServiceQueryResult.items
+    name: items
+    fullName: items
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'The query result items, as a collection.'
+    syntax:
+      content: Array<Enrollment | EnrollmentGroup | DeviceRegistrationStatus> items
+      return:
+        type:
+          - Array<Enrollment | EnrollmentGroup | DeviceRegistrationStatus>

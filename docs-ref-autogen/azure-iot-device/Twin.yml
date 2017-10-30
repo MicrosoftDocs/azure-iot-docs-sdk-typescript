@@ -1,0 +1,137 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-device.Twin
+    name: Twin
+    fullName: Twin
+    children:
+      - azure-iot-device.Twin.desiredPath
+      - azure-iot-device.Twin.errorEvent
+      - azure-iot-device.Twin.postEvent
+      - azure-iot-device.Twin.properties
+      - azure-iot-device.Twin.responseEvent
+      - azure-iot-device.Twin.subscribedEvent
+      - azure-iot-device.Twin.timeout
+    langs:
+      - typeScript
+    type: class
+    summary: >+
+      A Device Twin is document describing the state of a device that is stored
+      by an Azure IoT hub and is available even if the device is offline.
+
+      It is built around 3 sections:
+        - Tags: key/value pairs only accessible from the service side
+        - Desired Properties: updated by a service and received by the device
+        - Reported Properties: updated by the device and received by the service.
+      Note that although it is a possibility, desired and reported properties do
+      not have to match
+
+      and that the logic to sync these two collections, if necessary, is left to
+      the user of the SDK.
+
+
+      For more information see [Understanding Device
+      Twins](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-device-twins).
+
+    extends:
+      name: '@azure-iot-device.Twin'
+    source:
+      path: twin.ts
+      startLine: 28
+      remote:
+        path: device/core/src\twin.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-device
+  - uid: azure-iot-device.Twin.desiredPath
+    name: desiredPath
+    fullName: desiredPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: static string desiredPath
+      return:
+        type:
+          - string
+  - uid: azure-iot-device.Twin.errorEvent
+    name: errorEvent
+    fullName: errorEvent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: static string errorEvent
+      return:
+        type:
+          - string
+  - uid: azure-iot-device.Twin.postEvent
+    name: postEvent
+    fullName: postEvent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: static string postEvent
+      return:
+        type:
+          - string
+  - uid: azure-iot-device.Twin.properties
+    name: properties
+    fullName: properties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The desired and reported properties dictionnaries (respectively in
+      `properties.desired` and `properties.reported`).
+    syntax:
+      content: any properties
+      return:
+        type:
+          - any
+  - uid: azure-iot-device.Twin.responseEvent
+    name: responseEvent
+    fullName: responseEvent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: static string responseEvent
+      return:
+        type:
+          - string
+  - uid: azure-iot-device.Twin.subscribedEvent
+    name: subscribedEvent
+    fullName: subscribedEvent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: static string subscribedEvent
+      return:
+        type:
+          - string
+  - uid: azure-iot-device.Twin.timeout
+    name: timeout
+    fullName: timeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: static number timeout
+      return:
+        type:
+          - number

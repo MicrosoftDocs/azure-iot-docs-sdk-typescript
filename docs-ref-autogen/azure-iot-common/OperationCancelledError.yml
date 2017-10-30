@@ -1,0 +1,50 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-common.OperationCancelledError
+    name: OperationCancelledError
+    fullName: OperationCancelledError
+    children:
+      - azure-iot-common.OperationCancelledError.Error
+      - azure-iot-common.OperationCancelledError.constructor
+    langs:
+      - typeScript
+    type: class
+    summary: Error thrown when ant operation (local or remote) is cancelled
+    extends:
+      name: Error
+    source:
+      path: errors.ts
+      startLine: 424
+      remote:
+        path: common/core/src\errors.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-common
+  - uid: azure-iot-common.OperationCancelledError.Error
+    name: Error
+    fullName: Error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: static ErrorConstructor Error
+      return:
+        type:
+          - ErrorConstructor
+  - uid: azure-iot-common.OperationCancelledError.constructor
+    name: OperationCancelledError
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new OperationCancelledError(message?: string)'
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+          optional: true

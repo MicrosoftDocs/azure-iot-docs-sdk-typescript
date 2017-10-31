@@ -4,10 +4,10 @@ items:
     name: TransportStateMachine
     fullName: TransportStateMachine
     children:
+      - azure-device-provisioning-client.TransportStateMachine.constructor
       - azure-device-provisioning-client.TransportStateMachine.disconnect
       - azure-device-provisioning-client.TransportStateMachine.initialize
       - azure-device-provisioning-client.TransportStateMachine.register
-      - azure-device-provisioning-client.TransportStateMachine.constructor
     langs:
       - typeScript
     type: class
@@ -22,6 +22,16 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-device-provisioning-client
+  - uid: azure-device-provisioning-client.TransportStateMachine.constructor
+    name: TransportStateMachine
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: new TransportStateMachine()
+      parameters: []
   - uid: azure-device-provisioning-client.TransportStateMachine.disconnect
     name: disconnect
     children: []
@@ -83,13 +93,3 @@ items:
           type:
             - ResponseCallback
           description: ''
-  - uid: azure-device-provisioning-client.TransportStateMachine.constructor
-    name: TransportStateMachine
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: new TransportStateMachine()
-      parameters: []

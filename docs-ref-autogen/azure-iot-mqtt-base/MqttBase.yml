@@ -4,9 +4,9 @@ items:
     name: MqttBase
     fullName: MqttBase
     children:
+      - azure-iot-mqtt-base.MqttBase.constructor
       - azure-iot-mqtt-base.MqttBase.connect
       - azure-iot-mqtt-base.MqttBase.disconnect
-      - azure-iot-mqtt-base.MqttBase.constructor
       - azure-iot-mqtt-base.MqttBase.publish
       - azure-iot-mqtt-base.MqttBase.subscribe
       - azure-iot-mqtt-base.MqttBase.unsubscribe
@@ -25,6 +25,25 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-mqtt-base
+  - uid: azure-iot-mqtt-base.MqttBase.constructor
+    name: MqttBase
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new MqttBase(sdkVersionString: string, mqttprovider?: any)'
+      parameters:
+        - id: sdkVersionString
+          type:
+            - string
+          description: ''
+        - id: mqttprovider
+          type:
+            - any
+          description: ''
+          optional: true
   - uid: azure-iot-mqtt-base.MqttBase.connect
     name: connect
     children: []
@@ -59,25 +78,6 @@ items:
           type:
             - '(err?: Error, result?: any) => void'
           description: ''
-  - uid: azure-iot-mqtt-base.MqttBase.constructor
-    name: MqttBase
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'new MqttBase(sdkVersionString: string, mqttprovider?: any)'
-      parameters:
-        - id: sdkVersionString
-          type:
-            - string
-          description: ''
-        - id: mqttprovider
-          type:
-            - any
-          description: ''
-          optional: true
   - uid: azure-iot-mqtt-base.MqttBase.publish
     name: publish
     children: []

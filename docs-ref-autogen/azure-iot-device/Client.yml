@@ -4,12 +4,10 @@ items:
     name: Client
     fullName: Client
     children:
-      - azure-iot-device.Client.abandon
       - azure-iot-device.Client.constructor
+      - azure-iot-device.Client.abandon
       - azure-iot-device.Client.close
       - azure-iot-device.Client.complete
-      - azure-iot-device.Client.fromConnectionString
-      - azure-iot-device.Client.fromSharedAccessSignature
       - azure-iot-device.Client.getTwin
       - azure-iot-device.Client.onDeviceMethod
       - azure-iot-device.Client.open
@@ -21,6 +19,8 @@ items:
       - azure-iot-device.Client.setTransportOptions
       - azure-iot-device.Client.updateSharedAccessSignature
       - azure-iot-device.Client.uploadToBlob
+      - azure-iot-device.Client.fromConnectionString
+      - azure-iot-device.Client.fromSharedAccessSignature
     langs:
       - typeScript
     type: class
@@ -45,33 +45,6 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-device
-  - uid: azure-iot-device.Client.abandon
-    name: abandon
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      The `abandon` method directs the transport to settle the message passed as
-      argument as 'abandoned'.
-    syntax:
-      content: >-
-        function abandon(message: Message, abandonCallback: (err?: Error,
-        result?: MessageAbandoned) => void)
-      parameters:
-        - id: message
-          type:
-            - Message
-          description: The message to settle.
-        - id: abandonCallback
-          type:
-            - '(err?: Error, result?: MessageAbandoned) => void'
-          description: |
-            The callback to call when the message is abandoned.
-    exceptions:
-      - type: ReferenceException
-        description: |
-          If the message is falsy.
   - uid: azure-iot-device.Client.constructor
     name: Client
     children: []
@@ -105,6 +78,33 @@ items:
           description: |
             An object that is capable of uploading a stream to a blob.
           optional: true
+  - uid: azure-iot-device.Client.abandon
+    name: abandon
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      The `abandon` method directs the transport to settle the message passed as
+      argument as 'abandoned'.
+    syntax:
+      content: >-
+        function abandon(message: Message, abandonCallback: (err?: Error,
+        result?: MessageAbandoned) => void)
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: The message to settle.
+        - id: abandonCallback
+          type:
+            - '(err?: Error, result?: MessageAbandoned) => void'
+          description: |
+            The callback to call when the message is abandoned.
+    exceptions:
+      - type: ReferenceException
+        description: |
+          If the message is falsy.
   - uid: azure-iot-device.Client.close
     name: close
     children: []
@@ -152,68 +152,6 @@ items:
       - type: ReferenceError
         description: |
           If the message is falsy.
-  - uid: azure-iot-device.Client.fromConnectionString
-    name: fromConnectionString
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: |-
-      Creates an IoT Hub device client from the given
-                         connection string using the given transport type.
-    syntax:
-      content: >-
-        static function fromConnectionString(connStr: string, transportCtor:
-        any)
-      parameters:
-        - id: connStr
-          type:
-            - string
-          description: |-
-            A connection string which encapsulates "device
-                                             connect" permissions on an IoT hub.
-        - id: transportCtor
-          type:
-            - any
-          description: ''
-      return:
-        type:
-          - '@azure-iot-device.Client'
-    exceptions:
-      - type: ReferenceError
-        description: |
-          If the connStr parameter is falsy.
-  - uid: azure-iot-device.Client.fromSharedAccessSignature
-    name: fromSharedAccessSignature
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: |-
-      Creates an IoT Hub device client from the given
-                         shared access signature using the given transport type.
-    syntax:
-      content: >-
-        static function fromSharedAccessSignature(sharedAccessSignature: string,
-        transportCtor: any)
-      parameters:
-        - id: sharedAccessSignature
-          type:
-            - string
-          description: |-
-            A shared access signature which encapsulates "device
-                                             connect" permissions on an IoT hub.
-        - id: transportCtor
-          type:
-            - any
-          description: ''
-      return:
-        type:
-          - '@azure-iot-device.Client'
-    exceptions:
-      - type: ReferenceError
-        description: |
-          If the connStr parameter is falsy.
   - uid: azure-iot-device.Client.getTwin
     name: getTwin
     children: []
@@ -510,3 +448,65 @@ items:
       - type: ReferenceException
         description: |
           If blobName or stream or streamLength is falsy.
+  - uid: azure-iot-device.Client.fromConnectionString
+    name: fromConnectionString
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Creates an IoT Hub device client from the given
+                         connection string using the given transport type.
+    syntax:
+      content: >-
+        static function fromConnectionString(connStr: string, transportCtor:
+        any)
+      parameters:
+        - id: connStr
+          type:
+            - string
+          description: |-
+            A connection string which encapsulates "device
+                                             connect" permissions on an IoT hub.
+        - id: transportCtor
+          type:
+            - any
+          description: ''
+      return:
+        type:
+          - '@azure-iot-device.Client'
+    exceptions:
+      - type: ReferenceError
+        description: |
+          If the connStr parameter is falsy.
+  - uid: azure-iot-device.Client.fromSharedAccessSignature
+    name: fromSharedAccessSignature
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Creates an IoT Hub device client from the given
+                         shared access signature using the given transport type.
+    syntax:
+      content: >-
+        static function fromSharedAccessSignature(sharedAccessSignature: string,
+        transportCtor: any)
+      parameters:
+        - id: sharedAccessSignature
+          type:
+            - string
+          description: |-
+            A shared access signature which encapsulates "device
+                                             connect" permissions on an IoT hub.
+        - id: transportCtor
+          type:
+            - any
+          description: ''
+      return:
+        type:
+          - '@azure-iot-device.Client'
+    exceptions:
+      - type: ReferenceError
+        description: |
+          If the connStr parameter is falsy.

@@ -4,11 +4,11 @@ items:
     name: ProvisioningServiceQuery
     fullName: ProvisioningServiceQuery
     children:
+      - azure-iot-provisioning-service.ProvisioningServiceQuery.constructor
       - >-
         azure-iot-provisioning-service.ProvisioningServiceQuery.continuationToken
       - azure-iot-provisioning-service.ProvisioningServiceQuery.hasMoreResults
       - azure-iot-provisioning-service.ProvisioningServiceQuery.next
-      - azure-iot-provisioning-service.ProvisioningServiceQuery.constructor
     langs:
       - typeScript
     type: class
@@ -21,6 +21,24 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-service
+  - uid: azure-iot-provisioning-service.ProvisioningServiceQuery.constructor
+    name: ProvisioningServiceQuery
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        new ProvisioningServiceQuery(executeQueryFn: (continuationToken: string,
+        done: ProvisioningServiceQueryCallback) => void)
+      parameters:
+        - id: executeQueryFn
+          type:
+            - >-
+              (continuationToken: string, done:
+              ProvisioningServiceQueryCallback) => void
+          description: ''
   - uid: azure-iot-provisioning-service.ProvisioningServiceQuery.continuationToken
     name: continuationToken
     fullName: continuationToken
@@ -71,21 +89,3 @@ items:
             The callback that will be called with either an Error object or
                                                       the results of the query.
           optional: true
-  - uid: azure-iot-provisioning-service.ProvisioningServiceQuery.constructor
-    name: ProvisioningServiceQuery
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: >-
-        new ProvisioningServiceQuery(executeQueryFn: (continuationToken: string,
-        done: ProvisioningServiceQueryCallback) => void)
-      parameters:
-        - id: executeQueryFn
-          type:
-            - >-
-              (continuationToken: string, done:
-              ProvisioningServiceQueryCallback) => void
-          description: ''

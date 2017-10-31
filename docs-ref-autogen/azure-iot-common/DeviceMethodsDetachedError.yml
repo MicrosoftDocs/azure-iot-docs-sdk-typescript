@@ -5,8 +5,8 @@ items:
     fullName: DeviceMethodsDetachedError
     children:
       - azure-iot-common.DeviceMethodsDetachedError.constructor
-      - azure-iot-common.DeviceMethodsDetachedError.Error
       - azure-iot-common.DeviceMethodsDetachedError.innerError
+      - azure-iot-common.DeviceMethodsDetachedError.Error
     langs:
       - typeScript
     type: class
@@ -38,19 +38,6 @@ items:
             - string
           description: ''
           optional: true
-  - uid: azure-iot-common.DeviceMethodsDetachedError.Error
-    name: Error
-    fullName: Error
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      content: static ErrorConstructor Error
-      return:
-        type:
-          - ErrorConstructor
   - uid: azure-iot-common.DeviceMethodsDetachedError.innerError
     name: innerError
     fullName: innerError
@@ -64,3 +51,16 @@ items:
       return:
         type:
           - Error
+  - uid: azure-iot-common.DeviceMethodsDetachedError.Error
+    name: Error
+    fullName: Error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: static ErrorConstructor Error
+      return:
+        type:
+          - ErrorConstructor

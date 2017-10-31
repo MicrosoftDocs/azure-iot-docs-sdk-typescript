@@ -4,9 +4,9 @@ items:
     name: OperationList
     fullName: OperationList
     children:
+      - azure-device-provisioning-client.OperationList.constructor
       - azure-device-provisioning-client.OperationList.operationEnded
       - azure-device-provisioning-client.OperationList.operationIsStillPending
-      - azure-device-provisioning-client.OperationList.constructor
       - azure-device-provisioning-client.OperationList.operationStarted
       - azure-device-provisioning-client.OperationList.popAllPendingOperations
     langs:
@@ -21,6 +21,16 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-device-provisioning-client
+  - uid: azure-device-provisioning-client.OperationList.constructor
+    name: OperationList
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: new OperationList()
+      parameters: []
   - uid: azure-device-provisioning-client.OperationList.operationEnded
     name: operationEnded
     children: []
@@ -52,16 +62,6 @@ items:
       return:
         type:
           - boolean
-  - uid: azure-device-provisioning-client.OperationList.constructor
-    name: OperationList
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: new OperationList()
-      parameters: []
   - uid: azure-device-provisioning-client.OperationList.operationStarted
     name: operationStarted
     children: []

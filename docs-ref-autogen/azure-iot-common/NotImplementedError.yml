@@ -4,8 +4,8 @@ items:
     name: NotImplementedError
     fullName: NotImplementedError
     children:
-      - azure-iot-common.NotImplementedError.Error
       - azure-iot-common.NotImplementedError.constructor
+      - azure-iot-common.NotImplementedError.Error
     langs:
       - typeScript
     type: class
@@ -22,19 +22,6 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-common
-  - uid: azure-iot-common.NotImplementedError.Error
-    name: Error
-    fullName: Error
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      content: static ErrorConstructor Error
-      return:
-        type:
-          - ErrorConstructor
   - uid: azure-iot-common.NotImplementedError.constructor
     name: NotImplementedError
     children: []
@@ -50,3 +37,16 @@ items:
             - string
           description: ''
           optional: true
+  - uid: azure-iot-common.NotImplementedError.Error
+    name: Error
+    fullName: Error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: static ErrorConstructor Error
+      return:
+        type:
+          - ErrorConstructor

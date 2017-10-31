@@ -5,13 +5,13 @@ items:
     fullName: Client
     children:
       - azure-iothub.Client.close
-      - azure-iothub.Client.fromConnectionString
-      - azure-iothub.Client.fromSharedAccessSignature
       - azure-iothub.Client.getFeedbackReceiver
       - azure-iothub.Client.getFileNotificationReceiver
       - azure-iothub.Client.invokeDeviceMethod
       - azure-iothub.Client.open
       - azure-iothub.Client.send
+      - azure-iothub.Client.fromConnectionString
+      - azure-iothub.Client.fromSharedAccessSignature
     langs:
       - typeScript
     type: class
@@ -61,64 +61,6 @@ items:
                                        argument, which will be null if the operation
                                        completed successfully.
           optional: true
-  - uid: azure-iothub.Client.fromConnectionString
-    name: fromConnectionString
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: |-
-      Creates an IoT Hub service client from the given
-                         connection string using the default transport
-                         (Amqp) or the one specified in the second argument.
-    syntax:
-      content: >-
-        static function fromConnectionString(connStr: string, transportCtor?:
-        TransportCtor)
-      parameters:
-        - id: connStr
-          type:
-            - string
-          description: |-
-            A connection string which encapsulates "device
-                                             connect" permissions on an IoT hub.
-        - id: transportCtor
-          type:
-            - TransportCtor
-          description: ''
-          optional: true
-      return:
-        type:
-          - '@azure-iothub.Client'
-  - uid: azure-iothub.Client.fromSharedAccessSignature
-    name: fromSharedAccessSignature
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: |-
-      Creates an IoT Hub service client from the given
-                         shared access signature using the default transport
-                         (Amqp) or the one specified in the second argument.
-    syntax:
-      content: >-
-        static function fromSharedAccessSignature(sharedAccessSignature: string,
-        transportCtor?: TransportCtor)
-      parameters:
-        - id: sharedAccessSignature
-          type:
-            - string
-          description: |-
-            A shared access signature which encapsulates
-                                       "service connect" permissions on an IoT hub.
-        - id: transportCtor
-          type:
-            - TransportCtor
-          description: ''
-          optional: true
-      return:
-        type:
-          - '@azure-iothub.Client'
   - uid: azure-iothub.Client.getFeedbackReceiver
     name: getFeedbackReceiver
     children: []
@@ -248,3 +190,61 @@ items:
       - type: ReferenceError
         description: |
           If `deviceId` or `message` is null, undefined or empty.
+  - uid: azure-iothub.Client.fromConnectionString
+    name: fromConnectionString
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Creates an IoT Hub service client from the given
+                         connection string using the default transport
+                         (Amqp) or the one specified in the second argument.
+    syntax:
+      content: >-
+        static function fromConnectionString(connStr: string, transportCtor?:
+        TransportCtor)
+      parameters:
+        - id: connStr
+          type:
+            - string
+          description: |-
+            A connection string which encapsulates "device
+                                             connect" permissions on an IoT hub.
+        - id: transportCtor
+          type:
+            - TransportCtor
+          description: ''
+          optional: true
+      return:
+        type:
+          - '@azure-iothub.Client'
+  - uid: azure-iothub.Client.fromSharedAccessSignature
+    name: fromSharedAccessSignature
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Creates an IoT Hub service client from the given
+                         shared access signature using the default transport
+                         (Amqp) or the one specified in the second argument.
+    syntax:
+      content: >-
+        static function fromSharedAccessSignature(sharedAccessSignature: string,
+        transportCtor?: TransportCtor)
+      parameters:
+        - id: sharedAccessSignature
+          type:
+            - string
+          description: |-
+            A shared access signature which encapsulates
+                                       "service connect" permissions on an IoT hub.
+        - id: transportCtor
+          type:
+            - TransportCtor
+          description: ''
+          optional: true
+      return:
+        type:
+          - '@azure-iothub.Client'

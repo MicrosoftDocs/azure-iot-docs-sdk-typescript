@@ -4,26 +4,26 @@ items:
     name: Registry
     fullName: Registry
     children:
+      - azure-iothub.Registry.JobStatus
       - azure-iothub.Registry.addDevices
       - azure-iothub.Registry.cancelJob
       - azure-iothub.Registry.create
       - azure-iothub.Registry.createQuery
       - azure-iothub.Registry.delete
       - azure-iothub.Registry.exportDevicesToBlob
-      - azure-iothub.Registry.fromConnectionString
-      - azure-iothub.Registry.fromSharedAccessSignature
       - azure-iothub.Registry.get
       - azure-iothub.Registry.getJob
       - azure-iothub.Registry.getRegistryStatistics
       - azure-iothub.Registry.getTwin
       - azure-iothub.Registry.importDevicesFromBlob
-      - azure-iothub.Registry.JobStatus
       - azure-iothub.Registry.list
       - azure-iothub.Registry.listJobs
       - azure-iothub.Registry.removeDevices
       - azure-iothub.Registry.update
       - azure-iothub.Registry.updateDevices
       - azure-iothub.Registry.updateTwin
+      - azure-iothub.Registry.fromConnectionString
+      - azure-iothub.Registry.fromSharedAccessSignature
     langs:
       - typeScript
     type: class
@@ -40,6 +40,22 @@ items:
     source:
       path: registry.ts
       startLine: 27
+      remote:
+        path: service/src\registry.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iothub
+  - uid: azure-iothub.Registry.JobStatus
+    name: JobStatus
+    fullName: JobStatus
+    children: []
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    source:
+      path: registry.ts
+      startLine: 787
       remote:
         path: service/src\registry.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
@@ -213,46 +229,6 @@ items:
             The function to call when the job has been created, with two
             arguments: an error object if an
                                                          an error happened, (null otherwise) and the job status that can be used to track progress of the devices export.
-  - uid: azure-iothub.Registry.fromConnectionString
-    name: fromConnectionString
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Constructs a Registry object from the given connection string.
-    syntax:
-      content: 'static function fromConnectionString(value: string)'
-      parameters:
-        - id: value
-          type:
-            - string
-          description: |-
-            A connection string which encapsulates the
-                                         appropriate (read and/or write) Registry
-                                         permissions.
-      return:
-        type:
-          - '@azure-iothub.Registry'
-  - uid: azure-iothub.Registry.fromSharedAccessSignature
-    name: fromSharedAccessSignature
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Constructs a Registry object from the given shared access signature.
-    syntax:
-      content: 'static function fromSharedAccessSignature(value: string)'
-      parameters:
-        - id: value
-          type:
-            - string
-          description: |-
-            A shared access signature which encapsulates
-                                         the appropriate (read and/or write) Registry
-                                         permissions.
-      return:
-        type:
-          - '@azure-iothub.Registry'
   - uid: azure-iothub.Registry.get
     name: get
     children: []
@@ -370,22 +346,6 @@ items:
             The function to call when the job has been created, with two
             arguments: an error object if an
                                                          an error happened, (null otherwise) and the job status that can be used to track progress of the devices import.
-  - uid: azure-iothub.Registry.JobStatus
-    name: JobStatus
-    fullName: JobStatus
-    children: []
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    source:
-      path: registry.ts
-      startLine: 787
-      remote:
-        path: service/src\registry.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: master
-    package: azure-iothub
   - uid: azure-iothub.Registry.list
     name: list
     children: []
@@ -563,3 +523,43 @@ items:
           description: |
             The callback that will be called with either an Error object or
                                             the device twin instance.
+  - uid: azure-iothub.Registry.fromConnectionString
+    name: fromConnectionString
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Constructs a Registry object from the given connection string.
+    syntax:
+      content: 'static function fromConnectionString(value: string)'
+      parameters:
+        - id: value
+          type:
+            - string
+          description: |-
+            A connection string which encapsulates the
+                                         appropriate (read and/or write) Registry
+                                         permissions.
+      return:
+        type:
+          - '@azure-iothub.Registry'
+  - uid: azure-iothub.Registry.fromSharedAccessSignature
+    name: fromSharedAccessSignature
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Constructs a Registry object from the given shared access signature.
+    syntax:
+      content: 'static function fromSharedAccessSignature(value: string)'
+      parameters:
+        - id: value
+          type:
+            - string
+          description: |-
+            A shared access signature which encapsulates
+                                         the appropriate (read and/or write) Registry
+                                         permissions.
+      return:
+        type:
+          - '@azure-iothub.Registry'

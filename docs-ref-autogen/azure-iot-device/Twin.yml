@@ -4,10 +4,10 @@ items:
     name: Twin
     fullName: Twin
     children:
+      - azure-iot-device.Twin.properties
       - azure-iot-device.Twin.desiredPath
       - azure-iot-device.Twin.errorEvent
       - azure-iot-device.Twin.postEvent
-      - azure-iot-device.Twin.properties
       - azure-iot-device.Twin.responseEvent
       - azure-iot-device.Twin.subscribedEvent
       - azure-iot-device.Twin.timeout
@@ -42,6 +42,21 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-device
+  - uid: azure-iot-device.Twin.properties
+    name: properties
+    fullName: properties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The desired and reported properties dictionnaries (respectively in
+      `properties.desired` and `properties.reported`).
+    syntax:
+      content: any properties
+      return:
+        type:
+          - any
   - uid: azure-iot-device.Twin.desiredPath
     name: desiredPath
     fullName: desiredPath
@@ -81,21 +96,6 @@ items:
       return:
         type:
           - string
-  - uid: azure-iot-device.Twin.properties
-    name: properties
-    fullName: properties
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      The desired and reported properties dictionnaries (respectively in
-      `properties.desired` and `properties.reported`).
-    syntax:
-      content: any properties
-      return:
-        type:
-          - any
   - uid: azure-iot-device.Twin.responseEvent
     name: responseEvent
     fullName: responseEvent

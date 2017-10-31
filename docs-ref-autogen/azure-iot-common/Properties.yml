@@ -4,11 +4,11 @@ items:
     name: Properties
     fullName: Properties
     children:
+      - azure-iot-common.Properties.propertyList
       - azure-iot-common.Properties.add
       - azure-iot-common.Properties.count
       - azure-iot-common.Properties.getItem
       - azure-iot-common.Properties.getValue
-      - azure-iot-common.Properties.propertyList
     langs:
       - typeScript
     type: class
@@ -28,6 +28,26 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-common
+  - uid: azure-iot-common.Properties.propertyList
+    name: propertyList
+    fullName: propertyList
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Array containing the properties stored as key/value pairs
+      ```json
+      [
+        { key: 'prop1', value: 'value1' },
+        { key: 'prop2', value: 'value2' }
+      ]
+      ```
+    syntax:
+      content: 'any[] propertyList'
+      return:
+        type:
+          - 'any[]'
   - uid: azure-iot-common.Properties.add
     name: add
     children: []
@@ -99,23 +119,3 @@ items:
       return:
         type:
           - any
-  - uid: azure-iot-common.Properties.propertyList
-    name: propertyList
-    fullName: propertyList
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: |-
-      Array containing the properties stored as key/value pairs
-      ```json
-      [
-        { key: 'prop1', value: 'value1' },
-        { key: 'prop2', value: 'value2' }
-      ]
-      ```
-    syntax:
-      content: 'any[] propertyList'
-      return:
-        type:
-          - 'any[]'

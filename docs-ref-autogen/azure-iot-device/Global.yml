@@ -4,53 +4,42 @@ items:
     package: azure-iot-device
     name: Global
     children:
-      - azure-iot-device.create
+      - azure-iot-device.safeCallback
       - azure-iot-device.createWithSharedAccessKey
       - azure-iot-device.createWithX509Certificate
       - azure-iot-device.parse
+      - azure-iot-device.create
       - azure-iot-device.parse
-      - azure-iot-device.safeCallback
     type: package
     langs:
       - typeScript
-  - uid: azure-iot-device.create
-    name: create
+  - uid: azure-iot-device.safeCallback
+    name: safeCallback
     children: []
     type: function
     langs:
       - typeScript
-    summary: >-
-      Creates a shared access signature token to authenticate a device
-      connection with an Azure IoT hub.
+    summary: ''
     syntax:
       content: >-
-        function create(host: string, deviceId: string, key: string, expiry:
-        string | number)
+        function safeCallback(callback?: (err?: Error, result?: any) => void,
+        error?: Error, result?: any)
       parameters:
-        - id: host
+        - id: callback
           type:
-            - string
-          description: Hostname of the Azure IoT hub.
-        - id: deviceId
+            - '(err?: Error, result?: any) => void'
+          description: ''
+          optional: true
+        - id: error
           type:
-            - string
-          description: Unique device identifier as it exists in the device registry.
-        - id: key
+            - Error
+          description: ''
+          optional: true
+        - id: result
           type:
-            - string
-          description: Symmetric key to use to create shared access signature tokens.
-        - id: expiry
-          type:
-            - string | number
-          description: |
-            Expiry time for the token that will be created.
-      return:
-        type:
-          - SharedAccessSignature
-    exceptions:
-      - type: ReferenceError
-        description: |
-          If one of the parameters is falsy.
+            - any
+          description: ''
+          optional: true
   - uid: azure-iot-device.createWithSharedAccessKey
     name: createWithSharedAccessKey
     children: []
@@ -134,6 +123,44 @@ items:
       - type: azure-iot-common.ArgumentError
         description: |
           if the string is missing one of the required attributes.
+  - uid: azure-iot-device.create
+    name: create
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Creates a shared access signature token to authenticate a device
+      connection with an Azure IoT hub.
+    syntax:
+      content: >-
+        function create(host: string, deviceId: string, key: string, expiry:
+        string | number)
+      parameters:
+        - id: host
+          type:
+            - string
+          description: Hostname of the Azure IoT hub.
+        - id: deviceId
+          type:
+            - string
+          description: Unique device identifier as it exists in the device registry.
+        - id: key
+          type:
+            - string
+          description: Symmetric key to use to create shared access signature tokens.
+        - id: expiry
+          type:
+            - string | number
+          description: |
+            Expiry time for the token that will be created.
+      return:
+        type:
+          - SharedAccessSignature
+    exceptions:
+      - type: ReferenceError
+        description: |
+          If one of the parameters is falsy.
   - uid: azure-iot-device.parse
     name: parse
     children: []
@@ -157,30 +184,3 @@ items:
       - type: FormatError
         description: |
           If the string cannot be parsed or is missing required parameters.
-  - uid: azure-iot-device.safeCallback
-    name: safeCallback
-    children: []
-    type: function
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: >-
-        function safeCallback(callback?: (err?: Error, result?: any) => void,
-        error?: Error, result?: any)
-      parameters:
-        - id: callback
-          type:
-            - '(err?: Error, result?: any) => void'
-          description: ''
-          optional: true
-        - id: error
-          type:
-            - Error
-          description: ''
-          optional: true
-        - id: result
-          type:
-            - any
-          description: ''
-          optional: true

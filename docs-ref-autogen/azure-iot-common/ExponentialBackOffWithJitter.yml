@@ -6,10 +6,10 @@ items:
     children:
       - azure-iot-common.ExponentialBackOffWithJitter.constructor
       - azure-iot-common.ExponentialBackOffWithJitter.immediateFirstRetry
-      - azure-iot-common.ExponentialBackOffWithJitter.nextRetryTimeout
       - azure-iot-common.ExponentialBackOffWithJitter.normalParameters
-      - azure-iot-common.ExponentialBackOffWithJitter.shouldRetry
       - azure-iot-common.ExponentialBackOffWithJitter.throttledParameters
+      - azure-iot-common.ExponentialBackOffWithJitter.nextRetryTimeout
+      - azure-iot-common.ExponentialBackOffWithJitter.shouldRetry
     langs:
       - typeScript
     type: class
@@ -69,6 +69,36 @@ items:
       return:
         type:
           - boolean
+  - uid: azure-iot-common.ExponentialBackOffWithJitter.normalParameters
+    name: normalParameters
+    fullName: normalParameters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Retry parameters used to calculate the delay between each retry in normal
+      situations (ie. not throttled).
+    syntax:
+      content: ExponentialBackoffWithJitterParameters normalParameters
+      return:
+        type:
+          - '@azure-iot-common.ExponentialBackoffWithJitterParameters'
+  - uid: azure-iot-common.ExponentialBackOffWithJitter.throttledParameters
+    name: throttledParameters
+    fullName: throttledParameters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Retry parameters used to calculate the delay between each retry in
+      throttled situations.
+    syntax:
+      content: ExponentialBackoffWithJitterParameters throttledParameters
+      return:
+        type:
+          - '@azure-iot-common.ExponentialBackoffWithJitterParameters'
   - uid: azure-iot-common.ExponentialBackOffWithJitter.nextRetryTimeout
     name: nextRetryTimeout
     children: []
@@ -92,21 +122,6 @@ items:
       return:
         type:
           - number
-  - uid: azure-iot-common.ExponentialBackOffWithJitter.normalParameters
-    name: normalParameters
-    fullName: normalParameters
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      Retry parameters used to calculate the delay between each retry in normal
-      situations (ie. not throttled).
-    syntax:
-      content: ExponentialBackoffWithJitterParameters normalParameters
-      return:
-        type:
-          - '@azure-iot-common.ExponentialBackoffWithJitterParameters'
   - uid: azure-iot-common.ExponentialBackOffWithJitter.shouldRetry
     name: shouldRetry
     children: []
@@ -126,18 +141,3 @@ items:
       return:
         type:
           - boolean
-  - uid: azure-iot-common.ExponentialBackOffWithJitter.throttledParameters
-    name: throttledParameters
-    fullName: throttledParameters
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      Retry parameters used to calculate the delay between each retry in
-      throttled situations.
-    syntax:
-      content: ExponentialBackoffWithJitterParameters throttledParameters
-      return:
-        type:
-          - '@azure-iot-common.ExponentialBackoffWithJitterParameters'

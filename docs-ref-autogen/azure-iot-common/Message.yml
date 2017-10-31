@@ -4,18 +4,18 @@ items:
     name: Message
     fullName: Message
     children:
+      - azure-iot-common.Message.constructor
       - azure-iot-common.Message.ack
       - azure-iot-common.Message.correlationId
       - azure-iot-common.Message.data
       - azure-iot-common.Message.expiryTimeUtc
-      - azure-iot-common.Message.getBytes
-      - azure-iot-common.Message.getData
       - azure-iot-common.Message.lockToken
-      - azure-iot-common.Message.constructor
       - azure-iot-common.Message.messageId
       - azure-iot-common.Message.properties
       - azure-iot-common.Message.to
       - azure-iot-common.Message.userId
+      - azure-iot-common.Message.getBytes
+      - azure-iot-common.Message.getData
     langs:
       - typeScript
     type: class
@@ -34,6 +34,24 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-common
+  - uid: azure-iot-common.Message.constructor
+    name: Message
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 'Creates a new <xref:azure-iot-common.Message> object'
+    syntax:
+      content: 'new Message(data: BufferConvertible)'
+      parameters:
+        - id: data
+          type:
+            - BufferConvertible
+          description: >
+            a Node
+            [Buffer](https://nodejs.org/api/globals.html#globals_class_buffer)
+                        object or anything that can be passed to the [Buffer](https://nodejs.org/api/globals.html#globals_class_buffer) constructor
+                        to construct a [Buffer](https://nodejs.org/api/globals.html#globals_class_buffer) from.
   - uid: azure-iot-common.Message.ack
     name: ack
     fullName: ack
@@ -88,34 +106,6 @@ items:
       return:
         type:
           - any
-  - uid: azure-iot-common.Message.getBytes
-    name: getBytes
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Gets the data passed to the constructor as a
-      [Buffer](https://nodejs.org/api/globals.html#globals_class_buffer)
-    syntax:
-      content: function getBytes()
-      parameters: []
-      return:
-        type:
-          - Buffer
-  - uid: azure-iot-common.Message.getData
-    name: getData
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: 'Gets the content (body) of the <xref:azure-iot-common.Message>.'
-    syntax:
-      content: function getData()
-      parameters: []
-      return:
-        type:
-          - BufferConvertible
   - uid: azure-iot-common.Message.lockToken
     name: lockToken
     fullName: lockToken
@@ -129,24 +119,6 @@ items:
       return:
         type:
           - string
-  - uid: azure-iot-common.Message.constructor
-    name: Message
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: 'Creates a new <xref:azure-iot-common.Message> object'
-    syntax:
-      content: 'new Message(data: BufferConvertible)'
-      parameters:
-        - id: data
-          type:
-            - BufferConvertible
-          description: >
-            a Node
-            [Buffer](https://nodejs.org/api/globals.html#globals_class_buffer)
-                        object or anything that can be passed to the [Buffer](https://nodejs.org/api/globals.html#globals_class_buffer) constructor
-                        to construct a [Buffer](https://nodejs.org/api/globals.html#globals_class_buffer) from.
   - uid: azure-iot-common.Message.messageId
     name: messageId
     fullName: messageId
@@ -204,3 +176,31 @@ items:
       return:
         type:
           - string
+  - uid: azure-iot-common.Message.getBytes
+    name: getBytes
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Gets the data passed to the constructor as a
+      [Buffer](https://nodejs.org/api/globals.html#globals_class_buffer)
+    syntax:
+      content: function getBytes()
+      parameters: []
+      return:
+        type:
+          - Buffer
+  - uid: azure-iot-common.Message.getData
+    name: getData
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Gets the content (body) of the <xref:azure-iot-common.Message>.'
+    syntax:
+      content: function getData()
+      parameters: []
+      return:
+        type:
+          - BufferConvertible

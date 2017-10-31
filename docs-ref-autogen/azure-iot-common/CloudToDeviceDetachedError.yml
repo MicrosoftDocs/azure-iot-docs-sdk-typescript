@@ -5,8 +5,8 @@ items:
     fullName: CloudToDeviceDetachedError
     children:
       - azure-iot-common.CloudToDeviceDetachedError.constructor
-      - azure-iot-common.CloudToDeviceDetachedError.Error
       - azure-iot-common.CloudToDeviceDetachedError.innerError
+      - azure-iot-common.CloudToDeviceDetachedError.Error
     langs:
       - typeScript
     type: class
@@ -38,19 +38,6 @@ items:
             - string
           description: ''
           optional: true
-  - uid: azure-iot-common.CloudToDeviceDetachedError.Error
-    name: Error
-    fullName: Error
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      content: static ErrorConstructor Error
-      return:
-        type:
-          - ErrorConstructor
   - uid: azure-iot-common.CloudToDeviceDetachedError.innerError
     name: innerError
     fullName: innerError
@@ -64,3 +51,16 @@ items:
       return:
         type:
           - Error
+  - uid: azure-iot-common.CloudToDeviceDetachedError.Error
+    name: Error
+    fullName: Error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: static ErrorConstructor Error
+      return:
+        type:
+          - ErrorConstructor

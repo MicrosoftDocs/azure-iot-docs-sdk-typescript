@@ -5,13 +5,13 @@ items:
     name: Global
     children:
       - azure-iot-common.anHourFromNow
-      - azure-iot-common.devicePath
       - azure-iot-common.encodeUriComponentStrict
+      - azure-iot-common.hmacHash
+      - azure-iot-common.stringToSign
+      - azure-iot-common.devicePath
       - azure-iot-common.eventPath
       - azure-iot-common.feedbackPath
-      - azure-iot-common.hmacHash
       - azure-iot-common.messagePath
-      - azure-iot-common.stringToSign
       - azure-iot-common.versionQueryString
     type: package
     langs:
@@ -31,23 +31,6 @@ items:
       return:
         type:
           - number
-  - uid: azure-iot-common.devicePath
-    name: devicePath
-    children: []
-    type: function
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'function devicePath(id: string)'
-      parameters:
-        - id: id
-          type:
-            - string
-          description: ''
-      return:
-        type:
-          - string
   - uid: azure-iot-common.encodeUriComponentStrict
     name: encodeUriComponentStrict
     children: []
@@ -59,6 +42,65 @@ items:
       content: 'function encodeUriComponentStrict(str: string)'
       parameters:
         - id: str
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - string
+  - uid: azure-iot-common.hmacHash
+    name: hmacHash
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function hmacHash(password: string, stringToSign: string)'
+      parameters:
+        - id: password
+          type:
+            - string
+          description: ''
+        - id: stringToSign
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - string
+  - uid: azure-iot-common.stringToSign
+    name: stringToSign
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function stringToSign(resourceUri: string, expiry: string)'
+      parameters:
+        - id: resourceUri
+          type:
+            - string
+          description: ''
+        - id: expiry
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - string
+  - uid: azure-iot-common.devicePath
+    name: devicePath
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function devicePath(id: string)'
+      parameters:
+        - id: id
           type:
             - string
           description: ''
@@ -103,27 +145,6 @@ items:
       return:
         type:
           - string
-  - uid: azure-iot-common.hmacHash
-    name: hmacHash
-    children: []
-    type: function
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'function hmacHash(password: string, stringToSign: string)'
-      parameters:
-        - id: password
-          type:
-            - string
-          description: ''
-        - id: stringToSign
-          type:
-            - string
-          description: ''
-      return:
-        type:
-          - string
   - uid: azure-iot-common.messagePath
     name: messagePath
     children: []
@@ -135,27 +156,6 @@ items:
       content: 'function messagePath(id: string)'
       parameters:
         - id: id
-          type:
-            - string
-          description: ''
-      return:
-        type:
-          - string
-  - uid: azure-iot-common.stringToSign
-    name: stringToSign
-    children: []
-    type: function
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'function stringToSign(resourceUri: string, expiry: string)'
-      parameters:
-        - id: resourceUri
-          type:
-            - string
-          description: ''
-        - id: expiry
           type:
             - string
           description: ''

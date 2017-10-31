@@ -4,11 +4,11 @@ items:
     name: Device
     fullName: Device
     children:
+      - azure-iothub.Device.constructor
       - azure-iothub.Device.authentication
       - azure-iothub.Device.cloudToDeviceMessageCount
       - azure-iothub.Device.connectionState
       - azure-iothub.Device.connectionStateUpdatedTime
-      - azure-iothub.Device.constructor
       - azure-iothub.Device.deviceId
       - azure-iothub.Device.etag
       - azure-iothub.Device.generationId
@@ -45,6 +45,24 @@ items:
     package: azure-iothub
     deprecated:
       content: ''
+  - uid: azure-iothub.Device.constructor
+    name: Device
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 'Instantiate a new <xref:azure-iothub.Device> object.'
+    syntax:
+      content: 'new Device(jsonData?: any)'
+      parameters:
+        - id: jsonData
+          type:
+            - any
+          description: >
+            An optional JSON representation of the device, which will be mapped
+            to properties in the object. If no argument is provided, Device
+            roperties will be assigned default values.
+          optional: true
   - uid: azure-iothub.Device.authentication
     name: authentication
     fullName: authentication
@@ -108,24 +126,6 @@ items:
       return:
         type:
           - string
-  - uid: azure-iothub.Device.constructor
-    name: Device
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: 'Instantiate a new <xref:azure-iothub.Device> object.'
-    syntax:
-      content: 'new Device(jsonData?: any)'
-      parameters:
-        - id: jsonData
-          type:
-            - any
-          description: >
-            An optional JSON representation of the device, which will be mapped
-            to properties in the object. If no argument is provided, Device
-            roperties will be assigned default values.
-          optional: true
   - uid: azure-iothub.Device.deviceId
     name: deviceId
     fullName: deviceId

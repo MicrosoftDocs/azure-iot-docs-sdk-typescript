@@ -4,8 +4,8 @@ items:
     name: JobNotFoundError
     fullName: JobNotFoundError
     children:
-      - azure-iot-common.JobNotFoundError.Error
       - azure-iot-common.JobNotFoundError.constructor
+      - azure-iot-common.JobNotFoundError.Error
     langs:
       - typeScript
     type: class
@@ -20,19 +20,6 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-common
-  - uid: azure-iot-common.JobNotFoundError.Error
-    name: Error
-    fullName: Error
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      content: static ErrorConstructor Error
-      return:
-        type:
-          - ErrorConstructor
   - uid: azure-iot-common.JobNotFoundError.constructor
     name: JobNotFoundError
     children: []
@@ -48,3 +35,16 @@ items:
             - string
           description: ''
           optional: true
+  - uid: azure-iot-common.JobNotFoundError.Error
+    name: Error
+    fullName: Error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: static ErrorConstructor Error
+      return:
+        type:
+          - ErrorConstructor

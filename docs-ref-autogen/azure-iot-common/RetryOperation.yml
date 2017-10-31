@@ -4,8 +4,8 @@ items:
     name: RetryOperation
     fullName: RetryOperation
     children:
-      - azure-iot-common.RetryOperation.retry
       - azure-iot-common.RetryOperation.constructor
+      - azure-iot-common.RetryOperation.retry
     langs:
       - typeScript
     type: class
@@ -20,6 +20,28 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-common
+  - uid: azure-iot-common.RetryOperation.constructor
+    name: RetryOperation
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 'Creates an instance of <xref:azure-iot-common.RetryOperation.>'
+    syntax:
+      content: 'new RetryOperation(policy: RetryPolicy, maxTimeout: number)'
+      parameters:
+        - id: policy
+          type:
+            - '@azure-iot-common.RetryPolicy'
+          description: >-
+            The retry policy to be used for this operation, which determines
+            what error is "retryable" or not and how fast to retry.
+        - id: maxTimeout
+          type:
+            - number
+          description: >
+            The maximum timeout for this operation, after which no retry will be
+            attempted.
   - uid: azure-iot-common.RetryOperation.retry
     name: retry
     children: []
@@ -44,25 +66,3 @@ items:
           description: >
             The callback to call with the final error or result, after retries
             if necessary.
-  - uid: azure-iot-common.RetryOperation.constructor
-    name: RetryOperation
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: 'Creates an instance of <xref:azure-iot-common.RetryOperation.>'
-    syntax:
-      content: 'new RetryOperation(policy: RetryPolicy, maxTimeout: number)'
-      parameters:
-        - id: policy
-          type:
-            - '@azure-iot-common.RetryPolicy'
-          description: >-
-            The retry policy to be used for this operation, which determines
-            what error is "retryable" or not and how fast to retry.
-        - id: maxTimeout
-          type:
-            - number
-          description: >
-            The maximum timeout for this operation, after which no retry will be
-            attempted.

@@ -4,6 +4,7 @@ items:
     name: DeviceEnrollment
     fullName: DeviceEnrollment
     children:
+      - azure-iot-provisioning-service.DeviceEnrollment.constructor
       - azure-iot-provisioning-service.DeviceEnrollment.bulkOperation
       - >-
         azure-iot-provisioning-service.DeviceEnrollment.createOrUpdateEnrollmentGroup
@@ -20,12 +21,11 @@ items:
       - azure-iot-provisioning-service.DeviceEnrollment.deleteEnrollmentGroup
       - >-
         azure-iot-provisioning-service.DeviceEnrollment.deleteIndividualEnrollment
-      - azure-iot-provisioning-service.DeviceEnrollment.constructor
-      - azure-iot-provisioning-service.DeviceEnrollment.fromConnectionString
       - >-
         azure-iot-provisioning-service.DeviceEnrollment.getDeviceRegistrationStatus
       - azure-iot-provisioning-service.DeviceEnrollment.getEnrollmentGroup
       - azure-iot-provisioning-service.DeviceEnrollment.getIndividualEnrollment
+      - azure-iot-provisioning-service.DeviceEnrollment.fromConnectionString
     langs:
       - typeScript
     type: class
@@ -38,6 +38,27 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-service
+  - uid: azure-iot-provisioning-service.DeviceEnrollment.constructor
+    name: DeviceEnrollment
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        new DeviceEnrollment(config: TransportConfig, restApiClient?:
+        RestApiClient)
+      parameters:
+        - id: config
+          type:
+            - TransportConfig
+          description: ''
+        - id: restApiClient
+          type:
+            - RestApiClient
+          description: ''
+          optional: true
   - uid: azure-iot-provisioning-service.DeviceEnrollment.bulkOperation
     name: bulkOperation
     children: []
@@ -283,50 +304,6 @@ items:
           description: |
             Invoked upon completion of the operation.
           optional: true
-  - uid: azure-iot-provisioning-service.DeviceEnrollment.constructor
-    name: DeviceEnrollment
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: >-
-        new DeviceEnrollment(config: TransportConfig, restApiClient?:
-        RestApiClient)
-      parameters:
-        - id: config
-          type:
-            - TransportConfig
-          description: ''
-        - id: restApiClient
-          type:
-            - RestApiClient
-          description: ''
-          optional: true
-  - uid: azure-iot-provisioning-service.DeviceEnrollment.fromConnectionString
-    name: fromConnectionString
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: |-
-      Constructs a DeviceEnrollment object from the given connection
-                       string using the default transport
-                       ([Http](xref:azure-iothub.Http)).
-    syntax:
-      content: 'static function fromConnectionString(value: string)'
-      parameters:
-        - id: value
-          type:
-            - string
-          description: |-
-            A connection string which encapsulates the
-                                         appropriate (read and/or write) DeviceEnrollment
-                                         permissions.
-      return:
-        type:
-          - '@azure-iot-provisioning-service.DeviceEnrollment'
   - uid: >-
       azure-iot-provisioning-service.DeviceEnrollment.getDeviceRegistrationStatus
     name: getDeviceRegistrationStatus
@@ -397,3 +374,26 @@ items:
               void
           description: |
             Invoked upon completion of the operation.
+  - uid: azure-iot-provisioning-service.DeviceEnrollment.fromConnectionString
+    name: fromConnectionString
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Constructs a DeviceEnrollment object from the given connection
+                       string using the default transport
+                       ([Http](xref:azure-iothub.Http)).
+    syntax:
+      content: 'static function fromConnectionString(value: string)'
+      parameters:
+        - id: value
+          type:
+            - string
+          description: |-
+            A connection string which encapsulates the
+                                         appropriate (read and/or write) DeviceEnrollment
+                                         permissions.
+      return:
+        type:
+          - '@azure-iot-provisioning-service.DeviceEnrollment'

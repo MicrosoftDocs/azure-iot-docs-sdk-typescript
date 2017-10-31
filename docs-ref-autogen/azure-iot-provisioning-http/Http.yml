@@ -4,9 +4,7 @@ items:
     name: Http
     fullName: Http
     children:
-      - azure-iot-provisioning-http.Http.connect
-      - azure-iot-provisioning-http.Http.disconnect
-      - azure-iot-provisioning-http.Http.register
+      - azure-iot-provisioning-http.Http.constructor
     langs:
       - typeScript
     type: class
@@ -15,65 +13,28 @@ items:
       name: '@azure-iot-provisioning-http.Http'
     source:
       path: http.ts
-      startLine: 17
+      startLine: 131
       remote:
         path: provisioning/transport/http/src\http.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-http
-  - uid: azure-iot-provisioning-http.Http.connect
-    name: connect
+  - uid: azure-iot-provisioning-http.Http.constructor
+    name: Http
     children: []
-    type: method
+    type: constructor
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'function connect(callback: (err?: Error) => void)'
+      content: 'new Http(config: Config, httpBase?: Base)'
       parameters:
-        - id: callback
+        - id: config
           type:
-            - '(err?: Error) => void'
+            - Config
           description: ''
-  - uid: azure-iot-provisioning-http.Http.disconnect
-    name: disconnect
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'function disconnect(callback: (err: Error) => void)'
-      parameters:
-        - id: callback
+        - id: httpBase
           type:
-            - '(err: Error) => void'
+            - Base
           description: ''
-  - uid: azure-iot-provisioning-http.Http.register
-    name: register
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: >-
-        function register(authorization: string | X509, forceRegistration:
-        boolean, body: any, callback: ResponseCallback)
-      parameters:
-        - id: authorization
-          type:
-            - string | X509
-          description: ''
-        - id: forceRegistration
-          type:
-            - boolean
-          description: ''
-        - id: body
-          type:
-            - any
-          description: ''
-        - id: callback
-          type:
-            - ResponseCallback
-          description: ''
+          optional: true

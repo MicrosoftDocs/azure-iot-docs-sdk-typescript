@@ -1,0 +1,92 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-device-provisioning-client.OperationList
+    name: OperationList
+    fullName: OperationList
+    children:
+      - azure-device-provisioning-client.OperationList.operationEnded
+      - azure-device-provisioning-client.OperationList.operationIsStillPending
+      - azure-device-provisioning-client.OperationList.constructor
+      - azure-device-provisioning-client.OperationList.operationStarted
+      - azure-device-provisioning-client.OperationList.popAllPendingOperations
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    source:
+      path: operation_list.ts
+      startLine: 6
+      remote:
+        path: provisioning/device/src\operation_list.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-device-provisioning-client
+  - uid: azure-device-provisioning-client.OperationList.operationEnded
+    name: operationEnded
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function operationEnded(operation: any)'
+      parameters:
+        - id: operation
+          type:
+            - any
+          description: ''
+  - uid: azure-device-provisioning-client.OperationList.operationIsStillPending
+    name: operationIsStillPending
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function operationIsStillPending(operation: any)'
+      parameters:
+        - id: operation
+          type:
+            - any
+          description: ''
+      return:
+        type:
+          - boolean
+  - uid: azure-device-provisioning-client.OperationList.constructor
+    name: OperationList
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: new OperationList()
+      parameters: []
+  - uid: azure-device-provisioning-client.OperationList.operationStarted
+    name: operationStarted
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function operationStarted(operation: any)'
+      parameters:
+        - id: operation
+          type:
+            - any
+          description: ''
+  - uid: azure-device-provisioning-client.OperationList.popAllPendingOperations
+    name: popAllPendingOperations
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function popAllPendingOperations(callback: (operation: any) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(operation: any) => void'
+          description: ''

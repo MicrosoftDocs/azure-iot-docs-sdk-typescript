@@ -1,45 +1,50 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-iot-provisioning-service.DeviceEnrollment
-    name: DeviceEnrollment
-    fullName: DeviceEnrollment
+  - uid: azure-iot-provisioning-service.ProvisioningServiceClient
+    name: ProvisioningServiceClient
+    fullName: ProvisioningServiceClient
     children:
-      - azure-iot-provisioning-service.DeviceEnrollment.constructor
-      - azure-iot-provisioning-service.DeviceEnrollment.bulkOperation
+      - azure-iot-provisioning-service.ProvisioningServiceClient.constructor
       - >-
-        azure-iot-provisioning-service.DeviceEnrollment.createOrUpdateEnrollmentGroup
+        azure-iot-provisioning-service.ProvisioningServiceClient.createEnrollmentGroupDeviceRegistrationStatusQuery
       - >-
-        azure-iot-provisioning-service.DeviceEnrollment.createOrUpdateIndividualEnrollment
+        azure-iot-provisioning-service.ProvisioningServiceClient.createEnrollmentGroupQuery
       - >-
-        azure-iot-provisioning-service.DeviceEnrollment.createQueryDeviceRegistrationStatus
+        azure-iot-provisioning-service.ProvisioningServiceClient.createIndividualEnrollmentQuery
       - >-
-        azure-iot-provisioning-service.DeviceEnrollment.createQueryEnrollmentGroup
+        azure-iot-provisioning-service.ProvisioningServiceClient.createOrUpdateEnrollmentGroup
       - >-
-        azure-iot-provisioning-service.DeviceEnrollment.createQueryIndividualEnrollment
+        azure-iot-provisioning-service.ProvisioningServiceClient.createOrUpdateIndividualEnrollment
       - >-
-        azure-iot-provisioning-service.DeviceEnrollment.deleteDeviceRegistrationStatus
-      - azure-iot-provisioning-service.DeviceEnrollment.deleteEnrollmentGroup
+        azure-iot-provisioning-service.ProvisioningServiceClient.deleteDeviceRegistrationStatus
       - >-
-        azure-iot-provisioning-service.DeviceEnrollment.deleteIndividualEnrollment
+        azure-iot-provisioning-service.ProvisioningServiceClient.deleteEnrollmentGroup
       - >-
-        azure-iot-provisioning-service.DeviceEnrollment.getDeviceRegistrationStatus
-      - azure-iot-provisioning-service.DeviceEnrollment.getEnrollmentGroup
-      - azure-iot-provisioning-service.DeviceEnrollment.getIndividualEnrollment
-      - azure-iot-provisioning-service.DeviceEnrollment.fromConnectionString
+        azure-iot-provisioning-service.ProvisioningServiceClient.deleteIndividualEnrollment
+      - >-
+        azure-iot-provisioning-service.ProvisioningServiceClient.getDeviceRegistrationStatus
+      - >-
+        azure-iot-provisioning-service.ProvisioningServiceClient.getEnrollmentGroup
+      - >-
+        azure-iot-provisioning-service.ProvisioningServiceClient.getIndividualEnrollment
+      - >-
+        azure-iot-provisioning-service.ProvisioningServiceClient.runBulkOperation
+      - >-
+        azure-iot-provisioning-service.ProvisioningServiceClient.fromConnectionString
     langs:
       - typeScript
     type: class
     summary: ''
     source:
-      path: enrollment.ts
+      path: provisioningserviceclient.ts
       startLine: 18
       remote:
-        path: provisioning/service/src\enrollment.ts
+        path: provisioning/service/src\provisioningserviceclient.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-service
-  - uid: azure-iot-provisioning-service.DeviceEnrollment.constructor
-    name: DeviceEnrollment
+  - uid: azure-iot-provisioning-service.ProvisioningServiceClient.constructor
+    name: ProvisioningServiceClient
     children: []
     type: constructor
     langs:
@@ -47,7 +52,7 @@ items:
     summary: ''
     syntax:
       content: >-
-        new DeviceEnrollment(config: TransportConfig, restApiClient?:
+        new ProvisioningServiceClient(config: TransportConfig, restApiClient?:
         RestApiClient)
       parameters:
         - id: config
@@ -59,8 +64,9 @@ items:
             - RestApiClient
           description: ''
           optional: true
-  - uid: azure-iot-provisioning-service.DeviceEnrollment.bulkOperation
-    name: bulkOperation
+  - uid: >-
+      azure-iot-provisioning-service.ProvisioningServiceClient.createEnrollmentGroupDeviceRegistrationStatusQuery
+    name: createEnrollmentGroupDeviceRegistrationStatusQuery
     children: []
     type: method
     langs:
@@ -68,24 +74,81 @@ items:
     summary: ''
     syntax:
       content: >-
-        function bulkOperation(bulkOperation: BulkOperation, callback?: (err:
-        Error, bulkOperationResult?: BulkOperationResult, response?: any) =>
-        void)
+        function
+        createEnrollmentGroupDeviceRegistrationStatusQuery(querySpecification:
+        QuerySpecification, enrollmentGroupId: string, pageSize?: number)
       parameters:
-        - id: bulkOperation
+        - id: querySpecification
           type:
-            - '@azure-iot-provisioning-service.BulkOperation'
-          description: Bulk operation.
-        - id: callback
+            - '@azure-iot-provisioning-service.QuerySpecification'
+          description: The query specification.
+        - id: enrollmentGroupId
           type:
-            - >-
-              (err: Error, bulkOperationResult?: BulkOperationResult, response?:
-              any) => void
+            - string
+          description: The EnrollmentGroup that provides the scope for the query.
+        - id: pageSize
+          type:
+            - number
           description: |
-            Invoked upon completion of the operation.
+            The maximum number of elements to return per page.
           optional: true
+      return:
+        type:
+          - '@azure-iot-provisioning-service.Query'
   - uid: >-
-      azure-iot-provisioning-service.DeviceEnrollment.createOrUpdateEnrollmentGroup
+      azure-iot-provisioning-service.ProvisioningServiceClient.createEnrollmentGroupQuery
+    name: createEnrollmentGroupQuery
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function createEnrollmentGroupQuery(querySpecification:
+        QuerySpecification, pageSize?: number)
+      parameters:
+        - id: querySpecification
+          type:
+            - '@azure-iot-provisioning-service.QuerySpecification'
+          description: The query specification.
+        - id: pageSize
+          type:
+            - number
+          description: |
+            The number of elements to return per page.
+          optional: true
+      return:
+        type:
+          - '@azure-iot-provisioning-service.Query'
+  - uid: >-
+      azure-iot-provisioning-service.ProvisioningServiceClient.createIndividualEnrollmentQuery
+    name: createIndividualEnrollmentQuery
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function createIndividualEnrollmentQuery(querySpecification:
+        QuerySpecification, pageSize?: number)
+      parameters:
+        - id: querySpecification
+          type:
+            - '@azure-iot-provisioning-service.QuerySpecification'
+          description: The query specification.
+        - id: pageSize
+          type:
+            - number
+          description: |
+            The number of elements to return per page.
+          optional: true
+      return:
+        type:
+          - '@azure-iot-provisioning-service.Query'
+  - uid: >-
+      azure-iot-provisioning-service.ProvisioningServiceClient.createOrUpdateEnrollmentGroup
     name: createOrUpdateEnrollmentGroup
     children: []
     type: method
@@ -111,7 +174,7 @@ items:
             Invoked upon completion of the operation.
           optional: true
   - uid: >-
-      azure-iot-provisioning-service.DeviceEnrollment.createOrUpdateIndividualEnrollment
+      azure-iot-provisioning-service.ProvisioningServiceClient.createOrUpdateIndividualEnrollment
     name: createOrUpdateIndividualEnrollment
     children: []
     type: method
@@ -135,84 +198,7 @@ items:
             Invoked upon completion of the operation.
           optional: true
   - uid: >-
-      azure-iot-provisioning-service.DeviceEnrollment.createQueryDeviceRegistrationStatus
-    name: createQueryDeviceRegistrationStatus
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: >-
-        function createQueryDeviceRegistrationStatus(querySpecification:
-        QuerySpecification, pageSize?: number)
-      parameters:
-        - id: querySpecification
-          type:
-            - '@azure-iot-provisioning-service.QuerySpecification'
-          description: The query specification.
-        - id: pageSize
-          type:
-            - number
-          description: |
-            The number of elements to return per page.
-          optional: true
-      return:
-        type:
-          - '@azure-iot-provisioning-service.ProvisioningServiceQuery'
-  - uid: azure-iot-provisioning-service.DeviceEnrollment.createQueryEnrollmentGroup
-    name: createQueryEnrollmentGroup
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: >-
-        function createQueryEnrollmentGroup(querySpecification:
-        QuerySpecification, pageSize?: number)
-      parameters:
-        - id: querySpecification
-          type:
-            - '@azure-iot-provisioning-service.QuerySpecification'
-          description: The query specification.
-        - id: pageSize
-          type:
-            - number
-          description: |
-            The number of elements to return per page.
-          optional: true
-      return:
-        type:
-          - '@azure-iot-provisioning-service.ProvisioningServiceQuery'
-  - uid: >-
-      azure-iot-provisioning-service.DeviceEnrollment.createQueryIndividualEnrollment
-    name: createQueryIndividualEnrollment
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: >-
-        function createQueryIndividualEnrollment(querySpecification:
-        QuerySpecification, pageSize?: number)
-      parameters:
-        - id: querySpecification
-          type:
-            - '@azure-iot-provisioning-service.QuerySpecification'
-          description: The query specification.
-        - id: pageSize
-          type:
-            - number
-          description: |
-            The number of elements to return per page.
-          optional: true
-      return:
-        type:
-          - '@azure-iot-provisioning-service.ProvisioningServiceQuery'
-  - uid: >-
-      azure-iot-provisioning-service.DeviceEnrollment.deleteDeviceRegistrationStatus
+      azure-iot-provisioning-service.ProvisioningServiceClient.deleteDeviceRegistrationStatus
     name: deleteDeviceRegistrationStatus
     children: []
     type: method
@@ -242,7 +228,8 @@ items:
           description: |
             Invoked upon completion of the operation.
           optional: true
-  - uid: azure-iot-provisioning-service.DeviceEnrollment.deleteEnrollmentGroup
+  - uid: >-
+      azure-iot-provisioning-service.ProvisioningServiceClient.deleteEnrollmentGroup
     name: deleteEnrollmentGroup
     children: []
     type: method
@@ -274,7 +261,8 @@ items:
           description: |
             Invoked upon completion of the operation.
           optional: true
-  - uid: azure-iot-provisioning-service.DeviceEnrollment.deleteIndividualEnrollment
+  - uid: >-
+      azure-iot-provisioning-service.ProvisioningServiceClient.deleteIndividualEnrollment
     name: deleteIndividualEnrollment
     children: []
     type: method
@@ -305,7 +293,7 @@ items:
             Invoked upon completion of the operation.
           optional: true
   - uid: >-
-      azure-iot-provisioning-service.DeviceEnrollment.getDeviceRegistrationStatus
+      azure-iot-provisioning-service.ProvisioningServiceClient.getDeviceRegistrationStatus
     name: getDeviceRegistrationStatus
     children: []
     type: method
@@ -328,7 +316,8 @@ items:
               response?: any) => void
           description: |
             Invoked upon completion of the operation.
-  - uid: azure-iot-provisioning-service.DeviceEnrollment.getEnrollmentGroup
+  - uid: >-
+      azure-iot-provisioning-service.ProvisioningServiceClient.getEnrollmentGroup
     name: getEnrollmentGroup
     children: []
     type: method
@@ -351,7 +340,8 @@ items:
               void
           description: |
             Invoked upon completion of the operation.
-  - uid: azure-iot-provisioning-service.DeviceEnrollment.getIndividualEnrollment
+  - uid: >-
+      azure-iot-provisioning-service.ProvisioningServiceClient.getIndividualEnrollment
     name: getIndividualEnrollment
     children: []
     type: method
@@ -374,14 +364,40 @@ items:
               void
           description: |
             Invoked upon completion of the operation.
-  - uid: azure-iot-provisioning-service.DeviceEnrollment.fromConnectionString
+  - uid: azure-iot-provisioning-service.ProvisioningServiceClient.runBulkOperation
+    name: runBulkOperation
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function runBulkOperation(bulkOperation: BulkOperation, callback?: (err:
+        Error, bulkOperationResult?: BulkOperationResult, response?: any) =>
+        void)
+      parameters:
+        - id: bulkOperation
+          type:
+            - '@azure-iot-provisioning-service.BulkOperation'
+          description: Bulk operation.
+        - id: callback
+          type:
+            - >-
+              (err: Error, bulkOperationResult?: BulkOperationResult, response?:
+              any) => void
+          description: |
+            Invoked upon completion of the operation.
+          optional: true
+  - uid: >-
+      azure-iot-provisioning-service.ProvisioningServiceClient.fromConnectionString
     name: fromConnectionString
     children: []
     type: method
     langs:
       - typeScript
     summary: |-
-      Constructs a DeviceEnrollment object from the given connection
+      Constructs a ProvisioningServiceClient object from the given connection
                        string using the default transport
                        ([Http](xref:azure-iothub.Http)).
     syntax:
@@ -392,8 +408,8 @@ items:
             - string
           description: |-
             A connection string which encapsulates the
-                                         appropriate (read and/or write) DeviceEnrollment
+                                         appropriate (read and/or write) ProvisioningServiceClient
                                          permissions.
       return:
         type:
-          - '@azure-iot-provisioning-service.DeviceEnrollment'
+          - '@azure-iot-provisioning-service.ProvisioningServiceClient'

@@ -1,14 +1,16 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-iot-provisioning-http.HttpTransportHandlers
+  - uid: azure-iot-provisioning-device-http.HttpTransportHandlers
     name: HttpTransportHandlers
     fullName: HttpTransportHandlers
     children:
-      - azure-iot-provisioning-http.HttpTransportHandlers.connect
-      - azure-iot-provisioning-http.HttpTransportHandlers.disconnect
-      - azure-iot-provisioning-http.HttpTransportHandlers.getErrorResult
-      - azure-iot-provisioning-http.HttpTransportHandlers.queryOperationStatus
-      - azure-iot-provisioning-http.HttpTransportHandlers.registrationRequest
+      - azure-iot-provisioning-device-http.HttpTransportHandlers.connect
+      - azure-iot-provisioning-device-http.HttpTransportHandlers.disconnect
+      - azure-iot-provisioning-device-http.HttpTransportHandlers.getErrorResult
+      - >-
+        azure-iot-provisioning-device-http.HttpTransportHandlers.queryOperationStatus
+      - >-
+        azure-iot-provisioning-device-http.HttpTransportHandlers.registrationRequest
     langs:
       - typeScript
     type: class
@@ -20,8 +22,8 @@ items:
         path: provisioning/transport/http/src\http.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
-    package: azure-iot-provisioning-http
-  - uid: azure-iot-provisioning-http.HttpTransportHandlers.connect
+    package: azure-iot-provisioning-device-http
+  - uid: azure-iot-provisioning-device-http.HttpTransportHandlers.connect
     name: connect
     children: []
     type: method
@@ -41,7 +43,7 @@ items:
           type:
             - '(err?: Error) => void'
           description: ''
-  - uid: azure-iot-provisioning-http.HttpTransportHandlers.disconnect
+  - uid: azure-iot-provisioning-device-http.HttpTransportHandlers.disconnect
     name: disconnect
     children: []
     type: method
@@ -55,7 +57,7 @@ items:
           type:
             - '(err?: Error) => void'
           description: ''
-  - uid: azure-iot-provisioning-http.HttpTransportHandlers.getErrorResult
+  - uid: azure-iot-provisioning-device-http.HttpTransportHandlers.getErrorResult
     name: getErrorResult
     children: []
     type: method
@@ -72,7 +74,8 @@ items:
       return:
         type:
           - any
-  - uid: azure-iot-provisioning-http.HttpTransportHandlers.queryOperationStatus
+  - uid: >-
+      azure-iot-provisioning-device-http.HttpTransportHandlers.queryOperationStatus
     name: queryOperationStatus
     children: []
     type: method
@@ -99,7 +102,8 @@ items:
               (err?: Error, responseBody?: any, result?: any, pollingInterval?:
               number) => void
           description: ''
-  - uid: azure-iot-provisioning-http.HttpTransportHandlers.registrationRequest
+  - uid: >-
+      azure-iot-provisioning-device-http.HttpTransportHandlers.registrationRequest
     name: registrationRequest
     children: []
     type: method

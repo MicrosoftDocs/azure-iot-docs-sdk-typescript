@@ -1,28 +1,28 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-device-provisioning-client.TransportStateMachine
+  - uid: azure-iot-provisioning-device.TransportStateMachine
     name: TransportStateMachine
     fullName: TransportStateMachine
     children:
-      - azure-device-provisioning-client.TransportStateMachine.constructor
-      - azure-device-provisioning-client.TransportStateMachine.disconnect
-      - azure-device-provisioning-client.TransportStateMachine.initialize
-      - azure-device-provisioning-client.TransportStateMachine.register
+      - azure-iot-provisioning-device.TransportStateMachine.constructor
+      - azure-iot-provisioning-device.TransportStateMachine.disconnect
+      - azure-iot-provisioning-device.TransportStateMachine.initialize
+      - azure-iot-provisioning-device.TransportStateMachine.register
     langs:
       - typeScript
     type: class
     summary: ''
     extends:
-      name: '@azure-device-provisioning-client.TransportStateMachine'
+      name: '@azure-iot-provisioning-device.TransportStateMachine'
     source:
       path: transport_state_machine.ts
-      startLine: 22
+      startLine: 21
       remote:
         path: provisioning/device/src\transport_state_machine.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
-    package: azure-device-provisioning-client
-  - uid: azure-device-provisioning-client.TransportStateMachine.constructor
+    package: azure-iot-provisioning-device
+  - uid: azure-iot-provisioning-device.TransportStateMachine.constructor
     name: TransportStateMachine
     children: []
     type: constructor
@@ -32,7 +32,7 @@ items:
     syntax:
       content: new TransportStateMachine()
       parameters: []
-  - uid: azure-device-provisioning-client.TransportStateMachine.disconnect
+  - uid: azure-iot-provisioning-device.TransportStateMachine.disconnect
     name: disconnect
     children: []
     type: method
@@ -46,7 +46,7 @@ items:
           type:
             - '(err: Error) => void'
           description: ''
-  - uid: azure-device-provisioning-client.TransportStateMachine.initialize
+  - uid: azure-iot-provisioning-device.TransportStateMachine.initialize
     name: initialize
     children: []
     type: method
@@ -58,9 +58,9 @@ items:
       parameters:
         - id: transport
           type:
-            - '@azure-device-provisioning-client.TransportHandlers'
+            - '@azure-iot-provisioning-device.TransportHandlers'
           description: ''
-  - uid: azure-device-provisioning-client.TransportStateMachine.register
+  - uid: azure-iot-provisioning-device.TransportStateMachine.register
     name: register
     children: []
     type: method

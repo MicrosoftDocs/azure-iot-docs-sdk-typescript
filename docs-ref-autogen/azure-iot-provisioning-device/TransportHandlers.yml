@@ -1,27 +1,27 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-device-provisioning-client.TransportHandlers
+  - uid: azure-iot-provisioning-device.TransportHandlers
     name: TransportHandlers
     fullName: TransportHandlers
     children:
-      - azure-device-provisioning-client.TransportHandlers.connect
-      - azure-device-provisioning-client.TransportHandlers.disconnect
-      - azure-device-provisioning-client.TransportHandlers.getErrorResult
-      - azure-device-provisioning-client.TransportHandlers.queryOperationStatus
-      - azure-device-provisioning-client.TransportHandlers.registrationRequest
+      - azure-iot-provisioning-device.TransportHandlers.connect
+      - azure-iot-provisioning-device.TransportHandlers.disconnect
+      - azure-iot-provisioning-device.TransportHandlers.getErrorResult
+      - azure-iot-provisioning-device.TransportHandlers.queryOperationStatus
+      - azure-iot-provisioning-device.TransportHandlers.registrationRequest
     langs:
       - typeScript
     type: interface
     summary: ''
     source:
       path: transport_state_machine.ts
-      startLine: 14
+      startLine: 13
       remote:
         path: provisioning/device/src\transport_state_machine.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
-    package: azure-device-provisioning-client
-  - uid: azure-device-provisioning-client.TransportHandlers.connect
+    package: azure-iot-provisioning-device
+  - uid: azure-iot-provisioning-device.TransportHandlers.connect
     name: connect
     children: []
     type: method
@@ -41,7 +41,7 @@ items:
           type:
             - '(err?: Error) => void'
           description: ''
-  - uid: azure-device-provisioning-client.TransportHandlers.disconnect
+  - uid: azure-iot-provisioning-device.TransportHandlers.disconnect
     name: disconnect
     children: []
     type: method
@@ -55,7 +55,7 @@ items:
           type:
             - '(err?: Error) => void'
           description: ''
-  - uid: azure-device-provisioning-client.TransportHandlers.getErrorResult
+  - uid: azure-iot-provisioning-device.TransportHandlers.getErrorResult
     name: getErrorResult
     children: []
     type: method
@@ -72,7 +72,7 @@ items:
       return:
         type:
           - any
-  - uid: azure-device-provisioning-client.TransportHandlers.queryOperationStatus
+  - uid: azure-iot-provisioning-device.TransportHandlers.queryOperationStatus
     name: queryOperationStatus
     children: []
     type: method
@@ -99,7 +99,7 @@ items:
               (err?: Error, body?: any, result?: any, pollingInterval?: number)
               => void
           description: ''
-  - uid: azure-device-provisioning-client.TransportHandlers.registrationRequest
+  - uid: azure-iot-provisioning-device.TransportHandlers.registrationRequest
     name: registrationRequest
     children: []
     type: method

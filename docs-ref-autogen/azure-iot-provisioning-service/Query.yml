@@ -1,14 +1,13 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-iot-provisioning-service.ProvisioningServiceQuery
-    name: ProvisioningServiceQuery
-    fullName: ProvisioningServiceQuery
+  - uid: azure-iot-provisioning-service.Query
+    name: Query
+    fullName: Query
     children:
-      - azure-iot-provisioning-service.ProvisioningServiceQuery.constructor
-      - >-
-        azure-iot-provisioning-service.ProvisioningServiceQuery.continuationToken
-      - azure-iot-provisioning-service.ProvisioningServiceQuery.hasMoreResults
-      - azure-iot-provisioning-service.ProvisioningServiceQuery.next
+      - azure-iot-provisioning-service.Query.constructor
+      - azure-iot-provisioning-service.Query.continuationToken
+      - azure-iot-provisioning-service.Query.hasMoreResults
+      - azure-iot-provisioning-service.Query.next
     langs:
       - typeScript
     type: class
@@ -21,8 +20,8 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-service
-  - uid: azure-iot-provisioning-service.ProvisioningServiceQuery.constructor
-    name: ProvisioningServiceQuery
+  - uid: azure-iot-provisioning-service.Query.constructor
+    name: Query
     children: []
     type: constructor
     langs:
@@ -30,16 +29,14 @@ items:
     summary: ''
     syntax:
       content: >-
-        new ProvisioningServiceQuery(executeQueryFn: (continuationToken: string,
-        done: ProvisioningServiceQueryCallback) => void)
+        new Query(executeQueryFn: (continuationToken: string, done:
+        QueryCallback) => void)
       parameters:
         - id: executeQueryFn
           type:
-            - >-
-              (continuationToken: string, done:
-              ProvisioningServiceQueryCallback) => void
+            - '(continuationToken: string, done: QueryCallback) => void'
           description: ''
-  - uid: azure-iot-provisioning-service.ProvisioningServiceQuery.continuationToken
+  - uid: azure-iot-provisioning-service.Query.continuationToken
     name: continuationToken
     fullName: continuationToken
     children: []
@@ -52,7 +49,7 @@ items:
       return:
         type:
           - string
-  - uid: azure-iot-provisioning-service.ProvisioningServiceQuery.hasMoreResults
+  - uid: azure-iot-provisioning-service.Query.hasMoreResults
     name: hasMoreResults
     fullName: hasMoreResults
     children: []
@@ -65,7 +62,7 @@ items:
       return:
         type:
           - boolean
-  - uid: azure-iot-provisioning-service.ProvisioningServiceQuery.next
+  - uid: azure-iot-provisioning-service.Query.next
     name: next
     children: []
     type: method
@@ -74,17 +71,16 @@ items:
     summary: Gets the next page of results for this query.
     syntax:
       content: >-
-        function next(continuationTokenOrCallback: string |
-        ProvisioningServiceQueryCallback, done?:
-        ProvisioningServiceQueryCallback)
+        function next(continuationTokenOrCallback: string | QueryCallback,
+        done?: QueryCallback)
       parameters:
         - id: continuationTokenOrCallback
           type:
-            - string | ProvisioningServiceQueryCallback
+            - string | QueryCallback
           description: ''
         - id: done
           type:
-            - ProvisioningServiceQueryCallback
+            - QueryCallback
           description: |
             The callback that will be called with either an Error object or
                                                       the results of the query.

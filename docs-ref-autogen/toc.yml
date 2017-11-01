@@ -220,24 +220,18 @@
     - uid: azure-iot-device-mqtt.MqttWs
       name: MqttWs
       items: []
-- uid: azure-device-provisioning-client
-  name: azure-device-provisioning-client
+- uid: azure-iot-provisioning-device
+  name: azure-iot-provisioning-device
   items:
-    - uid: azure-device-provisioning-client.OperationList
-      name: OperationList
-      items: []
-    - uid: azure-device-provisioning-client.TransportStateMachine
+    - uid: azure-iot-provisioning-device.TransportStateMachine
       name: TransportStateMachine
       items: []
-    - uid: azure-device-provisioning-client.TransportHandlers
+    - uid: azure-iot-provisioning-device.TransportHandlers
       name: TransportHandlers
       items: []
 - uid: azure-iot-provisioning-service
   name: azure-iot-provisioning-service
   items:
-    - uid: azure-iot-provisioning-service.DeviceEnrollment
-      name: DeviceEnrollment
-      items: []
     - uid: azure-iot-provisioning-service.AttestationMechanism
       name: AttestationMechanism
       items: []
@@ -246,9 +240,6 @@
       items: []
     - uid: azure-iot-provisioning-service.BulkOperationResult
       name: BulkOperationResult
-      items: []
-    - uid: azure-iot-provisioning-service.DeviceRegistration
-      name: DeviceRegistration
       items: []
     - uid: azure-iot-provisioning-service.DeviceRegistrationOperationError
       name: DeviceRegistrationOperationError
@@ -292,34 +283,37 @@
     - uid: azure-iot-provisioning-service.X509RegistrationResult
       name: X509RegistrationResult
       items: []
-    - uid: azure-iot-provisioning-service.ProvisioningServiceQuery
-      name: ProvisioningServiceQuery
+    - uid: azure-iot-provisioning-service.ProvisioningServiceClient
+      name: ProvisioningServiceClient
       items: []
-    - uid: azure-iot-provisioning-service.ProvisioningServiceQueryResult
-      name: ProvisioningServiceQueryResult
+    - uid: azure-iot-provisioning-service.Query
+      name: Query
+      items: []
+    - uid: azure-iot-provisioning-service.QueryResult
+      name: QueryResult
       items: []
     - uid: azure-iot-provisioning-service.QuerySpecification
       name: QuerySpecification
       items: []
-- uid: azure-iot-provisioning-amqp
-  name: azure-iot-provisioning-amqp
+- uid: azure-iot-provisioning-device-amqp
+  name: azure-iot-provisioning-device-amqp
   items:
-    - uid: azure-iot-provisioning-amqp.Amqp
+    - uid: azure-iot-provisioning-device-amqp.Amqp
       name: Amqp
       items: []
-- uid: azure-iot-provisioning-http
-  name: azure-iot-provisioning-http
+- uid: azure-iot-provisioning-device-http
+  name: azure-iot-provisioning-device-http
   items:
-    - uid: azure-iot-provisioning-http.Http
+    - uid: azure-iot-provisioning-device-http.Http
       name: Http
       items: []
-    - uid: azure-iot-provisioning-http.HttpTransportHandlers
+    - uid: azure-iot-provisioning-device-http.HttpTransportHandlers
       name: HttpTransportHandlers
       items: []
-- uid: azure-iot-provisioning-mqtt
-  name: azure-iot-provisioning-mqtt
+- uid: azure-iot-provisioning-device-mqtt
+  name: azure-iot-provisioning-device-mqtt
   items:
-    - uid: azure-iot-provisioning-mqtt.Mqtt
+    - uid: azure-iot-provisioning-device-mqtt.Mqtt
       name: Mqtt
       items: []
 - uid: azure-iothub

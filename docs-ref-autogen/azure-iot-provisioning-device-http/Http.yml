@@ -1,0 +1,40 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-device-http.Http
+    name: Http
+    fullName: Http
+    children:
+      - azure-iot-provisioning-device-http.Http.constructor
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    extends:
+      name: '@azure-iot-provisioning-device-http.Http'
+    source:
+      path: http.ts
+      startLine: 131
+      remote:
+        path: provisioning/transport/http/src\http.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-provisioning-device-http
+  - uid: azure-iot-provisioning-device-http.Http.constructor
+    name: Http
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new Http(config: Config, httpBase?: Base)'
+      parameters:
+        - id: config
+          type:
+            - Config
+          description: ''
+        - id: httpBase
+          type:
+            - Base
+          description: ''
+          optional: true

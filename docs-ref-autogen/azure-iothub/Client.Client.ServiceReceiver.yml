@@ -1,0 +1,78 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iothub.Client.Client.ServiceReceiver
+    name: ServiceReceiver
+    fullName: ServiceReceiver
+    children:
+      - azure-iothub.Client.Client.ServiceReceiver.abandon
+      - azure-iothub.Client.Client.ServiceReceiver.complete
+      - azure-iothub.Client.Client.ServiceReceiver.reject
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    source:
+      path: client.ts
+      startLine: 296
+      remote:
+        path: service/src\client.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iothub
+  - uid: azure-iothub.Client.Client.ServiceReceiver.abandon
+    name: abandon
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function abandon(message: Message, done?: Callback<MessageAbandoned>)'
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+        - id: done
+          type:
+            - Callback<MessageAbandoned>
+          description: ''
+          optional: true
+  - uid: azure-iothub.Client.Client.ServiceReceiver.complete
+    name: complete
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function complete(message: Message, done?: Callback<MessageCompleted>)'
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+        - id: done
+          type:
+            - Callback<MessageCompleted>
+          description: ''
+          optional: true
+  - uid: azure-iothub.Client.Client.ServiceReceiver.reject
+    name: reject
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function reject(message: Message, done?: Callback<MessageRejected>)'
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+        - id: done
+          type:
+            - Callback<MessageRejected>
+          description: ''
+          optional: true

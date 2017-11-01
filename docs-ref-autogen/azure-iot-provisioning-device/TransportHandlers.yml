@@ -1,0 +1,137 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-device.TransportHandlers
+    name: TransportHandlers
+    fullName: TransportHandlers
+    children:
+      - azure-iot-provisioning-device.TransportHandlers.connect
+      - azure-iot-provisioning-device.TransportHandlers.disconnect
+      - azure-iot-provisioning-device.TransportHandlers.getErrorResult
+      - azure-iot-provisioning-device.TransportHandlers.queryOperationStatus
+      - azure-iot-provisioning-device.TransportHandlers.registrationRequest
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    source:
+      path: transport_state_machine.ts
+      startLine: 13
+      remote:
+        path: provisioning/device/src\transport_state_machine.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-provisioning-device
+  - uid: azure-iot-provisioning-device.TransportHandlers.connect
+    name: connect
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function connect(authorization: SharedAccessSignature | X509 | string,
+        callback: (err?: Error) => void)
+      parameters:
+        - id: authorization
+          type:
+            - SharedAccessSignature | X509 | string
+          description: ''
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''
+  - uid: azure-iot-provisioning-device.TransportHandlers.disconnect
+    name: disconnect
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disconnect(callback: (err?: Error) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''
+  - uid: azure-iot-provisioning-device.TransportHandlers.getErrorResult
+    name: getErrorResult
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getErrorResult(result: any)'
+      parameters:
+        - id: result
+          type:
+            - any
+          description: ''
+      return:
+        type:
+          - any
+  - uid: azure-iot-provisioning-device.TransportHandlers.queryOperationStatus
+    name: queryOperationStatus
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function queryOperationStatus(registrationId: string, operationId:
+        string, callback: (err?: Error, body?: any, result?: any,
+        pollingInterval?: number) => void)
+      parameters:
+        - id: registrationId
+          type:
+            - string
+          description: ''
+        - id: operationId
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - >-
+              (err?: Error, body?: any, result?: any, pollingInterval?: number)
+              => void
+          description: ''
+  - uid: azure-iot-provisioning-device.TransportHandlers.registrationRequest
+    name: registrationRequest
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function registrationRequest(registrationId: string, authorization:
+        SharedAccessSignature | X509 | string, requestBody: any,
+        forceRegistration: boolean, callback: (err?: Error, body?: any, result?:
+        any, pollingInterval?: number) => void)
+      parameters:
+        - id: registrationId
+          type:
+            - string
+          description: ''
+        - id: authorization
+          type:
+            - SharedAccessSignature | X509 | string
+          description: ''
+        - id: requestBody
+          type:
+            - any
+          description: ''
+        - id: forceRegistration
+          type:
+            - boolean
+          description: ''
+        - id: callback
+          type:
+            - >-
+              (err?: Error, body?: any, result?: any, pollingInterval?: number)
+              => void
+          description: ''

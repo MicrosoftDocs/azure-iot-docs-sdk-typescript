@@ -1,0 +1,62 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-atlas-javascript-sdk.BoundingBox
+    name: BoundingBox
+    fullName: BoundingBox
+    children:
+      - azure-atlas-javascript-sdk.BoundingBox.constructor
+      - azure-atlas-javascript-sdk.BoundingBox.Array
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+      A BoundingBox object defines a shape with edges that follow lines of
+      constant longitude, latitude, and elevation. The
+
+      full description is detailed in [RFC
+      7946](https://tools.ietf.org/html/rfc7946).
+    extends:
+      name: Array<number>
+    source:
+      path: data/BoundingBox.ts
+      startLine: 9
+      remote:
+        path: src/MapControl/JavascriptSDK/src\data/BoundingBox.ts
+        repo: >-
+          https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
+        branch: production
+    package: azure-atlas-javascript-sdk
+  - uid: azure-atlas-javascript-sdk.BoundingBox.constructor
+    name: BoundingBox
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a BoundingBox.
+    syntax:
+      content: >-
+        new BoundingBox(southwestPosition: Position, northeastPosition:
+        Position)
+      parameters:
+        - id: southwestPosition
+          type:
+            - '@azure-atlas-javascript-sdk.Position'
+          description: The southwestern most position of the bounding box.
+        - id: northeastPosition
+          type:
+            - '@azure-atlas-javascript-sdk.Position'
+          description: |
+            The northeastern most position of the bounding box.
+  - uid: azure-atlas-javascript-sdk.BoundingBox.Array
+    name: Array
+    fullName: Array
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: static ArrayConstructor Array
+      return:
+        type:
+          - ArrayConstructor

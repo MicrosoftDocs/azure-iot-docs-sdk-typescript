@@ -1,0 +1,83 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-atlas-javascript-sdk.FeatureCollection
+    name: FeatureCollection
+    fullName: FeatureCollection
+    children:
+      - azure-atlas-javascript-sdk.FeatureCollection.constructor
+      - azure-atlas-javascript-sdk.FeatureCollection.features
+      - azure-atlas-javascript-sdk.FeatureCollection.type
+      - azure-atlas-javascript-sdk.FeatureCollection.TYPE
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+      A GeoJSON object with the type "FeatureCollection" is a FeatureCollection
+      object. A FeatureCollection object has a
+
+      member with the name "features". The full description is detailed in
+
+      [RFC 7946](https://tools.ietf.org/html/rfc7946).
+    source:
+      path: data/FeatureCollection.ts
+      startLine: 11
+      remote:
+        path: src/MapControl/JavascriptSDK/src\data/FeatureCollection.ts
+        repo: >-
+          https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
+        branch: production
+    package: azure-atlas-javascript-sdk
+  - uid: azure-atlas-javascript-sdk.FeatureCollection.constructor
+    name: FeatureCollection
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a FeatureCollection.
+    syntax:
+      content: 'new FeatureCollection(features: Array<Feature<Geometry>>)'
+      parameters:
+        - id: features
+          type:
+            - Array<@azure-atlas-javascript-sdk.Feature<Geometry>>
+          description: |
+            The collection of features that make up the FeatureCollection.
+  - uid: azure-atlas-javascript-sdk.FeatureCollection.features
+    name: features
+    fullName: features
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: Array<Feature<Geometry>> features
+      return:
+        type:
+          - Array<@azure-atlas-javascript-sdk.Feature<Geometry>>
+  - uid: azure-atlas-javascript-sdk.FeatureCollection.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: function type
+      return:
+        type:
+          - function
+  - uid: azure-atlas-javascript-sdk.FeatureCollection.TYPE
+    name: TYPE
+    fullName: TYPE
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: static function TYPE
+      return:
+        type:
+          - function

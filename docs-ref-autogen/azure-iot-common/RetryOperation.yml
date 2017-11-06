@@ -53,16 +53,19 @@ items:
       it.
     syntax:
       content: >-
-        function retry(operation: (opCallback: (err?: Error, result?: any) =>
-        void) => void, finalCallback: (err?: Error, result?: any) => void)
+        function retry(operation: (opCallback: (err?: Error, result?: any,
+        response?: any) => void) => void, finalCallback: (err?: Error, result?:
+        any, response?: any) => void)
       parameters:
         - id: operation
           type:
-            - '(opCallback: (err?: Error, result?: any) => void) => void'
+            - >-
+              (opCallback: (err?: Error, result?: any, response?: any) => void)
+              => void
           description: The operation to execute.
         - id: finalCallback
           type:
-            - '(err?: Error, result?: any) => void'
+            - '(err?: Error, result?: any, response?: any) => void'
           description: >
             The callback to call with the final error or result, after retries
             if necessary.

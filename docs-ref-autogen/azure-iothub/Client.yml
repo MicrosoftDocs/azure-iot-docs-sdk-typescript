@@ -10,6 +10,7 @@ items:
       - azure-iothub.Client.invokeDeviceMethod
       - azure-iothub.Client.open
       - azure-iothub.Client.send
+      - azure-iothub.Client.setRetryPolicy
       - azure-iothub.Client.fromConnectionString
       - azure-iothub.Client.fromSharedAccessSignature
     langs:
@@ -36,7 +37,7 @@ items:
       name: '@azure-iothub.Client'
     source:
       path: client.ts
-      startLine: 30
+      startLine: 33
       remote:
         path: service/src\client.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
@@ -190,6 +191,27 @@ items:
       - type: ReferenceError
         description: |
           If `deviceId` or `message` is null, undefined or empty.
+  - uid: azure-iothub.Client.setRetryPolicy
+    name: setRetryPolicy
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Set the policy used by the client to retry network operations.
+    syntax:
+      content: 'function setRetryPolicy(policy: RetryPolicy)'
+      parameters:
+        - id: policy
+          type:
+            - RetryPolicy
+          description: |
+            policy used to retry operations (eg. open, send, etc.).
+                          The SDK comes with 2 "built-in" policies: ExponentialBackoffWithJitter (default)
+                          and NoRetry (to cancel any form of retry). The user can also pass its own object as
+                          long as it implements 2 methods:
+                          - shouldRetry(err: Error): boolean : indicates whether an operation should be retried based on the error type
+                          - nextRetryTimeout(retryCount: number, throttled: boolean): number : returns the time to wait (in milliseconds)
+                          before retrying based on the past number of attempts (retryCount) and the fact that the error is a throttling error or not.
   - uid: azure-iothub.Client.fromConnectionString
     name: fromConnectionString
     children: []

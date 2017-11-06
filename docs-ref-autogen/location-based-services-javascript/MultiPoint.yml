@@ -1,0 +1,100 @@
+### YamlMime:UniversalReference
+items:
+  - uid: location-based-services-javascript.MultiPoint
+    name: MultiPoint
+    fullName: MultiPoint
+    children:
+      - location-based-services-javascript.MultiPoint.constructor
+      - location-based-services-javascript.MultiPoint.bbox
+      - location-based-services-javascript.MultiPoint.coordinates
+      - location-based-services-javascript.MultiPoint.type
+      - location-based-services-javascript.MultiPoint.TYPE
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+      For type "MultiPoint", the "coordinates" member is an array of positions.
+      The full description is detailed in
+
+      [RFC 7946](https://tools.ietf.org/html/rfc7946).
+    source:
+      path: data/MultiPoint.ts
+      startLine: 10
+      remote:
+        path: src/MapControl/JavascriptSDK/src\data/MultiPoint.ts
+        repo: >-
+          https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
+        branch: production
+    package: location-based-services-javascript
+  - uid: location-based-services-javascript.MultiPoint.constructor
+    name: MultiPoint
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a MultiPoint.
+    syntax:
+      content: 'new MultiPoint(coordinates: Position[], bbox?: BoundingBox)'
+      parameters:
+        - id: coordinates
+          type:
+            - '@location-based-services-javascript.Position[]'
+          description: An array of positions defining a collection of Points.
+        - id: bbox
+          type:
+            - '@location-based-services-javascript.BoundingBox'
+          description: |
+            The bounding box of the multipoint.
+          optional: true
+  - uid: location-based-services-javascript.MultiPoint.bbox
+    name: bbox
+    fullName: bbox
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: BoundingBox bbox
+      return:
+        type:
+          - '@location-based-services-javascript.BoundingBox'
+  - uid: location-based-services-javascript.MultiPoint.coordinates
+    name: coordinates
+    fullName: coordinates
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'Position[] coordinates'
+      return:
+        type:
+          - '@location-based-services-javascript.Position[]'
+  - uid: location-based-services-javascript.MultiPoint.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: function type
+      return:
+        type:
+          - function
+  - uid: location-based-services-javascript.MultiPoint.TYPE
+    name: TYPE
+    fullName: TYPE
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: static function TYPE
+      return:
+        type:
+          - function

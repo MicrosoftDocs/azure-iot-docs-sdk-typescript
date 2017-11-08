@@ -12,12 +12,13 @@ items:
     summary: Bulk operation
     source:
       path: interfaces.ts
-      startLine: 66
+      startLine: 151
       remote:
         path: provisioning/service/src\interfaces.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-service
+    module: Global
   - uid: azure-iot-provisioning-service.BulkOperation.enrollments
     name: enrollments
     fullName: enrollments
@@ -25,12 +26,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The enrollments property is an array of IndividualEnrollment objects.  The
+      size of this
+
+      array is limited.
     syntax:
-      content: Array<Enrollment> enrollments
+      content: Array<IndividualEnrollment> enrollments
       return:
         type:
-          - Array<@azure-iot-provisioning-service.Enrollment>
+          - Array<@azure-iot-provisioning-service.IndividualEnrollment>
+    module: Global
   - uid: azure-iot-provisioning-service.BulkOperation.mode
     name: mode
     fullName: mode
@@ -38,9 +44,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      The mode property specifies the operation that will be performed upon all
+      of the IndividualEnrollment elements in the enrollments property.
     syntax:
       content: BulkOperationMode mode
       return:
         type:
           - BulkOperationMode
+    module: Global

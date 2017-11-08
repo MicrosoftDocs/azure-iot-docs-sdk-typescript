@@ -15,15 +15,16 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: The enrollment group record.
+    summary: The enrollment group object.
     source:
       path: interfaces.ts
-      startLine: 128
+      startLine: 314
       remote:
         path: provisioning/service/src\interfaces.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-service
+    module: Global
   - uid: azure-iot-provisioning-service.EnrollmentGroup.attestation
     name: attestation
     fullName: attestation
@@ -31,12 +32,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      The security mechanism associated with this object.
+      Currently this MUST be x509.
     syntax:
       content: AttestationMechanism attestation
       return:
         type:
           - '@azure-iot-provisioning-service.AttestationMechanism'
+    module: Global
   - uid: azure-iot-provisioning-service.EnrollmentGroup.createdDateTimeUtc
     name: createdDateTimeUtc
     fullName: createdDateTimeUtc
@@ -44,12 +48,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The date and time that this object was created.
     syntax:
       content: string createdDateTimeUtc
       return:
         type:
           - string
+    module: Global
   - uid: azure-iot-provisioning-service.EnrollmentGroup.enrollmentGroupId
     name: enrollmentGroupId
     fullName: enrollmentGroupId
@@ -57,12 +62,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      A unique identifier for this object.
+      The value is all lowercase alphanumeric with embedded `-` permitted.
     syntax:
       content: string enrollmentGroupId
       return:
         type:
           - string
+    module: Global
   - uid: azure-iot-provisioning-service.EnrollmentGroup.etag
     name: etag
     fullName: etag
@@ -70,12 +78,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      An opaque value suitable to uniquely identify a particular generation
+      of this object for use during a CRUD operation.
     syntax:
       content: string etag
       return:
         type:
           - string
+    module: Global
   - uid: azure-iot-provisioning-service.EnrollmentGroup.initialTwinState
     name: initialTwinState
     fullName: initialTwinState
@@ -83,12 +94,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The initial twin document that will be created for devices upon their
+      provisioning.
     syntax:
       content: TwinState initialTwinState
       return:
         type:
           - '@azure-iot-provisioning-service.TwinState'
+    module: Global
   - uid: azure-iot-provisioning-service.EnrollmentGroup.iotHubHostName
     name: iotHubHostName
     fullName: iotHubHostName
@@ -96,12 +110,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      The IoT Hub that will be the destination of the provisioning for devices
+      associated with this object.
     syntax:
       content: string iotHubHostName
       return:
         type:
           - string
+    module: Global
   - uid: azure-iot-provisioning-service.EnrollmentGroup.lastUpdatedDateTimeUtc
     name: lastUpdatedDateTimeUtc
     fullName: lastUpdatedDateTimeUtc
@@ -109,12 +126,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      The date and time that this object was last updated.  This
+      could include an update or an actual registration.
     syntax:
       content: string lastUpdatedDateTimeUtc
       return:
         type:
           - string
+    module: Global
   - uid: azure-iot-provisioning-service.EnrollmentGroup.provisioningStatus
     name: provisioningStatus
     fullName: provisioningStatus
@@ -122,9 +142,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Indicates whether this object can be used as the basis for a device
+      provisioning.
     syntax:
       content: ProvisioningStatus provisioningStatus
       return:
         type:
           - ProvisioningStatus
+    module: Global

@@ -19,6 +19,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-service
+    module: Global
   - uid: azure-iot-provisioning-service.AttestationMechanism.tpm
     name: tpm
     fullName: tpm
@@ -26,12 +27,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      This property is an object containing the TPM specific values
+      for enrollment.
     syntax:
       content: TpmAttestation tpm
       return:
         type:
           - '@azure-iot-provisioning-service.TpmAttestation'
+    module: Global
   - uid: azure-iot-provisioning-service.AttestationMechanism.type
     name: type
     fullName: type
@@ -39,12 +43,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      The type of attestation.  Will be set to a string
+      either `tpm` or `x509`.
     syntax:
       content: AttestationTypes type
       return:
         type:
           - AttestationTypes
+    module: Global
   - uid: azure-iot-provisioning-service.AttestationMechanism.x509
     name: x509
     fullName: x509
@@ -52,9 +59,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      This property is an object containing the x509 specific values
+      for enrollment.
     syntax:
       content: X509Attestation x509
       return:
         type:
           - '@azure-iot-provisioning-service.X509Attestation'
+    module: Global

@@ -21,6 +21,7 @@ items:
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
         branch: production
     package: location-based-services-javascript
+    module: Global
   - uid: location-based-services-javascript.TrafficOptions.flow
     name: flow
     fullName: flow
@@ -44,6 +45,7 @@ items:
       return:
         type:
           - 'false |  |  | '
+    module: Global
   - uid: location-based-services-javascript.TrafficOptions.incidents
     name: incidents
     fullName: incidents
@@ -57,3 +59,4 @@ items:
       return:
         type:
           - boolean
+    module: Global

@@ -28,6 +28,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iothub
+    module: Global
   - uid: azure-iothub.Query.continuationToken
     name: continuationToken
     fullName: continuationToken
@@ -41,6 +42,7 @@ items:
       return:
         type:
           - string
+    module: Global
   - uid: azure-iothub.Query.hasMoreResults
     name: hasMoreResults
     fullName: hasMoreResults
@@ -54,6 +56,7 @@ items:
       return:
         type:
           - boolean
+    module: Global
   - uid: azure-iothub.Query.next
     name: next
     children: []
@@ -77,6 +80,7 @@ items:
             The callback that will be called with either an Error object or
                                                       the results of the query.
           optional: true
+    module: Global
   - uid: azure-iothub.Query.nextAsTwin
     name: nextAsTwin
     children: []
@@ -99,3 +103,4 @@ items:
           description: |
             The callback that will be called with either an Error object or
                                                       the results of the query.
+    module: Global

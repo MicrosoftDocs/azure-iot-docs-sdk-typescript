@@ -12,12 +12,13 @@ items:
     summary: Primary and secondary certificates
     source:
       path: interfaces.ts
-      startLine: 58
+      startLine: 134
       remote:
         path: provisioning/service/src\interfaces.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-service
+    module: Global
   - uid: azure-iot-provisioning-service.X509Certificates.primary
     name: primary
     fullName: primary
@@ -25,12 +26,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Would typically be the certificate used to provide the identification
+      and authentication for an enrollment.
     syntax:
       content: X509CertificateWithInfo primary
       return:
         type:
           - '@azure-iot-provisioning-service.X509CertificateWithInfo'
+    module: Global
   - uid: azure-iot-provisioning-service.X509Certificates.secondary
     name: secondary
     fullName: secondary
@@ -38,9 +42,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Would typically be the certificate used to provide the identification
+      and authentication for an enrollment in the case that the primary is
+      revoked.
     syntax:
       content: X509CertificateWithInfo secondary
       return:
         type:
           - '@azure-iot-provisioning-service.X509CertificateWithInfo'
+    module: Global

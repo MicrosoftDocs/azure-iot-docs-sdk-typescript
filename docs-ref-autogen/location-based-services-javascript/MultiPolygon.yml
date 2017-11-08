@@ -26,6 +26,7 @@ items:
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
         branch: production
     package: location-based-services-javascript
+    module: Global
   - uid: location-based-services-javascript.MultiPolygon.constructor
     name: MultiPolygon
     children: []
@@ -46,6 +47,7 @@ items:
           description: |
             The bounding box of the MultiPolygon.
           optional: true
+    module: Global
   - uid: location-based-services-javascript.MultiPolygon.bbox
     name: bbox
     fullName: bbox
@@ -59,6 +61,7 @@ items:
       return:
         type:
           - '@location-based-services-javascript.BoundingBox'
+    module: Global
   - uid: location-based-services-javascript.MultiPolygon.coordinates
     name: coordinates
     fullName: coordinates
@@ -72,6 +75,7 @@ items:
       return:
         type:
           - '@location-based-services-javascript.Position[]'
+    module: Global
   - uid: location-based-services-javascript.MultiPolygon.type
     name: type
     fullName: type
@@ -85,6 +89,7 @@ items:
       return:
         type:
           - function
+    module: Global
   - uid: location-based-services-javascript.MultiPolygon.TYPE
     name: TYPE
     fullName: TYPE
@@ -98,3 +103,4 @@ items:
       return:
         type:
           - function
+    module: Global

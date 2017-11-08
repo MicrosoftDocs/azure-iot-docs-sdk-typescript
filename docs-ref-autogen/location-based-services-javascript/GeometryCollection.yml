@@ -30,6 +30,7 @@ items:
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
         branch: production
     package: location-based-services-javascript
+    module: Global
   - uid: location-based-services-javascript.GeometryCollection.constructor
     name: GeometryCollection
     children: []
@@ -45,6 +46,7 @@ items:
             - 'Geometry[]'
           description: |
             The collection of geometries that make up the GeometryCollection.
+    module: Global
   - uid: location-based-services-javascript.GeometryCollection.geometries
     name: geometries
     fullName: geometries
@@ -58,6 +60,7 @@ items:
       return:
         type:
           - 'Geometry[]'
+    module: Global
   - uid: location-based-services-javascript.GeometryCollection.type
     name: type
     fullName: type
@@ -71,6 +74,7 @@ items:
       return:
         type:
           - function
+    module: Global
   - uid: location-based-services-javascript.GeometryCollection.TYPE
     name: TYPE
     fullName: TYPE
@@ -84,3 +88,4 @@ items:
       return:
         type:
           - function
+    module: Global

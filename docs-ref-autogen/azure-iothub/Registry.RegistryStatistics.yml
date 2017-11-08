@@ -19,6 +19,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iothub
+    module: Global
   - uid: azure-iothub.Registry.RegistryStatistics.disabledDeviceCount
     name: disabledDeviceCount
     fullName: disabledDeviceCount
@@ -32,6 +33,7 @@ items:
       return:
         type:
           - number
+    module: Global
   - uid: azure-iothub.Registry.RegistryStatistics.enabledDeviceCount
     name: enabledDeviceCount
     fullName: enabledDeviceCount
@@ -45,6 +47,7 @@ items:
       return:
         type:
           - number
+    module: Global
   - uid: azure-iothub.Registry.RegistryStatistics.totalDeviceCount
     name: totalDeviceCount
     fullName: totalDeviceCount
@@ -58,3 +61,4 @@ items:
       return:
         type:
           - number
+    module: Global

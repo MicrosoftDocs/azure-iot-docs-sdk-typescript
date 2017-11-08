@@ -20,6 +20,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iothub
+    module: Client
   - uid: azure-iothub.Client.Client.TransportConfigOptions.host
     name: host
     fullName: host
@@ -33,6 +34,7 @@ items:
       return:
         type:
           - string
+    module: Client
   - uid: azure-iothub.Client.Client.TransportConfigOptions.hubName
     name: hubName
     fullName: hubName
@@ -46,6 +48,7 @@ items:
       return:
         type:
           - string
+    module: Client
   - uid: azure-iothub.Client.Client.TransportConfigOptions.keyName
     name: keyName
     fullName: keyName
@@ -59,6 +62,7 @@ items:
       return:
         type:
           - string
+    module: Client
   - uid: azure-iothub.Client.Client.TransportConfigOptions.sharedAccessSignature
     name: sharedAccessSignature
     fullName: sharedAccessSignature
@@ -72,3 +76,4 @@ items:
       return:
         type:
           - string | SharedAccessSignature
+    module: Client

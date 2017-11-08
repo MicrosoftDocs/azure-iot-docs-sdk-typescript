@@ -22,6 +22,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device
+    module: Global
   - uid: azure-iot-provisioning-device.TransportStateMachine.constructor
     name: TransportStateMachine
     children: []
@@ -32,6 +33,7 @@ items:
     syntax:
       content: new TransportStateMachine()
       parameters: []
+    module: Global
   - uid: azure-iot-provisioning-device.TransportStateMachine.disconnect
     name: disconnect
     children: []
@@ -46,6 +48,7 @@ items:
           type:
             - '(err: Error) => void'
           description: ''
+    module: Global
   - uid: azure-iot-provisioning-device.TransportStateMachine.initialize
     name: initialize
     children: []
@@ -60,6 +63,7 @@ items:
           type:
             - '@azure-iot-provisioning-device.TransportHandlers'
           description: ''
+    module: Global
   - uid: azure-iot-provisioning-device.TransportStateMachine.register
     name: register
     children: []
@@ -93,3 +97,4 @@ items:
           type:
             - ResponseCallback
           description: ''
+    module: Global

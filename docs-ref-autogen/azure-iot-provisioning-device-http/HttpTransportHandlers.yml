@@ -23,6 +23,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device-http
+    module: Global
   - uid: azure-iot-provisioning-device-http.HttpTransportHandlers.connect
     name: connect
     children: []
@@ -43,6 +44,7 @@ items:
           type:
             - '(err?: Error) => void'
           description: ''
+    module: Global
   - uid: azure-iot-provisioning-device-http.HttpTransportHandlers.disconnect
     name: disconnect
     children: []
@@ -57,6 +59,7 @@ items:
           type:
             - '(err?: Error) => void'
           description: ''
+    module: Global
   - uid: azure-iot-provisioning-device-http.HttpTransportHandlers.getErrorResult
     name: getErrorResult
     children: []
@@ -74,6 +77,7 @@ items:
       return:
         type:
           - any
+    module: Global
   - uid: >-
       azure-iot-provisioning-device-http.HttpTransportHandlers.queryOperationStatus
     name: queryOperationStatus
@@ -102,6 +106,7 @@ items:
               (err?: Error, responseBody?: any, result?: any, pollingInterval?:
               number) => void
           description: ''
+    module: Global
   - uid: >-
       azure-iot-provisioning-device-http.HttpTransportHandlers.registrationRequest
     name: registrationRequest
@@ -139,3 +144,4 @@ items:
               (err?: Error, responseBody?: any, result?: any, pollingInterval?:
               number) => void
           description: ''
+    module: Global

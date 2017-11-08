@@ -45,6 +45,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iothub
+    module: Global
   - uid: azure-iothub.Registry.JobStatus
     name: JobStatus
     fullName: JobStatus
@@ -61,6 +62,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iothub
+    module: Global
   - uid: azure-iothub.Registry.addDevices
     name: addDevices
     children: []
@@ -90,6 +92,7 @@ items:
                                            BulkRegistryOperationResult
                                            and a transport-specific response object useful
                                            for logging or debugging.
+    module: Global
   - uid: azure-iothub.Registry.cancelJob
     name: cancelJob
     children: []
@@ -113,6 +116,7 @@ items:
             The function to call with two arguments: an error object if an error
             happened,
                                          (null otherwise) and the (cancelled) status of the job whose identifier was passed as an argument.
+    module: Global
   - uid: azure-iothub.Registry.create
     name: create
     children: []
@@ -140,6 +144,7 @@ items:
                                            object representing the created device
                                            identity, and a transport-specific response
                                            object useful for logging or debugging.
+    module: Global
   - uid: azure-iothub.Registry.createQuery
     name: createQuery
     children: []
@@ -173,6 +178,7 @@ items:
         description: >
           If the sqlQuery argument is not a string or the pageSize argument not
           a number, null or undefined.
+    module: Global
   - uid: azure-iothub.Registry.delete
     name: delete
     children: []
@@ -198,6 +204,7 @@ items:
                                            the other methods), and a transport-specific
                                            response object useful for logging or
                                            debugging.
+    module: Global
   - uid: azure-iothub.Registry.exportDevicesToBlob
     name: exportDevicesToBlob
     children: []
@@ -229,6 +236,7 @@ items:
             The function to call when the job has been created, with two
             arguments: an error object if an
                                                          an error happened, (null otherwise) and the job status that can be used to track progress of the devices export.
+    module: Global
   - uid: azure-iothub.Registry.get
     name: get
     children: []
@@ -256,6 +264,7 @@ items:
                                            object representing the created device
                                            identity, and a transport-specific response
                                            object useful for logging or debugging.
+    module: Global
   - uid: azure-iothub.Registry.getJob
     name: getJob
     children: []
@@ -279,6 +288,7 @@ items:
             The function to call with two arguments: an error object if an error
             happened,
                                          (null otherwise) and the status of the job whose identifier was passed as an argument.
+    module: Global
   - uid: azure-iothub.Registry.getRegistryStatistics
     name: getRegistryStatistics
     children: []
@@ -295,6 +305,7 @@ items:
           description: |
             The callback that will be called with either an Error object or
                                           the device registry statistics.
+    module: Global
   - uid: azure-iothub.Registry.getTwin
     name: getTwin
     children: []
@@ -315,6 +326,7 @@ items:
           description: |
             The callback that will be called with either an Error object or
                                             the device twin instance.
+    module: Global
   - uid: azure-iothub.Registry.importDevicesFromBlob
     name: importDevicesFromBlob
     children: []
@@ -346,6 +358,7 @@ items:
             The function to call when the job has been created, with two
             arguments: an error object if an
                                                          an error happened, (null otherwise) and the job status that can be used to track progress of the devices import.
+    module: Global
   - uid: azure-iothub.Registry.list
     name: list
     children: []
@@ -370,6 +383,7 @@ items:
                                            objects representing the listed device
                                            identities, and a transport-specific response
                                            object useful for logging or debugging.
+    module: Global
   - uid: azure-iothub.Registry.listJobs
     name: listJobs
     children: []
@@ -387,6 +401,7 @@ items:
             The function to call with two arguments: an error object if an error
             happened,
                                          (null otherwise) and the list of past jobs as an argument.
+    module: Global
   - uid: azure-iothub.Registry.removeDevices
     name: removeDevices
     children: []
@@ -423,6 +438,7 @@ items:
                                            BulkRegistryOperationResult
                                            and a transport-specific response object useful
                                            for logging or debugging.
+    module: Global
   - uid: azure-iothub.Registry.update
     name: update
     children: []
@@ -453,6 +469,7 @@ items:
                                            object representing the updated device
                                            identity, and a transport-specific response
                                            object useful for logging or debugging.
+    module: Global
   - uid: azure-iothub.Registry.updateDevices
     name: updateDevices
     children: []
@@ -490,6 +507,7 @@ items:
                                            and a transport-specific response object useful
                                            for logging or debugging.
           optional: true
+    module: Global
   - uid: azure-iothub.Registry.updateTwin
     name: updateTwin
     children: []
@@ -523,6 +541,7 @@ items:
           description: |
             The callback that will be called with either an Error object or
                                             the device twin instance.
+    module: Global
   - uid: azure-iothub.Registry.fromConnectionString
     name: fromConnectionString
     children: []
@@ -543,6 +562,7 @@ items:
       return:
         type:
           - '@azure-iothub.Registry'
+    module: Global
   - uid: azure-iothub.Registry.fromSharedAccessSignature
     name: fromSharedAccessSignature
     children: []
@@ -563,3 +583,4 @@ items:
       return:
         type:
           - '@azure-iothub.Registry'
+    module: Global

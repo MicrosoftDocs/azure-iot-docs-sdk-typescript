@@ -18,6 +18,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-device
+    module: Client
   - uid: azure-iot-device.Client.Client.BlobUpload.updateSharedAccessSignature
     name: updateSharedAccessSignature
     children: []
@@ -32,6 +33,7 @@ items:
           type:
             - string
           description: ''
+    module: Client
   - uid: azure-iot-device.Client.Client.BlobUpload.uploadToBlob
     name: uploadToBlob
     children: []
@@ -60,3 +62,4 @@ items:
           type:
             - '(err?: Error) => void'
           description: ''
+    module: Client

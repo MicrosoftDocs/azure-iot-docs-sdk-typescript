@@ -17,6 +17,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-service
+    module: Global
   - uid: azure-iot-provisioning-service.QueryResult.items
     name: items
     fullName: items
@@ -26,7 +27,12 @@ items:
     type: property
     summary: 'The query result items, as a collection.'
     syntax:
-      content: Array<Enrollment | EnrollmentGroup | DeviceRegistrationStatus> items
+      content: >-
+        Array<IndividualEnrollment | EnrollmentGroup | DeviceRegistrationState>
+        items
       return:
         type:
-          - Array<Enrollment | EnrollmentGroup | DeviceRegistrationStatus>
+          - >-
+            Array<IndividualEnrollment | EnrollmentGroup |
+            DeviceRegistrationState>
+    module: Global

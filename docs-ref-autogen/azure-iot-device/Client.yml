@@ -45,6 +45,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-device
+    module: Global
   - uid: azure-iot-device.Client.constructor
     name: Client
     children: []
@@ -78,6 +79,7 @@ items:
           description: |
             An object that is capable of uploading a stream to a blob.
           optional: true
+    module: Global
   - uid: azure-iot-device.Client.abandon
     name: abandon
     children: []
@@ -105,6 +107,7 @@ items:
       - type: ReferenceException
         description: |
           If the message is falsy.
+    module: Global
   - uid: azure-iot-device.Client.close
     name: close
     children: []
@@ -125,6 +128,7 @@ items:
           description: |
             The callback to be invoked when the connection has been closed.
           optional: true
+    module: Global
   - uid: azure-iot-device.Client.complete
     name: complete
     children: []
@@ -152,6 +156,7 @@ items:
       - type: ReferenceError
         description: |
           If the message is falsy.
+    module: Global
   - uid: azure-iot-device.Client.getTwin
     name: getTwin
     children: []
@@ -175,6 +180,7 @@ items:
             - '@azure-iot-device.Twin'
           description: ''
           optional: true
+    module: Global
   - uid: azure-iot-device.Client.onDeviceMethod
     name: onDeviceMethod
     children: []
@@ -213,6 +219,7 @@ items:
         description: |
           If the `methodName` parameter is not a string
                                          or if the `callback` is not a function.
+    module: Global
   - uid: azure-iot-device.Client.open
     name: open
     children: []
@@ -231,6 +238,7 @@ items:
           description: |
             The callback to be invoked when `open`
                                             completes execution.
+    module: Global
   - uid: azure-iot-device.Client.reject
     name: reject
     children: []
@@ -258,6 +266,7 @@ items:
       - type: ReferenceException
         description: |
           If the message is falsy.
+    module: Global
   - uid: azure-iot-device.Client.sendEvent
     name: sendEvent
     children: []
@@ -284,6 +293,7 @@ items:
           description: |
             The callback to be invoked when `sendEvent` completes execution.
           optional: true
+    module: Global
   - uid: azure-iot-device.Client.sendEventBatch
     name: sendEventBatch
     children: []
@@ -313,6 +323,7 @@ items:
             The callback to be invoked when
                                                            `sendEventBatch` completes execution.
           optional: true
+    module: Global
   - uid: azure-iot-device.Client.setOptions
     name: setOptions
     children: []
@@ -339,6 +350,7 @@ items:
       - type: ReferenceError
         description: |
           If the options structure is falsy
+    module: Global
   - uid: azure-iot-device.Client.setRetryPolicy
     name: setRetryPolicy
     children: []
@@ -356,6 +368,7 @@ items:
             - RetryPolicy
           description: |
             The retry policy that should be used for all future operations.
+    module: Global
   - uid: azure-iot-device.Client.setTransportOptions
     name: setTransportOptions
     children: []
@@ -381,6 +394,7 @@ items:
             The callback that shall be invoked with either an error or a result
             object.
           optional: true
+    module: Global
     deprecated:
       content: Use Client.setOptions instead.
   - uid: azure-iot-device.Client.updateSharedAccessSignature
@@ -413,6 +427,7 @@ items:
       - type: ReferenceError
         description: |
           If the client uses x509 authentication.
+    module: Global
   - uid: azure-iot-device.Client.uploadToBlob
     name: uploadToBlob
     children: []
@@ -448,6 +463,7 @@ items:
       - type: ReferenceException
         description: |
           If blobName or stream or streamLength is falsy.
+    module: Global
   - uid: azure-iot-device.Client.fromConnectionString
     name: fromConnectionString
     children: []
@@ -479,6 +495,7 @@ items:
       - type: ReferenceError
         description: |
           If the connStr parameter is falsy.
+    module: Global
   - uid: azure-iot-device.Client.fromSharedAccessSignature
     name: fromSharedAccessSignature
     children: []
@@ -510,3 +527,4 @@ items:
       - type: ReferenceError
         description: |
           If the connStr parameter is falsy.
+    module: Global

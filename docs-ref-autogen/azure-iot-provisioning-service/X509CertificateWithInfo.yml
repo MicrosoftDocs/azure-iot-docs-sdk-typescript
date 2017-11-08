@@ -12,12 +12,13 @@ items:
     summary: Certificate and Certificate info
     source:
       path: interfaces.ts
-      startLine: 50
+      startLine: 119
       remote:
         path: provisioning/service/src\interfaces.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-service
+    module: Global
   - uid: azure-iot-provisioning-service.X509CertificateWithInfo.certificate
     name: certificate
     fullName: certificate
@@ -25,12 +26,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: PEM or CER representation of a certificate.
     syntax:
-      content: any certificate
+      content: string certificate
       return:
         type:
-          - any
+          - string
+    module: Global
   - uid: azure-iot-provisioning-service.X509CertificateWithInfo.info
     name: info
     fullName: info
@@ -38,9 +40,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      This property is populated by the service from the information
+      provided by the certificate property of this object.
     syntax:
       content: X509CertificateInfo info
       return:
         type:
           - '@azure-iot-provisioning-service.X509CertificateInfo'
+    module: Global

@@ -19,6 +19,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iothub
+    module: Client
   - uid: azure-iothub.Client.Client.ServiceReceiver.abandon
     name: abandon
     children: []
@@ -38,6 +39,7 @@ items:
             - Callback<MessageAbandoned>
           description: ''
           optional: true
+    module: Client
   - uid: azure-iothub.Client.Client.ServiceReceiver.complete
     name: complete
     children: []
@@ -57,6 +59,7 @@ items:
             - Callback<MessageCompleted>
           description: ''
           optional: true
+    module: Client
   - uid: azure-iothub.Client.Client.ServiceReceiver.reject
     name: reject
     children: []
@@ -76,3 +79,4 @@ items:
             - Callback<MessageRejected>
           description: ''
           optional: true
+    module: Client

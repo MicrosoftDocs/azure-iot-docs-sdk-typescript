@@ -12,12 +12,13 @@ items:
     summary: ''
     source:
       path: interfaces.ts
-      startLine: 139
+      startLine: 357
       remote:
         path: provisioning/service/src\interfaces.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-service
+    module: Global
   - uid: azure-iot-provisioning-service.Metadata.lastUpdated
     name: lastUpdated
     fullName: lastUpdated
@@ -31,6 +32,7 @@ items:
       return:
         type:
           - Date
+    module: Global
   - uid: azure-iot-provisioning-service.Metadata.lastUpdatedVersion
     name: lastUpdatedVersion
     fullName: lastUpdatedVersion
@@ -46,3 +48,4 @@ items:
       return:
         type:
           - number
+    module: Global

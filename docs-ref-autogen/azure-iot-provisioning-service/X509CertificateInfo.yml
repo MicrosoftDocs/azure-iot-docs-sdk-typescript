@@ -15,15 +15,22 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: X509 certificate info.
+    summary: >
+      X509 certificate info.
+
+      This object is not provided by the application.  It is populated by the
+      service from
+
+      a provided certificate.
     source:
       path: interfaces.ts
-      startLine: 36
+      startLine: 76
       remote:
         path: provisioning/service/src\interfaces.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-service
+    module: Global
   - uid: azure-iot-provisioning-service.X509CertificateInfo.issuerName
     name: issuerName
     fullName: issuerName
@@ -31,12 +38,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      The name of certificate used to sign the certificate that is the basis
+      for this info.
     syntax:
       content: string issuerName
       return:
         type:
           - string
+    module: Global
   - uid: azure-iot-provisioning-service.X509CertificateInfo.notAfterUtc
     name: notAfterUtc
     fullName: notAfterUtc
@@ -44,12 +54,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The date and time after which this certificate is not valid for
+      authentication
+
+      purposes.
     syntax:
       content: Date notAfterUtc
       return:
         type:
           - Date
+    module: Global
   - uid: azure-iot-provisioning-service.X509CertificateInfo.notBeforeUtc
     name: notBeforeUtc
     fullName: notBeforeUtc
@@ -57,12 +72,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The date and time before which this certificate is not valid for
+      authentication
+
+      purposes.
     syntax:
       content: Date notBeforeUtc
       return:
         type:
           - Date
+    module: Global
   - uid: azure-iot-provisioning-service.X509CertificateInfo.serialNumber
     name: serialNumber
     fullName: serialNumber
@@ -70,12 +90,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      A value that should be unique to the issuing CA for this certificate. 
+      Note that
+
+      this serial number is not unique over all certificates world wide.
     syntax:
       content: string serialNumber
       return:
         type:
           - string
+    module: Global
   - uid: azure-iot-provisioning-service.X509CertificateInfo.sha1Thumbprint
     name: sha1Thumbprint
     fullName: sha1Thumbprint
@@ -83,12 +108,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: A 160 bit hash of the certificate.
     syntax:
       content: string sha1Thumbprint
       return:
         type:
           - string
+    module: Global
   - uid: azure-iot-provisioning-service.X509CertificateInfo.sha256Thumbprint
     name: sha256Thumbprint
     fullName: sha256Thumbprint
@@ -96,12 +122,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: A 256 bit hash of the certificate.
     syntax:
       content: string sha256Thumbprint
       return:
         type:
           - string
+    module: Global
   - uid: azure-iot-provisioning-service.X509CertificateInfo.subjectName
     name: subjectName
     fullName: subjectName
@@ -109,12 +136,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      For clientCertificates the subjectName is used as the deviceId on the IoT
+      Hub.
     syntax:
       content: string subjectName
       return:
         type:
           - string
+    module: Global
   - uid: azure-iot-provisioning-service.X509CertificateInfo.version
     name: version
     fullName: version
@@ -122,9 +152,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The version specifies what capabilities are supported by the particular
+      certificate.
+
+      Version 3 is currently the highest version number.
     syntax:
       content: number version
       return:
         type:
           - number
+    module: Global

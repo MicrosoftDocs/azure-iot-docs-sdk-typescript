@@ -25,6 +25,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-common
+    module: Global
   - uid: azure-iot-common.IotHubQuotaExceededError.constructor
     name: IotHubQuotaExceededError
     children: []
@@ -40,6 +41,7 @@ items:
             - string
           description: ''
           optional: true
+    module: Global
   - uid: azure-iot-common.IotHubQuotaExceededError.Error
     name: Error
     fullName: Error
@@ -53,3 +55,4 @@ items:
       return:
         type:
           - ErrorConstructor
+    module: Global

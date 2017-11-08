@@ -27,6 +27,7 @@ items:
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
         branch: production
     package: location-based-services-javascript
+    module: Global
   - uid: location-based-services-javascript.Feature.constructor
     name: Feature
     children: []
@@ -52,6 +53,7 @@ items:
           description: |
             The id of the feature.
           optional: true
+    module: Global
   - uid: location-based-services-javascript.Feature.geometry
     name: geometry
     fullName: geometry
@@ -65,6 +67,7 @@ items:
       return:
         type:
           - G
+    module: Global
   - uid: location-based-services-javascript.Feature.id
     name: id
     fullName: id
@@ -78,6 +81,7 @@ items:
       return:
         type:
           - string
+    module: Global
   - uid: location-based-services-javascript.Feature.properties
     name: properties
     fullName: properties
@@ -91,6 +95,7 @@ items:
       return:
         type:
           - any
+    module: Global
   - uid: location-based-services-javascript.Feature.type
     name: type
     fullName: type
@@ -104,6 +109,7 @@ items:
       return:
         type:
           - function
+    module: Global
   - uid: location-based-services-javascript.Feature.TYPE
     name: TYPE
     fullName: TYPE
@@ -117,3 +123,4 @@ items:
       return:
         type:
           - function
+    module: Global

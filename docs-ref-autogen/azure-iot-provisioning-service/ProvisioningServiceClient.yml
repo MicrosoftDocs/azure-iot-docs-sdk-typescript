@@ -6,7 +6,7 @@ items:
     children:
       - azure-iot-provisioning-service.ProvisioningServiceClient.constructor
       - >-
-        azure-iot-provisioning-service.ProvisioningServiceClient.createEnrollmentGroupDeviceRegistrationStatusQuery
+        azure-iot-provisioning-service.ProvisioningServiceClient.createEnrollmentGroupDeviceRegistrationStateQuery
       - >-
         azure-iot-provisioning-service.ProvisioningServiceClient.createEnrollmentGroupQuery
       - >-
@@ -16,13 +16,13 @@ items:
       - >-
         azure-iot-provisioning-service.ProvisioningServiceClient.createOrUpdateIndividualEnrollment
       - >-
-        azure-iot-provisioning-service.ProvisioningServiceClient.deleteDeviceRegistrationStatus
+        azure-iot-provisioning-service.ProvisioningServiceClient.deleteDeviceRegistrationState
       - >-
         azure-iot-provisioning-service.ProvisioningServiceClient.deleteEnrollmentGroup
       - >-
         azure-iot-provisioning-service.ProvisioningServiceClient.deleteIndividualEnrollment
       - >-
-        azure-iot-provisioning-service.ProvisioningServiceClient.getDeviceRegistrationStatus
+        azure-iot-provisioning-service.ProvisioningServiceClient.getDeviceRegistrationState
       - >-
         azure-iot-provisioning-service.ProvisioningServiceClient.getEnrollmentGroup
       - >-
@@ -43,6 +43,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-service
+    module: Global
   - uid: azure-iot-provisioning-service.ProvisioningServiceClient.constructor
     name: ProvisioningServiceClient
     children: []
@@ -64,18 +65,21 @@ items:
             - RestApiClient
           description: ''
           optional: true
+    module: Global
   - uid: >-
-      azure-iot-provisioning-service.ProvisioningServiceClient.createEnrollmentGroupDeviceRegistrationStatusQuery
-    name: createEnrollmentGroupDeviceRegistrationStatusQuery
+      azure-iot-provisioning-service.ProvisioningServiceClient.createEnrollmentGroupDeviceRegistrationStateQuery
+    name: createEnrollmentGroupDeviceRegistrationStateQuery
     children: []
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Creates a query that can be used to return, for a specific
+      EnrollmentGroup, pages of existing device registration status.
     syntax:
       content: >-
         function
-        createEnrollmentGroupDeviceRegistrationStatusQuery(querySpecification:
+        createEnrollmentGroupDeviceRegistrationStateQuery(querySpecification:
         QuerySpecification, enrollmentGroupId: string, pageSize?: number)
       parameters:
         - id: querySpecification
@@ -85,7 +89,7 @@ items:
         - id: enrollmentGroupId
           type:
             - string
-          description: The EnrollmentGroup that provides the scope for the query.
+          description: The EnrollmentGroup id that provides the scope for the query.
         - id: pageSize
           type:
             - number
@@ -95,6 +99,7 @@ items:
       return:
         type:
           - '@azure-iot-provisioning-service.Query'
+    module: Global
   - uid: >-
       azure-iot-provisioning-service.ProvisioningServiceClient.createEnrollmentGroupQuery
     name: createEnrollmentGroupQuery
@@ -102,7 +107,9 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Creates a query that can be used to return pages of existing enrollment
+      groups.
     syntax:
       content: >-
         function createEnrollmentGroupQuery(querySpecification:
@@ -116,11 +123,12 @@ items:
           type:
             - number
           description: |
-            The number of elements to return per page.
+            The maximum number of elements to return per page.
           optional: true
       return:
         type:
           - '@azure-iot-provisioning-service.Query'
+    module: Global
   - uid: >-
       azure-iot-provisioning-service.ProvisioningServiceClient.createIndividualEnrollmentQuery
     name: createIndividualEnrollmentQuery
@@ -128,7 +136,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: Creates a query that can be used to return pages of existing enrollments.
     syntax:
       content: >-
         function createIndividualEnrollmentQuery(querySpecification:
@@ -142,11 +150,12 @@ items:
           type:
             - number
           description: |
-            The number of elements to return per page.
+            The maximum number of elements to return per page.
           optional: true
       return:
         type:
           - '@azure-iot-provisioning-service.Query'
+    module: Global
   - uid: >-
       azure-iot-provisioning-service.ProvisioningServiceClient.createOrUpdateEnrollmentGroup
     name: createOrUpdateEnrollmentGroup
@@ -154,7 +163,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: Create or update a device enrollment group.
     syntax:
       content: >-
         function createOrUpdateEnrollmentGroup(enrollmentGroup: EnrollmentGroup,
@@ -173,6 +182,7 @@ items:
           description: |
             Invoked upon completion of the operation.
           optional: true
+    module: Global
   - uid: >-
       azure-iot-provisioning-service.ProvisioningServiceClient.createOrUpdateIndividualEnrollment
     name: createOrUpdateIndividualEnrollment
@@ -180,41 +190,46 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: Create or update a device enrollment record.
     syntax:
       content: >-
-        function createOrUpdateIndividualEnrollment(enrollment: Enrollment,
-        callback?: (err: Error, enrollment?: Enrollment, response?: any) =>
-        void)
+        function createOrUpdateIndividualEnrollment(enrollment:
+        IndividualEnrollment, callback?: (err: Error, enrollment?:
+        IndividualEnrollment, response?: any) => void)
       parameters:
         - id: enrollment
           type:
-            - '@azure-iot-provisioning-service.Enrollment'
+            - '@azure-iot-provisioning-service.IndividualEnrollment'
           description: The device enrollment record.
         - id: callback
           type:
-            - '(err: Error, enrollment?: Enrollment, response?: any) => void'
+            - >-
+              (err: Error, enrollment?: IndividualEnrollment, response?: any) =>
+              void
           description: |
             Invoked upon completion of the operation.
           optional: true
+    module: Global
   - uid: >-
-      azure-iot-provisioning-service.ProvisioningServiceClient.deleteDeviceRegistrationStatus
-    name: deleteDeviceRegistrationStatus
+      azure-iot-provisioning-service.ProvisioningServiceClient.deleteDeviceRegistrationState
+    name: deleteDeviceRegistrationState
     children: []
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: Delete a device registration status.
     syntax:
       content: >-
-        function deleteDeviceRegistrationStatus(idOrRegistrationStatus: string |
-        DeviceRegistrationStatus, etagOrCallback?: string | DeleteCallback,
+        function deleteDeviceRegistrationState(idOrRegistrationState: string |
+        DeviceRegistrationState, etagOrCallback?: string | DeleteCallback,
         deleteCallback?: DeleteCallback)
       parameters:
-        - id: idOrRegistrationStatus
+        - id: idOrRegistrationState
           type:
-            - string | DeviceRegistrationStatus
-          description: ''
+            - string | DeviceRegistrationState
+          description: >-
+            A string containing the registration id OR an actual
+            DeviceRegistrationState.
         - id: etagOrCallback
           type:
             - string | DeleteCallback
@@ -228,6 +243,7 @@ items:
           description: |
             Invoked upon completion of the operation.
           optional: true
+    module: Global
   - uid: >-
       azure-iot-provisioning-service.ProvisioningServiceClient.deleteEnrollmentGroup
     name: deleteEnrollmentGroup
@@ -235,7 +251,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: Delete a device enrollment group.
     syntax:
       content: >-
         function deleteEnrollmentGroup(enrollmentGroupOrId: string |
@@ -261,6 +277,7 @@ items:
           description: |
             Invoked upon completion of the operation.
           optional: true
+    module: Global
   - uid: >-
       azure-iot-provisioning-service.ProvisioningServiceClient.deleteIndividualEnrollment
     name: deleteIndividualEnrollment
@@ -268,17 +285,19 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: Delete a device enrollment record.
     syntax:
       content: >-
-        function deleteIndividualEnrollment(enrollmentOrId: string | Enrollment,
-        etagOrCallback?: string | DeleteCallback, deleteCallback?:
-        DeleteCallback)
+        function deleteIndividualEnrollment(enrollmentOrId: string |
+        IndividualEnrollment, etagOrCallback?: string | DeleteCallback,
+        deleteCallback?: DeleteCallback)
       parameters:
         - id: enrollmentOrId
           type:
-            - string | Enrollment
-          description: An Enrollment object or a string containing the registration id.
+            - string | IndividualEnrollment
+          description: >-
+            An IndividualEnrollment object or a string containing the
+            registration id.
         - id: etagOrCallback
           type:
             - string | DeleteCallback
@@ -292,18 +311,19 @@ items:
           description: |
             Invoked upon completion of the operation.
           optional: true
+    module: Global
   - uid: >-
-      azure-iot-provisioning-service.ProvisioningServiceClient.getDeviceRegistrationStatus
-    name: getDeviceRegistrationStatus
+      azure-iot-provisioning-service.ProvisioningServiceClient.getDeviceRegistrationState
+    name: getDeviceRegistrationState
     children: []
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: Gets the device registration status.
     syntax:
       content: >-
-        function getDeviceRegistrationStatus(id: string, callback: (err: Error,
-        registrationStatus?: DeviceRegistrationStatus, response?: any) => void)
+        function getDeviceRegistrationState(id: string, callback: (err: Error,
+        registrationState?: DeviceRegistrationState, response?: any) => void)
       parameters:
         - id: id
           type:
@@ -312,10 +332,11 @@ items:
         - id: callback
           type:
             - >-
-              (err: Error, registrationStatus?: DeviceRegistrationStatus,
+              (err: Error, registrationState?: DeviceRegistrationState,
               response?: any) => void
           description: |
             Invoked upon completion of the operation.
+    module: Global
   - uid: >-
       azure-iot-provisioning-service.ProvisioningServiceClient.getEnrollmentGroup
     name: getEnrollmentGroup
@@ -323,7 +344,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: Get a device enrollment group.
     syntax:
       content: >-
         function getEnrollmentGroup(id: string, getCallback: (err: Error,
@@ -332,7 +353,7 @@ items:
         - id: id
           type:
             - string
-          description: Enrollment group ID.
+          description: IndividualEnrollment group ID.
         - id: getCallback
           type:
             - >-
@@ -340,6 +361,7 @@ items:
               void
           description: |
             Invoked upon completion of the operation.
+    module: Global
   - uid: >-
       azure-iot-provisioning-service.ProvisioningServiceClient.getIndividualEnrollment
     name: getIndividualEnrollment
@@ -347,11 +369,11 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: Get a device enrollment record.
     syntax:
       content: >-
         function getIndividualEnrollment(id: string, getCallback: (err: Error,
-        enrollmentRecord?: Enrollment, response?: any) => void)
+        enrollmentRecord?: IndividualEnrollment, response?: any) => void)
       parameters:
         - id: id
           type:
@@ -360,17 +382,18 @@ items:
         - id: getCallback
           type:
             - >-
-              (err: Error, enrollmentRecord?: Enrollment, response?: any) =>
-              void
+              (err: Error, enrollmentRecord?: IndividualEnrollment, response?:
+              any) => void
           description: |
             Invoked upon completion of the operation.
+    module: Global
   - uid: azure-iot-provisioning-service.ProvisioningServiceClient.runBulkOperation
     name: runBulkOperation
     children: []
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: Runs a number CRUD operations on an array of enrollment records.
     syntax:
       content: >-
         function runBulkOperation(bulkOperation: BulkOperation, callback?: (err:
@@ -380,7 +403,10 @@ items:
         - id: bulkOperation
           type:
             - '@azure-iot-provisioning-service.BulkOperation'
-          description: Bulk operation.
+          description: >-
+            An object that specifies the single kind of CRUD operations on the
+            array of IndividualEnrollment objects that are also part of the
+            object.
         - id: callback
           type:
             - >-
@@ -389,6 +415,7 @@ items:
           description: |
             Invoked upon completion of the operation.
           optional: true
+    module: Global
   - uid: >-
       azure-iot-provisioning-service.ProvisioningServiceClient.fromConnectionString
     name: fromConnectionString
@@ -413,3 +440,4 @@ items:
       return:
         type:
           - '@azure-iot-provisioning-service.ProvisioningServiceClient'
+    module: Global

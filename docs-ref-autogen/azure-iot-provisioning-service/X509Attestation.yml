@@ -12,12 +12,13 @@ items:
     summary: Attestation via X509.
     source:
       path: interfaces.ts
-      startLine: 28
+      startLine: 58
       remote:
         path: provisioning/service/src\interfaces.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-service
+    module: Global
   - uid: azure-iot-provisioning-service.X509Attestation.clientCertificates
     name: clientCertificates
     fullName: clientCertificates
@@ -25,12 +26,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      x509 certificate object which provides all information for a leaf
+      certificate.
     syntax:
       content: X509Certificates clientCertificates
       return:
         type:
           - '@azure-iot-provisioning-service.X509Certificates'
+    module: Global
   - uid: azure-iot-provisioning-service.X509Attestation.signingCertificates
     name: signingCertificates
     fullName: signingCertificates
@@ -38,9 +42,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      x509 certificate object which provides all information needed for a
+      certificate
+
+      suitable for signing other certificates.
     syntax:
       content: X509Certificates signingCertificates
       return:
         type:
           - '@azure-iot-provisioning-service.X509Certificates'
+    module: Global

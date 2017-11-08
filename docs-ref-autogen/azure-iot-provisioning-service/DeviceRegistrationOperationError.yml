@@ -16,7 +16,7 @@ items:
     summary: Device registration operation error
     source:
       path: interfaces.ts
-      startLine: 84
+      startLine: 192
       remote:
         path: provisioning/service/src\interfaces.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
@@ -29,12 +29,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The status code that is associated with the error for a particular CRUD
+      operation.
     syntax:
-      content: string errorCode
+      content: number errorCode
       return:
         type:
-          - string
+          - number
   - uid: >-
       azure-iot-provisioning-service.DeviceRegistrationOperationError.errorStatus
     name: errorStatus
@@ -43,7 +45,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The helpful text associated with the error for a particular CRUD
+      operation.
     syntax:
       content: string errorStatus
       return:
@@ -57,7 +61,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The id of the the IndividualEnrollment object that was in error during a
+      runBulkOperation invocation.
     syntax:
       content: string registrationId
       return:

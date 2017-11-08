@@ -26,7 +26,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      This property is an object containing the TPM specific values
+      for enrollment.
     syntax:
       content: TpmAttestation tpm
       return:
@@ -39,7 +41,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      The type of attestation.  Will be set to a string
+      either `tpm` or `x509`.
     syntax:
       content: AttestationTypes type
       return:
@@ -52,7 +56,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      This property is an object containing the x509 specific values
+      for enrollment.
     syntax:
       content: X509Attestation x509
       return:

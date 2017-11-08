@@ -4,7 +4,7 @@ items:
     name: TwinState
     fullName: TwinState
     children:
-      - azure-iot-provisioning-service.TwinState.desiredProperties
+      - azure-iot-provisioning-service.TwinState.properties
       - azure-iot-provisioning-service.TwinState.tags
     langs:
       - typeScript
@@ -12,25 +12,25 @@ items:
     summary: Device twin state.
     source:
       path: interfaces.ts
-      startLine: 165
+      startLine: 375
       remote:
         path: provisioning/service/src\interfaces.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-service
-  - uid: azure-iot-provisioning-service.TwinState.desiredProperties
-    name: desiredProperties
-    fullName: desiredProperties
+  - uid: azure-iot-provisioning-service.TwinState.properties
+    name: properties
+    fullName: properties
     children: []
     langs:
       - typeScript
     type: property
     summary: ''
     syntax:
-      content: TwinCollection desiredProperties
+      content: function properties
       return:
         type:
-          - '@azure-iot-provisioning-service.TwinCollection'
+          - function
   - uid: azure-iot-provisioning-service.TwinState.tags
     name: tags
     fullName: tags

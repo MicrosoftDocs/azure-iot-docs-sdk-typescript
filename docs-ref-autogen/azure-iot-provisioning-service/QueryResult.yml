@@ -26,7 +26,11 @@ items:
     type: property
     summary: 'The query result items, as a collection.'
     syntax:
-      content: Array<Enrollment | EnrollmentGroup | DeviceRegistrationStatus> items
+      content: >-
+        Array<IndividualEnrollment | EnrollmentGroup | DeviceRegistrationState>
+        items
       return:
         type:
-          - Array<Enrollment | EnrollmentGroup | DeviceRegistrationStatus>
+          - >-
+            Array<IndividualEnrollment | EnrollmentGroup |
+            DeviceRegistrationState>

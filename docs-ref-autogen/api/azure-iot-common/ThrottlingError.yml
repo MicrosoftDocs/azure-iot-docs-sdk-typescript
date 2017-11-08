@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-common.ThrottlingError
+    name: ThrottlingError
+    fullName: ThrottlingError
+    children:
+      - azure-iot-common.ThrottlingError.constructor
+      - azure-iot-common.ThrottlingError.Error
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+      Error thrown when IoT Hub is throttled due to excessive activity.
+
+      To learn more about quotas, see [Azure IoT Hub quotas and
+      throttling](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-quotas-throttling)
+    extends:
+      name: Error
+    source:
+      path: errors.ts
+      startLine: 237
+      remote:
+        path: common/core/src\errors.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: doc-patches
+    package: azure-iot-common
+  - uid: azure-iot-common.ThrottlingError.constructor
+    name: ThrottlingError
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new ThrottlingError(message?: string)'
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+          optional: true
+    type: constructor
+  - uid: azure-iot-common.ThrottlingError.Error
+    name: Error
+    fullName: Error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: static ErrorConstructor Error
+      return:
+        type:
+          - ErrorConstructor

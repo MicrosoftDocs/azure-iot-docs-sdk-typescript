@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-common.TooManyDevicesError
+    name: TooManyDevicesError
+    fullName: TooManyDevicesError
+    children:
+      - azure-iot-common.TooManyDevicesError.constructor
+      - azure-iot-common.TooManyDevicesError.Error
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+      Error thrown when the maximum number of devices on a specific hub has been
+      reached.
+    extends:
+      name: Error
+    source:
+      path: errors.ts
+      startLine: 222
+      remote:
+        path: common/core/src\errors.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: doc-patches
+    package: azure-iot-common
+  - uid: azure-iot-common.TooManyDevicesError.constructor
+    name: TooManyDevicesError
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new TooManyDevicesError(message?: string)'
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+          optional: true
+    type: constructor
+  - uid: azure-iot-common.TooManyDevicesError.Error
+    name: Error
+    fullName: Error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: static ErrorConstructor Error
+      return:
+        type:
+          - ErrorConstructor

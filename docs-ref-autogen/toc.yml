@@ -256,8 +256,17 @@
     - uid: azure-iot-provisioning-device.Global
       name: Global
       items:
-        - uid: azure-iot-provisioning-device.TransportStateMachine
-          name: TransportStateMachine
+        - uid: azure-iot-provisioning-device.ProvisioningDeviceClient
+          name: ProvisioningDeviceClient
+          items: []
+        - uid: azure-iot-provisioning-device.ClientStateMachine
+          name: ClientStateMachine
+          items: []
+        - uid: azure-iot-provisioning-device.ClientConfiguration
+          name: ClientConfiguration
+          items: []
+        - uid: azure-iot-provisioning-device.DeviceConfiguration
+          name: DeviceConfiguration
           items: []
         - uid: azure-iot-provisioning-device.TransportHandlers
           name: TransportHandlers
@@ -342,9 +351,6 @@
       items:
         - uid: azure-iot-provisioning-device-http.Http
           name: Http
-          items: []
-        - uid: azure-iot-provisioning-device-http.HttpTransportHandlers
-          name: HttpTransportHandlers
           items: []
 - uid: azure-iot-provisioning-device-mqtt
   name: azure-iot-provisioning-device-mqtt

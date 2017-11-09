@@ -4,13 +4,22 @@ items:
     name: azure-iot-provisioning-device
     summary: ''
     children:
-      - azure-iot-provisioning-device.TransportStateMachine
+      - azure-iot-provisioning-device.ProvisioningDeviceClient
+      - azure-iot-provisioning-device.ClientStateMachine
+      - azure-iot-provisioning-device.ClientConfiguration
+      - azure-iot-provisioning-device.DeviceConfiguration
       - azure-iot-provisioning-device.TransportHandlers
     type: package
     langs:
       - typeScript
 references:
-  - uid: azure-iot-provisioning-device.TransportStateMachine
-    name: TransportStateMachine
+  - uid: azure-iot-provisioning-device.ProvisioningDeviceClient
+    name: ProvisioningDeviceClient
+  - uid: azure-iot-provisioning-device.ClientStateMachine
+    name: ClientStateMachine
+  - uid: azure-iot-provisioning-device.ClientConfiguration
+    name: ClientConfiguration
+  - uid: azure-iot-provisioning-device.DeviceConfiguration
+    name: DeviceConfiguration
   - uid: azure-iot-provisioning-device.TransportHandlers
     name: TransportHandlers

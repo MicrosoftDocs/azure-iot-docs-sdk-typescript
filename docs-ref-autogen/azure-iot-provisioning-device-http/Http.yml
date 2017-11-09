@@ -5,15 +5,19 @@ items:
     fullName: Http
     children:
       - azure-iot-provisioning-device-http.Http.constructor
+      - azure-iot-provisioning-device-http.Http.endSession
+      - azure-iot-provisioning-device-http.Http.getErrorResult
+      - azure-iot-provisioning-device-http.Http.queryOperationStatus
+      - azure-iot-provisioning-device-http.Http.registrationRequest
+      - azure-iot-provisioning-device-http.Http.setClientConfig
+      - azure-iot-provisioning-device-http.Http.createDeviceClient
     langs:
       - typeScript
     type: class
     summary: ''
-    extends:
-      name: '@azure-iot-provisioning-device-http.Http'
     source:
       path: http.ts
-      startLine: 131
+      startLine: 19
       remote:
         path: provisioning/transport/http/src\http.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
@@ -27,14 +31,140 @@ items:
       - typeScript
     summary: ''
     syntax:
-      content: 'new Http(config: Config, httpBase?: Base)'
+      content: 'new Http(config?: ClientConfiguration, httpBase?: Base)'
       parameters:
         - id: config
           type:
-            - Config
+            - ClientConfiguration
           description: ''
+          optional: true
         - id: httpBase
           type:
             - Base
           description: ''
           optional: true
+  - uid: azure-iot-provisioning-device-http.Http.endSession
+    name: endSession
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function endSession(callback: (err?: Error) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''
+  - uid: azure-iot-provisioning-device-http.Http.getErrorResult
+    name: getErrorResult
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getErrorResult(result: any)'
+      parameters:
+        - id: result
+          type:
+            - any
+          description: ''
+      return:
+        type:
+          - any
+  - uid: azure-iot-provisioning-device-http.Http.queryOperationStatus
+    name: queryOperationStatus
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function queryOperationStatus(registrationId: string, operationId:
+        string, callback: (err?: Error, responseBody?: any, result?: any,
+        pollingInterval?: number) => void)
+      parameters:
+        - id: registrationId
+          type:
+            - string
+          description: ''
+        - id: operationId
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - >-
+              (err?: Error, responseBody?: any, result?: any, pollingInterval?:
+              number) => void
+          description: ''
+  - uid: azure-iot-provisioning-device-http.Http.registrationRequest
+    name: registrationRequest
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function registrationRequest(registrationId: string, authorization:
+        Authentication, requestBody: any, forceRegistration: boolean, callback:
+        (err?: Error, responseBody?: any, result?: any, pollingInterval?:
+        number) => void)
+      parameters:
+        - id: registrationId
+          type:
+            - string
+          description: ''
+        - id: authorization
+          type:
+            - Authentication
+          description: ''
+        - id: requestBody
+          type:
+            - any
+          description: ''
+        - id: forceRegistration
+          type:
+            - boolean
+          description: ''
+        - id: callback
+          type:
+            - >-
+              (err?: Error, responseBody?: any, result?: any, pollingInterval?:
+              number) => void
+          description: ''
+  - uid: azure-iot-provisioning-device-http.Http.setClientConfig
+    name: setClientConfig
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setClientConfig(config: ClientConfiguration)'
+      parameters:
+        - id: config
+          type:
+            - ClientConfiguration
+          description: ''
+  - uid: azure-iot-provisioning-device-http.Http.createDeviceClient
+    name: createDeviceClient
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'static function createDeviceClient(idScope: string)'
+      parameters:
+        - id: idScope
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - ProvisioningDeviceClient

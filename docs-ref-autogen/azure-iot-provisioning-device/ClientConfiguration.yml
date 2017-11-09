@@ -1,0 +1,104 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-device.ClientConfiguration
+    name: ClientConfiguration
+    fullName: ClientConfiguration
+    children:
+      - azure-iot-provisioning-device.ClientConfiguration.apiVersion
+      - azure-iot-provisioning-device.ClientConfiguration.idScope
+      - azure-iot-provisioning-device.ClientConfiguration.pollingInterval
+      - azure-iot-provisioning-device.ClientConfiguration.provisioningHost
+      - azure-iot-provisioning-device.ClientConfiguration.timeoutInterval
+      - azure-iot-provisioning-device.ClientConfiguration.userAgent
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    source:
+      path: interfaces.ts
+      startLine: 19
+      remote:
+        path: provisioning/device/src\interfaces.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-provisioning-device
+  - uid: azure-iot-provisioning-device.ClientConfiguration.apiVersion
+    name: apiVersion
+    fullName: apiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: apiVersion to use while communicating with service.
+    syntax:
+      content: string apiVersion
+      return:
+        type:
+          - string
+  - uid: azure-iot-provisioning-device.ClientConfiguration.idScope
+    name: idScope
+    fullName: idScope
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: idScope to use when communicating with the provisioning service
+    syntax:
+      content: string idScope
+      return:
+        type:
+          - string
+  - uid: azure-iot-provisioning-device.ClientConfiguration.pollingInterval
+    name: pollingInterval
+    fullName: pollingInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Default interval for polling, to use in case service doesn't provide it to
+      us.
+    syntax:
+      content: number pollingInterval
+      return:
+        type:
+          - number
+  - uid: azure-iot-provisioning-device.ClientConfiguration.provisioningHost
+    name: provisioningHost
+    fullName: provisioningHost
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Default host for the provisioning service
+    syntax:
+      content: string provisioningHost
+      return:
+        type:
+          - string
+  - uid: azure-iot-provisioning-device.ClientConfiguration.timeoutInterval
+    name: timeoutInterval
+    fullName: timeoutInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: default timeout to use when communicating with the service
+    syntax:
+      content: number timeoutInterval
+      return:
+        type:
+          - number
+  - uid: azure-iot-provisioning-device.ClientConfiguration.userAgent
+    name: userAgent
+    fullName: userAgent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: User-Agent string passed to the service as part of communication
+    syntax:
+      content: string userAgent
+      return:
+        type:
+          - string

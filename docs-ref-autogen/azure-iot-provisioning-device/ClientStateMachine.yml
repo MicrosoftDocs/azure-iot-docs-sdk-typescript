@@ -1,0 +1,84 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-device.ClientStateMachine
+    name: ClientStateMachine
+    fullName: ClientStateMachine
+    children:
+      - azure-iot-provisioning-device.ClientStateMachine.constructor
+      - azure-iot-provisioning-device.ClientStateMachine.endSession
+      - azure-iot-provisioning-device.ClientStateMachine.register
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    extends:
+      name: '@azure-iot-provisioning-device.ClientStateMachine'
+    source:
+      path: client_state_machine.ts
+      startLine: 13
+      remote:
+        path: provisioning/device/src\client_state_machine.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-provisioning-device
+  - uid: azure-iot-provisioning-device.ClientStateMachine.constructor
+    name: ClientStateMachine
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new ClientStateMachine(transport: TransportHandlers)'
+      parameters:
+        - id: transport
+          type:
+            - '@azure-iot-provisioning-device.TransportHandlers'
+          description: ''
+  - uid: azure-iot-provisioning-device.ClientStateMachine.endSession
+    name: endSession
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function endSession(callback: (err: Error) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err: Error) => void'
+          description: ''
+  - uid: azure-iot-provisioning-device.ClientStateMachine.register
+    name: register
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function register(registrationId: string, authorization: Authentication,
+        requestBody: any, forceRegistration: boolean, callback:
+        ResponseCallback)
+      parameters:
+        - id: registrationId
+          type:
+            - string
+          description: ''
+        - id: authorization
+          type:
+            - Authentication
+          description: ''
+        - id: requestBody
+          type:
+            - any
+          description: ''
+        - id: forceRegistration
+          type:
+            - boolean
+          description: ''
+        - id: callback
+          type:
+            - ResponseCallback
+          description: ''

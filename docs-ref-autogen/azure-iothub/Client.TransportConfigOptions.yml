@@ -14,7 +14,7 @@ items:
     summary: ''
     source:
       path: client.ts
-      startLine: 376
+      startLine: 374
       remote:
         path: service/src\client.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
@@ -28,7 +28,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Hostname of the Azure IoT hub. (<IoT hub name>.azure-devices.net).
     syntax:
       content: string host
       return:
@@ -49,6 +49,12 @@ items:
         type:
           - string
     module: Global
+    deprecated:
+      content: >-
+        This is not used anywhere anymore.
+
+        Name of the Azure IoT hub. (The first section of the Azure IoT hub
+        hostname)
   - uid: azure-iothub.Client.TransportConfigOptions.keyName
     name: keyName
     fullName: keyName
@@ -56,7 +62,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The name of the policy used to connect to the Azure IoT Hub service.
     syntax:
       content: string keyName
       return:
@@ -70,7 +76,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The shared access signature token used to authenticate the connection with
+      the Azure IoT hub.
     syntax:
       content: string | SharedAccessSignature sharedAccessSignature
       return:

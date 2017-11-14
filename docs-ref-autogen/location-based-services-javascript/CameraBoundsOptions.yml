@@ -5,6 +5,7 @@ items:
     fullName: CameraBoundsOptions
     children:
       - location-based-services-javascript.CameraBoundsOptions.bounds
+      - location-based-services-javascript.CameraBoundsOptions.padding
     langs:
       - typeScript
     type: class
@@ -34,4 +35,22 @@ items:
       return:
         type:
           - '@location-based-services-javascript.BoundingBox'
+    module: Global
+  - uid: location-based-services-javascript.CameraBoundsOptions.padding
+    name: padding
+    fullName: padding
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Padding in pixels for the given bounds. Either specify a number for the
+      padding of all sides of the map or
+
+      specify each side as an array of [top, right, bottom, left].
+    syntax:
+      content: number |  padding
+      return:
+        type:
+          - 'number | '
     module: Global

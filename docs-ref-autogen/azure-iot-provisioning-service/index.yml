@@ -5,17 +5,18 @@ items:
     summary: ''
     children:
       - azure-iot-provisioning-service.AttestationMechanism
-      - azure-iot-provisioning-service.BulkOperation
-      - azure-iot-provisioning-service.BulkOperationResult
+      - azure-iot-provisioning-service.BulkEnrollmentOperation
+      - azure-iot-provisioning-service.BulkEnrollmentOperationResult
       - azure-iot-provisioning-service.DeviceRegistrationOperationError
       - azure-iot-provisioning-service.DeviceRegistrationState
       - azure-iot-provisioning-service.EnrollmentGroup
       - azure-iot-provisioning-service.IndividualEnrollment
+      - azure-iot-provisioning-service.InitialTwin
       - azure-iot-provisioning-service.Metadata
       - azure-iot-provisioning-service.TpmAttestation
       - azure-iot-provisioning-service.TwinCollection
-      - azure-iot-provisioning-service.TwinState
       - azure-iot-provisioning-service.X509Attestation
+      - azure-iot-provisioning-service.X509CAReferences
       - azure-iot-provisioning-service.X509CertificateInfo
       - azure-iot-provisioning-service.X509CertificateWithInfo
       - azure-iot-provisioning-service.X509Certificates
@@ -29,10 +30,10 @@ items:
 references:
   - uid: azure-iot-provisioning-service.AttestationMechanism
     name: AttestationMechanism
-  - uid: azure-iot-provisioning-service.BulkOperation
-    name: BulkOperation
-  - uid: azure-iot-provisioning-service.BulkOperationResult
-    name: BulkOperationResult
+  - uid: azure-iot-provisioning-service.BulkEnrollmentOperation
+    name: BulkEnrollmentOperation
+  - uid: azure-iot-provisioning-service.BulkEnrollmentOperationResult
+    name: BulkEnrollmentOperationResult
   - uid: azure-iot-provisioning-service.DeviceRegistrationOperationError
     name: DeviceRegistrationOperationError
   - uid: azure-iot-provisioning-service.DeviceRegistrationState
@@ -41,16 +42,18 @@ references:
     name: EnrollmentGroup
   - uid: azure-iot-provisioning-service.IndividualEnrollment
     name: IndividualEnrollment
+  - uid: azure-iot-provisioning-service.InitialTwin
+    name: InitialTwin
   - uid: azure-iot-provisioning-service.Metadata
     name: Metadata
   - uid: azure-iot-provisioning-service.TpmAttestation
     name: TpmAttestation
   - uid: azure-iot-provisioning-service.TwinCollection
     name: TwinCollection
-  - uid: azure-iot-provisioning-service.TwinState
-    name: TwinState
   - uid: azure-iot-provisioning-service.X509Attestation
     name: X509Attestation
+  - uid: azure-iot-provisioning-service.X509CAReferences
+    name: X509CAReferences
   - uid: azure-iot-provisioning-service.X509CertificateInfo
     name: X509CertificateInfo
   - uid: azure-iot-provisioning-service.X509CertificateWithInfo

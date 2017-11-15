@@ -12,19 +12,21 @@ items:
     langs:
       - typeScript
     type: class
-    summary: The options for a circle layer.
+    summary: ''
     extends:
       name: '@location-based-services-javascript.LayerOptions'
     source:
       path: map/options/CircleLayerOptions.ts
-      startLine: 9
+      startLine: 8
       remote:
         path: src/MapControl/JavascriptSDK/src\map/options/CircleLayerOptions.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
         branch: production
     package: location-based-services-javascript
-    module: Global
+    module: |-
+      options
+      The options for a circle layer.
   - uid: location-based-services-javascript.CircleLayerOptions.color
     name: color
     fullName: color
@@ -38,7 +40,9 @@ items:
       return:
         type:
           - string
-    module: Global
+    module: |-
+      options
+      The options for a circle layer.
   - uid: location-based-services-javascript.CircleLayerOptions.name
     name: name
     fullName: name
@@ -52,7 +56,9 @@ items:
       return:
         type:
           - string
-    module: Global
+    module: |-
+      options
+      The options for a circle layer.
   - uid: location-based-services-javascript.CircleLayerOptions.outlineColor
     name: outlineColor
     fullName: outlineColor
@@ -66,7 +72,9 @@ items:
       return:
         type:
           - string
-    module: Global
+    module: |-
+      options
+      The options for a circle layer.
   - uid: location-based-services-javascript.CircleLayerOptions.outlineWidth
     name: outlineWidth
     fullName: outlineWidth
@@ -80,7 +88,9 @@ items:
       return:
         type:
           - number
-    module: Global
+    module: |-
+      options
+      The options for a circle layer.
   - uid: location-based-services-javascript.CircleLayerOptions.radius
     name: radius
     fullName: radius
@@ -94,4 +104,6 @@ items:
       return:
         type:
           - number
-    module: Global
+    module: |-
+      options
+      The options for a circle layer.

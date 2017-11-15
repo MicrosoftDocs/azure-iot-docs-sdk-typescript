@@ -11,21 +11,23 @@ items:
     langs:
       - typeScript
     type: class
-    summary: >-
-      For type “Point”, the “coordinates” member is a single postion. The full
-      description is detailed in
-
-      [RFC 7946](https://tools.ietf.org/html/rfc7946).
+    summary: ''
     source:
       path: data/Point.ts
-      startLine: 9
+      startLine: 8
       remote:
         path: src/MapControl/JavascriptSDK/src\data/Point.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
         branch: production
     package: location-based-services-javascript
-    module: Global
+    module: >-
+      "atlas.data"
+
+      For type “Point”, the “coordinates” member is a single postion. The full
+      description is detailed in
+
+      [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
   - uid: location-based-services-javascript.Point.constructor
     name: Point
     children: []
@@ -41,7 +43,13 @@ items:
             - '@location-based-services-javascript.Position'
           description: |
             The position of the point.
-    module: Global
+    module: >-
+      "atlas.data"
+
+      For type “Point”, the “coordinates” member is a single postion. The full
+      description is detailed in
+
+      [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
   - uid: location-based-services-javascript.Point.coordinates
     name: coordinates
     fullName: coordinates
@@ -55,7 +63,13 @@ items:
       return:
         type:
           - '@location-based-services-javascript.Position'
-    module: Global
+    module: >-
+      "atlas.data"
+
+      For type “Point”, the “coordinates” member is a single postion. The full
+      description is detailed in
+
+      [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
   - uid: location-based-services-javascript.Point.type
     name: type
     fullName: type
@@ -69,7 +83,13 @@ items:
       return:
         type:
           - function
-    module: Global
+    module: >-
+      "atlas.data"
+
+      For type “Point”, the “coordinates” member is a single postion. The full
+      description is detailed in
+
+      [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
   - uid: location-based-services-javascript.Point.TYPE
     name: TYPE
     fullName: TYPE
@@ -83,4 +103,10 @@ items:
       return:
         type:
           - function
-    module: Global
+    module: >-
+      "atlas.data"
+
+      For type “Point”, the “coordinates” member is a single postion. The full
+      description is detailed in
+
+      [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.

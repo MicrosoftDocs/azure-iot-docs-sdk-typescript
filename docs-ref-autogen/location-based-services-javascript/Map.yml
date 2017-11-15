@@ -37,14 +37,16 @@ items:
     summary: ''
     source:
       path: map/Map.ts
-      startLine: 46
+      startLine: 45
       remote:
         path: src/MapControl/JavascriptSDK/src\map/Map.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
         branch: production
     package: location-based-services-javascript
-    module: Global
+    module: |-
+      atlas
+      The control for a visual and interactive web map.
   - uid: location-based-services-javascript.Map.constructor
     name: Map
     children: []
@@ -64,7 +66,9 @@ items:
             - function
           description: |
             Options for the initial display and interactability with the map.
-    module: Global
+    module: |-
+      atlas
+      The control for a visual and interactive web map.
   - uid: location-based-services-javascript.Map.addCircles
     name: addCircles
     children: []
@@ -95,7 +99,9 @@ items:
           description: |
             The layer options for adding the circles to the map.
           optional: true
-    module: Global
+    module: |-
+      atlas
+      The control for a visual and interactive web map.
   - uid: location-based-services-javascript.Map.addEventListener
     name: addEventListener
     children: []
@@ -124,7 +130,9 @@ items:
             - any
           description: |
             The callback to fire when the event occurs.
-    module: Global
+    module: |-
+      atlas
+      The control for a visual and interactive web map.
   - uid: location-based-services-javascript.Map.addEventListener_1
     name: addEventListener
     children: []
@@ -152,7 +160,9 @@ items:
           type:
             - any
           description: ''
-    module: Global
+    module: |-
+      atlas
+      The control for a visual and interactive web map.
   - uid: location-based-services-javascript.Map.addHtml
     name: addHtml
     children: []
@@ -175,7 +185,9 @@ items:
       return:
         type:
           - string
-    module: Global
+    module: |-
+      atlas
+      The control for a visual and interactive web map.
   - uid: location-based-services-javascript.Map.addLinestrings
     name: addLinestrings
     children: []
@@ -207,7 +219,9 @@ items:
           description: |
             The layer options for adding the linestrings to the map.
           optional: true
-    module: Global
+    module: |-
+      atlas
+      The control for a visual and interactive web map.
   - uid: location-based-services-javascript.Map.addPins
     name: addPins
     children: []
@@ -236,7 +250,9 @@ items:
           description: |
             The layer options for adding the pins to the map.
           optional: true
-    module: Global
+    module: |-
+      atlas
+      The control for a visual and interactive web map.
   - uid: location-based-services-javascript.Map.addPolygons
     name: addPolygons
     children: []
@@ -268,7 +284,9 @@ items:
           description: |
             The layer options for adding the polygons to the map.
           optional: true
-    module: Global
+    module: |-
+      atlas
+      The control for a visual and interactive web map.
   - uid: location-based-services-javascript.Map.addRaster
     name: addRaster
     children: []
@@ -306,7 +324,9 @@ items:
           description: |
             The options for defining the raster layer to add.
           optional: true
-    module: Global
+    module: |-
+      atlas
+      The control for a visual and interactive web map.
   - uid: location-based-services-javascript.Map.getCamera
     name: getCamera
     children: []
@@ -320,7 +340,9 @@ items:
       return:
         type:
           - function
-    module: Global
+    module: |-
+      atlas
+      The control for a visual and interactive web map.
   - uid: location-based-services-javascript.Map.getCanvas
     name: getCanvas
     children: []
@@ -334,7 +356,9 @@ items:
       return:
         type:
           - HTMLCanvasElement
-    module: Global
+    module: |-
+      atlas
+      The control for a visual and interactive web map.
   - uid: location-based-services-javascript.Map.getCanvasContainer
     name: getCanvasContainer
     children: []
@@ -352,7 +376,9 @@ items:
       return:
         type:
           - HTMLElement
-    module: Global
+    module: |-
+      atlas
+      The control for a visual and interactive web map.
   - uid: location-based-services-javascript.Map.getLayers
     name: getLayers
     children: []
@@ -366,7 +392,9 @@ items:
       return:
         type:
           - 'string[]'
-    module: Global
+    module: |-
+      atlas
+      The control for a visual and interactive web map.
   - uid: location-based-services-javascript.Map.getMapContainer
     name: getMapContainer
     children: []
@@ -380,7 +408,9 @@ items:
       return:
         type:
           - HTMLElement
-    module: Global
+    module: |-
+      atlas
+      The control for a visual and interactive web map.
   - uid: location-based-services-javascript.Map.getServiceOptions
     name: getServiceOptions
     children: []
@@ -394,7 +424,9 @@ items:
       return:
         type:
           - ServiceOptions
-    module: Global
+    module: |-
+      atlas
+      The control for a visual and interactive web map.
   - uid: location-based-services-javascript.Map.getStyle
     name: getStyle
     children: []
@@ -408,7 +440,9 @@ items:
       return:
         type:
           - '@location-based-services-javascript.StyleOptions'
-    module: Global
+    module: |-
+      atlas
+      The control for a visual and interactive web map.
   - uid: location-based-services-javascript.Map.getTraffic
     name: getTraffic
     children: []
@@ -422,7 +456,9 @@ items:
       return:
         type:
           - '@location-based-services-javascript.TrafficOptions'
-    module: Global
+    module: |-
+      atlas
+      The control for a visual and interactive web map.
   - uid: location-based-services-javascript.Map.getUserInteraction
     name: getUserInteraction
     children: []
@@ -436,7 +472,9 @@ items:
       return:
         type:
           - '@location-based-services-javascript.UserInteractionOptions'
-    module: Global
+    module: |-
+      atlas
+      The control for a visual and interactive web map.
   - uid: location-based-services-javascript.Map.removeEventListener
     name: removeEventListener
     children: []
@@ -456,7 +494,9 @@ items:
             - any
           description: |
             The callback of the event listener.
-    module: Global
+    module: |-
+      atlas
+      The control for a visual and interactive web map.
   - uid: location-based-services-javascript.Map.removeEventListener_1
     name: removeEventListener
     children: []
@@ -479,7 +519,9 @@ items:
           type:
             - any
           description: ''
-    module: Global
+    module: |-
+      atlas
+      The control for a visual and interactive web map.
   - uid: location-based-services-javascript.Map.removeHtml
     name: removeHtml
     children: []
@@ -495,7 +537,9 @@ items:
             - string
           description: |
             The id of element to remove.
-    module: Global
+    module: |-
+      atlas
+      The control for a visual and interactive web map.
   - uid: location-based-services-javascript.Map.removeLayers
     name: removeLayers
     children: []
@@ -511,7 +555,9 @@ items:
             - 'string[]'
           description: |
             An array of layer names to remove from the map.
-    module: Global
+    module: |-
+      atlas
+      The control for a visual and interactive web map.
   - uid: location-based-services-javascript.Map.setCamera
     name: setCamera
     children: []
@@ -533,7 +579,9 @@ items:
             The options for setting the map's camera and for the animation of
             any view change.
           optional: true
-    module: Global
+    module: |-
+      atlas
+      The control for a visual and interactive web map.
   - uid: location-based-services-javascript.Map.setCameraBounds
     name: setCameraBounds
     children: []
@@ -550,7 +598,9 @@ items:
           description: |
             The options for setting the map's camera bounds.
           optional: true
-    module: Global
+    module: |-
+      atlas
+      The control for a visual and interactive web map.
   - uid: location-based-services-javascript.Map.setStyle
     name: setStyle
     children: []
@@ -569,7 +619,9 @@ items:
           description: |
             The options for setting the style of the map control.
           optional: true
-    module: Global
+    module: |-
+      atlas
+      The control for a visual and interactive web map.
   - uid: location-based-services-javascript.Map.setTraffic
     name: setTraffic
     children: []
@@ -588,7 +640,9 @@ items:
           description: |
             The options for defining the map's traffic display.
           optional: true
-    module: Global
+    module: |-
+      atlas
+      The control for a visual and interactive web map.
   - uid: location-based-services-javascript.Map.setUserInteraction
     name: setUserInteraction
     children: []
@@ -607,4 +661,6 @@ items:
           description: |
             The options for enabling/disabling the user interaction handlers.
           optional: true
-    module: Global
+    module: |-
+      atlas
+      The control for a visual and interactive web map.

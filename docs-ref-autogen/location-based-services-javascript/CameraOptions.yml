@@ -13,19 +13,21 @@ items:
     langs:
       - typeScript
     type: class
-    summary: The options for setting the map control's camera.
+    summary: ''
     extends:
       name: Options
     source:
       path: map/options/CameraOptions.ts
-      startLine: 9
+      startLine: 8
       remote:
         path: src/MapControl/JavascriptSDK/src\map/options/CameraOptions.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
         branch: production
     package: location-based-services-javascript
-    module: Global
+    module: |-
+      options
+      The options for setting the map control's camera.
   - uid: location-based-services-javascript.CameraOptions.bearing
     name: bearing
     fullName: bearing
@@ -39,7 +41,9 @@ items:
       return:
         type:
           - number
-    module: Global
+    module: |-
+      options
+      The options for setting the map control's camera.
   - uid: location-based-services-javascript.CameraOptions.center
     name: center
     fullName: center
@@ -53,7 +57,9 @@ items:
       return:
         type:
           - '@location-based-services-javascript.Position'
-    module: Global
+    module: |-
+      options
+      The options for setting the map control's camera.
   - uid: location-based-services-javascript.CameraOptions.maxZoom
     name: maxZoom
     fullName: maxZoom
@@ -67,7 +73,9 @@ items:
       return:
         type:
           - number
-    module: Global
+    module: |-
+      options
+      The options for setting the map control's camera.
   - uid: location-based-services-javascript.CameraOptions.minZoom
     name: minZoom
     fullName: minZoom
@@ -81,7 +89,9 @@ items:
       return:
         type:
           - number
-    module: Global
+    module: |-
+      options
+      The options for setting the map control's camera.
   - uid: location-based-services-javascript.CameraOptions.pitch
     name: pitch
     fullName: pitch
@@ -95,7 +105,9 @@ items:
       return:
         type:
           - number
-    module: Global
+    module: |-
+      options
+      The options for setting the map control's camera.
   - uid: location-based-services-javascript.CameraOptions.zoom
     name: zoom
     fullName: zoom
@@ -109,4 +121,6 @@ items:
       return:
         type:
           - number
-    module: Global
+    module: |-
+      options
+      The options for setting the map control's camera.

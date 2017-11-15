@@ -9,19 +9,21 @@ items:
     langs:
       - typeScript
     type: class
-    summary: The options for setting the bounds of the map control's camera.
+    summary: ''
     extends:
       name: Options
     source:
       path: map/options/CameraBoundsOptions.ts
-      startLine: 9
+      startLine: 8
       remote:
         path: src/MapControl/JavascriptSDK/src\map/options/CameraBoundsOptions.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
         branch: production
     package: location-based-services-javascript
-    module: Global
+    module: |-
+      options
+      The options for setting the bounds of the map control's camera.
   - uid: location-based-services-javascript.CameraBoundsOptions.bounds
     name: bounds
     fullName: bounds
@@ -35,7 +37,9 @@ items:
       return:
         type:
           - '@location-based-services-javascript.BoundingBox'
-    module: Global
+    module: |-
+      options
+      The options for setting the bounds of the map control's camera.
   - uid: location-based-services-javascript.CameraBoundsOptions.padding
     name: padding
     fullName: padding
@@ -53,4 +57,6 @@ items:
       return:
         type:
           - 'number | '
-    module: Global
+    module: |-
+      options
+      The options for setting the bounds of the map control's camera.

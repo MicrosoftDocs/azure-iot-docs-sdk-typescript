@@ -22,19 +22,21 @@ items:
     langs:
       - typeScript
     type: class
-    summary: The options for enabling/disabling user interaction with the map.
+    summary: ''
     extends:
       name: Options
     source:
       path: map/options/UserInteractionOptions.ts
-      startLine: 8
+      startLine: 7
       remote:
         path: src/MapControl/JavascriptSDK/src\map/options/UserInteractionOptions.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
         branch: production
     package: location-based-services-javascript
-    module: Global
+    module: |-
+      options
+      The options for enabling/disabling user interaction with the map.
   - uid: >-
       location-based-services-javascript.UserInteractionOptions.boxZoomInteraction
     name: boxZoomInteraction
@@ -49,7 +51,9 @@ items:
       return:
         type:
           - boolean
-    module: Global
+    module: |-
+      options
+      The options for enabling/disabling user interaction with the map.
   - uid: >-
       location-based-services-javascript.UserInteractionOptions.dblClickZoomInteraction
     name: dblClickZoomInteraction
@@ -64,7 +68,9 @@ items:
       return:
         type:
           - boolean
-    module: Global
+    module: |-
+      options
+      The options for enabling/disabling user interaction with the map.
   - uid: >-
       location-based-services-javascript.UserInteractionOptions.dragPanInteraction
     name: dragPanInteraction
@@ -79,7 +85,9 @@ items:
       return:
         type:
           - boolean
-    module: Global
+    module: |-
+      options
+      The options for enabling/disabling user interaction with the map.
   - uid: >-
       location-based-services-javascript.UserInteractionOptions.dragRotateInteraction
     name: dragRotateInteraction
@@ -94,7 +102,9 @@ items:
       return:
         type:
           - boolean
-    module: Global
+    module: |-
+      options
+      The options for enabling/disabling user interaction with the map.
   - uid: location-based-services-javascript.UserInteractionOptions.interactive
     name: interactive
     fullName: interactive
@@ -112,7 +122,9 @@ items:
       return:
         type:
           - boolean
-    module: Global
+    module: |-
+      options
+      The options for enabling/disabling user interaction with the map.
   - uid: >-
       location-based-services-javascript.UserInteractionOptions.keyboardInteraction
     name: keyboardInteraction
@@ -163,7 +175,9 @@ items:
       return:
         type:
           - boolean
-    module: Global
+    module: |-
+      options
+      The options for enabling/disabling user interaction with the map.
   - uid: >-
       location-based-services-javascript.UserInteractionOptions.scrollZoomInteraction
     name: scrollZoomInteraction
@@ -178,7 +192,9 @@ items:
       return:
         type:
           - boolean
-    module: Global
+    module: |-
+      options
+      The options for enabling/disabling user interaction with the map.
   - uid: location-based-services-javascript.UserInteractionOptions.touchInteraction
     name: touchInteraction
     fullName: touchInteraction
@@ -192,4 +208,6 @@ items:
       return:
         type:
           - boolean
-    module: Global
+    module: |-
+      options
+      The options for enabling/disabling user interaction with the map.

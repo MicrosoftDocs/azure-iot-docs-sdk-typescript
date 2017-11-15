@@ -1,25 +1,26 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-iot-provisioning-service.BulkOperationResult
-    name: BulkOperationResult
-    fullName: BulkOperationResult
+  - uid: azure-iot-provisioning-service.BulkEnrollmentOperationResult
+    name: BulkEnrollmentOperationResult
+    fullName: BulkEnrollmentOperationResult
     children:
-      - azure-iot-provisioning-service.BulkOperationResult.errors
-      - azure-iot-provisioning-service.BulkOperationResult.isSuccessful
+      - azure-iot-provisioning-service.BulkEnrollmentOperationResult.errors
+      - >-
+        azure-iot-provisioning-service.BulkEnrollmentOperationResult.isSuccessful
     langs:
       - typeScript
     type: interface
     summary: Bulk operation result
     source:
       path: interfaces.ts
-      startLine: 174
+      startLine: 190
       remote:
         path: provisioning/service/src\interfaces.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-service
     module: Global
-  - uid: azure-iot-provisioning-service.BulkOperationResult.errors
+  - uid: azure-iot-provisioning-service.BulkEnrollmentOperationResult.errors
     name: errors
     fullName: errors
     children: []
@@ -28,7 +29,7 @@ items:
     type: property
     summary: |-
       Will provide information as to why particular CRUD operations failed for
-      a runBulkOperation invocation.  The array will be zero length if
+      a runBulkEnrollmentOperation invocation.  The array will be zero length if
       isSuccessful is true.
     syntax:
       content: Array<DeviceRegistrationOperationError> errors
@@ -37,7 +38,7 @@ items:
           - >-
             Array<@azure-iot-provisioning-service.DeviceRegistrationOperationError>
     module: Global
-  - uid: azure-iot-provisioning-service.BulkOperationResult.isSuccessful
+  - uid: azure-iot-provisioning-service.BulkEnrollmentOperationResult.isSuccessful
     name: isSuccessful
     fullName: isSuccessful
     children: []

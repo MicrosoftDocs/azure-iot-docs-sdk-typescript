@@ -1,0 +1,53 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-security-x509.X509SecurityClient
+    name: X509SecurityClient
+    fullName: X509SecurityClient
+    children:
+      - azure-iot-security-x509.X509SecurityClient.getCertificate
+      - azure-iot-security-x509.X509SecurityClient.getCertificateChain
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    source:
+      path: x509.ts
+      startLine: 7
+      remote:
+        path: security/x509/src\x509.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-security-x509
+    module: Global
+  - uid: azure-iot-security-x509.X509SecurityClient.getCertificate
+    name: getCertificate
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getCertificate(callback: (err?: Error, cert?: string) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error, cert?: string) => void'
+          description: ''
+    module: Global
+  - uid: azure-iot-security-x509.X509SecurityClient.getCertificateChain
+    name: getCertificateChain
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getCertificateChain(callback: (err?: Error, cert?: string) =>
+        void)
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error, cert?: string) => void'
+          description: ''
+    module: Global

@@ -12,19 +12,21 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: >-
-      A MapEventData object is passed to the callback function when a map event
-      is fired.
+    summary: ''
     source:
       path: map/options/MapEventData.ts
-      startLine: 6
+      startLine: 7
       remote:
         path: src/MapControl/JavascriptSDK/src\map/options/MapEventData.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
         branch: production
     package: location-based-services-javascript
-    module: Global
+    module: >-
+      options
+
+      A MapEventData object is passed to the callback function when a map event
+      is fired.
   - uid: location-based-services-javascript.MapEventData.coordinate
     name: coordinate
     fullName: coordinate
@@ -38,7 +40,11 @@ items:
       return:
         type:
           - 'number[]'
-    module: Global
+    module: >-
+      options
+
+      A MapEventData object is passed to the callback function when a map event
+      is fired.
   - uid: location-based-services-javascript.MapEventData.features
     name: features
     fullName: features
@@ -52,7 +58,11 @@ items:
       return:
         type:
           - Array<@location-based-services-javascript.Feature<Geometry>>
-    module: Global
+    module: >-
+      options
+
+      A MapEventData object is passed to the callback function when a map event
+      is fired.
   - uid: location-based-services-javascript.MapEventData.originalEvent
     name: originalEvent
     fullName: originalEvent
@@ -66,7 +76,11 @@ items:
       return:
         type:
           - Event
-    module: Global
+    module: >-
+      options
+
+      A MapEventData object is passed to the callback function when a map event
+      is fired.
   - uid: location-based-services-javascript.MapEventData.position
     name: position
     fullName: position
@@ -80,7 +94,11 @@ items:
       return:
         type:
           - '@location-based-services-javascript.Position'
-    module: Global
+    module: >-
+      options
+
+      A MapEventData object is passed to the callback function when a map event
+      is fired.
   - uid: location-based-services-javascript.MapEventData.type
     name: type
     fullName: type
@@ -94,4 +112,8 @@ items:
       return:
         type:
           - string
-    module: Global
+    module: >-
+      options
+
+      A MapEventData object is passed to the callback function when a map event
+      is fired.

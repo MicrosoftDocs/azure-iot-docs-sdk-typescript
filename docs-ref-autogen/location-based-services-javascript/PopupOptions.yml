@@ -10,19 +10,21 @@ items:
     langs:
       - typeScript
     type: class
-    summary: The options for a popup.
+    summary: ''
     extends:
       name: Options
     source:
       path: map/options/PopupOptions.ts
-      startLine: 9
+      startLine: 8
       remote:
         path: src/MapControl/JavascriptSDK/src\map/options/PopupOptions.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
         branch: production
     package: location-based-services-javascript
-    module: Global
+    module: |-
+      options
+      The options for a popup.
   - uid: location-based-services-javascript.PopupOptions.content
     name: content
     fullName: content
@@ -36,7 +38,9 @@ items:
       return:
         type:
           - HTMLElement
-    module: Global
+    module: |-
+      options
+      The options for a popup.
   - uid: location-based-services-javascript.PopupOptions.pixelOffset
     name: pixelOffset
     fullName: pixelOffset
@@ -54,7 +58,9 @@ items:
       return:
         type:
           - 'number[]'
-    module: Global
+    module: |-
+      options
+      The options for a popup.
   - uid: location-based-services-javascript.PopupOptions.position
     name: position
     fullName: position
@@ -68,4 +74,6 @@ items:
       return:
         type:
           - '@location-based-services-javascript.Position'
-    module: Global
+    module: |-
+      options
+      The options for a popup.

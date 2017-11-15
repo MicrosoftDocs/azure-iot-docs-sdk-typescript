@@ -12,21 +12,23 @@ items:
     langs:
       - typeScript
     type: class
-    summary: >-
-      For type "MultiPolygon", the "coordinates" member is an array of Polygon
-      coordinate arrays. The full description is
-
-      detailed in [RFC 7946](https://tools.ietf.org/html/rfc7946).
+    summary: ''
     source:
       path: data/MultiPolygon.ts
-      startLine: 10
+      startLine: 9
       remote:
         path: src/MapControl/JavascriptSDK/src\data/MultiPolygon.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
         branch: production
     package: location-based-services-javascript
-    module: Global
+    module: >-
+      "atlas.data"
+
+      For type "MultiPolygon", the "coordinates" member is an array of Polygon
+      coordinate arrays. The full description is
+
+      detailed in [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
   - uid: location-based-services-javascript.MultiPolygon.constructor
     name: MultiPolygon
     children: []
@@ -47,7 +49,13 @@ items:
           description: |
             The bounding box of the MultiPolygon.
           optional: true
-    module: Global
+    module: >-
+      "atlas.data"
+
+      For type "MultiPolygon", the "coordinates" member is an array of Polygon
+      coordinate arrays. The full description is
+
+      detailed in [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
   - uid: location-based-services-javascript.MultiPolygon.bbox
     name: bbox
     fullName: bbox
@@ -61,7 +69,13 @@ items:
       return:
         type:
           - '@location-based-services-javascript.BoundingBox'
-    module: Global
+    module: >-
+      "atlas.data"
+
+      For type "MultiPolygon", the "coordinates" member is an array of Polygon
+      coordinate arrays. The full description is
+
+      detailed in [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
   - uid: location-based-services-javascript.MultiPolygon.coordinates
     name: coordinates
     fullName: coordinates
@@ -75,7 +89,13 @@ items:
       return:
         type:
           - '@location-based-services-javascript.Position[]'
-    module: Global
+    module: >-
+      "atlas.data"
+
+      For type "MultiPolygon", the "coordinates" member is an array of Polygon
+      coordinate arrays. The full description is
+
+      detailed in [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
   - uid: location-based-services-javascript.MultiPolygon.type
     name: type
     fullName: type
@@ -89,7 +109,13 @@ items:
       return:
         type:
           - function
-    module: Global
+    module: >-
+      "atlas.data"
+
+      For type "MultiPolygon", the "coordinates" member is an array of Polygon
+      coordinate arrays. The full description is
+
+      detailed in [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
   - uid: location-based-services-javascript.MultiPolygon.TYPE
     name: TYPE
     fullName: TYPE
@@ -103,4 +129,10 @@ items:
       return:
         type:
           - function
-    module: Global
+    module: >-
+      "atlas.data"
+
+      For type "MultiPolygon", the "coordinates" member is an array of Polygon
+      coordinate arrays. The full description is
+
+      detailed in [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.

@@ -9,19 +9,21 @@ items:
     langs:
       - typeScript
     type: class
-    summary: The options for animating changes to the map control's camera.
+    summary: ''
     extends:
       name: Options
     source:
       path: map/options/AnimationOptions.ts
-      startLine: 8
+      startLine: 7
       remote:
         path: src/MapControl/JavascriptSDK/src\map/options/AnimationOptions.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
         branch: production
     package: location-based-services-javascript
-    module: Global
+    module: |-
+      options
+      The options for animating changes to the map control's camera.
   - uid: location-based-services-javascript.AnimationOptions.duration
     name: duration
     fullName: duration
@@ -35,7 +37,9 @@ items:
       return:
         type:
           - number
-    module: Global
+    module: |-
+      options
+      The options for animating changes to the map control's camera.
   - uid: location-based-services-javascript.AnimationOptions.type
     name: type
     fullName: type
@@ -57,4 +61,6 @@ items:
       return:
         type:
           - function
-    module: Global
+    module: |-
+      options
+      The options for animating changes to the map control's camera.

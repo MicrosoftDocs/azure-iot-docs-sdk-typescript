@@ -8,19 +8,21 @@ items:
     langs:
       - typeScript
     type: class
-    summary: The options for a raster layer.
+    summary: ''
     extends:
       name: '@location-based-services-javascript.LayerOptions'
     source:
       path: map/options/RasterLayerOptions.ts
-      startLine: 9
+      startLine: 8
       remote:
         path: src/MapControl/JavascriptSDK/src\map/options/RasterLayerOptions.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
         branch: production
     package: location-based-services-javascript
-    module: Global
+    module: |-
+      options
+      The options for a raster layer.
   - uid: location-based-services-javascript.RasterLayerOptions.name
     name: name
     fullName: name
@@ -34,4 +36,6 @@ items:
       return:
         type:
           - string
-    module: Global
+    module: |-
+      options
+      The options for a raster layer.

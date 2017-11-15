@@ -12,17 +12,19 @@ items:
     langs:
       - typeScript
     type: class
-    summary: An information window anchored at a specified position on a map.
+    summary: ''
     source:
       path: map/Popup.ts
-      startLine: 11
+      startLine: 10
       remote:
         path: src/MapControl/JavascriptSDK/src\map/Popup.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
         branch: production
     package: location-based-services-javascript
-    module: Global
+    module: |-
+      atlas
+      An information window anchored at a specified position on a map.
   - uid: location-based-services-javascript.Popup.constructor
     name: Popup
     children: []
@@ -39,7 +41,9 @@ items:
           description: |
             The options for the popup.
           optional: true
-    module: Global
+    module: |-
+      atlas
+      An information window anchored at a specified position on a map.
   - uid: location-based-services-javascript.Popup.close
     name: close
     children: []
@@ -50,7 +54,9 @@ items:
     syntax:
       content: function close()
       parameters: []
-    module: Global
+    module: |-
+      atlas
+      An information window anchored at a specified position on a map.
   - uid: location-based-services-javascript.Popup.getPopupOptions
     name: getPopupOptions
     children: []
@@ -64,7 +70,9 @@ items:
       return:
         type:
           - '@location-based-services-javascript.PopupOptions'
-    module: Global
+    module: |-
+      atlas
+      An information window anchored at a specified position on a map.
   - uid: location-based-services-javascript.Popup.open
     name: open
     children: []
@@ -80,7 +88,9 @@ items:
             - '@location-based-services-javascript.Map'
           description: |
             The map.
-    module: Global
+    module: |-
+      atlas
+      An information window anchored at a specified position on a map.
   - uid: location-based-services-javascript.Popup.setPopupOptions
     name: setPopupOptions
     children: []
@@ -97,4 +107,6 @@ items:
           description: |
             The options for the popup.
           optional: true
-    module: Global
+    module: |-
+      atlas
+      An information window anchored at a specified position on a map.

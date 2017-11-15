@@ -12,19 +12,21 @@ items:
     langs:
       - typeScript
     type: class
-    summary: The options for a linestring layer.
+    summary: ''
     extends:
       name: '@location-based-services-javascript.LayerOptions'
     source:
       path: map/options/LinestringLayerOptions.ts
-      startLine: 9
+      startLine: 8
       remote:
         path: src/MapControl/JavascriptSDK/src\map/options/LinestringLayerOptions.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
         branch: production
     package: location-based-services-javascript
-    module: Global
+    module: |-
+      options
+      The options for a linestring layer.
   - uid: location-based-services-javascript.LinestringLayerOptions.cap
     name: cap
     fullName: cap
@@ -50,7 +52,9 @@ items:
       return:
         type:
           - function
-    module: Global
+    module: |-
+      options
+      The options for a linestring layer.
   - uid: location-based-services-javascript.LinestringLayerOptions.color
     name: color
     fullName: color
@@ -64,7 +68,9 @@ items:
       return:
         type:
           - string
-    module: Global
+    module: |-
+      options
+      The options for a linestring layer.
   - uid: location-based-services-javascript.LinestringLayerOptions.join
     name: join
     fullName: join
@@ -90,7 +96,9 @@ items:
       return:
         type:
           - function
-    module: Global
+    module: |-
+      options
+      The options for a linestring layer.
   - uid: location-based-services-javascript.LinestringLayerOptions.name
     name: name
     fullName: name
@@ -104,7 +112,9 @@ items:
       return:
         type:
           - string
-    module: Global
+    module: |-
+      options
+      The options for a linestring layer.
   - uid: location-based-services-javascript.LinestringLayerOptions.width
     name: width
     fullName: width
@@ -118,4 +128,6 @@ items:
       return:
         type:
           - number
-    module: Global
+    module: |-
+      options
+      The options for a linestring layer.

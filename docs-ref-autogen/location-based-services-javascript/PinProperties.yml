@@ -9,17 +9,19 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: Individual properties that can be specified for a point feature.
+    summary: ''
     source:
       path: map/data_properties/PinProperties.ts
-      startLine: 6
+      startLine: 5
       remote:
         path: src/MapControl/JavascriptSDK/src\map/data_properties/PinProperties.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
         branch: production
     package: location-based-services-javascript
-    module: Global
+    module: |-
+      options
+      Individual properties that can be specified for a point feature.
   - uid: location-based-services-javascript.PinProperties.icon
     name: icon
     fullName: icon
@@ -33,7 +35,9 @@ items:
       return:
         type:
           - function
-    module: Global
+    module: |-
+      options
+      Individual properties that can be specified for a point feature.
   - uid: location-based-services-javascript.PinProperties.title
     name: title
     fullName: title
@@ -47,4 +51,6 @@ items:
       return:
         type:
           - string
-    module: Global
+    module: |-
+      options
+      Individual properties that can be specified for a point feature.

@@ -8,7 +8,7 @@ items:
       - azure-iot-provisioning-service.EnrollmentGroup.createdDateTimeUtc
       - azure-iot-provisioning-service.EnrollmentGroup.enrollmentGroupId
       - azure-iot-provisioning-service.EnrollmentGroup.etag
-      - azure-iot-provisioning-service.EnrollmentGroup.initialTwinState
+      - azure-iot-provisioning-service.EnrollmentGroup.initialTwin
       - azure-iot-provisioning-service.EnrollmentGroup.iotHubHostName
       - azure-iot-provisioning-service.EnrollmentGroup.lastUpdatedDateTimeUtc
       - azure-iot-provisioning-service.EnrollmentGroup.provisioningStatus
@@ -18,7 +18,7 @@ items:
     summary: The enrollment group object.
     source:
       path: interfaces.ts
-      startLine: 314
+      startLine: 330
       remote:
         path: provisioning/service/src\interfaces.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
@@ -87,9 +87,9 @@ items:
         type:
           - string
     module: Global
-  - uid: azure-iot-provisioning-service.EnrollmentGroup.initialTwinState
-    name: initialTwinState
-    fullName: initialTwinState
+  - uid: azure-iot-provisioning-service.EnrollmentGroup.initialTwin
+    name: initialTwin
+    fullName: initialTwin
     children: []
     langs:
       - typeScript
@@ -98,10 +98,10 @@ items:
       The initial twin document that will be created for devices upon their
       provisioning.
     syntax:
-      content: TwinState initialTwinState
+      content: InitialTwin initialTwin
       return:
         type:
-          - '@azure-iot-provisioning-service.TwinState'
+          - '@azure-iot-provisioning-service.InitialTwin'
     module: Global
   - uid: azure-iot-provisioning-service.EnrollmentGroup.iotHubHostName
     name: iotHubHostName

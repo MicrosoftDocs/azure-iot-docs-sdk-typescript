@@ -280,11 +280,11 @@
         - uid: azure-iot-provisioning-service.AttestationMechanism
           name: AttestationMechanism
           items: []
-        - uid: azure-iot-provisioning-service.BulkOperation
-          name: BulkOperation
+        - uid: azure-iot-provisioning-service.BulkEnrollmentOperation
+          name: BulkEnrollmentOperation
           items: []
-        - uid: azure-iot-provisioning-service.BulkOperationResult
-          name: BulkOperationResult
+        - uid: azure-iot-provisioning-service.BulkEnrollmentOperationResult
+          name: BulkEnrollmentOperationResult
           items: []
         - uid: azure-iot-provisioning-service.DeviceRegistrationOperationError
           name: DeviceRegistrationOperationError
@@ -298,6 +298,9 @@
         - uid: azure-iot-provisioning-service.IndividualEnrollment
           name: IndividualEnrollment
           items: []
+        - uid: azure-iot-provisioning-service.InitialTwin
+          name: InitialTwin
+          items: []
         - uid: azure-iot-provisioning-service.Metadata
           name: Metadata
           items: []
@@ -307,11 +310,11 @@
         - uid: azure-iot-provisioning-service.TwinCollection
           name: TwinCollection
           items: []
-        - uid: azure-iot-provisioning-service.TwinState
-          name: TwinState
-          items: []
         - uid: azure-iot-provisioning-service.X509Attestation
           name: X509Attestation
+          items: []
+        - uid: azure-iot-provisioning-service.X509CAReferences
+          name: X509CAReferences
           items: []
         - uid: azure-iot-provisioning-service.X509CertificateInfo
           name: X509CertificateInfo
@@ -360,6 +363,24 @@
       items:
         - uid: azure-iot-provisioning-device-mqtt.Mqtt
           name: Mqtt
+          items: []
+- uid: azure-iot-security-tpm
+  name: azure-iot-security-tpm
+  items:
+    - uid: azure-iot-security-tpm.Global
+      name: Global
+      items:
+        - uid: azure-iot-security-tpm.TpmSecurityClient
+          name: TpmSecurityClient
+          items: []
+- uid: azure-iot-security-x509
+  name: azure-iot-security-x509
+  items:
+    - uid: azure-iot-security-x509.Global
+      name: Global
+      items:
+        - uid: azure-iot-security-x509.X509SecurityClient
+          name: X509SecurityClient
           items: []
 - uid: azure-iothub
   name: azure-iothub
@@ -448,99 +469,429 @@
 - uid: location-based-services-javascript
   name: location-based-services-javascript
   items:
-    - uid: location-based-services-javascript.Global
-      name: Global
+    - uid: >-
+        location-based-services-javascript."atlas.data"
+
+        A BoundingBox object defines a shape with edges that follow lines of
+        constant longitude, latitude, and elevation. The
+
+        full description is detailed in [RFC 7946]{@link
+        https:..tools.ietf.org.html.rfc7946}.
+      name: >-
+        "atlas.data"
+
+        A BoundingBox object defines a shape with edges that follow lines of
+        constant longitude, latitude, and elevation. The
+
+        full description is detailed in [RFC 7946]{@link
+        https://tools.ietf.org/html/rfc7946}.
       items:
         - uid: location-based-services-javascript.BoundingBox
           name: BoundingBox
           items: []
+    - uid: >-
+        location-based-services-javascript."atlas.data"
+
+        A Feature object represents a spatially bounded entity. The full
+        description is detailed in
+
+        [RFC 7946]{@link https:..tools.ietf.org.html.rfc7946}.
+      name: >-
+        "atlas.data"
+
+        A Feature object represents a spatially bounded entity. The full
+        description is detailed in
+
+        [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
+      items:
         - uid: location-based-services-javascript.Feature
           name: Feature
           items: []
+    - uid: >-
+        location-based-services-javascript."atlas.data"
+
+        A GeoJSON object with the type "FeatureCollection" is a
+        FeatureCollection object. A FeatureCollection object has a
+
+        member with the name "features". The full description is detailed in
+
+        [RFC 7946]{@link https:..tools.ietf.org.html.rfc7946}.
+      name: >-
+        "atlas.data"
+
+        A GeoJSON object with the type "FeatureCollection" is a
+        FeatureCollection object. A FeatureCollection object has a
+
+        member with the name "features". The full description is detailed in
+
+        [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
+      items:
         - uid: location-based-services-javascript.FeatureCollection
           name: FeatureCollection
           items: []
+    - uid: >-
+        location-based-services-javascript."atlas.data"
+
+        GeoJSON object with type "GeometryCollection" is a Geometry object. A
+        GeometryCollection has a member with the name
+
+        "geometries". The value of "geometries" is an array. Each element of
+        this array is a GeoJSON Geometry object. It is
+
+        possible for this array to be empty. The full description is detailed in
+
+        [RFC 7946]{@link https:..tools.ietf.org.html.rfc7946}.
+      name: >-
+        "atlas.data"
+
+        GeoJSON object with type "GeometryCollection" is a Geometry object. A
+        GeometryCollection has a member with the name
+
+        "geometries". The value of "geometries" is an array. Each element of
+        this array is a GeoJSON Geometry object. It is
+
+        possible for this array to be empty. The full description is detailed in
+
+        [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
+      items:
         - uid: location-based-services-javascript.GeometryCollection
           name: GeometryCollection
           items: []
+    - uid: >-
+        location-based-services-javascript."atlas.data"
+
+        For type "LineString", the "coordinates" member is an array of two or
+        more positions. The full description is
+
+        detailed in [RFC 7946]{@link https:..tools.ietf.org.html.rfc7946}.
+      name: >-
+        "atlas.data"
+
+        For type "LineString", the "coordinates" member is an array of two or
+        more positions. The full description is
+
+        detailed in [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
+      items:
         - uid: location-based-services-javascript.LineString
           name: LineString
           items: []
+    - uid: >-
+        location-based-services-javascript."atlas.data"
+
+        For type "MultiLineString", the "coordinates" member is an array of
+        LineString coordinate arrays. The full
+
+        description is detailed in [RFC 7946]{@link
+        https:..tools.ietf.org.html.rfc7946}.
+      name: >-
+        "atlas.data"
+
+        For type "MultiLineString", the "coordinates" member is an array of
+        LineString coordinate arrays. The full
+
+        description is detailed in [RFC 7946]{@link
+        https://tools.ietf.org/html/rfc7946}.
+      items:
         - uid: location-based-services-javascript.MultiLineString
           name: MultiLineString
           items: []
+    - uid: >-
+        location-based-services-javascript."atlas.data"
+
+        For type "MultiPoint", the "coordinates" member is an array of
+        positions. The full description is detailed in
+
+        [RFC 7946]{@link https:..tools.ietf.org.html.rfc7946}.
+      name: >-
+        "atlas.data"
+
+        For type "MultiPoint", the "coordinates" member is an array of
+        positions. The full description is detailed in
+
+        [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
+      items:
         - uid: location-based-services-javascript.MultiPoint
           name: MultiPoint
           items: []
+    - uid: >-
+        location-based-services-javascript."atlas.data"
+
+        For type "MultiPolygon", the "coordinates" member is an array of Polygon
+        coordinate arrays. The full description is
+
+        detailed in [RFC 7946]{@link https:..tools.ietf.org.html.rfc7946}.
+      name: >-
+        "atlas.data"
+
+        For type "MultiPolygon", the "coordinates" member is an array of Polygon
+        coordinate arrays. The full description is
+
+        detailed in [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
+      items:
         - uid: location-based-services-javascript.MultiPolygon
           name: MultiPolygon
           items: []
+    - uid: >-
+        location-based-services-javascript."atlas.data"
+
+        For type “Point”, the “coordinates” member is a single postion. The full
+        description is detailed in
+
+        [RFC 7946]{@link https:..tools.ietf.org.html.rfc7946}.
+      name: >-
+        "atlas.data"
+
+        For type “Point”, the “coordinates” member is a single postion. The full
+        description is detailed in
+
+        [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
+      items:
         - uid: location-based-services-javascript.Point
           name: Point
           items: []
+    - uid: >-
+        location-based-services-javascript."atlas.data"
+
+        Composed of four or more positions where the first and last are
+        equivalent. It is recommended to read the more
+
+        detailed description and explaination of linear rings detailed in
+
+        [RFC 7946]{@link https:..tools.ietf.org.html.rfc7946}.
+      name: >-
+        "atlas.data"
+
+        Composed of four or more positions where the first and last are
+        equivalent. It is recommended to read the more
+
+        detailed description and explaination of linear rings detailed in
+
+        [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
+      items:
         - uid: location-based-services-javascript.Polygon
           name: Polygon
           items: []
+    - uid: >-
+        location-based-services-javascript."atlas.data"
+
+        This is the specified longitude and latitude of a location. A position
+        is the fundamental geometry construct. The
+
+        full description is detailed in [RFC 7946]{@link
+        https:..tools.ietf.org.html.rfc7946}.
+      name: >-
+        "atlas.data"
+
+        This is the specified longitude and latitude of a location. A position
+        is the fundamental geometry construct. The
+
+        full description is detailed in [RFC 7946]{@link
+        https://tools.ietf.org/html/rfc7946}.
+      items:
         - uid: location-based-services-javascript.Position
           name: Position
           items: []
+    - uid: |-
+        location-based-services-javascript.atlas
+        The control for a visual and interactive web map.
+      name: |-
+        atlas
+        The control for a visual and interactive web map.
+      items:
         - uid: location-based-services-javascript.Map
           name: Map
           items: []
+    - uid: |-
+        location-based-services-javascript.atlas
+        An information window anchored at a specified position on a map.
+      name: |-
+        atlas
+        An information window anchored at a specified position on a map.
+      items:
         - uid: location-based-services-javascript.Popup
           name: Popup
           items: []
+    - uid: |-
+        location-based-services-javascript.options
+        Individual properties that can be specified for a circle feature.
+      name: |-
+        options
+        Individual properties that can be specified for a circle feature.
+      items:
         - uid: location-based-services-javascript.CircleProperties
           name: CircleProperties
           items: []
+    - uid: |-
+        location-based-services-javascript.options
+        Individual properties that can be specified for a linstring feature.
+      name: |-
+        options
+        Individual properties that can be specified for a linstring feature.
+      items:
         - uid: location-based-services-javascript.LinestringProperties
           name: LinestringProperties
           items: []
+    - uid: |-
+        location-based-services-javascript.options
+        Individual properties that can be specified for a point feature.
+      name: |-
+        options
+        Individual properties that can be specified for a point feature.
+      items:
         - uid: location-based-services-javascript.PinProperties
           name: PinProperties
           items: []
+    - uid: |-
+        location-based-services-javascript.options
+        Individual properties that can be specified for a polygon feature.
+      name: |-
+        options
+        Individual properties that can be specified for a polygon feature.
+      items:
         - uid: location-based-services-javascript.PolygonProperties
           name: PolygonProperties
           items: []
+    - uid: |-
+        location-based-services-javascript.options
+        The options for animating changes to the map control's camera.
+      name: |-
+        options
+        The options for animating changes to the map control's camera.
+      items:
         - uid: location-based-services-javascript.AnimationOptions
           name: AnimationOptions
           items: []
+    - uid: |-
+        location-based-services-javascript.options
+        The options for setting the bounds of the map control's camera.
+      name: |-
+        options
+        The options for setting the bounds of the map control's camera.
+      items:
         - uid: location-based-services-javascript.CameraBoundsOptions
           name: CameraBoundsOptions
           items: []
+    - uid: |-
+        location-based-services-javascript.options
+        The options for setting the map control's camera.
+      name: |-
+        options
+        The options for setting the map control's camera.
+      items:
         - uid: location-based-services-javascript.CameraOptions
           name: CameraOptions
           items: []
+    - uid: |-
+        location-based-services-javascript.options
+        The options for a circle layer.
+      name: |-
+        options
+        The options for a circle layer.
+      items:
         - uid: location-based-services-javascript.CircleLayerOptions
           name: CircleLayerOptions
           items: []
+    - uid: |-
+        location-based-services-javascript.options
+        The options for a layer of the map.
+      name: |-
+        options
+        The options for a layer of the map.
+      items:
         - uid: location-based-services-javascript.LayerOptions
           name: LayerOptions
           items: []
+    - uid: |-
+        location-based-services-javascript.options
+        The options for a linestring layer.
+      name: |-
+        options
+        The options for a linestring layer.
+      items:
         - uid: location-based-services-javascript.LinestringLayerOptions
           name: LinestringLayerOptions
           items: []
+    - uid: >-
+        location-based-services-javascript.options
+
+        A MapEventData object is passed to the callback function when a map
+        event is fired.
+      name: >-
+        options
+
+        A MapEventData object is passed to the callback function when a map
+        event is fired.
+      items:
         - uid: location-based-services-javascript.MapEventData
           name: MapEventData
           items: []
+    - uid: |-
+        location-based-services-javascript.options
+        The options for a pin layer.
+      name: |-
+        options
+        The options for a pin layer.
+      items:
         - uid: location-based-services-javascript.PinLayerOptions
           name: PinLayerOptions
           items: []
+    - uid: |-
+        location-based-services-javascript.options
+        The options for a polygon layer.
+      name: |-
+        options
+        The options for a polygon layer.
+      items:
         - uid: location-based-services-javascript.PolygonLayerOptions
           name: PolygonLayerOptions
           items: []
+    - uid: |-
+        location-based-services-javascript.options
+        The options for a popup.
+      name: |-
+        options
+        The options for a popup.
+      items:
         - uid: location-based-services-javascript.PopupOptions
           name: PopupOptions
           items: []
+    - uid: |-
+        location-based-services-javascript.options
+        The options for a raster layer.
+      name: |-
+        options
+        The options for a raster layer.
+      items:
         - uid: location-based-services-javascript.RasterLayerOptions
           name: RasterLayerOptions
           items: []
+    - uid: |-
+        location-based-services-javascript.options
+        The options for the map's style.
+      name: |-
+        options
+        The options for the map's style.
+      items:
         - uid: location-based-services-javascript.StyleOptions
           name: StyleOptions
           items: []
+    - uid: |-
+        location-based-services-javascript.options
+        The options for setting traffic on the map.
+      name: |-
+        options
+        The options for setting traffic on the map.
+      items:
         - uid: location-based-services-javascript.TrafficOptions
           name: TrafficOptions
           items: []
+    - uid: |-
+        location-based-services-javascript.options
+        The options for enabling.disabling user interaction with the map.
+      name: |-
+        options
+        The options for enabling/disabling user interaction with the map.
+      items:
         - uid: location-based-services-javascript.UserInteractionOptions
           name: UserInteractionOptions
           items: []

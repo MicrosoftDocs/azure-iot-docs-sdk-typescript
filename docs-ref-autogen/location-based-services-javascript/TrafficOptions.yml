@@ -14,7 +14,7 @@ items:
       name: Options
     source:
       path: map/options/TrafficOptions.ts
-      startLine: 8
+      startLine: 6
       remote:
         path: src/MapControl/JavascriptSDK/src\map/options/TrafficOptions.ts
         repo: >-
@@ -32,6 +32,8 @@ items:
     summary: >-
       The type of traffic flow to display:
 
+      <p>"none" is to display no traffic flow data</p>
+
       <p>"relative" is the speed of the road relative to free-flow</p>
 
       <p>"absolute" is the absolute speed of the road</p>
@@ -41,10 +43,10 @@ items:
 
       false to stop displaying the traffic flow.</p>
     syntax:
-      content: false |  |  |  flow
+      content: function flow
       return:
         type:
-          - 'false |  |  | '
+          - function
     module: Global
   - uid: location-based-services-javascript.TrafficOptions.incidents
     name: incidents

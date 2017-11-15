@@ -11,7 +11,13 @@ items:
     langs:
       - typeScript
     type: class
-    summary: ''
+    summary: >-
+      A GeoJSON object with the type "FeatureCollection" is a FeatureCollection
+      object. A FeatureCollection object has a
+
+      member with the name "features". The full description is detailed in
+
+      [RFC 7946](https://tools.ietf.org/html/rfc7946).
     source:
       path: data/FeatureCollection.ts
       startLine: 10
@@ -21,15 +27,7 @@ items:
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
         branch: production
     package: location-based-services-javascript
-    module: >-
-      "atlas.data"
-
-      A GeoJSON object with the type "FeatureCollection" is a FeatureCollection
-      object. A FeatureCollection object has a
-
-      member with the name "features". The full description is detailed in
-
-      [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
+    module: atlas.data
   - uid: location-based-services-javascript.FeatureCollection.constructor
     name: FeatureCollection
     children: []
@@ -45,15 +43,7 @@ items:
             - Array<@location-based-services-javascript.Feature<Geometry>>
           description: |
             The collection of features that make up the FeatureCollection.
-    module: >-
-      "atlas.data"
-
-      A GeoJSON object with the type "FeatureCollection" is a FeatureCollection
-      object. A FeatureCollection object has a
-
-      member with the name "features". The full description is detailed in
-
-      [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
+    module: atlas.data
   - uid: location-based-services-javascript.FeatureCollection.features
     name: features
     fullName: features
@@ -67,15 +57,7 @@ items:
       return:
         type:
           - Array<@location-based-services-javascript.Feature<Geometry>>
-    module: >-
-      "atlas.data"
-
-      A GeoJSON object with the type "FeatureCollection" is a FeatureCollection
-      object. A FeatureCollection object has a
-
-      member with the name "features". The full description is detailed in
-
-      [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
+    module: atlas.data
   - uid: location-based-services-javascript.FeatureCollection.type
     name: type
     fullName: type
@@ -89,15 +71,7 @@ items:
       return:
         type:
           - function
-    module: >-
-      "atlas.data"
-
-      A GeoJSON object with the type "FeatureCollection" is a FeatureCollection
-      object. A FeatureCollection object has a
-
-      member with the name "features". The full description is detailed in
-
-      [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
+    module: atlas.data
   - uid: location-based-services-javascript.FeatureCollection.TYPE
     name: TYPE
     fullName: TYPE
@@ -111,12 +85,4 @@ items:
       return:
         type:
           - function
-    module: >-
-      "atlas.data"
-
-      A GeoJSON object with the type "FeatureCollection" is a FeatureCollection
-      object. A FeatureCollection object has a
-
-      member with the name "features". The full description is detailed in
-
-      [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
+    module: atlas.data

@@ -9,7 +9,12 @@ items:
     langs:
       - typeScript
     type: class
-    summary: ''
+    summary: >-
+      A BoundingBox object defines a shape with edges that follow lines of
+      constant longitude, latitude, and elevation. The
+
+      full description is detailed in [RFC
+      7946](https://tools.ietf.org/html/rfc7946).
     extends:
       name: Array<number>
     source:
@@ -21,14 +26,7 @@ items:
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
         branch: production
     package: location-based-services-javascript
-    module: >-
-      "atlas.data"
-
-      A BoundingBox object defines a shape with edges that follow lines of
-      constant longitude, latitude, and elevation. The
-
-      full description is detailed in [RFC 7946]{@link
-      https://tools.ietf.org/html/rfc7946}.
+    module: atlas.data
   - uid: location-based-services-javascript.BoundingBox.constructor
     name: BoundingBox
     children: []
@@ -50,14 +48,7 @@ items:
             - '@location-based-services-javascript.Position'
           description: |
             The northeastern most position of the bounding box.
-    module: >-
-      "atlas.data"
-
-      A BoundingBox object defines a shape with edges that follow lines of
-      constant longitude, latitude, and elevation. The
-
-      full description is detailed in [RFC 7946]{@link
-      https://tools.ietf.org/html/rfc7946}.
+    module: atlas.data
   - uid: location-based-services-javascript.BoundingBox.Array
     name: Array
     fullName: Array
@@ -71,11 +62,4 @@ items:
       return:
         type:
           - ArrayConstructor
-    module: >-
-      "atlas.data"
-
-      A BoundingBox object defines a shape with edges that follow lines of
-      constant longitude, latitude, and elevation. The
-
-      full description is detailed in [RFC 7946]{@link
-      https://tools.ietf.org/html/rfc7946}.
+    module: atlas.data

@@ -13,7 +13,11 @@ items:
     langs:
       - typeScript
     type: class
-    summary: ''
+    summary: >-
+      A Feature object represents a spatially bounded entity. The full
+      description is detailed in
+
+      [RFC 7946](https://tools.ietf.org/html/rfc7946).
     source:
       path: data/Feature.ts
       startLine: 8
@@ -23,13 +27,7 @@ items:
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
         branch: production
     package: location-based-services-javascript
-    module: >-
-      "atlas.data"
-
-      A Feature object represents a spatially bounded entity. The full
-      description is detailed in
-
-      [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
+    module: atlas.data
   - uid: location-based-services-javascript.Feature.constructor
     name: Feature
     children: []
@@ -55,13 +53,7 @@ items:
           description: |
             The id of the feature.
           optional: true
-    module: >-
-      "atlas.data"
-
-      A Feature object represents a spatially bounded entity. The full
-      description is detailed in
-
-      [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
+    module: atlas.data
   - uid: location-based-services-javascript.Feature.geometry
     name: geometry
     fullName: geometry
@@ -75,13 +67,7 @@ items:
       return:
         type:
           - G
-    module: >-
-      "atlas.data"
-
-      A Feature object represents a spatially bounded entity. The full
-      description is detailed in
-
-      [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
+    module: atlas.data
   - uid: location-based-services-javascript.Feature.id
     name: id
     fullName: id
@@ -95,13 +81,7 @@ items:
       return:
         type:
           - string
-    module: >-
-      "atlas.data"
-
-      A Feature object represents a spatially bounded entity. The full
-      description is detailed in
-
-      [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
+    module: atlas.data
   - uid: location-based-services-javascript.Feature.properties
     name: properties
     fullName: properties
@@ -115,13 +95,7 @@ items:
       return:
         type:
           - any
-    module: >-
-      "atlas.data"
-
-      A Feature object represents a spatially bounded entity. The full
-      description is detailed in
-
-      [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
+    module: atlas.data
   - uid: location-based-services-javascript.Feature.type
     name: type
     fullName: type
@@ -135,13 +109,7 @@ items:
       return:
         type:
           - function
-    module: >-
-      "atlas.data"
-
-      A Feature object represents a spatially bounded entity. The full
-      description is detailed in
-
-      [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
+    module: atlas.data
   - uid: location-based-services-javascript.Feature.TYPE
     name: TYPE
     fullName: TYPE
@@ -155,10 +123,4 @@ items:
       return:
         type:
           - function
-    module: >-
-      "atlas.data"
-
-      A Feature object represents a spatially bounded entity. The full
-      description is detailed in
-
-      [RFC 7946]{@link https://tools.ietf.org/html/rfc7946}.
+    module: atlas.data

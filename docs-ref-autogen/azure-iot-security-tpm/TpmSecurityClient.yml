@@ -1,0 +1,78 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-security-tpm.TpmSecurityClient
+    name: TpmSecurityClient
+    fullName: TpmSecurityClient
+    children:
+      - azure-iot-security-tpm.TpmSecurityClient.activateSymmetricIdentity
+      - azure-iot-security-tpm.TpmSecurityClient.getEndorsementKey
+      - azure-iot-security-tpm.TpmSecurityClient.getStorageRootKey
+      - azure-iot-security-tpm.TpmSecurityClient.signWithIdentity
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    source:
+      path: tpm.ts
+      startLine: 7
+      remote:
+        path: security/tpm/src\tpm.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-security-tpm
+  - uid: azure-iot-security-tpm.TpmSecurityClient.activateSymmetricIdentity
+    name: activateSymmetricIdentity
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function activateSymmetricIdentity(callback: (err?: Error) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''
+  - uid: azure-iot-security-tpm.TpmSecurityClient.getEndorsementKey
+    name: getEndorsementKey
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getEndorsementKey(callback: (err?: Error) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''
+  - uid: azure-iot-security-tpm.TpmSecurityClient.getStorageRootKey
+    name: getStorageRootKey
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getStorageRootKey(callback: (err?: Error) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''
+  - uid: azure-iot-security-tpm.TpmSecurityClient.signWithIdentity
+    name: signWithIdentity
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function signWithIdentity(callback: (err?: Error) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''

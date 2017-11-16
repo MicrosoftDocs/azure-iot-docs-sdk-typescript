@@ -244,11 +244,11 @@
     - uid: azure-iot-provisioning-service.AttestationMechanism
       name: AttestationMechanism
       items: []
-    - uid: azure-iot-provisioning-service.BulkOperation
-      name: BulkOperation
+    - uid: azure-iot-provisioning-service.BulkEnrollmentOperation
+      name: BulkEnrollmentOperation
       items: []
-    - uid: azure-iot-provisioning-service.BulkOperationResult
-      name: BulkOperationResult
+    - uid: azure-iot-provisioning-service.BulkEnrollmentOperationResult
+      name: BulkEnrollmentOperationResult
       items: []
     - uid: azure-iot-provisioning-service.DeviceRegistrationOperationError
       name: DeviceRegistrationOperationError
@@ -262,6 +262,9 @@
     - uid: azure-iot-provisioning-service.IndividualEnrollment
       name: IndividualEnrollment
       items: []
+    - uid: azure-iot-provisioning-service.InitialTwin
+      name: InitialTwin
+      items: []
     - uid: azure-iot-provisioning-service.Metadata
       name: Metadata
       items: []
@@ -271,11 +274,11 @@
     - uid: azure-iot-provisioning-service.TwinCollection
       name: TwinCollection
       items: []
-    - uid: azure-iot-provisioning-service.TwinState
-      name: TwinState
-      items: []
     - uid: azure-iot-provisioning-service.X509Attestation
       name: X509Attestation
+      items: []
+    - uid: azure-iot-provisioning-service.X509CAReferences
+      name: X509CAReferences
       items: []
     - uid: azure-iot-provisioning-service.X509CertificateInfo
       name: X509CertificateInfo
@@ -315,6 +318,18 @@
   items:
     - uid: azure-iot-provisioning-device-mqtt.Mqtt
       name: Mqtt
+      items: []
+- uid: azure-iot-security-tpm
+  name: azure-iot-security-tpm
+  items:
+    - uid: azure-iot-security-tpm.TpmSecurityClient
+      name: TpmSecurityClient
+      items: []
+- uid: azure-iot-security-x509
+  name: azure-iot-security-x509
+  items:
+    - uid: azure-iot-security-x509.X509SecurityClient
+      name: X509SecurityClient
       items: []
 - uid: azure-iothub
   name: azure-iothub

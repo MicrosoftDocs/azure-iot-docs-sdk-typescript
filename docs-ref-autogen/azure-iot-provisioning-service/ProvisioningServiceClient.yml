@@ -28,7 +28,7 @@ items:
       - >-
         azure-iot-provisioning-service.ProvisioningServiceClient.getIndividualEnrollment
       - >-
-        azure-iot-provisioning-service.ProvisioningServiceClient.runBulkOperation
+        azure-iot-provisioning-service.ProvisioningServiceClient.runBulkEnrollmentOperation
       - >-
         azure-iot-provisioning-service.ProvisioningServiceClient.fromConnectionString
     langs:
@@ -374,8 +374,9 @@ items:
               any) => void
           description: |
             Invoked upon completion of the operation.
-  - uid: azure-iot-provisioning-service.ProvisioningServiceClient.runBulkOperation
-    name: runBulkOperation
+  - uid: >-
+      azure-iot-provisioning-service.ProvisioningServiceClient.runBulkEnrollmentOperation
+    name: runBulkEnrollmentOperation
     children: []
     type: method
     langs:
@@ -383,13 +384,14 @@ items:
     summary: Runs a number CRUD operations on an array of enrollment records.
     syntax:
       content: >-
-        function runBulkOperation(bulkOperation: BulkOperation, callback?: (err:
-        Error, bulkOperationResult?: BulkOperationResult, response?: any) =>
-        void)
+        function runBulkEnrollmentOperation(bulkEnrollmentOperation:
+        BulkEnrollmentOperation, callback?: (err: Error,
+        bulkEnrollmentOperationResult?: BulkEnrollmentOperationResult,
+        response?: any) => void)
       parameters:
-        - id: bulkOperation
+        - id: bulkEnrollmentOperation
           type:
-            - '@azure-iot-provisioning-service.BulkOperation'
+            - '@azure-iot-provisioning-service.BulkEnrollmentOperation'
           description: >-
             An object that specifies the single kind of CRUD operations on the
             array of IndividualEnrollment objects that are also part of the
@@ -397,8 +399,8 @@ items:
         - id: callback
           type:
             - >-
-              (err: Error, bulkOperationResult?: BulkOperationResult, response?:
-              any) => void
+              (err: Error, bulkEnrollmentOperationResult?:
+              BulkEnrollmentOperationResult, response?: any) => void
           description: |
             Invoked upon completion of the operation.
           optional: true

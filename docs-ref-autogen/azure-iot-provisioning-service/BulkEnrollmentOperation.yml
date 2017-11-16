@@ -1,24 +1,24 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-iot-provisioning-service.BulkOperation
-    name: BulkOperation
-    fullName: BulkOperation
+  - uid: azure-iot-provisioning-service.BulkEnrollmentOperation
+    name: BulkEnrollmentOperation
+    fullName: BulkEnrollmentOperation
     children:
-      - azure-iot-provisioning-service.BulkOperation.enrollments
-      - azure-iot-provisioning-service.BulkOperation.mode
+      - azure-iot-provisioning-service.BulkEnrollmentOperation.enrollments
+      - azure-iot-provisioning-service.BulkEnrollmentOperation.mode
     langs:
       - typeScript
     type: interface
     summary: Bulk operation
     source:
       path: interfaces.ts
-      startLine: 151
+      startLine: 167
       remote:
         path: provisioning/service/src\interfaces.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-service
-  - uid: azure-iot-provisioning-service.BulkOperation.enrollments
+  - uid: azure-iot-provisioning-service.BulkEnrollmentOperation.enrollments
     name: enrollments
     fullName: enrollments
     children: []
@@ -35,7 +35,7 @@ items:
       return:
         type:
           - Array<@azure-iot-provisioning-service.IndividualEnrollment>
-  - uid: azure-iot-provisioning-service.BulkOperation.mode
+  - uid: azure-iot-provisioning-service.BulkEnrollmentOperation.mode
     name: mode
     fullName: mode
     children: []

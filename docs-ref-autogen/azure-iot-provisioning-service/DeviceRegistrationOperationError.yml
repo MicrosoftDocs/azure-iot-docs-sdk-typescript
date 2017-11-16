@@ -16,7 +16,7 @@ items:
     summary: Device registration operation error
     source:
       path: interfaces.ts
-      startLine: 192
+      startLine: 208
       remote:
         path: provisioning/service/src\interfaces.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
@@ -63,7 +63,7 @@ items:
     type: property
     summary: >-
       The id of the the IndividualEnrollment object that was in error during a
-      runBulkOperation invocation.
+      runBulkEnrollmentOperation invocation.
     syntax:
       content: string registrationId
       return:

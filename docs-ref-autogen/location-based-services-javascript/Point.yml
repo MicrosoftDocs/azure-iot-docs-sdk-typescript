@@ -12,10 +12,10 @@ items:
       - typeScript
     type: class
     summary: >-
-      For type “Point”, the “coordinates” member is a single postion. The full
-      description is detailed in
+      A GeoJSON Point object - a JSON object that represents a geographic
+      position. The full description is detailed in
 
-      [RFC 7946](https://tools.ietf.org/html/rfc7946).
+      [RFC 7946](https://tools.ietf.org/html/rfc7946#section-3.1.2).
     source:
       path: data/Point.ts
       startLine: 8
@@ -40,7 +40,7 @@ items:
           type:
             - '@location-based-services-javascript.Position'
           description: |
-            The position of the point.
+            The position defining the point.
     module: atlas.data
   - uid: location-based-services-javascript.Point.coordinates
     name: coordinates
@@ -49,7 +49,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The position defining the point.
     syntax:
       content: Position coordinates
       return:
@@ -63,12 +63,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: A GeoJSON type descriptor with value "Point".
     syntax:
-      content: function type
+      content: string type
       return:
         type:
-          - function
+          - string
     module: atlas.data
   - uid: location-based-services-javascript.Point.TYPE
     name: TYPE
@@ -77,10 +77,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      A static GeoJSON type descriptor for the Point class to be used in runtime
+      comparisons.
     syntax:
-      content: static function TYPE
+      content: static string TYPE
       return:
         type:
-          - function
+          - string
     module: atlas.data

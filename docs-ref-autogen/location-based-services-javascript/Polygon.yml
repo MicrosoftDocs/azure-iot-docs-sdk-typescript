@@ -13,15 +13,13 @@ items:
       - typeScript
     type: class
     summary: >-
-      Composed of four or more positions where the first and last are
-      equivalent. It is recommended to read the more
+      A GeoJSON Polygon object - a JSON object that represents a geographic
+      polygon. The full description is detailed in
 
-      detailed description and explaination of linear rings detailed in
-
-      [RFC 7946](https://tools.ietf.org/html/rfc7946).
+      [RFC 7946](https://tools.ietf.org/html/rfc7946#section-3.1.6).
     source:
       path: data/Polygon.ts
-      startLine: 11
+      startLine: 9
       remote:
         path: src/MapControl/JavascriptSDK/src\data/Polygon.ts
         repo: >-
@@ -42,7 +40,7 @@ items:
         - id: coordinates
           type:
             - '@location-based-services-javascript.Position[]'
-          description: An array of linear ring coordinate arrays.
+          description: The array of linear ring coordinate arrays defining the polygon.
         - id: bbox
           type:
             - '@location-based-services-javascript.BoundingBox'
@@ -57,7 +55,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The bounding box of the polygon.
     syntax:
       content: BoundingBox bbox
       return:
@@ -71,7 +69,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The array of linear ring coordinate arrays defining the polygon.
     syntax:
       content: 'Position[] coordinates'
       return:
@@ -85,12 +83,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: A GeoJSON type descriptor with value "Polygon".
     syntax:
-      content: function type
+      content: string type
       return:
         type:
-          - function
+          - string
     module: atlas.data
   - uid: location-based-services-javascript.Polygon.TYPE
     name: TYPE
@@ -99,10 +97,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      A static GeoJSON type descriptor for the Polygon class to be used in
+      runtime comparisons.
     syntax:
-      content: static function TYPE
+      content: static string TYPE
       return:
         type:
-          - function
+          - string
     module: atlas.data

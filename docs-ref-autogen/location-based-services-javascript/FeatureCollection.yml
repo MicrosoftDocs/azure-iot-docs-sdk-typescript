@@ -12,15 +12,14 @@ items:
       - typeScript
     type: class
     summary: >-
-      A GeoJSON object with the type "FeatureCollection" is a FeatureCollection
-      object. A FeatureCollection object has a
+      A GeoJSON FeatureCollection object - a JSON object that contains a
+      collection of GeoJSON features. The full
 
-      member with the name "features". The full description is detailed in
-
-      [RFC 7946](https://tools.ietf.org/html/rfc7946).
+      description is detailed in [RFC
+      7946](https://tools.ietf.org/html/rfc7946#section-3.3).
     source:
       path: data/FeatureCollection.ts
-      startLine: 10
+      startLine: 9
       remote:
         path: src/MapControl/JavascriptSDK/src\data/FeatureCollection.ts
         repo: >-
@@ -42,7 +41,7 @@ items:
           type:
             - Array<@location-based-services-javascript.Feature<Geometry>>
           description: |
-            The collection of features that make up the FeatureCollection.
+            The collection of features that make up the feature collection.
     module: atlas.data
   - uid: location-based-services-javascript.FeatureCollection.features
     name: features
@@ -51,7 +50,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The collection of GeoJSON features contained in the feature collection.
     syntax:
       content: Array<Feature<Geometry>> features
       return:
@@ -65,12 +64,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: A GeoJSON type descriptor with value "FeatureCollection".
     syntax:
-      content: function type
+      content: string type
       return:
         type:
-          - function
+          - string
     module: atlas.data
   - uid: location-based-services-javascript.FeatureCollection.TYPE
     name: TYPE
@@ -79,10 +78,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      A static GeoJSON type descriptor for the FeatureCollection class to be
+      used in runtime comparisons.
     syntax:
-      content: static function TYPE
+      content: static string TYPE
       return:
         type:
-          - function
+          - string
     module: atlas.data

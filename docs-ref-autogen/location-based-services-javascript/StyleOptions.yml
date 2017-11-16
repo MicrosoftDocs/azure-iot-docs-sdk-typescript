@@ -22,7 +22,7 @@ items:
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
         branch: production
     package: location-based-services-javascript
-    module: options
+    module: Object Definitions
   - uid: location-based-services-javascript.StyleOptions.language
     name: language
     fullName: language
@@ -36,7 +36,7 @@ items:
       return:
         type:
           - string
-    module: options
+    module: Object Definitions
   - uid: location-based-services-javascript.StyleOptions.style
     name: style
     fullName: style
@@ -50,7 +50,7 @@ items:
       return:
         type:
           - function
-    module: options
+    module: Object Definitions
   - uid: location-based-services-javascript.StyleOptions.view
     name: view
     fullName: view
@@ -58,10 +58,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: The geopolitical view of the map.
+    summary: |-
+      The geopolitical view of the map.
+      <p>Unified: The unified view of the world.</p>
+      <p>IN: India's view of the world.</p>
+      <p>IL: Israel's view of the world.</p>
     syntax:
       content: function view
       return:
         type:
           - function
-    module: options
+    module: Object Definitions

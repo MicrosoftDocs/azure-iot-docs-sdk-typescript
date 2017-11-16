@@ -37,7 +37,7 @@ items:
     summary: The control for a visual and interactive web map.
     source:
       path: map/Map.ts
-      startLine: 45
+      startLine: 44
       remote:
         path: src/MapControl/JavascriptSDK/src\map/Map.ts
         repo: >-
@@ -72,13 +72,13 @@ items:
     langs:
       - typeScript
     summary: >-
-      Add a collection of points to the map as circles. If the layer already
-      exists, any options previously specified by
+      Add a collection of points to a layer of the map as circles. The layer and
+      its options can be specified through a
 
-      the user will default to the previous values; otherwise, they will default
-      to the default values of
+      [CircleLayerOptions](xref:location-based-services-javascript.CircleLayerOptions)
+      object. Options for the layer
 
-      [CircleLayerOptions](xref:CircleLayerOptions).
+      can only be specified upon the layer's initial creation.
     syntax:
       content: >-
         function addCircles(circles: Array<Feature<Point>>, options?:
@@ -93,7 +93,7 @@ items:
           type:
             - '@location-based-services-javascript.CircleLayerOptions'
           description: |
-            The layer options for adding the circles to the map.
+            The layer options for the circles.
           optional: true
     module: atlas
   - uid: location-based-services-javascript.Map.addEventListener
@@ -183,13 +183,13 @@ items:
     langs:
       - typeScript
     summary: >-
-      Add a collection of linestrings to the map. If the layer already exists,
-      any options previously specified by
+      Add a collection of linestrings to a layer of the map. The layer and its
+      options can be specified through a
 
-      the user will default to the previous values; otherwise, they will default
-      to the default values of
+      [LinestringLayerOptions](xref:location-based-services-javascript.LinestringLayerOptions)
+      object. Options for
 
-      [LinestringLayerOptions](xref:LinestringLayerOptions).
+      the layer can only be specified upon the layer's initial creation.
     syntax:
       content: >-
         function addLinestrings(linestrings: Array<Feature<LineString |
@@ -205,7 +205,7 @@ items:
           type:
             - '@location-based-services-javascript.LinestringLayerOptions'
           description: |
-            The layer options for adding the linestrings to the map.
+            The layer options for the linestrings.
           optional: true
     module: atlas
   - uid: location-based-services-javascript.Map.addPins
@@ -215,13 +215,13 @@ items:
     langs:
       - typeScript
     summary: >-
-      Add a collection of points to the map as pins. If the layer already
-      exists, any options previously specified by
+      Add a collection of points to a layer of the map as pins. The layer and
+      its options can be specified through a
 
-      the user will default to the previous values; otherwise, they will default
-      to the default values of
+      [PinLayerOptions](xref:location-based-services-javascript.PinLayerOptions)
+      object. Options for the layer can
 
-      [PinLayerOptions](xref:PinLayerOptions).
+      only be specified upon the layer's initial creation.
     syntax:
       content: 'function addPins(pins: Array<Feature<Point>>, options?: PinLayerOptions)'
       parameters:
@@ -234,7 +234,7 @@ items:
           type:
             - '@location-based-services-javascript.PinLayerOptions'
           description: |
-            The layer options for adding the pins to the map.
+            The layer options for the pins.
           optional: true
     module: atlas
   - uid: location-based-services-javascript.Map.addPolygons
@@ -244,13 +244,13 @@ items:
     langs:
       - typeScript
     summary: >-
-      Add a collection of polygons to the map. If the layer already exists, any
-      options previously specified by
+      Add a collection of polygons to a layer of the map. The layer and its
+      options can be specified through a
 
-      the user will default to the previous values; otherwise, they will default
-      to the default values of
+      [PolygonLayerOptions](xref:location-based-services-javascript.PolygonLayerOptions)
+      object. Options for
 
-      [PolygonLayerOptions](xref:PolygonLayerOptions).
+      the layer can only be specified upon the layer's initial creation.
     syntax:
       content: >-
         function addPolygons(polygons: Array<Feature<Polygon | MultiPolygon>>,
@@ -266,7 +266,7 @@ items:
           type:
             - '@location-based-services-javascript.PolygonLayerOptions'
           description: |
-            The layer options for adding the polygons to the map.
+            The layer options for the polygons.
           optional: true
     module: atlas
   - uid: location-based-services-javascript.Map.addRaster
@@ -276,13 +276,13 @@ items:
     langs:
       - typeScript
     summary: >-
-      Adds a raster layer to the map. If the layer already exists, any options
-      previously specified by
+      Adds a raster layer to the map. The layer and its options can be specified
+      through a
 
-      the user will default to the previous values; otherwise, they will default
-      to the default values of
+      [RasterLayerOptions](xref:location-based-services-javascript.RasterLayerOptions)
+      object. Options for
 
-      [RasterLayerOptions](xref:RasterLayerOptions).
+      the layer can only be specified upon the layer's initial creation.
     syntax:
       content: 'function addRaster(tileSources: string[], options?: RasterLayerOptions)'
       parameters:
@@ -304,7 +304,7 @@ items:
           type:
             - '@location-based-services-javascript.RasterLayerOptions'
           description: |
-            The options for defining the raster layer to add.
+            The options for the raster layer.
           optional: true
     module: atlas
   - uid: location-based-services-javascript.Map.getCamera

@@ -14,10 +14,10 @@ items:
       - typeScript
     type: class
     summary: >-
-      A Feature object represents a spatially bounded entity. The full
-      description is detailed in
+      A GeoJSON Feature object - a JSON object representing a spatially bounded
+      entity. The full description is detailed in
 
-      [RFC 7946](https://tools.ietf.org/html/rfc7946).
+      [RFC 7946](https://tools.ietf.org/html/rfc7946#section-3.2).
     source:
       path: data/Feature.ts
       startLine: 8
@@ -61,7 +61,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The geometry of the feature.
     syntax:
       content: G geometry
       return:
@@ -75,7 +75,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The id of the feature.
     syntax:
       content: string id
       return:
@@ -89,7 +89,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The properties of the feature.
     syntax:
       content: any properties
       return:
@@ -103,12 +103,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: A GeoJSON type descriptor with value "Feature".
     syntax:
-      content: function type
+      content: string type
       return:
         type:
-          - function
+          - string
     module: atlas.data
   - uid: location-based-services-javascript.Feature.TYPE
     name: TYPE
@@ -117,10 +117,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      A static GeoJSON type descriptor for the Feature class to be used in
+      runtime comparisons.
     syntax:
-      content: static function TYPE
+      content: static string TYPE
       return:
         type:
-          - function
+          - string
     module: atlas.data

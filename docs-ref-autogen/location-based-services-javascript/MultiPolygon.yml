@@ -13,10 +13,10 @@ items:
       - typeScript
     type: class
     summary: >-
-      For type "MultiPolygon", the "coordinates" member is an array of Polygon
-      coordinate arrays. The full description is
+      A GeoJSON MultiPolygon object - a JSON object that represents multiple
+      geographic polygons. The full description is
 
-      detailed in [RFC 7946](https://tools.ietf.org/html/rfc7946).
+      detailed in [RFC 7946](https://tools.ietf.org/html/rfc7946#section-3.1.7).
     source:
       path: data/MultiPolygon.ts
       startLine: 9
@@ -40,12 +40,12 @@ items:
         - id: coordinates
           type:
             - '@location-based-services-javascript.Position[]'
-          description: An array of Polygon coordiante arrays.
+          description: The array of polygon coordinate arrays defining the multipolygon.
         - id: bbox
           type:
             - '@location-based-services-javascript.BoundingBox'
           description: |
-            The bounding box of the MultiPolygon.
+            The bounding box of the multipolygon.
           optional: true
     module: atlas.data
   - uid: location-based-services-javascript.MultiPolygon.bbox
@@ -55,7 +55,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The bounding box of the multipolygon.
     syntax:
       content: BoundingBox bbox
       return:
@@ -69,7 +69,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The array of polygon coordinate arrays defining the multipolygon.
     syntax:
       content: 'Position[] coordinates'
       return:
@@ -83,12 +83,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: A GeoJSON type descriptor with value "MutliPolygon".
     syntax:
-      content: function type
+      content: string type
       return:
         type:
-          - function
+          - string
     module: atlas.data
   - uid: location-based-services-javascript.MultiPolygon.TYPE
     name: TYPE
@@ -97,10 +97,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      A static GeoJSON type descriptor for the MultiPolygon class to be used in
+      runtime comparisons.
     syntax:
-      content: static function TYPE
+      content: static string TYPE
       return:
         type:
-          - function
+          - string
     module: atlas.data

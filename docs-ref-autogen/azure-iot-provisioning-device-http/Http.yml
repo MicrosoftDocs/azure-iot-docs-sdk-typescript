@@ -6,20 +6,19 @@ items:
     children:
       - azure-iot-provisioning-device-http.Http.constructor
       - azure-iot-provisioning-device-http.Http.endSession
-      - azure-iot-provisioning-device-http.Http.getErrorResult
-      - azure-iot-provisioning-device-http.Http.queryOperationStatus
-      - azure-iot-provisioning-device-http.Http.registrationRequest
-      - azure-iot-provisioning-device-http.Http.setClientConfig
-      - azure-iot-provisioning-device-http.Http.createDeviceClient
+      - azure-iot-provisioning-device-http.Http.registerX509
+      - azure-iot-provisioning-device-http.Http.setTransportOptions
     langs:
       - typeScript
     type: class
     summary: ''
+    extends:
+      name: '@azure-iot-provisioning-device-http.Http'
     source:
-      path: http.ts
-      startLine: 19
+      path: http_transport.ts
+      startLine: 12
       remote:
-        path: provisioning/transport/http/src\http.ts
+        path: provisioning/transport/http/src\http_transport.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device-http
@@ -32,13 +31,12 @@ items:
       - typeScript
     summary: ''
     syntax:
-      content: 'new Http(config?: ClientConfiguration, httpBase?: Base)'
+      content: 'new Http(idScope: number, httpBase?: Base)'
       parameters:
-        - id: config
+        - id: idScope
           type:
-            - ClientConfiguration
+            - number
           description: ''
-          optional: true
         - id: httpBase
           type:
             - Base
@@ -60,26 +58,8 @@ items:
             - '(err?: Error) => void'
           description: ''
     module: Global
-  - uid: azure-iot-provisioning-device-http.Http.getErrorResult
-    name: getErrorResult
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'function getErrorResult(result: any)'
-      parameters:
-        - id: result
-          type:
-            - any
-          description: ''
-      return:
-        type:
-          - any
-    module: Global
-  - uid: azure-iot-provisioning-device-http.Http.queryOperationStatus
-    name: queryOperationStatus
+  - uid: azure-iot-provisioning-device-http.Http.registerX509
+    name: registerX509
     children: []
     type: method
     langs:
@@ -87,38 +67,9 @@ items:
     summary: ''
     syntax:
       content: >-
-        function queryOperationStatus(registrationId: string, operationId:
-        string, callback: (err?: Error, responseBody?: any, result?: any,
-        pollingInterval?: number) => void)
-      parameters:
-        - id: registrationId
-          type:
-            - string
-          description: ''
-        - id: operationId
-          type:
-            - string
-          description: ''
-        - id: callback
-          type:
-            - >-
-              (err?: Error, responseBody?: any, result?: any, pollingInterval?:
-              number) => void
-          description: ''
-    module: Global
-  - uid: azure-iot-provisioning-device-http.Http.registrationRequest
-    name: registrationRequest
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: >-
-        function registrationRequest(registrationId: string, authorization:
-        Authentication, requestBody: any, forceRegistration: boolean, callback:
-        (err?: Error, responseBody?: any, result?: any, pollingInterval?:
-        number) => void)
+        function registerX509(registrationId: string, authorization: X509,
+        forceRegistration: boolean, callback: (err?: Error, assignedHub?:
+        string, deviceId?: string, responseBody?: any, result?: any) => void)
       parameters:
         - id: registrationId
           type:
@@ -126,11 +77,7 @@ items:
           description: ''
         - id: authorization
           type:
-            - Authentication
-          description: ''
-        - id: requestBody
-          type:
-            - any
+            - X509
           description: ''
         - id: forceRegistration
           type:
@@ -139,40 +86,22 @@ items:
         - id: callback
           type:
             - >-
-              (err?: Error, responseBody?: any, result?: any, pollingInterval?:
-              number) => void
+              (err?: Error, assignedHub?: string, deviceId?: string,
+              responseBody?: any, result?: any) => void
           description: ''
     module: Global
-  - uid: azure-iot-provisioning-device-http.Http.setClientConfig
-    name: setClientConfig
+  - uid: azure-iot-provisioning-device-http.Http.setTransportOptions
+    name: setTransportOptions
     children: []
     type: method
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'function setClientConfig(config: ClientConfiguration)'
+      content: 'function setTransportOptions(options: ProvisioningTransportOptions)'
       parameters:
-        - id: config
+        - id: options
           type:
-            - ClientConfiguration
+            - ProvisioningTransportOptions
           description: ''
-    module: Global
-  - uid: azure-iot-provisioning-device-http.Http.createDeviceClient
-    name: createDeviceClient
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'static function createDeviceClient(idScope: string)'
-      parameters:
-        - id: idScope
-          type:
-            - string
-          description: ''
-      return:
-        type:
-          - ProvisioningDeviceClient
     module: Global

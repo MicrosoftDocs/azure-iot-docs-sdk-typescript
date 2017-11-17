@@ -1,43 +1,43 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-iot-provisioning-device.ClientStateMachine
-    name: ClientStateMachine
-    fullName: ClientStateMachine
+  - uid: azure-iot-provisioning-device.PollingStateMachine
+    name: PollingStateMachine
+    fullName: PollingStateMachine
     children:
-      - azure-iot-provisioning-device.ClientStateMachine.constructor
-      - azure-iot-provisioning-device.ClientStateMachine.endSession
-      - azure-iot-provisioning-device.ClientStateMachine.register
+      - azure-iot-provisioning-device.PollingStateMachine.constructor
+      - azure-iot-provisioning-device.PollingStateMachine.endSession
+      - azure-iot-provisioning-device.PollingStateMachine.register
     langs:
       - typeScript
     type: class
     summary: ''
     extends:
-      name: '@azure-iot-provisioning-device.ClientStateMachine'
+      name: '@azure-iot-provisioning-device.PollingStateMachine'
     source:
-      path: client_state_machine.ts
+      path: polling_state_machine.ts
       startLine: 13
       remote:
-        path: provisioning/device/src\client_state_machine.ts
+        path: provisioning/device/src\polling_state_machine.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device
     module: Global
-  - uid: azure-iot-provisioning-device.ClientStateMachine.constructor
-    name: ClientStateMachine
+  - uid: azure-iot-provisioning-device.PollingStateMachine.constructor
+    name: PollingStateMachine
     children: []
     type: constructor
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'new ClientStateMachine(transport: TransportHandlers)'
+      content: 'new PollingStateMachine(transport: PollingTransportHandlers)'
       parameters:
         - id: transport
           type:
-            - '@azure-iot-provisioning-device.TransportHandlers'
+            - '@azure-iot-provisioning-device.PollingTransportHandlers'
           description: ''
     module: Global
-  - uid: azure-iot-provisioning-device.ClientStateMachine.endSession
+  - uid: azure-iot-provisioning-device.PollingStateMachine.endSession
     name: endSession
     children: []
     type: method
@@ -52,7 +52,7 @@ items:
             - '(err: Error) => void'
           description: ''
     module: Global
-  - uid: azure-iot-provisioning-device.ClientStateMachine.register
+  - uid: azure-iot-provisioning-device.PollingStateMachine.register
     name: register
     children: []
     type: method
@@ -61,9 +61,10 @@ items:
     summary: ''
     syntax:
       content: >-
-        function register(registrationId: string, authorization: Authentication,
-        requestBody: any, forceRegistration: boolean, callback:
-        ResponseCallback)
+        function register(registrationId: string, authorization:
+        ProvisioningAuthentication, requestBody: any, forceRegistration:
+        boolean, callback: (err?: Error, responseBody?: any, result?: any) =>
+        void)
       parameters:
         - id: registrationId
           type:
@@ -71,7 +72,7 @@ items:
           description: ''
         - id: authorization
           type:
-            - Authentication
+            - ProvisioningAuthentication
           description: ''
         - id: requestBody
           type:
@@ -83,6 +84,6 @@ items:
           description: ''
         - id: callback
           type:
-            - ResponseCallback
+            - '(err?: Error, responseBody?: any, result?: any) => void'
           description: ''
     module: Global

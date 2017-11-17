@@ -1,0 +1,102 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-device.ProvisioningDeviceConstants
+    name: ProvisioningDeviceConstants
+    fullName: ProvisioningDeviceConstants
+    children:
+      - azure-iot-provisioning-device.ProvisioningDeviceConstants.apiVersion
+      - >-
+        azure-iot-provisioning-device.ProvisioningDeviceConstants.defaultPollingInterval
+      - >-
+        azure-iot-provisioning-device.ProvisioningDeviceConstants.defaultProvisioningHost
+      - >-
+        azure-iot-provisioning-device.ProvisioningDeviceConstants.defaultTimeoutInterval
+      - azure-iot-provisioning-device.ProvisioningDeviceConstants.userAgent
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    source:
+      path: constants.ts
+      startLine: 9
+      remote:
+        path: provisioning/device/src\constants.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-provisioning-device
+    module: Global
+  - uid: azure-iot-provisioning-device.ProvisioningDeviceConstants.apiVersion
+    name: apiVersion
+    fullName: apiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: apiVersion to use while communicating with service.
+    syntax:
+      content: static string apiVersion
+      return:
+        type:
+          - string
+    module: Global
+  - uid: >-
+      azure-iot-provisioning-device.ProvisioningDeviceConstants.defaultPollingInterval
+    name: defaultPollingInterval
+    fullName: defaultPollingInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Default interval for polling, to use in case service doesn't provide it to
+      us.
+    syntax:
+      content: static number defaultPollingInterval
+      return:
+        type:
+          - number
+    module: Global
+  - uid: >-
+      azure-iot-provisioning-device.ProvisioningDeviceConstants.defaultProvisioningHost
+    name: defaultProvisioningHost
+    fullName: defaultProvisioningHost
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Default host for the provisioning service
+    syntax:
+      content: static string defaultProvisioningHost
+      return:
+        type:
+          - string
+    module: Global
+  - uid: >-
+      azure-iot-provisioning-device.ProvisioningDeviceConstants.defaultTimeoutInterval
+    name: defaultTimeoutInterval
+    fullName: defaultTimeoutInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: default timeout to use when communicating with the service
+    syntax:
+      content: static number defaultTimeoutInterval
+      return:
+        type:
+          - number
+    module: Global
+  - uid: azure-iot-provisioning-device.ProvisioningDeviceConstants.userAgent
+    name: userAgent
+    fullName: userAgent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: User-Agent string passed to the service as part of communication
+    syntax:
+      content: static string userAgent
+      return:
+        type:
+          - string
+    module: Global

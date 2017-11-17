@@ -1,30 +1,31 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-iot-provisioning-device.TransportHandlers
-    name: TransportHandlers
-    fullName: TransportHandlers
+  - uid: azure-iot-provisioning-device.PollingTransportHandlers
+    name: PollingTransportHandlers
+    fullName: PollingTransportHandlers
     children:
-      - azure-iot-provisioning-device.TransportHandlers.endSession
-      - azure-iot-provisioning-device.TransportHandlers.getErrorResult
-      - azure-iot-provisioning-device.TransportHandlers.queryOperationStatus
-      - azure-iot-provisioning-device.TransportHandlers.registrationRequest
-      - azure-iot-provisioning-device.TransportHandlers.setClientConfig
+      - azure-iot-provisioning-device.PollingTransportHandlers.endSession
+      - azure-iot-provisioning-device.PollingTransportHandlers.getErrorResult
+      - >-
+        azure-iot-provisioning-device.PollingTransportHandlers.queryOperationStatus
+      - >-
+        azure-iot-provisioning-device.PollingTransportHandlers.registrationRequest
+      - >-
+        azure-iot-provisioning-device.PollingTransportHandlers.setTransportOptions
     langs:
       - typeScript
     type: interface
-    summary: >-
-      Interface that all provisioning transports must implement in order to
-      support the provisioning service
+    summary: ''
     source:
       path: interfaces.ts
-      startLine: 62
+      startLine: 51
       remote:
         path: provisioning/device/src\interfaces.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device
     module: Global
-  - uid: azure-iot-provisioning-device.TransportHandlers.endSession
+  - uid: azure-iot-provisioning-device.PollingTransportHandlers.endSession
     name: endSession
     children: []
     type: method
@@ -39,7 +40,7 @@ items:
             - '(err?: Error) => void'
           description: ''
     module: Global
-  - uid: azure-iot-provisioning-device.TransportHandlers.getErrorResult
+  - uid: azure-iot-provisioning-device.PollingTransportHandlers.getErrorResult
     name: getErrorResult
     children: []
     type: method
@@ -57,7 +58,8 @@ items:
         type:
           - any
     module: Global
-  - uid: azure-iot-provisioning-device.TransportHandlers.queryOperationStatus
+  - uid: >-
+      azure-iot-provisioning-device.PollingTransportHandlers.queryOperationStatus
     name: queryOperationStatus
     children: []
     type: method
@@ -85,7 +87,7 @@ items:
               => void
           description: ''
     module: Global
-  - uid: azure-iot-provisioning-device.TransportHandlers.registrationRequest
+  - uid: azure-iot-provisioning-device.PollingTransportHandlers.registrationRequest
     name: registrationRequest
     children: []
     type: method
@@ -122,18 +124,18 @@ items:
               => void
           description: ''
     module: Global
-  - uid: azure-iot-provisioning-device.TransportHandlers.setClientConfig
-    name: setClientConfig
+  - uid: azure-iot-provisioning-device.PollingTransportHandlers.setTransportOptions
+    name: setTransportOptions
     children: []
     type: method
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'function setClientConfig(config: ClientConfiguration)'
+      content: 'function setTransportOptions(options: ProvisioningTransportOptions)'
       parameters:
-        - id: config
+        - id: options
           type:
-            - '@azure-iot-provisioning-device.ClientConfiguration'
+            - '@azure-iot-provisioning-device.ProvisioningTransportOptions'
           description: ''
     module: Global

@@ -1,0 +1,115 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-device.TpmSecurityClient
+    name: TpmSecurityClient
+    fullName: TpmSecurityClient
+    children:
+      - azure-iot-provisioning-device.TpmSecurityClient.activateIdentityKey
+      - azure-iot-provisioning-device.TpmSecurityClient.cancel
+      - azure-iot-provisioning-device.TpmSecurityClient.getEndorsementKey
+      - azure-iot-provisioning-device.TpmSecurityClient.getStorageRootKey
+      - azure-iot-provisioning-device.TpmSecurityClient.signWithIdentity
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    source:
+      path: interfaces.ts
+      startLine: 82
+      remote:
+        path: provisioning/device/src\interfaces.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-provisioning-device
+    module: Global
+  - uid: azure-iot-provisioning-device.TpmSecurityClient.activateIdentityKey
+    name: activateIdentityKey
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function activateIdentityKey(key: string, callback: (err: Error) =>
+        void)
+      parameters:
+        - id: key
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - '(err: Error) => void'
+          description: ''
+    module: Global
+  - uid: azure-iot-provisioning-device.TpmSecurityClient.cancel
+    name: cancel
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function cancel(callback: (err: Error) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err: Error) => void'
+          description: ''
+    module: Global
+  - uid: azure-iot-provisioning-device.TpmSecurityClient.getEndorsementKey
+    name: getEndorsementKey
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getEndorsementKey(callback: (err: Error, endorsementKey?:
+        string) => void)
+      parameters:
+        - id: callback
+          type:
+            - '(err: Error, endorsementKey?: string) => void'
+          description: ''
+    module: Global
+  - uid: azure-iot-provisioning-device.TpmSecurityClient.getStorageRootKey
+    name: getStorageRootKey
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getStorageRootKey(callback: (err: Error, storageRootKey?:
+        string) => void)
+      parameters:
+        - id: callback
+          type:
+            - '(err: Error, storageRootKey?: string) => void'
+          description: ''
+    module: Global
+  - uid: azure-iot-provisioning-device.TpmSecurityClient.signWithIdentity
+    name: signWithIdentity
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function signWithIdentity(toSign: string, callback: (err: Error,
+        signedData?: string) => void)
+      parameters:
+        - id: toSign
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - '(err: Error, signedData?: string) => void'
+          description: ''
+    module: Global

@@ -4,6 +4,7 @@ items:
     name: X509SecurityClient
     fullName: X509SecurityClient
     children:
+      - azure-iot-security-x509.X509SecurityClient.constructor
       - azure-iot-security-x509.X509SecurityClient.getCertificate
       - azure-iot-security-x509.X509SecurityClient.getCertificateChain
     langs:
@@ -19,6 +20,21 @@ items:
         branch: master
     package: azure-iot-security-x509
     module: Global
+  - uid: azure-iot-security-x509.X509SecurityClient.constructor
+    name: X509SecurityClient
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new X509SecurityClient(cert: X509)'
+      parameters:
+        - id: cert
+          type:
+            - X509
+          description: ''
+    module: Global
   - uid: azure-iot-security-x509.X509SecurityClient.getCertificate
     name: getCertificate
     children: []
@@ -27,11 +43,11 @@ items:
       - typeScript
     summary: ''
     syntax:
-      content: 'function getCertificate(callback: (err?: Error, cert?: string) => void)'
+      content: 'function getCertificate(callback: (err?: Error, cert?: X509) => void)'
       parameters:
         - id: callback
           type:
-            - '(err?: Error, cert?: string) => void'
+            - '(err?: Error, cert?: X509) => void'
           description: ''
     module: Global
   - uid: azure-iot-security-x509.X509SecurityClient.getCertificateChain

@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-device.ProvisioningTransportHandlersX509
+    name: ProvisioningTransportHandlersX509
+    fullName: ProvisioningTransportHandlersX509
+    children:
+      - >-
+        azure-iot-provisioning-device.ProvisioningTransportHandlersX509.registerX509
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    extends:
+      name: '@azure-iot-provisioning-device.ProvisioningTransportHandlersBase'
+    source:
+      path: interfaces.ts
+      startLine: 47
+      remote:
+        path: provisioning/device/src\interfaces.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-provisioning-device
+  - uid: >-
+      azure-iot-provisioning-device.ProvisioningTransportHandlersX509.registerX509
+    name: registerX509
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function registerX509(registrationId: string, authorization: X509,
+        forceRegistration: boolean, callback: (err?: Error, assignedHub?:
+        string, deviceId?: string, body?: any, result?: any) => void)
+      parameters:
+        - id: registrationId
+          type:
+            - string
+          description: ''
+        - id: authorization
+          type:
+            - X509
+          description: ''
+        - id: forceRegistration
+          type:
+            - boolean
+          description: ''
+        - id: callback
+          type:
+            - >-
+              (err?: Error, assignedHub?: string, deviceId?: string, body?: any,
+              result?: any) => void
+          description: ''

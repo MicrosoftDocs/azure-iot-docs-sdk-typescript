@@ -5,21 +5,51 @@ items:
     summary: ''
     children:
       - azure-iot-provisioning-device.ProvisioningDeviceClient
-      - azure-iot-provisioning-device.ClientStateMachine
-      - azure-iot-provisioning-device.ClientConfiguration
-      - azure-iot-provisioning-device.DeviceConfiguration
-      - azure-iot-provisioning-device.TransportHandlers
+      - azure-iot-provisioning-device.ProvisioningDeviceConstants
+      - azure-iot-provisioning-device.PollingTransportHandlers
+      - azure-iot-provisioning-device.ProvisioningDeviceConfiguration
+      - azure-iot-provisioning-device.ProvisioningTransportHandlersBase
+      - azure-iot-provisioning-device.ProvisioningTransportHandlersX509
+      - azure-iot-provisioning-device.ProvisioningTransportOptions
+      - azure-iot-provisioning-device.RegistrationClient
+      - azure-iot-provisioning-device.TpmChallenge
+      - azure-iot-provisioning-device.TpmProvisioningTransport
+      - azure-iot-provisioning-device.TpmRegistrationInfo
+      - azure-iot-provisioning-device.TpmRegistrationResult
+      - azure-iot-provisioning-device.TpmSecurityClient
+      - azure-iot-provisioning-device.PollingStateMachine
+      - azure-iot-provisioning-device.TpmRegistration
     type: package
     langs:
       - typeScript
 references:
   - uid: azure-iot-provisioning-device.ProvisioningDeviceClient
     name: ProvisioningDeviceClient
-  - uid: azure-iot-provisioning-device.ClientStateMachine
-    name: ClientStateMachine
-  - uid: azure-iot-provisioning-device.ClientConfiguration
-    name: ClientConfiguration
-  - uid: azure-iot-provisioning-device.DeviceConfiguration
-    name: DeviceConfiguration
-  - uid: azure-iot-provisioning-device.TransportHandlers
-    name: TransportHandlers
+  - uid: azure-iot-provisioning-device.ProvisioningDeviceConstants
+    name: ProvisioningDeviceConstants
+  - uid: azure-iot-provisioning-device.PollingTransportHandlers
+    name: PollingTransportHandlers
+  - uid: azure-iot-provisioning-device.ProvisioningDeviceConfiguration
+    name: ProvisioningDeviceConfiguration
+  - uid: azure-iot-provisioning-device.ProvisioningTransportHandlersBase
+    name: ProvisioningTransportHandlersBase
+  - uid: azure-iot-provisioning-device.ProvisioningTransportHandlersX509
+    name: ProvisioningTransportHandlersX509
+  - uid: azure-iot-provisioning-device.ProvisioningTransportOptions
+    name: ProvisioningTransportOptions
+  - uid: azure-iot-provisioning-device.RegistrationClient
+    name: RegistrationClient
+  - uid: azure-iot-provisioning-device.TpmChallenge
+    name: TpmChallenge
+  - uid: azure-iot-provisioning-device.TpmProvisioningTransport
+    name: TpmProvisioningTransport
+  - uid: azure-iot-provisioning-device.TpmRegistrationInfo
+    name: TpmRegistrationInfo
+  - uid: azure-iot-provisioning-device.TpmRegistrationResult
+    name: TpmRegistrationResult
+  - uid: azure-iot-provisioning-device.TpmSecurityClient
+    name: TpmSecurityClient
+  - uid: azure-iot-provisioning-device.PollingStateMachine
+    name: PollingStateMachine
+  - uid: azure-iot-provisioning-device.TpmRegistration
+    name: TpmRegistration

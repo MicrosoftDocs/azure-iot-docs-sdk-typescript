@@ -1,24 +1,24 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-iot-provisioning-device.DeviceConfiguration
-    name: DeviceConfiguration
-    fullName: DeviceConfiguration
+  - uid: azure-iot-provisioning-device.ProvisioningDeviceConfiguration
+    name: ProvisioningDeviceConfiguration
+    fullName: ProvisioningDeviceConfiguration
     children:
-      - azure-iot-provisioning-device.DeviceConfiguration.deviceId
-      - azure-iot-provisioning-device.DeviceConfiguration.iotHubUri
+      - azure-iot-provisioning-device.ProvisioningDeviceConfiguration.deviceId
+      - azure-iot-provisioning-device.ProvisioningDeviceConfiguration.iotHubUri
     langs:
       - typeScript
     type: interface
     summary: Device configuration returned when registration is complete
     source:
       path: interfaces.ts
-      startLine: 54
+      startLine: 33
       remote:
         path: provisioning/device/src\interfaces.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device
-  - uid: azure-iot-provisioning-device.DeviceConfiguration.deviceId
+  - uid: azure-iot-provisioning-device.ProvisioningDeviceConfiguration.deviceId
     name: deviceId
     fullName: deviceId
     children: []
@@ -31,7 +31,7 @@ items:
       return:
         type:
           - string
-  - uid: azure-iot-provisioning-device.DeviceConfiguration.iotHubUri
+  - uid: azure-iot-provisioning-device.ProvisioningDeviceConfiguration.iotHubUri
     name: iotHubUri
     fullName: iotHubUri
     children: []

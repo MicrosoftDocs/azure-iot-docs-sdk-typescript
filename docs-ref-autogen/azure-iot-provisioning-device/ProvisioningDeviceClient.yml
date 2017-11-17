@@ -4,14 +4,8 @@ items:
     name: ProvisioningDeviceClient
     fullName: ProvisioningDeviceClient
     children:
-      - azure-iot-provisioning-device.ProvisioningDeviceClient.apiVersion
-      - azure-iot-provisioning-device.ProvisioningDeviceClient.idScope
-      - azure-iot-provisioning-device.ProvisioningDeviceClient.pollingInterval
-      - azure-iot-provisioning-device.ProvisioningDeviceClient.provisioningHost
-      - azure-iot-provisioning-device.ProvisioningDeviceClient.timeoutInterval
-      - azure-iot-provisioning-device.ProvisioningDeviceClient.userAgent
       - azure-iot-provisioning-device.ProvisioningDeviceClient.endSession
-      - azure-iot-provisioning-device.ProvisioningDeviceClient.register
+      - azure-iot-provisioning-device.ProvisioningDeviceClient.registerX509
       - azure-iot-provisioning-device.ProvisioningDeviceClient.create
     langs:
       - typeScript
@@ -19,92 +13,12 @@ items:
     summary: ''
     source:
       path: client.ts
-      startLine: 13
+      startLine: 10
       remote:
         path: provisioning/device/src\client.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device
-  - uid: azure-iot-provisioning-device.ProvisioningDeviceClient.apiVersion
-    name: apiVersion
-    fullName: apiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: apiVersion to use while communicating with service.
-    syntax:
-      content: string apiVersion
-      return:
-        type:
-          - string
-  - uid: azure-iot-provisioning-device.ProvisioningDeviceClient.idScope
-    name: idScope
-    fullName: idScope
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: idScope to use when communicating with the provisioning service
-    syntax:
-      content: string idScope
-      return:
-        type:
-          - string
-  - uid: azure-iot-provisioning-device.ProvisioningDeviceClient.pollingInterval
-    name: pollingInterval
-    fullName: pollingInterval
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      Default interval for polling, to use in case service doesn't provide it to
-      us.
-    syntax:
-      content: number pollingInterval
-      return:
-        type:
-          - number
-  - uid: azure-iot-provisioning-device.ProvisioningDeviceClient.provisioningHost
-    name: provisioningHost
-    fullName: provisioningHost
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Default host for the provisioning service
-    syntax:
-      content: string provisioningHost
-      return:
-        type:
-          - string
-  - uid: azure-iot-provisioning-device.ProvisioningDeviceClient.timeoutInterval
-    name: timeoutInterval
-    fullName: timeoutInterval
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: default timeout to use when communicating with the service
-    syntax:
-      content: number timeoutInterval
-      return:
-        type:
-          - number
-  - uid: azure-iot-provisioning-device.ProvisioningDeviceClient.userAgent
-    name: userAgent
-    fullName: userAgent
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: User-Agent string passed to the service as part of communication
-    syntax:
-      content: string userAgent
-      return:
-        type:
-          - string
   - uid: azure-iot-provisioning-device.ProvisioningDeviceClient.endSession
     name: endSession
     children: []
@@ -119,8 +33,8 @@ items:
           type:
             - '(err?: Error) => void'
           description: ''
-  - uid: azure-iot-provisioning-device.ProvisioningDeviceClient.register
-    name: register
+  - uid: azure-iot-provisioning-device.ProvisioningDeviceClient.registerX509
+    name: registerX509
     children: []
     type: method
     langs:
@@ -128,17 +42,13 @@ items:
     summary: ''
     syntax:
       content: >-
-        function register(registrationId: string, authentication:
-        Authentication, forceRegistration: boolean, callback: (err: Error,
-        deviceConfig?: DeviceConfiguration) => void)
+        function registerX509(registrationId: string, forceRegistration:
+        boolean, callback: (err: Error, deviceConfig?:
+        ProvisioningDeviceConfiguration) => void)
       parameters:
         - id: registrationId
           type:
             - string
-          description: ''
-        - id: authentication
-          type:
-            - Authentication
           description: ''
         - id: forceRegistration
           type:
@@ -146,7 +56,9 @@ items:
           description: ''
         - id: callback
           type:
-            - '(err: Error, deviceConfig?: DeviceConfiguration) => void'
+            - >-
+              (err: Error, deviceConfig?: ProvisioningDeviceConfiguration) =>
+              void
           description: ''
   - uid: azure-iot-provisioning-device.ProvisioningDeviceClient.create
     name: create
@@ -156,17 +68,18 @@ items:
       - typeScript
     summary: Factory method to use to create a DeviceClient object.
     syntax:
-      content: 'static function create(transport: TransportHandlers, idScope: string)'
+      content: >-
+        static function create(transport: ProvisioningTransportHandlersBase,
+        securityClient: any)
       parameters:
         - id: transport
           type:
-            - '@azure-iot-provisioning-device.TransportHandlers'
+            - '@azure-iot-provisioning-device.ProvisioningTransportHandlersBase'
           description: Transport instance to use
-        - id: idScope
+        - id: securityClient
           type:
-            - string
-          description: |
-            Scope ID assigned to the current provisioning service instance
+            - any
+          description: ''
       return:
         type:
           - '@azure-iot-provisioning-device.ProvisioningDeviceClient'

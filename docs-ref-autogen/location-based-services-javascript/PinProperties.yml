@@ -29,10 +29,14 @@ items:
     type: property
     summary: The icon to display for the point.
     syntax:
-      content: function icon
+      content: >-
+        "pin-darkblue" | "pin-blue" | "pin-red" | "pin-round-darkblue" |
+        "pin-round-blue" | "pin-round-red" | "none" | string icon
       return:
         type:
-          - function
+          - >-
+            "pin-darkblue" | "pin-blue" | "pin-red" | "pin-round-darkblue" |
+            "pin-round-blue" | "pin-round-red" | "none" | string
     module: Object Definitions
   - uid: location-based-services-javascript.PinProperties.title
     name: title

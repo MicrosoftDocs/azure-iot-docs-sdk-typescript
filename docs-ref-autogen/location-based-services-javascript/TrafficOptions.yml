@@ -43,10 +43,10 @@ items:
 
       false to stop displaying the traffic flow.</p>
     syntax:
-      content: function flow
+      content: '"none" | "relative" | "absolute" | "relative-delay" flow'
       return:
         type:
-          - function
+          - '"none" | "relative" | "absolute" | "relative-delay"'
     module: Object Definitions
   - uid: location-based-services-javascript.TrafficOptions.incidents
     name: incidents

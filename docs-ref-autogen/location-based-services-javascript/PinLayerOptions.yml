@@ -97,10 +97,14 @@ items:
     type: property
     summary: ''
     syntax:
-      content: function icon
+      content: >-
+        "pin-darkblue" | "pin-blue" | "pin-red" | "pin-round-darkblue" |
+        "pin-round-blue" | "pin-round-red" | "none" icon
       return:
         type:
-          - function
+          - >-
+            "pin-darkblue" | "pin-blue" | "pin-red" | "pin-round-darkblue" |
+            "pin-round-blue" | "pin-round-red" | "none"
     module: Object Definitions
   - uid: location-based-services-javascript.PinLayerOptions.iconSize
     name: iconSize
@@ -143,10 +147,14 @@ items:
     type: property
     summary: The font for the title of the pin.
     syntax:
-      content: function textFont
+      content: >-
+        "SegoeUi-Bold" | "SegoeUi-Regular" | "StandardFont-Bold" |
+        "StandardFont-Regular" textFont
       return:
         type:
-          - function
+          - >-
+            "SegoeUi-Bold" | "SegoeUi-Regular" | "StandardFont-Bold" |
+            "StandardFont-Regular"
     module: Object Definitions
   - uid: location-based-services-javascript.PinLayerOptions.textOffset
     name: textOffset

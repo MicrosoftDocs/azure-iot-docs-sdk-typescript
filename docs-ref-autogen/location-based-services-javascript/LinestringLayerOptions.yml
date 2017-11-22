@@ -46,10 +46,10 @@ items:
       <p>"square" is a squared ending that is drawn past the exact endpoint by
       half the linestring's width.
     syntax:
-      content: function cap
+      content: '"butt" | "round" | "square" cap'
       return:
         type:
-          - function
+          - '"butt" | "round" | "square"'
     module: Object Definitions
   - uid: location-based-services-javascript.LinestringLayerOptions.color
     name: color
@@ -86,10 +86,10 @@ items:
       <p>"miter" is a sharp join that extends the segments of the linestring
       past the vertex until they intersect.</p>
     syntax:
-      content: function join
+      content: '"bevel" | "round" | "miter" join'
       return:
         type:
-          - function
+          - '"bevel" | "round" | "miter"'
     module: Object Definitions
   - uid: location-based-services-javascript.LinestringLayerOptions.name
     name: name

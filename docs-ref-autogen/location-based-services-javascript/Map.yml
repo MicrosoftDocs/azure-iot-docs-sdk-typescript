@@ -107,7 +107,10 @@ items:
       listener will be added to the map canvas
 
       container; otherwise, the event listener will be added to the specified
-      layer of the map.
+      layer of the map. Event listeners can
+
+      not be added to the default "base", "transit" and "labels" layers of the
+      map.
     syntax:
       content: 'function addEventListener(type: string, callback: any)'
       parameters:
@@ -136,7 +139,10 @@ items:
       listener will be added to the map canvas
 
       container; otherwise, the event listener will be added to the specified
-      layer of the map.
+      layer of the map. Event listeners can
+
+      not be added to the default "base", "transit" and "labels" layers of the
+      map.
     syntax:
       content: 'function addEventListener(type: string, layer: string, callback: any)'
       parameters:

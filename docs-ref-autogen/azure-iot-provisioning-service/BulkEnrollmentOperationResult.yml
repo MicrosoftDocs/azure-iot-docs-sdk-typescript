@@ -32,11 +32,10 @@ items:
       a runBulkEnrollmentOperation invocation.  The array will be zero length if
       isSuccessful is true.
     syntax:
-      content: Array<DeviceRegistrationOperationError> errors
+      content: Array<BulkEnrollmentOperationError> errors
       return:
         type:
-          - >-
-            Array<@azure-iot-provisioning-service.DeviceRegistrationOperationError>
+          - Array<@azure-iot-provisioning-service.BulkEnrollmentOperationError>
     module: Global
   - uid: azure-iot-provisioning-service.BulkEnrollmentOperationResult.isSuccessful
     name: isSuccessful

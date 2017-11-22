@@ -4,8 +4,6 @@ items:
     name: ProvisioningDeviceClient
     fullName: ProvisioningDeviceClient
     children:
-      - azure-iot-provisioning-device.ProvisioningDeviceClient.endSession
-      - azure-iot-provisioning-device.ProvisioningDeviceClient.registerX509
       - azure-iot-provisioning-device.ProvisioningDeviceClient.create
     langs:
       - typeScript
@@ -13,55 +11,12 @@ items:
     summary: ''
     source:
       path: client.ts
-      startLine: 10
+      startLine: 9
       remote:
         path: provisioning/device/src\client.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device
-    module: Global
-  - uid: azure-iot-provisioning-device.ProvisioningDeviceClient.endSession
-    name: endSession
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'function endSession(callback: (err?: Error) => void)'
-      parameters:
-        - id: callback
-          type:
-            - '(err?: Error) => void'
-          description: ''
-    module: Global
-  - uid: azure-iot-provisioning-device.ProvisioningDeviceClient.registerX509
-    name: registerX509
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: >-
-        function registerX509(registrationId: string, forceRegistration:
-        boolean, callback: (err: Error, deviceConfig?:
-        ProvisioningDeviceConfiguration) => void)
-      parameters:
-        - id: registrationId
-          type:
-            - string
-          description: ''
-        - id: forceRegistration
-          type:
-            - boolean
-          description: ''
-        - id: callback
-          type:
-            - >-
-              (err: Error, deviceConfig?: ProvisioningDeviceConfiguration) =>
-              void
-          description: ''
     module: Global
   - uid: azure-iot-provisioning-device.ProvisioningDeviceClient.create
     name: create
@@ -71,13 +26,11 @@ items:
       - typeScript
     summary: Factory method to use to create a DeviceClient object.
     syntax:
-      content: >-
-        static function create(transport: ProvisioningTransportHandlersBase,
-        securityClient: any)
+      content: 'static function create(transport: any, securityClient: any)'
       parameters:
         - id: transport
           type:
-            - '@azure-iot-provisioning-device.ProvisioningTransportHandlersBase'
+            - any
           description: Transport instance to use
         - id: securityClient
           type:
@@ -85,5 +38,5 @@ items:
           description: ''
       return:
         type:
-          - '@azure-iot-provisioning-device.ProvisioningDeviceClient'
+          - '@azure-iot-provisioning-device.RegistrationClient'
     module: Global

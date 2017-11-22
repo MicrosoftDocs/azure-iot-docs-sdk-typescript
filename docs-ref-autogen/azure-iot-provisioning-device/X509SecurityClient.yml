@@ -1,41 +1,25 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-iot-security-x509.X509SecurityClient
+  - uid: azure-iot-provisioning-device.X509SecurityClient
     name: X509SecurityClient
     fullName: X509SecurityClient
     children:
-      - azure-iot-security-x509.X509SecurityClient.constructor
-      - azure-iot-security-x509.X509SecurityClient.getCertificate
-      - azure-iot-security-x509.X509SecurityClient.getCertificateChain
+      - azure-iot-provisioning-device.X509SecurityClient.getCertificate
+      - azure-iot-provisioning-device.X509SecurityClient.getCertificateChain
     langs:
       - typeScript
-    type: class
+    type: interface
     summary: ''
     source:
-      path: x509.ts
-      startLine: 7
+      path: interfaces.ts
+      startLine: 56
       remote:
-        path: security/x509/src\x509.ts
+        path: provisioning/device/src\interfaces.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
-    package: azure-iot-security-x509
+    package: azure-iot-provisioning-device
     module: Global
-  - uid: azure-iot-security-x509.X509SecurityClient.constructor
-    name: X509SecurityClient
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'new X509SecurityClient(cert: X509)'
-      parameters:
-        - id: cert
-          type:
-            - X509
-          description: ''
-    module: Global
-  - uid: azure-iot-security-x509.X509SecurityClient.getCertificate
+  - uid: azure-iot-provisioning-device.X509SecurityClient.getCertificate
     name: getCertificate
     children: []
     type: method
@@ -50,7 +34,7 @@ items:
             - '(err?: Error, cert?: X509) => void'
           description: ''
     module: Global
-  - uid: azure-iot-security-x509.X509SecurityClient.getCertificateChain
+  - uid: azure-iot-provisioning-device.X509SecurityClient.getCertificateChain
     name: getCertificateChain
     children: []
     type: method

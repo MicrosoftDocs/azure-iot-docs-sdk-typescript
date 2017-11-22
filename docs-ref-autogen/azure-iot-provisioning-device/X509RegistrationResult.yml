@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-device.X509RegistrationResult
+    name: X509RegistrationResult
+    fullName: X509RegistrationResult
+    children:
+      - azure-iot-provisioning-device.X509RegistrationResult.assignedHub
+      - azure-iot-provisioning-device.X509RegistrationResult.deviceId
+    langs:
+      - typeScript
+    type: interface
+    summary: Device configuration returned when registration using X509 is complete
+    source:
+      path: interfaces.ts
+      startLine: 36
+      remote:
+        path: provisioning/device/src\interfaces.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-provisioning-device
+    module: Global
+  - uid: azure-iot-provisioning-device.X509RegistrationResult.assignedHub
+    name: assignedHub
+    fullName: assignedHub
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: IoT Hub where the provisioned device is located
+    syntax:
+      content: string assignedHub
+      return:
+        type:
+          - string
+    module: Global
+  - uid: azure-iot-provisioning-device.X509RegistrationResult.deviceId
+    name: deviceId
+    fullName: deviceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: deviceId for the provisioned device
+    syntax:
+      content: string deviceId
+      return:
+        type:
+          - string
+    module: Global

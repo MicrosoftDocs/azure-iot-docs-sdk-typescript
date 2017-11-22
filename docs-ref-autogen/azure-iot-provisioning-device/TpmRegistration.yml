@@ -40,7 +40,7 @@ items:
           description: ''
         - id: transport
           type:
-            - '@azure-iot-provisioning-device.TpmProvisioningTransport'
+            - TpmProvisioningTransport
           description: ''
         - id: securityClient
           type:
@@ -70,10 +70,20 @@ items:
       - typeScript
     summary: ''
     syntax:
-      content: 'function register(callback: (err?: Error) => void)'
+      content: >-
+        function register(registrationId: string, forceRegistration: boolean,
+        callback: (err?: Error, result?: any) => void)
       parameters:
+        - id: registrationId
+          type:
+            - string
+          description: ''
+        - id: forceRegistration
+          type:
+            - boolean
+          description: ''
         - id: callback
           type:
-            - '(err?: Error) => void'
+            - '(err?: Error, result?: any) => void'
           description: ''
     module: Global

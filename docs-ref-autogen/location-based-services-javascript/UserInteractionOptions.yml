@@ -44,6 +44,7 @@ items:
       - typeScript
     type: property
     summary: Whether the Shift + left click and drag will draw a zoom box.
+    optional: true
     syntax:
       content: boolean boxZoomInteraction
       return:
@@ -59,6 +60,7 @@ items:
       - typeScript
     type: property
     summary: Whether double left click will zoom the map inwards.
+    optional: true
     syntax:
       content: boolean dblClickZoomInteraction
       return:
@@ -74,6 +76,7 @@ items:
       - typeScript
     type: property
     summary: Whether left click and drag will pan the map.
+    optional: true
     syntax:
       content: boolean dragPanInteraction
       return:
@@ -89,6 +92,7 @@ items:
       - typeScript
     type: property
     summary: Whether right click and drag will rotate and pitch the map.
+    optional: true
     syntax:
       content: boolean dragRotateInteraction
       return:
@@ -107,6 +111,7 @@ items:
       is disabled.  If true, only selected
 
       user interactions will enabled.
+    optional: true
     syntax:
       content: boolean interactive
       return:
@@ -158,6 +163,7 @@ items:
 
       <p><span class="k-key">Shift</span> + <span class="k-key">⇣</span>:
       Decrease pitch by 10 degrees.</p>
+    optional: true
     syntax:
       content: boolean keyboardInteraction
       return:
@@ -173,6 +179,7 @@ items:
       - typeScript
     type: property
     summary: Whether the map should zoom on scroll input.
+    optional: true
     syntax:
       content: boolean scrollZoomInteraction
       return:
@@ -187,6 +194,7 @@ items:
       - typeScript
     type: property
     summary: Whether touch interactions are enabled for touch devices.
+    optional: true
     syntax:
       content: boolean touchInteraction
       return:

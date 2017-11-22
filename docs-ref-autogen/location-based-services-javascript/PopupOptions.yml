@@ -31,6 +31,7 @@ items:
       - typeScript
     type: property
     summary: The content to display within the popup.
+    optional: true
     syntax:
       content: HTMLElement content
       return:
@@ -49,6 +50,7 @@ items:
       down the anchor of the popup should be
 
       offset. Negative numbers can be used to offset the popup left and up.
+    optional: true
     syntax:
       content: 'number[] pixelOffset'
       return:
@@ -63,6 +65,7 @@ items:
       - typeScript
     type: property
     summary: The position on the map where the popup should be anchored.
+    optional: true
     syntax:
       content: Position position
       return:

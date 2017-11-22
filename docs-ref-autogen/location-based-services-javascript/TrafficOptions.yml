@@ -42,6 +42,7 @@ items:
       free-flow;
 
       false to stop displaying the traffic flow.</p>
+    optional: true
     syntax:
       content: '"none" | "relative" | "absolute" | "relative-delay" flow'
       return:
@@ -56,6 +57,7 @@ items:
       - typeScript
     type: property
     summary: Whether to display incidents on the map.
+    optional: true
     syntax:
       content: boolean incidents
       return:

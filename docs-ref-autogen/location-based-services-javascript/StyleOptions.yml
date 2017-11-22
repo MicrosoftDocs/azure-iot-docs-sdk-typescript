@@ -31,6 +31,7 @@ items:
       - typeScript
     type: property
     summary: The language of the map labels.
+    optional: true
     syntax:
       content: string language
       return:
@@ -45,6 +46,7 @@ items:
       - typeScript
     type: property
     summary: The style of the map tiles.
+    optional: true
     syntax:
       content: function style
       return:
@@ -63,6 +65,7 @@ items:
       <p>Unified: The unified view of the world.</p>
       <p>IN: India's view of the world.</p>
       <p>IL: Israel's view of the world.</p>
+    optional: true
     syntax:
       content: '"Unified" | "IN" | "IL" view'
       return:

@@ -45,6 +45,7 @@ items:
 
       <p>"square" is a squared ending that is drawn past the exact endpoint by
       half the linestring's width.
+    optional: true
     syntax:
       content: '"butt" | "round" | "square" cap'
       return:
@@ -59,6 +60,7 @@ items:
       - typeScript
     type: property
     summary: ''
+    optional: true
     syntax:
       content: string color
       return:
@@ -85,6 +87,7 @@ items:
 
       <p>"miter" is a sharp join that extends the segments of the linestring
       past the vertex until they intersect.</p>
+    optional: true
     syntax:
       content: '"bevel" | "round" | "miter" join'
       return:
@@ -99,6 +102,7 @@ items:
       - typeScript
     type: property
     summary: ''
+    optional: true
     syntax:
       content: string name
       return:
@@ -113,6 +117,7 @@ items:
       - typeScript
     type: property
     summary: ''
+    optional: true
     syntax:
       content: number width
       return:

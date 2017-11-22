@@ -35,6 +35,7 @@ items:
     summary: >-
       Default interval for polling, to use in case service doesn't provide it to
       us.
+    optional: true
     syntax:
       content: number pollingInterval
       return:
@@ -50,6 +51,7 @@ items:
       - typeScript
     type: property
     summary: Default host for the provisioning service
+    optional: true
     syntax:
       content: string provisioningHost
       return:
@@ -64,6 +66,7 @@ items:
       - typeScript
     type: property
     summary: default timeout to use when communicating with the service
+    optional: true
     syntax:
       content: number timeoutInterval
       return:

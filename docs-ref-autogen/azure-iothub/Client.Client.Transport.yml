@@ -21,6 +21,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iothub
+    module: Client
   - uid: azure-iothub.Client.Client.Transport.connect
     name: connect
     children: []
@@ -36,6 +37,7 @@ items:
             - Callback<Connected>
           description: ''
           optional: true
+    module: Client
   - uid: azure-iothub.Client.Client.Transport.disconnect
     name: disconnect
     children: []
@@ -50,6 +52,7 @@ items:
           type:
             - Callback<Disconnected>
           description: ''
+    module: Client
   - uid: azure-iothub.Client.Client.Transport.getFeedbackReceiver
     name: getFeedbackReceiver
     children: []
@@ -64,6 +67,7 @@ items:
           type:
             - Callback<@azure-iothub.Client.ServiceReceiver>
           description: ''
+    module: Client
   - uid: azure-iothub.Client.Client.Transport.getFileNotificationReceiver
     name: getFileNotificationReceiver
     children: []
@@ -78,6 +82,7 @@ items:
           type:
             - Callback<@azure-iothub.Client.ServiceReceiver>
           description: ''
+    module: Client
   - uid: azure-iothub.Client.Client.Transport.send
     name: send
     children: []
@@ -103,3 +108,4 @@ items:
             - Callback<MessageEnqueued>
           description: ''
           optional: true
+    module: Client

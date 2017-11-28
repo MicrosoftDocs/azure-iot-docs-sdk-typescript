@@ -42,6 +42,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-device
+    module: Global
   - uid: azure-iot-device.Twin.properties
     name: properties
     fullName: properties
@@ -57,6 +58,7 @@ items:
       return:
         type:
           - any
+    module: Global
   - uid: azure-iot-device.Twin.desiredPath
     name: desiredPath
     fullName: desiredPath
@@ -70,6 +72,7 @@ items:
       return:
         type:
           - string
+    module: Global
   - uid: azure-iot-device.Twin.errorEvent
     name: errorEvent
     fullName: errorEvent
@@ -83,6 +86,7 @@ items:
       return:
         type:
           - string
+    module: Global
   - uid: azure-iot-device.Twin.postEvent
     name: postEvent
     fullName: postEvent
@@ -96,6 +100,7 @@ items:
       return:
         type:
           - string
+    module: Global
   - uid: azure-iot-device.Twin.responseEvent
     name: responseEvent
     fullName: responseEvent
@@ -109,6 +114,7 @@ items:
       return:
         type:
           - string
+    module: Global
   - uid: azure-iot-device.Twin.subscribedEvent
     name: subscribedEvent
     fullName: subscribedEvent
@@ -122,6 +128,7 @@ items:
       return:
         type:
           - string
+    module: Global
   - uid: azure-iot-device.Twin.timeout
     name: timeout
     fullName: timeout
@@ -135,3 +142,4 @@ items:
       return:
         type:
           - number
+    module: Global

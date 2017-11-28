@@ -30,6 +30,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-device
+    module: Global
   - uid: azure-iot-device.DeviceMethodResponse.constructor
     name: DeviceMethodResponse
     children: []
@@ -48,6 +49,7 @@ items:
           type:
             - '@azure-iot-device.Client.Transport'
           description: ''
+    module: Global
   - uid: azure-iot-device.DeviceMethodResponse.isResponseComplete
     name: isResponseComplete
     fullName: isResponseComplete
@@ -61,6 +63,7 @@ items:
       return:
         type:
           - boolean
+    module: Global
   - uid: azure-iot-device.DeviceMethodResponse.payload
     name: payload
     fullName: payload
@@ -74,6 +77,7 @@ items:
       return:
         type:
           - any
+    module: Global
   - uid: azure-iot-device.DeviceMethodResponse.requestId
     name: requestId
     fullName: requestId
@@ -89,6 +93,7 @@ items:
       return:
         type:
           - string
+    module: Global
   - uid: azure-iot-device.DeviceMethodResponse.status
     name: status
     fullName: status
@@ -104,6 +109,7 @@ items:
       return:
         type:
           - number
+    module: Global
   - uid: azure-iot-device.DeviceMethodResponse.send
     name: send
     children: []
@@ -148,3 +154,4 @@ items:
           If this response has already been sent to the
                                          service in a previous call to it. This method
                                          should be called only once.
+    module: Global

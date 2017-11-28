@@ -19,6 +19,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iothub
+    module: Global
   - uid: azure-iothub.Device.Authentication.SymmetricKey
     name: SymmetricKey
     fullName: SymmetricKey
@@ -33,6 +34,7 @@ items:
       return:
         type:
           - _SymmetricKey
+    module: Global
   - uid: azure-iothub.Device.Authentication.symmetricKey
     name: symmetricKey
     fullName: symmetricKey
@@ -47,6 +49,7 @@ items:
       return:
         type:
           - _SymmetricKey
+    module: Global
   - uid: azure-iothub.Device.Authentication.x509Thumbprint
     name: x509Thumbprint
     fullName: x509Thumbprint
@@ -61,3 +64,4 @@ items:
       return:
         type:
           - '@azure-iothub.Device.X509Thumbprints'
+    module: Global

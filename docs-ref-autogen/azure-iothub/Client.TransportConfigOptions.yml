@@ -20,6 +20,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iothub
+    module: Global
   - uid: azure-iothub.Client.TransportConfigOptions.host
     name: host
     fullName: host
@@ -33,6 +34,7 @@ items:
       return:
         type:
           - string
+    module: Global
   - uid: azure-iothub.Client.TransportConfigOptions.hubName
     name: hubName
     fullName: hubName
@@ -47,6 +49,7 @@ items:
       return:
         type:
           - string
+    module: Global
     deprecated:
       content: >-
         This is not used anywhere anymore.
@@ -66,6 +69,7 @@ items:
       return:
         type:
           - string
+    module: Global
   - uid: azure-iothub.Client.TransportConfigOptions.sharedAccessSignature
     name: sharedAccessSignature
     fullName: sharedAccessSignature
@@ -81,3 +85,4 @@ items:
       return:
         type:
           - string | SharedAccessSignature
+    module: Global

@@ -28,6 +28,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-common
+    module: Global
   - uid: azure-iot-common.Properties.propertyList
     name: propertyList
     fullName: propertyList
@@ -48,6 +49,7 @@ items:
       return:
         type:
           - 'any[]'
+    module: Global
   - uid: azure-iot-common.Properties.add
     name: add
     children: []
@@ -72,6 +74,7 @@ items:
       return:
         type:
           - boolean
+    module: Global
   - uid: azure-iot-common.Properties.count
     name: count
     children: []
@@ -85,6 +88,7 @@ items:
       return:
         type:
           - number
+    module: Global
   - uid: azure-iot-common.Properties.getItem
     name: getItem
     children: []
@@ -102,6 +106,7 @@ items:
       return:
         type:
           - function
+    module: Global
   - uid: azure-iot-common.Properties.getValue
     name: getValue
     children: []
@@ -119,3 +124,4 @@ items:
       return:
         type:
           - any
+    module: Global

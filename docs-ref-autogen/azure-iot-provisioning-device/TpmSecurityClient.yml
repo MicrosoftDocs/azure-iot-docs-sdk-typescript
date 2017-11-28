@@ -23,6 +23,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device
+    module: Global
   - uid: azure-iot-provisioning-device.TpmSecurityClient.activateIdentityKey
     name: activateIdentityKey
     children: []
@@ -43,6 +44,7 @@ items:
           type:
             - '(err: Error) => void'
           description: ''
+    module: Global
   - uid: azure-iot-provisioning-device.TpmSecurityClient.cancel
     name: cancel
     children: []
@@ -57,6 +59,7 @@ items:
           type:
             - '(err: Error) => void'
           description: ''
+    module: Global
   - uid: azure-iot-provisioning-device.TpmSecurityClient.getEndorsementKey
     name: getEndorsementKey
     children: []
@@ -73,6 +76,7 @@ items:
           type:
             - '(err: Error, endorsementKey?: string) => void'
           description: ''
+    module: Global
   - uid: azure-iot-provisioning-device.TpmSecurityClient.getStorageRootKey
     name: getStorageRootKey
     children: []
@@ -89,6 +93,7 @@ items:
           type:
             - '(err: Error, storageRootKey?: string) => void'
           description: ''
+    module: Global
   - uid: azure-iot-provisioning-device.TpmSecurityClient.signWithIdentity
     name: signWithIdentity
     children: []
@@ -109,3 +114,4 @@ items:
           type:
             - '(err: Error, signedData?: string) => void'
           description: ''
+    module: Global

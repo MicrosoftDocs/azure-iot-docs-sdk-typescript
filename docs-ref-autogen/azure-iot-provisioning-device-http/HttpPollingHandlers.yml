@@ -25,6 +25,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device-http
+    module: Global
   - uid: azure-iot-provisioning-device-http.HttpPollingHandlers.constructor
     name: HttpPollingHandlers
     children: []
@@ -44,6 +45,7 @@ items:
             - Base
           description: ''
           optional: true
+    module: Global
   - uid: azure-iot-provisioning-device-http.HttpPollingHandlers.endSession
     name: endSession
     children: []
@@ -58,6 +60,7 @@ items:
           type:
             - '(err?: Error) => void'
           description: ''
+    module: Global
   - uid: azure-iot-provisioning-device-http.HttpPollingHandlers.getErrorResult
     name: getErrorResult
     children: []
@@ -75,6 +78,7 @@ items:
       return:
         type:
           - any
+    module: Global
   - uid: >-
       azure-iot-provisioning-device-http.HttpPollingHandlers.queryOperationStatus
     name: queryOperationStatus
@@ -103,6 +107,7 @@ items:
               (err?: Error, responseBody?: any, result?: any, pollingInterval?:
               number) => void
           description: ''
+    module: Global
   - uid: azure-iot-provisioning-device-http.HttpPollingHandlers.registrationRequest
     name: registrationRequest
     children: []
@@ -139,6 +144,7 @@ items:
               (err?: Error, responseBody?: any, result?: any, pollingInterval?:
               number) => void
           description: ''
+    module: Global
   - uid: azure-iot-provisioning-device-http.HttpPollingHandlers.setTransportOptions
     name: setTransportOptions
     children: []
@@ -153,3 +159,4 @@ items:
           type:
             - ProvisioningTransportOptions
           description: ''
+    module: Global

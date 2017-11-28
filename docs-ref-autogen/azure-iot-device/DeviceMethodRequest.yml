@@ -25,6 +25,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-device
+    module: Global
   - uid: azure-iot-device.DeviceMethodRequest.constructor
     name: DeviceMethodRequest
     children: []
@@ -50,6 +51,7 @@ items:
             - any
           description: ''
           optional: true
+    module: Global
   - uid: azure-iot-device.DeviceMethodRequest.methodName
     name: methodName
     fullName: methodName
@@ -63,6 +65,7 @@ items:
       return:
         type:
           - string
+    module: Global
   - uid: azure-iot-device.DeviceMethodRequest.payload
     name: payload
     fullName: payload
@@ -76,6 +79,7 @@ items:
       return:
         type:
           - any
+    module: Global
   - uid: azure-iot-device.DeviceMethodRequest.requestId
     name: requestId
     fullName: requestId
@@ -91,3 +95,4 @@ items:
       return:
         type:
           - string
+    module: Global

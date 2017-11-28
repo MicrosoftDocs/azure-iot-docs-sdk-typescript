@@ -26,6 +26,7 @@ items:
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
         branch: production
     package: location-based-services-javascript
+    module: atlas.data
   - uid: location-based-services-javascript.Polygon.constructor
     name: Polygon
     children: []
@@ -46,6 +47,7 @@ items:
           description: |
             The bounding box of the polygon.
           optional: true
+    module: atlas.data
   - uid: location-based-services-javascript.Polygon.bbox
     name: bbox
     fullName: bbox
@@ -60,6 +62,7 @@ items:
       return:
         type:
           - '@location-based-services-javascript.BoundingBox'
+    module: atlas.data
   - uid: location-based-services-javascript.Polygon.coordinates
     name: coordinates
     fullName: coordinates
@@ -73,6 +76,7 @@ items:
       return:
         type:
           - '@location-based-services-javascript.Position[]'
+    module: atlas.data
   - uid: location-based-services-javascript.Polygon.type
     name: type
     fullName: type
@@ -86,6 +90,7 @@ items:
       return:
         type:
           - string
+    module: atlas.data
   - uid: location-based-services-javascript.Polygon.TYPE
     name: TYPE
     fullName: TYPE
@@ -101,3 +106,4 @@ items:
       return:
         type:
           - string
+    module: atlas.data

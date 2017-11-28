@@ -27,6 +27,7 @@ items:
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
         branch: production
     package: location-based-services-javascript
+    module: atlas.data
   - uid: location-based-services-javascript.MultiPoint.constructor
     name: MultiPoint
     children: []
@@ -47,6 +48,7 @@ items:
           description: |
             The bounding box of the multipoint.
           optional: true
+    module: atlas.data
   - uid: location-based-services-javascript.MultiPoint.bbox
     name: bbox
     fullName: bbox
@@ -61,6 +63,7 @@ items:
       return:
         type:
           - '@location-based-services-javascript.BoundingBox'
+    module: atlas.data
   - uid: location-based-services-javascript.MultiPoint.coordinates
     name: coordinates
     fullName: coordinates
@@ -74,6 +77,7 @@ items:
       return:
         type:
           - '@location-based-services-javascript.Position[]'
+    module: atlas.data
   - uid: location-based-services-javascript.MultiPoint.type
     name: type
     fullName: type
@@ -87,6 +91,7 @@ items:
       return:
         type:
           - string
+    module: atlas.data
   - uid: location-based-services-javascript.MultiPoint.TYPE
     name: TYPE
     fullName: TYPE
@@ -102,3 +107,4 @@ items:
       return:
         type:
           - string
+    module: atlas.data

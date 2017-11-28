@@ -20,6 +20,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-security-tpm
+    module: Global
   - uid: azure-iot-security-tpm.TpmSecurityClient.activateSymmetricIdentity
     name: activateSymmetricIdentity
     children: []
@@ -34,6 +35,7 @@ items:
           type:
             - '(err?: Error) => void'
           description: ''
+    module: Global
   - uid: azure-iot-security-tpm.TpmSecurityClient.getEndorsementKey
     name: getEndorsementKey
     children: []
@@ -48,6 +50,7 @@ items:
           type:
             - '(err?: Error) => void'
           description: ''
+    module: Global
   - uid: azure-iot-security-tpm.TpmSecurityClient.getStorageRootKey
     name: getStorageRootKey
     children: []
@@ -62,6 +65,7 @@ items:
           type:
             - '(err?: Error) => void'
           description: ''
+    module: Global
   - uid: azure-iot-security-tpm.TpmSecurityClient.signWithIdentity
     name: signWithIdentity
     children: []
@@ -76,3 +80,4 @@ items:
           type:
             - '(err?: Error) => void'
           description: ''
+    module: Global

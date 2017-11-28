@@ -19,6 +19,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device
+    module: Global
   - uid: azure-iot-provisioning-device.TpmRegistrationResult.assignedHub
     name: assignedHub
     fullName: assignedHub
@@ -32,6 +33,7 @@ items:
       return:
         type:
           - string
+    module: Global
   - uid: azure-iot-provisioning-device.TpmRegistrationResult.deviceId
     name: deviceId
     fullName: deviceId
@@ -45,6 +47,7 @@ items:
       return:
         type:
           - string
+    module: Global
   - uid: azure-iot-provisioning-device.TpmRegistrationResult.symmetricKey
     name: symmetricKey
     fullName: symmetricKey
@@ -58,3 +61,4 @@ items:
       return:
         type:
           - string
+    module: Global

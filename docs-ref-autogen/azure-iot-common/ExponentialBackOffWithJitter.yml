@@ -28,6 +28,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-common
+    module: Global
   - uid: azure-iot-common.ExponentialBackOffWithJitter.constructor
     name: ExponentialBackOffWithJitter
     children: []
@@ -54,6 +55,7 @@ items:
             - ErrorFilter
           description: ''
           optional: true
+    module: Global
   - uid: azure-iot-common.ExponentialBackOffWithJitter.immediateFirstRetry
     name: immediateFirstRetry
     fullName: immediateFirstRetry
@@ -69,6 +71,7 @@ items:
       return:
         type:
           - boolean
+    module: Global
   - uid: azure-iot-common.ExponentialBackOffWithJitter.normalParameters
     name: normalParameters
     fullName: normalParameters
@@ -84,6 +87,7 @@ items:
       return:
         type:
           - '@azure-iot-common.ExponentialBackoffWithJitterParameters'
+    module: Global
   - uid: azure-iot-common.ExponentialBackOffWithJitter.throttledParameters
     name: throttledParameters
     fullName: throttledParameters
@@ -99,6 +103,7 @@ items:
       return:
         type:
           - '@azure-iot-common.ExponentialBackoffWithJitterParameters'
+    module: Global
   - uid: azure-iot-common.ExponentialBackOffWithJitter.nextRetryTimeout
     name: nextRetryTimeout
     children: []
@@ -122,6 +127,7 @@ items:
       return:
         type:
           - number
+    module: Global
   - uid: azure-iot-common.ExponentialBackOffWithJitter.shouldRetry
     name: shouldRetry
     children: []
@@ -141,3 +147,4 @@ items:
       return:
         type:
           - boolean
+    module: Global

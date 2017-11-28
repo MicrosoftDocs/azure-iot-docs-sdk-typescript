@@ -19,6 +19,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-service
+    module: Global
   - uid: azure-iot-provisioning-service.AttestationMechanism.tpm
     name: tpm
     fullName: tpm
@@ -35,6 +36,7 @@ items:
       return:
         type:
           - '@azure-iot-provisioning-service.TpmAttestation'
+    module: Global
   - uid: azure-iot-provisioning-service.AttestationMechanism.type
     name: type
     fullName: type
@@ -50,6 +52,7 @@ items:
       return:
         type:
           - AttestationTypes
+    module: Global
   - uid: azure-iot-provisioning-service.AttestationMechanism.x509
     name: x509
     fullName: x509
@@ -66,3 +69,4 @@ items:
       return:
         type:
           - '@azure-iot-provisioning-service.X509Attestation'
+    module: Global

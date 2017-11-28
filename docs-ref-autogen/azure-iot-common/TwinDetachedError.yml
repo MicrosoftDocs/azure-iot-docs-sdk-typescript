@@ -23,6 +23,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-common
+    module: Global
   - uid: azure-iot-common.TwinDetachedError.constructor
     name: TwinDetachedError
     children: []
@@ -38,6 +39,7 @@ items:
             - string
           description: ''
           optional: true
+    module: Global
   - uid: azure-iot-common.TwinDetachedError.innerError
     name: innerError
     fullName: innerError
@@ -51,6 +53,7 @@ items:
       return:
         type:
           - Error
+    module: Global
   - uid: azure-iot-common.TwinDetachedError.Error
     name: Error
     fullName: Error
@@ -64,3 +67,4 @@ items:
       return:
         type:
           - ErrorConstructor
+    module: Global

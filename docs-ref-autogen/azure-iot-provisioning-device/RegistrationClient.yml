@@ -1,0 +1,58 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-device.RegistrationClient
+    name: RegistrationClient
+    fullName: RegistrationClient
+    children:
+      - azure-iot-provisioning-device.RegistrationClient.cancel
+      - azure-iot-provisioning-device.RegistrationClient.register
+    langs:
+      - typeScript
+    type: interface
+    summary: Public API used to access the ProvisioningDeviceClient object
+    source:
+      path: interfaces.ts
+      startLine: 75
+      remote:
+        path: provisioning/device/src\interfaces.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-provisioning-device
+  - uid: azure-iot-provisioning-device.RegistrationClient.cancel
+    name: cancel
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Cancel the registration process if it is in progress.
+    syntax:
+      content: 'function cancel(callback: (err?: Error) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''
+  - uid: azure-iot-provisioning-device.RegistrationClient.register
+    name: register
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Register the device with the provisioning service
+    syntax:
+      content: >-
+        function register(registrationId: string, forceRegistration: boolean,
+        callback: (err?: Error, result?: any) => void)
+      parameters:
+        - id: registrationId
+          type:
+            - string
+          description: ''
+        - id: forceRegistration
+          type:
+            - boolean
+          description: ''
+        - id: callback
+          type:
+            - '(err?: Error, result?: any) => void'
+          description: ''

@@ -13,11 +13,11 @@ items:
     summary: ''
     source:
       path: device.ts
-      startLine: 139
+      startLine: 140
       remote:
         path: service/src\device.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
+        branch: master
     package: azure-iothub
   - uid: azure-iothub.Device.Authentication.SymmetricKey
     name: SymmetricKey
@@ -27,6 +27,7 @@ items:
       - typeScript
     type: property
     summary: ''
+    optional: true
     syntax:
       content: _SymmetricKey SymmetricKey
       return:
@@ -40,6 +41,7 @@ items:
       - typeScript
     type: property
     summary: ''
+    optional: true
     syntax:
       content: _SymmetricKey symmetricKey
       return:
@@ -53,8 +55,9 @@ items:
       - typeScript
     type: property
     summary: ''
+    optional: true
     syntax:
-      content: '@azure-iothub.Device.X509Thumbprints x509Thumbprint'
+      content: X509Thumbprints x509Thumbprint
       return:
         type:
           - '@azure-iothub.Device.X509Thumbprints'

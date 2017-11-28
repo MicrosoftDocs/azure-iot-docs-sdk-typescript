@@ -1,0 +1,40 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-device.ProvisioningDeviceClient
+    name: ProvisioningDeviceClient
+    fullName: ProvisioningDeviceClient
+    children:
+      - azure-iot-provisioning-device.ProvisioningDeviceClient.create
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    source:
+      path: client.ts
+      startLine: 9
+      remote:
+        path: provisioning/device/src\client.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-provisioning-device
+  - uid: azure-iot-provisioning-device.ProvisioningDeviceClient.create
+    name: create
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Factory method to use to create a DeviceClient object.
+    syntax:
+      content: 'static function create(transport: any, securityClient: any)'
+      parameters:
+        - id: transport
+          type:
+            - any
+          description: Transport instance to use
+        - id: securityClient
+          type:
+            - any
+          description: ''
+      return:
+        type:
+          - '@azure-iot-provisioning-device.RegistrationClient'

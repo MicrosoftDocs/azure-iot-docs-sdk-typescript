@@ -12,11 +12,11 @@ items:
     summary: ''
     source:
       path: device.ts
-      startLine: 145
+      startLine: 146
       remote:
         path: service/src\device.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
+        branch: master
     package: azure-iothub
   - uid: azure-iothub.Device.X509Thumbprints.primaryThumbprint
     name: primaryThumbprint
@@ -26,6 +26,7 @@ items:
       - typeScript
     type: property
     summary: ''
+    optional: true
     syntax:
       content: string primaryThumbprint
       return:
@@ -39,6 +40,7 @@ items:
       - typeScript
     type: property
     summary: ''
+    optional: true
     syntax:
       content: string secondaryThumbprint
       return:

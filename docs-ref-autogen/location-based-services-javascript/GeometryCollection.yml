@@ -1,0 +1,84 @@
+### YamlMime:UniversalReference
+items:
+  - uid: location-based-services-javascript.GeometryCollection
+    name: GeometryCollection
+    fullName: GeometryCollection
+    children:
+      - location-based-services-javascript.GeometryCollection.constructor
+      - location-based-services-javascript.GeometryCollection.geometries
+      - location-based-services-javascript.GeometryCollection.type
+      - location-based-services-javascript.GeometryCollection.TYPE
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+      A GeoJSON GeometryCollection object - a JSON object that contains a
+      collection of a GeoJSON Geometry objects. The
+
+      full description is detailed in [RFC
+      7946](https://tools.ietf.org/html/rfc7946#section-3.1.8).
+    source:
+      path: data/GeometryCollection.ts
+      startLine: 8
+      remote:
+        path: src/MapControl/JavascriptSDK/src\data/GeometryCollection.ts
+        repo: >-
+          https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
+        branch: production
+    package: location-based-services-javascript
+  - uid: location-based-services-javascript.GeometryCollection.constructor
+    name: GeometryCollection
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a GeometryCollection.
+    syntax:
+      content: 'new GeometryCollection(geometries: Geometry[])'
+      parameters:
+        - id: geometries
+          type:
+            - 'Geometry[]'
+          description: |
+            The collection of geometries that make up the geometry collection.
+  - uid: location-based-services-javascript.GeometryCollection.geometries
+    name: geometries
+    fullName: geometries
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The collection of GeoJSON geometries contained in the geometry collection.
+    syntax:
+      content: 'Geometry[] geometries'
+      return:
+        type:
+          - 'Geometry[]'
+  - uid: location-based-services-javascript.GeometryCollection.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A GeoJSON type descriptor with value "GeometryCollection".
+    syntax:
+      content: string type
+      return:
+        type:
+          - string
+  - uid: location-based-services-javascript.GeometryCollection.TYPE
+    name: TYPE
+    fullName: TYPE
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      A static GeoJSON type descriptor for the GeometryCollection class to be
+      used in runtime comparisons.
+    syntax:
+      content: static string TYPE
+      return:
+        type:
+          - string

@@ -38,15 +38,16 @@ items:
       device is to use the <xref:azure-iothub.Registry.getTwin> method.
     source:
       path: twin.ts
-      startLine: 44
+      startLine: 45
       remote:
         path: service/src\twin.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
+        branch: master
     package: azure-iothub
   - uid: azure-iothub.Twin.constructor
     name: Twin
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: >-
@@ -54,11 +55,11 @@ items:
       new <xref:azure-iothub.Twin> object is to use the
       <xref:azure-iothub.Registry.getTwin> method.
     syntax:
-      content: 'new Twin(device: DeviceIdentity, registryClient: Registry)'
+      content: 'new Twin(device: DeviceIdentity | string, registryClient: Registry)'
       parameters:
         - id: device
           type:
-            - DeviceIdentity
+            - DeviceIdentity | string
           description: >-
             A device identifier string or an object describing the device. If an
             Object,
@@ -68,7 +69,6 @@ items:
             - '@azure-iothub.Registry'
           description: |
             The HTTP registry client used to execute REST API calls.
-    type: constructor
   - uid: azure-iothub.Twin.deviceId
     name: deviceId
     fullName: deviceId
@@ -132,6 +132,7 @@ items:
   - uid: azure-iothub.Twin.get
     name: get
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets the latest version of this device twin from the IoT Hub service.
@@ -149,10 +150,10 @@ items:
                                            object representing the created device
                                            identity, and a transport-specific response
                                            object useful for logging or debugging.
-    type: method
   - uid: azure-iothub.Twin.toJSON
     name: toJSON
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
@@ -162,10 +163,10 @@ items:
       return:
         type:
           - object
-    type: method
   - uid: azure-iothub.Twin.update
     name: update
     children: []
+    type: method
     langs:
       - typeScript
     summary: Update the device twin with the patch provided as argument.
@@ -187,4 +188,3 @@ items:
                                            object representing the created device
                                            identity, and a transport-specific response
                                            object useful for logging or debugging.
-    type: method

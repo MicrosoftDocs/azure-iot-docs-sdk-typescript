@@ -37,17 +37,18 @@ items:
       should instead use plain JSON objects.
     source:
       path: device.ts
-      startLine: 36
+      startLine: 37
       remote:
         path: service/src\device.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
+        branch: master
     package: azure-iothub
     deprecated:
       content: ''
   - uid: azure-iothub.Device.constructor
     name: Device
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: 'Instantiate a new <xref:azure-iothub.Device> object.'
@@ -62,7 +63,6 @@ items:
             to properties in the object. If no argument is provided, Device
             roperties will be assigned default values.
           optional: true
-    type: constructor
   - uid: azure-iothub.Device.authentication
     name: authentication
     fullName: authentication
@@ -71,8 +71,9 @@ items:
       - typeScript
     type: property
     summary: Contains the symmetric keys used to authenticate this device.
+    optional: true
     syntax:
-      content: '@azure-iothub.Device.Authentication authentication'
+      content: Authentication authentication
       return:
         type:
           - '@azure-iothub.Device.Authentication'
@@ -84,6 +85,7 @@ items:
       - typeScript
     type: property
     summary: Number of c2d messages waiting to by delivered to the device.
+    optional: true
     syntax:
       content: string cloudToDeviceMessageCount
       return:
@@ -108,6 +110,7 @@ items:
       to use the [operations
       monitoring](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-operations-monitoring)
       feature of your hub.
+    optional: true
     syntax:
       content: ConnectionState connectionState
       return:
@@ -121,6 +124,7 @@ items:
       - typeScript
     type: property
     summary: Timestamp representing the last time `connectionState` changed.
+    optional: true
     syntax:
       content: string connectionStateUpdatedTime
       return:
@@ -149,6 +153,7 @@ items:
       - typeScript
     type: property
     summary: Weak entity tag assigned to this device identity description
+    optional: true
     syntax:
       content: string etag
       return:
@@ -164,6 +169,7 @@ items:
     summary: >-
       Used to disambiguate devices that have been deleted/recreated with the
       same `deviceId`
+    optional: true
     syntax:
       content: string generationId
       return:
@@ -179,6 +185,7 @@ items:
     summary: >-
       Timestamp representing the last time the device authenticated, sent a
       message, or received a message.
+    optional: true
     syntax:
       content: string lastActivityTime
       return:
@@ -194,6 +201,7 @@ items:
     summary: >-
       'enabled' (device authorized to connect, can send/receive messages) or
       'disabled'.
+    optional: true
     syntax:
       content: DeviceStatus status
       return:
@@ -207,6 +215,7 @@ items:
       - typeScript
     type: property
     summary: 128-character string set when the device is disabled.
+    optional: true
     syntax:
       content: string statusReason
       return:
@@ -220,6 +229,7 @@ items:
       - typeScript
     type: property
     summary: Timestamp representing the last time `status` changed.
+    optional: true
     syntax:
       content: string statusUpdatedTime
       return:

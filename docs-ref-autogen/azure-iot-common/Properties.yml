@@ -22,11 +22,11 @@ items:
       Values can only be strings.
     source:
       path: properties.ts
-      startLine: 11
+      startLine: 12
       remote:
         path: common/core/src\properties.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
+        branch: master
     package: azure-iot-common
   - uid: azure-iot-common.Properties.propertyList
     name: propertyList
@@ -51,6 +51,7 @@ items:
   - uid: azure-iot-common.Properties.add
     name: add
     children: []
+    type: method
     langs:
       - typeScript
     summary: |-
@@ -71,10 +72,10 @@ items:
       return:
         type:
           - boolean
-    type: method
   - uid: azure-iot-common.Properties.count
     name: count
     children: []
+    type: method
     langs:
       - typeScript
     summary: Returns the number of items in the collection.
@@ -84,10 +85,10 @@ items:
       return:
         type:
           - number
-    type: method
   - uid: azure-iot-common.Properties.getItem
     name: getItem
     children: []
+    type: method
     langs:
       - typeScript
     summary: Returns the key-value pair corresponding to the given index.
@@ -98,10 +99,13 @@ items:
           type:
             - number
           description: ''
-    type: method
+      return:
+        type:
+          - function
   - uid: azure-iot-common.Properties.getValue
     name: getValue
     children: []
+    type: method
     langs:
       - typeScript
     summary: Returns the value property of the element that has the given key.
@@ -115,4 +119,3 @@ items:
       return:
         type:
           - any
-    type: method

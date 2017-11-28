@@ -28,15 +28,16 @@ items:
       HTTP.
     source:
       path: message.ts
-      startLine: 12
+      startLine: 13
       remote:
         path: common/core/src\message.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
+        branch: master
     package: azure-iot-common
   - uid: azure-iot-common.Message.constructor
     name: Message
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: 'Creates a new <xref:azure-iot-common.Message> object'
@@ -51,7 +52,6 @@ items:
             [Buffer](https://nodejs.org/api/globals.html#globals_class_buffer)
                         object or anything that can be passed to the [Buffer](https://nodejs.org/api/globals.html#globals_class_buffer) constructor
                         to construct a [Buffer](https://nodejs.org/api/globals.html#globals_class_buffer) from.
-    type: constructor
   - uid: azure-iot-common.Message.ack
     name: ack
     fullName: ack
@@ -146,7 +146,7 @@ items:
       A map containing string keys and values for storing custom message
       properties.
     syntax:
-      content: '@azure-iot-common.Properties properties'
+      content: Properties properties
       return:
         type:
           - '@azure-iot-common.Properties'
@@ -179,6 +179,7 @@ items:
   - uid: azure-iot-common.Message.getBytes
     name: getBytes
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -190,10 +191,10 @@ items:
       return:
         type:
           - Buffer
-    type: method
   - uid: azure-iot-common.Message.getData
     name: getData
     children: []
+    type: method
     langs:
       - typeScript
     summary: 'Gets the content (body) of the <xref:azure-iot-common.Message>.'
@@ -203,4 +204,3 @@ items:
       return:
         type:
           - BufferConvertible
-    type: method

@@ -1,0 +1,155 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-device-http.HttpPollingHandlers
+    name: HttpPollingHandlers
+    fullName: HttpPollingHandlers
+    children:
+      - azure-iot-provisioning-device-http.HttpPollingHandlers.constructor
+      - azure-iot-provisioning-device-http.HttpPollingHandlers.endSession
+      - azure-iot-provisioning-device-http.HttpPollingHandlers.getErrorResult
+      - >-
+        azure-iot-provisioning-device-http.HttpPollingHandlers.queryOperationStatus
+      - >-
+        azure-iot-provisioning-device-http.HttpPollingHandlers.registrationRequest
+      - >-
+        azure-iot-provisioning-device-http.HttpPollingHandlers.setTransportOptions
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    source:
+      path: http_polling_handlers.ts
+      startLine: 17
+      remote:
+        path: provisioning/transport/http/src\http_polling_handlers.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-provisioning-device-http
+  - uid: azure-iot-provisioning-device-http.HttpPollingHandlers.constructor
+    name: HttpPollingHandlers
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new HttpPollingHandlers(idScope: number, httpBase?: Base)'
+      parameters:
+        - id: idScope
+          type:
+            - number
+          description: ''
+        - id: httpBase
+          type:
+            - Base
+          description: ''
+          optional: true
+  - uid: azure-iot-provisioning-device-http.HttpPollingHandlers.endSession
+    name: endSession
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function endSession(callback: (err?: Error) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''
+  - uid: azure-iot-provisioning-device-http.HttpPollingHandlers.getErrorResult
+    name: getErrorResult
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getErrorResult(result: any)'
+      parameters:
+        - id: result
+          type:
+            - any
+          description: ''
+      return:
+        type:
+          - any
+  - uid: >-
+      azure-iot-provisioning-device-http.HttpPollingHandlers.queryOperationStatus
+    name: queryOperationStatus
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function queryOperationStatus(registrationId: string, operationId:
+        string, callback: (err?: Error, responseBody?: any, result?: any,
+        pollingInterval?: number) => void)
+      parameters:
+        - id: registrationId
+          type:
+            - string
+          description: ''
+        - id: operationId
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - >-
+              (err?: Error, responseBody?: any, result?: any, pollingInterval?:
+              number) => void
+          description: ''
+  - uid: azure-iot-provisioning-device-http.HttpPollingHandlers.registrationRequest
+    name: registrationRequest
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function registrationRequest(registrationId: string, authorization:
+        ProvisioningAuthentication, requestBody: any, forceRegistration:
+        boolean, callback: (err?: Error, responseBody?: any, result?: any,
+        pollingInterval?: number) => void)
+      parameters:
+        - id: registrationId
+          type:
+            - string
+          description: ''
+        - id: authorization
+          type:
+            - ProvisioningAuthentication
+          description: ''
+        - id: requestBody
+          type:
+            - any
+          description: ''
+        - id: forceRegistration
+          type:
+            - boolean
+          description: ''
+        - id: callback
+          type:
+            - >-
+              (err?: Error, responseBody?: any, result?: any, pollingInterval?:
+              number) => void
+          description: ''
+  - uid: azure-iot-provisioning-device-http.HttpPollingHandlers.setTransportOptions
+    name: setTransportOptions
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setTransportOptions(options: ProvisioningTransportOptions)'
+      parameters:
+        - id: options
+          type:
+            - ProvisioningTransportOptions
+          description: ''

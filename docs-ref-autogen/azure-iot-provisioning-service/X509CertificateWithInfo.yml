@@ -1,0 +1,48 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-service.X509CertificateWithInfo
+    name: X509CertificateWithInfo
+    fullName: X509CertificateWithInfo
+    children:
+      - azure-iot-provisioning-service.X509CertificateWithInfo.certificate
+      - azure-iot-provisioning-service.X509CertificateWithInfo.info
+    langs:
+      - typeScript
+    type: interface
+    summary: Certificate and Certificate info
+    source:
+      path: interfaces.ts
+      startLine: 124
+      remote:
+        path: provisioning/service/src\interfaces.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-provisioning-service
+  - uid: azure-iot-provisioning-service.X509CertificateWithInfo.certificate
+    name: certificate
+    fullName: certificate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: PEM or CER representation of a certificate.
+    syntax:
+      content: string certificate
+      return:
+        type:
+          - string
+  - uid: azure-iot-provisioning-service.X509CertificateWithInfo.info
+    name: info
+    fullName: info
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      This property is populated by the service from the information
+      provided by the certificate property of this object.
+    syntax:
+      content: X509CertificateInfo info
+      return:
+        type:
+          - '@azure-iot-provisioning-service.X509CertificateInfo'

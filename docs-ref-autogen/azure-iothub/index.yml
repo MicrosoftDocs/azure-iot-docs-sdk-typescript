@@ -7,6 +7,9 @@ items:
       - azure-iothub.Amqp
       - azure-iothub.AmqpWs
       - azure-iothub.Client
+      - azure-iothub.Client.Client.ServiceReceiver
+      - azure-iothub.Client.Client.Transport
+      - azure-iothub.Client.Client.TransportConfigOptions
       - azure-iothub.Client.ServiceReceiver
       - azure-iothub.Client.Transport
       - azure-iothub.Client.TransportConfigOptions
@@ -24,6 +27,7 @@ items:
       - azure-iothub.Registry.RegistryStatistics
       - azure-iothub.Registry.TransportConfig
       - azure-iothub.Twin
+      - azure-iothub.Global
     type: package
     langs:
       - typeScript
@@ -34,6 +38,12 @@ references:
     name: AmqpWs
   - uid: azure-iothub.Client
     name: Client
+  - uid: azure-iothub.Client.Client.ServiceReceiver
+    name: ServiceReceiver
+  - uid: azure-iothub.Client.Client.Transport
+    name: Transport
+  - uid: azure-iothub.Client.Client.TransportConfigOptions
+    name: TransportConfigOptions
   - uid: azure-iothub.Client.ServiceReceiver
     name: ServiceReceiver
   - uid: azure-iothub.Client.Transport
@@ -68,3 +78,5 @@ references:
     name: TransportConfig
   - uid: azure-iothub.Twin
     name: Twin
+  - uid: azure-iothub.Global
+    name: Global

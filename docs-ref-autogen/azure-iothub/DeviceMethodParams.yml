@@ -16,11 +16,11 @@ items:
       (also called device methods)
     source:
       path: interfaces.ts
-      startLine: 15
+      startLine: 16
       remote:
         path: service/src\interfaces.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
+        branch: master
     package: azure-iothub
   - uid: azure-iothub.DeviceMethodParams.connectTimeoutInSeconds
     name: connectTimeoutInSeconds
@@ -32,6 +32,7 @@ items:
     summary: >-
       The maximum time the service should try to connect to the device before
       declaring the device is unreachable.
+    optional: true
     syntax:
       content: number connectTimeoutInSeconds
       return:
@@ -58,6 +59,7 @@ items:
       - typeScript
     type: property
     summary: The method payload that will be sent to the device.
+    optional: true
     syntax:
       content: any payload
       return:
@@ -71,6 +73,7 @@ items:
       - typeScript
     type: property
     summary: The maximum time a device should take to respond to the method.
+    optional: true
     syntax:
       content: number responseTimeoutInSeconds
       return:

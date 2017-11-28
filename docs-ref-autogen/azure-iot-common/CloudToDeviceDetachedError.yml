@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-common.CloudToDeviceDetachedError
+    name: CloudToDeviceDetachedError
+    fullName: CloudToDeviceDetachedError
+    children:
+      - azure-iot-common.CloudToDeviceDetachedError.constructor
+      - azure-iot-common.CloudToDeviceDetachedError.innerError
+      - azure-iot-common.CloudToDeviceDetachedError.Error
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+      Error thrown when the c2d feature stopped working at the transport level,
+      requiring the client to retry starting it.
+    extends:
+      name: Error
+    source:
+      path: errors.ts
+      startLine: 379
+      remote:
+        path: common/core/src\errors.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-common
+  - uid: azure-iot-common.CloudToDeviceDetachedError.constructor
+    name: CloudToDeviceDetachedError
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new CloudToDeviceDetachedError(message?: string)'
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+          optional: true
+  - uid: azure-iot-common.CloudToDeviceDetachedError.innerError
+    name: innerError
+    fullName: innerError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: Error innerError
+      return:
+        type:
+          - Error
+  - uid: azure-iot-common.CloudToDeviceDetachedError.Error
+    name: Error
+    fullName: Error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: static ErrorConstructor Error
+      return:
+        type:
+          - ErrorConstructor

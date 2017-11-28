@@ -33,14 +33,14 @@ items:
       Twins](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-device-twins).
 
     extends:
-      name: EventEmitter
+      name: '@azure-iot-device.Twin'
     source:
       path: twin.ts
       startLine: 28
       remote:
         path: device/core/src\twin.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
+        branch: master
     package: azure-iot-device
   - uid: azure-iot-device.Twin.properties
     name: properties

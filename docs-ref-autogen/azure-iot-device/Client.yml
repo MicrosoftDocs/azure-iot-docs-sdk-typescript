@@ -15,6 +15,7 @@ items:
       - azure-iot-device.Client.sendEvent
       - azure-iot-device.Client.sendEventBatch
       - azure-iot-device.Client.setOptions
+      - azure-iot-device.Client.setRetryPolicy
       - azure-iot-device.Client.setTransportOptions
       - azure-iot-device.Client.updateSharedAccessSignature
       - azure-iot-device.Client.uploadToBlob
@@ -35,18 +36,19 @@ items:
 
       to create an IoT Hub device client.
     extends:
-      name: EventEmitter
+      name: '@azure-iot-device.Client'
     source:
       path: client.ts
-      startLine: 31
+      startLine: 38
       remote:
         path: device/core/src\client.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
+        branch: master
     package: azure-iot-device
   - uid: azure-iot-device.Client.constructor
     name: Client
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: ''
@@ -76,10 +78,10 @@ items:
           description: |
             An object that is capable of uploading a stream to a blob.
           optional: true
-    type: constructor
   - uid: azure-iot-device.Client.abandon
     name: abandon
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -103,10 +105,10 @@ items:
       - type: ReferenceException
         description: |
           If the message is falsy.
-    type: method
   - uid: azure-iot-device.Client.close
     name: close
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -123,10 +125,10 @@ items:
           description: |
             The callback to be invoked when the connection has been closed.
           optional: true
-    type: method
   - uid: azure-iot-device.Client.complete
     name: complete
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -150,10 +152,10 @@ items:
       - type: ReferenceError
         description: |
           If the message is falsy.
-    type: method
   - uid: azure-iot-device.Client.getTwin
     name: getTwin
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -173,10 +175,10 @@ items:
             - '@azure-iot-device.Twin'
           description: ''
           optional: true
-    type: method
   - uid: azure-iot-device.Client.onDeviceMethod
     name: onDeviceMethod
     children: []
+    type: method
     langs:
       - typeScript
     summary: |-
@@ -211,10 +213,10 @@ items:
         description: |
           If the `methodName` parameter is not a string
                                          or if the `callback` is not a function.
-    type: method
   - uid: azure-iot-device.Client.open
     name: open
     children: []
+    type: method
     langs:
       - typeScript
     summary: |-
@@ -229,10 +231,10 @@ items:
           description: |
             The callback to be invoked when `open`
                                             completes execution.
-    type: method
   - uid: azure-iot-device.Client.reject
     name: reject
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -256,10 +258,10 @@ items:
       - type: ReferenceException
         description: |
           If the message is falsy.
-    type: method
   - uid: azure-iot-device.Client.sendEvent
     name: sendEvent
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -282,10 +284,10 @@ items:
           description: |
             The callback to be invoked when `sendEvent` completes execution.
           optional: true
-    type: method
   - uid: azure-iot-device.Client.sendEventBatch
     name: sendEventBatch
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -311,10 +313,10 @@ items:
             The callback to be invoked when
                                                            `sendEventBatch` completes execution.
           optional: true
-    type: method
   - uid: azure-iot-device.Client.setOptions
     name: setOptions
     children: []
+    type: method
     langs:
       - typeScript
     summary: The `setOptions` method let the user configure the client.
@@ -337,10 +339,27 @@ items:
       - type: ReferenceError
         description: |
           If the options structure is falsy
+  - uid: azure-iot-device.Client.setRetryPolicy
+    name: setRetryPolicy
+    children: []
     type: method
+    langs:
+      - typeScript
+    summary: >-
+      Sets the retry policy used by the client on all operations. The default is
+      [ExponentialBackoffWithJitter](xref:azure-iot-common.ExponentialBackoffWithJitter).
+    syntax:
+      content: 'function setRetryPolicy(policy: RetryPolicy)'
+      parameters:
+        - id: policy
+          type:
+            - RetryPolicy
+          description: |
+            The retry policy that should be used for all future operations.
   - uid: azure-iot-device.Client.setTransportOptions
     name: setTransportOptions
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -362,10 +381,12 @@ items:
             The callback that shall be invoked with either an error or a result
             object.
           optional: true
-    type: method
+    deprecated:
+      content: Use Client.setOptions instead.
   - uid: azure-iot-device.Client.updateSharedAccessSignature
     name: updateSharedAccessSignature
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -392,10 +413,10 @@ items:
       - type: ReferenceError
         description: |
           If the client uses x509 authentication.
-    type: method
   - uid: azure-iot-device.Client.uploadToBlob
     name: uploadToBlob
     children: []
+    type: method
     langs:
       - typeScript
     summary: The `uploadToBlob` method uploads a stream to a blob.
@@ -427,10 +448,10 @@ items:
       - type: ReferenceException
         description: |
           If blobName or stream or streamLength is falsy.
-    type: method
   - uid: azure-iot-device.Client.fromConnectionString
     name: fromConnectionString
     children: []
+    type: method
     langs:
       - typeScript
     summary: |-
@@ -458,10 +479,10 @@ items:
       - type: ReferenceError
         description: |
           If the connStr parameter is falsy.
-    type: method
   - uid: azure-iot-device.Client.fromSharedAccessSignature
     name: fromSharedAccessSignature
     children: []
+    type: method
     langs:
       - typeScript
     summary: |-
@@ -489,4 +510,3 @@ items:
       - type: ReferenceError
         description: |
           If the connStr parameter is falsy.
-    type: method

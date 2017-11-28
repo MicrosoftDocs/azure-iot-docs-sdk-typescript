@@ -17,15 +17,16 @@ items:
       connection with the Azure IoT hub.
     source:
       path: shared_access_signature.ts
-      startLine: 13
+      startLine: 14
       remote:
         path: common/core/src\shared_access_signature.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
+        branch: master
     package: azure-iot-common
   - uid: azure-iot-common.SharedAccessSignature.extend
     name: extend
     children: []
+    type: method
     langs:
       - typeScript
     summary: Extend the Sas and return the string form of it.
@@ -45,10 +46,10 @@ items:
       - type: ReferenceError
         description: |
           Will be thrown if the argument is falsy.
-    type: method
   - uid: azure-iot-common.SharedAccessSignature.toString
     name: toString
     children: []
+    type: method
     langs:
       - typeScript
     summary: Formats a SharedAccessSignatureObject into a properly formatted string.
@@ -58,17 +59,17 @@ items:
       return:
         type:
           - string
-    type: method
   - uid: azure-iot-common.SharedAccessSignature.create
     name: create
     children: []
+    type: method
     langs:
       - typeScript
     summary: Instantiate a SharedAccessSignature token with the given parameters.
     syntax:
       content: >-
         static function create(resourceUri: string, keyName: string, key:
-        string, expiry: number)
+        string, expiry: number | string)
       parameters:
         - id: resourceUri
           type:
@@ -84,7 +85,7 @@ items:
           description: a base64-encoded key value.
         - id: expiry
           type:
-            - number
+            - number | string
           description: >
             an integer value representing the number of seconds since the epoch
             00:00:00 UTC on 1 January 1970.
@@ -95,10 +96,10 @@ items:
       - type: ReferenceError
         description: |
           Will be thrown if one of the arguments is falsy.
-    type: method
   - uid: azure-iot-common.SharedAccessSignature.parse
     name: parse
     children: []
+    type: method
     langs:
       - typeScript
     summary: Instantiate a SharedAccessSignature token from a string.
@@ -124,4 +125,3 @@ items:
       - type: FormatError
         description: |
           Will be thrown if the source string is malformed.
-    type: method

@@ -23,11 +23,12 @@ items:
       remote:
         path: device/core/src\device_method/device_method_request.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
+        branch: master
     package: azure-iot-device
   - uid: azure-iot-device.DeviceMethodRequest.constructor
     name: DeviceMethodRequest
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: ''
@@ -49,7 +50,6 @@ items:
             - any
           description: ''
           optional: true
-    type: constructor
   - uid: azure-iot-device.DeviceMethodRequest.methodName
     name: methodName
     fullName: methodName

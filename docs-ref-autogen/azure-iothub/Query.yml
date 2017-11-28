@@ -22,11 +22,11 @@ items:
       and should not try to instantiate this class directly.
     source:
       path: query.ts
-      startLine: 14
+      startLine: 15
       remote:
         path: service/src\query.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
+        branch: master
     package: azure-iothub
   - uid: azure-iothub.Query.continuationToken
     name: continuationToken
@@ -57,15 +57,18 @@ items:
   - uid: azure-iothub.Query.next
     name: next
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets the next page of results for this query.
     syntax:
-      content: 'function next(continuationTokenOrCallback: string, done?: Callback<any>)'
+      content: >-
+        function next(continuationTokenOrCallback: string | Callback, done?:
+        Callback<any>)
       parameters:
         - id: continuationTokenOrCallback
           type:
-            - string
+            - string | Callback
           description: ''
         - id: done
           type:
@@ -74,19 +77,21 @@ items:
             The callback that will be called with either an Error object or
                                                       the results of the query.
           optional: true
-    type: method
   - uid: azure-iothub.Query.nextAsTwin
     name: nextAsTwin
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets the next page of results for this query and cast them as Twins.
     syntax:
-      content: 'function nextAsTwin(continuationToken: string, done: Callback<Twin[]>)'
+      content: >-
+        function nextAsTwin(continuationToken: string | Callback, done:
+        Callback<Twin[]>)
       parameters:
         - id: continuationToken
           type:
-            - string
+            - string | Callback
           description: Continuation Token used for paging through results (optional)
         - id: done
           type:
@@ -94,4 +99,3 @@ items:
           description: |
             The callback that will be called with either an Error object or
                                                       the results of the query.
-    type: method

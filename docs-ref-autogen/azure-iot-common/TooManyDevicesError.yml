@@ -16,15 +16,16 @@ items:
       name: Error
     source:
       path: errors.ts
-      startLine: 222
+      startLine: 223
       remote:
         path: common/core/src\errors.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
+        branch: master
     package: azure-iot-common
   - uid: azure-iot-common.TooManyDevicesError.constructor
     name: TooManyDevicesError
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: ''
@@ -36,7 +37,6 @@ items:
             - string
           description: ''
           optional: true
-    type: constructor
   - uid: azure-iot-common.TooManyDevicesError.Error
     name: Error
     fullName: Error

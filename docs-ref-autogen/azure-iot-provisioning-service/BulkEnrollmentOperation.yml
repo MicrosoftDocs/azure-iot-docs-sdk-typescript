@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-service.BulkEnrollmentOperation
+    name: BulkEnrollmentOperation
+    fullName: BulkEnrollmentOperation
+    children:
+      - azure-iot-provisioning-service.BulkEnrollmentOperation.enrollments
+      - azure-iot-provisioning-service.BulkEnrollmentOperation.mode
+    langs:
+      - typeScript
+    type: interface
+    summary: Bulk operation
+    source:
+      path: interfaces.ts
+      startLine: 167
+      remote:
+        path: provisioning/service/src\interfaces.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-provisioning-service
+  - uid: azure-iot-provisioning-service.BulkEnrollmentOperation.enrollments
+    name: enrollments
+    fullName: enrollments
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The enrollments property is an array of IndividualEnrollment objects.  The
+      size of this
+
+      array is limited.
+    syntax:
+      content: Array<IndividualEnrollment> enrollments
+      return:
+        type:
+          - Array<@azure-iot-provisioning-service.IndividualEnrollment>
+  - uid: azure-iot-provisioning-service.BulkEnrollmentOperation.mode
+    name: mode
+    fullName: mode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      The mode property specifies the operation that will be performed upon all
+      of the IndividualEnrollment elements in the enrollments property.
+    syntax:
+      content: BulkOperationMode mode
+      return:
+        type:
+          - BulkOperationMode

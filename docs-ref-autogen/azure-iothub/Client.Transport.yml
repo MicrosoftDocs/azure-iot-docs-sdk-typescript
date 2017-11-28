@@ -14,18 +14,19 @@ items:
     type: interface
     summary: ''
     extends:
-      name: EventEmitter
+      name: any
     source:
       path: client.ts
-      startLine: 298
+      startLine: 400
       remote:
         path: service/src\client.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
+        branch: master
     package: azure-iothub
   - uid: azure-iothub.Client.Transport.connect
     name: connect
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
@@ -37,10 +38,10 @@ items:
             - Callback<Connected>
           description: ''
           optional: true
-    type: method
   - uid: azure-iothub.Client.Transport.disconnect
     name: disconnect
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
@@ -51,10 +52,10 @@ items:
           type:
             - Callback<Disconnected>
           description: ''
-    type: method
   - uid: azure-iothub.Client.Transport.getFeedbackReceiver
     name: getFeedbackReceiver
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
@@ -65,10 +66,10 @@ items:
           type:
             - Callback<@azure-iothub.Client.ServiceReceiver>
           description: ''
-    type: method
   - uid: azure-iothub.Client.Transport.getFileNotificationReceiver
     name: getFileNotificationReceiver
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
@@ -79,10 +80,10 @@ items:
           type:
             - Callback<@azure-iothub.Client.ServiceReceiver>
           description: ''
-    type: method
   - uid: azure-iothub.Client.Transport.send
     name: send
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
@@ -104,4 +105,3 @@ items:
             - Callback<MessageEnqueued>
           description: ''
           optional: true
-    type: method

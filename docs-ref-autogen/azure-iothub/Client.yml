@@ -10,6 +10,7 @@ items:
       - azure-iothub.Client.invokeDeviceMethod
       - azure-iothub.Client.open
       - azure-iothub.Client.send
+      - azure-iothub.Client.setRetryPolicy
       - azure-iothub.Client.fromConnectionString
       - azure-iothub.Client.fromSharedAccessSignature
     langs:
@@ -33,18 +34,19 @@ items:
 
       to create an IoT Hub service Client.
     extends:
-      name: EventEmitter
+      name: '@azure-iothub.Client'
     source:
       path: client.ts
-      startLine: 26
+      startLine: 33
       remote:
         path: service/src\client.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
+        branch: master
     package: azure-iothub
   - uid: azure-iothub.Client.close
     name: close
     children: []
+    type: method
     langs:
       - typeScript
     summary: Closes the connection to an IoT hub.
@@ -60,10 +62,10 @@ items:
                                        argument, which will be null if the operation
                                        completed successfully.
           optional: true
-    type: method
   - uid: azure-iothub.Client.getFeedbackReceiver
     name: getFeedbackReceiver
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -80,10 +82,10 @@ items:
                                          complete. `done` will be called with two
                                          arguments: an Error object (can be null) and a
                                          AmqpReceiver object.
-    type: method
   - uid: azure-iothub.Client.getFileNotificationReceiver
     name: getFileNotificationReceiver
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -100,10 +102,10 @@ items:
                                          complete. `done` will be called with two
                                          arguments: an Error object (can be null) and a
                                          AmqpReceiver object.
-    type: method
   - uid: azure-iothub.Client.invokeDeviceMethod
     name: invokeDeviceMethod
     children: []
+    type: method
     langs:
       - typeScript
     summary: Invokes a method on a particular device.
@@ -132,10 +134,10 @@ items:
       - type: TypeError
         description: |
           If one of the parameters is of the wrong type.
-    type: method
   - uid: azure-iothub.Client.open
     name: open
     children: []
+    type: method
     langs:
       - typeScript
     summary: Opens the connection to an IoT hub.
@@ -151,16 +153,16 @@ items:
                                        argument, which will be null if the operation
                                        completed successfully.
           optional: true
-    type: method
   - uid: azure-iothub.Client.send
     name: send
     children: []
+    type: method
     langs:
       - typeScript
     summary: Sends a message to a device.
     syntax:
       content: >-
-        function send(deviceId: string, message: Message, done?:
+        function send(deviceId: string, message: BufferConvertible, done?:
         Callback<MessageEnqueued>)
       parameters:
         - id: deviceId
@@ -169,7 +171,7 @@ items:
           description: The identifier of an existing device identity.
         - id: message
           type:
-            - Message
+            - BufferConvertible
           description: |-
             The body of the message to send to the device.
                                          If `message` is not of type
@@ -189,10 +191,31 @@ items:
       - type: ReferenceError
         description: |
           If `deviceId` or `message` is null, undefined or empty.
+  - uid: azure-iothub.Client.setRetryPolicy
+    name: setRetryPolicy
+    children: []
     type: method
+    langs:
+      - typeScript
+    summary: Set the policy used by the client to retry network operations.
+    syntax:
+      content: 'function setRetryPolicy(policy: RetryPolicy)'
+      parameters:
+        - id: policy
+          type:
+            - RetryPolicy
+          description: |
+            policy used to retry operations (eg. open, send, etc.).
+                          The SDK comes with 2 "built-in" policies: ExponentialBackoffWithJitter (default)
+                          and NoRetry (to cancel any form of retry). The user can also pass its own object as
+                          long as it implements 2 methods:
+                          - shouldRetry(err: Error): boolean : indicates whether an operation should be retried based on the error type
+                          - nextRetryTimeout(retryCount: number, throttled: boolean): number : returns the time to wait (in milliseconds)
+                          before retrying based on the past number of attempts (retryCount) and the fact that the error is a throttling error or not.
   - uid: azure-iothub.Client.fromConnectionString
     name: fromConnectionString
     children: []
+    type: method
     langs:
       - typeScript
     summary: |-
@@ -218,10 +241,10 @@ items:
       return:
         type:
           - '@azure-iothub.Client'
-    type: method
   - uid: azure-iothub.Client.fromSharedAccessSignature
     name: fromSharedAccessSignature
     children: []
+    type: method
     langs:
       - typeScript
     summary: |-
@@ -247,4 +270,3 @@ items:
       return:
         type:
           - '@azure-iothub.Client'
-    type: method

@@ -12,11 +12,11 @@ items:
     summary: ''
     source:
       path: registry.ts
-      startLine: 812
+      startLine: 816
       remote:
         path: service/src\registry.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
+        branch: master
     package: azure-iothub
   - uid: azure-iothub.Registry.BulkRegistryOperationResult.errors
     name: errors
@@ -27,7 +27,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: '@azure-iothub.Registry.DeviceRegistryOperationError[] errors'
+      content: 'DeviceRegistryOperationError[] errors'
       return:
         type:
           - '@azure-iothub.Registry.DeviceRegistryOperationError[]'

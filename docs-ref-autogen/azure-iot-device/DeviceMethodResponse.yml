@@ -24,15 +24,16 @@ items:
       callback registered via <xref:azure-iot-device.Client.onDeviceMethod>.
     source:
       path: device_method/device_method_response.ts
-      startLine: 11
+      startLine: 12
       remote:
         path: device/core/src\device_method/device_method_response.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: doc-patches
+        branch: master
     package: azure-iot-device
   - uid: azure-iot-device.DeviceMethodResponse.constructor
     name: DeviceMethodResponse
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: ''
@@ -47,7 +48,6 @@ items:
           type:
             - '@azure-iot-device.Client.Transport'
           description: ''
-    type: constructor
   - uid: azure-iot-device.DeviceMethodResponse.isResponseComplete
     name: isResponseComplete
     fullName: isResponseComplete
@@ -107,6 +107,7 @@ items:
   - uid: azure-iot-device.DeviceMethodResponse.send
     name: send
     children: []
+    type: method
     langs:
       - typeScript
     summary: |-
@@ -147,4 +148,3 @@ items:
           If this response has already been sent to the
                                          service in a previous call to it. This method
                                          should be called only once.
-    type: method

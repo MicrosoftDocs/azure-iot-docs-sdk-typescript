@@ -1,0 +1,102 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-device-http.Http
+    name: Http
+    fullName: Http
+    children:
+      - azure-iot-provisioning-device-http.Http.constructor
+      - azure-iot-provisioning-device-http.Http.endSession
+      - azure-iot-provisioning-device-http.Http.registerX509
+      - azure-iot-provisioning-device-http.Http.setTransportOptions
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    extends:
+      name: '@azure-iot-provisioning-device-http.Http'
+    source:
+      path: http_transport.ts
+      startLine: 12
+      remote:
+        path: provisioning/transport/http/src\http_transport.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-provisioning-device-http
+  - uid: azure-iot-provisioning-device-http.Http.constructor
+    name: Http
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new Http(idScope: number, httpBase?: Base)'
+      parameters:
+        - id: idScope
+          type:
+            - number
+          description: ''
+        - id: httpBase
+          type:
+            - Base
+          description: ''
+          optional: true
+  - uid: azure-iot-provisioning-device-http.Http.endSession
+    name: endSession
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function endSession(callback: (err?: Error) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''
+  - uid: azure-iot-provisioning-device-http.Http.registerX509
+    name: registerX509
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function registerX509(registrationId: string, auth: X509,
+        forceRegistration: boolean, callback: (err?: Error, registrationResult?:
+        X509RegistrationResult, body?: any, result?: any) => void)
+      parameters:
+        - id: registrationId
+          type:
+            - string
+          description: ''
+        - id: auth
+          type:
+            - X509
+          description: ''
+        - id: forceRegistration
+          type:
+            - boolean
+          description: ''
+        - id: callback
+          type:
+            - >-
+              (err?: Error, registrationResult?: X509RegistrationResult, body?:
+              any, result?: any) => void
+          description: ''
+  - uid: azure-iot-provisioning-device-http.Http.setTransportOptions
+    name: setTransportOptions
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setTransportOptions(options: ProvisioningTransportOptions)'
+      parameters:
+        - id: options
+          type:
+            - ProvisioningTransportOptions
+          description: ''

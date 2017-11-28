@@ -1,0 +1,68 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-service.X509Attestation
+    name: X509Attestation
+    fullName: X509Attestation
+    children:
+      - azure-iot-provisioning-service.X509Attestation.caReferences
+      - azure-iot-provisioning-service.X509Attestation.clientCertificates
+      - azure-iot-provisioning-service.X509Attestation.signingCertificates
+    langs:
+      - typeScript
+    type: interface
+    summary: Attestation via X509.
+    source:
+      path: interfaces.ts
+      startLine: 58
+      remote:
+        path: provisioning/service/src\interfaces.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-provisioning-service
+  - uid: azure-iot-provisioning-service.X509Attestation.caReferences
+    name: caReferences
+    fullName: caReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Primary and secondary CA reference.  These will be names rather than
+      actual certificates.
+    syntax:
+      content: X509CAReferences caReferences
+      return:
+        type:
+          - '@azure-iot-provisioning-service.X509CAReferences'
+  - uid: azure-iot-provisioning-service.X509Attestation.clientCertificates
+    name: clientCertificates
+    fullName: clientCertificates
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      x509 certificate object which provides all information for a leaf
+      certificate.
+    syntax:
+      content: X509Certificates clientCertificates
+      return:
+        type:
+          - '@azure-iot-provisioning-service.X509Certificates'
+  - uid: azure-iot-provisioning-service.X509Attestation.signingCertificates
+    name: signingCertificates
+    fullName: signingCertificates
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      x509 certificate object which provides all information needed for a
+      certificate
+
+      suitable for signing other certificates.
+    syntax:
+      content: X509Certificates signingCertificates
+      return:
+        type:
+          - '@azure-iot-provisioning-service.X509Certificates'

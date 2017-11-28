@@ -21,6 +21,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device
+    module: Global
   - uid: azure-iot-provisioning-device.PollingStateMachine.constructor
     name: PollingStateMachine
     children: []
@@ -35,6 +36,7 @@ items:
           type:
             - PollingTransportHandlers
           description: ''
+    module: Global
   - uid: azure-iot-provisioning-device.PollingStateMachine.endSession
     name: endSession
     children: []
@@ -49,6 +51,7 @@ items:
           type:
             - '(err: Error) => void'
           description: ''
+    module: Global
   - uid: azure-iot-provisioning-device.PollingStateMachine.register
     name: register
     children: []
@@ -83,3 +86,4 @@ items:
           type:
             - '(err?: Error, responseBody?: any, result?: any) => void'
           description: ''
+    module: Global

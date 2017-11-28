@@ -19,6 +19,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-security-x509
+    module: Global
   - uid: azure-iot-security-x509.X509Security.constructor
     name: X509Security
     children: []
@@ -33,6 +34,7 @@ items:
           type:
             - X509
           description: ''
+    module: Global
   - uid: azure-iot-security-x509.X509Security.getCertificate
     name: getCertificate
     children: []
@@ -47,6 +49,7 @@ items:
           type:
             - '(err?: Error, cert?: X509) => void'
           description: ''
+    module: Global
   - uid: azure-iot-security-x509.X509Security.getCertificateChain
     name: getCertificateChain
     children: []
@@ -63,3 +66,4 @@ items:
           type:
             - '(err?: Error, cert?: string) => void'
           description: ''
+    module: Global

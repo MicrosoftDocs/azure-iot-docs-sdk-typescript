@@ -25,6 +25,7 @@ items:
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
         branch: production
     package: location-based-services-javascript
+    module: atlas.data
   - uid: location-based-services-javascript.Point.constructor
     name: Point
     children: []
@@ -40,6 +41,7 @@ items:
             - '@location-based-services-javascript.Position'
           description: |
             The position defining the point.
+    module: atlas.data
   - uid: location-based-services-javascript.Point.coordinates
     name: coordinates
     fullName: coordinates
@@ -53,6 +55,7 @@ items:
       return:
         type:
           - '@location-based-services-javascript.Position'
+    module: atlas.data
   - uid: location-based-services-javascript.Point.type
     name: type
     fullName: type
@@ -66,6 +69,7 @@ items:
       return:
         type:
           - string
+    module: atlas.data
   - uid: location-based-services-javascript.Point.TYPE
     name: TYPE
     fullName: TYPE
@@ -81,3 +85,4 @@ items:
       return:
         type:
           - string
+    module: atlas.data

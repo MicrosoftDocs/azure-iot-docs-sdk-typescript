@@ -31,6 +31,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-device-amqp
+    module: Global
   - uid: azure-iot-device-amqp.Amqp.disableC2D
     name: disableC2D
     children: []
@@ -45,6 +46,7 @@ items:
           type:
             - '(err?: Error) => void'
           description: ''
+    module: Global
   - uid: azure-iot-device-amqp.Amqp.disableMethods
     name: disableMethods
     children: []
@@ -59,6 +61,7 @@ items:
           type:
             - '(err?: Error) => void'
           description: ''
+    module: Global
   - uid: azure-iot-device-amqp.Amqp.disableTwin
     name: disableTwin
     children: []
@@ -73,6 +76,7 @@ items:
           type:
             - '(err?: Error) => void'
           description: ''
+    module: Global
   - uid: azure-iot-device-amqp.Amqp.enableC2D
     name: enableC2D
     children: []
@@ -87,6 +91,7 @@ items:
           type:
             - '(err?: Error) => void'
           description: ''
+    module: Global
   - uid: azure-iot-device-amqp.Amqp.enableMethods
     name: enableMethods
     children: []
@@ -101,6 +106,7 @@ items:
           type:
             - '(err?: Error) => void'
           description: ''
+    module: Global
   - uid: azure-iot-device-amqp.Amqp.enableTwin
     name: enableTwin
     children: []
@@ -115,3 +121,4 @@ items:
           type:
             - '(err?: Error) => void'
           description: ''
+    module: Global

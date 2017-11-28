@@ -26,6 +26,7 @@ items:
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
         branch: production
     package: location-based-services-javascript
+    module: atlas.data
   - uid: location-based-services-javascript.FeatureCollection.constructor
     name: FeatureCollection
     children: []
@@ -41,6 +42,7 @@ items:
             - Array<@location-based-services-javascript.Feature<Geometry>>
           description: |
             The collection of features that make up the feature collection.
+    module: atlas.data
   - uid: location-based-services-javascript.FeatureCollection.features
     name: features
     fullName: features
@@ -54,6 +56,7 @@ items:
       return:
         type:
           - Array<@location-based-services-javascript.Feature<Geometry>>
+    module: atlas.data
   - uid: location-based-services-javascript.FeatureCollection.type
     name: type
     fullName: type
@@ -67,6 +70,7 @@ items:
       return:
         type:
           - string
+    module: atlas.data
   - uid: location-based-services-javascript.FeatureCollection.TYPE
     name: TYPE
     fullName: TYPE
@@ -82,3 +86,4 @@ items:
       return:
         type:
           - string
+    module: atlas.data

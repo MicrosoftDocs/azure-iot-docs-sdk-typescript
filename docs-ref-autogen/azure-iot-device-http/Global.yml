@@ -3,6 +3,7 @@ items:
   - uid: azure-iot-device-http.Global
     package: azure-iot-device-http
     name: Global
+    module: Global
     children:
       - azure-iot-device-http.handleResponse
     type: package
@@ -27,3 +28,4 @@ items:
       return:
         type:
           - '(err?: Error, body?: any, response?: IncomingMessage) => void'
+    module: Global

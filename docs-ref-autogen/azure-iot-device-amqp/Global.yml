@@ -3,6 +3,7 @@ items:
   - uid: azure-iot-device-amqp.Global
     package: azure-iot-device-amqp
     name: Global
+    module: Global
     children:
       - azure-iot-device-amqp.getTranslatedError
       - azure-iot-device-amqp.handleResult
@@ -32,6 +33,7 @@ items:
       return:
         type:
           - Error
+    module: Global
   - uid: azure-iot-device-amqp.handleResult
     name: handleResult
     children: []
@@ -55,3 +57,4 @@ items:
       return:
         type:
           - '(err?: Error, result?: any) => void'
+    module: Global

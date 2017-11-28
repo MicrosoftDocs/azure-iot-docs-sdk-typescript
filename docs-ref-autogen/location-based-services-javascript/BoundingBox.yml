@@ -31,6 +31,7 @@ items:
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
         branch: production
     package: location-based-services-javascript
+    module: atlas.data
   - uid: location-based-services-javascript.BoundingBox.constructor
     name: BoundingBox
     children: []
@@ -52,6 +53,7 @@ items:
             - '@location-based-services-javascript.Position'
           description: |
             The northeastern most position of the bounding box.
+    module: atlas.data
   - uid: location-based-services-javascript.BoundingBox.Array
     name: Array
     fullName: Array
@@ -65,3 +67,4 @@ items:
       return:
         type:
           - ArrayConstructor
+    module: atlas.data

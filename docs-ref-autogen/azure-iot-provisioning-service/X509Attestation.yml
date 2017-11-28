@@ -19,6 +19,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-service
+    module: Global
   - uid: azure-iot-provisioning-service.X509Attestation.caReferences
     name: caReferences
     fullName: caReferences
@@ -34,6 +35,7 @@ items:
       return:
         type:
           - '@azure-iot-provisioning-service.X509CAReferences'
+    module: Global
   - uid: azure-iot-provisioning-service.X509Attestation.clientCertificates
     name: clientCertificates
     fullName: clientCertificates
@@ -49,6 +51,7 @@ items:
       return:
         type:
           - '@azure-iot-provisioning-service.X509Certificates'
+    module: Global
   - uid: azure-iot-provisioning-service.X509Attestation.signingCertificates
     name: signingCertificates
     fullName: signingCertificates
@@ -66,3 +69,4 @@ items:
       return:
         type:
           - '@azure-iot-provisioning-service.X509Certificates'
+    module: Global

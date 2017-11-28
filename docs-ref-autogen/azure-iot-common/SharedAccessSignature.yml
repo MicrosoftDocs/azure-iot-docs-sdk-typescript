@@ -23,6 +23,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-common
+    module: Global
   - uid: azure-iot-common.SharedAccessSignature.extend
     name: extend
     children: []
@@ -46,6 +47,7 @@ items:
       - type: ReferenceError
         description: |
           Will be thrown if the argument is falsy.
+    module: Global
   - uid: azure-iot-common.SharedAccessSignature.toString
     name: toString
     children: []
@@ -59,6 +61,7 @@ items:
       return:
         type:
           - string
+    module: Global
   - uid: azure-iot-common.SharedAccessSignature.create
     name: create
     children: []
@@ -96,6 +99,7 @@ items:
       - type: ReferenceError
         description: |
           Will be thrown if one of the arguments is falsy.
+    module: Global
   - uid: azure-iot-common.SharedAccessSignature.parse
     name: parse
     children: []
@@ -125,3 +129,4 @@ items:
       - type: FormatError
         description: |
           Will be thrown if the source string is malformed.
+    module: Global

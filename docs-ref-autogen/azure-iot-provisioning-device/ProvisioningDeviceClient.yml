@@ -17,6 +17,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device
+    module: Global
   - uid: azure-iot-provisioning-device.ProvisioningDeviceClient.create
     name: create
     children: []
@@ -38,3 +39,4 @@ items:
       return:
         type:
           - '@azure-iot-provisioning-device.RegistrationClient'
+    module: Global

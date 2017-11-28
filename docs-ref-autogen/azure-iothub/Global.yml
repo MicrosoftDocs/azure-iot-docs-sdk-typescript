@@ -3,6 +3,7 @@ items:
   - uid: azure-iothub.Global
     package: azure-iothub
     name: Global
+    module: Global
     children:
       - azure-iothub.getTranslatedError
       - azure-iothub.handleResult
@@ -33,6 +34,7 @@ items:
       return:
         type:
           - Error
+    module: Global
   - uid: azure-iothub.handleResult
     name: handleResult
     children: []
@@ -54,6 +56,7 @@ items:
       return:
         type:
           - Callback<any>
+    module: Global
   - uid: azure-iothub.parse
     name: parse
     children: []
@@ -82,6 +85,7 @@ items:
       - type: azure-iot-common.ArgumentError
         description: |
           if the string is missing one of the required attributes.
+    module: Global
   - uid: azure-iothub.create
     name: create
     children: []
@@ -124,6 +128,7 @@ items:
       - type: ReferenceError
         description: |
           If one of the parameters is falsy.
+    module: Global
   - uid: azure-iothub.parse
     name: parse
     children: []
@@ -147,3 +152,4 @@ items:
       - type: FormatError
         description: |
           If the string cannot be parsed or is missing required parameters.
+    module: Global

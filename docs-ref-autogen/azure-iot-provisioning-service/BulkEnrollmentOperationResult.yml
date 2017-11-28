@@ -19,6 +19,7 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-service
+    module: Global
   - uid: azure-iot-provisioning-service.BulkEnrollmentOperationResult.errors
     name: errors
     fullName: errors
@@ -35,6 +36,7 @@ items:
       return:
         type:
           - Array<@azure-iot-provisioning-service.BulkEnrollmentOperationError>
+    module: Global
   - uid: azure-iot-provisioning-service.BulkEnrollmentOperationResult.isSuccessful
     name: isSuccessful
     fullName: isSuccessful
@@ -51,3 +53,4 @@ items:
       return:
         type:
           - boolean
+    module: Global

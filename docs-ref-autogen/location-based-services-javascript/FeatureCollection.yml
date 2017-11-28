@@ -1,0 +1,84 @@
+### YamlMime:UniversalReference
+items:
+  - uid: location-based-services-javascript.FeatureCollection
+    name: FeatureCollection
+    fullName: FeatureCollection
+    children:
+      - location-based-services-javascript.FeatureCollection.constructor
+      - location-based-services-javascript.FeatureCollection.features
+      - location-based-services-javascript.FeatureCollection.type
+      - location-based-services-javascript.FeatureCollection.TYPE
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+      A GeoJSON FeatureCollection object - a JSON object that contains a
+      collection of GeoJSON features. The full
+
+      description is detailed in [RFC
+      7946](https://tools.ietf.org/html/rfc7946#section-3.3).
+    source:
+      path: data/FeatureCollection.ts
+      startLine: 9
+      remote:
+        path: src/MapControl/JavascriptSDK/src\data/FeatureCollection.ts
+        repo: >-
+          https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
+        branch: production
+    package: location-based-services-javascript
+  - uid: location-based-services-javascript.FeatureCollection.constructor
+    name: FeatureCollection
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a FeatureCollection.
+    syntax:
+      content: 'new FeatureCollection(features: Array<Feature<Geometry>>)'
+      parameters:
+        - id: features
+          type:
+            - Array<@location-based-services-javascript.Feature<Geometry>>
+          description: |
+            The collection of features that make up the feature collection.
+  - uid: location-based-services-javascript.FeatureCollection.features
+    name: features
+    fullName: features
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The collection of GeoJSON features contained in the feature collection.
+    syntax:
+      content: Array<Feature<Geometry>> features
+      return:
+        type:
+          - Array<@location-based-services-javascript.Feature<Geometry>>
+  - uid: location-based-services-javascript.FeatureCollection.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A GeoJSON type descriptor with value "FeatureCollection".
+    syntax:
+      content: string type
+      return:
+        type:
+          - string
+  - uid: location-based-services-javascript.FeatureCollection.TYPE
+    name: TYPE
+    fullName: TYPE
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      A static GeoJSON type descriptor for the FeatureCollection class to be
+      used in runtime comparisons.
+    syntax:
+      content: static string TYPE
+      return:
+        type:
+          - string

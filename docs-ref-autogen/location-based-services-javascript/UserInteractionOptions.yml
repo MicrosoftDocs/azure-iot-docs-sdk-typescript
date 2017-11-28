@@ -1,0 +1,194 @@
+### YamlMime:UniversalReference
+items:
+  - uid: location-based-services-javascript.UserInteractionOptions
+    name: UserInteractionOptions
+    fullName: UserInteractionOptions
+    children:
+      - >-
+        location-based-services-javascript.UserInteractionOptions.boxZoomInteraction
+      - >-
+        location-based-services-javascript.UserInteractionOptions.dblClickZoomInteraction
+      - >-
+        location-based-services-javascript.UserInteractionOptions.dragPanInteraction
+      - >-
+        location-based-services-javascript.UserInteractionOptions.dragRotateInteraction
+      - location-based-services-javascript.UserInteractionOptions.interactive
+      - >-
+        location-based-services-javascript.UserInteractionOptions.keyboardInteraction
+      - >-
+        location-based-services-javascript.UserInteractionOptions.scrollZoomInteraction
+      - >-
+        location-based-services-javascript.UserInteractionOptions.touchInteraction
+    langs:
+      - typeScript
+    type: class
+    summary: The options for enabling/disabling user interaction with the map.
+    extends:
+      name: Options
+    source:
+      path: map/options/UserInteractionOptions.ts
+      startLine: 7
+      remote:
+        path: src/MapControl/JavascriptSDK/src\map/options/UserInteractionOptions.ts
+        repo: >-
+          https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
+        branch: production
+    package: location-based-services-javascript
+  - uid: >-
+      location-based-services-javascript.UserInteractionOptions.boxZoomInteraction
+    name: boxZoomInteraction
+    fullName: boxZoomInteraction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Whether the Shift + left click and drag will draw a zoom box.
+    optional: true
+    syntax:
+      content: boolean boxZoomInteraction
+      return:
+        type:
+          - boolean
+  - uid: >-
+      location-based-services-javascript.UserInteractionOptions.dblClickZoomInteraction
+    name: dblClickZoomInteraction
+    fullName: dblClickZoomInteraction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Whether double left click will zoom the map inwards.
+    optional: true
+    syntax:
+      content: boolean dblClickZoomInteraction
+      return:
+        type:
+          - boolean
+  - uid: >-
+      location-based-services-javascript.UserInteractionOptions.dragPanInteraction
+    name: dragPanInteraction
+    fullName: dragPanInteraction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Whether left click and drag will pan the map.
+    optional: true
+    syntax:
+      content: boolean dragPanInteraction
+      return:
+        type:
+          - boolean
+  - uid: >-
+      location-based-services-javascript.UserInteractionOptions.dragRotateInteraction
+    name: dragRotateInteraction
+    fullName: dragRotateInteraction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Whether right click and drag will rotate and pitch the map.
+    optional: true
+    syntax:
+      content: boolean dragRotateInteraction
+      return:
+        type:
+          - boolean
+  - uid: location-based-services-javascript.UserInteractionOptions.interactive
+    name: interactive
+    fullName: interactive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Whether the map is interactive or static. If false, all user interaction
+      is disabled.  If true, only selected
+
+      user interactions will enabled.
+    optional: true
+    syntax:
+      content: boolean interactive
+      return:
+        type:
+          - boolean
+  - uid: >-
+      location-based-services-javascript.UserInteractionOptions.keyboardInteraction
+    name: keyboardInteraction
+    fullName: keyboardInteraction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Whether the keyboard interactions are enabled.
+
+      <style> .k-key { border: 1px solid grey; border-radius: 6px;
+      background-color: #ccc; line-height: 14px;
+
+      font-size: 14px; padding: 2px; } </style>
+
+      <p><span class="k-key">+=</span>: Increase zoom level by 1.</p>
+
+      <p><span class="k-key">Shift</span> + <span class="k-key">+=</span>:
+      Increase the zoom level by 2.</p>
+
+      <p><span class="k-key">-</span>: Decrease zoom level by 1.</p>
+
+      <p><span class="k-key">Shift</span> + <span class="k-key">-</span>:
+      Decrease zoom level by 2.</p>
+
+      <p><span class="k-key">⇢</span>: Pan right 100 pixels.</p>
+
+      <p><span class="k-key">⇠</span>: Pan left 100 pixels.</p>
+
+      <p><span class="k-key">⇡</span>: Pan up 100 pixels.</p>
+
+      <p><span class="k-key">⇣</span>: Pan down 100 pixels.</p>
+
+      <p><span class="k-key">Shift</span> + <span class="k-key">⇢</span>: Rotate
+      15 degrees clockwise.</p>
+
+      <p><span class="k-key">Shift</span> + <span class="k-key">⇠</span>: Rotate
+      15 degrees counter-clockwise.</p>
+
+      <p><span class="k-key">Shift</span> + <span class="k-key">⇡</span>:
+      Increase pitch by 10 degrees.</p>
+
+      <p><span class="k-key">Shift</span> + <span class="k-key">⇣</span>:
+      Decrease pitch by 10 degrees.</p>
+    optional: true
+    syntax:
+      content: boolean keyboardInteraction
+      return:
+        type:
+          - boolean
+  - uid: >-
+      location-based-services-javascript.UserInteractionOptions.scrollZoomInteraction
+    name: scrollZoomInteraction
+    fullName: scrollZoomInteraction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Whether the map should zoom on scroll input.
+    optional: true
+    syntax:
+      content: boolean scrollZoomInteraction
+      return:
+        type:
+          - boolean
+  - uid: location-based-services-javascript.UserInteractionOptions.touchInteraction
+    name: touchInteraction
+    fullName: touchInteraction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Whether touch interactions are enabled for touch devices.
+    optional: true
+    syntax:
+      content: boolean touchInteraction
+      return:
+        type:
+          - boolean

@@ -1,0 +1,53 @@
+### YamlMime:UniversalReference
+items:
+  - uid: location-based-services-javascript.PinProperties
+    name: PinProperties
+    fullName: PinProperties
+    children:
+      - location-based-services-javascript.PinProperties.icon
+      - location-based-services-javascript.PinProperties.title
+    langs:
+      - typeScript
+    type: interface
+    summary: Individual properties that can be specified for a point feature.
+    source:
+      path: map/data_properties/PinProperties.ts
+      startLine: 5
+      remote:
+        path: src/MapControl/JavascriptSDK/src\map/data_properties/PinProperties.ts
+        repo: >-
+          https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
+        branch: production
+    package: location-based-services-javascript
+  - uid: location-based-services-javascript.PinProperties.icon
+    name: icon
+    fullName: icon
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The icon to display for the point.
+    optional: true
+    syntax:
+      content: >-
+        "pin-darkblue" | "pin-blue" | "pin-red" | "pin-round-darkblue" |
+        "pin-round-blue" | "pin-round-red" | "none" | string icon
+      return:
+        type:
+          - >-
+            "pin-darkblue" | "pin-blue" | "pin-red" | "pin-round-darkblue" |
+            "pin-round-blue" | "pin-round-red" | "none" | string
+  - uid: location-based-services-javascript.PinProperties.title
+    name: title
+    fullName: title
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The title to display for the point.
+    optional: true
+    syntax:
+      content: string title
+      return:
+        type:
+          - string

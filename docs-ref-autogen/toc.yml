@@ -1,8 +1,7 @@
 - uid: azure-iot-common
   name: azure-iot-common
   items:
-    - uid: azure-iot-common.Global
-      name: Global
+    - name: Global
       items:
         - uid: azure-iot-common.ConnectionString
           name: ConnectionString
@@ -151,45 +150,27 @@
 - uid: azure-iot-mqtt-base
   name: azure-iot-mqtt-base
   items:
-    - uid: azure-iot-mqtt-base.Global
-      name: Global
+    - name: Global
       items:
         - uid: azure-iot-mqtt-base.MqttBase
           name: MqttBase
           items: []
-    - uid: azure-iot-mqtt-base.MqttBase
-      name: MqttBase
-      items:
-        - uid: azure-iot-mqtt-base.MqttBase.MqttBase.TransportConfig
+        - uid: azure-iot-mqtt-base.MqttBase.TransportConfig
           name: TransportConfig
           items: []
-    - uid: azure-iot-mqtt-base.Global
-      name: Global
+    - name: MqttBase
       items:
-        - uid: azure-iot-mqtt-base.MqttBase.TransportConfig
+        - uid: azure-iot-mqtt-base.MqttBase.MqttBase.TransportConfig
           name: TransportConfig
           items: []
 - uid: azure-iot-device
   name: azure-iot-device
   items:
-    - uid: azure-iot-device.Global
-      name: Global
+    - name: Global
       items:
         - uid: azure-iot-device.Client
           name: Client
           items: []
-    - uid: azure-iot-device.Client
-      name: Client
-      items:
-        - uid: azure-iot-device.Client.Client.BlobUpload
-          name: BlobUpload
-          items: []
-        - uid: azure-iot-device.Client.Client.Transport
-          name: Transport
-          items: []
-    - uid: azure-iot-device.Global
-      name: Global
-      items:
         - uid: azure-iot-device.Client.BlobUpload
           name: BlobUpload
           items: []
@@ -208,11 +189,18 @@
         - uid: azure-iot-device.Global
           name: Global
           items: []
+    - name: Client
+      items:
+        - uid: azure-iot-device.Client.Client.BlobUpload
+          name: BlobUpload
+          items: []
+        - uid: azure-iot-device.Client.Client.Transport
+          name: Transport
+          items: []
 - uid: azure-iot-device-amqp
   name: azure-iot-device-amqp
   items:
-    - uid: azure-iot-device-amqp.Global
-      name: Global
+    - name: Global
       items:
         - uid: azure-iot-device-amqp.Amqp
           name: Amqp
@@ -226,8 +214,7 @@
 - uid: azure-iot-device-http
   name: azure-iot-device-http
   items:
-    - uid: azure-iot-device-http.Global
-      name: Global
+    - name: Global
       items:
         - uid: azure-iot-device-http.Http
           name: Http
@@ -241,8 +228,7 @@
 - uid: azure-iot-device-mqtt
   name: azure-iot-device-mqtt
   items:
-    - uid: azure-iot-device-mqtt.Global
-      name: Global
+    - name: Global
       items:
         - uid: azure-iot-device-mqtt.Mqtt
           name: Mqtt
@@ -253,8 +239,7 @@
 - uid: azure-iot-provisioning-device
   name: azure-iot-provisioning-device
   items:
-    - uid: azure-iot-provisioning-device.Global
-      name: Global
+    - name: Global
       items:
         - uid: azure-iot-provisioning-device.ProvisioningDeviceClient
           name: ProvisioningDeviceClient
@@ -289,8 +274,7 @@
 - uid: azure-iot-provisioning-service
   name: azure-iot-provisioning-service
   items:
-    - uid: azure-iot-provisioning-service.Global
-      name: Global
+    - name: Global
       items:
         - uid: azure-iot-provisioning-service.AttestationMechanism
           name: AttestationMechanism
@@ -355,8 +339,7 @@
 - uid: azure-iot-provisioning-device-amqp
   name: azure-iot-provisioning-device-amqp
   items:
-    - uid: azure-iot-provisioning-device-amqp.Global
-      name: Global
+    - name: Global
       items:
         - uid: azure-iot-provisioning-device-amqp.Amqp
           name: Amqp
@@ -364,8 +347,7 @@
 - uid: azure-iot-provisioning-device-http
   name: azure-iot-provisioning-device-http
   items:
-    - uid: azure-iot-provisioning-device-http.Global
-      name: Global
+    - name: Global
       items:
         - uid: azure-iot-provisioning-device-http.HttpPollingHandlers
           name: HttpPollingHandlers
@@ -376,8 +358,7 @@
 - uid: azure-iot-provisioning-device-mqtt
   name: azure-iot-provisioning-device-mqtt
   items:
-    - uid: azure-iot-provisioning-device-mqtt.Global
-      name: Global
+    - name: Global
       items:
         - uid: azure-iot-provisioning-device-mqtt.Mqtt
           name: Mqtt
@@ -385,8 +366,7 @@
 - uid: azure-iot-security-tpm
   name: azure-iot-security-tpm
   items:
-    - uid: azure-iot-security-tpm.Global
-      name: Global
+    - name: Global
       items:
         - uid: azure-iot-security-tpm.TpmSecurityClient
           name: TpmSecurityClient
@@ -394,8 +374,7 @@
 - uid: azure-iot-security-x509
   name: azure-iot-security-x509
   items:
-    - uid: azure-iot-security-x509.Global
-      name: Global
+    - name: Global
       items:
         - uid: azure-iot-security-x509.X509Security
           name: X509Security
@@ -403,8 +382,7 @@
 - uid: azure-iothub
   name: azure-iothub
   items:
-    - uid: azure-iothub.Global
-      name: Global
+    - name: Global
       items:
         - uid: azure-iothub.Amqp
           name: Amqp
@@ -415,21 +393,6 @@
         - uid: azure-iothub.Client
           name: Client
           items: []
-    - uid: azure-iothub.Client
-      name: Client
-      items:
-        - uid: azure-iothub.Client.Client.ServiceReceiver
-          name: ServiceReceiver
-          items: []
-        - uid: azure-iothub.Client.Client.Transport
-          name: Transport
-          items: []
-        - uid: azure-iothub.Client.Client.TransportConfigOptions
-          name: TransportConfigOptions
-          items: []
-    - uid: azure-iothub.Global
-      name: Global
-      items:
         - uid: azure-iothub.Client.ServiceReceiver
           name: ServiceReceiver
           items: []
@@ -484,11 +447,21 @@
         - uid: azure-iothub.Global
           name: Global
           items: []
+    - name: Client
+      items:
+        - uid: azure-iothub.Client.Client.ServiceReceiver
+          name: ServiceReceiver
+          items: []
+        - uid: azure-iothub.Client.Client.Transport
+          name: Transport
+          items: []
+        - uid: azure-iothub.Client.Client.TransportConfigOptions
+          name: TransportConfigOptions
+          items: []
 - uid: location-based-services-javascript
   name: location-based-services-javascript
   items:
-    - uid: location-based-services-javascript.atlas.data
-      name: atlas.data
+    - name: atlas.data
       items:
         - uid: location-based-services-javascript.BoundingBox
           name: BoundingBox
@@ -517,8 +490,7 @@
         - uid: location-based-services-javascript.Position
           name: Position
           items: []
-    - uid: location-based-services-javascript.atlas
-      name: atlas
+    - name: atlas
       items:
         - uid: location-based-services-javascript.Map
           name: Map
@@ -526,8 +498,7 @@
         - uid: location-based-services-javascript.Popup
           name: Popup
           items: []
-    - uid: location-based-services-javascript.Object Definitions
-      name: Object Definitions
+    - name: Object Definitions
       items:
         - uid: location-based-services-javascript.CircleProperties
           name: CircleProperties

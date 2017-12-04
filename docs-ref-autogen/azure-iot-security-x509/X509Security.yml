@@ -10,10 +10,10 @@ items:
     langs:
       - typeScript
     type: class
-    summary: ''
+    summary: X509 security client using user-generated cert for Azure IoT
     source:
       path: x509.ts
-      startLine: 7
+      startLine: 10
       remote:
         path: security/x509/src\x509.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
@@ -26,14 +26,15 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: ''
+    summary: Construct a new X509 security object
     syntax:
       content: 'new X509Security(cert: X509)'
       parameters:
         - id: cert
           type:
             - X509
-          description: ''
+          description: |
+            certificate to use
     module: Global
   - uid: azure-iot-security-x509.X509Security.getCertificate
     name: getCertificate
@@ -41,14 +42,15 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: return the X509 certificate
     syntax:
       content: 'function getCertificate(callback: (err?: Error, cert?: X509) => void)'
       parameters:
         - id: callback
           type:
             - '(err?: Error, cert?: X509) => void'
-          description: ''
+          description: |
+            called when the operation is complete
     module: Global
   - uid: azure-iot-security-x509.X509Security.getCertificateChain
     name: getCertificateChain
@@ -56,7 +58,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: return the X509 certificate chain
     syntax:
       content: >-
         function getCertificateChain(callback: (err?: Error, cert?: string) =>
@@ -65,5 +67,6 @@ items:
         - id: callback
           type:
             - '(err?: Error, cert?: string) => void'
-          description: ''
+          description: |
+            called when the operation is copmlete
     module: Global

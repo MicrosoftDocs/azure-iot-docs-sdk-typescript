@@ -26,15 +26,18 @@ items:
       - typeScript
     summary: Factory method to use to create a DeviceClient object.
     syntax:
-      content: 'static function create(transport: any, securityClient: any)'
+      content: >-
+        static function create(transport: X509ProvisioningTransport |
+        TpmProvisioningTransport, securityClient: X509SecurityClient |
+        TpmSecurityClient)
       parameters:
         - id: transport
           type:
-            - any
+            - X509ProvisioningTransport | TpmProvisioningTransport
           description: Transport instance to use
         - id: securityClient
           type:
-            - any
+            - X509SecurityClient | TpmSecurityClient
           description: ''
       return:
         type:

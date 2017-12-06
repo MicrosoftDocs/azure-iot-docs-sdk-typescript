@@ -5,17 +5,20 @@ items:
     fullName: Http
     children:
       - azure-iot-provisioning-device-http.Http.constructor
+      - azure-iot-provisioning-device-http.Http.endSession
+      - azure-iot-provisioning-device-http.Http.queryOperationStatus
+      - azure-iot-provisioning-device-http.Http.registrationRequest
     langs:
       - typeScript
     type: class
-    summary: Transport object for Azure IoT provisioning HTTP protocol
+    summary: ''
     extends:
       name: '@azure-iot-provisioning-device-http.Http'
     source:
-      path: http_transport.ts
-      startLine: 15
+      path: http.ts
+      startLine: 22
       remote:
-        path: provisioning/transport/http/src\http_transport.ts
+        path: provisioning/transport/http/src\http.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device-http
@@ -26,18 +29,90 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: Create a new HTTP transport object
+    summary: ''
     syntax:
-      content: 'new Http(idScope: number, httpBase?: Base)'
+      content: 'new Http(httpBase?: Base)'
       parameters:
-        - id: idScope
-          type:
-            - number
-          description: ID Scope to use when communicating with the provisionin service
         - id: httpBase
           type:
             - Base
-          description: |
-            base object for testing
+          description: ''
           optional: true
+    module: Global
+  - uid: azure-iot-provisioning-device-http.Http.endSession
+    name: endSession
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      private
+      called by _stateMachine via the PollingTransportHandlers interface
+    syntax:
+      content: 'function endSession(callback: (err?: Error) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''
+    module: Global
+  - uid: azure-iot-provisioning-device-http.Http.queryOperationStatus
+    name: queryOperationStatus
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      private
+      called by _stateMachine via the PollingTransportHandlers interface
+    syntax:
+      content: >-
+        function queryOperationStatus(request: RegistrationRequest, operationId:
+        string, callback: (err?: Error, responseBody?: any, result?: any,
+        pollingInterval?: number) => void)
+      parameters:
+        - id: request
+          type:
+            - RegistrationRequest
+          description: ''
+        - id: operationId
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - >-
+              (err?: Error, responseBody?: any, result?: any, pollingInterval?:
+              number) => void
+          description: ''
+    module: Global
+  - uid: azure-iot-provisioning-device-http.Http.registrationRequest
+    name: registrationRequest
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      private
+      called by _stateMachine via the PollingTransportHandlers interface
+    syntax:
+      content: >-
+        function registrationRequest(request: RegistrationRequest, requestBody:
+        any, callback: (err?: Error, responseBody?: any, result?: any,
+        pollingInterval?: number) => void)
+      parameters:
+        - id: request
+          type:
+            - RegistrationRequest
+          description: ''
+        - id: requestBody
+          type:
+            - any
+          description: ''
+        - id: callback
+          type:
+            - >-
+              (err?: Error, responseBody?: any, result?: any, pollingInterval?:
+              number) => void
+          description: ''
     module: Global

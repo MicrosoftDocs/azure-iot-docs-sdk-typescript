@@ -31,9 +31,13 @@ items:
     summary: ''
     syntax:
       content: >-
-        new TpmRegistration(idScope: string, transport:
-        TpmProvisioningTransport, securityClient: TpmSecurityClient)
+        new TpmRegistration(provisioningHost: string, idScope: string,
+        transport: TpmProvisioningTransport, securityClient: TpmSecurityClient)
       parameters:
+        - id: provisioningHost
+          type:
+            - string
+          description: ''
         - id: idScope
           type:
             - string
@@ -70,18 +74,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      content: >-
-        function register(registrationId: string, forceRegistration: boolean,
-        callback: (err?: Error, result?: any) => void)
+      content: 'function register(callback: (err?: Error, result?: any) => void)'
       parameters:
-        - id: registrationId
-          type:
-            - string
-          description: ''
-        - id: forceRegistration
-          type:
-            - boolean
-          description: ''
         - id: callback
           type:
             - '(err?: Error, result?: any) => void'

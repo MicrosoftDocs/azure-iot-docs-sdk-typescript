@@ -61,26 +61,16 @@ items:
     summary: ''
     syntax:
       content: >-
-        function register(registrationId: string, authorization:
-        ProvisioningAuthentication, requestBody: any, forceRegistration:
-        boolean, callback: (err?: Error, responseBody?: any, result?: any) =>
-        void)
+        function register(request: RegistrationRequest, requestBody: any,
+        callback: (err?: Error, responseBody?: any, result?: any) => void)
       parameters:
-        - id: registrationId
+        - id: request
           type:
-            - string
-          description: ''
-        - id: authorization
-          type:
-            - ProvisioningAuthentication
+            - '@azure-iot-provisioning-device.RegistrationRequest'
           description: ''
         - id: requestBody
           type:
             - any
-          description: ''
-        - id: forceRegistration
-          type:
-            - boolean
           description: ''
         - id: callback
           type:

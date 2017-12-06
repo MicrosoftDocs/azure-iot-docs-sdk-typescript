@@ -6,6 +6,7 @@ items:
     children:
       - azure-iot-provisioning-device.X509SecurityClient.getCertificate
       - azure-iot-provisioning-device.X509SecurityClient.getCertificateChain
+      - azure-iot-provisioning-device.X509SecurityClient.getRegistrationId
     langs:
       - typeScript
     type: interface
@@ -14,7 +15,7 @@ items:
       useful if you're writing your own security client.
     source:
       path: interfaces.ts
-      startLine: 59
+      startLine: 79
       remote:
         path: provisioning/device/src\interfaces.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
@@ -54,4 +55,18 @@ items:
             - '(err?: Error, cert?: string) => void'
           description: |
             called when the operation is copmlete
+    module: Global
+  - uid: azure-iot-provisioning-device.X509SecurityClient.getRegistrationId
+    name: getRegistrationId
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: return the registration Id for the device
+    syntax:
+      content: function getRegistrationId()
+      parameters: []
+      return:
+        type:
+          - string
     module: Global

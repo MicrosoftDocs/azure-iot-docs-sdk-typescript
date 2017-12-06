@@ -7,8 +7,6 @@ items:
       - >-
         azure-iot-provisioning-device.ProvisioningTransportOptions.pollingInterval
       - >-
-        azure-iot-provisioning-device.ProvisioningTransportOptions.provisioningHost
-      - >-
         azure-iot-provisioning-device.ProvisioningTransportOptions.timeoutInterval
     langs:
       - typeScript
@@ -41,22 +39,6 @@ items:
       return:
         type:
           - number
-    module: Global
-  - uid: >-
-      azure-iot-provisioning-device.ProvisioningTransportOptions.provisioningHost
-    name: provisioningHost
-    fullName: provisioningHost
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Default host for the provisioning service
-    optional: true
-    syntax:
-      content: string provisioningHost
-      return:
-        type:
-          - string
     module: Global
   - uid: azure-iot-provisioning-device.ProvisioningTransportOptions.timeoutInterval
     name: timeoutInterval

@@ -5,15 +5,15 @@ items:
     fullName: TpmRegistrationInfo
     children:
       - azure-iot-provisioning-device.TpmRegistrationInfo.endorsementKey
-      - azure-iot-provisioning-device.TpmRegistrationInfo.registrationId
+      - azure-iot-provisioning-device.TpmRegistrationInfo.request
       - azure-iot-provisioning-device.TpmRegistrationInfo.storageRootKey
     langs:
       - typeScript
     type: interface
-    summary: Device configuration returned when registration using TPM is complete
+    summary: Information passed between client and transport during Tpm registration
     source:
       path: interfaces.ts
-      startLine: 103
+      startLine: 127
       remote:
         path: provisioning/device/src\interfaces.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
@@ -34,19 +34,19 @@ items:
         type:
           - string
     module: Global
-  - uid: azure-iot-provisioning-device.TpmRegistrationInfo.registrationId
-    name: registrationId
-    fullName: registrationId
+  - uid: azure-iot-provisioning-device.TpmRegistrationInfo.request
+    name: request
+    fullName: request
     children: []
     langs:
       - typeScript
     type: property
     summary: ''
     syntax:
-      content: string registrationId
+      content: RegistrationRequest request
       return:
         type:
-          - string
+          - '@azure-iot-provisioning-device.RegistrationRequest'
     module: Global
   - uid: azure-iot-provisioning-device.TpmRegistrationInfo.storageRootKey
     name: storageRootKey

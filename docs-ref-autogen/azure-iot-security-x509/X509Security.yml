@@ -7,6 +7,7 @@ items:
       - azure-iot-security-x509.X509Security.constructor
       - azure-iot-security-x509.X509Security.getCertificate
       - azure-iot-security-x509.X509Security.getCertificateChain
+      - azure-iot-security-x509.X509Security.getRegistrationId
     langs:
       - typeScript
     type: class
@@ -28,8 +29,12 @@ items:
       - typeScript
     summary: Construct a new X509 security object
     syntax:
-      content: 'new X509Security(cert: X509)'
+      content: 'new X509Security(registrationId: string, cert: X509)'
       parameters:
+        - id: registrationId
+          type:
+            - string
+          description: ''
         - id: cert
           type:
             - X509
@@ -69,4 +74,18 @@ items:
             - '(err?: Error, cert?: string) => void'
           description: |
             called when the operation is copmlete
+    module: Global
+  - uid: azure-iot-security-x509.X509Security.getRegistrationId
+    name: getRegistrationId
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: return the registration Id for the device
+    syntax:
+      content: function getRegistrationId()
+      parameters: []
+      return:
+        type:
+          - string
     module: Global

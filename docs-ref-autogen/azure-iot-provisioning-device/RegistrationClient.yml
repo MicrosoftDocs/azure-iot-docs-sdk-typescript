@@ -12,7 +12,7 @@ items:
     summary: Public API used to access the ProvisioningDeviceClient object
     source:
       path: interfaces.ts
-      startLine: 89
+      startLine: 113
       remote:
         path: provisioning/device/src\interfaces.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
@@ -42,18 +42,8 @@ items:
       - typeScript
     summary: Register the device with the provisioning service
     syntax:
-      content: >-
-        function register(registrationId: string, forceRegistration: boolean,
-        callback: (err?: Error, result?: any) => void)
+      content: 'function register(callback: (err?: Error, result?: any) => void)'
       parameters:
-        - id: registrationId
-          type:
-            - string
-          description: ''
-        - id: forceRegistration
-          type:
-            - boolean
-          description: ''
         - id: callback
           type:
             - '(err?: Error, result?: any) => void'

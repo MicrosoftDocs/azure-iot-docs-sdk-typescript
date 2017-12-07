@@ -5,7 +5,7 @@ items:
     fullName: PollingStateMachine
     children:
       - azure-iot-provisioning-device.PollingStateMachine.constructor
-      - azure-iot-provisioning-device.PollingStateMachine.endSession
+      - azure-iot-provisioning-device.PollingStateMachine.cancel
       - azure-iot-provisioning-device.PollingStateMachine.register
     langs:
       - typeScript
@@ -37,15 +37,15 @@ items:
             - PollingTransportHandlers
           description: ''
     module: Global
-  - uid: azure-iot-provisioning-device.PollingStateMachine.endSession
-    name: endSession
+  - uid: azure-iot-provisioning-device.PollingStateMachine.cancel
+    name: cancel
     children: []
     type: method
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'function endSession(callback: (err: Error) => void)'
+      content: 'function cancel(callback: (err: Error) => void)'
       parameters:
         - id: callback
           type:

@@ -30,11 +30,11 @@ items:
       - typeScript
     summary: ''
     syntax:
-      content: 'new PollingStateMachine(transport: PollingTransportHandlers)'
+      content: 'new PollingStateMachine(transport: PollingTransport)'
       parameters:
         - id: transport
           type:
-            - PollingTransportHandlers
+            - PollingTransport
           description: ''
     module: Global
   - uid: azure-iot-provisioning-device.PollingStateMachine.cancel
@@ -61,16 +61,12 @@ items:
     summary: ''
     syntax:
       content: >-
-        function register(request: RegistrationRequest, requestBody: any,
-        callback: (err?: Error, responseBody?: any, result?: any) => void)
+        function register(request: RegistrationRequest, callback: (err?: Error,
+        responseBody?: any, result?: any) => void)
       parameters:
         - id: request
           type:
             - '@azure-iot-provisioning-device.RegistrationRequest'
-          description: ''
-        - id: requestBody
-          type:
-            - any
           description: ''
         - id: callback
           type:

@@ -65,8 +65,8 @@ items:
     syntax:
       content: >-
         function queryOperationStatus(request: RegistrationRequest, operationId:
-        string, callback: (err?: Error, responseBody?: any, result?: any,
-        pollingInterval?: number) => void)
+        string, callback: (err?: Error, result?: DeviceRegistrationResult,
+        response?: any, pollingInterval?: number) => void)
       parameters:
         - id: request
           type:
@@ -79,8 +79,8 @@ items:
         - id: callback
           type:
             - >-
-              (err?: Error, responseBody?: any, result?: any, pollingInterval?:
-              number) => void
+              (err?: Error, result?: DeviceRegistrationResult, response?: any,
+              pollingInterval?: number) => void
           description: ''
     module: Global
   - uid: azure-iot-provisioning-device-http.Http.registrationRequest
@@ -93,8 +93,8 @@ items:
     syntax:
       content: >-
         function registrationRequest(request: RegistrationRequest, callback:
-        (err?: Error, responseBody?: any, result?: any, pollingInterval?:
-        number) => void)
+        (err?: Error, result?: DeviceRegistrationResult, response?: any,
+        pollingInterval?: number) => void)
       parameters:
         - id: request
           type:
@@ -103,8 +103,8 @@ items:
         - id: callback
           type:
             - >-
-              (err?: Error, responseBody?: any, result?: any, pollingInterval?:
-              number) => void
+              (err?: Error, result?: DeviceRegistrationResult, response?: any,
+              pollingInterval?: number) => void
           description: ''
     module: Global
   - uid: azure-iot-provisioning-device-http.Http.setAuthentication

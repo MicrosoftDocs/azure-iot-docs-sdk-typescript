@@ -4,9 +4,11 @@ items:
     name: TransportConfig
     fullName: TransportConfig
     children:
+      - azure-iot-mqtt-base.MqttBase.TransportConfig.clean
       - azure-iot-mqtt-base.MqttBase.TransportConfig.deviceId
       - azure-iot-mqtt-base.MqttBase.TransportConfig.host
       - azure-iot-mqtt-base.MqttBase.TransportConfig.sharedAccessSignature
+      - azure-iot-mqtt-base.MqttBase.TransportConfig.username
       - azure-iot-mqtt-base.MqttBase.TransportConfig.x509
     langs:
       - typeScript
@@ -14,12 +16,27 @@ items:
     summary: ''
     source:
       path: mqtt_base.ts
-      startLine: 272
+      startLine: 273
       remote:
         path: common/transport/mqtt/src\mqtt_base.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-mqtt-base
+    module: Global
+  - uid: azure-iot-mqtt-base.MqttBase.TransportConfig.clean
+    name: clean
+    fullName: clean
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: boolean clean
+      return:
+        type:
+          - boolean
     module: Global
   - uid: azure-iot-mqtt-base.MqttBase.TransportConfig.deviceId
     name: deviceId
@@ -63,6 +80,21 @@ items:
       return:
         type:
           - string | SharedAccessSignature
+    module: Global
+  - uid: azure-iot-mqtt-base.MqttBase.TransportConfig.username
+    name: username
+    fullName: username
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: string username
+      return:
+        type:
+          - string
     module: Global
   - uid: azure-iot-mqtt-base.MqttBase.TransportConfig.x509
     name: x509

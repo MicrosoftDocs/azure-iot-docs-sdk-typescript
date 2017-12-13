@@ -62,7 +62,7 @@ items:
     syntax:
       content: >-
         function register(request: RegistrationRequest, callback: (err?: Error,
-        responseBody?: any, result?: any) => void)
+        result?: any, response?: any) => void)
       parameters:
         - id: request
           type:
@@ -70,6 +70,6 @@ items:
           description: ''
         - id: callback
           type:
-            - '(err?: Error, responseBody?: any, result?: any) => void'
+            - '(err?: Error, result?: any, response?: any) => void'
           description: ''
     module: Global

@@ -15,7 +15,7 @@ items:
       name: EventEmitter
     source:
       path: tpm_registration.ts
-      startLine: 8
+      startLine: 9
       remote:
         path: provisioning/device/src\tpm_registration.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
@@ -74,10 +74,12 @@ items:
       - typeScript
     summary: ''
     syntax:
-      content: 'function register(callback: (err?: Error, result?: any) => void)'
+      content: >-
+        function register(callback: (err?: Error, result?: RegistrationResult)
+        => void)
       parameters:
         - id: callback
           type:
-            - '(err?: Error, result?: any) => void'
+            - '(err?: Error, result?: RegistrationResult) => void'
           description: ''
     module: Global

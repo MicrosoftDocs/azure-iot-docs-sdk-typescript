@@ -1,0 +1,95 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-device.SharedAccessSignatureAuthenticationProvider
+    name: SharedAccessSignatureAuthenticationProvider
+    fullName: SharedAccessSignatureAuthenticationProvider
+    children:
+      - azure-iot-device.SharedAccessSignatureAuthenticationProvider.type
+      - >-
+        azure-iot-device.SharedAccessSignatureAuthenticationProvider.getDeviceCredentials
+      - >-
+        azure-iot-device.SharedAccessSignatureAuthenticationProvider.updateSharedAccessSignature
+      - >-
+        azure-iot-device.SharedAccessSignatureAuthenticationProvider.fromSharedAccessSignature
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    extends:
+      name: EventEmitter
+    source:
+      path: sas_authentication_provider.ts
+      startLine: 7
+      remote:
+        path: device/core/src\sas_authentication_provider.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-device
+    module: Global
+  - uid: azure-iot-device.SharedAccessSignatureAuthenticationProvider.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: AuthenticationType type
+      return:
+        type:
+          - AuthenticationType
+    module: Global
+  - uid: >-
+      azure-iot-device.SharedAccessSignatureAuthenticationProvider.getDeviceCredentials
+    name: getDeviceCredentials
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getDeviceCredentials(callback: (err: Error, credentials:
+        TransportConfig) => void)
+      parameters:
+        - id: callback
+          type:
+            - '(err: Error, credentials: TransportConfig) => void'
+          description: ''
+    module: Global
+  - uid: >-
+      azure-iot-device.SharedAccessSignatureAuthenticationProvider.updateSharedAccessSignature
+    name: updateSharedAccessSignature
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function updateSharedAccessSignature(sharedAccessSignature: string)'
+      parameters:
+        - id: sharedAccessSignature
+          type:
+            - string
+          description: ''
+    module: Global
+  - uid: >-
+      azure-iot-device.SharedAccessSignatureAuthenticationProvider.fromSharedAccessSignature
+    name: fromSharedAccessSignature
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'static function fromSharedAccessSignature(sharedAccessSignature: string)'
+      parameters:
+        - id: sharedAccessSignature
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - '@azure-iot-device.SharedAccessSignatureAuthenticationProvider'
+    module: Global

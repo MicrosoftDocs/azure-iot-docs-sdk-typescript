@@ -1,0 +1,113 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-common.TransportConfig
+    name: TransportConfig
+    fullName: TransportConfig
+    children:
+      - azure-iot-common.TransportConfig.deviceId
+      - azure-iot-common.TransportConfig.host
+      - azure-iot-common.TransportConfig.sharedAccessKey
+      - azure-iot-common.TransportConfig.sharedAccessKeyName
+      - azure-iot-common.TransportConfig.sharedAccessSignature
+      - azure-iot-common.TransportConfig.x509
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    source:
+      path: authorization.ts
+      startLine: 43
+      remote:
+        path: common/core/src\authorization.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-common
+    module: Global
+  - uid: azure-iot-common.TransportConfig.deviceId
+    name: deviceId
+    fullName: deviceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: string deviceId
+      return:
+        type:
+          - string
+    module: Global
+  - uid: azure-iot-common.TransportConfig.host
+    name: host
+    fullName: host
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: string host
+      return:
+        type:
+          - string
+    module: Global
+  - uid: azure-iot-common.TransportConfig.sharedAccessKey
+    name: sharedAccessKey
+    fullName: sharedAccessKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: string sharedAccessKey
+      return:
+        type:
+          - string
+    module: Global
+  - uid: azure-iot-common.TransportConfig.sharedAccessKeyName
+    name: sharedAccessKeyName
+    fullName: sharedAccessKeyName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: string sharedAccessKeyName
+      return:
+        type:
+          - string
+    module: Global
+  - uid: azure-iot-common.TransportConfig.sharedAccessSignature
+    name: sharedAccessSignature
+    fullName: sharedAccessSignature
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: string sharedAccessSignature
+      return:
+        type:
+          - string
+    module: Global
+  - uid: azure-iot-common.TransportConfig.x509
+    name: x509
+    fullName: x509
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: X509 x509
+      return:
+        type:
+          - '@azure-iot-common.X509'
+    module: Global

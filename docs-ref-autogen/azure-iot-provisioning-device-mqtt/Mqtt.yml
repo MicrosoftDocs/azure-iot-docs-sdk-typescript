@@ -3,7 +3,10 @@ items:
   - uid: azure-iot-provisioning-device-mqtt.Mqtt
     name: Mqtt
     fullName: Mqtt
-    children: []
+    children:
+      - azure-iot-provisioning-device-mqtt.Mqtt.constructor
+      - azure-iot-provisioning-device-mqtt.Mqtt.queryOperationStatus
+      - azure-iot-provisioning-device-mqtt.Mqtt.registrationRequest
     langs:
       - typeScript
     type: class
@@ -12,10 +15,78 @@ items:
       name: '@azure-iot-provisioning-device-mqtt.Mqtt'
     source:
       path: mqtt.ts
-      startLine: 14
+      startLine: 25
       remote:
         path: provisioning/transport/mqtt/src\mqtt.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device-mqtt
+    module: Global
+  - uid: azure-iot-provisioning-device-mqtt.Mqtt.constructor
+    name: Mqtt
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new Mqtt(mqttBase?: MqttBase)'
+      parameters:
+        - id: mqttBase
+          type:
+            - MqttBase
+          description: ''
+          optional: true
+    module: Global
+  - uid: azure-iot-provisioning-device-mqtt.Mqtt.queryOperationStatus
+    name: queryOperationStatus
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: private
+    syntax:
+      content: >-
+        function queryOperationStatus(request: RegistrationRequest, operationId:
+        string, callback: (err?: Error, result?: DeviceRegistrationResult,
+        response?: any, pollingInterval?: number) => void)
+      parameters:
+        - id: request
+          type:
+            - RegistrationRequest
+          description: ''
+        - id: operationId
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - >-
+              (err?: Error, result?: DeviceRegistrationResult, response?: any,
+              pollingInterval?: number) => void
+          description: ''
+    module: Global
+  - uid: azure-iot-provisioning-device-mqtt.Mqtt.registrationRequest
+    name: registrationRequest
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: private
+    syntax:
+      content: >-
+        function registrationRequest(request: RegistrationRequest, callback:
+        (err?: Error, result?: DeviceRegistrationResult, response?: any,
+        pollingInterval?: number) => void)
+      parameters:
+        - id: request
+          type:
+            - RegistrationRequest
+          description: ''
+        - id: callback
+          type:
+            - >-
+              (err?: Error, result?: DeviceRegistrationResult, response?: any,
+              pollingInterval?: number) => void
+          description: ''
     module: Global

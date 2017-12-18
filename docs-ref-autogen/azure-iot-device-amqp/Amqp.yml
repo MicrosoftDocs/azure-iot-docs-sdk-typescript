@@ -22,10 +22,10 @@ items:
 
       a transport.
     extends:
-      name: '@azure-iot-device-amqp.Amqp'
+      name: EventEmitter
     source:
       path: amqp.ts
-      startLine: 49
+      startLine: 50
       remote:
         path: device/transport/amqp/src\amqp.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'

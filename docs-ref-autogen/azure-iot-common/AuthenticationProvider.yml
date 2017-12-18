@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-common.AuthenticationProvider
+    name: AuthenticationProvider
+    fullName: AuthenticationProvider
+    children:
+      - azure-iot-common.AuthenticationProvider.type
+      - azure-iot-common.AuthenticationProvider.getDeviceCredentials
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    source:
+      path: authentication_provider.ts
+      startLine: 11
+      remote:
+        path: common/core/src\authentication_provider.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-common
+    module: Global
+  - uid: azure-iot-common.AuthenticationProvider.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: AuthenticationType type
+      return:
+        type:
+          - '@azure-iot-common.AuthenticationType'
+    module: Global
+  - uid: azure-iot-common.AuthenticationProvider.getDeviceCredentials
+    name: getDeviceCredentials
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getDeviceCredentials(callback: (err: Error, credentials:
+        TransportConfig) => void)
+      parameters:
+        - id: callback
+          type:
+            - '(err: Error, credentials: TransportConfig) => void'
+          description: ''
+    module: Global

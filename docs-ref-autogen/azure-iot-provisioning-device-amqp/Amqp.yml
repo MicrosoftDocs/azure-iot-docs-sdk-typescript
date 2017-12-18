@@ -3,7 +3,13 @@ items:
   - uid: azure-iot-provisioning-device-amqp.Amqp
     name: Amqp
     fullName: Amqp
-    children: []
+    children:
+      - azure-iot-provisioning-device-amqp.Amqp.constructor
+      - azure-iot-provisioning-device-amqp.Amqp.cancel
+      - azure-iot-provisioning-device-amqp.Amqp.queryOperationStatus
+      - azure-iot-provisioning-device-amqp.Amqp.registrationRequest
+      - azure-iot-provisioning-device-amqp.Amqp.setAuthentication
+      - azure-iot-provisioning-device-amqp.Amqp.setTransportOptions
     langs:
       - typeScript
     type: class
@@ -12,10 +18,123 @@ items:
       name: '@azure-iot-provisioning-device-amqp.Amqp'
     source:
       path: amqp.ts
-      startLine: 14
+      startLine: 31
       remote:
         path: provisioning/transport/amqp/src\amqp.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device-amqp
+    module: Global
+  - uid: azure-iot-provisioning-device-amqp.Amqp.constructor
+    name: Amqp
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new Amqp(amqpBase?: Base)'
+      parameters:
+        - id: amqpBase
+          type:
+            - Base
+          description: ''
+          optional: true
+    module: Global
+  - uid: azure-iot-provisioning-device-amqp.Amqp.cancel
+    name: cancel
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function cancel(callback: (err?: Error) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''
+    module: Global
+  - uid: azure-iot-provisioning-device-amqp.Amqp.queryOperationStatus
+    name: queryOperationStatus
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function queryOperationStatus(request: RegistrationRequest, operationId:
+        string, callback: (err?: Error, responseBody?: any, result?: any,
+        pollingInterval?: number) => void)
+      parameters:
+        - id: request
+          type:
+            - RegistrationRequest
+          description: ''
+        - id: operationId
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - >-
+              (err?: Error, responseBody?: any, result?: any, pollingInterval?:
+              number) => void
+          description: ''
+    module: Global
+  - uid: azure-iot-provisioning-device-amqp.Amqp.registrationRequest
+    name: registrationRequest
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function registrationRequest(request: RegistrationRequest, callback:
+        (err?: Error, responseBody?: any, result?: any, pollingInterval?:
+        number) => void)
+      parameters:
+        - id: request
+          type:
+            - RegistrationRequest
+          description: ''
+        - id: callback
+          type:
+            - >-
+              (err?: Error, responseBody?: any, result?: any, pollingInterval?:
+              number) => void
+          description: ''
+    module: Global
+  - uid: azure-iot-provisioning-device-amqp.Amqp.setAuthentication
+    name: setAuthentication
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setAuthentication(auth: X509)'
+      parameters:
+        - id: auth
+          type:
+            - X509
+          description: ''
+    module: Global
+  - uid: azure-iot-provisioning-device-amqp.Amqp.setTransportOptions
+    name: setTransportOptions
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setTransportOptions(options: ProvisioningTransportOptions)'
+      parameters:
+        - id: options
+          type:
+            - ProvisioningTransportOptions
+          description: ''
     module: Global

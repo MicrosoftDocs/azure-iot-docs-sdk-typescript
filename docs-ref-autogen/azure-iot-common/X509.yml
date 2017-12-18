@@ -1,0 +1,99 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-common.X509
+    name: X509
+    fullName: X509
+    children:
+      - azure-iot-common.X509.cert
+      - azure-iot-common.X509.certFile
+      - azure-iot-common.X509.key
+      - azure-iot-common.X509.keyFile
+      - azure-iot-common.X509.passphrase
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    source:
+      path: authorization.ts
+      startLine: 52
+      remote:
+        path: common/core/src\authorization.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-common
+    module: Global
+  - uid: azure-iot-common.X509.cert
+    name: cert
+    fullName: cert
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: string | "undefined" | Buffer | "undefined" cert
+      return:
+        type:
+          - string | "undefined" | Buffer | "undefined"
+    module: Global
+  - uid: azure-iot-common.X509.certFile
+    name: certFile
+    fullName: certFile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: string certFile
+      return:
+        type:
+          - string
+    module: Global
+  - uid: azure-iot-common.X509.key
+    name: key
+    fullName: key
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: string | Buffer key
+      return:
+        type:
+          - string | Buffer
+    module: Global
+  - uid: azure-iot-common.X509.keyFile
+    name: keyFile
+    fullName: keyFile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: string keyFile
+      return:
+        type:
+          - string
+    module: Global
+  - uid: azure-iot-common.X509.passphrase
+    name: passphrase
+    fullName: passphrase
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: string passphrase
+      return:
+        type:
+          - string
+    module: Global

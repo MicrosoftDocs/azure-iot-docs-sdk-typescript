@@ -19,6 +19,7 @@ items:
       - azure-iot-device.Client.setTransportOptions
       - azure-iot-device.Client.updateSharedAccessSignature
       - azure-iot-device.Client.uploadToBlob
+      - azure-iot-device.Client.fromAuthenticationProvider
       - azure-iot-device.Client.fromConnectionString
       - azure-iot-device.Client.fromSharedAccessSignature
     langs:
@@ -36,10 +37,10 @@ items:
 
       to create an IoT Hub device client.
     extends:
-      name: '@azure-iot-device.Client'
+      name: EventEmitter
     source:
       path: client.ts
-      startLine: 38
+      startLine: 40
       remote:
         path: device/core/src\client.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
@@ -463,6 +464,33 @@ items:
       - type: ReferenceException
         description: |
           If blobName or stream or streamLength is falsy.
+    module: Global
+  - uid: azure-iot-device.Client.fromAuthenticationProvider
+    name: fromAuthenticationProvider
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Creates an IoT Hub device client from the given authentication method and
+      using the given transport type.
+    syntax:
+      content: >-
+        static function fromAuthenticationProvider(authenticationProvider:
+        AuthenticationProvider, transportCtor: any)
+      parameters:
+        - id: authenticationProvider
+          type:
+            - AuthenticationProvider
+          description: Object used to obtain the authentication parameters for the IoT hub.
+        - id: transportCtor
+          type:
+            - any
+          description: |
+            Transport protocol used to connect to IoT hub.
+      return:
+        type:
+          - '@azure-iot-device.Client'
     module: Global
   - uid: azure-iot-device.Client.fromConnectionString
     name: fromConnectionString

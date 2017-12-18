@@ -12,10 +12,10 @@ items:
     type: class
     summary: ''
     extends:
-      name: '@azure-iot-provisioning-device.TpmRegistration'
+      name: EventEmitter
     source:
       path: tpm_registration.ts
-      startLine: 7
+      startLine: 9
       remote:
         path: provisioning/device/src\tpm_registration.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
@@ -31,9 +31,13 @@ items:
     summary: ''
     syntax:
       content: >-
-        new TpmRegistration(idScope: string, transport:
-        TpmProvisioningTransport, securityClient: TpmSecurityClient)
+        new TpmRegistration(provisioningHost: string, idScope: string,
+        transport: TpmProvisioningTransport, securityClient: TpmSecurityClient)
       parameters:
+        - id: provisioningHost
+          type:
+            - string
+          description: ''
         - id: idScope
           type:
             - string
@@ -71,19 +75,11 @@ items:
     summary: ''
     syntax:
       content: >-
-        function register(registrationId: string, forceRegistration: boolean,
-        callback: (err?: Error, result?: any) => void)
+        function register(callback: (err?: Error, result?: RegistrationResult)
+        => void)
       parameters:
-        - id: registrationId
-          type:
-            - string
-          description: ''
-        - id: forceRegistration
-          type:
-            - boolean
-          description: ''
         - id: callback
           type:
-            - '(err?: Error, result?: any) => void'
+            - '(err?: Error, result?: RegistrationResult) => void'
           description: ''
     module: Global

@@ -1,35 +1,35 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-iot-common.OperationCancelledError
-    name: OperationCancelledError
-    fullName: OperationCancelledError
+  - uid: azure-iot-common.DeviceRegistrationFailedError
+    name: DeviceRegistrationFailedError
+    fullName: DeviceRegistrationFailedError
     children:
-      - azure-iot-common.OperationCancelledError.constructor
-      - azure-iot-common.OperationCancelledError.Error
+      - azure-iot-common.DeviceRegistrationFailedError.constructor
+      - azure-iot-common.DeviceRegistrationFailedError.Error
     langs:
       - typeScript
     type: class
-    summary: Error thrown when any operation (local or remote) is cancelled
+    summary: Error thrown when a DPS registration operation fails
     extends:
       name: Error
     source:
       path: errors.ts
-      startLine: 424
+      startLine: 438
       remote:
         path: common/core/src\errors.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-common
     module: Global
-  - uid: azure-iot-common.OperationCancelledError.constructor
-    name: OperationCancelledError
+  - uid: azure-iot-common.DeviceRegistrationFailedError.constructor
+    name: DeviceRegistrationFailedError
     children: []
     type: constructor
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'new OperationCancelledError(message?: string)'
+      content: 'new DeviceRegistrationFailedError(message?: string)'
       parameters:
         - id: message
           type:
@@ -37,7 +37,7 @@ items:
           description: ''
           optional: true
     module: Global
-  - uid: azure-iot-common.OperationCancelledError.Error
+  - uid: azure-iot-common.DeviceRegistrationFailedError.Error
     name: Error
     fullName: Error
     children: []

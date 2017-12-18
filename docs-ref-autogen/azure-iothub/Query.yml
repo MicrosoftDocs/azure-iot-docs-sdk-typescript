@@ -90,7 +90,7 @@ items:
     summary: Gets the next page of results for this query and cast them as Twins.
     syntax:
       content: >-
-        function nextAsTwin(continuationToken: string | Callback, done:
+        function nextAsTwin(continuationToken: string | Callback, done?:
         Callback<Twin[]>)
       parameters:
         - id: continuationToken
@@ -103,4 +103,5 @@ items:
           description: |
             The callback that will be called with either an Error object or
                                                       the results of the query.
+          optional: true
     module: Global

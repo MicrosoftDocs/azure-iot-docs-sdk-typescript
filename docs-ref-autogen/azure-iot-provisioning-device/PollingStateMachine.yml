@@ -5,14 +5,14 @@ items:
     fullName: PollingStateMachine
     children:
       - azure-iot-provisioning-device.PollingStateMachine.constructor
-      - azure-iot-provisioning-device.PollingStateMachine.endSession
+      - azure-iot-provisioning-device.PollingStateMachine.cancel
       - azure-iot-provisioning-device.PollingStateMachine.register
     langs:
       - typeScript
     type: class
     summary: ''
     extends:
-      name: '@azure-iot-provisioning-device.PollingStateMachine'
+      name: EventEmitter
     source:
       path: polling_state_machine.ts
       startLine: 13
@@ -30,22 +30,22 @@ items:
       - typeScript
     summary: ''
     syntax:
-      content: 'new PollingStateMachine(transport: PollingTransportHandlers)'
+      content: 'new PollingStateMachine(transport: PollingTransport)'
       parameters:
         - id: transport
           type:
-            - PollingTransportHandlers
+            - PollingTransport
           description: ''
     module: Global
-  - uid: azure-iot-provisioning-device.PollingStateMachine.endSession
-    name: endSession
+  - uid: azure-iot-provisioning-device.PollingStateMachine.cancel
+    name: cancel
     children: []
     type: method
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'function endSession(callback: (err: Error) => void)'
+      content: 'function cancel(callback: (err: Error) => void)'
       parameters:
         - id: callback
           type:
@@ -61,29 +61,15 @@ items:
     summary: ''
     syntax:
       content: >-
-        function register(registrationId: string, authorization:
-        ProvisioningAuthentication, requestBody: any, forceRegistration:
-        boolean, callback: (err?: Error, responseBody?: any, result?: any) =>
-        void)
+        function register(request: RegistrationRequest, callback: (err?: Error,
+        result?: any, response?: any) => void)
       parameters:
-        - id: registrationId
+        - id: request
           type:
-            - string
-          description: ''
-        - id: authorization
-          type:
-            - ProvisioningAuthentication
-          description: ''
-        - id: requestBody
-          type:
-            - any
-          description: ''
-        - id: forceRegistration
-          type:
-            - boolean
+            - '@azure-iot-provisioning-device.RegistrationRequest'
           description: ''
         - id: callback
           type:
-            - '(err?: Error, responseBody?: any, result?: any) => void'
+            - '(err?: Error, result?: any, response?: any) => void'
           description: ''
     module: Global

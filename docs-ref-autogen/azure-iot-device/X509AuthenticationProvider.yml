@@ -1,0 +1,113 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-device.X509AuthenticationProvider
+    name: X509AuthenticationProvider
+    fullName: X509AuthenticationProvider
+    children:
+      - azure-iot-device.X509AuthenticationProvider.constructor
+      - azure-iot-device.X509AuthenticationProvider.type
+      - azure-iot-device.X509AuthenticationProvider.getDeviceCredentials
+      - azure-iot-device.X509AuthenticationProvider.setX509Options
+      - azure-iot-device.X509AuthenticationProvider.fromX509Options
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    source:
+      path: x509_authentication_provider.ts
+      startLine: 6
+      remote:
+        path: device/core/src\x509_authentication_provider.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-device
+    module: Global
+  - uid: azure-iot-device.X509AuthenticationProvider.constructor
+    name: X509AuthenticationProvider
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new X509AuthenticationProvider(credentials: TransportConfig)'
+      parameters:
+        - id: credentials
+          type:
+            - TransportConfig
+          description: ''
+    module: Global
+  - uid: azure-iot-device.X509AuthenticationProvider.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: AuthenticationType type
+      return:
+        type:
+          - AuthenticationType
+    module: Global
+  - uid: azure-iot-device.X509AuthenticationProvider.getDeviceCredentials
+    name: getDeviceCredentials
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getDeviceCredentials(callback: (err: Error, credentials?:
+        TransportConfig) => void)
+      parameters:
+        - id: callback
+          type:
+            - '(err: Error, credentials?: TransportConfig) => void'
+          description: ''
+    module: Global
+  - uid: azure-iot-device.X509AuthenticationProvider.setX509Options
+    name: setX509Options
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setX509Options(x509: X509)'
+      parameters:
+        - id: x509
+          type:
+            - X509
+          description: ''
+    module: Global
+  - uid: azure-iot-device.X509AuthenticationProvider.fromX509Options
+    name: fromX509Options
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        static function fromX509Options(deviceId: string, iotHubHostname:
+        string, x509info: X509)
+      parameters:
+        - id: deviceId
+          type:
+            - string
+          description: ''
+        - id: iotHubHostname
+          type:
+            - string
+          description: ''
+        - id: x509info
+          type:
+            - X509
+          description: ''
+      return:
+        type:
+          - '@azure-iot-device.X509AuthenticationProvider'
+    module: Global

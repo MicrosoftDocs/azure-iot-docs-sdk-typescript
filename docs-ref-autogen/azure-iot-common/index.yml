@@ -4,6 +4,10 @@ items:
     name: azure-iot-common
     summary: ''
     children:
+      - azure-iot-common.AuthenticationType
+      - azure-iot-common.AuthenticationProvider
+      - azure-iot-common.TransportConfig
+      - azure-iot-common.X509
       - azure-iot-common.ConnectionString
       - azure-iot-common.ArgumentError
       - azure-iot-common.ArgumentOutOfRangeError
@@ -14,6 +18,7 @@ items:
       - azure-iot-common.DeviceMessageLockLostError
       - azure-iot-common.DeviceMethodsDetachedError
       - azure-iot-common.DeviceNotFoundError
+      - azure-iot-common.DeviceRegistrationFailedError
       - azure-iot-common.DeviceTimeoutError
       - azure-iot-common.FormatError
       - azure-iot-common.GatewayTimeoutError
@@ -56,6 +61,14 @@ items:
     langs:
       - typeScript
 references:
+  - uid: azure-iot-common.AuthenticationType
+    name: AuthenticationType
+  - uid: azure-iot-common.AuthenticationProvider
+    name: AuthenticationProvider
+  - uid: azure-iot-common.TransportConfig
+    name: TransportConfig
+  - uid: azure-iot-common.X509
+    name: X509
   - uid: azure-iot-common.ConnectionString
     name: ConnectionString
   - uid: azure-iot-common.ArgumentError
@@ -76,6 +89,8 @@ references:
     name: DeviceMethodsDetachedError
   - uid: azure-iot-common.DeviceNotFoundError
     name: DeviceNotFoundError
+  - uid: azure-iot-common.DeviceRegistrationFailedError
+    name: DeviceRegistrationFailedError
   - uid: azure-iot-common.DeviceTimeoutError
     name: DeviceTimeoutError
   - uid: azure-iot-common.FormatError

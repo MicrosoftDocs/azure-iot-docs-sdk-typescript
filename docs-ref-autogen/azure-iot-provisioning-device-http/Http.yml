@@ -4,7 +4,6 @@ items:
     name: Http
     fullName: Http
     children:
-      - azure-iot-provisioning-device-http.Http.constructor
       - azure-iot-provisioning-device-http.Http.cancel
       - azure-iot-provisioning-device-http.Http.queryOperationStatus
       - azure-iot-provisioning-device-http.Http.registrationRequest
@@ -12,33 +11,17 @@ items:
     langs:
       - typeScript
     type: class
-    summary: ''
+    summary: Transport used to provision a device over HTTP.
     extends:
-      name: '@azure-iot-provisioning-device-http.Http'
+      name: EventEmitter
     source:
       path: http.ts
-      startLine: 21
+      startLine: 24
       remote:
         path: provisioning/transport/http/src\http.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device-http
-    module: Global
-  - uid: azure-iot-provisioning-device-http.Http.constructor
-    name: Http
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'new Http(httpBase?: Base)'
-      parameters:
-        - id: httpBase
-          type:
-            - Base
-          description: ''
-          optional: true
     module: Global
   - uid: azure-iot-provisioning-device-http.Http.cancel
     name: cancel

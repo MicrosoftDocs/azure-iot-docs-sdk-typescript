@@ -1,29 +1,27 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-iot-provisioning-device.TpmRegistration
-    name: TpmRegistration
-    fullName: TpmRegistration
+  - uid: azure-iot-provisioning-device.X509Registration
+    name: X509Registration
+    fullName: X509Registration
     children:
-      - azure-iot-provisioning-device.TpmRegistration.constructor
-      - azure-iot-provisioning-device.TpmRegistration.cancel
-      - azure-iot-provisioning-device.TpmRegistration.register
+      - azure-iot-provisioning-device.X509Registration.constructor
+      - azure-iot-provisioning-device.X509Registration.cancel
+      - azure-iot-provisioning-device.X509Registration.register
     langs:
       - typeScript
     type: class
-    summary: ''
-    extends:
-      name: EventEmitter
+    summary: Client used to run the registration of a device using X509 authentication.
     source:
-      path: tpm_registration.ts
-      startLine: 9
+      path: x509_registration.ts
+      startLine: 14
       remote:
-        path: provisioning/device/src\tpm_registration.ts
+        path: provisioning/device/src\x509_registration.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device
     module: Global
-  - uid: azure-iot-provisioning-device.TpmRegistration.constructor
-    name: TpmRegistration
+  - uid: azure-iot-provisioning-device.X509Registration.constructor
+    name: X509Registration
     children: []
     type: constructor
     langs:
@@ -31,8 +29,9 @@ items:
     summary: ''
     syntax:
       content: >-
-        new TpmRegistration(provisioningHost: string, idScope: string,
-        transport: TpmProvisioningTransport, securityClient: TpmSecurityClient)
+        new X509Registration(provisioningHost: string, idScope: string,
+        transport: X509ProvisioningTransport, securityClient:
+        X509SecurityClient)
       parameters:
         - id: provisioningHost
           type:
@@ -44,35 +43,36 @@ items:
           description: ''
         - id: transport
           type:
-            - TpmProvisioningTransport
+            - X509ProvisioningTransport
           description: ''
         - id: securityClient
           type:
-            - '@azure-iot-provisioning-device.TpmSecurityClient'
+            - '@azure-iot-provisioning-device.X509SecurityClient'
           description: ''
     module: Global
-  - uid: azure-iot-provisioning-device.TpmRegistration.cancel
+  - uid: azure-iot-provisioning-device.X509Registration.cancel
     name: cancel
     children: []
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: Cancels the current registration process.
     syntax:
       content: 'function cancel(callback: (err?: Error) => void)'
       parameters:
         - id: callback
           type:
             - '(err?: Error) => void'
-          description: ''
+          description: |
+            function called when the registration has already been canceled.
     module: Global
-  - uid: azure-iot-provisioning-device.TpmRegistration.register
+  - uid: azure-iot-provisioning-device.X509Registration.register
     name: register
     children: []
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: Register the device with the provisioning service.
     syntax:
       content: >-
         function register(callback: (err?: Error, result?: RegistrationResult)
@@ -81,5 +81,6 @@ items:
         - id: callback
           type:
             - '(err?: Error, result?: RegistrationResult) => void'
-          description: ''
+          description: |
+            function called when registration is complete.
     module: Global

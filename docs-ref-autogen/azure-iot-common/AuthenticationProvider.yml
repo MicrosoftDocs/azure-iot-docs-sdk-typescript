@@ -9,10 +9,14 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: >-
+      Interface that must be implemented by objects that are used to provide
+      credentials to the transports used by the device client
+
+      to authenticate with an Azure IoT hub instance.
     source:
       path: authentication_provider.ts
-      startLine: 11
+      startLine: 24
       remote:
         path: common/core/src\authentication_provider.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'

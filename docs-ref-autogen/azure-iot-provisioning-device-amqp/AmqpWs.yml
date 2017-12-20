@@ -3,36 +3,19 @@ items:
   - uid: azure-iot-provisioning-device-amqp.AmqpWs
     name: AmqpWs
     fullName: AmqpWs
-    children:
-      - azure-iot-provisioning-device-amqp.AmqpWs.constructor
+    children: []
     langs:
       - typeScript
     type: class
-    summary: ''
+    summary: Transport used to provision a device over AMQP over Websockets.
     extends:
       name: '@azure-iot-provisioning-device-amqp.Amqp'
     source:
       path: amqp_ws.ts
-      startLine: 10
+      startLine: 13
       remote:
         path: provisioning/transport/amqp/src\amqp_ws.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device-amqp
-    module: Global
-  - uid: azure-iot-provisioning-device-amqp.AmqpWs.constructor
-    name: AmqpWs
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'new AmqpWs(amqpBase?: Base)'
-      parameters:
-        - id: amqpBase
-          type:
-            - Base
-          description: ''
-          optional: true
     module: Global

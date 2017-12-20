@@ -14,12 +14,27 @@ items:
     langs:
       - typeScript
     type: class
-    summary: ''
+    summary: >
+      Provides an `AuthenticationProvider` object that can be created simply
+      with a shared access signature and is then used by the device client and
+      transports to authenticate
+
+      with the Azure IoT hub instance.
+
+      The `SharedAccessSignatureAuthenticationProvider` object does not renew
+      the shared access signature token automatically, so the user needs to feed
+      non-expired shared access signature
+
+      tokens to it using the `updateSharedAccessSignature` method. For each call
+      to this method, the `SharedAccessSignatureAuthenticationProvider` will
+      emit a `newTokenAvailable` event that
+
+      transports will use to authenticate with the Azure IoT hub instance.
     extends:
       name: EventEmitter
     source:
       path: sas_authentication_provider.ts
-      startLine: 7
+      startLine: 15
       remote:
         path: device/core/src\sas_authentication_provider.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
@@ -47,7 +62,9 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      This method is used by the transports to gets the most current device
+      credentials in the form of a `TransportConfig` object.
     syntax:
       content: >-
         function getDeviceCredentials(callback: (err: Error, credentials:
@@ -56,7 +73,9 @@ items:
         - id: callback
           type:
             - '(err: Error, credentials: TransportConfig) => void'
-          description: ''
+          description: >
+            function that will be called with either an error or a set of device
+            credentials that can be used to authenticate with the IoT hub.
     module: Global
   - uid: >-
       azure-iot-device.SharedAccessSignatureAuthenticationProvider.updateSharedAccessSignature
@@ -65,14 +84,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Updates the shared access signature token that transports should use to
+      authenticate. When called, the
+      `SharedAccessSignatureAuthenticationProvider` will emit
+
+      a `newTokenAvailable` event that the transports can then use to
+      authenticate with the Azure IoT hub instance.
     syntax:
       content: 'function updateSharedAccessSignature(sharedAccessSignature: string)'
       parameters:
         - id: sharedAccessSignature
           type:
             - string
-          description: ''
+          description: >
+            A shared access signature string containing the required parameters
+            for authentication with the IoT hub.
     module: Global
   - uid: >-
       azure-iot-device.SharedAccessSignatureAuthenticationProvider.fromSharedAccessSignature
@@ -81,14 +108,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Creates a new `SharedAccessSignatureAuthenticationProvider` from a
+      connection string
     syntax:
       content: 'static function fromSharedAccessSignature(sharedAccessSignature: string)'
       parameters:
         - id: sharedAccessSignature
           type:
             - string
-          description: ''
+          description: >
+            A shared access signature string containing the required parameters
+            for authentication with the IoT hub.
       return:
         type:
           - '@azure-iot-device.SharedAccessSignatureAuthenticationProvider'

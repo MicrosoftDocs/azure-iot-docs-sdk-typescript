@@ -14,13 +14,6 @@ items:
       reached.
     extends:
       name: Error
-    source:
-      path: errors.ts
-      startLine: 223
-      remote:
-        path: common/core/src\errors.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: master
     package: azure-iot-common
     module: Global
   - uid: azure-iot-common.TooManyDevicesError.constructor

@@ -17,13 +17,6 @@ items:
     summary: ''
     extends:
       name: EventEmitter
-    source:
-      path: mqtt_base.ts
-      startLine: 15
-      remote:
-        path: common/transport/mqtt/src\mqtt_base.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: master
     package: azure-iot-mqtt-base
     module: Global
   - uid: azure-iot-mqtt-base.MqttBase.constructor

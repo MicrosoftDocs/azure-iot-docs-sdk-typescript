@@ -12,13 +12,6 @@ items:
     summary: Error thrown when a device sends a bad response to a device method call.
     extends:
       name: Error
-    source:
-      path: errors.ts
-      startLine: 336
-      remote:
-        path: common/core/src\errors.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: master
     package: azure-iot-common
     module: Global
   - uid: azure-iot-common.BadDeviceResponseError.constructor

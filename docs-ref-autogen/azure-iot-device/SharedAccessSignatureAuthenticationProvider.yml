@@ -32,13 +32,6 @@ items:
       transports will use to authenticate with the Azure IoT hub instance.
     extends:
       name: EventEmitter
-    source:
-      path: sas_authentication_provider.ts
-      startLine: 15
-      remote:
-        path: device/core/src\sas_authentication_provider.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: master
     package: azure-iot-device
     module: Global
   - uid: azure-iot-device.SharedAccessSignatureAuthenticationProvider.type

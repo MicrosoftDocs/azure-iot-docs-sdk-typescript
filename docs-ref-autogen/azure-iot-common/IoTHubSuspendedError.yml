@@ -12,13 +12,6 @@ items:
     summary: Error thrown when IoT Hub has been suspended.
     extends:
       name: Error
-    source:
-      path: errors.ts
-      startLine: 195
-      remote:
-        path: common/core/src\errors.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: master
     package: azure-iot-common
     module: Global
   - uid: azure-iot-common.IoTHubSuspendedError.constructor

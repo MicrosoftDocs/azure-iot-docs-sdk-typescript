@@ -12,13 +12,6 @@ items:
     summary: >-
       Implements the necessary logic to retry operations such as connecting,
       receiving C2D messages, sending telemetry, twin updates, etc.
-    source:
-      path: retry_operation.ts
-      startLine: 12
-      remote:
-        path: common/core/src\retry_operation.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: master
     package: azure-iot-common
     module: Global
   - uid: azure-iot-common.RetryOperation.constructor

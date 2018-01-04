@@ -20,13 +20,6 @@ items:
       retry):
 
       F(x) = min(Cmin+ (2^(x-1)-1) * rand(C * (1 – Jd), C*(1-Ju)), Cmax)
-    source:
-      path: retry_policy.ts
-      startLine: 78
-      remote:
-        path: common/core/src\retry_policy.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: master
     package: azure-iot-common
     module: Global
   - uid: azure-iot-common.ExponentialBackOffWithJitter.constructor

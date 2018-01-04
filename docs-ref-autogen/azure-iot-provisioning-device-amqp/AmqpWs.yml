@@ -10,12 +10,5 @@ items:
     summary: Transport used to provision a device over AMQP over Websockets.
     extends:
       name: '@azure-iot-provisioning-device-amqp.Amqp'
-    source:
-      path: amqp_ws.ts
-      startLine: 13
-      remote:
-        path: provisioning/transport/amqp/src\amqp_ws.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: master
     package: azure-iot-provisioning-device-amqp
     module: Global

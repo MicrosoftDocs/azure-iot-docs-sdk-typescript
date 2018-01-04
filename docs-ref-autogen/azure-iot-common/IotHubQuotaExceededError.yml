@@ -17,13 +17,6 @@ items:
       throttling](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-quotas-throttling)
     extends:
       name: Error
-    source:
-      path: errors.ts
-      startLine: 125
-      remote:
-        path: common/core/src\errors.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: master
     package: azure-iot-common
     module: Global
   - uid: azure-iot-common.IotHubQuotaExceededError.constructor

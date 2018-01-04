@@ -12,13 +12,6 @@ items:
     summary: Error thrown when the device doesn't process the method call in time.
     extends:
       name: Error
-    source:
-      path: errors.ts
-      startLine: 365
-      remote:
-        path: common/core/src\errors.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: master
     package: azure-iot-common
     module: Global
   - uid: azure-iot-common.DeviceTimeoutError.constructor

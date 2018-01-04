@@ -10,12 +10,5 @@ items:
     summary: Transport used to provision a device over AMQP.
     extends:
       name: EventEmitter
-    source:
-      path: amqp.ts
-      startLine: 40
-      remote:
-        path: provisioning/transport/amqp/src\amqp.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: master
     package: azure-iot-provisioning-device-amqp
     module: Global

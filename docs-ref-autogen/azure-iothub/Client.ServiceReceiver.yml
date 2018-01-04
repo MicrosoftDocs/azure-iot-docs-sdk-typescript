@@ -13,13 +13,6 @@ items:
     summary: ''
     extends:
       name: Receiver
-    source:
-      path: client.ts
-      startLine: 394
-      remote:
-        path: service/src\client.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: master
     package: azure-iothub
     module: Global
   - uid: azure-iothub.Client.ServiceReceiver.abandon

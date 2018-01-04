@@ -5,58 +5,12 @@ items:
     name: Global
     module: Global
     children:
-      - azure-iothub.getTranslatedError
-      - azure-iothub.handleResult
       - azure-iothub.parse
       - azure-iothub.create
       - azure-iothub.parse
     type: package
     langs:
       - typeScript
-  - uid: azure-iothub.getTranslatedError
-    name: getTranslatedError
-    children: []
-    type: function
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'function getTranslatedError(err: Error, message: string)'
-      parameters:
-        - id: err
-          type:
-            - Error
-          description: ''
-        - id: message
-          type:
-            - string
-          description: ''
-      return:
-        type:
-          - Error
-    module: Global
-  - uid: azure-iothub.handleResult
-    name: handleResult
-    children: []
-    type: function
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'function handleResult(errorMessage: string, done: Callback<any>)'
-      parameters:
-        - id: errorMessage
-          type:
-            - string
-          description: ''
-        - id: done
-          type:
-            - Callback<any>
-          description: ''
-      return:
-        type:
-          - Callback<any>
-    module: Global
   - uid: azure-iothub.parse
     name: parse
     children: []

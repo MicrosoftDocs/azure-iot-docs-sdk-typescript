@@ -26,13 +26,6 @@ items:
       messaging between the device and the IoT Hub service. It is
       transport-agnostic, meaning it works the same way over AMQP, MQTT and
       HTTP.
-    source:
-      path: message.ts
-      startLine: 13
-      remote:
-        path: common/core/src\message.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: master
     package: azure-iot-common
     module: Global
   - uid: azure-iot-common.Message.constructor

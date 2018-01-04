@@ -21,13 +21,6 @@ items:
       whether a retry should happen or not.
 
       Those 2 components hide behind 2 method calls described in this interface.
-    source:
-      path: retry_policy.ts
-      startLine: 16
-      remote:
-        path: common/core/src\retry_policy.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: master
     package: azure-iot-common
     module: Global
   - uid: azure-iot-common.RetryPolicy.nextRetryTimeout

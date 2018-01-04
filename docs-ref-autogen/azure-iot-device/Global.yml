@@ -5,7 +5,6 @@ items:
     name: Global
     module: Global
     children:
-      - azure-iot-device.safeCallback
       - azure-iot-device.createWithSharedAccessKey
       - azure-iot-device.createWithX509Certificate
       - azure-iot-device.parse
@@ -14,34 +13,6 @@ items:
     type: package
     langs:
       - typeScript
-  - uid: azure-iot-device.safeCallback
-    name: safeCallback
-    children: []
-    type: function
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: >-
-        function safeCallback(callback?: (err?: Error, result?: any) => void,
-        error?: Error, result?: any)
-      parameters:
-        - id: callback
-          type:
-            - '(err?: Error, result?: any) => void'
-          description: ''
-          optional: true
-        - id: error
-          type:
-            - Error
-          description: ''
-          optional: true
-        - id: result
-          type:
-            - any
-          description: ''
-          optional: true
-    module: Global
   - uid: azure-iot-device.createWithSharedAccessKey
     name: createWithSharedAccessKey
     children: []

@@ -38,13 +38,6 @@ items:
       to create an IoT Hub device client.
     extends:
       name: EventEmitter
-    source:
-      path: client.ts
-      startLine: 40
-      remote:
-        path: device/core/src\client.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: master
     package: azure-iot-device
     module: Global
   - uid: azure-iot-device.Client.constructor

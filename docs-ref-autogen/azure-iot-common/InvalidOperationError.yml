@@ -12,13 +12,6 @@ items:
     summary: Error thrown when an operation is attempted but is not allowed.
     extends:
       name: Error
-    source:
-      path: errors.ts
-      startLine: 294
-      remote:
-        path: common/core/src\errors.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: master
     package: azure-iot-common
     module: Global
   - uid: azure-iot-common.InvalidOperationError.constructor

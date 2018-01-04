@@ -1,0 +1,76 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-device.RegistrationRequest
+    name: RegistrationRequest
+    fullName: RegistrationRequest
+    children:
+      - azure-iot-provisioning-device.RegistrationRequest.forceRegistration
+      - azure-iot-provisioning-device.RegistrationRequest.idScope
+      - azure-iot-provisioning-device.RegistrationRequest.provisioningHost
+      - azure-iot-provisioning-device.RegistrationRequest.registrationId
+    langs:
+      - typeScript
+    type: interface
+    summary: Information necessary to start a registration
+    package: azure-iot-provisioning-device
+    module: Global
+  - uid: azure-iot-provisioning-device.RegistrationRequest.forceRegistration
+    name: forceRegistration
+    fullName: forceRegistration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: true to foce re-registration
+    optional: true
+    syntax:
+      content: boolean forceRegistration
+      return:
+        type:
+          - boolean
+    module: Global
+  - uid: azure-iot-provisioning-device.RegistrationRequest.idScope
+    name: idScope
+    fullName: idScope
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID scope for the provisioning instance
+    syntax:
+      content: string idScope
+      return:
+        type:
+          - string
+    module: Global
+  - uid: azure-iot-provisioning-device.RegistrationRequest.provisioningHost
+    name: provisioningHost
+    fullName: provisioningHost
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: global device endpoint for the provisioning service
+    syntax:
+      content: string provisioningHost
+      return:
+        type:
+          - string
+    module: Global
+  - uid: azure-iot-provisioning-device.RegistrationRequest.registrationId
+    name: registrationId
+    fullName: registrationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      registration Id for this device.  May be undefined when using Tpm
+      registration
+    optional: true
+    syntax:
+      content: string registrationId
+      return:
+        type:
+          - string
+    module: Global

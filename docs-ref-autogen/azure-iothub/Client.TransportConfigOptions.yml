@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iothub.Client.TransportConfigOptions
+    name: TransportConfigOptions
+    fullName: TransportConfigOptions
+    children:
+      - azure-iothub.Client.TransportConfigOptions.host
+      - azure-iothub.Client.TransportConfigOptions.hubName
+      - azure-iothub.Client.TransportConfigOptions.keyName
+      - azure-iothub.Client.TransportConfigOptions.sharedAccessSignature
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-iothub
+    module: Global
+  - uid: azure-iothub.Client.TransportConfigOptions.host
+    name: host
+    fullName: host
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Hostname of the Azure IoT hub. (<IoT hub name>.azure-devices.net).
+    syntax:
+      content: string host
+      return:
+        type:
+          - string
+    module: Global
+  - uid: azure-iothub.Client.TransportConfigOptions.hubName
+    name: hubName
+    fullName: hubName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: string hubName
+      return:
+        type:
+          - string
+    module: Global
+    deprecated:
+      content: >-
+        This is not used anywhere anymore.
+
+        Name of the Azure IoT hub. (The first section of the Azure IoT hub
+        hostname)
+  - uid: azure-iothub.Client.TransportConfigOptions.keyName
+    name: keyName
+    fullName: keyName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The name of the policy used to connect to the Azure IoT Hub service.
+    syntax:
+      content: string keyName
+      return:
+        type:
+          - string
+    module: Global
+  - uid: azure-iothub.Client.TransportConfigOptions.sharedAccessSignature
+    name: sharedAccessSignature
+    fullName: sharedAccessSignature
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The shared access signature token used to authenticate the connection with
+      the Azure IoT hub.
+    syntax:
+      content: string | SharedAccessSignature sharedAccessSignature
+      return:
+        type:
+          - string | SharedAccessSignature
+    module: Global

@@ -1,0 +1,57 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-device.TpmRegistrationInfo
+    name: TpmRegistrationInfo
+    fullName: TpmRegistrationInfo
+    children:
+      - azure-iot-provisioning-device.TpmRegistrationInfo.endorsementKey
+      - azure-iot-provisioning-device.TpmRegistrationInfo.request
+      - azure-iot-provisioning-device.TpmRegistrationInfo.storageRootKey
+    langs:
+      - typeScript
+    type: interface
+    summary: Information passed between client and transport during Tpm registration
+    package: azure-iot-provisioning-device
+    module: Global
+  - uid: azure-iot-provisioning-device.TpmRegistrationInfo.endorsementKey
+    name: endorsementKey
+    fullName: endorsementKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: string endorsementKey
+      return:
+        type:
+          - string
+    module: Global
+  - uid: azure-iot-provisioning-device.TpmRegistrationInfo.request
+    name: request
+    fullName: request
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: RegistrationRequest request
+      return:
+        type:
+          - '@azure-iot-provisioning-device.RegistrationRequest'
+    module: Global
+  - uid: azure-iot-provisioning-device.TpmRegistrationInfo.storageRootKey
+    name: storageRootKey
+    fullName: storageRootKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: string storageRootKey
+      return:
+        type:
+          - string
+    module: Global

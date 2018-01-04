@@ -1,0 +1,100 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-device-http.Http
+    name: Http
+    fullName: Http
+    children:
+      - azure-iot-provisioning-device-http.Http.cancel
+      - azure-iot-provisioning-device-http.Http.queryOperationStatus
+      - azure-iot-provisioning-device-http.Http.registrationRequest
+      - azure-iot-provisioning-device-http.Http.setAuthentication
+    langs:
+      - typeScript
+    type: class
+    summary: Transport used to provision a device over HTTP.
+    extends:
+      name: EventEmitter
+    package: azure-iot-provisioning-device-http
+    module: Global
+  - uid: azure-iot-provisioning-device-http.Http.cancel
+    name: cancel
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: private
+    syntax:
+      content: 'function cancel(callback: (err?: Error) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''
+    module: Global
+  - uid: azure-iot-provisioning-device-http.Http.queryOperationStatus
+    name: queryOperationStatus
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: private
+    syntax:
+      content: >-
+        function queryOperationStatus(request: RegistrationRequest, operationId:
+        string, callback: (err?: Error, result?: DeviceRegistrationResult,
+        response?: any, pollingInterval?: number) => void)
+      parameters:
+        - id: request
+          type:
+            - RegistrationRequest
+          description: ''
+        - id: operationId
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - >-
+              (err?: Error, result?: DeviceRegistrationResult, response?: any,
+              pollingInterval?: number) => void
+          description: ''
+    module: Global
+  - uid: azure-iot-provisioning-device-http.Http.registrationRequest
+    name: registrationRequest
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: private
+    syntax:
+      content: >-
+        function registrationRequest(request: RegistrationRequest, callback:
+        (err?: Error, result?: DeviceRegistrationResult, response?: any,
+        pollingInterval?: number) => void)
+      parameters:
+        - id: request
+          type:
+            - RegistrationRequest
+          description: ''
+        - id: callback
+          type:
+            - >-
+              (err?: Error, result?: DeviceRegistrationResult, response?: any,
+              pollingInterval?: number) => void
+          description: ''
+    module: Global
+  - uid: azure-iot-provisioning-device-http.Http.setAuthentication
+    name: setAuthentication
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setAuthentication(auth: X509)'
+      parameters:
+        - id: auth
+          type:
+            - X509
+          description: ''
+    module: Global

@@ -1,0 +1,74 @@
+### YamlMime:UniversalReference
+items:
+  - uid: location-based-services-javascript.PopupOptions
+    name: PopupOptions
+    fullName: PopupOptions
+    children:
+      - location-based-services-javascript.PopupOptions.content
+      - location-based-services-javascript.PopupOptions.pixelOffset
+      - location-based-services-javascript.PopupOptions.position
+    langs:
+      - typeScript
+    type: class
+    summary: The options for a popup.
+    extends:
+      name: Options
+    source:
+      path: map/options/PopupOptions.ts
+      startLine: 8
+      remote:
+        path: src/MapControl/JavascriptSDK/src\map/options/PopupOptions.ts
+        repo: >-
+          https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
+        branch: production
+    package: location-based-services-javascript
+    module: Object Definitions
+  - uid: location-based-services-javascript.PopupOptions.content
+    name: content
+    fullName: content
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The content to display within the popup.
+    optional: true
+    syntax:
+      content: HTMLElement content
+      return:
+        type:
+          - HTMLElement
+    module: Object Definitions
+  - uid: location-based-services-javascript.PopupOptions.pixelOffset
+    name: pixelOffset
+    fullName: pixelOffset
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      An array of [pixelsRight, pixelsDown] for how many pixels to the right and
+      down the anchor of the popup should be
+
+      offset. Negative numbers can be used to offset the popup left and up.
+    optional: true
+    syntax:
+      content: 'number[] pixelOffset'
+      return:
+        type:
+          - 'number[]'
+    module: Object Definitions
+  - uid: location-based-services-javascript.PopupOptions.position
+    name: position
+    fullName: position
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The position on the map where the popup should be anchored.
+    optional: true
+    syntax:
+      content: Position position
+      return:
+        type:
+          - '@location-based-services-javascript.Position'
+    module: Object Definitions

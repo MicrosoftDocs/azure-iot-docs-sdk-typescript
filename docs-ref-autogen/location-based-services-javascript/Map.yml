@@ -1,0 +1,606 @@
+### YamlMime:UniversalReference
+items:
+  - uid: location-based-services-javascript.Map
+    name: Map
+    fullName: Map
+    children:
+      - location-based-services-javascript.Map.constructor
+      - location-based-services-javascript.Map.addCircles
+      - location-based-services-javascript.Map.addEventListener
+      - location-based-services-javascript.Map.addEventListener_1
+      - location-based-services-javascript.Map.addHtml
+      - location-based-services-javascript.Map.addLinestrings
+      - location-based-services-javascript.Map.addPins
+      - location-based-services-javascript.Map.addPolygons
+      - location-based-services-javascript.Map.addRaster
+      - location-based-services-javascript.Map.getCamera
+      - location-based-services-javascript.Map.getCanvas
+      - location-based-services-javascript.Map.getCanvasContainer
+      - location-based-services-javascript.Map.getLayers
+      - location-based-services-javascript.Map.getMapContainer
+      - location-based-services-javascript.Map.getServiceOptions
+      - location-based-services-javascript.Map.getStyle
+      - location-based-services-javascript.Map.getTraffic
+      - location-based-services-javascript.Map.getUserInteraction
+      - location-based-services-javascript.Map.removeEventListener
+      - location-based-services-javascript.Map.removeEventListener_1
+      - location-based-services-javascript.Map.removeHtml
+      - location-based-services-javascript.Map.removeLayers
+      - location-based-services-javascript.Map.setCamera
+      - location-based-services-javascript.Map.setCameraBounds
+      - location-based-services-javascript.Map.setStyle
+      - location-based-services-javascript.Map.setTraffic
+      - location-based-services-javascript.Map.setUserInteraction
+    langs:
+      - typeScript
+    type: class
+    summary: The control for a visual and interactive web map.
+    source:
+      path: map/Map.ts
+      startLine: 44
+      remote:
+        path: src/MapControl/JavascriptSDK/src\map/Map.ts
+        repo: >-
+          https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
+        branch: production
+    package: location-based-services-javascript
+    module: atlas
+  - uid: location-based-services-javascript.Map.constructor
+    name: Map
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Displays a map in the specified container.
+    syntax:
+      content: 'new Map(container: string, options: function)'
+      parameters:
+        - id: container
+          type:
+            - string
+          description: The id of the element where the map should be displayed.
+        - id: options
+          type:
+            - function
+          description: |
+            Options for the initial display and interactability with the map.
+    module: atlas
+  - uid: location-based-services-javascript.Map.addCircles
+    name: addCircles
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Add a collection of points to a layer of the map as circles. The layer and
+      its options can be specified through a
+
+      [CircleLayerOptions](xref:location-based-services-javascript.CircleLayerOptions)
+      object. Options for the layer
+
+      can only be specified upon the layer's initial creation.
+    syntax:
+      content: >-
+        function addCircles(circles: Array<Feature<Point>>, options?:
+        CircleLayerOptions)
+      parameters:
+        - id: circles
+          type:
+            - >-
+              Array<@location-based-services-javascript.Feature<@location-based-services-javascript.Point>>
+          description: The circles to add.
+        - id: options
+          type:
+            - '@location-based-services-javascript.CircleLayerOptions'
+          description: |
+            The layer options for the circles.
+          optional: true
+    module: atlas
+  - uid: location-based-services-javascript.Map.addEventListener
+    name: addEventListener
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Add an event listener to the map.
+    syntax:
+      content: 'function addEventListener(type: string, callback: any)'
+      parameters:
+        - id: type
+          type:
+            - string
+          description: >-
+            The event listener type: 'click', 'dblclick', 'mousemove',
+            'mouseup', 'mousedown', 'mouseenter',
+
+            'mouseleave', 'mouseover', 'mouseout', 'touchstart', 'touchend'
+        - id: callback
+          type:
+            - any
+          description: |
+            The callback to fire when the event occurs.
+    module: atlas
+  - uid: location-based-services-javascript.Map.addEventListener_1
+    name: addEventListener
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Add an event listener to the map.
+    syntax:
+      content: 'function addEventListener(type: string, layer: string, callback: any)'
+      parameters:
+        - id: type
+          type:
+            - string
+          description: >-
+            The event listener type: 'click', 'dblclick', 'mousemove',
+            'mouseup', 'mousedown', 'mouseenter',
+
+            'mouseleave', 'mouseover', 'mouseout', 'touchstart', 'touchend'
+        - id: layer
+          type:
+            - string
+          description: The layer of the map.
+        - id: callback
+          type:
+            - any
+          description: |
+            The callback to fire when the event occurs.
+    module: atlas
+  - uid: location-based-services-javascript.Map.addHtml
+    name: addHtml
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds a custom HTMLElement to the map at a specified position.
+    syntax:
+      content: 'function addHtml(element: HTMLElement, position: Position)'
+      parameters:
+        - id: element
+          type:
+            - HTMLElement
+          description: The HTMLElement to add.
+        - id: position
+          type:
+            - '@location-based-services-javascript.Position'
+          description: |
+            The position to place the element.
+      return:
+        type:
+          - string
+    module: atlas
+  - uid: location-based-services-javascript.Map.addLinestrings
+    name: addLinestrings
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Add a collection of linestrings to a layer of the map. The layer and its
+      options can be specified through a
+
+      [LinestringLayerOptions](xref:location-based-services-javascript.LinestringLayerOptions)
+      object. Options for
+
+      the layer can only be specified upon the layer's initial creation.
+    syntax:
+      content: >-
+        function addLinestrings(linestrings: Array<Feature<LineString |
+        MultiLineString>>, options?: LinestringLayerOptions)
+      parameters:
+        - id: linestrings
+          type:
+            - >-
+              Array<@location-based-services-javascript.Feature<LineString |
+              MultiLineString>>
+          description: The linestrings to add.
+        - id: options
+          type:
+            - '@location-based-services-javascript.LinestringLayerOptions'
+          description: |
+            The layer options for the linestrings.
+          optional: true
+    module: atlas
+  - uid: location-based-services-javascript.Map.addPins
+    name: addPins
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Add a collection of points to a layer of the map as pins. The layer and
+      its options can be specified through a
+
+      [PinLayerOptions](xref:location-based-services-javascript.PinLayerOptions)
+      object. Options for the layer can
+
+      only be specified upon the layer's initial creation.
+    syntax:
+      content: 'function addPins(pins: Array<Feature<Point>>, options?: PinLayerOptions)'
+      parameters:
+        - id: pins
+          type:
+            - >-
+              Array<@location-based-services-javascript.Feature<@location-based-services-javascript.Point>>
+          description: The points to add.
+        - id: options
+          type:
+            - '@location-based-services-javascript.PinLayerOptions'
+          description: |
+            The layer options for the pins.
+          optional: true
+    module: atlas
+  - uid: location-based-services-javascript.Map.addPolygons
+    name: addPolygons
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Add a collection of polygons to a layer of the map. The layer and its
+      options can be specified through a
+
+      [PolygonLayerOptions](xref:location-based-services-javascript.PolygonLayerOptions)
+      object. Options for
+
+      the layer can only be specified upon the layer's initial creation.
+    syntax:
+      content: >-
+        function addPolygons(polygons: Array<Feature<Polygon | MultiPolygon>>,
+        options?: PolygonLayerOptions)
+      parameters:
+        - id: polygons
+          type:
+            - >-
+              Array<@location-based-services-javascript.Feature<Polygon |
+              MultiPolygon>>
+          description: The polygons to add.
+        - id: options
+          type:
+            - '@location-based-services-javascript.PolygonLayerOptions'
+          description: |
+            The layer options for the polygons.
+          optional: true
+    module: atlas
+  - uid: location-based-services-javascript.Map.addRaster
+    name: addRaster
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Adds a raster layer to the map. The layer and its options can be specified
+      through a
+
+      [RasterLayerOptions](xref:location-based-services-javascript.RasterLayerOptions)
+      object. Options for
+
+      the layer can only be specified upon the layer's initial creation.
+    syntax:
+      content: 'function addRaster(tileSources: string[], options?: RasterLayerOptions)'
+      parameters:
+        - id: tileSources
+          type:
+            - 'string[]'
+          description: >-
+            A list of endpoints specified as strings from which raster images
+            can be requested. The
+
+            endpoints can be parameterized with the tags '{z}', '{x}' and '{y}'
+            to specify the zoom, x-index, and y-index of
+
+            the needed tile respectively. The map control will request and place
+            the tiles that are contained in the map's
+
+            viewport.
+        - id: options
+          type:
+            - '@location-based-services-javascript.RasterLayerOptions'
+          description: |
+            The options for the raster layer.
+          optional: true
+    module: atlas
+  - uid: location-based-services-javascript.Map.getCamera
+    name: getCamera
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the camera's current properties.
+    syntax:
+      content: function getCamera()
+      parameters: []
+      return:
+        type:
+          - function
+    module: atlas
+  - uid: location-based-services-javascript.Map.getCanvas
+    name: getCanvas
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the HTMLCanvasElement that the map is drawn to.
+    syntax:
+      content: function getCanvas()
+      parameters: []
+      return:
+        type:
+          - HTMLCanvasElement
+    module: atlas
+  - uid: location-based-services-javascript.Map.getCanvasContainer
+    name: getCanvasContainer
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the HTMLElement that contains the map's HTMLCanvasElement. The
+      map's events (e.g. panning and zooming)
+
+      are attached to this element.
+    syntax:
+      content: function getCanvasContainer()
+      parameters: []
+      return:
+        type:
+          - HTMLElement
+    module: atlas
+  - uid: location-based-services-javascript.Map.getLayers
+    name: getLayers
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns a list of the map's layers from bottom to top.
+    syntax:
+      content: function getLayers()
+      parameters: []
+      return:
+        type:
+          - 'string[]'
+    module: atlas
+  - uid: location-based-services-javascript.Map.getMapContainer
+    name: getMapContainer
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the HTMLElement that contains the map.
+    syntax:
+      content: function getMapContainer()
+      parameters: []
+      return:
+        type:
+          - HTMLElement
+    module: atlas
+  - uid: location-based-services-javascript.Map.getServiceOptions
+    name: getServiceOptions
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the service options with which the map control was initialized.
+    syntax:
+      content: function getServiceOptions()
+      parameters: []
+      return:
+        type:
+          - ServiceOptions
+    module: atlas
+  - uid: location-based-services-javascript.Map.getStyle
+    name: getStyle
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the map control's current style settings.
+    syntax:
+      content: function getStyle()
+      parameters: []
+      return:
+        type:
+          - '@location-based-services-javascript.StyleOptions'
+    module: atlas
+  - uid: location-based-services-javascript.Map.getTraffic
+    name: getTraffic
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Return the map control's current traffic settings.
+    syntax:
+      content: function getTraffic()
+      parameters: []
+      return:
+        type:
+          - '@location-based-services-javascript.TrafficOptions'
+    module: atlas
+  - uid: location-based-services-javascript.Map.getUserInteraction
+    name: getUserInteraction
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Return the map control's current user interaction handler settings.
+    syntax:
+      content: function getUserInteraction()
+      parameters: []
+      return:
+        type:
+          - '@location-based-services-javascript.UserInteractionOptions'
+    module: atlas
+  - uid: location-based-services-javascript.Map.removeEventListener
+    name: removeEventListener
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Remove an event listener from the map.
+    syntax:
+      content: 'function removeEventListener(type: string, callback: any)'
+      parameters:
+        - id: type
+          type:
+            - string
+          description: The event type.
+        - id: callback
+          type:
+            - any
+          description: |
+            The callback of the event listener.
+    module: atlas
+  - uid: location-based-services-javascript.Map.removeEventListener_1
+    name: removeEventListener
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Remove an event listener from the map.
+    syntax:
+      content: 'function removeEventListener(type: string, layer: string, callback: any)'
+      parameters:
+        - id: type
+          type:
+            - string
+          description: The event type.
+        - id: layer
+          type:
+            - string
+          description: The layer of the map.
+        - id: callback
+          type:
+            - any
+          description: |
+            The callback of the event listener.
+    module: atlas
+  - uid: location-based-services-javascript.Map.removeHtml
+    name: removeHtml
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Removes a custom HTMLElement from the map.
+    syntax:
+      content: 'function removeHtml(elementId: string)'
+      parameters:
+        - id: elementId
+          type:
+            - string
+          description: |
+            The id of element to remove.
+    module: atlas
+  - uid: location-based-services-javascript.Map.removeLayers
+    name: removeLayers
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Removes a collection of layers from the map.
+    syntax:
+      content: 'function removeLayers(layerNames: string[])'
+      parameters:
+        - id: layerNames
+          type:
+            - 'string[]'
+          description: |
+            An array of layer names to remove from the map.
+    module: atlas
+  - uid: location-based-services-javascript.Map.setCamera
+    name: setCamera
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Set the camera of the map control with an animated transition. Any options
+      not specified will default to their
+
+      current values.
+    syntax:
+      content: 'function setCamera(options?: function)'
+      parameters:
+        - id: options
+          type:
+            - function
+          description: >
+            The options for setting the map's camera and for the animation of
+            any view change.
+          optional: true
+    module: atlas
+  - uid: location-based-services-javascript.Map.setCameraBounds
+    name: setCameraBounds
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Set the camera bounds of the map control.
+    syntax:
+      content: 'function setCameraBounds(options?: CameraBoundsOptions)'
+      parameters:
+        - id: options
+          type:
+            - '@location-based-services-javascript.CameraBoundsOptions'
+          description: |
+            The options for setting the map's camera bounds.
+          optional: true
+    module: atlas
+  - uid: location-based-services-javascript.Map.setStyle
+    name: setStyle
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Set the map control's style options. Any options not specified will
+      default to their current values.
+    syntax:
+      content: 'function setStyle(options?: StyleOptions)'
+      parameters:
+        - id: options
+          type:
+            - '@location-based-services-javascript.StyleOptions'
+          description: |
+            The options for setting the style of the map control.
+          optional: true
+    module: atlas
+  - uid: location-based-services-javascript.Map.setTraffic
+    name: setTraffic
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Set the traffic options for the map. Any options not specified will
+      default to their current values.
+    syntax:
+      content: 'function setTraffic(options?: TrafficOptions)'
+      parameters:
+        - id: options
+          type:
+            - '@location-based-services-javascript.TrafficOptions'
+          description: |
+            The options for defining the map's traffic display.
+          optional: true
+    module: atlas
+  - uid: location-based-services-javascript.Map.setUserInteraction
+    name: setUserInteraction
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Set the map control's user interaction handlers. Any options not specified
+      will default to their current values.
+    syntax:
+      content: 'function setUserInteraction(options?: UserInteractionOptions)'
+      parameters:
+        - id: options
+          type:
+            - '@location-based-services-javascript.UserInteractionOptions'
+          description: |
+            The options for enabling/disabling the user interaction handlers.
+          optional: true
+    module: atlas

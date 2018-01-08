@@ -1,0 +1,109 @@
+### YamlMime:UniversalReference
+items:
+  - uid: location-based-services-javascript.Polygon
+    name: Polygon
+    fullName: Polygon
+    children:
+      - location-based-services-javascript.Polygon.constructor
+      - location-based-services-javascript.Polygon.bbox
+      - location-based-services-javascript.Polygon.coordinates
+      - location-based-services-javascript.Polygon.type
+      - location-based-services-javascript.Polygon.TYPE
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+      A GeoJSON Polygon object - a JSON object that represents a geographic
+      polygon. The full description is detailed in
+
+      [RFC 7946](https://tools.ietf.org/html/rfc7946#section-3.1.6).
+    source:
+      path: data/Polygon.ts
+      startLine: 9
+      remote:
+        path: src/MapControl/JavascriptSDK/src\data/Polygon.ts
+        repo: >-
+          https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
+        branch: production
+    package: location-based-services-javascript
+    module: atlas.data
+  - uid: location-based-services-javascript.Polygon.constructor
+    name: Polygon
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a Polygon.
+    syntax:
+      content: 'new Polygon(coordinates: Position[], bbox?: BoundingBox)'
+      parameters:
+        - id: coordinates
+          type:
+            - '@location-based-services-javascript.Position[]'
+          description: The array of linear ring coordinate arrays defining the polygon.
+        - id: bbox
+          type:
+            - '@location-based-services-javascript.BoundingBox'
+          description: |
+            The bounding box of the polygon.
+          optional: true
+    module: atlas.data
+  - uid: location-based-services-javascript.Polygon.bbox
+    name: bbox
+    fullName: bbox
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The bounding box of the polygon.
+    optional: true
+    syntax:
+      content: BoundingBox bbox
+      return:
+        type:
+          - '@location-based-services-javascript.BoundingBox'
+    module: atlas.data
+  - uid: location-based-services-javascript.Polygon.coordinates
+    name: coordinates
+    fullName: coordinates
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The array of linear ring coordinate arrays defining the polygon.
+    syntax:
+      content: 'Position[] coordinates'
+      return:
+        type:
+          - '@location-based-services-javascript.Position[]'
+    module: atlas.data
+  - uid: location-based-services-javascript.Polygon.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A GeoJSON type descriptor with value "Polygon".
+    syntax:
+      content: string type
+      return:
+        type:
+          - string
+    module: atlas.data
+  - uid: location-based-services-javascript.Polygon.TYPE
+    name: TYPE
+    fullName: TYPE
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      A static GeoJSON type descriptor for the Polygon class to be used in
+      runtime comparisons.
+    syntax:
+      content: static string TYPE
+      return:
+        type:
+          - string
+    module: atlas.data

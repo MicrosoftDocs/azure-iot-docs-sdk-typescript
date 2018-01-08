@@ -1,0 +1,142 @@
+### YamlMime:UniversalReference
+items:
+  - uid: location-based-services-javascript.LayerOptions
+    name: LayerOptions
+    fullName: LayerOptions
+    children:
+      - location-based-services-javascript.LayerOptions.before
+      - location-based-services-javascript.LayerOptions.defer
+      - location-based-services-javascript.LayerOptions.maxZoom
+      - location-based-services-javascript.LayerOptions.minZoom
+      - location-based-services-javascript.LayerOptions.name
+      - location-based-services-javascript.LayerOptions.opacity
+      - location-based-services-javascript.LayerOptions.overwrite
+    langs:
+      - typeScript
+    type: class
+    summary: The options for a layer of the map.
+    extends:
+      name: Options
+    source:
+      path: map/options/LayerOptions.ts
+      startLine: 7
+      remote:
+        path: src/MapControl/JavascriptSDK/src\map/options/LayerOptions.ts
+        repo: >-
+          https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
+        branch: production
+    package: location-based-services-javascript
+    module: Object Definitions
+  - uid: location-based-services-javascript.LayerOptions.before
+    name: before
+    fullName: before
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The name of the layer to place this layer before.  If not specified, the
+      layer will be placed at the top of the
+
+      layer list.
+    optional: true
+    syntax:
+      content: string before
+      return:
+        type:
+          - string
+    module: Object Definitions
+  - uid: location-based-services-javascript.LayerOptions.defer
+    name: defer
+    fullName: defer
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Whether to defer the layer's updates to the map until a subsequent layer's
+      update or an update to the map's
+
+      style options.
+    optional: true
+    syntax:
+      content: boolean defer
+      return:
+        type:
+          - boolean
+    module: Object Definitions
+  - uid: location-based-services-javascript.LayerOptions.maxZoom
+    name: maxZoom
+    fullName: maxZoom
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The maximum zoom at which the layer will display inclusive.
+    optional: true
+    syntax:
+      content: number maxZoom
+      return:
+        type:
+          - number
+    module: Object Definitions
+  - uid: location-based-services-javascript.LayerOptions.minZoom
+    name: minZoom
+    fullName: minZoom
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The minimum zoom at which the layer will display inclusive.
+    optional: true
+    syntax:
+      content: number minZoom
+      return:
+        type:
+          - number
+    module: Object Definitions
+  - uid: location-based-services-javascript.LayerOptions.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The name of the layer.
+    optional: true
+    syntax:
+      content: string name
+      return:
+        type:
+          - string
+    module: Object Definitions
+  - uid: location-based-services-javascript.LayerOptions.opacity
+    name: opacity
+    fullName: opacity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The opacity of the layer.
+    optional: true
+    syntax:
+      content: number opacity
+      return:
+        type:
+          - number
+    module: Object Definitions
+  - uid: location-based-services-javascript.LayerOptions.overwrite
+    name: overwrite
+    fullName: overwrite
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Whether to overwrite previous data for the layer.
+    optional: true
+    syntax:
+      content: boolean overwrite
+      return:
+        type:
+          - boolean
+    module: Object Definitions

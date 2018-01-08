@@ -102,15 +102,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Add an event listener to the map. If no layer is specified, the event
-      listener will be added to the map canvas
-
-      container; otherwise, the event listener will be added to the specified
-      layer of the map. Event listeners can
-
-      not be added to the default "base", "transit" and "labels" layers of the
-      map.
+    summary: Add an event listener to the map.
     syntax:
       content: 'function addEventListener(type: string, callback: any)'
       parameters:
@@ -134,30 +126,27 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Add an event listener to the map. If no layer is specified, the event
-      listener will be added to the map canvas
-
-      container; otherwise, the event listener will be added to the specified
-      layer of the map. Event listeners can
-
-      not be added to the default "base", "transit" and "labels" layers of the
-      map.
+    summary: Add an event listener to the map.
     syntax:
       content: 'function addEventListener(type: string, layer: string, callback: any)'
       parameters:
         - id: type
           type:
             - string
-          description: ''
+          description: >-
+            The event listener type: 'click', 'dblclick', 'mousemove',
+            'mouseup', 'mousedown', 'mouseenter',
+
+            'mouseleave', 'mouseover', 'mouseout', 'touchstart', 'touchend'
         - id: layer
           type:
             - string
-          description: ''
+          description: The layer of the map.
         - id: callback
           type:
             - any
-          description: ''
+          description: |
+            The callback to fire when the event occurs.
     module: atlas
   - uid: location-based-services-javascript.Map.addHtml
     name: addHtml
@@ -449,14 +438,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Remove an event listener from the map for the specified type and callback.
+    summary: Remove an event listener from the map.
     syntax:
       content: 'function removeEventListener(type: string, callback: any)'
       parameters:
         - id: type
           type:
             - string
-          description: The type of the event listener.
+          description: The event type.
         - id: callback
           type:
             - any
@@ -469,22 +458,23 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Remove an event listener from the map for the specified type and callback.
+    summary: Remove an event listener from the map.
     syntax:
       content: 'function removeEventListener(type: string, layer: string, callback: any)'
       parameters:
         - id: type
           type:
             - string
-          description: ''
+          description: The event type.
         - id: layer
           type:
             - string
-          description: ''
+          description: The layer of the map.
         - id: callback
           type:
             - any
-          description: ''
+          description: |
+            The callback of the event listener.
     module: atlas
   - uid: location-based-services-javascript.Map.removeHtml
     name: removeHtml

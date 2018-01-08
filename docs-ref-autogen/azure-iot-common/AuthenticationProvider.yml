@@ -46,11 +46,11 @@ items:
     summary: ''
     syntax:
       content: >-
-        function getDeviceCredentials(callback: (err: Error, credentials:
+        function getDeviceCredentials(callback: (err: Error, credentials?:
         TransportConfig) => void)
       parameters:
         - id: callback
           type:
-            - '(err: Error, credentials: TransportConfig) => void'
+            - '(err: Error, credentials?: TransportConfig) => void'
           description: ''
     module: Global

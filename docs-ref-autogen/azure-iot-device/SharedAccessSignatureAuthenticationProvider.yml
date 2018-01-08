@@ -67,12 +67,12 @@ items:
       credentials in the form of a `TransportConfig` object.
     syntax:
       content: >-
-        function getDeviceCredentials(callback: (err: Error, credentials:
+        function getDeviceCredentials(callback: (err: Error, credentials?:
         TransportConfig) => void)
       parameters:
         - id: callback
           type:
-            - '(err: Error, credentials: TransportConfig) => void'
+            - '(err: Error, credentials?: TransportConfig) => void'
           description: >
             function that will be called with either an error or a set of device
             credentials that can be used to authenticate with the IoT hub.

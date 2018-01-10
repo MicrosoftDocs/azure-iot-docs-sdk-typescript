@@ -126,7 +126,11 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Add an event listener to the map.
+    summary: >-
+      Add an event listener to a layer of the map. Event listeners cannot be
+      added to the default "base", "transit" and
+
+      "labels" layers of the map.
     syntax:
       content: 'function addEventListener(type: string, layer: string, callback: any)'
       parameters:
@@ -458,7 +462,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Remove an event listener from the map.
+    summary: Remove an event listener from a layer of the map.
     syntax:
       content: 'function removeEventListener(type: string, layer: string, callback: any)'
       parameters:

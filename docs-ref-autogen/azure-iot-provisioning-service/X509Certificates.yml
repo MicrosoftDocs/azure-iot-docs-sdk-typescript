@@ -30,7 +30,7 @@ items:
       Would typically be the certificate used to provide the identification
       and authentication for an enrollment.
     syntax:
-      content: X509CertificateWithInfo primary
+      content: 'primary: X509CertificateWithInfo'
       return:
         type:
           - '@azure-iot-provisioning-service.X509CertificateWithInfo'
@@ -47,7 +47,7 @@ items:
       and authentication for an enrollment in the case that the primary is
       revoked.
     syntax:
-      content: X509CertificateWithInfo secondary
+      content: 'secondary: X509CertificateWithInfo'
       return:
         type:
           - '@azure-iot-provisioning-service.X509CertificateWithInfo'

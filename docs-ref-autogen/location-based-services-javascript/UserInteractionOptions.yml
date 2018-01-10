@@ -46,7 +46,7 @@ items:
     summary: Whether the Shift + left click and drag will draw a zoom box.
     optional: true
     syntax:
-      content: boolean boxZoomInteraction
+      content: 'public boxZoomInteraction?: boolean = true'
       return:
         type:
           - boolean
@@ -62,7 +62,7 @@ items:
     summary: Whether double left click will zoom the map inwards.
     optional: true
     syntax:
-      content: boolean dblClickZoomInteraction
+      content: 'public dblClickZoomInteraction?: boolean = true'
       return:
         type:
           - boolean
@@ -78,7 +78,7 @@ items:
     summary: Whether left click and drag will pan the map.
     optional: true
     syntax:
-      content: boolean dragPanInteraction
+      content: 'public dragPanInteraction?: boolean = true'
       return:
         type:
           - boolean
@@ -94,7 +94,7 @@ items:
     summary: Whether right click and drag will rotate and pitch the map.
     optional: true
     syntax:
-      content: boolean dragRotateInteraction
+      content: 'public dragRotateInteraction?: boolean = true'
       return:
         type:
           - boolean
@@ -113,7 +113,7 @@ items:
       user interactions will enabled.
     optional: true
     syntax:
-      content: boolean interactive
+      content: 'public interactive?: boolean = true'
       return:
         type:
           - boolean
@@ -165,7 +165,7 @@ items:
       Decrease pitch by 10 degrees.</p>
     optional: true
     syntax:
-      content: boolean keyboardInteraction
+      content: 'public keyboardInteraction?: boolean = true'
       return:
         type:
           - boolean
@@ -181,7 +181,7 @@ items:
     summary: Whether the map should zoom on scroll input.
     optional: true
     syntax:
-      content: boolean scrollZoomInteraction
+      content: 'public scrollZoomInteraction?: boolean = true'
       return:
         type:
           - boolean
@@ -196,7 +196,7 @@ items:
     summary: Whether touch interactions are enabled for touch devices.
     optional: true
     syntax:
-      content: boolean touchInteraction
+      content: 'public touchInteraction?: boolean = true'
       return:
         type:
           - boolean

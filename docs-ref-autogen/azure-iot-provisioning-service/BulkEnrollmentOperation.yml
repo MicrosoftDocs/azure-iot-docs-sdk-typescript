@@ -32,7 +32,7 @@ items:
 
       array is limited.
     syntax:
-      content: Array<IndividualEnrollment> enrollments
+      content: 'enrollments: Array<IndividualEnrollment>'
       return:
         type:
           - Array<@azure-iot-provisioning-service.IndividualEnrollment>
@@ -48,7 +48,7 @@ items:
       The mode property specifies the operation that will be performed upon all
       of the IndividualEnrollment elements in the enrollments property.
     syntax:
-      content: BulkOperationMode mode
+      content: 'mode: BulkOperationMode'
       return:
         type:
           - BulkOperationMode

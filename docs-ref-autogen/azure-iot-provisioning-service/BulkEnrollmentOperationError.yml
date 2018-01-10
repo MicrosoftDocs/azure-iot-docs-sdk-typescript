@@ -32,7 +32,7 @@ items:
       The status code that is associated with the error for a particular CRUD
       operation.
     syntax:
-      content: number errorCode
+      content: 'errorCode: number'
       return:
         type:
           - number
@@ -48,7 +48,7 @@ items:
       The helpful text associated with the error for a particular CRUD
       operation.
     syntax:
-      content: string errorStatus
+      content: 'errorStatus: string'
       return:
         type:
           - string
@@ -64,7 +64,7 @@ items:
       The id of the the IndividualEnrollment object that was in error during a
       runBulkEnrollmentOperation invocation.
     syntax:
-      content: string registrationId
+      content: 'registrationId: string'
       return:
         type:
           - string

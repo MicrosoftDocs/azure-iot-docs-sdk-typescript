@@ -42,7 +42,7 @@ items:
       separate.
     optional: true
     syntax:
-      content: boolean cluster
+      content: 'public cluster?: boolean = true'
       return:
         type:
           - boolean
@@ -57,7 +57,7 @@ items:
     summary: The icon to use to represent a cluster.
     optional: true
     syntax:
-      content: string clusterIcon
+      content: 'public clusterIcon?: string =  undefined'
       return:
         type:
           - string
@@ -72,7 +72,7 @@ items:
     summary: The color of the title text.
     optional: true
     syntax:
-      content: string fontColor
+      content: 'public fontColor?: string = "#000"'
       return:
         type:
           - string
@@ -87,7 +87,7 @@ items:
     summary: The size of the title text.
     optional: true
     syntax:
-      content: number fontSize
+      content: 'public fontSize?: number = 14'
       return:
         type:
           - number
@@ -103,8 +103,9 @@ items:
     optional: true
     syntax:
       content: >-
-        "pin-darkblue" | "pin-blue" | "pin-red" | "pin-round-darkblue" |
-        "pin-round-blue" | "pin-round-red" | "none" icon
+        public icon?: "pin-darkblue" | "pin-blue" | "pin-red" |
+        "pin-round-darkblue" | "pin-round-blue" | "pin-round-red" | "none" =
+        "pin-darkblue"
       return:
         type:
           - >-
@@ -125,7 +126,7 @@ items:
       size of the icon.
     optional: true
     syntax:
-      content: number iconSize
+      content: 'public iconSize?: number = 1'
       return:
         type:
           - number
@@ -140,7 +141,7 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: string name
+      content: 'public name?: string = "default-pins"'
       return:
         type:
           - string
@@ -156,8 +157,8 @@ items:
     optional: true
     syntax:
       content: >-
-        "SegoeUi-Bold" | "SegoeUi-Regular" | "StandardFont-Bold" |
-        "StandardFont-Regular" textFont
+        public textFont?: "SegoeUi-Bold" | "SegoeUi-Regular" |
+        "StandardFont-Bold" | "StandardFont-Regular" = "SegoeUi-Regular"
       return:
         type:
           - >-
@@ -178,7 +179,7 @@ items:
       offset. Negative numbers can be used to offset the title left and up.
     optional: true
     syntax:
-      content: 'number[] textOffset'
+      content: 'public textOffset?: number[] =  [0, 0]'
       return:
         type:
           - 'number[]'
@@ -193,7 +194,7 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: string title
+      content: 'public title?: string = ""'
       return:
         type:
           - string

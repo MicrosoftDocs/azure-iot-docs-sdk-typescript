@@ -28,7 +28,7 @@ items:
     type: property
     summary: PEM or CER representation of a certificate.
     syntax:
-      content: string certificate
+      content: 'certificate: string'
       return:
         type:
           - string
@@ -44,7 +44,7 @@ items:
       This property is populated by the service from the information
       provided by the certificate property of this object.
     syntax:
-      content: X509CertificateInfo info
+      content: 'info: X509CertificateInfo'
       return:
         type:
           - '@azure-iot-provisioning-service.X509CertificateInfo'

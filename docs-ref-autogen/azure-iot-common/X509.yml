@@ -36,7 +36,7 @@ items:
     summary: X509 Certificate.
     optional: true
     syntax:
-      content: string | "undefined" | Buffer | "undefined" cert
+      content: 'cert?: string | "undefined" | Buffer | "undefined"'
       return:
         type:
           - string | "undefined" | Buffer | "undefined"
@@ -51,7 +51,7 @@ items:
     summary: Key associated with the X509 certificate.
     optional: true
     syntax:
-      content: string | Buffer key
+      content: 'key?: string | Buffer'
       return:
         type:
           - string | Buffer
@@ -66,7 +66,7 @@ items:
     summary: Passphrase used to decode the key associated with the X509 certificate.
     optional: true
     syntax:
-      content: string passphrase
+      content: 'passphrase?: string'
       return:
         type:
           - string

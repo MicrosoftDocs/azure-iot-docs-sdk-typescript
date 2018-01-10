@@ -32,7 +32,7 @@ items:
     summary: The bounds of the map control's camera.
     optional: true
     syntax:
-      content: BoundingBox bounds
+      content: 'public bounds?: BoundingBox =  [-180, -89, 180, 90]'
       return:
         type:
           - '@location-based-services-javascript.BoundingBox'
@@ -51,7 +51,7 @@ items:
       specify each side as an array of [top, right, bottom, left].
     optional: true
     syntax:
-      content: number | "undefined" padding
+      content: 'public padding?: number | "undefined" = 0'
       return:
         type:
           - number | "undefined"

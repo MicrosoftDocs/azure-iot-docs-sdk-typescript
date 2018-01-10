@@ -31,7 +31,7 @@ items:
     summary: true to foce re-registration
     optional: true
     syntax:
-      content: boolean forceRegistration
+      content: 'forceRegistration?: boolean'
       return:
         type:
           - boolean
@@ -45,7 +45,7 @@ items:
     type: property
     summary: ID scope for the provisioning instance
     syntax:
-      content: string idScope
+      content: 'idScope: string'
       return:
         type:
           - string
@@ -59,7 +59,7 @@ items:
     type: property
     summary: global device endpoint for the provisioning service
     syntax:
-      content: string provisioningHost
+      content: 'provisioningHost: string'
       return:
         type:
           - string
@@ -76,7 +76,7 @@ items:
       registration
     optional: true
     syntax:
-      content: string registrationId
+      content: 'registrationId?: string'
       return:
         type:
           - string

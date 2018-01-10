@@ -32,7 +32,7 @@ items:
       for enrollment.
     optional: true
     syntax:
-      content: TpmAttestation tpm
+      content: 'tpm?: TpmAttestation'
       return:
         type:
           - '@azure-iot-provisioning-service.TpmAttestation'
@@ -48,7 +48,7 @@ items:
       The type of attestation.  Will be set to a string
       either `tpm` or `x509`.
     syntax:
-      content: AttestationTypes type
+      content: 'type: AttestationTypes'
       return:
         type:
           - AttestationTypes
@@ -65,7 +65,7 @@ items:
       for enrollment.
     optional: true
     syntax:
-      content: X509Attestation x509
+      content: 'x509?: X509Attestation'
       return:
         type:
           - '@azure-iot-provisioning-service.X509Attestation'

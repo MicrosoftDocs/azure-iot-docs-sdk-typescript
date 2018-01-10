@@ -58,7 +58,7 @@ items:
     summary: The bounding box of the polygon.
     optional: true
     syntax:
-      content: BoundingBox bbox
+      content: 'public bbox?: BoundingBox'
       return:
         type:
           - '@location-based-services-javascript.BoundingBox'
@@ -72,7 +72,7 @@ items:
     type: property
     summary: The array of linear ring coordinate arrays defining the polygon.
     syntax:
-      content: 'Position[] coordinates'
+      content: 'public coordinates: Position[]'
       return:
         type:
           - '@location-based-services-javascript.Position[]'
@@ -86,7 +86,7 @@ items:
     type: property
     summary: A GeoJSON type descriptor with value "Polygon".
     syntax:
-      content: string type
+      content: 'public type: string = "Polygon"'
       return:
         type:
           - string
@@ -102,7 +102,7 @@ items:
       A static GeoJSON type descriptor for the Polygon class to be used in
       runtime comparisons.
     syntax:
-      content: static string TYPE
+      content: 'public static TYPE: string = "Polygon"'
       return:
         type:
           - string

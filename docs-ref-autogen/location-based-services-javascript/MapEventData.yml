@@ -35,7 +35,7 @@ items:
     summary: 'The pixel coordinate where the event occurred as an array of [x, y].'
     optional: true
     syntax:
-      content: 'number[] coordinate'
+      content: 'coordinate?: number[]'
       return:
         type:
           - 'number[]'
@@ -50,7 +50,7 @@ items:
     summary: The features associated with the event.
     optional: true
     syntax:
-      content: Array<Feature<Geometry>> features
+      content: 'features?: Array<Feature<Geometry>>'
       return:
         type:
           - Array<@location-based-services-javascript.Feature<Geometry>>
@@ -64,7 +64,7 @@ items:
     type: property
     summary: The original event that was fired.
     syntax:
-      content: Event originalEvent
+      content: 'originalEvent: Event'
       return:
         type:
           - Event
@@ -79,7 +79,7 @@ items:
     summary: The geographic position on the map where the event occurred.
     optional: true
     syntax:
-      content: Position position
+      content: 'position?: Position'
       return:
         type:
           - '@location-based-services-javascript.Position'
@@ -93,7 +93,7 @@ items:
     type: property
     summary: The event type.
     syntax:
-      content: string type
+      content: 'type: string'
       return:
         type:
           - string

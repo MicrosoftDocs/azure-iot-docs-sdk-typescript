@@ -36,7 +36,7 @@ items:
       The security mechanism associated with this object.
       Currently this MUST be x509.
     syntax:
-      content: AttestationMechanism attestation
+      content: 'attestation: AttestationMechanism'
       return:
         type:
           - '@azure-iot-provisioning-service.AttestationMechanism'
@@ -50,7 +50,7 @@ items:
     type: property
     summary: The date and time that this object was created.
     syntax:
-      content: string createdDateTimeUtc
+      content: 'createdDateTimeUtc: string'
       return:
         type:
           - string
@@ -66,7 +66,7 @@ items:
       A unique identifier for this object.
       The value is all lowercase alphanumeric with embedded `-` permitted.
     syntax:
-      content: string enrollmentGroupId
+      content: 'enrollmentGroupId: string'
       return:
         type:
           - string
@@ -82,7 +82,7 @@ items:
       An opaque value suitable to uniquely identify a particular generation
       of this object for use during a CRUD operation.
     syntax:
-      content: string etag
+      content: 'etag: string'
       return:
         type:
           - string
@@ -98,7 +98,7 @@ items:
       The initial twin document that will be created for devices upon their
       provisioning.
     syntax:
-      content: InitialTwin initialTwin
+      content: 'initialTwin: InitialTwin'
       return:
         type:
           - '@azure-iot-provisioning-service.InitialTwin'
@@ -114,7 +114,7 @@ items:
       The IoT Hub that will be the destination of the provisioning for devices
       associated with this object.
     syntax:
-      content: string iotHubHostName
+      content: 'iotHubHostName: string'
       return:
         type:
           - string
@@ -130,7 +130,7 @@ items:
       The date and time that this object was last updated.  This
       could include an update or an actual registration.
     syntax:
-      content: string lastUpdatedDateTimeUtc
+      content: 'lastUpdatedDateTimeUtc: string'
       return:
         type:
           - string
@@ -146,7 +146,7 @@ items:
       Indicates whether this object can be used as the basis for a device
       provisioning.
     syntax:
-      content: ProvisioningStatus provisioningStatus
+      content: 'provisioningStatus: ProvisioningStatus'
       return:
         type:
           - ProvisioningStatus

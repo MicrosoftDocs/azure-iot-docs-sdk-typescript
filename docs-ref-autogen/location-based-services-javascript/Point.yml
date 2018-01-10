@@ -51,7 +51,7 @@ items:
     type: property
     summary: The position defining the point.
     syntax:
-      content: Position coordinates
+      content: 'public coordinates: Position'
       return:
         type:
           - '@location-based-services-javascript.Position'
@@ -65,7 +65,7 @@ items:
     type: property
     summary: A GeoJSON type descriptor with value "Point".
     syntax:
-      content: string type
+      content: 'public type: string = "Point"'
       return:
         type:
           - string
@@ -81,7 +81,7 @@ items:
       A static GeoJSON type descriptor for the Point class to be used in runtime
       comparisons.
     syntax:
-      content: static string TYPE
+      content: 'public static TYPE: string = "Point"'
       return:
         type:
           - string

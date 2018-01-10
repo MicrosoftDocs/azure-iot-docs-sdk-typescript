@@ -67,7 +67,7 @@ items:
       Boolean indicating whether the first retry should be immediate (if set to
       true) or after the normalParameters.c delay (if set to false).
     syntax:
-      content: boolean immediateFirstRetry
+      content: 'immediateFirstRetry: boolean'
       return:
         type:
           - boolean
@@ -83,7 +83,7 @@ items:
       Retry parameters used to calculate the delay between each retry in normal
       situations (ie. not throttled).
     syntax:
-      content: ExponentialBackoffWithJitterParameters normalParameters
+      content: 'normalParameters: ExponentialBackoffWithJitterParameters'
       return:
         type:
           - '@azure-iot-common.ExponentialBackoffWithJitterParameters'
@@ -99,7 +99,7 @@ items:
       Retry parameters used to calculate the delay between each retry in
       throttled situations.
     syntax:
-      content: ExponentialBackoffWithJitterParameters throttledParameters
+      content: 'throttledParameters: ExponentialBackoffWithJitterParameters'
       return:
         type:
           - '@azure-iot-common.ExponentialBackoffWithJitterParameters'

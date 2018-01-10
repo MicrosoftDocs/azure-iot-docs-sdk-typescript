@@ -33,7 +33,7 @@ items:
     summary: The language of the map labels.
     optional: true
     syntax:
-      content: string language
+      content: 'public language?: string = "NGT"'
       return:
         type:
           - string
@@ -48,7 +48,7 @@ items:
     summary: The style of the map tiles.
     optional: true
     syntax:
-      content: function style
+      content: 'public style?: function = "vector"'
       return:
         type:
           - function
@@ -67,7 +67,7 @@ items:
       <p>IL: Israel's view of the world.</p>
     optional: true
     syntax:
-      content: '"Unified" | "IN" | "IL" view'
+      content: 'public view?: "Unified" | "IN" | "IL" = "Unified"'
       return:
         type:
           - '"Unified" | "IN" | "IL"'

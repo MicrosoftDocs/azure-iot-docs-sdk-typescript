@@ -13,10 +13,12 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: >-
+      Configuration structure used by transports and `AuthenticationProvider`
+      objects to store and exchange credentials.
     source:
       path: authorization.ts
-      startLine: 43
+      startLine: 46
       remote:
         path: common/core/src\authorization.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
@@ -30,9 +32,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Device unique identifier.
     syntax:
-      content: string deviceId
+      content: 'deviceId: string'
       return:
         type:
           - string
@@ -44,9 +46,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Hostname of the Azure IoT hub instance.
     syntax:
-      content: string host
+      content: 'host: string'
       return:
         type:
           - string
@@ -58,10 +60,10 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Shared access key is used to sign security tokens.
     optional: true
     syntax:
-      content: string sharedAccessKey
+      content: 'sharedAccessKey?: string'
       return:
         type:
           - string
@@ -73,10 +75,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Name of the policy which shared access key is used to sign security
+      tokens.
     optional: true
     syntax:
-      content: string sharedAccessKeyName
+      content: 'sharedAccessKeyName?: string'
       return:
         type:
           - string
@@ -88,10 +92,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Shared access signature security token used to authenticate a device when
+      token-based authentication is used.
     optional: true
     syntax:
-      content: string sharedAccessSignature
+      content: 'sharedAccessSignature?: string'
       return:
         type:
           - string
@@ -103,10 +109,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Object containing the certificate and key used by the device to connect
+      and authenticate with the Azure IoT hub instance.
     optional: true
     syntax:
-      content: X509 x509
+      content: 'x509?: X509'
       return:
         type:
           - '@azure-iot-common.X509'

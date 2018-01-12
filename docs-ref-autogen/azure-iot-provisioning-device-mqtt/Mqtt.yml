@@ -4,39 +4,22 @@ items:
     name: Mqtt
     fullName: Mqtt
     children:
-      - azure-iot-provisioning-device-mqtt.Mqtt.constructor
       - azure-iot-provisioning-device-mqtt.Mqtt.queryOperationStatus
       - azure-iot-provisioning-device-mqtt.Mqtt.registrationRequest
     langs:
       - typeScript
     type: class
-    summary: ''
+    summary: Transport used to provision a device over MQTT.
     extends:
-      name: '@azure-iot-provisioning-device-mqtt.Mqtt'
+      name: EventEmitter
     source:
       path: mqtt.ts
-      startLine: 25
+      startLine: 28
       remote:
         path: provisioning/transport/mqtt/src\mqtt.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device-mqtt
-    module: Global
-  - uid: azure-iot-provisioning-device-mqtt.Mqtt.constructor
-    name: Mqtt
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'new Mqtt(mqttBase?: MqttBase)'
-      parameters:
-        - id: mqttBase
-          type:
-            - MqttBase
-          description: ''
-          optional: true
     module: Global
   - uid: azure-iot-provisioning-device-mqtt.Mqtt.queryOperationStatus
     name: queryOperationStatus

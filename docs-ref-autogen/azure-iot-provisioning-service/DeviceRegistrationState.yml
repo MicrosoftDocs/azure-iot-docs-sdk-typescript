@@ -37,7 +37,7 @@ items:
     type: property
     summary: The IoT Hub that the device was provisioned to.
     syntax:
-      content: string assignedHub
+      content: 'assignedHub: string'
       return:
         type:
           - string
@@ -51,7 +51,7 @@ items:
     type: property
     summary: The date that the device registration was created.
     syntax:
-      content: Date createdDateTimeUtc
+      content: 'createdDateTimeUtc: Date'
       return:
         type:
           - Date
@@ -65,7 +65,7 @@ items:
     type: property
     summary: The unique identifier (per hub) used for the device registration.
     syntax:
-      content: string deviceId
+      content: 'deviceId: string'
       return:
         type:
           - string
@@ -79,7 +79,7 @@ items:
     type: property
     summary: A numeric value for the error associated with this registration.
     syntax:
-      content: number errorCode
+      content: 'errorCode: number'
       return:
         type:
           - number
@@ -93,7 +93,7 @@ items:
     type: property
     summary: The helpful text for the error associated with this registration.
     syntax:
-      content: string errorMessage
+      content: 'errorMessage: string'
       return:
         type:
           - string
@@ -109,7 +109,7 @@ items:
       An opaque value suitable to uniquely identify a particular generation
       of this object for use during a CRUD operation.
     syntax:
-      content: string etag
+      content: 'etag: string'
       return:
         type:
           - string
@@ -124,7 +124,7 @@ items:
     type: property
     summary: The last time that this registration status was updated.
     syntax:
-      content: Date lastUpdatedDateTimeUtc
+      content: 'lastUpdatedDateTimeUtc: Date'
       return:
         type:
           - Date
@@ -140,7 +140,7 @@ items:
       The unique identifier associated with an enrollment object.
       The value is all lowercase alphanumeric with embedded `-` permitted.
     syntax:
-      content: string registrationId
+      content: 'registrationId: string'
       return:
         type:
           - string
@@ -154,7 +154,7 @@ items:
     type: property
     summary: What is the provisioning state of the device at this particular moment.
     syntax:
-      content: RegistrationStatus status
+      content: 'status: RegistrationStatus'
       return:
         type:
           - RegistrationStatus

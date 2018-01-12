@@ -38,7 +38,7 @@ items:
       This is only used for device connection strings.
     optional: true
     syntax:
-      content: string DeviceId
+      content: 'DeviceId?: string'
       return:
         type:
           - string
@@ -58,7 +58,7 @@ items:
       ignored and kept only for compatibility purposes.
     optional: true
     syntax:
-      content: string GatewayHostName
+      content: 'GatewayHostName?: string'
       return:
         type:
           - string
@@ -75,7 +75,7 @@ items:
     summary: Hostname of the Azure IoT hub.
     optional: true
     syntax:
-      content: string HostName
+      content: 'HostName?: string'
       return:
         type:
           - string
@@ -93,7 +93,7 @@ items:
       specific device or a specific service policy.
     optional: true
     syntax:
-      content: string SharedAccessKey
+      content: 'SharedAccessKey?: string'
       return:
         type:
           - string
@@ -111,7 +111,7 @@ items:
       `DeviceId` instead).
     optional: true
     syntax:
-      content: string SharedAccessKeyName
+      content: 'SharedAccessKeyName?: string'
       return:
         type:
           - string
@@ -128,7 +128,7 @@ items:
       authentication and if it exists, will be set to True.
     optional: true
     syntax:
-      content: string x509
+      content: 'x509?: string'
       return:
         type:
           - string

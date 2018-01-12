@@ -59,7 +59,7 @@ items:
     type: property
     summary: Boolean indicating whether the response has been sent already.
     syntax:
-      content: boolean isResponseComplete
+      content: 'isResponseComplete: boolean = false'
       return:
         type:
           - boolean
@@ -73,7 +73,7 @@ items:
     type: property
     summary: 'The payload of the response, sent back to the caller on the service side.'
     syntax:
-      content: any payload
+      content: 'payload: any'
       return:
         type:
           - any
@@ -89,7 +89,7 @@ items:
       The request identifier supplied by the service for this device method
       call.
     syntax:
-      content: string requestId
+      content: 'requestId: string'
       return:
         type:
           - string
@@ -105,7 +105,7 @@ items:
       Status code indicating whether the method succeeded (200) or not (any
       other number that is not 200).
     syntax:
-      content: number status
+      content: 'status: number'
       return:
         type:
           - number

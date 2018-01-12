@@ -35,7 +35,7 @@ items:
       declaring the device is unreachable.
     optional: true
     syntax:
-      content: number connectTimeoutInSeconds
+      content: 'connectTimeoutInSeconds?: number'
       return:
         type:
           - number
@@ -49,7 +49,7 @@ items:
     type: property
     summary: The name of the method to call on the device.
     syntax:
-      content: string methodName
+      content: 'methodName: string'
       return:
         type:
           - string
@@ -64,7 +64,7 @@ items:
     summary: The method payload that will be sent to the device.
     optional: true
     syntax:
-      content: any payload
+      content: 'payload?: any'
       return:
         type:
           - any
@@ -79,7 +79,7 @@ items:
     summary: The maximum time a device should take to respond to the method.
     optional: true
     syntax:
-      content: number responseTimeoutInSeconds
+      content: 'responseTimeoutInSeconds?: number'
       return:
         type:
           - number

@@ -4,7 +4,6 @@ items:
     name: X509AuthenticationProvider
     fullName: X509AuthenticationProvider
     children:
-      - azure-iot-device.X509AuthenticationProvider.constructor
       - azure-iot-device.X509AuthenticationProvider.type
       - azure-iot-device.X509AuthenticationProvider.getDeviceCredentials
       - azure-iot-device.X509AuthenticationProvider.setX509Options
@@ -12,30 +11,27 @@ items:
     langs:
       - typeScript
     type: class
-    summary: ''
+    summary: >
+      Provides an `AuthenticationProvider` object that can be created simply
+      with an X509 certificate and key and is then used by the device client and
+      transports to authenticate
+
+      with the Azure IoT hub instance.
+
+      Unlike the `SharedAccessSignatureAuthenticationProvider` and
+      `SharedAccessKeyAuthenticationProvider` objects, the
+      `X509AuthenticationProvider` does not emit a `newTokenAvailable` event
+
+      since there are no token involved in X509 authentication. The transports
+      will get the credentials using the `getDeviceCredentials` method.
     source:
       path: x509_authentication_provider.ts
-      startLine: 6
+      startLine: 13
       remote:
         path: device/core/src\x509_authentication_provider.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-device
-    module: Global
-  - uid: azure-iot-device.X509AuthenticationProvider.constructor
-    name: X509AuthenticationProvider
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'new X509AuthenticationProvider(credentials: TransportConfig)'
-      parameters:
-        - id: credentials
-          type:
-            - TransportConfig
-          description: ''
     module: Global
   - uid: azure-iot-device.X509AuthenticationProvider.type
     name: type
@@ -46,7 +42,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: AuthenticationType type
+      content: 'type: AuthenticationType =  AuthenticationType.X509'
       return:
         type:
           - AuthenticationType
@@ -57,7 +53,9 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      This method is used by the transports to gets the most current device
+      credentials in the form of a `TransportConfig` object.
     syntax:
       content: >-
         function getDeviceCredentials(callback: (err: Error, credentials?:
@@ -66,7 +64,9 @@ items:
         - id: callback
           type:
             - '(err: Error, credentials?: TransportConfig) => void'
-          description: ''
+          description: >
+            function that will be called with either an error or a set of device
+            credentials that can be used to authenticate with the IoT hub.
     module: Global
   - uid: azure-iot-device.X509AuthenticationProvider.setX509Options
     name: setX509Options
@@ -74,14 +74,17 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Updates the certificate and key used by the device to connect and
+      authenticate with an Azure IoT hub instance.
     syntax:
       content: 'function setX509Options(x509: X509)'
       parameters:
         - id: x509
           type:
             - X509
-          description: ''
+          description: |
+            The `X509` object containing the certificate and key.
     module: Global
   - uid: azure-iot-device.X509AuthenticationProvider.fromX509Options
     name: fromX509Options
@@ -89,7 +92,9 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Creates a new `X509AuthenticationProvider` from an `X509` object
+      containing a certificate and key.
     syntax:
       content: >-
         static function fromX509Options(deviceId: string, iotHubHostname:
@@ -98,15 +103,19 @@ items:
         - id: deviceId
           type:
             - string
-          description: ''
+          description: The device identifier.
         - id: iotHubHostname
           type:
             - string
-          description: ''
+          description: >-
+            The host name of the Azure IoT hub instance the device should
+            connect to.
         - id: x509info
           type:
             - X509
-          description: ''
+          description: >
+            An `X509` object containing a certificate and key that the device
+            can use to authenticate with the Azure IoT hub instance.
       return:
         type:
           - '@azure-iot-device.X509AuthenticationProvider'

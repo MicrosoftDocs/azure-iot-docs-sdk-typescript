@@ -3,13 +3,7 @@ items:
   - uid: azure-iot-device-amqp.Amqp
     name: Amqp
     fullName: Amqp
-    children:
-      - azure-iot-device-amqp.Amqp.disableC2D
-      - azure-iot-device-amqp.Amqp.disableMethods
-      - azure-iot-device-amqp.Amqp.disableTwin
-      - azure-iot-device-amqp.Amqp.enableC2D
-      - azure-iot-device-amqp.Amqp.enableMethods
-      - azure-iot-device-amqp.Amqp.enableTwin
+    children: []
     langs:
       - typeScript
     type: class
@@ -31,94 +25,4 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-device-amqp
-    module: Global
-  - uid: azure-iot-device-amqp.Amqp.disableC2D
-    name: disableC2D
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'function disableC2D(callback: (err?: Error) => void)'
-      parameters:
-        - id: callback
-          type:
-            - '(err?: Error) => void'
-          description: ''
-    module: Global
-  - uid: azure-iot-device-amqp.Amqp.disableMethods
-    name: disableMethods
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'function disableMethods(callback: (err?: Error) => void)'
-      parameters:
-        - id: callback
-          type:
-            - '(err?: Error) => void'
-          description: ''
-    module: Global
-  - uid: azure-iot-device-amqp.Amqp.disableTwin
-    name: disableTwin
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'function disableTwin(callback: (err?: Error) => void)'
-      parameters:
-        - id: callback
-          type:
-            - '(err?: Error) => void'
-          description: ''
-    module: Global
-  - uid: azure-iot-device-amqp.Amqp.enableC2D
-    name: enableC2D
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'function enableC2D(callback: (err?: Error) => void)'
-      parameters:
-        - id: callback
-          type:
-            - '(err?: Error) => void'
-          description: ''
-    module: Global
-  - uid: azure-iot-device-amqp.Amqp.enableMethods
-    name: enableMethods
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'function enableMethods(callback: (err?: Error) => void)'
-      parameters:
-        - id: callback
-          type:
-            - '(err?: Error) => void'
-          description: ''
-    module: Global
-  - uid: azure-iot-device-amqp.Amqp.enableTwin
-    name: enableTwin
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'function enableTwin(callback: (err?: Error) => void)'
-      parameters:
-        - id: callback
-          type:
-            - '(err?: Error) => void'
-          description: ''
     module: Global

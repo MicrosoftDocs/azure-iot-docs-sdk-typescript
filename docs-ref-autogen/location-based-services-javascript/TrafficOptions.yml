@@ -44,7 +44,9 @@ items:
       false to stop displaying the traffic flow.</p>
     optional: true
     syntax:
-      content: '"none" | "relative" | "absolute" | "relative-delay" flow'
+      content: >-
+        public flow?: "none" | "relative" | "absolute" | "relative-delay" =
+        "none"
       return:
         type:
           - '"none" | "relative" | "absolute" | "relative-delay"'
@@ -59,7 +61,7 @@ items:
     summary: Whether to display incidents on the map.
     optional: true
     syntax:
-      content: boolean incidents
+      content: 'public incidents?: boolean = false'
       return:
         type:
           - boolean

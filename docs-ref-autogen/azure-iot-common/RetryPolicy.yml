@@ -39,7 +39,7 @@ items:
     type: property
     summary: Computes the interval to wait before retrying at each new retry tentative.
     syntax:
-      content: '(retryCount: number, isThrottled: boolean) => number nextRetryTimeout'
+      content: 'nextRetryTimeout: (retryCount: number, isThrottled: boolean) => number'
       return:
         type:
           - '(retryCount: number, isThrottled: boolean) => number'
@@ -55,7 +55,7 @@ items:
       Based on the error passed as argument, determines if an error is transient
       and if the operation should be retried or not.
     syntax:
-      content: '(error: Error) => boolean shouldRetry'
+      content: 'shouldRetry: (error: Error) => boolean'
       return:
         type:
           - '(error: Error) => boolean'

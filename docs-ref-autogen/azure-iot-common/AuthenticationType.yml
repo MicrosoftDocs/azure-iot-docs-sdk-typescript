@@ -9,10 +9,10 @@ items:
     langs:
       - typeScript
     type: enum
-    summary: ''
+    summary: Designate the type of authentication used by an `AuthenticationProvider`.
     source:
       path: authentication_provider.ts
-      startLine: 6
+      startLine: 9
       remote:
         path: common/core/src\authentication_provider.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
@@ -24,7 +24,9 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Token-based authentication uses shared access signature security tokens,
+      generated and signed with a secret key.
     type: field
     module: Global
   - uid: azure-iot-common.AuthenticationType.X509
@@ -32,6 +34,6 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: X509 Certificate based authentication.
     type: field
     module: Global

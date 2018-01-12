@@ -12,12 +12,24 @@ items:
     langs:
       - typeScript
     type: class
-    summary: ''
+    summary: >
+      Provides an `AuthenticationProvider` object that can be created simply
+      with a connection string and is then used by the device client and
+      transports to authenticate
+
+      with the Azure IoT hub instance.
+
+      The `SharedAccessKeyAuthenticationProvider` object takes care of creating
+      shared access signature tokens on a regular cadence and emits the
+      `newTokenAvailable` event for the transports
+
+      to renew their credentials with the Azure IoT hub instance and stay
+      connected.
     extends:
       name: EventEmitter
     source:
       path: sak_authentication_provider.ts
-      startLine: 7
+      startLine: 14
       remote:
         path: device/core/src\sak_authentication_provider.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
@@ -33,7 +45,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: AuthenticationType type
+      content: 'type: AuthenticationType =  AuthenticationType.Token'
       return:
         type:
           - AuthenticationType
@@ -46,16 +58,16 @@ items:
     langs:
       - typeScript
     summary: >-
-      Gets the current device credentials that are valid and were generated from
-      the connection string.
+      This method is used by the transports to gets the most current device
+      credentials in the form of a `TransportConfig` object.
     syntax:
       content: >-
-        function getDeviceCredentials(callback: (err: Error, credentials:
+        function getDeviceCredentials(callback: (err: Error, credentials?:
         TransportConfig) => void)
       parameters:
         - id: callback
           type:
-            - '(err: Error, credentials: TransportConfig) => void'
+            - '(err: Error, credentials?: TransportConfig) => void'
           description: >
             function that will be called with either an error or a set of device
             credentials that can be used to authenticate with the IoT hub.

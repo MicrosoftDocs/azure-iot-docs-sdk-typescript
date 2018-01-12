@@ -33,7 +33,7 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: boolean clean
+      content: 'clean?: boolean'
       return:
         type:
           - boolean
@@ -47,7 +47,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: string deviceId
+      content: 'deviceId: string'
       return:
         type:
           - string
@@ -61,7 +61,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: string host
+      content: 'host: string'
       return:
         type:
           - string
@@ -76,7 +76,7 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: string | SharedAccessSignature sharedAccessSignature
+      content: 'sharedAccessSignature?: string | SharedAccessSignature'
       return:
         type:
           - string | SharedAccessSignature
@@ -91,7 +91,7 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: string username
+      content: 'username?: string'
       return:
         type:
           - string
@@ -106,7 +106,7 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: X509 x509
+      content: 'x509?: X509'
       return:
         type:
           - X509

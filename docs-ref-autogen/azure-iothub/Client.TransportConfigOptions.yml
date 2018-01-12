@@ -30,7 +30,7 @@ items:
     type: property
     summary: Hostname of the Azure IoT hub. (<IoT hub name>.azure-devices.net).
     syntax:
-      content: string host
+      content: 'host: string'
       return:
         type:
           - string
@@ -45,7 +45,7 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: string hubName
+      content: 'hubName?: string'
       return:
         type:
           - string
@@ -65,7 +65,7 @@ items:
     type: property
     summary: The name of the policy used to connect to the Azure IoT Hub service.
     syntax:
-      content: string keyName
+      content: 'keyName: string'
       return:
         type:
           - string
@@ -81,7 +81,7 @@ items:
       The shared access signature token used to authenticate the connection with
       the Azure IoT hub.
     syntax:
-      content: string | SharedAccessSignature sharedAccessSignature
+      content: 'sharedAccessSignature: string | SharedAccessSignature'
       return:
         type:
           - string | SharedAccessSignature

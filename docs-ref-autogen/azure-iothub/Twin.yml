@@ -82,7 +82,7 @@ items:
       Unique identifier of the device identity associated with the twin, as it
       exists in the device identity registry.
     syntax:
-      content: string deviceId
+      content: 'deviceId: string'
       return:
         type:
           - string
@@ -98,7 +98,7 @@ items:
       Tag used in optimistic concurrency to avoid multiple parallel editions of
       the device twin.
     syntax:
-      content: string etag
+      content: 'etag: string'
       return:
         type:
           - string
@@ -114,7 +114,7 @@ items:
       The desired and reported properties dictionnaries (respectively in
       `properties.desired` and `properties.reported`).
     syntax:
-      content: function properties
+      content: 'properties: function'
       return:
         type:
           - function
@@ -130,7 +130,7 @@ items:
       Collection of key/value pairs that is available only on the service side
       and can be used in queries to find specific devices.
     syntax:
-      content: '[key: string]: string tags'
+      content: 'tags: [key: string]: string'
       return:
         type:
           - '[key: string]: string'

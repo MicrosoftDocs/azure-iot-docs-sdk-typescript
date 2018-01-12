@@ -33,7 +33,7 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: string color
+      content: 'public color?: string = "rgba(0,0,0,.5)"'
       return:
         type:
           - string
@@ -48,7 +48,7 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: string name
+      content: 'public name?: string = "default-polygons"'
       return:
         type:
           - string
@@ -63,7 +63,7 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: string outlineColor
+      content: 'public outlineColor?: string = "#000"'
       return:
         type:
           - string

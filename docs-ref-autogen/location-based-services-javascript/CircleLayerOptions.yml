@@ -35,7 +35,7 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: string color
+      content: 'public color?: string = "rgba(0,0,0,.5)"'
       return:
         type:
           - string
@@ -50,7 +50,7 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: string name
+      content: 'public name?: string = "default-circles"'
       return:
         type:
           - string
@@ -65,7 +65,7 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: string outlineColor
+      content: 'public outlineColor?: string = "#000"'
       return:
         type:
           - string
@@ -80,7 +80,7 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: number outlineWidth
+      content: 'public outlineWidth?: number = 5'
       return:
         type:
           - number
@@ -95,7 +95,7 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: number radius
+      content: 'public radius?: number = 1'
       return:
         type:
           - number

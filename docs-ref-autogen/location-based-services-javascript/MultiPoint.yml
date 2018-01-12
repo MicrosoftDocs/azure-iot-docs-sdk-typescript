@@ -59,7 +59,7 @@ items:
     summary: The bounding box of the multipoint.
     optional: true
     syntax:
-      content: BoundingBox bbox
+      content: 'public bbox?: BoundingBox'
       return:
         type:
           - '@location-based-services-javascript.BoundingBox'
@@ -73,7 +73,7 @@ items:
     type: property
     summary: The array of multiple positions defining the multipoint.
     syntax:
-      content: 'Position[] coordinates'
+      content: 'public coordinates: Position[]'
       return:
         type:
           - '@location-based-services-javascript.Position[]'
@@ -87,7 +87,7 @@ items:
     type: property
     summary: A GeoJSON type descriptor with value "MutliPoint".
     syntax:
-      content: string type
+      content: 'public type: string = "MultiPoint"'
       return:
         type:
           - string
@@ -103,7 +103,7 @@ items:
       A static GeoJSON type descriptor for the MultiPoint class to be used in
       runtime comparisons.
     syntax:
-      content: static string TYPE
+      content: 'public static TYPE: string = "MultiPoint"'
       return:
         type:
           - string

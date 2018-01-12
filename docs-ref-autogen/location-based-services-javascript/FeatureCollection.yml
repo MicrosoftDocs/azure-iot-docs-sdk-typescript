@@ -52,7 +52,7 @@ items:
     type: property
     summary: The collection of GeoJSON features contained in the feature collection.
     syntax:
-      content: Array<Feature<Geometry>> features
+      content: 'public features: Array<Feature<Geometry>>'
       return:
         type:
           - Array<@location-based-services-javascript.Feature<Geometry>>
@@ -66,7 +66,7 @@ items:
     type: property
     summary: A GeoJSON type descriptor with value "FeatureCollection".
     syntax:
-      content: string type
+      content: 'public type: string = "FeatureCollection"'
       return:
         type:
           - string
@@ -82,7 +82,7 @@ items:
       A static GeoJSON type descriptor for the FeatureCollection class to be
       used in runtime comparisons.
     syntax:
-      content: static string TYPE
+      content: 'public static TYPE: string = "FeatureCollection"'
       return:
         type:
           - string

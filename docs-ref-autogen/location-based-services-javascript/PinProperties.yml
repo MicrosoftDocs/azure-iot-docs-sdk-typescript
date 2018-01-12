@@ -31,8 +31,8 @@ items:
     optional: true
     syntax:
       content: >-
-        "pin-darkblue" | "pin-blue" | "pin-red" | "pin-round-darkblue" |
-        "pin-round-blue" | "pin-round-red" | "none" | string icon
+        icon?: "pin-darkblue" | "pin-blue" | "pin-red" | "pin-round-darkblue" |
+        "pin-round-blue" | "pin-round-red" | "none" | string
       return:
         type:
           - >-
@@ -49,7 +49,7 @@ items:
     summary: The title to display for the point.
     optional: true
     syntax:
-      content: string title
+      content: 'title?: string'
       return:
         type:
           - string

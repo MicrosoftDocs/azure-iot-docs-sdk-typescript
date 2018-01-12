@@ -54,8 +54,8 @@ items:
     summary: Displays a map in the specified container.
     syntax:
       content: >-
-        new Map(container: string, options: [object Object] | [object Object] |
-        [object Object] | [object Object])
+        new Map(container: string, options: ServiceOptions | CameraOptions |
+        StyleOptions | UserInteractionOptions)
       parameters:
         - id: container
           type:
@@ -531,7 +531,7 @@ items:
 
       current values.
     syntax:
-      content: 'function setCamera(options?: [object Object] | [object Object])'
+      content: 'function setCamera(options?: CameraOptions | AnimationOptions)'
       parameters:
         - id: options
           type:

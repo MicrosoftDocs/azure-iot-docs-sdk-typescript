@@ -54,8 +54,8 @@ items:
     summary: Displays a map in the specified container.
     syntax:
       content: >-
-        new Map(container: string, options: ServiceOptions | CameraOptions |
-        StyleOptions | UserInteractionOptions)
+        new Map(container: string, options: ServiceOptions & CameraOptions &
+        StyleOptions & UserInteractionOptions)
       parameters:
         - id: container
           type:
@@ -64,8 +64,8 @@ items:
         - id: options
           type:
             - >-
-              ServiceOptions | @location-based-services-javascript.CameraOptions
-              | @location-based-services-javascript.StyleOptions |
+              ServiceOptions & @location-based-services-javascript.CameraOptions
+              & @location-based-services-javascript.StyleOptions &
               @location-based-services-javascript.UserInteractionOptions
           description: |
             Options for the initial display and interactability with the map.
@@ -324,7 +324,7 @@ items:
       return:
         type:
           - >-
-            @location-based-services-javascript.CameraOptions |
+            @location-based-services-javascript.CameraOptions &
             @location-based-services-javascript.CameraBoundsOptions
     module: atlas
   - uid: location-based-services-javascript.Map.getCanvas
@@ -531,12 +531,12 @@ items:
 
       current values.
     syntax:
-      content: 'function setCamera(options?: CameraOptions | AnimationOptions)'
+      content: 'function setCamera(options?: CameraOptions & AnimationOptions)'
       parameters:
         - id: options
           type:
             - >-
-              @location-based-services-javascript.CameraOptions |
+              @location-based-services-javascript.CameraOptions &
               @location-based-services-javascript.AnimationOptions
           description: >
             The options for setting the map's camera and for the animation of

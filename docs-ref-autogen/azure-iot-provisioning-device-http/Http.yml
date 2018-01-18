@@ -5,6 +5,7 @@ items:
     fullName: Http
     children:
       - azure-iot-provisioning-device-http.Http.cancel
+      - azure-iot-provisioning-device-http.Http.disconnect
       - azure-iot-provisioning-device-http.Http.queryOperationStatus
       - azure-iot-provisioning-device-http.Http.registrationRequest
       - azure-iot-provisioning-device-http.Http.setAuthentication
@@ -32,6 +33,21 @@ items:
     summary: private
     syntax:
       content: 'function cancel(callback: (err?: Error) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''
+    module: Global
+  - uid: azure-iot-provisioning-device-http.Http.disconnect
+    name: disconnect
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disconnect(callback: (err?: Error) => void)'
       parameters:
         - id: callback
           type:

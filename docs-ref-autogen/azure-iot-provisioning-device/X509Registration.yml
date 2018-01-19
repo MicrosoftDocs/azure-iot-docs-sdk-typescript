@@ -19,7 +19,6 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device
-    module: Global
   - uid: azure-iot-provisioning-device.X509Registration.constructor
     name: X509Registration
     children: []
@@ -49,7 +48,6 @@ items:
           type:
             - '@azure-iot-provisioning-device.X509SecurityClient'
           description: ''
-    module: Global
   - uid: azure-iot-provisioning-device.X509Registration.cancel
     name: cancel
     children: []
@@ -65,7 +63,6 @@ items:
             - '(err?: Error) => void'
           description: |
             function called when the registration has already been canceled.
-    module: Global
   - uid: azure-iot-provisioning-device.X509Registration.register
     name: register
     children: []
@@ -83,4 +80,3 @@ items:
             - '(err?: Error, result?: RegistrationResult) => void'
           description: |
             function called when registration is complete.
-    module: Global

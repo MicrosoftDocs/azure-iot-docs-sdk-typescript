@@ -24,7 +24,6 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-service
-    module: Global
   - uid: azure-iot-provisioning-service.EnrollmentGroup.attestation
     name: attestation
     fullName: attestation
@@ -40,7 +39,6 @@ items:
       return:
         type:
           - '@azure-iot-provisioning-service.AttestationMechanism'
-    module: Global
   - uid: azure-iot-provisioning-service.EnrollmentGroup.createdDateTimeUtc
     name: createdDateTimeUtc
     fullName: createdDateTimeUtc
@@ -54,7 +52,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-provisioning-service.EnrollmentGroup.enrollmentGroupId
     name: enrollmentGroupId
     fullName: enrollmentGroupId
@@ -70,7 +67,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-provisioning-service.EnrollmentGroup.etag
     name: etag
     fullName: etag
@@ -86,7 +82,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-provisioning-service.EnrollmentGroup.initialTwin
     name: initialTwin
     fullName: initialTwin
@@ -102,7 +97,6 @@ items:
       return:
         type:
           - '@azure-iot-provisioning-service.InitialTwin'
-    module: Global
   - uid: azure-iot-provisioning-service.EnrollmentGroup.iotHubHostName
     name: iotHubHostName
     fullName: iotHubHostName
@@ -118,7 +112,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-provisioning-service.EnrollmentGroup.lastUpdatedDateTimeUtc
     name: lastUpdatedDateTimeUtc
     fullName: lastUpdatedDateTimeUtc
@@ -134,7 +127,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-provisioning-service.EnrollmentGroup.provisioningStatus
     name: provisioningStatus
     fullName: provisioningStatus
@@ -150,4 +142,3 @@ items:
       return:
         type:
           - ProvisioningStatus
-    module: Global

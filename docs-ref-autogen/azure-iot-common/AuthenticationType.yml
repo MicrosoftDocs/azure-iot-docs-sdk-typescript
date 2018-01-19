@@ -18,7 +18,6 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-common
-    module: Global
   - uid: azure-iot-common.AuthenticationType.Token
     name: Token
     children: []
@@ -28,7 +27,6 @@ items:
       Token-based authentication uses shared access signature security tokens,
       generated and signed with a secret key.
     type: field
-    module: Global
   - uid: azure-iot-common.AuthenticationType.X509
     name: X509
     children: []
@@ -36,4 +34,3 @@ items:
       - typeScript
     summary: X509 Certificate based authentication.
     type: field
-    module: Global

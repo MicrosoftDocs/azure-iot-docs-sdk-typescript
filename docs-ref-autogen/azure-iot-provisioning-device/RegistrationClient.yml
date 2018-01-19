@@ -18,7 +18,6 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device
-    module: Global
   - uid: azure-iot-provisioning-device.RegistrationClient.cancel
     name: cancel
     children: []
@@ -33,7 +32,6 @@ items:
           type:
             - '(err?: Error) => void'
           description: ''
-    module: Global
   - uid: azure-iot-provisioning-device.RegistrationClient.register
     name: register
     children: []
@@ -50,4 +48,3 @@ items:
           type:
             - '(err?: Error, result?: RegistrationResult) => void'
           description: ''
-    module: Global

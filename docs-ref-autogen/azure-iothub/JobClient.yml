@@ -33,7 +33,6 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iothub
-    module: Global
   - uid: azure-iothub.JobClient.cancelJob
     name: cancelJob
     children: []
@@ -57,7 +56,6 @@ items:
                                            arguments: an Error object (can be null), a
                                            job object, and a transport-specific response
                                            object useful for logging or debugging.
-    module: Global
   - uid: azure-iothub.JobClient.createQuery
     name: createQuery
     children: []
@@ -91,7 +89,6 @@ items:
       return:
         type:
           - '@azure-iothub.Query'
-    module: Global
   - uid: azure-iothub.JobClient.getJob
     name: getJob
     children: []
@@ -115,7 +112,6 @@ items:
                                            arguments: an Error object (can be null), a
                                            job object, and a transport-specific response
                                            object useful for logging or debugging.
-    module: Global
   - uid: azure-iothub.JobClient.scheduleDeviceMethod
     name: scheduleDeviceMethod
     children: []
@@ -178,7 +174,6 @@ items:
       - type: TypeError
         description: |
           If the callback is not the last parameter
-    module: Global
   - uid: azure-iothub.JobClient.scheduleTwinUpdate
     name: scheduleTwinUpdate
     children: []
@@ -236,7 +231,6 @@ items:
       - type: TypeError
         description: |
           If the callback is not the last parameter
-    module: Global
   - uid: azure-iothub.JobClient.fromConnectionString
     name: fromConnectionString
     children: []
@@ -261,7 +255,6 @@ items:
       - type: ReferenceError
         description: |
           If the connectionString argument is falsy.
-    module: Global
   - uid: azure-iothub.JobClient.fromSharedAccessSignature
     name: fromSharedAccessSignature
     children: []
@@ -286,4 +279,3 @@ items:
       - type: ReferenceError
         description: |
           If the sharedAccessSignature argument is falsy.
-    module: Global

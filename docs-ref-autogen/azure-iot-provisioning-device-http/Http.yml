@@ -23,7 +23,6 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device-http
-    module: Global
   - uid: azure-iot-provisioning-device-http.Http.cancel
     name: cancel
     children: []
@@ -38,7 +37,6 @@ items:
           type:
             - '(err?: Error) => void'
           description: ''
-    module: Global
   - uid: azure-iot-provisioning-device-http.Http.disconnect
     name: disconnect
     children: []
@@ -53,7 +51,6 @@ items:
           type:
             - '(err?: Error) => void'
           description: ''
-    module: Global
   - uid: azure-iot-provisioning-device-http.Http.queryOperationStatus
     name: queryOperationStatus
     children: []
@@ -81,7 +78,6 @@ items:
               (err?: Error, result?: DeviceRegistrationResult, response?: any,
               pollingInterval?: number) => void
           description: ''
-    module: Global
   - uid: azure-iot-provisioning-device-http.Http.registrationRequest
     name: registrationRequest
     children: []
@@ -105,7 +101,6 @@ items:
               (err?: Error, result?: DeviceRegistrationResult, response?: any,
               pollingInterval?: number) => void
           description: ''
-    module: Global
   - uid: azure-iot-provisioning-device-http.Http.setAuthentication
     name: setAuthentication
     children: []
@@ -120,4 +115,3 @@ items:
           type:
             - X509
           description: ''
-    module: Global

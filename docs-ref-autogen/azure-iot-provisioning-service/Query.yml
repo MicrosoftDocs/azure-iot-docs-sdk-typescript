@@ -20,7 +20,6 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-service
-    module: Global
   - uid: azure-iot-provisioning-service.Query.constructor
     name: Query
     children: []
@@ -37,7 +36,6 @@ items:
           type:
             - '(continuationToken: string, done: QueryCallback) => void'
           description: ''
-    module: Global
   - uid: azure-iot-provisioning-service.Query.continuationToken
     name: continuationToken
     fullName: continuationToken
@@ -51,7 +49,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-provisioning-service.Query.hasMoreResults
     name: hasMoreResults
     fullName: hasMoreResults
@@ -65,7 +62,6 @@ items:
       return:
         type:
           - boolean
-    module: Global
   - uid: azure-iot-provisioning-service.Query.next
     name: next
     children: []
@@ -89,4 +85,3 @@ items:
             The callback that will be called with either an Error object or
                                                       the results of the query.
           optional: true
-    module: Global

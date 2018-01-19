@@ -6,7 +6,25 @@ items:
     children:
       - azure-iot-device-http.Http
       - azure-iot-device-http.HttpReceiverOptions
-      - azure-iot-device-http.Global
+      - uid: azure-iot-device-http.handleResponse
+        name: handleResponse
+        children: []
+        type: function
+        langs:
+          - typeScript
+        summary: ''
+        syntax:
+          content: >-
+            function handleResponse(done: (err?: Error, result?:
+            MessageEnqueued) => void)
+          parameters:
+            - id: done
+              type:
+                - '(err?: Error, result?: MessageEnqueued) => void'
+              description: ''
+          return:
+            type:
+              - '(err?: Error, body?: any, response?: IncomingMessage) => void'
     type: package
     langs:
       - typeScript
@@ -15,5 +33,3 @@ references:
     name: Http
   - uid: azure-iot-device-http.HttpReceiverOptions
     name: HttpReceiverOptions
-  - uid: azure-iot-device-http.Global
-    name: Global

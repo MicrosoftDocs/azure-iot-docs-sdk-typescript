@@ -20,7 +20,6 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device
-    module: Global
   - uid: azure-iot-provisioning-device.X509SecurityClient.getCertificate
     name: getCertificate
     children: []
@@ -36,7 +35,6 @@ items:
             - '(err?: Error, cert?: X509) => void'
           description: |
             called when the operation is complete
-    module: Global
   - uid: azure-iot-provisioning-device.X509SecurityClient.getRegistrationId
     name: getRegistrationId
     children: []
@@ -50,4 +48,3 @@ items:
       return:
         type:
           - string
-    module: Global

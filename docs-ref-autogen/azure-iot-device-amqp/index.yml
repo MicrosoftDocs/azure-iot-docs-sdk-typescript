@@ -6,12 +6,12 @@ items:
     children:
       - azure-iot-device-amqp.Amqp
       - azure-iot-device-amqp.AmqpWs
-      - azure-iot-device-amqp.getTranslatedError
-      - azure-iot-device-amqp.handleResult
+      - azure-iot-device-amqp.global.getTranslatedError
+      - azure-iot-device-amqp.global.handleResult
     type: package
     langs:
       - typeScript
-  - uid: azure-iot-device-amqp.getTranslatedError
+  - uid: azure-iot-device-amqp.global.getTranslatedError
     name: getTranslatedError
     children: []
     type: function
@@ -34,7 +34,7 @@ items:
       return:
         type:
           - Error
-  - uid: azure-iot-device-amqp.handleResult
+  - uid: azure-iot-device-amqp.global.handleResult
     name: handleResult
     children: []
     type: function

@@ -24,15 +24,15 @@ items:
       - azure-iothub.Registry.RegistryStatistics
       - azure-iothub.Registry.TransportConfig
       - azure-iothub.Twin
-      - azure-iothub.getTranslatedError
-      - azure-iothub.handleResult
-      - azure-iothub.parse
-      - azure-iothub.create
-      - azure-iothub.parse
+      - azure-iothub.global.getTranslatedError
+      - azure-iothub.global.handleResult
+      - azure-iothub.global.parse
+      - azure-iothub.global.create
+      - azure-iothub.global.parse
     type: package
     langs:
       - typeScript
-  - uid: azure-iothub.getTranslatedError
+  - uid: azure-iothub.global.getTranslatedError
     name: getTranslatedError
     children: []
     type: function
@@ -53,7 +53,7 @@ items:
       return:
         type:
           - Error
-  - uid: azure-iothub.handleResult
+  - uid: azure-iothub.global.handleResult
     name: handleResult
     children: []
     type: function
@@ -74,7 +74,7 @@ items:
       return:
         type:
           - Callback<any>
-  - uid: azure-iothub.parse
+  - uid: azure-iothub.global.parse
     name: parse
     children: []
     type: function
@@ -102,7 +102,7 @@ items:
       - type: azure-iot-common.ArgumentError
         description: |
           if the string is missing one of the required attributes.
-  - uid: azure-iothub.create
+  - uid: azure-iothub.global.create
     name: create
     children: []
     type: function
@@ -144,7 +144,7 @@ items:
       - type: ReferenceError
         description: |
           If one of the parameters is falsy.
-  - uid: azure-iothub.parse
+  - uid: azure-iothub.global.parse
     name: parse
     children: []
     type: function

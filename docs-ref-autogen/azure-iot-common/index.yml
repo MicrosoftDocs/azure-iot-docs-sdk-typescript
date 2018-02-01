@@ -57,19 +57,19 @@ items:
       - azure-iot-common.NoRetry
       - azure-iot-common.RetryPolicy
       - azure-iot-common.SharedAccessSignature
-      - azure-iot-common.global.anHourFromNow
-      - azure-iot-common.global.encodeUriComponentStrict
-      - azure-iot-common.global.hmacHash
-      - azure-iot-common.global.stringToSign
-      - azure-iot-common.global.devicePath
-      - azure-iot-common.global.eventPath
-      - azure-iot-common.global.feedbackPath
-      - azure-iot-common.global.messagePath
-      - azure-iot-common.global.versionQueryString
+      - azure-iot-common.anHourFromNow
+      - azure-iot-common.encodeUriComponentStrict
+      - azure-iot-common.hmacHash
+      - azure-iot-common.stringToSign
+      - azure-iot-common.devicePath
+      - azure-iot-common.eventPath
+      - azure-iot-common.feedbackPath
+      - azure-iot-common.messagePath
+      - azure-iot-common.versionQueryString
     type: package
     langs:
       - typeScript
-  - uid: azure-iot-common.global.anHourFromNow
+  - uid: azure-iot-common.anHourFromNow
     name: anHourFromNow
     children: []
     type: function
@@ -84,7 +84,7 @@ items:
       return:
         type:
           - number
-  - uid: azure-iot-common.global.encodeUriComponentStrict
+  - uid: azure-iot-common.encodeUriComponentStrict
     name: encodeUriComponentStrict
     children: []
     type: function
@@ -101,7 +101,7 @@ items:
       return:
         type:
           - string
-  - uid: azure-iot-common.global.hmacHash
+  - uid: azure-iot-common.hmacHash
     name: hmacHash
     children: []
     type: function
@@ -122,7 +122,7 @@ items:
       return:
         type:
           - string
-  - uid: azure-iot-common.global.stringToSign
+  - uid: azure-iot-common.stringToSign
     name: stringToSign
     children: []
     type: function
@@ -143,7 +143,7 @@ items:
       return:
         type:
           - string
-  - uid: azure-iot-common.global.devicePath
+  - uid: azure-iot-common.devicePath
     name: devicePath
     children: []
     type: function
@@ -160,7 +160,7 @@ items:
       return:
         type:
           - string
-  - uid: azure-iot-common.global.eventPath
+  - uid: azure-iot-common.eventPath
     name: eventPath
     children: []
     type: function
@@ -177,7 +177,7 @@ items:
       return:
         type:
           - string
-  - uid: azure-iot-common.global.feedbackPath
+  - uid: azure-iot-common.feedbackPath
     name: feedbackPath
     children: []
     type: function
@@ -198,7 +198,7 @@ items:
       return:
         type:
           - string
-  - uid: azure-iot-common.global.messagePath
+  - uid: azure-iot-common.messagePath
     name: messagePath
     children: []
     type: function
@@ -215,7 +215,7 @@ items:
       return:
         type:
           - string
-  - uid: azure-iot-common.global.versionQueryString
+  - uid: azure-iot-common.versionQueryString
     name: versionQueryString
     children: []
     type: function

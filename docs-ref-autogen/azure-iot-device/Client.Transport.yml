@@ -380,8 +380,7 @@ items:
     syntax:
       content: >-
         function sendTwinRequest(method: string, resource: string, properties:
-        [key: string]: any, body: any, done?: (err?: Error, result?: any) =>
-        void)
+        function, body: any, done?: (err?: Error, result?: any) => void)
       parameters:
         - id: method
           type:
@@ -393,7 +392,7 @@ items:
           description: ''
         - id: properties
           type:
-            - '[key: string]: any'
+            - function
           description: ''
         - id: body
           type:

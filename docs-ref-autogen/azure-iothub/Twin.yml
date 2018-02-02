@@ -125,10 +125,10 @@ items:
       Collection of key/value pairs that is available only on the service side
       and can be used in queries to find specific devices.
     syntax:
-      content: 'tags: [key: string]: string'
+      content: 'tags: function'
       return:
         type:
-          - '[key: string]: string'
+          - function
   - uid: azure-iothub.Twin.get
     name: get
     children: []

@@ -64,8 +64,9 @@ items:
         - id: options
           type:
             - >-
-              ServiceOptions & @location-based-services-javascript.CameraOptions
-              & @location-based-services-javascript.StyleOptions &
+              @location-based-services-javascript.ServiceOptions &
+              @location-based-services-javascript.CameraOptions &
+              @location-based-services-javascript.StyleOptions &
               @location-based-services-javascript.UserInteractionOptions
           description: |
             Options for the initial display and interactability with the map.
@@ -399,7 +400,7 @@ items:
       parameters: []
       return:
         type:
-          - ServiceOptions
+          - '@location-based-services-javascript.ServiceOptions'
     module: atlas
   - uid: location-based-services-javascript.Map.getStyle
     name: getStyle

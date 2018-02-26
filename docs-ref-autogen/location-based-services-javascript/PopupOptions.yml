@@ -33,7 +33,7 @@ items:
     summary: The content to display within the popup.
     optional: true
     syntax:
-      content: 'public content?: HTMLElement =  document.createElement("span")'
+      content: 'public content?: HTMLElement = document.createElement("span")'
       return:
         type:
           - HTMLElement
@@ -52,7 +52,7 @@ items:
       offset. Negative numbers can be used to offset the popup left and up.
     optional: true
     syntax:
-      content: 'public pixelOffset?: number[] =  [0, 0]'
+      content: 'public pixelOffset?: number[] = [0, 0]'
       return:
         type:
           - 'number[]'
@@ -67,7 +67,7 @@ items:
     summary: The position on the map where the popup should be anchored.
     optional: true
     syntax:
-      content: 'public position?: Position =  new Position(0, 0)'
+      content: 'public position?: Position = new Position(0, 0)'
       return:
         type:
           - '@location-based-services-javascript.Position'

@@ -19,7 +19,6 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device
-    module: Global
   - uid: azure-iot-provisioning-device.DeviceRegistrationState.assignedHub
     name: assignedHub
     fullName: assignedHub
@@ -33,7 +32,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-provisioning-device.DeviceRegistrationState.deviceId
     name: deviceId
     fullName: deviceId
@@ -47,7 +45,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-provisioning-device.DeviceRegistrationState.status
     name: status
     fullName: status
@@ -60,5 +57,4 @@ items:
       content: 'status: RegistrationStatus'
       return:
         type:
-          - RegistrationStatus
-    module: Global
+          - '@azure-iot-provisioning-device.RegistrationStatus'

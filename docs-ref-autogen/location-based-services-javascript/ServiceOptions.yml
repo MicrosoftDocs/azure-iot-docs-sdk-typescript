@@ -1,0 +1,53 @@
+### YamlMime:UniversalReference
+items:
+  - uid: location-based-services-javascript.ServiceOptions
+    name: ServiceOptions
+    fullName: ServiceOptions
+    children:
+      - location-based-services-javascript.ServiceOptions.session-id
+      - location-based-services-javascript.ServiceOptions.subscription-key
+    langs:
+      - typeScript
+    type: class
+    summary: Global properties used in all atlas service requests.
+    extends:
+      name: Options
+    source:
+      path: services/options/ServiceOptions.ts
+      startLine: 8
+      remote:
+        path: src/MapControl/JavascriptSDK/src\services/options/ServiceOptions.ts
+        repo: >-
+          https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
+        branch: production
+    package: location-based-services-javascript
+    module: Object Definitions
+  - uid: location-based-services-javascript.ServiceOptions.session-id
+    name: session-id
+    fullName: session-id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The session id to pass with requests.
+    optional: true
+    syntax:
+      content: 'public session-id?: string = UUID.generate()'
+      return:
+        type:
+          - string
+    module: Object Definitions
+  - uid: location-based-services-javascript.ServiceOptions.subscription-key
+    name: subscription-key
+    fullName: subscription-key
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The customer subscription key used to authorize requests.
+    syntax:
+      content: 'public subscription-key: string = undefined'
+      return:
+        type:
+          - string
+    module: Object Definitions

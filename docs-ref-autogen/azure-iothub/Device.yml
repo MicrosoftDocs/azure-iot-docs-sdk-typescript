@@ -4,6 +4,8 @@ items:
     name: Device
     fullName: Device
     children:
+      - azure-iothub.Device.ConnectionState
+      - azure-iothub.Device.DeviceStatus
       - azure-iothub.Device.constructor
       - azure-iothub.Device.authentication
       - azure-iothub.Device.cloudToDeviceMessageCount
@@ -43,9 +45,45 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iothub
-    module: Global
     deprecated:
       content: ''
+  - uid: azure-iothub.Device.ConnectionState
+    name: ConnectionState
+    fullName: ConnectionState
+    children: []
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+
+      "ConnectionState" is a type alias. It refers to "connected" and
+      "disconnected".
+    source:
+      path: device.ts
+      startLine: 151
+      remote:
+        path: service/src\device.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iothub
+  - uid: azure-iothub.Device.DeviceStatus
+    name: DeviceStatus
+    fullName: DeviceStatus
+    children: []
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+
+      "DeviceStatus" is a type alias. It refers to "enabled" and "disabled".
+    source:
+      path: device.ts
+      startLine: 152
+      remote:
+        path: service/src\device.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iothub
   - uid: azure-iothub.Device.constructor
     name: Device
     children: []
@@ -64,7 +102,6 @@ items:
             to properties in the object. If no argument is provided, Device
             roperties will be assigned default values.
           optional: true
-    module: Global
   - uid: azure-iothub.Device.authentication
     name: authentication
     fullName: authentication
@@ -79,7 +116,6 @@ items:
       return:
         type:
           - '@azure-iothub.Device.Authentication'
-    module: Global
   - uid: azure-iothub.Device.cloudToDeviceMessageCount
     name: cloudToDeviceMessageCount
     fullName: cloudToDeviceMessageCount
@@ -94,7 +130,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iothub.Device.connectionState
     name: connectionState
     fullName: connectionState
@@ -119,8 +154,7 @@ items:
       content: 'connectionState?: ConnectionState'
       return:
         type:
-          - ConnectionState
-    module: Global
+          - '@azure-iothub.Device.ConnectionState'
   - uid: azure-iothub.Device.connectionStateUpdatedTime
     name: connectionStateUpdatedTime
     fullName: connectionStateUpdatedTime
@@ -135,7 +169,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iothub.Device.deviceId
     name: deviceId
     fullName: deviceId
@@ -151,7 +184,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iothub.Device.etag
     name: etag
     fullName: etag
@@ -166,7 +198,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iothub.Device.generationId
     name: generationId
     fullName: generationId
@@ -183,7 +214,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iothub.Device.lastActivityTime
     name: lastActivityTime
     fullName: lastActivityTime
@@ -200,7 +230,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iothub.Device.status
     name: status
     fullName: status
@@ -216,8 +245,7 @@ items:
       content: 'status?: DeviceStatus'
       return:
         type:
-          - DeviceStatus
-    module: Global
+          - '@azure-iothub.Device.DeviceStatus'
   - uid: azure-iothub.Device.statusReason
     name: statusReason
     fullName: statusReason
@@ -232,7 +260,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iothub.Device.statusUpdatedTime
     name: statusUpdatedTime
     fullName: statusUpdatedTime
@@ -247,4 +274,3 @@ items:
       return:
         type:
           - string
-    module: Global

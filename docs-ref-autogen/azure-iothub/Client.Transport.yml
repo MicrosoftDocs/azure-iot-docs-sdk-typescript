@@ -23,7 +23,6 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iothub
-    module: Global
   - uid: azure-iothub.Client.Transport.connect
     name: connect
     children: []
@@ -36,10 +35,9 @@ items:
       parameters:
         - id: done
           type:
-            - Callback<Connected>
+            - '@azure-iothub.Client.Callback<Connected>'
           description: ''
           optional: true
-    module: Global
   - uid: azure-iothub.Client.Transport.disconnect
     name: disconnect
     children: []
@@ -52,9 +50,8 @@ items:
       parameters:
         - id: done
           type:
-            - Callback<Disconnected>
+            - '@azure-iothub.Client.Callback<Disconnected>'
           description: ''
-    module: Global
   - uid: azure-iothub.Client.Transport.getFeedbackReceiver
     name: getFeedbackReceiver
     children: []
@@ -67,9 +64,9 @@ items:
       parameters:
         - id: done
           type:
-            - Callback<@azure-iothub.Client.ServiceReceiver>
+            - >-
+              @azure-iothub.Client.Callback<@azure-iothub.Client.ServiceReceiver>
           description: ''
-    module: Global
   - uid: azure-iothub.Client.Transport.getFileNotificationReceiver
     name: getFileNotificationReceiver
     children: []
@@ -82,9 +79,9 @@ items:
       parameters:
         - id: done
           type:
-            - Callback<@azure-iothub.Client.ServiceReceiver>
+            - >-
+              @azure-iothub.Client.Callback<@azure-iothub.Client.ServiceReceiver>
           description: ''
-    module: Global
   - uid: azure-iothub.Client.Transport.send
     name: send
     children: []
@@ -107,7 +104,6 @@ items:
           description: ''
         - id: done
           type:
-            - Callback<MessageEnqueued>
+            - '@azure-iothub.Client.Callback<MessageEnqueued>'
           description: ''
           optional: true
-    module: Global

@@ -4,6 +4,7 @@ items:
     name: JobClient
     fullName: JobClient
     children:
+      - azure-iothub.JobClient.JobCallback
       - azure-iothub.JobClient.cancelJob
       - azure-iothub.JobClient.createQuery
       - azure-iothub.JobClient.getJob
@@ -33,7 +34,23 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iothub
-    module: Global
+  - uid: azure-iothub.JobClient.JobCallback
+    name: JobCallback
+    fullName: JobCallback
+    children: []
+    langs:
+      - typeScript
+    type: class
+    summary: |+
+
+    source:
+      path: job_client.ts
+      startLine: 395
+      remote:
+        path: service/src\job_client.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iothub
   - uid: azure-iothub.JobClient.cancelJob
     name: cancelJob
     children: []
@@ -50,14 +67,13 @@ items:
           description: The identifier of an existing job.
         - id: done
           type:
-            - JobCallback
+            - '@azure-iothub.JobClient.JobCallback'
           description: |
             The function to call when the operation is
                                            complete. `done` will be called with three
                                            arguments: an Error object (can be null), a
                                            job object, and a transport-specific response
                                            object useful for logging or debugging.
-    module: Global
   - uid: azure-iothub.JobClient.createQuery
     name: createQuery
     children: []
@@ -74,12 +90,12 @@ items:
       parameters:
         - id: jobType
           type:
-            - JobType
+            - '@azure-iothub.JobType'
           description: The type that should be used to filter results.
           optional: true
         - id: jobStatus
           type:
-            - JobStatus
+            - '@azure-iothub.JobStatus'
           description: The status that should be used to filter results.
           optional: true
         - id: pageSize
@@ -91,7 +107,6 @@ items:
       return:
         type:
           - '@azure-iothub.Query'
-    module: Global
   - uid: azure-iothub.JobClient.getJob
     name: getJob
     children: []
@@ -108,14 +123,13 @@ items:
           description: The identifier of an existing job.
         - id: done
           type:
-            - JobCallback
+            - '@azure-iothub.JobClient.JobCallback'
           description: |
             The function to call when the operation is
                                            complete. `done` will be called with three
                                            arguments: an Error object (can be null), a
                                            job object, and a transport-specific response
                                            object useful for logging or debugging.
-    module: Global
   - uid: azure-iothub.JobClient.scheduleDeviceMethod
     name: scheduleDeviceMethod
     children: []
@@ -160,7 +174,7 @@ items:
           optional: true
         - id: done
           type:
-            - JobCallback
+            - '@azure-iothub.JobClient.JobCallback'
           description: |
             The function to call when the operation is
                                                  complete. `done` will be called with three
@@ -178,7 +192,6 @@ items:
       - type: TypeError
         description: |
           If the callback is not the last parameter
-    module: Global
   - uid: azure-iothub.JobClient.scheduleTwinUpdate
     name: scheduleTwinUpdate
     children: []
@@ -220,7 +233,7 @@ items:
           optional: true
         - id: done
           type:
-            - JobCallback
+            - '@azure-iothub.JobClient.JobCallback'
           description: |
             The function to call when the operation is
                                                  complete. `done` will be called with three
@@ -236,7 +249,6 @@ items:
       - type: TypeError
         description: |
           If the callback is not the last parameter
-    module: Global
   - uid: azure-iothub.JobClient.fromConnectionString
     name: fromConnectionString
     children: []
@@ -261,7 +273,6 @@ items:
       - type: ReferenceError
         description: |
           If the connectionString argument is falsy.
-    module: Global
   - uid: azure-iothub.JobClient.fromSharedAccessSignature
     name: fromSharedAccessSignature
     children: []
@@ -286,4 +297,3 @@ items:
       - type: ReferenceError
         description: |
           If the sharedAccessSignature argument is falsy.
-    module: Global

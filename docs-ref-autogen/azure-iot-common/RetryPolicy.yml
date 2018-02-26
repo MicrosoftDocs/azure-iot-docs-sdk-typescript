@@ -29,7 +29,6 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-common
-    module: Global
   - uid: azure-iot-common.RetryPolicy.nextRetryTimeout
     name: nextRetryTimeout
     fullName: nextRetryTimeout
@@ -43,7 +42,6 @@ items:
       return:
         type:
           - '(retryCount: number, isThrottled: boolean) => number'
-    module: Global
   - uid: azure-iot-common.RetryPolicy.shouldRetry
     name: shouldRetry
     fullName: shouldRetry
@@ -59,4 +57,3 @@ items:
       return:
         type:
           - '(error: Error) => boolean'
-    module: Global

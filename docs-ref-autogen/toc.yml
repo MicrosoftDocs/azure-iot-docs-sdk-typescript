@@ -91,6 +91,9 @@
     - uid: azure-iot-common.PreconditionFailedError
       name: PreconditionFailedError
       items: []
+    - uid: azure-iot-common.SecurityDeviceError
+      name: SecurityDeviceError
+      items: []
     - uid: azure-iot-common.ServiceUnavailableError
       name: ServiceUnavailableError
       items: []
@@ -157,9 +160,6 @@
     - uid: azure-iot-common.SharedAccessSignature
       name: SharedAccessSignature
       items: []
-    - uid: azure-iot-common.Global
-      name: Global
-      items: []
 - uid: azure-iot-mqtt-base
   name: azure-iot-mqtt-base
   items:
@@ -199,9 +199,6 @@
     - uid: azure-iot-device.X509AuthenticationProvider
       name: X509AuthenticationProvider
       items: []
-    - uid: azure-iot-device.Global
-      name: Global
-      items: []
 - uid: azure-iot-device-amqp
   name: azure-iot-device-amqp
   items:
@@ -211,9 +208,6 @@
     - uid: azure-iot-device-amqp.AmqpWs
       name: AmqpWs
       items: []
-    - uid: azure-iot-device-amqp.Global
-      name: Global
-      items: []
 - uid: azure-iot-device-http
   name: azure-iot-device-http
   items:
@@ -222,9 +216,6 @@
       items: []
     - uid: azure-iot-device-http.HttpReceiverOptions
       name: HttpReceiverOptions
-      items: []
-    - uid: azure-iot-device-http.Global
-      name: Global
       items: []
 - uid: azure-iot-device-mqtt
   name: azure-iot-device-mqtt
@@ -259,11 +250,11 @@
     - uid: azure-iot-provisioning-device.RegistrationResult
       name: RegistrationResult
       items: []
-    - uid: azure-iot-provisioning-device.TpmRegistrationInfo
-      name: TpmRegistrationInfo
-      items: []
     - uid: azure-iot-provisioning-device.X509SecurityClient
       name: X509SecurityClient
+      items: []
+    - uid: azure-iot-provisioning-device.RegistrationStatus
+      name: RegistrationStatus
       items: []
     - uid: azure-iot-provisioning-device.X509Registration
       name: X509Registration
@@ -319,8 +310,23 @@
     - uid: azure-iot-provisioning-service.X509Certificates
       name: X509Certificates
       items: []
+    - uid: azure-iot-provisioning-service.AttestationTypes
+      name: AttestationTypes
+      items: []
+    - uid: azure-iot-provisioning-service.BulkOperationMode
+      name: BulkOperationMode
+      items: []
+    - uid: azure-iot-provisioning-service.ProvisioningStatus
+      name: ProvisioningStatus
+      items: []
+    - uid: azure-iot-provisioning-service.RegistrationStatus
+      name: RegistrationStatus
+      items: []
     - uid: azure-iot-provisioning-service.ProvisioningServiceClient
       name: ProvisioningServiceClient
+      items: []
+    - uid: azure-iot-provisioning-service.DeleteCallback
+      name: DeleteCallback
       items: []
     - uid: azure-iot-provisioning-service.Query
       name: Query
@@ -331,6 +337,9 @@
     - uid: azure-iot-provisioning-service.QuerySpecification
       name: QuerySpecification
       items: []
+    - uid: azure-iot-provisioning-service.QueryCallback
+      name: QueryCallback
+      items: []
 - uid: azure-iot-provisioning-device-amqp
   name: azure-iot-provisioning-device-amqp
   items:
@@ -339,6 +348,18 @@
       items: []
     - uid: azure-iot-provisioning-device-amqp.AmqpWs
       name: AmqpWs
+      items: []
+    - uid: azure-iot-provisioning-device-amqp.SaslTpm
+      name: SaslTpm
+      items: []
+    - uid: azure-iot-provisioning-device-amqp.GetSasToken
+      name: GetSasToken
+      items: []
+    - uid: azure-iot-provisioning-device-amqp.GetSasTokenCallback
+      name: GetSasTokenCallback
+      items: []
+    - uid: azure-iot-provisioning-device-amqp.SaslResponseFrame
+      name: SaslResponseFrame
       items: []
 - uid: azure-iot-provisioning-device-http
   name: azure-iot-provisioning-device-http
@@ -391,6 +412,12 @@
     - uid: azure-iothub.JobClient
       name: JobClient
       items: []
+    - uid: azure-iothub.JobStatus
+      name: JobStatus
+      items: []
+    - uid: azure-iothub.JobType
+      name: JobType
+      items: []
     - uid: azure-iothub.Query
       name: Query
       items: []
@@ -418,13 +445,11 @@
     - uid: azure-iothub.Twin
       name: Twin
       items: []
-    - uid: azure-iothub.Global
-      name: Global
-      items: []
 - uid: location-based-services-javascript
   name: location-based-services-javascript
   items:
-    - name: atlas.data
+    - uid: location-based-services-javascript.atlas.data
+      name: atlas.data
       items:
         - uid: location-based-services-javascript.BoundingBox
           name: BoundingBox
@@ -434,6 +459,9 @@
           items: []
         - uid: location-based-services-javascript.FeatureCollection
           name: FeatureCollection
+          items: []
+        - uid: location-based-services-javascript.Geometry
+          name: Geometry
           items: []
         - uid: location-based-services-javascript.GeometryCollection
           name: GeometryCollection
@@ -453,7 +481,8 @@
         - uid: location-based-services-javascript.Position
           name: Position
           items: []
-    - name: atlas
+    - uid: location-based-services-javascript.atlas
+      name: atlas
       items:
         - uid: location-based-services-javascript.Map
           name: Map
@@ -461,7 +490,8 @@
         - uid: location-based-services-javascript.Popup
           name: Popup
           items: []
-    - name: Object Definitions
+    - uid: location-based-services-javascript.Object Definitions
+      name: Object Definitions
       items:
         - uid: location-based-services-javascript.CircleProperties
           name: CircleProperties
@@ -516,4 +546,7 @@
           items: []
         - uid: location-based-services-javascript.UserInteractionOptions
           name: UserInteractionOptions
+          items: []
+        - uid: location-based-services-javascript.ServiceOptions
+          name: ServiceOptions
           items: []

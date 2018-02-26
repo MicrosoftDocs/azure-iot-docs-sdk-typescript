@@ -4,6 +4,7 @@ items:
     name: Message
     fullName: Message
     children:
+      - azure-iot-common.Message.BufferConvertible
       - azure-iot-common.Message.constructor
       - azure-iot-common.Message.ack
       - azure-iot-common.Message.correlationId
@@ -34,7 +35,25 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-common
-    module: Global
+  - uid: azure-iot-common.Message.BufferConvertible
+    name: BufferConvertible
+    fullName: BufferConvertible
+    children: []
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+
+      "BufferConvertible" is a type alias. It refers to Buffer, String, any[]
+      and ArrayBuffer.
+    source:
+      path: message.ts
+      startLine: 101
+      remote:
+        path: common/core/src\message.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iot-common
   - uid: azure-iot-common.Message.constructor
     name: Message
     children: []
@@ -47,13 +66,12 @@ items:
       parameters:
         - id: data
           type:
-            - BufferConvertible
+            - '@azure-iot-common.Message.BufferConvertible'
           description: >
             a Node
             [Buffer](https://nodejs.org/api/globals.html#globals_class_buffer)
                         object or anything that can be passed to the [Buffer](https://nodejs.org/api/globals.html#globals_class_buffer) constructor
                         to construct a [Buffer](https://nodejs.org/api/globals.html#globals_class_buffer) from.
-    module: Global
   - uid: azure-iot-common.Message.ack
     name: ack
     fullName: ack
@@ -67,7 +85,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-common.Message.correlationId
     name: correlationId
     fullName: correlationId
@@ -81,7 +98,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-common.Message.data
     name: data
     fullName: data
@@ -95,7 +111,6 @@ items:
       return:
         type:
           - any
-    module: Global
   - uid: azure-iot-common.Message.expiryTimeUtc
     name: expiryTimeUtc
     fullName: expiryTimeUtc
@@ -111,7 +126,6 @@ items:
       return:
         type:
           - any
-    module: Global
   - uid: azure-iot-common.Message.lockToken
     name: lockToken
     fullName: lockToken
@@ -125,7 +139,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-common.Message.messageId
     name: messageId
     fullName: messageId
@@ -142,7 +155,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-common.Message.properties
     name: properties
     fullName: properties
@@ -158,7 +170,6 @@ items:
       return:
         type:
           - '@azure-iot-common.Properties'
-    module: Global
   - uid: azure-iot-common.Message.to
     name: to
     fullName: to
@@ -172,7 +183,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-common.Message.userId
     name: userId
     fullName: userId
@@ -186,7 +196,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-common.Message.getBytes
     name: getBytes
     children: []
@@ -202,7 +211,6 @@ items:
       return:
         type:
           - Buffer
-    module: Global
   - uid: azure-iot-common.Message.getData
     name: getData
     children: []
@@ -215,5 +223,4 @@ items:
       parameters: []
       return:
         type:
-          - BufferConvertible
-    module: Global
+          - '@azure-iot-common.Message.BufferConvertible'

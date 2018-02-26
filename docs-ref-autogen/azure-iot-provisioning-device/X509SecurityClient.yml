@@ -5,7 +5,6 @@ items:
     fullName: X509SecurityClient
     children:
       - azure-iot-provisioning-device.X509SecurityClient.getCertificate
-      - azure-iot-provisioning-device.X509SecurityClient.getCertificateChain
       - azure-iot-provisioning-device.X509SecurityClient.getRegistrationId
     langs:
       - typeScript
@@ -15,13 +14,12 @@ items:
       useful if you're writing your own security client.
     source:
       path: interfaces.ts
-      startLine: 123
+      startLine: 124
       remote:
         path: provisioning/device/src\interfaces.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device
-    module: Global
   - uid: azure-iot-provisioning-device.X509SecurityClient.getCertificate
     name: getCertificate
     children: []
@@ -37,25 +35,6 @@ items:
             - '(err?: Error, cert?: X509) => void'
           description: |
             called when the operation is complete
-    module: Global
-  - uid: azure-iot-provisioning-device.X509SecurityClient.getCertificateChain
-    name: getCertificateChain
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: retrieve the X509 certificate chain
-    syntax:
-      content: >-
-        function getCertificateChain(callback: (err?: Error, cert?: string) =>
-        void)
-      parameters:
-        - id: callback
-          type:
-            - '(err?: Error, cert?: string) => void'
-          description: |
-            called when the operation is complete
-    module: Global
   - uid: azure-iot-provisioning-device.X509SecurityClient.getRegistrationId
     name: getRegistrationId
     children: []
@@ -69,4 +48,3 @@ items:
       return:
         type:
           - string
-    module: Global

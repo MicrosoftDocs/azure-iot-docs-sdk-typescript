@@ -53,7 +53,9 @@ items:
       - typeScript
     summary: Displays a map in the specified container.
     syntax:
-      content: 'new Map(container: string, options: function)'
+      content: >-
+        new Map(container: string, options: ServiceOptions & CameraOptions &
+        StyleOptions & UserInteractionOptions)
       parameters:
         - id: container
           type:
@@ -61,7 +63,11 @@ items:
           description: The id of the element where the map should be displayed.
         - id: options
           type:
-            - function
+            - >-
+              @location-based-services-javascript.ServiceOptions &
+              @location-based-services-javascript.CameraOptions &
+              @location-based-services-javascript.StyleOptions &
+              @location-based-services-javascript.UserInteractionOptions
           description: |
             Options for the initial display and interactability with the map.
     module: atlas
@@ -318,7 +324,9 @@ items:
       parameters: []
       return:
         type:
-          - function
+          - >-
+            @location-based-services-javascript.CameraOptions &
+            @location-based-services-javascript.CameraBoundsOptions
     module: atlas
   - uid: location-based-services-javascript.Map.getCanvas
     name: getCanvas
@@ -392,7 +400,7 @@ items:
       parameters: []
       return:
         type:
-          - ServiceOptions
+          - '@location-based-services-javascript.ServiceOptions'
     module: atlas
   - uid: location-based-services-javascript.Map.getStyle
     name: getStyle
@@ -524,11 +532,13 @@ items:
 
       current values.
     syntax:
-      content: 'function setCamera(options?: function)'
+      content: 'function setCamera(options?: CameraOptions & AnimationOptions)'
       parameters:
         - id: options
           type:
-            - function
+            - >-
+              @location-based-services-javascript.CameraOptions &
+              @location-based-services-javascript.AnimationOptions
           description: >
             The options for setting the map's camera and for the animation of
             any view change.

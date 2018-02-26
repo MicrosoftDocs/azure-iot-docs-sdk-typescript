@@ -39,7 +39,8 @@ items:
       parameters:
         - id: features
           type:
-            - Array<@location-based-services-javascript.Feature<Geometry>>
+            - >-
+              Array<@location-based-services-javascript.Feature<@location-based-services-javascript.Geometry>>
           description: |
             The collection of features that make up the feature collection.
     module: atlas.data
@@ -55,7 +56,8 @@ items:
       content: 'public features: Array<Feature<Geometry>>'
       return:
         type:
-          - Array<@location-based-services-javascript.Feature<Geometry>>
+          - >-
+            Array<@location-based-services-javascript.Feature<@location-based-services-javascript.Geometry>>
     module: atlas.data
   - uid: location-based-services-javascript.FeatureCollection.type
     name: type

@@ -25,7 +25,6 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-common
-    module: Global
   - uid: azure-iot-common.ConnectionString.DeviceId
     name: DeviceId
     fullName: DeviceId
@@ -42,7 +41,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-common.ConnectionString.GatewayHostName
     name: GatewayHostName
     fullName: GatewayHostName
@@ -62,7 +60,6 @@ items:
       return:
         type:
           - string
-    module: Global
     deprecated:
       content: ''
   - uid: azure-iot-common.ConnectionString.HostName
@@ -79,7 +76,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-common.ConnectionString.SharedAccessKey
     name: SharedAccessKey
     fullName: SharedAccessKey
@@ -97,7 +93,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-common.ConnectionString.SharedAccessKeyName
     name: SharedAccessKeyName
     fullName: SharedAccessKeyName
@@ -115,7 +110,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-common.ConnectionString.x509
     name: x509
     fullName: x509
@@ -132,7 +126,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-common.ConnectionString.parse
     name: parse
     children: []
@@ -158,4 +151,3 @@ items:
       return:
         type:
           - '@azure-iot-common.ConnectionString'
-    module: Global

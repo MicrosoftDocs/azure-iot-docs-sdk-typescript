@@ -6,6 +6,10 @@ items:
     children:
       - azure-iot-provisioning-device-amqp.Amqp
       - azure-iot-provisioning-device-amqp.AmqpWs
+      - azure-iot-provisioning-device-amqp.SaslTpm
+      - azure-iot-provisioning-device-amqp.GetSasToken
+      - azure-iot-provisioning-device-amqp.GetSasTokenCallback
+      - azure-iot-provisioning-device-amqp.SaslResponseFrame
     type: package
     langs:
       - typeScript
@@ -14,3 +18,11 @@ references:
     name: Amqp
   - uid: azure-iot-provisioning-device-amqp.AmqpWs
     name: AmqpWs
+  - uid: azure-iot-provisioning-device-amqp.SaslTpm
+    name: SaslTpm
+  - uid: azure-iot-provisioning-device-amqp.GetSasToken
+    name: GetSasToken
+  - uid: azure-iot-provisioning-device-amqp.GetSasTokenCallback
+    name: GetSasTokenCallback
+  - uid: azure-iot-provisioning-device-amqp.SaslResponseFrame
+    name: SaslResponseFrame

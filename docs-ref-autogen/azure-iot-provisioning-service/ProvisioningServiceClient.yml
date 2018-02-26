@@ -43,7 +43,6 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-service
-    module: Global
   - uid: azure-iot-provisioning-service.ProvisioningServiceClient.constructor
     name: ProvisioningServiceClient
     children: []
@@ -65,7 +64,6 @@ items:
             - RestApiClient
           description: ''
           optional: true
-    module: Global
   - uid: >-
       azure-iot-provisioning-service.ProvisioningServiceClient.createEnrollmentGroupDeviceRegistrationStateQuery
     name: createEnrollmentGroupDeviceRegistrationStateQuery
@@ -99,7 +97,6 @@ items:
       return:
         type:
           - '@azure-iot-provisioning-service.Query'
-    module: Global
   - uid: >-
       azure-iot-provisioning-service.ProvisioningServiceClient.createEnrollmentGroupQuery
     name: createEnrollmentGroupQuery
@@ -128,7 +125,6 @@ items:
       return:
         type:
           - '@azure-iot-provisioning-service.Query'
-    module: Global
   - uid: >-
       azure-iot-provisioning-service.ProvisioningServiceClient.createIndividualEnrollmentQuery
     name: createIndividualEnrollmentQuery
@@ -155,7 +151,6 @@ items:
       return:
         type:
           - '@azure-iot-provisioning-service.Query'
-    module: Global
   - uid: >-
       azure-iot-provisioning-service.ProvisioningServiceClient.createOrUpdateEnrollmentGroup
     name: createOrUpdateEnrollmentGroup
@@ -182,7 +177,6 @@ items:
           description: |
             Invoked upon completion of the operation.
           optional: true
-    module: Global
   - uid: >-
       azure-iot-provisioning-service.ProvisioningServiceClient.createOrUpdateIndividualEnrollment
     name: createOrUpdateIndividualEnrollment
@@ -209,7 +203,6 @@ items:
           description: |
             Invoked upon completion of the operation.
           optional: true
-    module: Global
   - uid: >-
       azure-iot-provisioning-service.ProvisioningServiceClient.deleteDeviceRegistrationState
     name: deleteDeviceRegistrationState
@@ -239,11 +232,10 @@ items:
           optional: true
         - id: deleteCallback
           type:
-            - DeleteCallback
+            - '@azure-iot-provisioning-service.DeleteCallback'
           description: |
             Invoked upon completion of the operation.
           optional: true
-    module: Global
   - uid: >-
       azure-iot-provisioning-service.ProvisioningServiceClient.deleteEnrollmentGroup
     name: deleteEnrollmentGroup
@@ -273,11 +265,10 @@ items:
           optional: true
         - id: deleteCallback
           type:
-            - DeleteCallback
+            - '@azure-iot-provisioning-service.DeleteCallback'
           description: |
             Invoked upon completion of the operation.
           optional: true
-    module: Global
   - uid: >-
       azure-iot-provisioning-service.ProvisioningServiceClient.deleteIndividualEnrollment
     name: deleteIndividualEnrollment
@@ -307,11 +298,10 @@ items:
           optional: true
         - id: deleteCallback
           type:
-            - DeleteCallback
+            - '@azure-iot-provisioning-service.DeleteCallback'
           description: |
             Invoked upon completion of the operation.
           optional: true
-    module: Global
   - uid: >-
       azure-iot-provisioning-service.ProvisioningServiceClient.getDeviceRegistrationState
     name: getDeviceRegistrationState
@@ -336,7 +326,6 @@ items:
               response?: any) => void
           description: |
             Invoked upon completion of the operation.
-    module: Global
   - uid: >-
       azure-iot-provisioning-service.ProvisioningServiceClient.getEnrollmentGroup
     name: getEnrollmentGroup
@@ -361,7 +350,6 @@ items:
               void
           description: |
             Invoked upon completion of the operation.
-    module: Global
   - uid: >-
       azure-iot-provisioning-service.ProvisioningServiceClient.getIndividualEnrollment
     name: getIndividualEnrollment
@@ -386,7 +374,6 @@ items:
               any) => void
           description: |
             Invoked upon completion of the operation.
-    module: Global
   - uid: >-
       azure-iot-provisioning-service.ProvisioningServiceClient.runBulkEnrollmentOperation
     name: runBulkEnrollmentOperation
@@ -417,7 +404,6 @@ items:
           description: |
             Invoked upon completion of the operation.
           optional: true
-    module: Global
   - uid: >-
       azure-iot-provisioning-service.ProvisioningServiceClient.fromConnectionString
     name: fromConnectionString
@@ -442,4 +428,3 @@ items:
       return:
         type:
           - '@azure-iot-provisioning-service.ProvisioningServiceClient'
-    module: Global

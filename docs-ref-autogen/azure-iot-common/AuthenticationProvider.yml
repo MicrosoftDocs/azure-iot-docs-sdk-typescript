@@ -22,7 +22,6 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-common
-    module: Global
   - uid: azure-iot-common.AuthenticationProvider.type
     name: type
     fullName: type
@@ -36,7 +35,6 @@ items:
       return:
         type:
           - '@azure-iot-common.AuthenticationType'
-    module: Global
   - uid: azure-iot-common.AuthenticationProvider.getDeviceCredentials
     name: getDeviceCredentials
     children: []
@@ -53,4 +51,3 @@ items:
           type:
             - '(err: Error, credentials?: TransportConfig) => void'
           description: ''
-    module: Global

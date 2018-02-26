@@ -27,7 +27,6 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-service
-    module: Global
   - uid: azure-iot-provisioning-service.DeviceRegistrationState.assignedHub
     name: assignedHub
     fullName: assignedHub
@@ -41,7 +40,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-provisioning-service.DeviceRegistrationState.createdDateTimeUtc
     name: createdDateTimeUtc
     fullName: createdDateTimeUtc
@@ -55,7 +53,6 @@ items:
       return:
         type:
           - Date
-    module: Global
   - uid: azure-iot-provisioning-service.DeviceRegistrationState.deviceId
     name: deviceId
     fullName: deviceId
@@ -69,7 +66,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-provisioning-service.DeviceRegistrationState.errorCode
     name: errorCode
     fullName: errorCode
@@ -83,7 +79,6 @@ items:
       return:
         type:
           - number
-    module: Global
   - uid: azure-iot-provisioning-service.DeviceRegistrationState.errorMessage
     name: errorMessage
     fullName: errorMessage
@@ -97,7 +92,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-provisioning-service.DeviceRegistrationState.etag
     name: etag
     fullName: etag
@@ -113,7 +107,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: >-
       azure-iot-provisioning-service.DeviceRegistrationState.lastUpdatedDateTimeUtc
     name: lastUpdatedDateTimeUtc
@@ -128,7 +121,6 @@ items:
       return:
         type:
           - Date
-    module: Global
   - uid: azure-iot-provisioning-service.DeviceRegistrationState.registrationId
     name: registrationId
     fullName: registrationId
@@ -144,7 +136,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-provisioning-service.DeviceRegistrationState.status
     name: status
     fullName: status
@@ -157,5 +148,4 @@ items:
       content: 'status: RegistrationStatus'
       return:
         type:
-          - RegistrationStatus
-    module: Global
+          - '@azure-iot-provisioning-service.RegistrationStatus'

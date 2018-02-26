@@ -27,7 +27,6 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-service
-    module: Global
   - uid: azure-iot-provisioning-service.IndividualEnrollment.attestation
     name: attestation
     fullName: attestation
@@ -41,7 +40,6 @@ items:
       return:
         type:
           - '@azure-iot-provisioning-service.AttestationMechanism'
-    module: Global
   - uid: azure-iot-provisioning-service.IndividualEnrollment.createdDateTimeUtc
     name: createdDateTimeUtc
     fullName: createdDateTimeUtc
@@ -55,7 +53,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-provisioning-service.IndividualEnrollment.deviceId
     name: deviceId
     fullName: deviceId
@@ -72,7 +69,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-provisioning-service.IndividualEnrollment.etag
     name: etag
     fullName: etag
@@ -88,7 +84,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-provisioning-service.IndividualEnrollment.initialTwin
     name: initialTwin
     fullName: initialTwin
@@ -104,7 +99,6 @@ items:
       return:
         type:
           - '@azure-iot-provisioning-service.InitialTwin'
-    module: Global
   - uid: azure-iot-provisioning-service.IndividualEnrollment.iotHubHostName
     name: iotHubHostName
     fullName: iotHubHostName
@@ -122,7 +116,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-provisioning-service.IndividualEnrollment.lastUpdatedDateTimeUtc
     name: lastUpdatedDateTimeUtc
     fullName: lastUpdatedDateTimeUtc
@@ -138,7 +131,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-provisioning-service.IndividualEnrollment.provisioningStatus
     name: provisioningStatus
     fullName: provisioningStatus
@@ -153,8 +145,7 @@ items:
       content: 'provisioningStatus: ProvisioningStatus'
       return:
         type:
-          - ProvisioningStatus
-    module: Global
+          - '@azure-iot-provisioning-service.ProvisioningStatus'
   - uid: azure-iot-provisioning-service.IndividualEnrollment.registrationId
     name: registrationId
     fullName: registrationId
@@ -170,7 +161,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iot-provisioning-service.IndividualEnrollment.registrationState
     name: registrationState
     fullName: registrationState
@@ -184,4 +174,3 @@ items:
       return:
         type:
           - '@azure-iot-provisioning-service.DeviceRegistrationState'
-    module: Global

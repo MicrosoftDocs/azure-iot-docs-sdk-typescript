@@ -44,7 +44,6 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iothub
-    module: Global
   - uid: azure-iothub.Twin.constructor
     name: Twin
     children: []
@@ -70,7 +69,6 @@ items:
             - '@azure-iothub.Registry'
           description: |
             The HTTP registry client used to execute REST API calls.
-    module: Global
   - uid: azure-iothub.Twin.deviceId
     name: deviceId
     fullName: deviceId
@@ -86,7 +84,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iothub.Twin.etag
     name: etag
     fullName: etag
@@ -102,7 +99,6 @@ items:
       return:
         type:
           - string
-    module: Global
   - uid: azure-iothub.Twin.properties
     name: properties
     fullName: properties
@@ -118,7 +114,6 @@ items:
       return:
         type:
           - function
-    module: Global
   - uid: azure-iothub.Twin.tags
     name: tags
     fullName: tags
@@ -130,11 +125,10 @@ items:
       Collection of key/value pairs that is available only on the service side
       and can be used in queries to find specific devices.
     syntax:
-      content: 'tags: [key: string]: string'
+      content: 'tags: function'
       return:
         type:
-          - '[key: string]: string'
-    module: Global
+          - function
   - uid: azure-iothub.Twin.get
     name: get
     children: []
@@ -156,7 +150,6 @@ items:
                                            object representing the created device
                                            identity, and a transport-specific response
                                            object useful for logging or debugging.
-    module: Global
   - uid: azure-iothub.Twin.toJSON
     name: toJSON
     children: []
@@ -170,7 +163,6 @@ items:
       return:
         type:
           - object
-    module: Global
   - uid: azure-iothub.Twin.update
     name: update
     children: []
@@ -196,4 +188,3 @@ items:
                                            object representing the created device
                                            identity, and a transport-specific response
                                            object useful for logging or debugging.
-    module: Global

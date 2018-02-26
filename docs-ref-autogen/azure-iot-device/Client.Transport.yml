@@ -214,11 +214,11 @@ items:
       - typeScript
     summary: ''
     syntax:
-      content: 'function on(type: function, func: (err: Error) => void)'
+      content: 'function on(type: "error", func: (err: Error) => void)'
       parameters:
         - id: type
           type:
-            - function
+            - '"error"'
           description: ''
         - id: func
           type:
@@ -235,11 +235,11 @@ items:
       - typeScript
     summary: ''
     syntax:
-      content: 'function on(type: function, func: (err?: Error) => void)'
+      content: 'function on(type: "disconnect", func: (err?: Error) => void)'
       parameters:
         - id: type
           type:
-            - function
+            - '"disconnect"'
           description: ''
         - id: func
           type:
@@ -256,11 +256,11 @@ items:
       - typeScript
     summary: ''
     syntax:
-      content: 'function on(type: function, func: (msg: Message) => void)'
+      content: 'function on(type: "message", func: (msg: Message) => void)'
       parameters:
         - id: type
           type:
-            - function
+            - '"message"'
           description: ''
         - id: func
           type:

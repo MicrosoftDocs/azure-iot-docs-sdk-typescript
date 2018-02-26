@@ -48,10 +48,10 @@ items:
     summary: The style of the map tiles.
     optional: true
     syntax:
-      content: 'public style?: function = "vector"'
+      content: 'public style?: "vector" = "vector"'
       return:
         type:
-          - function
+          - '"vector"'
     module: Object Definitions
   - uid: location-based-services-javascript.StyleOptions.view
     name: view

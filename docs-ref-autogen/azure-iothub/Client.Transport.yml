@@ -35,7 +35,7 @@ items:
       parameters:
         - id: done
           type:
-            - Callback<Connected>
+            - '@azure-iothub.Client.Callback<Connected>'
           description: ''
           optional: true
   - uid: azure-iothub.Client.Transport.disconnect
@@ -50,7 +50,7 @@ items:
       parameters:
         - id: done
           type:
-            - Callback<Disconnected>
+            - '@azure-iothub.Client.Callback<Disconnected>'
           description: ''
   - uid: azure-iothub.Client.Transport.getFeedbackReceiver
     name: getFeedbackReceiver
@@ -64,7 +64,8 @@ items:
       parameters:
         - id: done
           type:
-            - Callback<@azure-iothub.Client.ServiceReceiver>
+            - >-
+              @azure-iothub.Client.Callback<@azure-iothub.Client.ServiceReceiver>
           description: ''
   - uid: azure-iothub.Client.Transport.getFileNotificationReceiver
     name: getFileNotificationReceiver
@@ -78,7 +79,8 @@ items:
       parameters:
         - id: done
           type:
-            - Callback<@azure-iothub.Client.ServiceReceiver>
+            - >-
+              @azure-iothub.Client.Callback<@azure-iothub.Client.ServiceReceiver>
           description: ''
   - uid: azure-iothub.Client.Transport.send
     name: send
@@ -102,6 +104,6 @@ items:
           description: ''
         - id: done
           type:
-            - Callback<MessageEnqueued>
+            - '@azure-iothub.Client.Callback<MessageEnqueued>'
           description: ''
           optional: true

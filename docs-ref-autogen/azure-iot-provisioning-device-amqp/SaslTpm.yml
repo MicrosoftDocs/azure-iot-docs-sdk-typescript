@@ -50,7 +50,7 @@ items:
           description: ''
         - id: getSasToken
           type:
-            - GetSasToken
+            - '@azure-iot-provisioning-device-amqp.GetSasToken'
           description: ''
   - uid: azure-iot-provisioning-device-amqp.SaslTpm.name
     name: name
@@ -94,4 +94,4 @@ items:
           description: ''
       return:
         type:
-          - Promise<SaslResponseFrame>
+          - Promise<@azure-iot-provisioning-device-amqp.SaslResponseFrame>

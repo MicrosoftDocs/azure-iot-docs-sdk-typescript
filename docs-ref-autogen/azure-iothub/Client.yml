@@ -4,6 +4,8 @@ items:
     name: Client
     fullName: Client
     children:
+      - azure-iothub.Client.Callback
+      - azure-iothub.Client.TransportCtor
       - azure-iothub.Client.close
       - azure-iothub.Client.getFeedbackReceiver
       - azure-iothub.Client.getFileNotificationReceiver
@@ -43,6 +45,40 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iothub
+  - uid: azure-iothub.Client.Callback
+    name: Callback
+    fullName: Callback<T>
+    children: []
+    langs:
+      - typeScript
+    type: class
+    summary: |+
+
+    source:
+      path: client.ts
+      startLine: 373
+      remote:
+        path: service/src\client.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iothub
+  - uid: azure-iothub.Client.TransportCtor
+    name: TransportCtor
+    fullName: TransportCtor
+    children: []
+    langs:
+      - typeScript
+    type: class
+    summary: |+
+
+    source:
+      path: client.ts
+      startLine: 408
+      remote:
+        path: service/src\client.ts
+        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
+        branch: master
+    package: azure-iothub
   - uid: azure-iothub.Client.close
     name: close
     children: []
@@ -55,7 +91,7 @@ items:
       parameters:
         - id: done
           type:
-            - Callback<Disconnected>
+            - '@azure-iothub.Client.Callback<Disconnected>'
           description: |
             The function to call when the operation is
                                        complete. `done` will be passed an Error object
@@ -76,7 +112,8 @@ items:
       parameters:
         - id: done
           type:
-            - Callback<@azure-iothub.Client.ServiceReceiver>
+            - >-
+              @azure-iothub.Client.Callback<@azure-iothub.Client.ServiceReceiver>
           description: |
             The function to call when the operation is
                                          complete. `done` will be called with two
@@ -96,7 +133,8 @@ items:
       parameters:
         - id: done
           type:
-            - Callback<@azure-iothub.Client.ServiceReceiver>
+            - >-
+              @azure-iothub.Client.Callback<@azure-iothub.Client.ServiceReceiver>
           description: |
             The function to call when the operation is
                                          complete. `done` will be called with two
@@ -124,7 +162,7 @@ items:
           description: ''
         - id: done
           type:
-            - Callback<any>
+            - '@azure-iothub.Client.Callback<any>'
           description: |
             The callback to call with the result of the method execution.
           optional: true
@@ -146,7 +184,7 @@ items:
       parameters:
         - id: done
           type:
-            - Callback<Connected>
+            - '@azure-iothub.Client.Callback<Connected>'
           description: |
             The function to call when the operation is
                                        complete. `done` will be passed an Error object
@@ -179,7 +217,7 @@ items:
                                          it will be converted.
         - id: done
           type:
-            - Callback<MessageEnqueued>
+            - '@azure-iothub.Client.Callback<MessageEnqueued>'
           description: |
             The function to call when the operation is
                                          complete. `done` will be called with two
@@ -235,7 +273,7 @@ items:
                                              connect" permissions on an IoT hub.
         - id: transportCtor
           type:
-            - TransportCtor
+            - '@azure-iothub.Client.TransportCtor'
           description: ''
           optional: true
       return:
@@ -264,7 +302,7 @@ items:
                                        "service connect" permissions on an IoT hub.
         - id: transportCtor
           type:
-            - TransportCtor
+            - '@azure-iothub.Client.TransportCtor'
           description: ''
           optional: true
       return:

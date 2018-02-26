@@ -53,7 +53,8 @@ items:
       content: 'features?: Array<Feature<Geometry>>'
       return:
         type:
-          - Array<@location-based-services-javascript.Feature<Geometry>>
+          - >-
+            Array<@location-based-services-javascript.Feature<@location-based-services-javascript.Geometry>>
     module: Object Definitions
   - uid: location-based-services-javascript.MapEventData.originalEvent
     name: originalEvent

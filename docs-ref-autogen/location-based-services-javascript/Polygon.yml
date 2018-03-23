@@ -35,11 +35,11 @@ items:
       - typeScript
     summary: Constructs a Polygon.
     syntax:
-      content: 'new Polygon(coordinates: Position[], bbox?: BoundingBox)'
+      content: 'new Polygon(coordinates: Position[][], bbox?: BoundingBox)'
       parameters:
         - id: coordinates
           type:
-            - '@location-based-services-javascript.Position[]'
+            - '@location-based-services-javascript.Position[][]'
           description: The array of linear ring coordinate arrays defining the polygon.
         - id: bbox
           type:
@@ -72,10 +72,10 @@ items:
     type: property
     summary: The array of linear ring coordinate arrays defining the polygon.
     syntax:
-      content: 'public coordinates: Position[]'
+      content: 'public coordinates: Position[][]'
       return:
         type:
-          - '@location-based-services-javascript.Position[]'
+          - '@location-based-services-javascript.Position[][]'
     module: atlas.data
   - uid: location-based-services-javascript.Polygon.type
     name: type

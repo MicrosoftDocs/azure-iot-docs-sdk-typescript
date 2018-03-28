@@ -33,6 +33,17 @@
         ]
       },
       {
+        "src": "docs-ref-conceptual",
+        "files": [
+          "**.md"
+        ],
+        "exclude": [
+          "**/toc.md",
+          "mobile-engagement/**.md"
+        ],
+        "dest": "api"
+      }
+      {
         "files": [
           "toc.yml"
         ],
@@ -42,8 +53,7 @@
         "exclude": []
       }
     ],
-    "resource": [
-    ],
+    "resource": [],
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
@@ -55,11 +65,11 @@
       "author": {
         "docs-ref-autogen/**": "pierreca"
       },
-      "ms.manager":{
-        "docs-ref-autogen/**":"pierreca"
+      "ms.manager": {
+        "docs-ref-autogen/**": "pierreca"
       },
-      "ms.author":{
-        "docs-ref-autogen/**":"pierreca"
+      "ms.author": {
+        "docs-ref-autogen/**": "pierreca"
       },
       "ms.devlang": {
         "docs-ref-autogen/**": "typescript"
@@ -70,7 +80,7 @@
       "ms.topic": {
         "docs-ref-autogen/**": "reference"
       },
-      "ms.service":{
+      "ms.service": {
         "docs-ref-autogen/azure-iot-common/**": "common",
         "docs-ref-autogen/azure-iot-device-amqp/**": "amqp",
         "docs-ref-autogen/azure-iot-device-http/**": "http",

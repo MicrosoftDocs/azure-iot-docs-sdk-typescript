@@ -22,32 +22,15 @@ This tutorial shows you how to add a pin on a map.
 
 ## Understand the code
 
-Create a point feature and then add it as a pin to the map.
-
-<a id="addAPin"></a>
-
-### Add a customized pin
-
-<iframe height='400' scrolling='no' title='Add a pin to a map' src='//codepen.io/S-J-M/embed/ZrVpEa/?height=400&theme-id=dark&default-tab=js,result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; margin-top: 20px; margin-bottom: 20px'>See the Pen <a href='https://codepen.io/S-J-M/pen/ZrVpEa/'>Add a pin to a map</a> by Azure Maps (<a href='https://codepen.io/S-J-M'>@S-J-M</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe height='474' scrolling='no' title='Add a pin to a map' src='//codepen.io/azuremaps/embed/ZrVpEa/?height=474&theme-id=0&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/azuremaps/pen/ZrVpEa/'>Add a pin to a map</a> by Azure LBS (<a href='https://codepen.io/azuremaps'>@azuremaps</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-In the preceding code, the pin is constructed by creating a pin feature and then adding it to the map. Learn more about the [Map](https://docs.microsoft.com/en-us/javascript/api/location-based-services-javascript/map?view=azure-iot-typescript-latest), [Point](https://docs.microsoft.com/en-us/javascript/api/location-based-services-javascript/point?view=azure-iot-typescript-latest), and [Feature](https://docs.microsoft.com/en-us/javascript/api/location-based-services-javascript/feature?view=azure-iot-typescript-latest) classes and how to [addPins](https://docs.microsoft.com/en-us/javascript/api/location-based-services-javascript/map?view=azure-iot-typescript-latest#location_based_services_javascript_Map_addPins) using the [PinLayerOptions](https://docs.microsoft.com/en-us/javascript/api/location-based-services-javascript/pinlayeroptions?view=azure-iot-typescript-latest). 
+In the code above, the first block of code constructs a map object. You can see [create a map](./map-create.md) for instructions.
 
-## Try out the code 
-
-Take a look at the preceding sample code. You can edit the JavaScript code on the JS tab on the left and see the map view changes on the Result tab on the right. Alternatively, you can click on the "Edit/Fork on CodePen" button and edit the code on CodePen. 
-
-<a id="relatedReference"></a>
+In the second block of code, a pin is created and added to the map. A pin is a [Feature](https://docs.microsoft.com/en-us/javascript/api/location-based-services-javascript/feature?view=azure-iot-typescript-latest) of [Point](https://docs.microsoft.com/en-us/javascript/api/location-based-services-javascript/point?view=azure-iot-typescript-latest) with [PinProperties](https://docs.microsoft.com/en-us/javascript/api/location-based-services-javascript/pinproperties?view=azure-iot-typescript-latest) as its Feature property. Use new atlas.data.Feature(new atlas.data.Point()) to create a pin and define its properties. A pin layer is an array of pins. Use [addPins()](https://docs.microsoft.com/en-us/javascript/api/location-based-services-javascript/map?view=azure-iot-typescript-latest#location_based_services_javascript_Map_addPins) function of the map class to add a pin layer to the map and define the properties of the pin layer. See properties of a pin layer at [PinLayerOptions](https://docs.microsoft.com/en-us/javascript/api/location-based-services-javascript/pinlayeroptions?view=azure-iot-typescript-latest). 
 
 ## Related reference
 
-To add a pin to the map, you need to use the following classes:
+To add a pin on the map, you need to use the following class and method:
 * [Map](https://docs.microsoft.com/en-us/javascript/api/location-based-services-javascript/map?view=azure-iot-typescript-latest)
     * [addPins](https://docs.microsoft.com/en-us/javascript/api/location-based-services-javascript/map?view=azure-iot-typescript-latest#location_based_services_javascript_Map_addPins)
-* [Point](https://docs.microsoft.com/en-us/javascript/api/location-based-services-javascript/point?view=azure-iot-typescript-latest)
-* [Feature](https://docs.microsoft.com/en-us/javascript/api/location-based-services-javascript/feature?view=azure-iot-typescript-latest)
-* [PinLayerOptions](https://docs.microsoft.com/en-us/javascript/api/location-based-services-javascript/pinlayeroptions?view=azure-iot-typescript-latest)
-
-## Next steps 
-
-To use Azure Location Based Services, you must create an Azure account. Learn more about how to create an account and get your API key [here](https://docs.microsoft.com/en-us/azure/location-based-services/how-to-manage-account-keys). 

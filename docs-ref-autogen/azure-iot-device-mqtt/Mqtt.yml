@@ -15,7 +15,7 @@ items:
       This class is not meant to be used directly, instead it should just be
       passed to the [client](xref:azure-iot-device.Client) object.
     extends:
-      name: EventEmitter
+      name: '@azure-iot-device-mqtt.Mqtt'
     source:
       path: mqtt.ts
       startLine: 36

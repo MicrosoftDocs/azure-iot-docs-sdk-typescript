@@ -1,44 +1,26 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-iothub.ServiceReceiver
+  - uid: azure-iothub.Client.Client.ServiceReceiver
     name: ServiceReceiver
     fullName: ServiceReceiver
     children:
-      - azure-iothub.ServiceReceiver.constructor
-      - azure-iothub.ServiceReceiver.abandon
-      - azure-iothub.ServiceReceiver.complete
-      - azure-iothub.ServiceReceiver.detach
-      - azure-iothub.ServiceReceiver.forceDetach
-      - azure-iothub.ServiceReceiver.reject
+      - azure-iothub.Client.Client.ServiceReceiver.abandon
+      - azure-iothub.Client.Client.ServiceReceiver.complete
+      - azure-iothub.Client.Client.ServiceReceiver.reject
     langs:
       - typeScript
-    type: class
+    type: interface
     summary: ''
-    extends:
-      name: '@azure-iothub.ServiceReceiver'
     source:
-      path: service_receiver.ts
-      startLine: 11
+      path: client.ts
+      startLine: 394
       remote:
-        path: service/src\service_receiver.ts
+        path: service/src\client.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iothub
-  - uid: azure-iothub.ServiceReceiver.constructor
-    name: ServiceReceiver
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'new ServiceReceiver(receiver: ReceiverLink)'
-      parameters:
-        - id: receiver
-          type:
-            - ReceiverLink
-          description: ''
-  - uid: azure-iothub.ServiceReceiver.abandon
+    module: Client
+  - uid: azure-iothub.Client.Client.ServiceReceiver.abandon
     name: abandon
     children: []
     type: method
@@ -57,7 +39,8 @@ items:
             - '@azure-iothub.Client.Client.Callback<MessageAbandoned>'
           description: ''
           optional: true
-  - uid: azure-iothub.ServiceReceiver.complete
+    module: Client
+  - uid: azure-iothub.Client.Client.ServiceReceiver.complete
     name: complete
     children: []
     type: method
@@ -76,36 +59,8 @@ items:
             - '@azure-iothub.Client.Client.Callback<MessageCompleted>'
           description: ''
           optional: true
-  - uid: azure-iothub.ServiceReceiver.detach
-    name: detach
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'function detach(callback: (err?: Error) => void)'
-      parameters:
-        - id: callback
-          type:
-            - '(err?: Error) => void'
-          description: ''
-  - uid: azure-iothub.ServiceReceiver.forceDetach
-    name: forceDetach
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'function forceDetach(err?: Error)'
-      parameters:
-        - id: err
-          type:
-            - Error
-          description: ''
-          optional: true
-  - uid: azure-iothub.ServiceReceiver.reject
+    module: Client
+  - uid: azure-iothub.Client.Client.ServiceReceiver.reject
     name: reject
     children: []
     type: method
@@ -124,3 +79,4 @@ items:
             - '@azure-iothub.Client.Client.Callback<MessageRejected>'
           description: ''
           optional: true
+    module: Client

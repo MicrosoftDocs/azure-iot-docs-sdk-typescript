@@ -163,15 +163,6 @@
     - uid: azure-iot-common.SharedAccessSignature
       name: SharedAccessSignature
       items: []
-- uid: azure-iot-mqtt-base
-  name: azure-iot-mqtt-base
-  items:
-    - uid: azure-iot-mqtt-base.MqttBase
-      name: MqttBase
-      items: []
-    - uid: azure-iot-mqtt-base.MqttBase.TransportConfig
-      name: TransportConfig
-      items: []
 - uid: azure-iot-device
   name: azure-iot-device
   items:
@@ -367,18 +358,6 @@
     - uid: azure-iot-provisioning-device-amqp.AmqpWs
       name: AmqpWs
       items: []
-    - uid: azure-iot-provisioning-device-amqp.SaslTpm
-      name: SaslTpm
-      items: []
-    - uid: azure-iot-provisioning-device-amqp.GetSasToken
-      name: GetSasToken
-      items: []
-    - uid: azure-iot-provisioning-device-amqp.GetSasTokenCallback
-      name: GetSasTokenCallback
-      items: []
-    - uid: azure-iot-provisioning-device-amqp.SaslResponseFrame
-      name: SaslResponseFrame
-      items: []
 - uid: azure-iot-provisioning-device-http
   name: azure-iot-provisioning-device-http
   items:
@@ -406,6 +385,18 @@
     - uid: azure-iothub.Client
       name: Client
       items: []
+    - uid: azure-iothub.Client
+      name: Client
+      items:
+        - uid: azure-iothub.Client.Client.ServiceReceiver
+          name: ServiceReceiver
+          items: []
+        - uid: azure-iothub.Client.Client.Transport
+          name: Transport
+          items: []
+        - uid: azure-iothub.Client.Client.TransportConfigOptions
+          name: TransportConfigOptions
+          items: []
     - uid: azure-iothub.Client.ServiceReceiver
       name: ServiceReceiver
       items: []

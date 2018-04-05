@@ -1,20 +1,18 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-iothub.Client.Transport
+  - uid: azure-iothub.Client.Client.Transport
     name: Transport
     fullName: Transport
     children:
-      - azure-iothub.Client.Transport.connect
-      - azure-iothub.Client.Transport.disconnect
-      - azure-iothub.Client.Transport.getFeedbackReceiver
-      - azure-iothub.Client.Transport.getFileNotificationReceiver
-      - azure-iothub.Client.Transport.send
+      - azure-iothub.Client.Client.Transport.connect
+      - azure-iothub.Client.Client.Transport.disconnect
+      - azure-iothub.Client.Client.Transport.getFeedbackReceiver
+      - azure-iothub.Client.Client.Transport.getFileNotificationReceiver
+      - azure-iothub.Client.Client.Transport.send
     langs:
       - typeScript
     type: interface
     summary: ''
-    extends:
-      name: any
     source:
       path: client.ts
       startLine: 400
@@ -23,7 +21,8 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iothub
-  - uid: azure-iothub.Client.Transport.connect
+    module: Client
+  - uid: azure-iothub.Client.Client.Transport.connect
     name: connect
     children: []
     type: method
@@ -35,10 +34,11 @@ items:
       parameters:
         - id: done
           type:
-            - '@azure-iothub.Client.Callback<Connected>'
+            - '@azure-iothub.Client.Client.Callback<Connected>'
           description: ''
           optional: true
-  - uid: azure-iothub.Client.Transport.disconnect
+    module: Client
+  - uid: azure-iothub.Client.Client.Transport.disconnect
     name: disconnect
     children: []
     type: method
@@ -50,9 +50,10 @@ items:
       parameters:
         - id: done
           type:
-            - '@azure-iothub.Client.Callback<Disconnected>'
+            - '@azure-iothub.Client.Client.Callback<Disconnected>'
           description: ''
-  - uid: azure-iothub.Client.Transport.getFeedbackReceiver
+    module: Client
+  - uid: azure-iothub.Client.Client.Transport.getFeedbackReceiver
     name: getFeedbackReceiver
     children: []
     type: method
@@ -65,9 +66,10 @@ items:
         - id: done
           type:
             - >-
-              @azure-iothub.Client.Callback<@azure-iothub.Client.ServiceReceiver>
+              @azure-iothub.Client.Client.Callback<@azure-iothub.Client.ServiceReceiver>
           description: ''
-  - uid: azure-iothub.Client.Transport.getFileNotificationReceiver
+    module: Client
+  - uid: azure-iothub.Client.Client.Transport.getFileNotificationReceiver
     name: getFileNotificationReceiver
     children: []
     type: method
@@ -80,9 +82,10 @@ items:
         - id: done
           type:
             - >-
-              @azure-iothub.Client.Callback<@azure-iothub.Client.ServiceReceiver>
+              @azure-iothub.Client.Client.Callback<@azure-iothub.Client.ServiceReceiver>
           description: ''
-  - uid: azure-iothub.Client.Transport.send
+    module: Client
+  - uid: azure-iothub.Client.Client.Transport.send
     name: send
     children: []
     type: method
@@ -104,6 +107,7 @@ items:
           description: ''
         - id: done
           type:
-            - '@azure-iothub.Client.Callback<MessageEnqueued>'
+            - '@azure-iothub.Client.Client.Callback<MessageEnqueued>'
           description: ''
           optional: true
+    module: Client

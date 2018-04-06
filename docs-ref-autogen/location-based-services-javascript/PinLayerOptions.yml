@@ -1,0 +1,201 @@
+### YamlMime:UniversalReference
+items:
+  - uid: location-based-services-javascript.PinLayerOptions
+    name: PinLayerOptions
+    fullName: PinLayerOptions
+    children:
+      - location-based-services-javascript.PinLayerOptions.cluster
+      - location-based-services-javascript.PinLayerOptions.clusterIcon
+      - location-based-services-javascript.PinLayerOptions.fontColor
+      - location-based-services-javascript.PinLayerOptions.fontSize
+      - location-based-services-javascript.PinLayerOptions.icon
+      - location-based-services-javascript.PinLayerOptions.iconSize
+      - location-based-services-javascript.PinLayerOptions.name
+      - location-based-services-javascript.PinLayerOptions.textFont
+      - location-based-services-javascript.PinLayerOptions.textOffset
+      - location-based-services-javascript.PinLayerOptions.title
+    langs:
+      - typeScript
+    type: class
+    summary: The options for a pin layer.
+    extends:
+      name: '@location-based-services-javascript.LayerOptions'
+    source:
+      path: map/options/PinLayerOptions.ts
+      startLine: 8
+      remote:
+        path: src/SDKs/Js/Map/src\map/options/PinLayerOptions.ts
+        repo: >-
+          https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
+        branch: deployments/1803
+    package: location-based-services-javascript
+    module: Object Definitions
+  - uid: location-based-services-javascript.PinLayerOptions.cluster
+    name: cluster
+    fullName: cluster
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Whether the icons should cluster when they collide on the map, or stay
+      separate.
+    optional: true
+    syntax:
+      content: 'public cluster?: boolean = true'
+      return:
+        type:
+          - boolean
+    module: Object Definitions
+  - uid: location-based-services-javascript.PinLayerOptions.clusterIcon
+    name: clusterIcon
+    fullName: clusterIcon
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The icon to use to represent a cluster.
+    optional: true
+    syntax:
+      content: 'public clusterIcon?: string = undefined'
+      return:
+        type:
+          - string
+    module: Object Definitions
+  - uid: location-based-services-javascript.PinLayerOptions.fontColor
+    name: fontColor
+    fullName: fontColor
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The color of the title text.
+    optional: true
+    syntax:
+      content: 'public fontColor?: string = "#000"'
+      return:
+        type:
+          - string
+    module: Object Definitions
+  - uid: location-based-services-javascript.PinLayerOptions.fontSize
+    name: fontSize
+    fullName: fontSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The size of the title text.
+    optional: true
+    syntax:
+      content: 'public fontSize?: number = 14'
+      return:
+        type:
+          - number
+    module: Object Definitions
+  - uid: location-based-services-javascript.PinLayerOptions.icon
+    name: icon
+    fullName: icon
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: >-
+        public icon?: "pin-darkblue" | "pin-blue" | "pin-red" |
+        "pin-round-darkblue" | "pin-round-blue" | "pin-round-red" | "none" =
+        "pin-darkblue"
+      return:
+        type:
+          - >-
+            "pin-darkblue" | "pin-blue" | "pin-red" | "pin-round-darkblue" |
+            "pin-round-blue" | "pin-round-red" | "none"
+    module: Object Definitions
+  - uid: location-based-services-javascript.PinLayerOptions.iconSize
+    name: iconSize
+    fullName: iconSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The factor by which the icon should be scaled. A value of 1 is the
+      original size; a value of 2 will double the
+
+      size of the icon.
+    optional: true
+    syntax:
+      content: 'public iconSize?: number = 1'
+      return:
+        type:
+          - number
+    module: Object Definitions
+  - uid: location-based-services-javascript.PinLayerOptions.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'public name?: string = "default-pins"'
+      return:
+        type:
+          - string
+    module: Object Definitions
+  - uid: location-based-services-javascript.PinLayerOptions.textFont
+    name: textFont
+    fullName: textFont
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The font for the title of the pin.
+    optional: true
+    syntax:
+      content: >-
+        public textFont?: "SegoeUi-Bold" | "SegoeUi-Regular" |
+        "StandardFont-Bold" | "StandardFont-Regular" = "SegoeUi-Regular"
+      return:
+        type:
+          - >-
+            "SegoeUi-Bold" | "SegoeUi-Regular" | "StandardFont-Bold" |
+            "StandardFont-Regular"
+    module: Object Definitions
+  - uid: location-based-services-javascript.PinLayerOptions.textOffset
+    name: textOffset
+    fullName: textOffset
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      An array of [pixelsRight, pixelsDown] for how many pixels to the right and
+      down the title text should be
+
+      offset. Negative numbers can be used to offset the title left and up.
+    optional: true
+    syntax:
+      content: 'public textOffset?: number[] = [0, 0]'
+      return:
+        type:
+          - 'number[]'
+    module: Object Definitions
+  - uid: location-based-services-javascript.PinLayerOptions.title
+    name: title
+    fullName: title
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'public title?: string = ""'
+      return:
+        type:
+          - string
+    module: Object Definitions

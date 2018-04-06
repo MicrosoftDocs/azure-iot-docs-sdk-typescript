@@ -4,8 +4,6 @@ items:
     name: Client
     fullName: Client
     children:
-      - azure-iothub.Client.Client.Callback
-      - azure-iothub.Client.Client.TransportCtor
       - azure-iothub.Client.Callback
       - azure-iothub.Client.TransportCtor
       - azure-iothub.Client.close
@@ -38,7 +36,7 @@ items:
 
       to create an IoT Hub service Client.
     extends:
-      name: '@azure-iothub.Client'
+      name: EventEmitter
     source:
       path: client.ts
       startLine: 33
@@ -47,42 +45,6 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iothub
-  - uid: azure-iothub.Client.Client.Callback
-    name: Callback
-    fullName: Callback<T>
-    children: []
-    langs:
-      - typeScript
-    type: class
-    summary: |+
-
-    source:
-      path: client.ts
-      startLine: 373
-      remote:
-        path: service/src\client.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: master
-    package: azure-iothub
-    module: Client
-  - uid: azure-iothub.Client.Client.TransportCtor
-    name: TransportCtor
-    fullName: TransportCtor
-    children: []
-    langs:
-      - typeScript
-    type: class
-    summary: |+
-
-    source:
-      path: client.ts
-      startLine: 408
-      remote:
-        path: service/src\client.ts
-        repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
-        branch: master
-    package: azure-iothub
-    module: Client
   - uid: azure-iothub.Client.Callback
     name: Callback
     fullName: Callback<T>
@@ -311,7 +273,7 @@ items:
                                              connect" permissions on an IoT hub.
         - id: transportCtor
           type:
-            - '@azure-iothub.Client.Client.TransportCtor'
+            - '@azure-iothub.Client.TransportCtor'
           description: ''
           optional: true
       return:
@@ -340,7 +302,7 @@ items:
                                        "service connect" permissions on an IoT hub.
         - id: transportCtor
           type:
-            - '@azure-iothub.Client.Client.TransportCtor'
+            - '@azure-iothub.Client.TransportCtor'
           description: ''
           optional: true
       return:

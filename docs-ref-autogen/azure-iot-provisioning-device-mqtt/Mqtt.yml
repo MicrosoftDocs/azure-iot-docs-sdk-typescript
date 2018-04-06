@@ -9,7 +9,7 @@ items:
     type: class
     summary: Transport used to provision a device over MQTT.
     extends:
-      name: '@azure-iot-provisioning-device-mqtt.Mqtt'
+      name: EventEmitter
     source:
       path: mqtt.ts
       startLine: 28

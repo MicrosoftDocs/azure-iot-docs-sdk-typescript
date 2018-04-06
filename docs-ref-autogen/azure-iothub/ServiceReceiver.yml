@@ -15,7 +15,7 @@ items:
     type: class
     summary: ''
     extends:
-      name: '@azure-iothub.ServiceReceiver'
+      name: EventEmitter
     source:
       path: service_receiver.ts
       startLine: 11
@@ -54,7 +54,7 @@ items:
           description: ''
         - id: done
           type:
-            - '@azure-iothub.Client.Client.Callback<MessageAbandoned>'
+            - '@azure-iothub.Client.Callback<MessageAbandoned>'
           description: ''
           optional: true
   - uid: azure-iothub.ServiceReceiver.complete
@@ -73,7 +73,7 @@ items:
           description: ''
         - id: done
           type:
-            - '@azure-iothub.Client.Client.Callback<MessageCompleted>'
+            - '@azure-iothub.Client.Callback<MessageCompleted>'
           description: ''
           optional: true
   - uid: azure-iothub.ServiceReceiver.detach
@@ -121,6 +121,6 @@ items:
           description: ''
         - id: done
           type:
-            - '@azure-iothub.Client.Client.Callback<MessageRejected>'
+            - '@azure-iothub.Client.Callback<MessageRejected>'
           description: ''
           optional: true

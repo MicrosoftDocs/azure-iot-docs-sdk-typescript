@@ -35,7 +35,7 @@ items:
       name: EventEmitter
     source:
       path: client.ts
-      startLine: 729
+      startLine: 730
       remote:
         path: device/core/src\client.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
@@ -407,12 +407,12 @@ items:
     summary: ''
     syntax:
       content: >-
-        function setOptions(options: any, done: (err?: Error, result?:
-        TransportConfigured) => void)
+        function setOptions(options: DeviceClientOptions, done: (err?: Error,
+        result?: TransportConfigured) => void)
       parameters:
         - id: options
           type:
-            - any
+            - '@azure-iot-device.DeviceClientOptions'
           description: ''
         - id: done
           type:

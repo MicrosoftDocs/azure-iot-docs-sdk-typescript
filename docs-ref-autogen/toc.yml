@@ -109,6 +109,9 @@
     - uid: azure-iot-common.TwinDetachedError
       name: TwinDetachedError
       items: []
+    - uid: azure-iot-common.TwinRequestError
+      name: TwinRequestError
+      items: []
     - uid: azure-iot-common.UnauthorizedError
       name: UnauthorizedError
       items: []
@@ -160,15 +163,6 @@
     - uid: azure-iot-common.SharedAccessSignature
       name: SharedAccessSignature
       items: []
-- uid: azure-iot-mqtt-base
-  name: azure-iot-mqtt-base
-  items:
-    - uid: azure-iot-mqtt-base.MqttBase
-      name: MqttBase
-      items: []
-    - uid: azure-iot-mqtt-base.MqttBase.TransportConfig
-      name: TransportConfig
-      items: []
 - uid: azure-iot-device
   name: azure-iot-device
   items:
@@ -187,6 +181,21 @@
     - uid: azure-iot-device.DeviceMethodResponse
       name: DeviceMethodResponse
       items: []
+    - uid: azure-iot-device.AmqpTransportOptions
+      name: AmqpTransportOptions
+      items: []
+    - uid: azure-iot-device.DeviceClientOptions
+      name: DeviceClientOptions
+      items: []
+    - uid: azure-iot-device.HttpReceiverOptions
+      name: HttpReceiverOptions
+      items: []
+    - uid: azure-iot-device.HttpTransportOptions
+      name: HttpTransportOptions
+      items: []
+    - uid: azure-iot-device.MqttTransportOptions
+      name: MqttTransportOptions
+      items: []
     - uid: azure-iot-device.SharedAccessKeyAuthenticationProvider
       name: SharedAccessKeyAuthenticationProvider
       items: []
@@ -195,6 +204,9 @@
       items: []
     - uid: azure-iot-device.Twin
       name: Twin
+      items: []
+    - uid: azure-iot-device.TwinProperties
+      name: TwinProperties
       items: []
     - uid: azure-iot-device.X509AuthenticationProvider
       name: X509AuthenticationProvider
@@ -205,6 +217,9 @@
     - uid: azure-iot-device-amqp.Amqp
       name: Amqp
       items: []
+    - uid: azure-iot-device-amqp.TwinMethod
+      name: TwinMethod
+      items: []
     - uid: azure-iot-device-amqp.AmqpWs
       name: AmqpWs
       items: []
@@ -214,17 +229,23 @@
     - uid: azure-iot-device-http.Http
       name: Http
       items: []
-    - uid: azure-iot-device-http.HttpReceiverOptions
-      name: HttpReceiverOptions
-      items: []
 - uid: azure-iot-device-mqtt
   name: azure-iot-device-mqtt
   items:
     - uid: azure-iot-device-mqtt.Mqtt
       name: Mqtt
       items: []
+    - uid: azure-iot-device-mqtt.TopicSubscription
+      name: TopicSubscription
+      items: []
     - uid: azure-iot-device-mqtt.MqttWs
       name: MqttWs
+      items: []
+- uid: longhaultests
+  name: longhaultests
+  items:
+    - uid: longhaultests.D2CSender
+      name: D2CSender
       items: []
 - uid: azure-iot-provisioning-device
   name: azure-iot-provisioning-device
@@ -349,18 +370,6 @@
     - uid: azure-iot-provisioning-device-amqp.AmqpWs
       name: AmqpWs
       items: []
-    - uid: azure-iot-provisioning-device-amqp.SaslTpm
-      name: SaslTpm
-      items: []
-    - uid: azure-iot-provisioning-device-amqp.GetSasToken
-      name: GetSasToken
-      items: []
-    - uid: azure-iot-provisioning-device-amqp.GetSasTokenCallback
-      name: GetSasTokenCallback
-      items: []
-    - uid: azure-iot-provisioning-device-amqp.SaslResponseFrame
-      name: SaslResponseFrame
-      items: []
 - uid: azure-iot-provisioning-device-http
   name: azure-iot-provisioning-device-http
   items:
@@ -442,12 +451,21 @@
     - uid: azure-iothub.Registry.TransportConfig
       name: TransportConfig
       items: []
+    - uid: azure-iothub.ServiceReceiver
+      name: ServiceReceiver
+      items: []
     - uid: azure-iothub.Twin
       name: Twin
       items: []
 - uid: location-based-services-javascript
   name: location-based-services-javascript
   items:
+    - uid: location-based-services-javascript.atlas.control
+      name: atlas.control
+      items:
+        - uid: location-based-services-javascript.Control
+          name: Control
+          items: []
     - uid: location-based-services-javascript.atlas.data
       name: atlas.data
       items:
@@ -465,6 +483,12 @@
           items: []
         - uid: location-based-services-javascript.GeometryCollection
           name: GeometryCollection
+          items: []
+        - uid: location-based-services-javascript.LineString
+          name: LineString
+          items: []
+        - uid: location-based-services-javascript.MultiLineString
+          name: MultiLineString
           items: []
         - uid: location-based-services-javascript.MultiPoint
           name: MultiPoint
@@ -516,6 +540,12 @@
           items: []
         - uid: location-based-services-javascript.CircleLayerOptions
           name: CircleLayerOptions
+          items: []
+        - uid: location-based-services-javascript.ControlPosition
+          name: ControlPosition
+          items: []
+        - uid: location-based-services-javascript.ControlOptions
+          name: ControlOptions
           items: []
         - uid: location-based-services-javascript.LayerOptions
           name: LayerOptions

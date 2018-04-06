@@ -9,23 +9,24 @@ items:
       - azure-iot-device.Client.Transport.connect
       - azure-iot-device.Client.Transport.disableC2D
       - azure-iot-device.Client.Transport.disableMethods
-      - azure-iot-device.Client.Transport.disableTwin
+      - azure-iot-device.Client.Transport.disableTwinDesiredPropertiesUpdates
       - azure-iot-device.Client.Transport.disconnect
       - azure-iot-device.Client.Transport.enableC2D
       - azure-iot-device.Client.Transport.enableMethods
-      - azure-iot-device.Client.Transport.enableTwin
-      - azure-iot-device.Client.Transport.getTwinReceiver
+      - azure-iot-device.Client.Transport.enableTwinDesiredPropertiesUpdates
+      - azure-iot-device.Client.Transport.getTwin
       - azure-iot-device.Client.Transport.on
       - azure-iot-device.Client.Transport.on_1
       - azure-iot-device.Client.Transport.on_2
+      - azure-iot-device.Client.Transport.on_3
       - azure-iot-device.Client.Transport.onDeviceMethod
       - azure-iot-device.Client.Transport.reject
       - azure-iot-device.Client.Transport.sendEvent
       - azure-iot-device.Client.Transport.sendEventBatch
       - azure-iot-device.Client.Transport.sendMethodResponse
-      - azure-iot-device.Client.Transport.sendTwinRequest
       - azure-iot-device.Client.Transport.setOptions
       - azure-iot-device.Client.Transport.updateSharedAccessSignature
+      - azure-iot-device.Client.Transport.updateTwinReportedProperties
     langs:
       - typeScript
     type: interface
@@ -34,7 +35,7 @@ items:
       name: EventEmitter
     source:
       path: client.ts
-      startLine: 708
+      startLine: 730
       remote:
         path: device/core/src\client.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
@@ -122,15 +123,17 @@ items:
           type:
             - '(err?: Error) => void'
           description: ''
-  - uid: azure-iot-device.Client.Transport.disableTwin
-    name: disableTwin
+  - uid: azure-iot-device.Client.Transport.disableTwinDesiredPropertiesUpdates
+    name: disableTwinDesiredPropertiesUpdates
     children: []
     type: method
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'function disableTwin(callback: (err?: Error) => void)'
+      content: >-
+        function disableTwinDesiredPropertiesUpdates(callback: (err?: Error) =>
+        void)
       parameters:
         - id: callback
           type:
@@ -178,33 +181,35 @@ items:
           type:
             - '(err?: Error) => void'
           description: ''
-  - uid: azure-iot-device.Client.Transport.enableTwin
-    name: enableTwin
+  - uid: azure-iot-device.Client.Transport.enableTwinDesiredPropertiesUpdates
+    name: enableTwinDesiredPropertiesUpdates
     children: []
     type: method
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'function enableTwin(callback: (err?: Error) => void)'
+      content: >-
+        function enableTwinDesiredPropertiesUpdates(callback: (err?: Error) =>
+        void)
       parameters:
         - id: callback
           type:
             - '(err?: Error) => void'
           description: ''
-  - uid: azure-iot-device.Client.Transport.getTwinReceiver
-    name: getTwinReceiver
+  - uid: azure-iot-device.Client.Transport.getTwin
+    name: getTwin
     children: []
     type: method
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'function getTwinReceiver(done: (err?: Error, receiver?: any) => void)'
+      content: 'function getTwin(callback: (err?: Error, twin?: TwinProperties) => void)'
       parameters:
-        - id: done
+        - id: callback
           type:
-            - '(err?: Error, receiver?: any) => void'
+            - '(err?: Error, twin?: TwinProperties) => void'
           description: ''
   - uid: azure-iot-device.Client.Transport.on
     name: 'on'
@@ -265,6 +270,29 @@ items:
         - id: func
           type:
             - '(msg: Message) => void'
+          description: ''
+      return:
+        type:
+          - this
+  - uid: azure-iot-device.Client.Transport.on_3
+    name: 'on'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function on(type: "twinDesiredPropertiesUpdate", func: (desiredProps:
+        any) => void)
+      parameters:
+        - id: type
+          type:
+            - '"twinDesiredPropertiesUpdate"'
+          description: ''
+        - id: func
+          type:
+            - '(desiredProps: any) => void'
           description: ''
       return:
         type:
@@ -370,39 +398,6 @@ items:
             - '(err?: Error, result?: any) => void'
           description: ''
           optional: true
-  - uid: azure-iot-device.Client.Transport.sendTwinRequest
-    name: sendTwinRequest
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: >-
-        function sendTwinRequest(method: string, resource: string, properties:
-        function, body: any, done?: (err?: Error, result?: any) => void)
-      parameters:
-        - id: method
-          type:
-            - string
-          description: ''
-        - id: resource
-          type:
-            - string
-          description: ''
-        - id: properties
-          type:
-            - function
-          description: ''
-        - id: body
-          type:
-            - any
-          description: ''
-        - id: done
-          type:
-            - '(err?: Error, result?: any) => void'
-          description: ''
-          optional: true
   - uid: azure-iot-device.Client.Transport.setOptions
     name: setOptions
     children: []
@@ -412,12 +407,12 @@ items:
     summary: ''
     syntax:
       content: >-
-        function setOptions(options: any, done: (err?: Error, result?:
-        TransportConfigured) => void)
+        function setOptions(options: DeviceClientOptions, done: (err?: Error,
+        result?: TransportConfigured) => void)
       parameters:
         - id: options
           type:
-            - any
+            - '@azure-iot-device.DeviceClientOptions'
           description: ''
         - id: done
           type:
@@ -442,4 +437,24 @@ items:
         - id: done
           type:
             - '(err?: Error, result?: SharedAccessSignatureUpdated) => void'
+          description: ''
+  - uid: azure-iot-device.Client.Transport.updateTwinReportedProperties
+    name: updateTwinReportedProperties
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateTwinReportedProperties(patch: any, callback: (err?:
+        Error) => void)
+      parameters:
+        - id: patch
+          type:
+            - any
+          description: ''
+        - id: callback
+          type:
+            - '(err?: Error) => void'
           description: ''

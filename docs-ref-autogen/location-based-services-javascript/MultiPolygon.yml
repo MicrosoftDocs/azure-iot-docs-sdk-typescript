@@ -21,10 +21,10 @@ items:
       path: data/MultiPolygon.ts
       startLine: 9
       remote:
-        path: src/MapControl/JavascriptSDK/src\data/MultiPolygon.ts
+        path: src/SDKs/Js/Map/src\data/MultiPolygon.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
-        branch: production
+        branch: deployments/1803
     package: location-based-services-javascript
     module: atlas.data
   - uid: location-based-services-javascript.MultiPolygon.constructor
@@ -35,11 +35,11 @@ items:
       - typeScript
     summary: Constructs a MultiPolygon.
     syntax:
-      content: 'new MultiPolygon(coordinates: Position[], bbox?: BoundingBox)'
+      content: 'new MultiPolygon(coordinates: Position[][][], bbox?: BoundingBox)'
       parameters:
         - id: coordinates
           type:
-            - '@location-based-services-javascript.Position[]'
+            - '@location-based-services-javascript.Position[][][]'
           description: The array of polygon coordinate arrays defining the multipolygon.
         - id: bbox
           type:
@@ -72,10 +72,10 @@ items:
     type: property
     summary: The array of polygon coordinate arrays defining the multipolygon.
     syntax:
-      content: 'public coordinates: Position[]'
+      content: 'public coordinates: Position[][][]'
       return:
         type:
-          - '@location-based-services-javascript.Position[]'
+          - '@location-based-services-javascript.Position[][][]'
     module: atlas.data
   - uid: location-based-services-javascript.MultiPolygon.type
     name: type

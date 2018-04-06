@@ -4,13 +4,11 @@ items:
     name: Twin
     fullName: Twin
     children:
+      - azure-iot-device.Twin.desiredPropertiesUpdatesEnabled
       - azure-iot-device.Twin.properties
       - azure-iot-device.Twin.desiredPath
       - azure-iot-device.Twin.errorEvent
-      - azure-iot-device.Twin.postEvent
-      - azure-iot-device.Twin.responseEvent
-      - azure-iot-device.Twin.subscribedEvent
-      - azure-iot-device.Twin.timeout
+      - azure-iot-device.Twin.get
     langs:
       - typeScript
     type: class
@@ -32,16 +30,31 @@ items:
       For more information see [Understanding Device
       Twins](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-device-twins).
 
+       @fires Twin#properties.desired[.path]
+
     extends:
       name: EventEmitter
     source:
       path: twin.ts
-      startLine: 28
+      startLine: 37
       remote:
         path: device/core/src\twin.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-device
+  - uid: azure-iot-device.Twin.desiredPropertiesUpdatesEnabled
+    name: desiredPropertiesUpdatesEnabled
+    fullName: desiredPropertiesUpdatesEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'desiredPropertiesUpdatesEnabled: boolean'
+      return:
+        type:
+          - boolean
   - uid: azure-iot-device.Twin.properties
     name: properties
     fullName: properties
@@ -53,10 +66,10 @@ items:
       The desired and reported properties dictionnaries (respectively in
       `properties.desired` and `properties.reported`).
     syntax:
-      content: 'properties: any'
+      content: 'properties: TwinProperties'
       return:
         type:
-          - any
+          - '@azure-iot-device.TwinProperties'
   - uid: azure-iot-device.Twin.desiredPath
     name: desiredPath
     fullName: desiredPath
@@ -83,55 +96,19 @@ items:
       return:
         type:
           - string
-  - uid: azure-iot-device.Twin.postEvent
-    name: postEvent
-    fullName: postEvent
+  - uid: azure-iot-device.Twin.get
+    name: get
     children: []
+    type: method
     langs:
       - typeScript
-    type: property
-    summary: ''
+    summary: Gets the whole twin from the service.
     syntax:
-      content: 'static postEvent: string = "post"'
-      return:
-        type:
-          - string
-  - uid: azure-iot-device.Twin.responseEvent
-    name: responseEvent
-    fullName: responseEvent
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      content: 'static responseEvent: string = "response"'
-      return:
-        type:
-          - string
-  - uid: azure-iot-device.Twin.subscribedEvent
-    name: subscribedEvent
-    fullName: subscribedEvent
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      content: 'static subscribedEvent: string = "subscribed"'
-      return:
-        type:
-          - string
-  - uid: azure-iot-device.Twin.timeout
-    name: timeout
-    fullName: timeout
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      content: 'static timeout: number = 120000'
-      return:
-        type:
-          - number
+      content: 'function get(callback: (err: Error, twin?: Twin) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err: Error, twin?: Twin) => void'
+          description: >
+            function that shall be called back with either the twin or an error
+            if the transport fails to retrieve the twin.

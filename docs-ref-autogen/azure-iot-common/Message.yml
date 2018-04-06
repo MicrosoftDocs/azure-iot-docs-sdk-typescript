@@ -7,6 +7,8 @@ items:
       - azure-iot-common.Message.BufferConvertible
       - azure-iot-common.Message.constructor
       - azure-iot-common.Message.ack
+      - azure-iot-common.Message.contentEncoding
+      - azure-iot-common.Message.contentType
       - azure-iot-common.Message.correlationId
       - azure-iot-common.Message.data
       - azure-iot-common.Message.expiryTimeUtc
@@ -48,7 +50,7 @@ items:
       and ArrayBuffer.
     source:
       path: message.ts
-      startLine: 101
+      startLine: 113
       remote:
         path: common/core/src\message.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
@@ -85,6 +87,36 @@ items:
       return:
         type:
           - string
+  - uid: azure-iot-common.Message.contentEncoding
+    name: contentEncoding
+    fullName: contentEncoding
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Content encoding of the message body. can be 'utf-8', 'utf-16' or
+      'utf-32'.
+    syntax:
+      content: 'contentEncoding: undefined | "utf-8" | "utf-16" | "utf-32"'
+      return:
+        type:
+          - undefined | "utf-8" | "utf-16" | "utf-32"
+  - uid: azure-iot-common.Message.contentType
+    name: contentType
+    fullName: contentType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Content type property used to routes with the message body. Should be
+      'application/json'.
+    syntax:
+      content: 'contentType: undefined | "application/json"'
+      return:
+        type:
+          - undefined | "application/json"
   - uid: azure-iot-common.Message.correlationId
     name: correlationId
     fullName: correlationId

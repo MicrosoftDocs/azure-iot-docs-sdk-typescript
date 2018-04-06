@@ -6,6 +6,7 @@ items:
     children:
       - location-based-services-javascript.Map.constructor
       - location-based-services-javascript.Map.addCircles
+      - location-based-services-javascript.Map.addControl
       - location-based-services-javascript.Map.addEventListener
       - location-based-services-javascript.Map.addEventListener_1
       - location-based-services-javascript.Map.addHtml
@@ -22,6 +23,8 @@ items:
       - location-based-services-javascript.Map.getStyle
       - location-based-services-javascript.Map.getTraffic
       - location-based-services-javascript.Map.getUserInteraction
+      - location-based-services-javascript.Map.remove
+      - location-based-services-javascript.Map.removeControl
       - location-based-services-javascript.Map.removeEventListener
       - location-based-services-javascript.Map.removeEventListener_1
       - location-based-services-javascript.Map.removeHtml
@@ -37,12 +40,12 @@ items:
     summary: The control for a visual and interactive web map.
     source:
       path: map/Map.ts
-      startLine: 44
+      startLine: 46
       remote:
-        path: src/MapControl/JavascriptSDK/src\map/Map.ts
+        path: src/SDKs/Js/Map/src\map/Map.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
-        branch: production
+        branch: deployments/1803
     package: location-based-services-javascript
     module: atlas
   - uid: location-based-services-javascript.Map.constructor
@@ -100,6 +103,27 @@ items:
             - '@location-based-services-javascript.CircleLayerOptions'
           description: |
             The layer options for the circles.
+          optional: true
+    module: atlas
+  - uid: location-based-services-javascript.Map.addControl
+    name: addControl
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Add a control to the map.
+    syntax:
+      content: 'function addControl(control: Control, options?: ControlOptions)'
+      parameters:
+        - id: control
+          type:
+            - '@location-based-services-javascript.Control'
+          description: The control to add.
+        - id: options
+          type:
+            - '@location-based-services-javascript.ControlOptions'
+          description: |
+            The options for the added control.
           optional: true
     module: atlas
   - uid: location-based-services-javascript.Map.addEventListener
@@ -443,6 +467,35 @@ items:
       return:
         type:
           - '@location-based-services-javascript.UserInteractionOptions'
+    module: atlas
+  - uid: location-based-services-javascript.Map.remove
+    name: remove
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Clean up the map's resources. Map will not function correctly after
+      calling this method.
+    syntax:
+      content: function remove()
+      parameters: []
+    module: atlas
+  - uid: location-based-services-javascript.Map.removeControl
+    name: removeControl
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Remove a control from the map.
+    syntax:
+      content: 'function removeControl(control: Control)'
+      parameters:
+        - id: control
+          type:
+            - '@location-based-services-javascript.Control'
+          description: |
+            The control to remove.
     module: atlas
   - uid: location-based-services-javascript.Map.removeEventListener
     name: removeEventListener

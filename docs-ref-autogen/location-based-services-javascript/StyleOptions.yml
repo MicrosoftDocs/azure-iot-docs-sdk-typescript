@@ -17,10 +17,10 @@ items:
       path: map/options/StyleOptions.ts
       startLine: 7
       remote:
-        path: src/MapControl/JavascriptSDK/src\map/options/StyleOptions.ts
+        path: src/SDKs/Js/Map/src\map/options/StyleOptions.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
-        branch: production
+        branch: deployments/1803
     package: location-based-services-javascript
     module: Object Definitions
   - uid: location-based-services-javascript.StyleOptions.language
@@ -63,12 +63,10 @@ items:
     summary: |-
       The geopolitical view of the map.
       <p>Unified: The unified view of the world.</p>
-      <p>IN: India's view of the world.</p>
-      <p>IL: Israel's view of the world.</p>
     optional: true
     syntax:
-      content: 'public view?: "Unified" | "IN" | "IL" = "Unified"'
+      content: 'public view?: "Unified" = "Unified"'
       return:
         type:
-          - '"Unified" | "IN" | "IL"'
+          - '"Unified"'
     module: Object Definitions

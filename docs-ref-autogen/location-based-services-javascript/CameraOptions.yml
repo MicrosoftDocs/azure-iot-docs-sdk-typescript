@@ -20,10 +20,10 @@ items:
       path: map/options/CameraOptions.ts
       startLine: 8
       remote:
-        path: src/MapControl/JavascriptSDK/src\map/options/CameraOptions.ts
+        path: src/SDKs/Js/Map/src\map/options/CameraOptions.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
-        branch: production
+        branch: deployments/1803
     package: location-based-services-javascript
     module: Object Definitions
   - uid: location-based-services-javascript.CameraOptions.bearing
@@ -66,7 +66,7 @@ items:
     summary: The maximum possible zoom of the camera.
     optional: true
     syntax:
-      content: 'public maxZoom?: number = 22'
+      content: 'public maxZoom?: number = 20'
       return:
         type:
           - number

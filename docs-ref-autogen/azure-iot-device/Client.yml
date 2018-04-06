@@ -41,7 +41,7 @@ items:
       name: EventEmitter
     source:
       path: client.ts
-      startLine: 40
+      startLine: 41
       remote:
         path: device/core/src\client.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
@@ -58,7 +58,7 @@ items:
 
     source:
       path: client.ts
-      startLine: 758
+      startLine: 781
       remote:
         path: device/core/src\client.ts
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
@@ -181,7 +181,7 @@ items:
       The `getTwin` method creates a Twin object and establishes a connection
       with the Twin service.
     syntax:
-      content: 'function getTwin(done: (err?: Error, twin?: Twin) => void, twin?: Twin)'
+      content: 'function getTwin(done: (err?: Error, twin?: Twin) => void)'
       parameters:
         - id: done
           type:
@@ -189,11 +189,6 @@ items:
           description: |+
             The callback to call when the connection is established.
 
-        - id: twin
-          type:
-            - '@azure-iot-device.Twin'
-          description: ''
-          optional: true
   - uid: azure-iot-device.Client.onDeviceMethod
     name: onDeviceMethod
     children: []
@@ -341,12 +336,12 @@ items:
     summary: The `setOptions` method let the user configure the client.
     syntax:
       content: >-
-        function setOptions(options: any, done?: (err?: Error, result?:
-        TransportConfigured) => void)
+        function setOptions(options: DeviceClientOptions, done?: (err?: Error,
+        result?: TransportConfigured) => void)
       parameters:
         - id: options
           type:
-            - any
+            - '@azure-iot-device.DeviceClientOptions'
           description: The options structure
         - id: done
           type:

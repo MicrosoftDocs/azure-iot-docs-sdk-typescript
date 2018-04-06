@@ -3,9 +3,7 @@ items:
   - uid: azure-iot-provisioning-device-mqtt.Mqtt
     name: Mqtt
     fullName: Mqtt
-    children:
-      - azure-iot-provisioning-device-mqtt.Mqtt.queryOperationStatus
-      - azure-iot-provisioning-device-mqtt.Mqtt.registrationRequest
+    children: []
     langs:
       - typeScript
     type: class
@@ -20,53 +18,3 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device-mqtt
-  - uid: azure-iot-provisioning-device-mqtt.Mqtt.queryOperationStatus
-    name: queryOperationStatus
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: private
-    syntax:
-      content: >-
-        function queryOperationStatus(request: RegistrationRequest, operationId:
-        string, callback: (err?: Error, result?: DeviceRegistrationResult,
-        response?: any, pollingInterval?: number) => void)
-      parameters:
-        - id: request
-          type:
-            - RegistrationRequest
-          description: ''
-        - id: operationId
-          type:
-            - string
-          description: ''
-        - id: callback
-          type:
-            - >-
-              (err?: Error, result?: DeviceRegistrationResult, response?: any,
-              pollingInterval?: number) => void
-          description: ''
-  - uid: azure-iot-provisioning-device-mqtt.Mqtt.registrationRequest
-    name: registrationRequest
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: private
-    syntax:
-      content: >-
-        function registrationRequest(request: RegistrationRequest, callback:
-        (err?: Error, result?: DeviceRegistrationResult, response?: any,
-        pollingInterval?: number) => void)
-      parameters:
-        - id: request
-          type:
-            - RegistrationRequest
-          description: ''
-        - id: callback
-          type:
-            - >-
-              (err?: Error, result?: DeviceRegistrationResult, response?: any,
-              pollingInterval?: number) => void
-          description: ''

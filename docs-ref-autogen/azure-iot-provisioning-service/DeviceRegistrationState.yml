@@ -148,4 +148,9 @@ items:
       content: 'status: RegistrationStatus'
       return:
         type:
-          - '@azure-iot-provisioning-service.RegistrationStatus'
+          - azure-iot-provisioning-service.RegistrationStatus
+references:
+  - uid: azure-iot-provisioning-service.RegistrationStatus
+    spec.typeScript:
+      - uid: azure-iot-provisioning-service.RegistrationStatus
+        name: RegistrationStatus

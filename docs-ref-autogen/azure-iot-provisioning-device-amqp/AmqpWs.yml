@@ -9,7 +9,7 @@ items:
     type: class
     summary: Transport used to provision a device over AMQP over Websockets.
     extends:
-      name: '@azure-iot-provisioning-device-amqp.Amqp'
+      name: azure-iot-provisioning-device-amqp.Amqp
     source:
       path: amqp_ws.ts
       startLine: 13
@@ -18,3 +18,8 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device-amqp
+references:
+  - uid: azure-iot-provisioning-device-amqp.Amqp
+    spec.typeScript:
+      - uid: azure-iot-provisioning-device-amqp.Amqp
+        name: Amqp

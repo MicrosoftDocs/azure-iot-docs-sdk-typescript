@@ -35,7 +35,7 @@ items:
       parameters:
         - id: options
           type:
-            - '@location-based-services-javascript.PopupOptions'
+            - location-based-services-javascript.PopupOptions
           description: |
             The options for the popup.
           optional: true
@@ -63,7 +63,7 @@ items:
       parameters: []
       return:
         type:
-          - '@location-based-services-javascript.PopupOptions'
+          - location-based-services-javascript.PopupOptions
     module: atlas
   - uid: location-based-services-javascript.Popup.open
     name: open
@@ -77,7 +77,7 @@ items:
       parameters:
         - id: map
           type:
-            - '@location-based-services-javascript.Map'
+            - location-based-services-javascript.Map
           description: |
             The map.
     module: atlas
@@ -93,8 +93,17 @@ items:
       parameters:
         - id: options
           type:
-            - '@location-based-services-javascript.PopupOptions'
+            - location-based-services-javascript.PopupOptions
           description: |
             The options for the popup.
           optional: true
     module: atlas
+references:
+  - uid: location-based-services-javascript.PopupOptions
+    spec.typeScript:
+      - uid: location-based-services-javascript.PopupOptions
+        name: PopupOptions
+  - uid: location-based-services-javascript.Map
+    spec.typeScript:
+      - uid: location-based-services-javascript.Map
+        name: Map

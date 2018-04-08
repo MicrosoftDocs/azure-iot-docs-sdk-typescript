@@ -66,7 +66,7 @@ items:
                                                 it must contain a deviceId property.
         - id: registryClient
           type:
-            - '@azure-iothub.Registry'
+            - azure-iothub.Registry
           description: |
             The HTTP registry client used to execute REST API calls.
   - uid: azure-iothub.Twin.deviceId
@@ -141,7 +141,7 @@ items:
       parameters:
         - id: done
           type:
-            - Callback<@azure-iothub.Twin>
+            - Callback<azure-iothub.Twin>
           description: |
             The function to call when the operation is
                                            complete. `done` will be called with three
@@ -179,7 +179,7 @@ items:
           description: Object containing the new values to apply to this device twin.
         - id: done
           type:
-            - Callback<@azure-iothub.Twin>
+            - Callback<azure-iothub.Twin>
           description: |
             The function to call when the operation is
                                            complete. `done` will be called with three
@@ -188,3 +188,9 @@ items:
                                            object representing the created device
                                            identity, and a transport-specific response
                                            object useful for logging or debugging.
+references:
+  - uid: 'Callback<azure-iothub.Twin[]>'
+    spec.typeScript:
+      - uid: azure-iothub.Twin
+        name: Twin
+      - fullName: '[]>'

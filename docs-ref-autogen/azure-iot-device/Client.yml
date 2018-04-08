@@ -78,7 +78,7 @@ items:
       parameters:
         - id: transport
           type:
-            - '@azure-iot-device.Client.Transport'
+            - azure-iot-device.Client.Transport
           description: |-
             An object that implements the interface
                                                expected of a transport object, e.g.,
@@ -341,7 +341,7 @@ items:
       parameters:
         - id: options
           type:
-            - '@azure-iot-device.DeviceClientOptions'
+            - azure-iot-device.DeviceClientOptions
           description: The options structure
         - id: done
           type:
@@ -487,7 +487,7 @@ items:
             Transport protocol used to connect to IoT hub.
       return:
         type:
-          - '@azure-iot-device.Client'
+          - azure-iot-device.Client
   - uid: azure-iot-device.Client.fromConnectionString
     name: fromConnectionString
     children: []
@@ -514,7 +514,7 @@ items:
           description: ''
       return:
         type:
-          - '@azure-iot-device.Client'
+          - azure-iot-device.Client
     exceptions:
       - type: ReferenceError
         description: |
@@ -545,8 +545,25 @@ items:
           description: ''
       return:
         type:
-          - '@azure-iot-device.Client'
+          - azure-iot-device.Client
     exceptions:
       - type: ReferenceError
         description: |
           If the connStr parameter is falsy.
+references:
+  - uid: azure-iot-device.DeviceMethodResponse
+    spec.typeScript:
+      - uid: azure-iot-device.DeviceMethodResponse
+        name: DeviceMethodResponse
+  - uid: azure-iot-device.DeviceClientOptions
+    spec.typeScript:
+      - uid: azure-iot-device.DeviceClientOptions
+        name: DeviceClientOptions
+  - uid: azure-iot-device.Client.Transport
+    spec.typeScript:
+      - uid: azure-iot-device.Client.Transport
+        name: Transport
+  - uid: azure-iot-device.Client
+    spec.typeScript:
+      - uid: azure-iot-device.Client
+        name: Client

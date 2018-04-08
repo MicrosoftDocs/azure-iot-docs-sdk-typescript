@@ -32,7 +32,7 @@ items:
       parameters:
         - id: policy
           type:
-            - '@azure-iot-common.RetryPolicy'
+            - azure-iot-common.RetryPolicy
           description: >-
             The retry policy to be used for this operation, which determines
             what error is "retryable" or not and how fast to retry.
@@ -69,3 +69,4 @@ items:
           description: >
             The callback to call with the final error or result, after retries
             if necessary.
+references: []

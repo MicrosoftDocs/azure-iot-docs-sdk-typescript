@@ -32,7 +32,7 @@ items:
       content: 'primary: X509CertificateWithInfo'
       return:
         type:
-          - '@azure-iot-provisioning-service.X509CertificateWithInfo'
+          - azure-iot-provisioning-service.X509CertificateWithInfo
   - uid: azure-iot-provisioning-service.X509Certificates.secondary
     name: secondary
     fullName: secondary
@@ -48,4 +48,9 @@ items:
       content: 'secondary: X509CertificateWithInfo'
       return:
         type:
-          - '@azure-iot-provisioning-service.X509CertificateWithInfo'
+          - azure-iot-provisioning-service.X509CertificateWithInfo
+references:
+  - uid: azure-iot-provisioning-service.X509CertificateWithInfo
+    spec.typeScript:
+      - uid: azure-iot-provisioning-service.X509CertificateWithInfo
+        name: X509CertificateWithInfo

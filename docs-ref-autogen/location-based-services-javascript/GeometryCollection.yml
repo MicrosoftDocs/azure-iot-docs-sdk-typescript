@@ -39,7 +39,7 @@ items:
       parameters:
         - id: geometries
           type:
-            - '@location-based-services-javascript.Geometry[]'
+            - 'location-based-services-javascript.Geometry[]'
           description: |
             The collection of geometries that make up the geometry collection.
     module: atlas.data
@@ -55,7 +55,7 @@ items:
       content: 'public geometries: Geometry[]'
       return:
         type:
-          - '@location-based-services-javascript.Geometry[]'
+          - 'location-based-services-javascript.Geometry[]'
     module: atlas.data
   - uid: location-based-services-javascript.GeometryCollection.type
     name: type
@@ -87,3 +87,9 @@ items:
         type:
           - string
     module: atlas.data
+references:
+  - uid: 'location-based-services-javascript.Geometry[]'
+    spec.typeScript:
+      - uid: location-based-services-javascript.Geometry
+        name: Geometry
+      - fullName: '[]'

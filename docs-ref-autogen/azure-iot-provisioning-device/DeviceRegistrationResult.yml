@@ -47,7 +47,7 @@ items:
       content: 'registrationState?: DeviceRegistrationState'
       return:
         type:
-          - '@azure-iot-provisioning-device.DeviceRegistrationState'
+          - azure-iot-provisioning-device.DeviceRegistrationState
   - uid: azure-iot-provisioning-device.DeviceRegistrationResult.status
     name: status
     fullName: status
@@ -60,4 +60,13 @@ items:
       content: 'status: RegistrationStatus'
       return:
         type:
-          - '@azure-iot-provisioning-device.RegistrationStatus'
+          - azure-iot-provisioning-device.RegistrationStatus
+references:
+  - uid: azure-iot-provisioning-device.DeviceRegistrationState
+    spec.typeScript:
+      - uid: azure-iot-provisioning-device.DeviceRegistrationState
+        name: DeviceRegistrationState
+  - uid: azure-iot-provisioning-device.RegistrationStatus
+    spec.typeScript:
+      - uid: azure-iot-provisioning-device.RegistrationStatus
+        name: RegistrationStatus

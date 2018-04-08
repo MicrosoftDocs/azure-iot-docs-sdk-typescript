@@ -34,7 +34,7 @@ items:
       parameters:
         - id: map
           type:
-            - '@location-based-services-javascript.Map'
+            - location-based-services-javascript.Map
           description: The map that the control will be added to.
       return:
         type:
@@ -55,3 +55,8 @@ items:
       content: function onRemove()
       parameters: []
     module: atlas.control
+references:
+  - uid: location-based-services-javascript.Map
+    spec.typeScript:
+      - uid: location-based-services-javascript.Map
+        name: Map

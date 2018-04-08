@@ -35,7 +35,7 @@ items:
       content: 'public bounds?: BoundingBox = [-180, -89, 180, 90]'
       return:
         type:
-          - '@location-based-services-javascript.BoundingBox'
+          - location-based-services-javascript.BoundingBox
     module: Object Definitions
   - uid: location-based-services-javascript.CameraBoundsOptions.padding
     name: padding
@@ -56,3 +56,8 @@ items:
         type:
           - number | "undefined"
     module: Object Definitions
+references:
+  - uid: location-based-services-javascript.BoundingBox
+    spec.typeScript:
+      - uid: location-based-services-javascript.BoundingBox
+        name: BoundingBox

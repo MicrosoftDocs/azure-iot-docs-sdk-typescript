@@ -95,8 +95,33 @@ items:
           description: Continuation Token used for paging through results (optional)
         - id: done
           type:
-            - 'Callback<@azure-iothub.Twin[]>'
+            - 'Callback<azure-iothub.Twin[]>'
           description: |
             The callback that will be called with either an Error object or
                                                       the results of the query.
           optional: true
+references:
+  - uid: azure-iothub.JobClient.JobCallback
+    spec.typeScript:
+      - uid: azure-iothub.JobClient.JobCallback
+        name: JobCallback
+  - uid: azure-iothub.JobType
+    spec.typeScript:
+      - uid: azure-iothub.JobType
+        name: JobType
+  - uid: azure-iothub.JobStatus
+    spec.typeScript:
+      - uid: azure-iothub.JobStatus
+        name: JobStatus
+  - uid: azure-iothub.Query
+    spec.typeScript:
+      - uid: azure-iothub.Query
+        name: Query
+  - uid: azure-iothub.DeviceMethodParams
+    spec.typeScript:
+      - uid: azure-iothub.DeviceMethodParams
+        name: DeviceMethodParams
+  - uid: azure-iothub.JobClient
+    spec.typeScript:
+      - uid: azure-iothub.JobClient
+        name: JobClient

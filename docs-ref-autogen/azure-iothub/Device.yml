@@ -115,7 +115,7 @@ items:
       content: 'authentication?: Authentication'
       return:
         type:
-          - '@azure-iothub.Device.Authentication'
+          - azure-iothub.Device.Authentication
   - uid: azure-iothub.Device.cloudToDeviceMessageCount
     name: cloudToDeviceMessageCount
     fullName: cloudToDeviceMessageCount
@@ -154,7 +154,7 @@ items:
       content: 'connectionState?: ConnectionState'
       return:
         type:
-          - '@azure-iothub.Device.ConnectionState'
+          - azure-iothub.Device.ConnectionState
   - uid: azure-iothub.Device.connectionStateUpdatedTime
     name: connectionStateUpdatedTime
     fullName: connectionStateUpdatedTime
@@ -245,7 +245,7 @@ items:
       content: 'status?: DeviceStatus'
       return:
         type:
-          - '@azure-iothub.Device.DeviceStatus'
+          - azure-iothub.Device.DeviceStatus
   - uid: azure-iothub.Device.statusReason
     name: statusReason
     fullName: statusReason
@@ -274,3 +274,8 @@ items:
       return:
         type:
           - string
+references:
+  - uid: azure-iothub.Amqp
+    spec.typeScript:
+      - uid: azure-iothub.Amqp
+        name: Amqp

@@ -60,4 +60,9 @@ items:
       content: 'x509Thumbprint?: X509Thumbprints'
       return:
         type:
-          - '@azure-iothub.Device.X509Thumbprints'
+          - azure-iothub.Device.X509Thumbprints
+references:
+  - uid: azure-iothub.Amqp
+    spec.typeScript:
+      - uid: azure-iothub.Amqp
+        name: Amqp

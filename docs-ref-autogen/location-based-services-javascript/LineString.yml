@@ -39,11 +39,11 @@ items:
       parameters:
         - id: coordinates
           type:
-            - '@location-based-services-javascript.Position[]'
+            - 'location-based-services-javascript.Position[]'
           description: The ordered list of positions defining the linestring.
         - id: bbox
           type:
-            - '@location-based-services-javascript.BoundingBox'
+            - location-based-services-javascript.BoundingBox
           description: |
             The bounding box of the linestring.
           optional: true
@@ -61,7 +61,7 @@ items:
       content: 'public bbox?: BoundingBox'
       return:
         type:
-          - '@location-based-services-javascript.BoundingBox'
+          - location-based-services-javascript.BoundingBox
     module: atlas.data
   - uid: location-based-services-javascript.LineString.coordinates
     name: coordinates
@@ -75,7 +75,7 @@ items:
       content: 'public coordinates: Position[]'
       return:
         type:
-          - '@location-based-services-javascript.Position[]'
+          - 'location-based-services-javascript.Position[]'
     module: atlas.data
   - uid: location-based-services-javascript.LineString.type
     name: type
@@ -107,3 +107,13 @@ items:
         type:
           - string
     module: atlas.data
+references:
+  - uid: 'location-based-services-javascript.Position[]'
+    spec.typeScript:
+      - uid: location-based-services-javascript.Position
+        name: Position
+      - fullName: '[]'
+  - uid: location-based-services-javascript.BoundingBox
+    spec.typeScript:
+      - uid: location-based-services-javascript.BoundingBox
+        name: BoundingBox

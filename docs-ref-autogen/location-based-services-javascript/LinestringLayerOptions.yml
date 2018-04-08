@@ -14,7 +14,7 @@ items:
     type: class
     summary: The options for a linestring layer.
     extends:
-      name: '@location-based-services-javascript.LayerOptions'
+      name: location-based-services-javascript.LayerOptions
     source:
       path: map/options/LinestringLayerOptions.ts
       startLine: 8
@@ -124,3 +124,8 @@ items:
         type:
           - number
     module: Object Definitions
+references:
+  - uid: location-based-services-javascript.LayerOptions
+    spec.typeScript:
+      - uid: location-based-services-javascript.LayerOptions
+        name: LayerOptions

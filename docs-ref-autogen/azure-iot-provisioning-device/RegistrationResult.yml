@@ -9,7 +9,7 @@ items:
     type: interface
     summary: Device configuration returned when registration is complete
     extends:
-      name: '@azure-iot-provisioning-device.DeviceRegistrationState'
+      name: azure-iot-provisioning-device.DeviceRegistrationState
     source:
       path: interfaces.ts
       startLine: 99
@@ -18,3 +18,8 @@ items:
         repo: 'https://github.com/Azure/azure-iot-sdk-node.git'
         branch: master
     package: azure-iot-provisioning-device
+references:
+  - uid: azure-iot-provisioning-device.DeviceRegistrationState
+    spec.typeScript:
+      - uid: azure-iot-provisioning-device.DeviceRegistrationState
+        name: DeviceRegistrationState

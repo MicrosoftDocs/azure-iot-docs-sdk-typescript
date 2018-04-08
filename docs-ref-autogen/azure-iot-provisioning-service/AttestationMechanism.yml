@@ -34,7 +34,7 @@ items:
       content: 'tpm?: TpmAttestation'
       return:
         type:
-          - '@azure-iot-provisioning-service.TpmAttestation'
+          - azure-iot-provisioning-service.TpmAttestation
   - uid: azure-iot-provisioning-service.AttestationMechanism.type
     name: type
     fullName: type
@@ -49,7 +49,7 @@ items:
       content: 'type: AttestationTypes'
       return:
         type:
-          - '@azure-iot-provisioning-service.AttestationTypes'
+          - azure-iot-provisioning-service.AttestationTypes
   - uid: azure-iot-provisioning-service.AttestationMechanism.x509
     name: x509
     fullName: x509
@@ -65,4 +65,17 @@ items:
       content: 'x509?: X509Attestation'
       return:
         type:
-          - '@azure-iot-provisioning-service.X509Attestation'
+          - azure-iot-provisioning-service.X509Attestation
+references:
+  - uid: azure-iot-provisioning-service.TpmAttestation
+    spec.typeScript:
+      - uid: azure-iot-provisioning-service.TpmAttestation
+        name: TpmAttestation
+  - uid: azure-iot-provisioning-service.AttestationTypes
+    spec.typeScript:
+      - uid: azure-iot-provisioning-service.AttestationTypes
+        name: AttestationTypes
+  - uid: azure-iot-provisioning-service.X509Attestation
+    spec.typeScript:
+      - uid: azure-iot-provisioning-service.X509Attestation
+        name: X509Attestation

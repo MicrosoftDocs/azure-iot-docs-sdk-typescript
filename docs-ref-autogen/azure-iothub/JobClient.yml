@@ -67,7 +67,7 @@ items:
           description: The identifier of an existing job.
         - id: done
           type:
-            - '@azure-iothub.JobClient.JobCallback'
+            - azure-iothub.JobClient.JobCallback
           description: |
             The function to call when the operation is
                                            complete. `done` will be called with three
@@ -90,12 +90,12 @@ items:
       parameters:
         - id: jobType
           type:
-            - '@azure-iothub.JobType'
+            - azure-iothub.JobType
           description: The type that should be used to filter results.
           optional: true
         - id: jobStatus
           type:
-            - '@azure-iothub.JobStatus'
+            - azure-iothub.JobStatus
           description: The status that should be used to filter results.
           optional: true
         - id: pageSize
@@ -106,7 +106,7 @@ items:
           optional: true
       return:
         type:
-          - '@azure-iothub.Query'
+          - azure-iothub.Query
   - uid: azure-iothub.JobClient.getJob
     name: getJob
     children: []
@@ -123,7 +123,7 @@ items:
           description: The identifier of an existing job.
         - id: done
           type:
-            - '@azure-iothub.JobClient.JobCallback'
+            - azure-iothub.JobClient.JobCallback
           description: |
             The function to call when the operation is
                                            complete. `done` will be called with three
@@ -155,7 +155,7 @@ items:
                                                  on which this job should be run.
         - id: methodParams
           type:
-            - '@azure-iothub.DeviceMethodParams'
+            - azure-iothub.DeviceMethodParams
           description: >-
             An object describing the method and shall have the following
             properties:
@@ -174,7 +174,7 @@ items:
           optional: true
         - id: done
           type:
-            - '@azure-iothub.JobClient.JobCallback'
+            - azure-iothub.JobClient.JobCallback
           description: |
             The function to call when the operation is
                                                  complete. `done` will be called with three
@@ -233,7 +233,7 @@ items:
           optional: true
         - id: done
           type:
-            - '@azure-iothub.JobClient.JobCallback'
+            - azure-iothub.JobClient.JobCallback
           description: |
             The function to call when the operation is
                                                  complete. `done` will be called with three
@@ -268,7 +268,7 @@ items:
                                                               permissions.
       return:
         type:
-          - '@azure-iothub.JobClient'
+          - azure-iothub.JobClient
     exceptions:
       - type: ReferenceError
         description: |
@@ -292,8 +292,9 @@ items:
                                                          permissions.
       return:
         type:
-          - '@azure-iothub.JobClient'
+          - azure-iothub.JobClient
     exceptions:
       - type: ReferenceError
         description: |
           If the sharedAccessSignature argument is falsy.
+references: []

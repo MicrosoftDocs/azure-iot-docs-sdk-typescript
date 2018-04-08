@@ -33,7 +33,7 @@ items:
       content: 'caReferences: X509CAReferences'
       return:
         type:
-          - '@azure-iot-provisioning-service.X509CAReferences'
+          - azure-iot-provisioning-service.X509CAReferences
   - uid: azure-iot-provisioning-service.X509Attestation.clientCertificates
     name: clientCertificates
     fullName: clientCertificates
@@ -48,7 +48,7 @@ items:
       content: 'clientCertificates: X509Certificates'
       return:
         type:
-          - '@azure-iot-provisioning-service.X509Certificates'
+          - azure-iot-provisioning-service.X509Certificates
   - uid: azure-iot-provisioning-service.X509Attestation.signingCertificates
     name: signingCertificates
     fullName: signingCertificates
@@ -65,4 +65,13 @@ items:
       content: 'signingCertificates: X509Certificates'
       return:
         type:
-          - '@azure-iot-provisioning-service.X509Certificates'
+          - azure-iot-provisioning-service.X509Certificates
+references:
+  - uid: azure-iot-provisioning-service.X509CAReferences
+    spec.typeScript:
+      - uid: azure-iot-provisioning-service.X509CAReferences
+        name: X509CAReferences
+  - uid: azure-iot-provisioning-service.X509Certificates
+    spec.typeScript:
+      - uid: azure-iot-provisioning-service.X509Certificates
+        name: X509Certificates

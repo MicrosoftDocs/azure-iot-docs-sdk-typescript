@@ -46,7 +46,7 @@ items:
           description: ''
         - id: securityClient
           type:
-            - '@azure-iot-provisioning-device.X509SecurityClient'
+            - azure-iot-provisioning-device.X509SecurityClient
           description: ''
   - uid: azure-iot-provisioning-device.X509Registration.cancel
     name: cancel
@@ -80,3 +80,8 @@ items:
             - '(err?: Error, result?: RegistrationResult) => void'
           description: |
             function called when registration is complete.
+references:
+  - uid: azure-iot-provisioning-device.X509SecurityClient
+    spec.typeScript:
+      - uid: azure-iot-provisioning-device.X509SecurityClient
+        name: X509SecurityClient

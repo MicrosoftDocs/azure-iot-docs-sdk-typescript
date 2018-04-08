@@ -38,7 +38,7 @@ items:
       content: 'attestation: AttestationMechanism'
       return:
         type:
-          - '@azure-iot-provisioning-service.AttestationMechanism'
+          - azure-iot-provisioning-service.AttestationMechanism
   - uid: azure-iot-provisioning-service.EnrollmentGroup.createdDateTimeUtc
     name: createdDateTimeUtc
     fullName: createdDateTimeUtc
@@ -96,7 +96,7 @@ items:
       content: 'initialTwin: InitialTwin'
       return:
         type:
-          - '@azure-iot-provisioning-service.InitialTwin'
+          - azure-iot-provisioning-service.InitialTwin
   - uid: azure-iot-provisioning-service.EnrollmentGroup.iotHubHostName
     name: iotHubHostName
     fullName: iotHubHostName
@@ -141,4 +141,17 @@ items:
       content: 'provisioningStatus: ProvisioningStatus'
       return:
         type:
-          - '@azure-iot-provisioning-service.ProvisioningStatus'
+          - azure-iot-provisioning-service.ProvisioningStatus
+references:
+  - uid: azure-iot-provisioning-service.AttestationMechanism
+    spec.typeScript:
+      - uid: azure-iot-provisioning-service.AttestationMechanism
+        name: AttestationMechanism
+  - uid: azure-iot-provisioning-service.InitialTwin
+    spec.typeScript:
+      - uid: azure-iot-provisioning-service.InitialTwin
+        name: InitialTwin
+  - uid: azure-iot-provisioning-service.ProvisioningStatus
+    spec.typeScript:
+      - uid: azure-iot-provisioning-service.ProvisioningStatus
+        name: ProvisioningStatus

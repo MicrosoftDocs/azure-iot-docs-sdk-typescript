@@ -53,4 +53,9 @@ items:
       content: 'receivePolicy?: HttpReceiverOptions'
       return:
         type:
-          - '@azure-iot-device.HttpReceiverOptions'
+          - azure-iot-device.HttpReceiverOptions
+references:
+  - uid: azure-iot-device.Client.Transport
+    spec.typeScript:
+      - uid: azure-iot-device.Client.Transport
+        name: Transport

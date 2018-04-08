@@ -38,7 +38,7 @@ items:
       parameters:
         - id: coordinates
           type:
-            - '@location-based-services-javascript.Position'
+            - location-based-services-javascript.Position
           description: |
             The position defining the point.
     module: atlas.data
@@ -54,7 +54,7 @@ items:
       content: 'public coordinates: Position'
       return:
         type:
-          - '@location-based-services-javascript.Position'
+          - location-based-services-javascript.Position
     module: atlas.data
   - uid: location-based-services-javascript.Point.type
     name: type
@@ -86,3 +86,8 @@ items:
         type:
           - string
     module: atlas.data
+references:
+  - uid: location-based-services-javascript.Position
+    spec.typeScript:
+      - uid: location-based-services-javascript.Position
+        name: Position

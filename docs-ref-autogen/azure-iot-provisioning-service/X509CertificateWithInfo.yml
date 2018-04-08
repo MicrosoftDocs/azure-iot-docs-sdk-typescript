@@ -45,4 +45,9 @@ items:
       content: 'info: X509CertificateInfo'
       return:
         type:
-          - '@azure-iot-provisioning-service.X509CertificateInfo'
+          - azure-iot-provisioning-service.X509CertificateInfo
+references:
+  - uid: azure-iot-provisioning-service.X509CertificateInfo
+    spec.typeScript:
+      - uid: azure-iot-provisioning-service.X509CertificateInfo
+        name: X509CertificateInfo

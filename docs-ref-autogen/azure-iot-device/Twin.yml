@@ -69,7 +69,7 @@ items:
       content: 'properties: TwinProperties'
       return:
         type:
-          - '@azure-iot-device.TwinProperties'
+          - azure-iot-device.TwinProperties
   - uid: azure-iot-device.Twin.desiredPath
     name: desiredPath
     fullName: desiredPath
@@ -112,3 +112,8 @@ items:
           description: >
             function that shall be called back with either the twin or an error
             if the transport fails to retrieve the twin.
+references:
+  - uid: azure-iot-device.HttpReceiverOptions
+    spec.typeScript:
+      - uid: azure-iot-device.HttpReceiverOptions
+        name: HttpReceiverOptions

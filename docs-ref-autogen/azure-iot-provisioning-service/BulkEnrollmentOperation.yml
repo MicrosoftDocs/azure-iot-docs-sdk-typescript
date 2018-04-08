@@ -34,7 +34,7 @@ items:
       content: 'enrollments: Array<IndividualEnrollment>'
       return:
         type:
-          - Array<@azure-iot-provisioning-service.IndividualEnrollment>
+          - Array<azure-iot-provisioning-service.IndividualEnrollment>
   - uid: azure-iot-provisioning-service.BulkEnrollmentOperation.mode
     name: mode
     fullName: mode
@@ -49,4 +49,14 @@ items:
       content: 'mode: BulkOperationMode'
       return:
         type:
-          - '@azure-iot-provisioning-service.BulkOperationMode'
+          - azure-iot-provisioning-service.BulkOperationMode
+references:
+  - uid: Array<azure-iot-provisioning-service.IndividualEnrollment>
+    spec.typeScript:
+      - uid: azure-iot-provisioning-service.IndividualEnrollment
+        name: IndividualEnrollment
+      - fullName: '>'
+  - uid: azure-iot-provisioning-service.BulkOperationMode
+    spec.typeScript:
+      - uid: azure-iot-provisioning-service.BulkOperationMode
+        name: BulkOperationMode

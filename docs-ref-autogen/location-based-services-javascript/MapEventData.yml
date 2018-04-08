@@ -54,7 +54,7 @@ items:
       return:
         type:
           - >-
-            Array<@location-based-services-javascript.Feature<@location-based-services-javascript.Geometry>>
+            Array<location-based-services-javascript.Feature<location-based-services-javascript.Geometry>>
     module: Object Definitions
   - uid: location-based-services-javascript.MapEventData.originalEvent
     name: originalEvent
@@ -83,7 +83,7 @@ items:
       content: 'position?: Position'
       return:
         type:
-          - '@location-based-services-javascript.Position'
+          - location-based-services-javascript.Position
     module: Object Definitions
   - uid: location-based-services-javascript.MapEventData.type
     name: type
@@ -99,3 +99,16 @@ items:
         type:
           - string
     module: Object Definitions
+references:
+  - uid: >-
+      Array<location-based-services-javascript.Feature<location-based-services-javascript.Geometry>>
+    spec.typeScript:
+      - uid: location-based-services-javascript.Feature
+        name: Feature
+      - uid: location-based-services-javascript.Geometry
+        name: Geometry
+      - fullName: '>>'
+  - uid: location-based-services-javascript.Position
+    spec.typeScript:
+      - uid: location-based-services-javascript.Position
+        name: Position

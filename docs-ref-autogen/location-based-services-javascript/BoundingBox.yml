@@ -46,11 +46,11 @@ items:
       parameters:
         - id: southwestPosition
           type:
-            - '@location-based-services-javascript.Position'
+            - location-based-services-javascript.Position
           description: The southwestern most position of the bounding box.
         - id: northeastPosition
           type:
-            - '@location-based-services-javascript.Position'
+            - location-based-services-javascript.Position
           description: |
             The northeastern most position of the bounding box.
     module: atlas.data
@@ -68,3 +68,8 @@ items:
         type:
           - ArrayConstructor
     module: atlas.data
+references:
+  - uid: location-based-services-javascript.Position
+    spec.typeScript:
+      - uid: location-based-services-javascript.Position
+        name: Position

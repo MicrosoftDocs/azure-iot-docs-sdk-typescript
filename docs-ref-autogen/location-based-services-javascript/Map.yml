@@ -90,13 +90,14 @@ items:
       can only be specified upon the layer's initial creation.
     syntax:
       content: >-
-        function addCircles(circles: Array<Feature<Point>>, options?:
-        CircleLayerOptions)
+        function addCircles(circles: Array<Feature<Point, CircleProperties>>,
+        options?: CircleLayerOptions)
       parameters:
         - id: circles
           type:
             - >-
-              Array<location-based-services-javascript.Feature<location-based-services-javascript.Point>>
+              Array<location-based-services-javascript.Feature<location-based-services-javascript.Point,
+              location-based-services-javascript.CircleProperties>>
           description: The circles to add.
         - id: options
           type:
@@ -222,13 +223,15 @@ items:
     syntax:
       content: >-
         function addLinestrings(linestrings: Array<Feature<LineString |
-        MultiLineString>>, options?: LinestringLayerOptions)
+        MultiLineString, LinestringProperties>>, options?:
+        LinestringLayerOptions)
       parameters:
         - id: linestrings
           type:
             - >-
               Array<location-based-services-javascript.Feature<LineString |
-              MultiLineString>>
+              MultiLineString,
+              location-based-services-javascript.LinestringProperties>>
           description: The linestrings to add.
         - id: options
           type:
@@ -252,12 +255,15 @@ items:
 
       only be specified upon the layer's initial creation.
     syntax:
-      content: 'function addPins(pins: Array<Feature<Point>>, options?: PinLayerOptions)'
+      content: >-
+        function addPins(pins: Array<Feature<Point, PinProperties>>, options?:
+        PinLayerOptions)
       parameters:
         - id: pins
           type:
             - >-
-              Array<location-based-services-javascript.Feature<location-based-services-javascript.Point>>
+              Array<location-based-services-javascript.Feature<location-based-services-javascript.Point,
+              location-based-services-javascript.PinProperties>>
           description: The points to add.
         - id: options
           type:
@@ -282,14 +288,15 @@ items:
       the layer can only be specified upon the layer's initial creation.
     syntax:
       content: >-
-        function addPolygons(polygons: Array<Feature<Polygon | MultiPolygon>>,
-        options?: PolygonLayerOptions)
+        function addPolygons(polygons: Array<Feature<Polygon | MultiPolygon,
+        PolygonProperties>>, options?: PolygonLayerOptions)
       parameters:
         - id: polygons
           type:
             - >-
               Array<location-based-services-javascript.Feature<Polygon |
-              MultiPolygon>>
+              MultiPolygon,
+              location-based-services-javascript.PolygonProperties>>
           description: The polygons to add.
         - id: options
           type:
@@ -697,7 +704,8 @@ references:
         fullName: UserInteractionOptions
         uid: location-based-services-javascript.UserInteractionOptions
   - uid: >-
-      Array<location-based-services-javascript.Feature<location-based-services-javascript.Point>>
+      Array<location-based-services-javascript.Feature<location-based-services-javascript.Point,
+      location-based-services-javascript.CircleProperties>>
     spec.typeScript:
       - name: Array<
         fullName: Array<
@@ -709,6 +717,11 @@ references:
       - name: Point
         fullName: Point
         uid: location-based-services-javascript.Point
+      - name: ', '
+        fullName: ', '
+      - name: CircleProperties
+        fullName: CircleProperties
+        uid: location-based-services-javascript.CircleProperties
       - name: '>>'
         fullName: '>>'
   - uid: location-based-services-javascript.CircleLayerOptions
@@ -733,34 +746,67 @@ references:
         uid: location-based-services-javascript.Position
   - uid: >-
       Array<location-based-services-javascript.Feature<LineString |
-      MultiLineString>>
+      MultiLineString, location-based-services-javascript.LinestringProperties>>
     spec.typeScript:
       - name: Array<
         fullName: Array<
       - name: Feature
         fullName: Feature
         uid: location-based-services-javascript.Feature
-      - name: <LineString | MultiLineString>>
-        fullName: <LineString | MultiLineString>>
+      - name: '<LineString | MultiLineString, '
+        fullName: '<LineString | MultiLineString, '
+      - name: LinestringProperties
+        fullName: LinestringProperties
+        uid: location-based-services-javascript.LinestringProperties
+      - name: '>>'
+        fullName: '>>'
   - uid: location-based-services-javascript.LinestringLayerOptions
     spec.typeScript:
       - name: LinestringLayerOptions
         fullName: LinestringLayerOptions
         uid: location-based-services-javascript.LinestringLayerOptions
-  - uid: location-based-services-javascript.PinLayerOptions
-    spec.typeScript:
-      - name: PinLayerOptions
-        fullName: PinLayerOptions
-        uid: location-based-services-javascript.PinLayerOptions
-  - uid: Array<location-based-services-javascript.Feature<Polygon | MultiPolygon>>
+  - uid: >-
+      Array<location-based-services-javascript.Feature<location-based-services-javascript.Point,
+      location-based-services-javascript.PinProperties>>
     spec.typeScript:
       - name: Array<
         fullName: Array<
       - name: Feature
         fullName: Feature
         uid: location-based-services-javascript.Feature
-      - name: <Polygon | MultiPolygon>>
-        fullName: <Polygon | MultiPolygon>>
+      - name: <
+        fullName: <
+      - name: Point
+        fullName: Point
+        uid: location-based-services-javascript.Point
+      - name: ', '
+        fullName: ', '
+      - name: PinProperties
+        fullName: PinProperties
+        uid: location-based-services-javascript.PinProperties
+      - name: '>>'
+        fullName: '>>'
+  - uid: location-based-services-javascript.PinLayerOptions
+    spec.typeScript:
+      - name: PinLayerOptions
+        fullName: PinLayerOptions
+        uid: location-based-services-javascript.PinLayerOptions
+  - uid: >-
+      Array<location-based-services-javascript.Feature<Polygon | MultiPolygon,
+      location-based-services-javascript.PolygonProperties>>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: location-based-services-javascript.Feature
+      - name: '<Polygon | MultiPolygon, '
+        fullName: '<Polygon | MultiPolygon, '
+      - name: PolygonProperties
+        fullName: PolygonProperties
+        uid: location-based-services-javascript.PolygonProperties
+      - name: '>>'
+        fullName: '>>'
   - uid: location-based-services-javascript.PolygonLayerOptions
     spec.typeScript:
       - name: PolygonLayerOptions

@@ -50,11 +50,12 @@ items:
     summary: The features associated with the event.
     optional: true
     syntax:
-      content: 'features?: Array<Feature<Geometry>>'
+      content: 'features?: Array<Feature<Geometry, any>>'
       return:
         type:
           - >-
-            Array<location-based-services-javascript.Feature<location-based-services-javascript.Geometry>>
+            Array<location-based-services-javascript.Feature<location-based-services-javascript.Geometry,
+            any>>
     module: Object Definitions
   - uid: location-based-services-javascript.MapEventData.originalEvent
     name: originalEvent
@@ -101,7 +102,8 @@ items:
     module: Object Definitions
 references:
   - uid: >-
-      Array<location-based-services-javascript.Feature<location-based-services-javascript.Geometry>>
+      Array<location-based-services-javascript.Feature<location-based-services-javascript.Geometry,
+      any>>
     spec.typeScript:
       - name: Array<
         fullName: Array<
@@ -113,8 +115,8 @@ references:
       - name: Geometry
         fullName: Geometry
         uid: location-based-services-javascript.Geometry
-      - name: '>>'
-        fullName: '>>'
+      - name: ', any>>'
+        fullName: ', any>>'
   - uid: location-based-services-javascript.Position
     spec.typeScript:
       - name: Position

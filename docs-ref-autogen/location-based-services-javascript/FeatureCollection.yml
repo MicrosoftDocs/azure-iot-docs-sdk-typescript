@@ -35,12 +35,13 @@ items:
       - typeScript
     summary: Constructs a FeatureCollection.
     syntax:
-      content: 'new FeatureCollection(features: Array<Feature<Geometry>>)'
+      content: 'new FeatureCollection(features: Array<Feature<Geometry, any>>)'
       parameters:
         - id: features
           type:
             - >-
-              Array<location-based-services-javascript.Feature<location-based-services-javascript.Geometry>>
+              Array<location-based-services-javascript.Feature<location-based-services-javascript.Geometry,
+              any>>
           description: |
             The collection of features that make up the feature collection.
     module: atlas.data
@@ -53,11 +54,12 @@ items:
     type: property
     summary: The collection of GeoJSON features contained in the feature collection.
     syntax:
-      content: 'public features: Array<Feature<Geometry>>'
+      content: 'public features: Array<Feature<Geometry, any>>'
       return:
         type:
           - >-
-            Array<location-based-services-javascript.Feature<location-based-services-javascript.Geometry>>
+            Array<location-based-services-javascript.Feature<location-based-services-javascript.Geometry,
+            any>>
     module: atlas.data
   - uid: location-based-services-javascript.FeatureCollection.type
     name: type
@@ -91,7 +93,8 @@ items:
     module: atlas.data
 references:
   - uid: >-
-      Array<location-based-services-javascript.Feature<location-based-services-javascript.Geometry>>
+      Array<location-based-services-javascript.Feature<location-based-services-javascript.Geometry,
+      any>>
     spec.typeScript:
       - name: Array<
         fullName: Array<
@@ -103,5 +106,5 @@ references:
       - name: Geometry
         fullName: Geometry
         uid: location-based-services-javascript.Geometry
-      - name: '>>'
-        fullName: '>>'
+      - name: ', any>>'
+        fullName: ', any>>'

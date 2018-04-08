@@ -140,8 +140,9 @@ items:
     syntax:
       content: >-
         function scheduleDeviceMethod(jobId: string | number, queryCondition:
-        string, methodParams: DeviceMethodParams, jobStartTime?: JobCallback,
-        maxExecutionTimeInSeconds?: JobCallback, done?: JobCallback)
+        string, methodParams: DeviceMethodParams, jobStartTime?: Date |
+        JobCallback, maxExecutionTimeInSeconds?: number | JobCallback, done?:
+        JobCallback)
       parameters:
         - id: jobId
           type:
@@ -164,12 +165,12 @@ items:
                                                  - responseTimeoutInSeconds [optional] The number of seconds IoT Hub shall wait for the device
         - id: jobStartTime
           type:
-            - JobCallback
+            - Date | azure-iothub.JobClient.JobCallback
           description: Time time at which the job should start
           optional: true
         - id: maxExecutionTimeInSeconds
           type:
-            - JobCallback
+            - number | azure-iothub.JobClient.JobCallback
           description: The maximum time alloted for this job to run in seconds.
           optional: true
         - id: done
@@ -204,8 +205,8 @@ items:
     syntax:
       content: >-
         function scheduleTwinUpdate(jobId: string | number, queryCondition:
-        string, patch: any, jobStartTime?: JobCallback,
-        maxExecutionTimeInSeconds?: JobCallback, done?: JobCallback)
+        string, patch: any, jobStartTime?: Date | JobCallback,
+        maxExecutionTimeInSeconds?: number | JobCallback, done?: JobCallback)
       parameters:
         - id: jobId
           type:
@@ -223,12 +224,12 @@ items:
           description: The twin patch that should be applied to the twins.
         - id: jobStartTime
           type:
-            - JobCallback
+            - Date | azure-iothub.JobClient.JobCallback
           description: Time time at which the job should start
           optional: true
         - id: maxExecutionTimeInSeconds
           type:
-            - JobCallback
+            - number | azure-iothub.JobClient.JobCallback
           description: The maximum time alloted for this job to run in seconds.
           optional: true
         - id: done

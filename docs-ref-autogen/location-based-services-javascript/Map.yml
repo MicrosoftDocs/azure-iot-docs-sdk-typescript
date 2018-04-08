@@ -229,8 +229,8 @@ items:
         - id: linestrings
           type:
             - >-
-              Array<location-based-services-javascript.Feature<LineString |
-              MultiLineString,
+              Array<location-based-services-javascript.Feature<location-based-services-javascript.LineString
+              | location-based-services-javascript.MultiLineString,
               location-based-services-javascript.LinestringProperties>>
           description: The linestrings to add.
         - id: options
@@ -294,8 +294,8 @@ items:
         - id: polygons
           type:
             - >-
-              Array<location-based-services-javascript.Feature<Polygon |
-              MultiPolygon,
+              Array<location-based-services-javascript.Feature<location-based-services-javascript.Polygon
+              | location-based-services-javascript.MultiPolygon,
               location-based-services-javascript.PolygonProperties>>
           description: The polygons to add.
         - id: options
@@ -745,16 +745,27 @@ references:
         fullName: Position
         uid: location-based-services-javascript.Position
   - uid: >-
-      Array<location-based-services-javascript.Feature<LineString |
-      MultiLineString, location-based-services-javascript.LinestringProperties>>
+      Array<location-based-services-javascript.Feature<location-based-services-javascript.LineString
+      | location-based-services-javascript.MultiLineString,
+      location-based-services-javascript.LinestringProperties>>
     spec.typeScript:
       - name: Array<
         fullName: Array<
       - name: Feature
         fullName: Feature
         uid: location-based-services-javascript.Feature
-      - name: '<LineString | MultiLineString, '
-        fullName: '<LineString | MultiLineString, '
+      - name: <
+        fullName: <
+      - name: LineString
+        fullName: LineString
+        uid: location-based-services-javascript.LineString
+      - name: ' | '
+        fullName: ' | '
+      - name: MultiLineString
+        fullName: MultiLineString
+        uid: location-based-services-javascript.MultiLineString
+      - name: ', '
+        fullName: ', '
       - name: LinestringProperties
         fullName: LinestringProperties
         uid: location-based-services-javascript.LinestringProperties
@@ -792,7 +803,8 @@ references:
         fullName: PinLayerOptions
         uid: location-based-services-javascript.PinLayerOptions
   - uid: >-
-      Array<location-based-services-javascript.Feature<Polygon | MultiPolygon,
+      Array<location-based-services-javascript.Feature<location-based-services-javascript.Polygon
+      | location-based-services-javascript.MultiPolygon,
       location-based-services-javascript.PolygonProperties>>
     spec.typeScript:
       - name: Array<
@@ -800,8 +812,18 @@ references:
       - name: Feature
         fullName: Feature
         uid: location-based-services-javascript.Feature
-      - name: '<Polygon | MultiPolygon, '
-        fullName: '<Polygon | MultiPolygon, '
+      - name: <
+        fullName: <
+      - name: Polygon
+        fullName: Polygon
+        uid: location-based-services-javascript.Polygon
+      - name: ' | '
+        fullName: ' | '
+      - name: MultiPolygon
+        fullName: MultiPolygon
+        uid: location-based-services-javascript.MultiPolygon
+      - name: ', '
+        fullName: ', '
       - name: PolygonProperties
         fullName: PolygonProperties
         uid: location-based-services-javascript.PolygonProperties

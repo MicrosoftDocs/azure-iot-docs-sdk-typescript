@@ -51,10 +51,10 @@ items:
       specify each side as an array of [top, right, bottom, left].
     optional: true
     syntax:
-      content: 'public padding?: number | "undefined" = 0'
+      content: 'public padding?: number | number[] = 0'
       return:
         type:
-          - number | "undefined"
+          - 'number | number[]'
     module: Object Definitions
 references:
   - uid: location-based-services-javascript.BoundingBox

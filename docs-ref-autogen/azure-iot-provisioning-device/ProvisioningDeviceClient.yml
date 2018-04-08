@@ -61,7 +61,9 @@ items:
                                      [azure-iot-provisioning-device-mqtt.MqttWs](xref:azure-iot-provisioning-device-mqtt.MqttWs)
         - id: securityClient
           type:
-            - X509SecurityClient | TpmSecurityClient
+            - >-
+              azure-iot-provisioning-device.X509SecurityClient |
+              TpmSecurityClient
           description: |
             Instance of Scurity client object implementing either the
                                      [X509SecurityClient](xref:azure-iot-provisioning-device%3AX509SecurityClient) or the
@@ -73,6 +75,13 @@ items:
         type:
           - azure-iot-provisioning-device.RegistrationClient
 references:
+  - uid: azure-iot-provisioning-device.X509SecurityClient | TpmSecurityClient
+    spec.typeScript:
+      - name: X509SecurityClient
+        fullName: X509SecurityClient
+        uid: azure-iot-provisioning-device.X509SecurityClient
+      - name: ' | TpmSecurityClient'
+        fullName: ' | TpmSecurityClient'
   - uid: azure-iot-provisioning-device.RegistrationClient
     spec.typeScript:
       - name: RegistrationClient

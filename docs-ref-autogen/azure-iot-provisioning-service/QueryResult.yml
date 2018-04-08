@@ -32,5 +32,29 @@ items:
       return:
         type:
           - >-
-            Array<IndividualEnrollment | EnrollmentGroup |
-            DeviceRegistrationState>
+            Array<azure-iot-provisioning-service.IndividualEnrollment |
+            azure-iot-provisioning-service.EnrollmentGroup |
+            azure-iot-provisioning-service.DeviceRegistrationState>
+references:
+  - uid: >-
+      Array<azure-iot-provisioning-service.IndividualEnrollment |
+      azure-iot-provisioning-service.EnrollmentGroup |
+      azure-iot-provisioning-service.DeviceRegistrationState>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: IndividualEnrollment
+        fullName: IndividualEnrollment
+        uid: azure-iot-provisioning-service.IndividualEnrollment
+      - name: ' | '
+        fullName: ' | '
+      - name: EnrollmentGroup
+        fullName: EnrollmentGroup
+        uid: azure-iot-provisioning-service.EnrollmentGroup
+      - name: ' | '
+        fullName: ' | '
+      - name: DeviceRegistrationState
+        fullName: DeviceRegistrationState
+        uid: azure-iot-provisioning-service.DeviceRegistrationState
+      - name: '>'
+        fullName: '>'

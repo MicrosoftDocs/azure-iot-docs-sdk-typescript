@@ -76,7 +76,7 @@ items:
       parameters:
         - id: continuationTokenOrCallback
           type:
-            - string | QueryCallback
+            - string | azure-iot-provisioning-service.QueryCallback
           description: ''
         - id: done
           type:
@@ -86,6 +86,13 @@ items:
                                                       the results of the query.
           optional: true
 references:
+  - uid: string | azure-iot-provisioning-service.QueryCallback
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: QueryCallback
+        fullName: QueryCallback
+        uid: azure-iot-provisioning-service.QueryCallback
   - uid: azure-iot-provisioning-service.QueryCallback
     spec.typeScript:
       - name: QueryCallback

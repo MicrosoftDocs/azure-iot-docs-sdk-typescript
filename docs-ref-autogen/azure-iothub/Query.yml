@@ -63,12 +63,12 @@ items:
     summary: Gets the next page of results for this query.
     syntax:
       content: >-
-        function next(continuationTokenOrCallback: string | Callback, done?:
-        Callback<any>)
+        function next(continuationTokenOrCallback: string | Callback<any>,
+        done?: Callback<any>)
       parameters:
         - id: continuationTokenOrCallback
           type:
-            - string | Callback
+            - string | Callback<any>
           description: ''
         - id: done
           type:
@@ -86,12 +86,12 @@ items:
     summary: Gets the next page of results for this query and cast them as Twins.
     syntax:
       content: >-
-        function nextAsTwin(continuationToken: string | Callback, done?:
+        function nextAsTwin(continuationToken: string | Callback<Twin[]>, done?:
         Callback<Twin[]>)
       parameters:
         - id: continuationToken
           type:
-            - string | Callback
+            - 'string | Twin!@[]>'
           description: Continuation Token used for paging through results (optional)
         - id: done
           type:
@@ -126,6 +126,20 @@ references:
       - name: DeviceMethodParams
         fullName: DeviceMethodParams
         uid: azure-iothub.DeviceMethodParams
+  - uid: Date | azure-iothub.JobClient.JobCallback
+    spec.typeScript:
+      - name: 'Date | '
+        fullName: 'Date | '
+      - name: JobCallback
+        fullName: JobCallback
+        uid: azure-iothub.JobClient.JobCallback
+  - uid: number | azure-iothub.JobClient.JobCallback
+    spec.typeScript:
+      - name: 'number | '
+        fullName: 'number | '
+      - name: JobCallback
+        fullName: JobCallback
+        uid: azure-iothub.JobClient.JobCallback
   - uid: azure-iothub.JobClient
     spec.typeScript:
       - name: JobClient

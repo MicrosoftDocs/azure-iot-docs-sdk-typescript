@@ -35,10 +35,10 @@ items:
     summary: X509 Certificate.
     optional: true
     syntax:
-      content: 'cert?: string | "undefined" | Buffer | "undefined"'
+      content: 'cert?: string | string[] | Buffer | Buffer[]'
       return:
         type:
-          - string | "undefined" | Buffer | "undefined"
+          - 'string | string[] | Buffer | Buffer[]'
   - uid: azure-iot-common.X509.key
     name: key
     fullName: key

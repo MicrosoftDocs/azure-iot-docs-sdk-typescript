@@ -142,16 +142,58 @@ items:
           type:
             - string
           description: >-
-            The event listener type: 'click', 'dblclick', 'mousemove',
-            'mouseup', 'mousedown', 'mouseenter',
+            The event listener types:
 
-            'mouseleave', 'mouseover', 'mouseout', 'touchstart', 'touchend',
-            'touchmove', 'drag', 'dragstart',
+            <p>'click':  A pointing device is pressed and released at the same
+            point on the map.</p>
 
-            'dragend', 'zoomstart', 'zoom', 'zoomend', 'rotatestart', 'rotate',
-            'rotateend', 'pitchstart', 'pitch',
+            <p>'dblclick':  A pointing device is clicked twice on the map.</p>
 
-            'pitchend', 'resize', "load"
+            <p>'mousemove': A pointing device is moved within the map. </p>
+
+            <p>'mouseup': A pointing device is released within the map. </p>
+
+            <p>'mousedown': A pointing device is pressed within the map. </p>
+
+            <p>'mouseout': A pointing device leaves the map's canvas.</p>
+
+            <p>'touchstart': A touch point is placed on the touch surface. </p>
+
+            <p>'touchend': A touch point is removed from the touch surface. </p>
+
+            <p>'touchmove': A touch point is moved along the touch surface. </p>
+
+            <p>'drag': An element is dragged. </p>
+
+            <p>'dragstart': The user starts dragging an element.</p>
+
+            <p>'dragend': A drag operation is ended.</p>
+
+            <p>'zoomstart': Just before the map transitions from one zoom level
+            to another.</p>
+
+            <p>'zoom': During the map transitions from one zoom level to
+            another.</p>
+
+            <p>'zoomend': After the map completes a transition from one zoom
+            level to another.</p>
+
+            <p>'rotatestart': When a "drag to rotate" starts.</p>
+
+            <p>'rotate': During a "drag to rotate" interaction.</p>
+
+            <p>'rotateend': After When a "drag to rotate" ends.</p>
+
+            <p>'pitchstart': When the map's pitch (tilt) starts to change.</p>
+
+            <p>'pitch': Whenever the map's pitch (tilt) changes.</p>
+
+            <p>'pitchend': After the map's pitch (tilt) completes the
+            change.</p>
+
+            <p>'resize': The document view has been resized.<p>
+
+            <p>'load': Progression has been successful.</p>
         - id: callback
           type:
             - any
@@ -176,10 +218,30 @@ items:
           type:
             - string
           description: >-
-            The event listener type: 'click', 'dblclick', 'mousemove',
-            'mouseup', 'mousedown', 'mouseenter',
+            The event listener types:
 
-            'mouseleave', 'mouseover', 'mouseout', 'touchstart', 'touchend'
+            <p>'click':  A pointing device is pressed and released at the same
+            point on the map.</p>
+
+            <p>'dblclick':  A pointing device is clicked twice on the map.</p>
+
+            <p>'mousemove': A pointing device is moved within the map. </p>
+
+            <p>'mouseup': A pointing device is released within the map. </p>
+
+            <p>'mousedown': A pointing device is pressed within the map. </p>
+
+            <p>'mouseenter': A pointing device is moved onto a specific layer
+            that has the listener attached. </p>
+
+            <p>'mouseleave': A pointing device is moved off a specific layer
+            that has the listener attached.</p>
+
+            <p>'mouseover': A pointing device is moved within the map.</p>
+
+            <p>'touchstart': A touch point is placed on the touch surface. </p>
+
+            <p>'touchend': A touch point is removed from the touch surface. </p>
         - id: layer
           type:
             - string
@@ -219,7 +281,11 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Add an icon to the map to use for pins.
+    summary: >-
+      Add an icon to the map to use for pins. Map and image must be fully loaded
+      before the icon can be added. Use the
+
+      addEventListener method with event type 'load'.
     syntax:
       content: 'function addIcon(id: string, icon: HTMLImageElement)'
       parameters:

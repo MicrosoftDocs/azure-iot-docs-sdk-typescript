@@ -1,0 +1,68 @@
+### YamlMime:UniversalReference
+items:
+  - uid: location-based-services-javascript.Position
+    name: Position
+    fullName: Position
+    children:
+      - location-based-services-javascript.Position.constructor
+      - location-based-services-javascript.Position.Array
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+      A GeoJSON Position object - an array that specifies the longitude and
+      latitude of a location. The
+
+      full description is detailed in [RFC
+      7946](https://tools.ietf.org/html/rfc7946#section-3.1.1).
+    extends:
+      name: Array<number>
+    source:
+      path: data/Position.ts
+      startLine: 6
+      remote:
+        path: src/MapControl/JavascriptSDK/src\data/Position.ts
+        repo: >-
+          https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
+        branch: production
+    package: location-based-services-javascript
+    module: atlas.data
+  - uid: location-based-services-javascript.Position.constructor
+    name: Position
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a Position.
+    syntax:
+      content: 'new Position(longitude: number, latitude: number, elevation?: number)'
+      parameters:
+        - id: longitude
+          type:
+            - number
+          description: The position's longitude.
+        - id: latitude
+          type:
+            - number
+          description: The position's latitude.
+        - id: elevation
+          type:
+            - number
+          description: |
+            THe position's elevation.
+          optional: true
+    module: atlas.data
+  - uid: location-based-services-javascript.Position.Array
+    name: Array
+    fullName: Array
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'static Array: ArrayConstructor'
+      return:
+        type:
+          - ArrayConstructor
+    module: atlas.data

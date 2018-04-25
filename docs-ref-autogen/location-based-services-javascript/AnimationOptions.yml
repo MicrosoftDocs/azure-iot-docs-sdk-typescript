@@ -1,0 +1,62 @@
+### YamlMime:UniversalReference
+items:
+  - uid: location-based-services-javascript.AnimationOptions
+    name: AnimationOptions
+    fullName: AnimationOptions
+    children:
+      - location-based-services-javascript.AnimationOptions.duration
+      - location-based-services-javascript.AnimationOptions.type
+    langs:
+      - typeScript
+    type: class
+    summary: The options for animating changes to the map control's camera.
+    extends:
+      name: Options
+    source:
+      path: map/options/AnimationOptions.ts
+      startLine: 7
+      remote:
+        path: src/MapControl/JavascriptSDK/src\map/options/AnimationOptions.ts
+        repo: >-
+          https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
+        branch: production
+    package: location-based-services-javascript
+    module: Object Definitions
+  - uid: location-based-services-javascript.AnimationOptions.duration
+    name: duration
+    fullName: duration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The duration of the animation in milliseconds.
+    optional: true
+    syntax:
+      content: 'public duration?: number = 1000'
+      return:
+        type:
+          - number
+    module: Object Definitions
+  - uid: location-based-services-javascript.AnimationOptions.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The type of animation.
+
+      <p>"jump" is an immediate change.</p>
+
+      <p>"ease" is a gradual change of the camera's settings.</p>
+
+      <p>"fly" is a gradual change of the camera's settings following an arc
+      resembling flight.</p>
+    optional: true
+    syntax:
+      content: 'public type?: "jump" | "ease" | "fly" = "jump"'
+      return:
+        type:
+          - '"jump" | "ease" | "fly"'
+    module: Object Definitions

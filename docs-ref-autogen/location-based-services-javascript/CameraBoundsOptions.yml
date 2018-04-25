@@ -16,10 +16,10 @@ items:
       path: map/options/CameraBoundsOptions.ts
       startLine: 8
       remote:
-        path: src/SDKs/Js/Map/src\map/options/CameraBoundsOptions.ts
+        path: src/MapControl/JavascriptSDK/src\map/options/CameraBoundsOptions.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
-        branch: deployments/1803
+        branch: production
     package: location-based-services-javascript
     module: Object Definitions
   - uid: location-based-services-javascript.CameraBoundsOptions.bounds
@@ -35,7 +35,7 @@ items:
       content: 'public bounds?: BoundingBox = [-180, -89, 180, 90]'
       return:
         type:
-          - '@location-based-services-javascript.BoundingBox'
+          - location-based-services-javascript.BoundingBox
     module: Object Definitions
   - uid: location-based-services-javascript.CameraBoundsOptions.padding
     name: padding
@@ -51,8 +51,14 @@ items:
       specify each side as an array of [top, right, bottom, left].
     optional: true
     syntax:
-      content: 'public padding?: number | "undefined" = 0'
+      content: 'public padding?: number | number[] = 0'
       return:
         type:
-          - number | "undefined"
+          - 'number | number[]'
     module: Object Definitions
+references:
+  - uid: location-based-services-javascript.BoundingBox
+    spec.typeScript:
+      - name: BoundingBox
+        fullName: BoundingBox
+        uid: location-based-services-javascript.BoundingBox

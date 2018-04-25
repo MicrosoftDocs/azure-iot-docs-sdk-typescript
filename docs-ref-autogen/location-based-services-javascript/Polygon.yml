@@ -21,10 +21,10 @@ items:
       path: data/Polygon.ts
       startLine: 9
       remote:
-        path: src/SDKs/Js/Map/src\data/Polygon.ts
+        path: src/MapControl/JavascriptSDK/src\data/Polygon.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
-        branch: deployments/1803
+        branch: production
     package: location-based-services-javascript
     module: atlas.data
   - uid: location-based-services-javascript.Polygon.constructor
@@ -39,11 +39,11 @@ items:
       parameters:
         - id: coordinates
           type:
-            - '@location-based-services-javascript.Position[][]'
+            - 'location-based-services-javascript.Position[][]'
           description: The array of linear ring coordinate arrays defining the polygon.
         - id: bbox
           type:
-            - '@location-based-services-javascript.BoundingBox'
+            - location-based-services-javascript.BoundingBox
           description: |
             The bounding box of the polygon.
           optional: true
@@ -61,7 +61,7 @@ items:
       content: 'public bbox?: BoundingBox'
       return:
         type:
-          - '@location-based-services-javascript.BoundingBox'
+          - location-based-services-javascript.BoundingBox
     module: atlas.data
   - uid: location-based-services-javascript.Polygon.coordinates
     name: coordinates
@@ -75,7 +75,7 @@ items:
       content: 'public coordinates: Position[][]'
       return:
         type:
-          - '@location-based-services-javascript.Position[][]'
+          - 'location-based-services-javascript.Position[][]'
     module: atlas.data
   - uid: location-based-services-javascript.Polygon.type
     name: type
@@ -107,3 +107,16 @@ items:
         type:
           - string
     module: atlas.data
+references:
+  - uid: 'location-based-services-javascript.Position[][]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: location-based-services-javascript.Position
+      - name: '[][]'
+        fullName: '[][]'
+  - uid: location-based-services-javascript.BoundingBox
+    spec.typeScript:
+      - name: BoundingBox
+        fullName: BoundingBox
+        uid: location-based-services-javascript.BoundingBox

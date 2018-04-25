@@ -19,15 +19,15 @@ items:
     type: class
     summary: The options for a pin layer.
     extends:
-      name: '@location-based-services-javascript.LayerOptions'
+      name: location-based-services-javascript.LayerOptions
     source:
       path: map/options/PinLayerOptions.ts
       startLine: 8
       remote:
-        path: src/SDKs/Js/Map/src\map/options/PinLayerOptions.ts
+        path: src/MapControl/JavascriptSDK/src\map/options/PinLayerOptions.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
-        branch: deployments/1803
+        branch: production
     package: location-based-services-javascript
     module: Object Definitions
   - uid: location-based-services-javascript.PinLayerOptions.cluster
@@ -199,3 +199,9 @@ items:
         type:
           - string
     module: Object Definitions
+references:
+  - uid: location-based-services-javascript.LayerOptions
+    spec.typeScript:
+      - name: LayerOptions
+        fullName: LayerOptions
+        uid: location-based-services-javascript.LayerOptions

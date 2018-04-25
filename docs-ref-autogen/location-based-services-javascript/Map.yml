@@ -6,7 +6,6 @@ items:
     children:
       - location-based-services-javascript.Map.constructor
       - location-based-services-javascript.Map.addCircles
-      - location-based-services-javascript.Map.addControl
       - location-based-services-javascript.Map.addEventListener
       - location-based-services-javascript.Map.addEventListener_1
       - location-based-services-javascript.Map.addHtml
@@ -23,8 +22,6 @@ items:
       - location-based-services-javascript.Map.getStyle
       - location-based-services-javascript.Map.getTraffic
       - location-based-services-javascript.Map.getUserInteraction
-      - location-based-services-javascript.Map.remove
-      - location-based-services-javascript.Map.removeControl
       - location-based-services-javascript.Map.removeEventListener
       - location-based-services-javascript.Map.removeEventListener_1
       - location-based-services-javascript.Map.removeHtml
@@ -40,12 +37,12 @@ items:
     summary: The control for a visual and interactive web map.
     source:
       path: map/Map.ts
-      startLine: 46
+      startLine: 44
       remote:
-        path: src/SDKs/Js/Map/src\map/Map.ts
+        path: src/MapControl/JavascriptSDK/src\map/Map.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
-        branch: deployments/1803
+        branch: production
     package: location-based-services-javascript
     module: atlas
   - uid: location-based-services-javascript.Map.constructor
@@ -67,10 +64,10 @@ items:
         - id: options
           type:
             - >-
-              @location-based-services-javascript.ServiceOptions &
-              @location-based-services-javascript.CameraOptions &
-              @location-based-services-javascript.StyleOptions &
-              @location-based-services-javascript.UserInteractionOptions
+              location-based-services-javascript.ServiceOptions &
+              location-based-services-javascript.CameraOptions &
+              location-based-services-javascript.StyleOptions &
+              location-based-services-javascript.UserInteractionOptions
           description: |
             Options for the initial display and interactability with the map.
     module: atlas
@@ -90,40 +87,20 @@ items:
       can only be specified upon the layer's initial creation.
     syntax:
       content: >-
-        function addCircles(circles: Array<Feature<Point>>, options?:
-        CircleLayerOptions)
+        function addCircles(circles: Array<Feature<Point, CircleProperties>>,
+        options?: CircleLayerOptions)
       parameters:
         - id: circles
           type:
             - >-
-              Array<@location-based-services-javascript.Feature<@location-based-services-javascript.Point>>
+              Array<location-based-services-javascript.Feature<location-based-services-javascript.Point,
+              location-based-services-javascript.CircleProperties>>
           description: The circles to add.
         - id: options
           type:
-            - '@location-based-services-javascript.CircleLayerOptions'
+            - location-based-services-javascript.CircleLayerOptions
           description: |
             The layer options for the circles.
-          optional: true
-    module: atlas
-  - uid: location-based-services-javascript.Map.addControl
-    name: addControl
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Add a control to the map.
-    syntax:
-      content: 'function addControl(control: Control, options?: ControlOptions)'
-      parameters:
-        - id: control
-          type:
-            - '@location-based-services-javascript.Control'
-          description: The control to add.
-        - id: options
-          type:
-            - '@location-based-services-javascript.ControlOptions'
-          description: |
-            The options for the added control.
           optional: true
     module: atlas
   - uid: location-based-services-javascript.Map.addEventListener
@@ -198,7 +175,7 @@ items:
           description: The HTMLElement to add.
         - id: position
           type:
-            - '@location-based-services-javascript.Position'
+            - location-based-services-javascript.Position
           description: |
             The position to place the element.
       return:
@@ -222,17 +199,19 @@ items:
     syntax:
       content: >-
         function addLinestrings(linestrings: Array<Feature<LineString |
-        MultiLineString>>, options?: LinestringLayerOptions)
+        MultiLineString, LinestringProperties>>, options?:
+        LinestringLayerOptions)
       parameters:
         - id: linestrings
           type:
             - >-
-              Array<@location-based-services-javascript.Feature<LineString |
-              MultiLineString>>
+              Array<location-based-services-javascript.Feature<LineString |
+              MultiLineString,
+              location-based-services-javascript.LinestringProperties>>
           description: The linestrings to add.
         - id: options
           type:
-            - '@location-based-services-javascript.LinestringLayerOptions'
+            - location-based-services-javascript.LinestringLayerOptions
           description: |
             The layer options for the linestrings.
           optional: true
@@ -252,16 +231,19 @@ items:
 
       only be specified upon the layer's initial creation.
     syntax:
-      content: 'function addPins(pins: Array<Feature<Point>>, options?: PinLayerOptions)'
+      content: >-
+        function addPins(pins: Array<Feature<Point, PinProperties>>, options?:
+        PinLayerOptions)
       parameters:
         - id: pins
           type:
             - >-
-              Array<@location-based-services-javascript.Feature<@location-based-services-javascript.Point>>
+              Array<location-based-services-javascript.Feature<location-based-services-javascript.Point,
+              location-based-services-javascript.PinProperties>>
           description: The points to add.
         - id: options
           type:
-            - '@location-based-services-javascript.PinLayerOptions'
+            - location-based-services-javascript.PinLayerOptions
           description: |
             The layer options for the pins.
           optional: true
@@ -282,18 +264,19 @@ items:
       the layer can only be specified upon the layer's initial creation.
     syntax:
       content: >-
-        function addPolygons(polygons: Array<Feature<Polygon | MultiPolygon>>,
-        options?: PolygonLayerOptions)
+        function addPolygons(polygons: Array<Feature<Polygon | MultiPolygon,
+        PolygonProperties>>, options?: PolygonLayerOptions)
       parameters:
         - id: polygons
           type:
             - >-
-              Array<@location-based-services-javascript.Feature<Polygon |
-              MultiPolygon>>
+              Array<location-based-services-javascript.Feature<location-based-services-javascript.Polygon
+              | location-based-services-javascript.MultiPolygon,
+              location-based-services-javascript.PolygonProperties>>
           description: The polygons to add.
         - id: options
           type:
-            - '@location-based-services-javascript.PolygonLayerOptions'
+            - location-based-services-javascript.PolygonLayerOptions
           description: |
             The layer options for the polygons.
           optional: true
@@ -331,7 +314,7 @@ items:
             viewport.
         - id: options
           type:
-            - '@location-based-services-javascript.RasterLayerOptions'
+            - location-based-services-javascript.RasterLayerOptions
           description: |
             The options for the raster layer.
           optional: true
@@ -349,8 +332,8 @@ items:
       return:
         type:
           - >-
-            @location-based-services-javascript.CameraOptions &
-            @location-based-services-javascript.CameraBoundsOptions
+            location-based-services-javascript.CameraOptions &
+            location-based-services-javascript.CameraBoundsOptions
     module: atlas
   - uid: location-based-services-javascript.Map.getCanvas
     name: getCanvas
@@ -424,7 +407,7 @@ items:
       parameters: []
       return:
         type:
-          - '@location-based-services-javascript.ServiceOptions'
+          - location-based-services-javascript.ServiceOptions
     module: atlas
   - uid: location-based-services-javascript.Map.getStyle
     name: getStyle
@@ -438,7 +421,7 @@ items:
       parameters: []
       return:
         type:
-          - '@location-based-services-javascript.StyleOptions'
+          - location-based-services-javascript.StyleOptions
     module: atlas
   - uid: location-based-services-javascript.Map.getTraffic
     name: getTraffic
@@ -452,7 +435,7 @@ items:
       parameters: []
       return:
         type:
-          - '@location-based-services-javascript.TrafficOptions'
+          - location-based-services-javascript.TrafficOptions
     module: atlas
   - uid: location-based-services-javascript.Map.getUserInteraction
     name: getUserInteraction
@@ -466,36 +449,7 @@ items:
       parameters: []
       return:
         type:
-          - '@location-based-services-javascript.UserInteractionOptions'
-    module: atlas
-  - uid: location-based-services-javascript.Map.remove
-    name: remove
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Clean up the map's resources. Map will not function correctly after
-      calling this method.
-    syntax:
-      content: function remove()
-      parameters: []
-    module: atlas
-  - uid: location-based-services-javascript.Map.removeControl
-    name: removeControl
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Remove a control from the map.
-    syntax:
-      content: 'function removeControl(control: Control)'
-      parameters:
-        - id: control
-          type:
-            - '@location-based-services-javascript.Control'
-          description: |
-            The control to remove.
+          - location-based-services-javascript.UserInteractionOptions
     module: atlas
   - uid: location-based-services-javascript.Map.removeEventListener
     name: removeEventListener
@@ -590,8 +544,8 @@ items:
         - id: options
           type:
             - >-
-              @location-based-services-javascript.CameraOptions &
-              @location-based-services-javascript.AnimationOptions
+              location-based-services-javascript.CameraOptions &
+              location-based-services-javascript.AnimationOptions
           description: >
             The options for setting the map's camera and for the animation of
             any view change.
@@ -609,7 +563,7 @@ items:
       parameters:
         - id: options
           type:
-            - '@location-based-services-javascript.CameraBoundsOptions'
+            - location-based-services-javascript.CameraBoundsOptions
           description: |
             The options for setting the map's camera bounds.
           optional: true
@@ -628,7 +582,7 @@ items:
       parameters:
         - id: options
           type:
-            - '@location-based-services-javascript.StyleOptions'
+            - location-based-services-javascript.StyleOptions
           description: |
             The options for setting the style of the map control.
           optional: true
@@ -647,7 +601,7 @@ items:
       parameters:
         - id: options
           type:
-            - '@location-based-services-javascript.TrafficOptions'
+            - location-based-services-javascript.TrafficOptions
           description: |
             The options for defining the map's traffic display.
           optional: true
@@ -666,8 +620,197 @@ items:
       parameters:
         - id: options
           type:
-            - '@location-based-services-javascript.UserInteractionOptions'
+            - location-based-services-javascript.UserInteractionOptions
           description: |
             The options for enabling/disabling the user interaction handlers.
           optional: true
     module: atlas
+references:
+  - uid: >-
+      location-based-services-javascript.ServiceOptions &
+      location-based-services-javascript.CameraOptions &
+      location-based-services-javascript.StyleOptions &
+      location-based-services-javascript.UserInteractionOptions
+    spec.typeScript:
+      - name: ServiceOptions
+        fullName: ServiceOptions
+        uid: location-based-services-javascript.ServiceOptions
+      - name: ' & '
+        fullName: ' & '
+      - name: CameraOptions
+        fullName: CameraOptions
+        uid: location-based-services-javascript.CameraOptions
+      - name: ' & '
+        fullName: ' & '
+      - name: StyleOptions
+        fullName: StyleOptions
+        uid: location-based-services-javascript.StyleOptions
+      - name: ' & '
+        fullName: ' & '
+      - name: UserInteractionOptions
+        fullName: UserInteractionOptions
+        uid: location-based-services-javascript.UserInteractionOptions
+  - uid: >-
+      Array<location-based-services-javascript.Feature<location-based-services-javascript.Point,
+      location-based-services-javascript.CircleProperties>>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: location-based-services-javascript.Feature
+      - name: <
+        fullName: <
+      - name: Point
+        fullName: Point
+        uid: location-based-services-javascript.Point
+      - name: ', '
+        fullName: ', '
+      - name: CircleProperties
+        fullName: CircleProperties
+        uid: location-based-services-javascript.CircleProperties
+      - name: '>>'
+        fullName: '>>'
+  - uid: location-based-services-javascript.CircleLayerOptions
+    spec.typeScript:
+      - name: CircleLayerOptions
+        fullName: CircleLayerOptions
+        uid: location-based-services-javascript.CircleLayerOptions
+  - uid: location-based-services-javascript.Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: location-based-services-javascript.Position
+  - uid: >-
+      Array<location-based-services-javascript.Feature<LineString |
+      MultiLineString, location-based-services-javascript.LinestringProperties>>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: location-based-services-javascript.Feature
+      - name: '<LineString | MultiLineString, '
+        fullName: '<LineString | MultiLineString, '
+      - name: LinestringProperties
+        fullName: LinestringProperties
+        uid: location-based-services-javascript.LinestringProperties
+      - name: '>>'
+        fullName: '>>'
+  - uid: location-based-services-javascript.LinestringLayerOptions
+    spec.typeScript:
+      - name: LinestringLayerOptions
+        fullName: LinestringLayerOptions
+        uid: location-based-services-javascript.LinestringLayerOptions
+  - uid: >-
+      Array<location-based-services-javascript.Feature<location-based-services-javascript.Point,
+      location-based-services-javascript.PinProperties>>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: location-based-services-javascript.Feature
+      - name: <
+        fullName: <
+      - name: Point
+        fullName: Point
+        uid: location-based-services-javascript.Point
+      - name: ', '
+        fullName: ', '
+      - name: PinProperties
+        fullName: PinProperties
+        uid: location-based-services-javascript.PinProperties
+      - name: '>>'
+        fullName: '>>'
+  - uid: location-based-services-javascript.PinLayerOptions
+    spec.typeScript:
+      - name: PinLayerOptions
+        fullName: PinLayerOptions
+        uid: location-based-services-javascript.PinLayerOptions
+  - uid: >-
+      Array<location-based-services-javascript.Feature<location-based-services-javascript.Polygon
+      | location-based-services-javascript.MultiPolygon,
+      location-based-services-javascript.PolygonProperties>>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: location-based-services-javascript.Feature
+      - name: <
+        fullName: <
+      - name: Polygon
+        fullName: Polygon
+        uid: location-based-services-javascript.Polygon
+      - name: ' | '
+        fullName: ' | '
+      - name: MultiPolygon
+        fullName: MultiPolygon
+        uid: location-based-services-javascript.MultiPolygon
+      - name: ', '
+        fullName: ', '
+      - name: PolygonProperties
+        fullName: PolygonProperties
+        uid: location-based-services-javascript.PolygonProperties
+      - name: '>>'
+        fullName: '>>'
+  - uid: location-based-services-javascript.PolygonLayerOptions
+    spec.typeScript:
+      - name: PolygonLayerOptions
+        fullName: PolygonLayerOptions
+        uid: location-based-services-javascript.PolygonLayerOptions
+  - uid: location-based-services-javascript.RasterLayerOptions
+    spec.typeScript:
+      - name: RasterLayerOptions
+        fullName: RasterLayerOptions
+        uid: location-based-services-javascript.RasterLayerOptions
+  - uid: >-
+      location-based-services-javascript.CameraOptions &
+      location-based-services-javascript.CameraBoundsOptions
+    spec.typeScript:
+      - name: CameraOptions
+        fullName: CameraOptions
+        uid: location-based-services-javascript.CameraOptions
+      - name: ' & '
+        fullName: ' & '
+      - name: CameraBoundsOptions
+        fullName: CameraBoundsOptions
+        uid: location-based-services-javascript.CameraBoundsOptions
+  - uid: location-based-services-javascript.ServiceOptions
+    spec.typeScript:
+      - name: ServiceOptions
+        fullName: ServiceOptions
+        uid: location-based-services-javascript.ServiceOptions
+  - uid: location-based-services-javascript.StyleOptions
+    spec.typeScript:
+      - name: StyleOptions
+        fullName: StyleOptions
+        uid: location-based-services-javascript.StyleOptions
+  - uid: location-based-services-javascript.TrafficOptions
+    spec.typeScript:
+      - name: TrafficOptions
+        fullName: TrafficOptions
+        uid: location-based-services-javascript.TrafficOptions
+  - uid: location-based-services-javascript.UserInteractionOptions
+    spec.typeScript:
+      - name: UserInteractionOptions
+        fullName: UserInteractionOptions
+        uid: location-based-services-javascript.UserInteractionOptions
+  - uid: >-
+      location-based-services-javascript.CameraOptions &
+      location-based-services-javascript.AnimationOptions
+    spec.typeScript:
+      - name: CameraOptions
+        fullName: CameraOptions
+        uid: location-based-services-javascript.CameraOptions
+      - name: ' & '
+        fullName: ' & '
+      - name: AnimationOptions
+        fullName: AnimationOptions
+        uid: location-based-services-javascript.AnimationOptions
+  - uid: location-based-services-javascript.CameraBoundsOptions
+    spec.typeScript:
+      - name: CameraBoundsOptions
+        fullName: CameraBoundsOptions
+        uid: location-based-services-javascript.CameraBoundsOptions

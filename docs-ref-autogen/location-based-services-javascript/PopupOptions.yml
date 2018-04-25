@@ -17,10 +17,10 @@ items:
       path: map/options/PopupOptions.ts
       startLine: 8
       remote:
-        path: src/SDKs/Js/Map/src\map/options/PopupOptions.ts
+        path: src/MapControl/JavascriptSDK/src\map/options/PopupOptions.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
-        branch: deployments/1803
+        branch: production
     package: location-based-services-javascript
     module: Object Definitions
   - uid: location-based-services-javascript.PopupOptions.content
@@ -70,5 +70,11 @@ items:
       content: 'public position?: Position = new Position(0, 0)'
       return:
         type:
-          - '@location-based-services-javascript.Position'
+          - location-based-services-javascript.Position
     module: Object Definitions
+references:
+  - uid: location-based-services-javascript.Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: location-based-services-javascript.Position

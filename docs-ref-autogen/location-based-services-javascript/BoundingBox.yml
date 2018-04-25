@@ -26,10 +26,10 @@ items:
       path: data/BoundingBox.ts
       startLine: 10
       remote:
-        path: src/SDKs/Js/Map/src\data/BoundingBox.ts
+        path: src/MapControl/JavascriptSDK/src\data/BoundingBox.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
-        branch: deployments/1803
+        branch: production
     package: location-based-services-javascript
     module: atlas.data
   - uid: location-based-services-javascript.BoundingBox.constructor
@@ -46,11 +46,11 @@ items:
       parameters:
         - id: southwestPosition
           type:
-            - '@location-based-services-javascript.Position'
+            - location-based-services-javascript.Position
           description: The southwestern most position of the bounding box.
         - id: northeastPosition
           type:
-            - '@location-based-services-javascript.Position'
+            - location-based-services-javascript.Position
           description: |
             The northeastern most position of the bounding box.
     module: atlas.data
@@ -68,3 +68,9 @@ items:
         type:
           - ArrayConstructor
     module: atlas.data
+references:
+  - uid: location-based-services-javascript.Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: location-based-services-javascript.Position

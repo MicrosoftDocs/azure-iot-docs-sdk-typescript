@@ -21,10 +21,10 @@ items:
       path: data/FeatureCollection.ts
       startLine: 9
       remote:
-        path: src/SDKs/Js/Map/src\data/FeatureCollection.ts
+        path: src/MapControl/JavascriptSDK/src\data/FeatureCollection.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
-        branch: deployments/1803
+        branch: production
     package: location-based-services-javascript
     module: atlas.data
   - uid: location-based-services-javascript.FeatureCollection.constructor
@@ -35,12 +35,13 @@ items:
       - typeScript
     summary: Constructs a FeatureCollection.
     syntax:
-      content: 'new FeatureCollection(features: Array<Feature<Geometry>>)'
+      content: 'new FeatureCollection(features: Array<Feature<Geometry, any>>)'
       parameters:
         - id: features
           type:
             - >-
-              Array<@location-based-services-javascript.Feature<@location-based-services-javascript.Geometry>>
+              Array<location-based-services-javascript.Feature<location-based-services-javascript.Geometry,
+              any>>
           description: |
             The collection of features that make up the feature collection.
     module: atlas.data
@@ -53,11 +54,12 @@ items:
     type: property
     summary: The collection of GeoJSON features contained in the feature collection.
     syntax:
-      content: 'public features: Array<Feature<Geometry>>'
+      content: 'public features: Array<Feature<Geometry, any>>'
       return:
         type:
           - >-
-            Array<@location-based-services-javascript.Feature<@location-based-services-javascript.Geometry>>
+            Array<location-based-services-javascript.Feature<location-based-services-javascript.Geometry,
+            any>>
     module: atlas.data
   - uid: location-based-services-javascript.FeatureCollection.type
     name: type
@@ -89,3 +91,20 @@ items:
         type:
           - string
     module: atlas.data
+references:
+  - uid: >-
+      Array<location-based-services-javascript.Feature<location-based-services-javascript.Geometry,
+      any>>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: location-based-services-javascript.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: location-based-services-javascript.Geometry
+      - name: ', any>>'
+        fullName: ', any>>'

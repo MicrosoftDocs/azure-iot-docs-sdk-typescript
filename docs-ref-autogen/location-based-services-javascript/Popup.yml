@@ -17,10 +17,10 @@ items:
       path: map/Popup.ts
       startLine: 10
       remote:
-        path: src/SDKs/Js/Map/src\map/Popup.ts
+        path: src/MapControl/JavascriptSDK/src\map/Popup.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
-        branch: deployments/1803
+        branch: production
     package: location-based-services-javascript
     module: atlas
   - uid: location-based-services-javascript.Popup.constructor
@@ -35,7 +35,7 @@ items:
       parameters:
         - id: options
           type:
-            - '@location-based-services-javascript.PopupOptions'
+            - location-based-services-javascript.PopupOptions
           description: |
             The options for the popup.
           optional: true
@@ -63,7 +63,7 @@ items:
       parameters: []
       return:
         type:
-          - '@location-based-services-javascript.PopupOptions'
+          - location-based-services-javascript.PopupOptions
     module: atlas
   - uid: location-based-services-javascript.Popup.open
     name: open
@@ -77,7 +77,7 @@ items:
       parameters:
         - id: map
           type:
-            - '@location-based-services-javascript.Map'
+            - location-based-services-javascript.Map
           description: |
             The map.
     module: atlas
@@ -93,8 +93,19 @@ items:
       parameters:
         - id: options
           type:
-            - '@location-based-services-javascript.PopupOptions'
+            - location-based-services-javascript.PopupOptions
           description: |
             The options for the popup.
           optional: true
     module: atlas
+references:
+  - uid: location-based-services-javascript.PopupOptions
+    spec.typeScript:
+      - name: PopupOptions
+        fullName: PopupOptions
+        uid: location-based-services-javascript.PopupOptions
+  - uid: location-based-services-javascript.Map
+    spec.typeScript:
+      - name: Map
+        fullName: Map
+        uid: location-based-services-javascript.Map

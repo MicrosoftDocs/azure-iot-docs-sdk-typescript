@@ -19,10 +19,10 @@ items:
       path: map/options/MapEventData.ts
       startLine: 7
       remote:
-        path: src/SDKs/Js/Map/src\map/options/MapEventData.ts
+        path: src/MapControl/JavascriptSDK/src\map/options/MapEventData.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
-        branch: deployments/1803
+        branch: production
     package: location-based-services-javascript
     module: Object Definitions
   - uid: location-based-services-javascript.MapEventData.coordinate
@@ -50,11 +50,12 @@ items:
     summary: The features associated with the event.
     optional: true
     syntax:
-      content: 'features?: Array<Feature<Geometry>>'
+      content: 'features?: Array<Feature<Geometry, any>>'
       return:
         type:
           - >-
-            Array<@location-based-services-javascript.Feature<@location-based-services-javascript.Geometry>>
+            Array<location-based-services-javascript.Feature<location-based-services-javascript.Geometry,
+            any>>
     module: Object Definitions
   - uid: location-based-services-javascript.MapEventData.originalEvent
     name: originalEvent
@@ -83,7 +84,7 @@ items:
       content: 'position?: Position'
       return:
         type:
-          - '@location-based-services-javascript.Position'
+          - location-based-services-javascript.Position
     module: Object Definitions
   - uid: location-based-services-javascript.MapEventData.type
     name: type
@@ -99,3 +100,25 @@ items:
         type:
           - string
     module: Object Definitions
+references:
+  - uid: >-
+      Array<location-based-services-javascript.Feature<location-based-services-javascript.Geometry,
+      any>>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: location-based-services-javascript.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: location-based-services-javascript.Geometry
+      - name: ', any>>'
+        fullName: ', any>>'
+  - uid: location-based-services-javascript.Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: location-based-services-javascript.Position

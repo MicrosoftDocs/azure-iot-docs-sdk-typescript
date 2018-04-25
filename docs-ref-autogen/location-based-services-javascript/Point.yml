@@ -20,10 +20,10 @@ items:
       path: data/Point.ts
       startLine: 8
       remote:
-        path: src/SDKs/Js/Map/src\data/Point.ts
+        path: src/MapControl/JavascriptSDK/src\data/Point.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
-        branch: deployments/1803
+        branch: production
     package: location-based-services-javascript
     module: atlas.data
   - uid: location-based-services-javascript.Point.constructor
@@ -38,7 +38,7 @@ items:
       parameters:
         - id: coordinates
           type:
-            - '@location-based-services-javascript.Position'
+            - location-based-services-javascript.Position
           description: |
             The position defining the point.
     module: atlas.data
@@ -54,7 +54,7 @@ items:
       content: 'public coordinates: Position'
       return:
         type:
-          - '@location-based-services-javascript.Position'
+          - location-based-services-javascript.Position
     module: atlas.data
   - uid: location-based-services-javascript.Point.type
     name: type
@@ -86,3 +86,9 @@ items:
         type:
           - string
     module: atlas.data
+references:
+  - uid: location-based-services-javascript.Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: location-based-services-javascript.Position

@@ -27,7 +27,7 @@ items:
         path: src/SDKs/Js/Map/src\map/options/PinLayerOptions.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
-        branch: deployments/1804
+        branch: users/chgennar/remarksDocs
     package: azure-maps-javascript
     module: Object Definitions
   - uid: azure-maps-javascript.PinLayerOptions.cluster
@@ -99,7 +99,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The icon of the pins for the layer. Is used as the default if an icon is
+      not specified for a pin.
     optional: true
     syntax:
       content: >-
@@ -138,7 +140,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: The name of the layer.
     optional: true
     syntax:
       content: 'public name?: string = "default-pins"'
@@ -191,7 +193,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The title of the pins for the layer. Is used as the default if a title is
+      not specified for a pin.
     optional: true
     syntax:
       content: 'public title?: string = ""'

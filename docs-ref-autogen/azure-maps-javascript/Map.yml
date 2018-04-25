@@ -46,7 +46,7 @@ items:
         path: src/SDKs/Js/Map/src\map/Map.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
-        branch: deployments/1804
+        branch: users/chgennar/remarksDocs
     package: azure-maps-javascript
     module: atlas
   - uid: azure-maps-javascript.Map.constructor
@@ -88,7 +88,10 @@ items:
       [CircleLayerOptions](xref:azure-maps-javascript.CircleLayerOptions)
       object. Options for the layer
 
-      can only be specified upon the layer's initial creation.
+      can only be specified upon the layer's initial creation. Map must be fully
+      loaded before the circles can be
+
+      added. Use the addEventListener method with event type 'load'.
     syntax:
       content: >-
         function addCircles(circles: Array<Feature<Point, CircleProperties>>,
@@ -312,7 +315,11 @@ items:
       [LinestringLayerOptions](xref:azure-maps-javascript.LinestringLayerOptions)
       object. Options for
 
-      the layer can only be specified upon the layer's initial creation.
+      the layer can only be specified upon the layer's initial creation. Map
+      must be fully loaded before the
+
+      linestrings can be added. Use the addEventListener method with event type
+      'load'.
     syntax:
       content: >-
         function addLinestrings(linestrings: Array<Feature<LineString |
@@ -346,7 +353,10 @@ items:
       [PinLayerOptions](xref:azure-maps-javascript.PinLayerOptions) object.
       Options for the layer can
 
-      only be specified upon the layer's initial creation.
+      only be specified upon the layer's initial creation. Map must be fully
+      loaded before the pins can be added. Use
+
+      the addEventListener method with event type 'load'.
     syntax:
       content: >-
         function addPins(pins: Array<Feature<Point, PinProperties>>, options?:
@@ -378,7 +388,10 @@ items:
       [PolygonLayerOptions](xref:azure-maps-javascript.PolygonLayerOptions)
       object. Options for
 
-      the layer can only be specified upon the layer's initial creation.
+      the layer can only be specified upon the layer's initial creation. Map
+      must be fully loaded before the polygons
+
+      can be added. Use the addEventListener method with event type 'load'.
     syntax:
       content: >-
         function addPolygons(polygons: Array<Feature<Polygon | MultiPolygon,

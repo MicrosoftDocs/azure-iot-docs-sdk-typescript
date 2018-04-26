@@ -1,6 +1,6 @@
 ---
 uid: location-based-services-javascript
-summary: *content
+remarks: *content
 ---
 # Temp
 

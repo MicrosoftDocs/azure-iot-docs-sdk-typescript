@@ -1,0 +1,80 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-maps-javascript.PopupOptions
+    name: PopupOptions
+    fullName: PopupOptions
+    children:
+      - azure-maps-javascript.PopupOptions.content
+      - azure-maps-javascript.PopupOptions.pixelOffset
+      - azure-maps-javascript.PopupOptions.position
+    langs:
+      - typeScript
+    type: class
+    summary: The options for a popup.
+    extends:
+      name: Options
+    source:
+      path: map/options/PopupOptions.ts
+      startLine: 8
+      remote:
+        path: src/SDKs/Js/Map/src\map/options/PopupOptions.ts
+        repo: >-
+          https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
+        branch: deployments/1804
+    package: azure-maps-javascript
+    module: Object Definitions
+  - uid: azure-maps-javascript.PopupOptions.content
+    name: content
+    fullName: content
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The content to display within the popup.
+    optional: true
+    syntax:
+      content: 'public content?: HTMLElement = document.createElement("span")'
+      return:
+        type:
+          - HTMLElement
+    module: Object Definitions
+  - uid: azure-maps-javascript.PopupOptions.pixelOffset
+    name: pixelOffset
+    fullName: pixelOffset
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      An array of [pixelsRight, pixelsDown] for how many pixels to the right and
+      down the anchor of the popup should be
+
+      offset. Negative numbers can be used to offset the popup left and up.
+    optional: true
+    syntax:
+      content: 'public pixelOffset?: number[] = [0, 0]'
+      return:
+        type:
+          - 'number[]'
+    module: Object Definitions
+  - uid: azure-maps-javascript.PopupOptions.position
+    name: position
+    fullName: position
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The position on the map where the popup should be anchored.
+    optional: true
+    syntax:
+      content: 'public position?: Position = new Position(0, 0)'
+      return:
+        type:
+          - azure-maps-javascript.Position
+    module: Object Definitions
+references:
+  - uid: azure-maps-javascript.Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-javascript.Position

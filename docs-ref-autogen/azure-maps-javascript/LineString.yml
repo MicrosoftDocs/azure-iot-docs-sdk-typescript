@@ -1,0 +1,122 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-maps-javascript.LineString
+    name: LineString
+    fullName: LineString
+    children:
+      - azure-maps-javascript.LineString.constructor
+      - azure-maps-javascript.LineString.bbox
+      - azure-maps-javascript.LineString.coordinates
+      - azure-maps-javascript.LineString.type
+      - azure-maps-javascript.LineString.TYPE
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+      A GeoJSON LineString object - a JSON object that represents a geographic
+      curve. The full description is detailed
+
+      in [RFC 7946](https://tools.ietf.org/html/rfc7946#section-3.1.4).
+    source:
+      path: data/LineString.ts
+      startLine: 9
+      remote:
+        path: src/SDKs/Js/Map/src\data/LineString.ts
+        repo: >-
+          https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
+        branch: deployments/1804
+    package: azure-maps-javascript
+    module: atlas.data
+  - uid: azure-maps-javascript.LineString.constructor
+    name: LineString
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a LineString.
+    syntax:
+      content: 'new LineString(coordinates: Position[], bbox?: BoundingBox)'
+      parameters:
+        - id: coordinates
+          type:
+            - 'azure-maps-javascript.Position[]'
+          description: The ordered list of positions defining the linestring.
+        - id: bbox
+          type:
+            - azure-maps-javascript.BoundingBox
+          description: |
+            The bounding box of the linestring.
+          optional: true
+    module: atlas.data
+  - uid: azure-maps-javascript.LineString.bbox
+    name: bbox
+    fullName: bbox
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The bounding box of the linestring.
+    optional: true
+    syntax:
+      content: 'public bbox?: BoundingBox'
+      return:
+        type:
+          - azure-maps-javascript.BoundingBox
+    module: atlas.data
+  - uid: azure-maps-javascript.LineString.coordinates
+    name: coordinates
+    fullName: coordinates
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The ordered list of positions defining the linestring.
+    syntax:
+      content: 'public coordinates: Position[]'
+      return:
+        type:
+          - 'azure-maps-javascript.Position[]'
+    module: atlas.data
+  - uid: azure-maps-javascript.LineString.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A GeoJSON type descriptor with value "LineString".
+    syntax:
+      content: 'public type: string = "LineString"'
+      return:
+        type:
+          - string
+    module: atlas.data
+  - uid: azure-maps-javascript.LineString.TYPE
+    name: TYPE
+    fullName: TYPE
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      A static GeoJSON type descriptor for the LineString class to be used in
+      runtime comparisons.
+    syntax:
+      content: 'public static TYPE: string = "LineString"'
+      return:
+        type:
+          - string
+    module: atlas.data
+references:
+  - uid: 'azure-maps-javascript.Position[]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-javascript.Position
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-javascript.BoundingBox
+    spec.typeScript:
+      - name: BoundingBox
+        fullName: BoundingBox
+        uid: azure-maps-javascript.BoundingBox

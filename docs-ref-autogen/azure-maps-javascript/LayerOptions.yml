@@ -1,0 +1,142 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-maps-javascript.LayerOptions
+    name: LayerOptions
+    fullName: LayerOptions
+    children:
+      - azure-maps-javascript.LayerOptions.before
+      - azure-maps-javascript.LayerOptions.defer
+      - azure-maps-javascript.LayerOptions.maxZoom
+      - azure-maps-javascript.LayerOptions.minZoom
+      - azure-maps-javascript.LayerOptions.name
+      - azure-maps-javascript.LayerOptions.opacity
+      - azure-maps-javascript.LayerOptions.overwrite
+    langs:
+      - typeScript
+    type: class
+    summary: The options for a layer of the map.
+    extends:
+      name: Options
+    source:
+      path: map/options/LayerOptions.ts
+      startLine: 7
+      remote:
+        path: src/SDKs/Js/Map/src\map/options/LayerOptions.ts
+        repo: >-
+          https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
+        branch: deployments/1804
+    package: azure-maps-javascript
+    module: Object Definitions
+  - uid: azure-maps-javascript.LayerOptions.before
+    name: before
+    fullName: before
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The name of the layer to place this layer before.  If not specified, the
+      layer will be placed at the top of the
+
+      layer list.
+    optional: true
+    syntax:
+      content: 'public before?: string = undefined'
+      return:
+        type:
+          - string
+    module: Object Definitions
+  - uid: azure-maps-javascript.LayerOptions.defer
+    name: defer
+    fullName: defer
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Whether to defer the layer's updates to the map until a subsequent layer's
+      update or an update to the map's
+
+      style options.
+    optional: true
+    syntax:
+      content: 'public defer?: boolean = false'
+      return:
+        type:
+          - boolean
+    module: Object Definitions
+  - uid: azure-maps-javascript.LayerOptions.maxZoom
+    name: maxZoom
+    fullName: maxZoom
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The maximum zoom at which the layer will display inclusive.
+    optional: true
+    syntax:
+      content: 'public maxZoom?: number = 20'
+      return:
+        type:
+          - number
+    module: Object Definitions
+  - uid: azure-maps-javascript.LayerOptions.minZoom
+    name: minZoom
+    fullName: minZoom
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The minimum zoom at which the layer will display inclusive.
+    optional: true
+    syntax:
+      content: 'public minZoom?: number = 1'
+      return:
+        type:
+          - number
+    module: Object Definitions
+  - uid: azure-maps-javascript.LayerOptions.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The name of the layer.
+    optional: true
+    syntax:
+      content: 'public name?: string = undefined'
+      return:
+        type:
+          - string
+    module: Object Definitions
+  - uid: azure-maps-javascript.LayerOptions.opacity
+    name: opacity
+    fullName: opacity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The opacity of the layer.
+    optional: true
+    syntax:
+      content: 'public opacity?: number = 1'
+      return:
+        type:
+          - number
+    module: Object Definitions
+  - uid: azure-maps-javascript.LayerOptions.overwrite
+    name: overwrite
+    fullName: overwrite
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Whether to overwrite previous data for the layer.
+    optional: true
+    syntax:
+      content: 'public overwrite?: boolean = false'
+      return:
+        type:
+          - boolean
+    module: Object Definitions

@@ -1,0 +1,68 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-maps-javascript.ServiceOptions
+    name: ServiceOptions
+    fullName: ServiceOptions
+    children:
+      - azure-maps-javascript.ServiceOptions.disable-telemetry
+      - azure-maps-javascript.ServiceOptions.session-id
+      - azure-maps-javascript.ServiceOptions.subscription-key
+    langs:
+      - typeScript
+    type: class
+    summary: Global properties used in all atlas service requests.
+    extends:
+      name: Options
+    source:
+      path: services/options/ServiceOptions.ts
+      startLine: 8
+      remote:
+        path: src/SDKs/Js/Map/src\services/options/ServiceOptions.ts
+        repo: >-
+          https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
+        branch: deployments/1804
+    package: azure-maps-javascript
+    module: Object Definitions
+  - uid: azure-maps-javascript.ServiceOptions.disable-telemetry
+    name: disable-telemetry
+    fullName: disable-telemetry
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Disable telemetry collection
+    syntax:
+      content: 'public disable-telemetry: boolean = false'
+      return:
+        type:
+          - boolean
+    module: Object Definitions
+  - uid: azure-maps-javascript.ServiceOptions.session-id
+    name: session-id
+    fullName: session-id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The session id to pass with requests.
+    optional: true
+    syntax:
+      content: 'public session-id?: string = UUID.generate()'
+      return:
+        type:
+          - string
+    module: Object Definitions
+  - uid: azure-maps-javascript.ServiceOptions.subscription-key
+    name: subscription-key
+    fullName: subscription-key
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The customer subscription key used to authorize requests.
+    syntax:
+      content: 'public subscription-key: string = undefined'
+      return:
+        type:
+          - string
+    module: Object Definitions

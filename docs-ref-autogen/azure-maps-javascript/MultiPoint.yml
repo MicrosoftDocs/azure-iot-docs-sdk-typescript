@@ -25,9 +25,8 @@ items:
         path: src/SDKs/Js/Map/src\data/MultiPoint.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
-        branch: deployments/1805
+        branch: deployments/mapcontrol/1807
     package: azure-maps-javascript
-    module: atlas.data
   - uid: azure-maps-javascript.MultiPoint.constructor
     name: MultiPoint
     children: []
@@ -48,7 +47,7 @@ items:
           description: |
             The bounding box of the multipoint.
           optional: true
-    module: atlas.data
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.MultiPoint.bbox
     name: bbox
     fullName: bbox
@@ -63,7 +62,7 @@ items:
       return:
         type:
           - azure-maps-javascript.BoundingBox
-    module: atlas.data
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.MultiPoint.coordinates
     name: coordinates
     fullName: coordinates
@@ -77,7 +76,7 @@ items:
       return:
         type:
           - 'azure-maps-javascript.Position[]'
-    module: atlas.data
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.MultiPoint.type
     name: type
     fullName: type
@@ -91,7 +90,7 @@ items:
       return:
         type:
           - string
-    module: atlas.data
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.MultiPoint.TYPE
     name: TYPE
     fullName: TYPE
@@ -107,7 +106,7 @@ items:
       return:
         type:
           - string
-    module: atlas.data
+    package: azure-maps-javascript
 references:
   - uid: 'azure-maps-javascript.Position[]'
     spec.typeScript:

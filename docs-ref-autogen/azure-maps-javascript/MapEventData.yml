@@ -22,9 +22,8 @@ items:
         path: src/SDKs/Js/Map/src\map/options/MapEventData.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
-        branch: deployments/1805
+        branch: deployments/mapcontrol/1807
     package: azure-maps-javascript
-    module: Object Definitions
   - uid: azure-maps-javascript.MapEventData.coordinate
     name: coordinate
     fullName: coordinate
@@ -39,7 +38,7 @@ items:
       return:
         type:
           - 'number[]'
-    module: Object Definitions
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.MapEventData.features
     name: features
     fullName: features
@@ -56,7 +55,7 @@ items:
           - >-
             Array<azure-maps-javascript.Feature<azure-maps-javascript.Geometry,
             any>>
-    module: Object Definitions
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.MapEventData.originalEvent
     name: originalEvent
     fullName: originalEvent
@@ -70,7 +69,7 @@ items:
       return:
         type:
           - Event
-    module: Object Definitions
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.MapEventData.position
     name: position
     fullName: position
@@ -85,7 +84,7 @@ items:
       return:
         type:
           - azure-maps-javascript.Position
-    module: Object Definitions
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.MapEventData.type
     name: type
     fullName: type
@@ -99,7 +98,7 @@ items:
       return:
         type:
           - string
-    module: Object Definitions
+    package: azure-maps-javascript
 references:
   - uid: 'Array<azure-maps-javascript.Feature<azure-maps-javascript.Geometry, any>>'
     spec.typeScript:

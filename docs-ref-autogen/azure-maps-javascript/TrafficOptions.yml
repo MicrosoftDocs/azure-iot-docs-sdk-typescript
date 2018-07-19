@@ -19,9 +19,8 @@ items:
         path: src/SDKs/Js/Map/src\map/options/TrafficOptions.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
-        branch: deployments/1805
+        branch: deployments/mapcontrol/1807
     package: azure-maps-javascript
-    module: Object Definitions
   - uid: azure-maps-javascript.TrafficOptions.flow
     name: flow
     fullName: flow
@@ -50,7 +49,7 @@ items:
       return:
         type:
           - '"none" | "relative" | "absolute" | "relative-delay"'
-    module: Object Definitions
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.TrafficOptions.incidents
     name: incidents
     fullName: incidents
@@ -65,4 +64,4 @@ items:
       return:
         type:
           - boolean
-    module: Object Definitions
+    package: azure-maps-javascript

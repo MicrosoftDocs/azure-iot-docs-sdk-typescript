@@ -20,9 +20,8 @@ items:
         path: src/SDKs/Js/Map/src\map/options/StyleOptions.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
-        branch: deployments/1805
+        branch: deployments/mapcontrol/1807
     package: azure-maps-javascript
-    module: Object Definitions
   - uid: azure-maps-javascript.StyleOptions.language
     name: language
     fullName: language
@@ -37,7 +36,7 @@ items:
       return:
         type:
           - string
-    module: Object Definitions
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.StyleOptions.style
     name: style
     fullName: style
@@ -48,11 +47,11 @@ items:
     summary: The style of the map tiles.
     optional: true
     syntax:
-      content: 'public style?: "vector" = "vector"'
+      content: 'public style?: string = "road"'
       return:
         type:
-          - '"vector"'
-    module: Object Definitions
+          - string
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.StyleOptions.view
     name: view
     fullName: view
@@ -69,4 +68,4 @@ items:
       return:
         type:
           - '"Unified"'
-    module: Object Definitions
+    package: azure-maps-javascript

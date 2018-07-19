@@ -22,9 +22,8 @@ items:
         path: src/SDKs/Js/Map/src\map/Popup.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
-        branch: deployments/1805
+        branch: deployments/mapcontrol/1807
     package: azure-maps-javascript
-    module: atlas
   - uid: azure-maps-javascript.Popup.constructor
     name: Popup
     children: []
@@ -41,7 +40,7 @@ items:
           description: |
             The options for the popup.
           optional: true
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Popup.attach
     name: attach
     children: []
@@ -57,7 +56,7 @@ items:
             - azure-maps-javascript.Map
           description: |
             The map.
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Popup.close
     name: close
     children: []
@@ -70,7 +69,7 @@ items:
     syntax:
       content: function close()
       parameters: []
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Popup.getPopupOptions
     name: getPopupOptions
     children: []
@@ -84,7 +83,7 @@ items:
       return:
         type:
           - azure-maps-javascript.PopupOptions
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Popup.open
     name: open
     children: []
@@ -100,7 +99,7 @@ items:
             - azure-maps-javascript.Map
           description: |
             The map.
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Popup.remove
     name: remove
     children: []
@@ -111,7 +110,7 @@ items:
     syntax:
       content: function remove()
       parameters: []
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Popup.setPopupOptions
     name: setPopupOptions
     children: []
@@ -128,7 +127,7 @@ items:
           description: |
             The options for the popup.
           optional: true
-    module: atlas
+    package: azure-maps-javascript
 references:
   - uid: azure-maps-javascript.PopupOptions
     spec.typeScript:

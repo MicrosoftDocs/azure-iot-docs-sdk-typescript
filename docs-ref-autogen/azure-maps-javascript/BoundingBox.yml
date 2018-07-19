@@ -29,9 +29,8 @@ items:
         path: src/SDKs/Js/Map/src\data/BoundingBox.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
-        branch: deployments/1805
+        branch: deployments/mapcontrol/1807
     package: azure-maps-javascript
-    module: atlas.data
   - uid: azure-maps-javascript.BoundingBox.constructor
     name: BoundingBox
     children: []
@@ -53,7 +52,7 @@ items:
             - azure-maps-javascript.Position
           description: |
             The northeastern most position of the bounding box.
-    module: atlas.data
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.BoundingBox.Array
     name: Array
     fullName: Array
@@ -67,7 +66,7 @@ items:
       return:
         type:
           - ArrayConstructor
-    module: atlas.data
+    package: azure-maps-javascript
 references:
   - uid: azure-maps-javascript.Position
     spec.typeScript:

@@ -1,0 +1,89 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-maps-javascript.StyleControl
+    name: StyleControl
+    fullName: StyleControl
+    children:
+      - azure-maps-javascript.StyleControl.constructor
+      - azure-maps-javascript.StyleControl.onAdd
+      - azure-maps-javascript.StyleControl.onRemove
+    langs:
+      - typeScript
+    type: class
+    summary: A control for changing the style of the map.
+    source:
+      path: controls/StyleControl/StyleControl.ts
+      startLine: 15
+      remote:
+        path: src/SDKs/Js/Map/src\controls/StyleControl/StyleControl.ts
+        repo: >-
+          https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
+        branch: deployments/mapcontrol/1807
+    package: azure-maps-javascript
+  - uid: azure-maps-javascript.StyleControl.constructor
+    name: StyleControl
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a StyleControl.
+    syntax:
+      content: 'new StyleControl(options?: StyleControlOptions)'
+      parameters:
+        - id: options
+          type:
+            - azure-maps-javascript.StyleControlOptions
+          description: |
+            The options for the control.
+          optional: true
+    package: azure-maps-javascript
+  - uid: azure-maps-javascript.StyleControl.onAdd
+    name: onAdd
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function onAdd(map: Map, options?: ControlOptions)'
+      parameters:
+        - id: map
+          type:
+            - azure-maps-javascript.Map
+          description: ''
+        - id: options
+          type:
+            - azure-maps-javascript.ControlOptions
+          description: ''
+          optional: true
+      return:
+        type:
+          - HTMLElement
+    package: azure-maps-javascript
+  - uid: azure-maps-javascript.StyleControl.onRemove
+    name: onRemove
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function onRemove()
+      parameters: []
+    package: azure-maps-javascript
+references:
+  - uid: azure-maps-javascript.StyleControlOptions
+    spec.typeScript:
+      - name: StyleControlOptions
+        fullName: StyleControlOptions
+        uid: azure-maps-javascript.StyleControlOptions
+  - uid: azure-maps-javascript.Map
+    spec.typeScript:
+      - name: Map
+        fullName: Map
+        uid: azure-maps-javascript.Map
+  - uid: azure-maps-javascript.ControlOptions
+    spec.typeScript:
+      - name: ControlOptions
+        fullName: ControlOptions
+        uid: azure-maps-javascript.ControlOptions

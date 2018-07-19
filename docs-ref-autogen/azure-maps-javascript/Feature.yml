@@ -25,9 +25,8 @@ items:
         path: src/SDKs/Js/Map/src\data/Feature.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
-        branch: deployments/1805
+        branch: deployments/mapcontrol/1807
     package: azure-maps-javascript
-    module: atlas.data
   - uid: azure-maps-javascript.Feature.constructor
     name: Feature
     children: []
@@ -53,7 +52,7 @@ items:
           description: |
             The id of the feature.
           optional: true
-    module: atlas.data
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Feature.geometry
     name: geometry
     fullName: geometry
@@ -67,7 +66,7 @@ items:
       return:
         type:
           - G
-    module: atlas.data
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Feature.id
     name: id
     fullName: id
@@ -82,7 +81,7 @@ items:
       return:
         type:
           - string
-    module: atlas.data
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Feature.properties
     name: properties
     fullName: properties
@@ -97,7 +96,7 @@ items:
       return:
         type:
           - any
-    module: atlas.data
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Feature.type
     name: type
     fullName: type
@@ -111,7 +110,7 @@ items:
       return:
         type:
           - string
-    module: atlas.data
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Feature.TYPE
     name: TYPE
     fullName: TYPE
@@ -127,4 +126,4 @@ items:
       return:
         type:
           - string
-    module: atlas.data
+    package: azure-maps-javascript

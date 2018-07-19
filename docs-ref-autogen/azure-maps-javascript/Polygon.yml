@@ -24,9 +24,8 @@ items:
         path: src/SDKs/Js/Map/src\data/Polygon.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
-        branch: deployments/1805
+        branch: deployments/mapcontrol/1807
     package: azure-maps-javascript
-    module: atlas.data
   - uid: azure-maps-javascript.Polygon.constructor
     name: Polygon
     children: []
@@ -47,7 +46,7 @@ items:
           description: |
             The bounding box of the polygon.
           optional: true
-    module: atlas.data
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Polygon.bbox
     name: bbox
     fullName: bbox
@@ -62,7 +61,7 @@ items:
       return:
         type:
           - azure-maps-javascript.BoundingBox
-    module: atlas.data
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Polygon.coordinates
     name: coordinates
     fullName: coordinates
@@ -76,7 +75,7 @@ items:
       return:
         type:
           - 'azure-maps-javascript.Position[][]'
-    module: atlas.data
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Polygon.type
     name: type
     fullName: type
@@ -90,7 +89,7 @@ items:
       return:
         type:
           - string
-    module: atlas.data
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Polygon.TYPE
     name: TYPE
     fullName: TYPE
@@ -106,7 +105,7 @@ items:
       return:
         type:
           - string
-    module: atlas.data
+    package: azure-maps-javascript
 references:
   - uid: 'azure-maps-javascript.Position[][]'
     spec.typeScript:

@@ -1,0 +1,88 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-maps-javascript.CompassControl
+    name: CompassControl
+    fullName: CompassControl
+    children:
+      - azure-maps-javascript.CompassControl.constructor
+      - azure-maps-javascript.CompassControl.onAdd
+      - azure-maps-javascript.CompassControl.onRemove
+    langs:
+      - typeScript
+    type: class
+    summary: A control for changing the rotation of the map.
+    source:
+      path: controls/CompassControl/CompassControl.ts
+      startLine: 10
+      remote:
+        path: src/SDKs/Js/Map/src\controls/CompassControl/CompassControl.ts
+        repo: >-
+          https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
+        branch: deployments/mapcontrol/1807
+    package: azure-maps-javascript
+  - uid: azure-maps-javascript.CompassControl.constructor
+    name: CompassControl
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a CompassControl.
+    syntax:
+      content: 'new CompassControl(options?: CompassControlOptions)'
+      parameters:
+        - id: options
+          type:
+            - azure-maps-javascript.CompassControlOptions
+          description: |
+            The options for the control.
+          optional: true
+    package: azure-maps-javascript
+  - uid: azure-maps-javascript.CompassControl.onAdd
+    name: onAdd
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function onAdd(map: Map, options: ControlOptions)'
+      parameters:
+        - id: map
+          type:
+            - azure-maps-javascript.Map
+          description: ''
+        - id: options
+          type:
+            - azure-maps-javascript.ControlOptions
+          description: ''
+      return:
+        type:
+          - HTMLElement
+    package: azure-maps-javascript
+  - uid: azure-maps-javascript.CompassControl.onRemove
+    name: onRemove
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function onRemove()
+      parameters: []
+    package: azure-maps-javascript
+references:
+  - uid: azure-maps-javascript.CompassControlOptions
+    spec.typeScript:
+      - name: CompassControlOptions
+        fullName: CompassControlOptions
+        uid: azure-maps-javascript.CompassControlOptions
+  - uid: azure-maps-javascript.Map
+    spec.typeScript:
+      - name: Map
+        fullName: Map
+        uid: azure-maps-javascript.Map
+  - uid: azure-maps-javascript.ControlOptions
+    spec.typeScript:
+      - name: ControlOptions
+        fullName: ControlOptions
+        uid: azure-maps-javascript.ControlOptions

@@ -42,14 +42,13 @@ items:
     summary: The control for a visual and interactive web map.
     source:
       path: map/Map.ts
-      startLine: 50
+      startLine: 46
       remote:
         path: src/SDKs/Js/Map/src\map/Map.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
-        branch: deployments/1805
+        branch: deployments/mapcontrol/1807
     package: azure-maps-javascript
-    module: atlas
   - uid: azure-maps-javascript.Map.constructor
     name: Map
     children: []
@@ -75,7 +74,7 @@ items:
               azure-maps-javascript.UserInteractionOptions
           description: |
             Options for the initial display and interactability with the map.
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.addCircles
     name: addCircles
     children: []
@@ -110,7 +109,7 @@ items:
           description: |
             The layer options for the circles.
           optional: true
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.addControl
     name: addControl
     children: []
@@ -131,7 +130,7 @@ items:
           description: |
             The options for the added control.
           optional: true
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.addEventListener
     name: addEventListener
     children: []
@@ -203,7 +202,7 @@ items:
             - any
           description: |
             The callback to fire when the event occurs.
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.addEventListener_1
     name: addEventListener
     children: []
@@ -255,7 +254,7 @@ items:
             - any
           description: |
             The callback to fire when the event occurs.
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.addHtml
     name: addHtml
     children: []
@@ -278,7 +277,7 @@ items:
       return:
         type:
           - string
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.addIcon
     name: addIcon
     children: []
@@ -302,7 +301,7 @@ items:
             - HTMLImageElement
           description: |
             The icon image.
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.addLinestrings
     name: addLinestrings
     children: []
@@ -340,7 +339,7 @@ items:
           description: |
             The layer options for the linestrings.
           optional: true
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.addPins
     name: addPins
     children: []
@@ -375,7 +374,7 @@ items:
           description: |
             The layer options for the pins.
           optional: true
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.addPolygons
     name: addPolygons
     children: []
@@ -411,7 +410,7 @@ items:
           description: |
             The layer options for the polygons.
           optional: true
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.addRaster
     name: addRaster
     children: []
@@ -449,7 +448,7 @@ items:
           description: |
             The options for the raster layer.
           optional: true
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.getCamera
     name: getCamera
     children: []
@@ -465,7 +464,7 @@ items:
           - >-
             azure-maps-javascript.CameraOptions &
             azure-maps-javascript.CameraBoundsOptions
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.getCanvas
     name: getCanvas
     children: []
@@ -479,7 +478,7 @@ items:
       return:
         type:
           - HTMLCanvasElement
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.getCanvasContainer
     name: getCanvasContainer
     children: []
@@ -497,7 +496,7 @@ items:
       return:
         type:
           - HTMLElement
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.getLayers
     name: getLayers
     children: []
@@ -511,7 +510,7 @@ items:
       return:
         type:
           - 'string[]'
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.getMapContainer
     name: getMapContainer
     children: []
@@ -525,7 +524,7 @@ items:
       return:
         type:
           - HTMLElement
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.getServiceOptions
     name: getServiceOptions
     children: []
@@ -539,7 +538,7 @@ items:
       return:
         type:
           - azure-maps-javascript.ServiceOptions
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.getStyle
     name: getStyle
     children: []
@@ -553,7 +552,7 @@ items:
       return:
         type:
           - azure-maps-javascript.StyleOptions
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.getTraffic
     name: getTraffic
     children: []
@@ -567,7 +566,7 @@ items:
       return:
         type:
           - azure-maps-javascript.TrafficOptions
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.getUserInteraction
     name: getUserInteraction
     children: []
@@ -581,7 +580,7 @@ items:
       return:
         type:
           - azure-maps-javascript.UserInteractionOptions
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.remove
     name: remove
     children: []
@@ -594,7 +593,7 @@ items:
     syntax:
       content: function remove()
       parameters: []
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.removeControl
     name: removeControl
     children: []
@@ -610,7 +609,7 @@ items:
             - azure-maps-javascript.Control
           description: |
             The control to remove.
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.removeEventListener
     name: removeEventListener
     children: []
@@ -630,7 +629,7 @@ items:
             - any
           description: |
             The callback of the event listener.
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.removeEventListener_1
     name: removeEventListener
     children: []
@@ -654,7 +653,7 @@ items:
             - any
           description: |
             The callback of the event listener.
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.removeHtml
     name: removeHtml
     children: []
@@ -670,7 +669,7 @@ items:
             - string
           description: |
             The id of element to remove.
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.removeLayers
     name: removeLayers
     children: []
@@ -686,7 +685,7 @@ items:
             - 'string[]'
           description: |
             An array of layer names to remove from the map.
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.resize
     name: resize
     children: []
@@ -697,7 +696,7 @@ items:
     syntax:
       content: function resize()
       parameters: []
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.setCamera
     name: setCamera
     children: []
@@ -721,7 +720,7 @@ items:
             The options for setting the map's camera and for the animation of
             any view change.
           optional: true
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.setCameraBounds
     name: setCameraBounds
     children: []
@@ -738,7 +737,7 @@ items:
           description: |
             The options for setting the map's camera bounds.
           optional: true
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.setStyle
     name: setStyle
     children: []
@@ -757,10 +756,7 @@ items:
           description: |
             The options for setting the style of the map control.
           optional: true
-      return:
-        type:
-          - Promise<void>
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.setTraffic
     name: setTraffic
     children: []
@@ -779,7 +775,7 @@ items:
           description: |
             The options for defining the map's traffic display.
           optional: true
-    module: atlas
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Map.setUserInteraction
     name: setUserInteraction
     children: []
@@ -798,7 +794,7 @@ items:
           description: |
             The options for enabling/disabling the user interaction handlers.
           optional: true
-    module: atlas
+    package: azure-maps-javascript
 references:
   - uid: >-
       azure-maps-javascript.ServiceOptions & azure-maps-javascript.CameraOptions

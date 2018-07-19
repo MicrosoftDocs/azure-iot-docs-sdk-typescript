@@ -24,9 +24,8 @@ items:
         path: src/SDKs/Js/Map/src\data/Position.ts
         repo: >-
           https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
-        branch: deployments/1805
+        branch: deployments/mapcontrol/1807
     package: azure-maps-javascript
-    module: atlas.data
   - uid: azure-maps-javascript.Position.constructor
     name: Position
     children: []
@@ -49,9 +48,9 @@ items:
           type:
             - number
           description: |
-            THe position's elevation.
+            The position's elevation.
           optional: true
-    module: atlas.data
+    package: azure-maps-javascript
   - uid: azure-maps-javascript.Position.Array
     name: Array
     fullName: Array
@@ -65,4 +64,4 @@ items:
       return:
         type:
           - ArrayConstructor
-    module: atlas.data
+    package: azure-maps-javascript

@@ -1,0 +1,1107 @@
+### YamlMime:UniversalReference
+items:
+  - uid: atlas-service.atlas.Map
+    name: Map
+    fullName: Map
+    children:
+      - atlas-service.atlas.Map.constructor
+      - atlas-service.atlas.Map.map
+      - atlas-service.atlas.Map.addCircles
+      - atlas-service.atlas.Map.addControl
+      - atlas-service.atlas.Map.addEventListener
+      - atlas-service.atlas.Map.addEventListener_1
+      - atlas-service.atlas.Map.addHtml
+      - atlas-service.atlas.Map.addIcon
+      - atlas-service.atlas.Map.addLinestrings
+      - atlas-service.atlas.Map.addPins
+      - atlas-service.atlas.Map.addPolygons
+      - atlas-service.atlas.Map.addRaster
+      - atlas-service.atlas.Map.getCamera
+      - atlas-service.atlas.Map.getCanvas
+      - atlas-service.atlas.Map.getCanvasContainer
+      - atlas-service.atlas.Map.getLayers
+      - atlas-service.atlas.Map.getMapContainer
+      - atlas-service.atlas.Map.getServiceOptions
+      - atlas-service.atlas.Map.getStyle
+      - atlas-service.atlas.Map.getTraffic
+      - atlas-service.atlas.Map.getUserInteraction
+      - atlas-service.atlas.Map.remove
+      - atlas-service.atlas.Map.removeControl
+      - atlas-service.atlas.Map.removeEventListener
+      - atlas-service.atlas.Map.removeEventListener_1
+      - atlas-service.atlas.Map.removeHtml
+      - atlas-service.atlas.Map.removeLayers
+      - atlas-service.atlas.Map.resize
+      - atlas-service.atlas.Map.setCamera
+      - atlas-service.atlas.Map.setCameraBounds
+      - atlas-service.atlas.Map.setStyle
+      - atlas-service.atlas.Map.setTraffic
+      - atlas-service.atlas.Map.setUserInteraction
+    langs:
+      - typeScript
+    type: class
+    summary: The control for a visual and interactive web map.
+    source:
+      path: index.d.ts
+      startLine: 280
+      remote:
+        path: src/SDKs/Js/Services/typings\index.d.ts
+        repo: >-
+          https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
+        branch: users/chgennar/declarationDocs
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.constructor
+    name: Map
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Displays a map in the specified container.
+    syntax:
+      content: >-
+        new Map(container: string, options: ServiceOptions & CameraOptions &
+        StyleOptions & UserInteractionOptions)
+      parameters:
+        - id: container
+          type:
+            - string
+          description: The id of the element where the map should be displayed.
+        - id: options
+          type:
+            - >-
+              atlas-service.atlas.ServiceOptions &
+              atlas-service.atlas.CameraOptions &
+              atlas-service.atlas.StyleOptions &
+              atlas-service.atlas.UserInteractionOptions
+          description: |
+            Options for the initial display and interactability with the map.
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.map
+    name: map
+    fullName: map
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'public map: Mapbox.Map'
+      return:
+        type:
+          - Mapbox.Map
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.addCircles
+    name: addCircles
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Add a collection of points to a layer of the map as circles. The layer and
+      its options can be specified through a
+
+      [CircleLayerOptions](xref:azure-maps-javascript.CircleLayerOptions)
+      object. Options for the layer
+
+      can only be specified upon the layer's initial creation. Map must be fully
+      loaded before the circles can be
+
+      added. Use the addEventListener method with event type 'load'.
+    syntax:
+      content: >-
+        function addCircles(circles: Array<Feature<Point, CircleProperties>>,
+        options?: CircleLayerOptions)
+      parameters:
+        - id: circles
+          type:
+            - >-
+              Array<atlas-service.atlas.atlas.data.Feature<atlas-service.atlas.atlas.data.Point,
+              atlas-service.atlas.CircleProperties>>
+          description: The circles to add.
+        - id: options
+          type:
+            - atlas-service.atlas.CircleLayerOptions
+          description: |
+            The layer options for the circles.
+          optional: true
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.addControl
+    name: addControl
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Add a control to the map.
+    syntax:
+      content: 'function addControl(control: Control, options?: ControlOptions)'
+      parameters:
+        - id: control
+          type:
+            - atlas-service.atlas.Control
+          description: The control to add.
+        - id: options
+          type:
+            - atlas-service.atlas.ControlOptions
+          description: |
+            The options for the added control.
+          optional: true
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.addEventListener
+    name: addEventListener
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Add an event listener to the map.
+    syntax:
+      content: 'function addEventListener(type: string, callback: any)'
+      parameters:
+        - id: type
+          type:
+            - string
+          description: >-
+            The event listener types:
+
+            <p>'click':  A pointing device is pressed and released at the same
+            point on the map.</p>
+
+            <p>'dblclick':  A pointing device is clicked twice on the map.</p>
+
+            <p>'mousemove': A pointing device is moved within the map. </p>
+
+            <p>'mouseup': A pointing device is released within the map. </p>
+
+            <p>'mousedown': A pointing device is pressed within the map. </p>
+
+            <p>'mouseout': A pointing device leaves the map's canvas.</p>
+
+            <p>'touchstart': A touch point is placed on the touch surface. </p>
+
+            <p>'touchend': A touch point is removed from the touch surface. </p>
+
+            <p>'touchmove': A touch point is moved along the touch surface. </p>
+
+            <p>'drag': An element is dragged. </p>
+
+            <p>'dragstart': The user starts dragging an element.</p>
+
+            <p>'dragend': A drag operation is ended.</p>
+
+            <p>'zoomstart': Just before the map transitions from one zoom level
+            to another.</p>
+
+            <p>'zoom': During the map transitions from one zoom level to
+            another.</p>
+
+            <p>'zoomend': After the map completes a transition from one zoom
+            level to another.</p>
+
+            <p>'rotatestart': When a "drag to rotate" starts.</p>
+
+            <p>'rotate': During a "drag to rotate" interaction.</p>
+
+            <p>'rotateend': After When a "drag to rotate" ends.</p>
+
+            <p>'pitchstart': When the map's pitch (tilt) starts to change.</p>
+
+            <p>'pitch': Whenever the map's pitch (tilt) changes.</p>
+
+            <p>'pitchend': After the map's pitch (tilt) completes the
+            change.</p>
+
+            <p>'resize': The document view has been resized.<p>
+
+            <p>'load': Progression has been successful.</p>
+        - id: callback
+          type:
+            - any
+          description: |
+            The callback to fire when the event occurs.
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.addEventListener_1
+    name: addEventListener
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Add an event listener to a layer of the map. Event listeners cannot be
+      added to the default "base", "transit" and
+
+      "labels" layers of the map.
+    syntax:
+      content: 'function addEventListener(type: string, layer: string, callback: any)'
+      parameters:
+        - id: type
+          type:
+            - string
+          description: >-
+            The event listener types:
+
+            <p>'click':  A pointing device is pressed and released at the same
+            point on the map.</p>
+
+            <p>'dblclick':  A pointing device is clicked twice on the map.</p>
+
+            <p>'mousemove': A pointing device is moved within the map. </p>
+
+            <p>'mouseup': A pointing device is released within the map. </p>
+
+            <p>'mousedown': A pointing device is pressed within the map. </p>
+
+            <p>'mouseenter': A pointing device is moved onto a specific layer
+            that has the listener attached. </p>
+
+            <p>'mouseleave': A pointing device is moved off a specific layer
+            that has the listener attached.</p>
+
+            <p>'mouseover': A pointing device is moved within the map.</p>
+
+            <p>'touchstart': A touch point is placed on the touch surface. </p>
+
+            <p>'touchend': A touch point is removed from the touch surface. </p>
+        - id: layer
+          type:
+            - string
+          description: The layer of the map.
+        - id: callback
+          type:
+            - any
+          description: |
+            The callback to fire when the event occurs.
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.addHtml
+    name: addHtml
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds a custom HTMLElement to the map at a specified position.
+    syntax:
+      content: 'function addHtml(element: HTMLElement, position: Position)'
+      parameters:
+        - id: element
+          type:
+            - HTMLElement
+          description: The HTMLElement to add.
+        - id: position
+          type:
+            - Position
+          description: |
+            The position to place the element.
+      return:
+        type:
+          - string
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.addIcon
+    name: addIcon
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Add an icon to the map to use for pins. Map and image must be fully loaded
+      before the icon can be added. Use the
+
+      addEventListener method with event type 'load'.
+    syntax:
+      content: 'function addIcon(id: string, icon: HTMLImageElement)'
+      parameters:
+        - id: id
+          type:
+            - string
+          description: The identifier of the icon.
+        - id: icon
+          type:
+            - HTMLImageElement
+          description: |
+            The icon image.
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.addLinestrings
+    name: addLinestrings
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Add a collection of linestrings to a layer of the map. The layer and its
+      options can be specified through a
+
+      [LinestringLayerOptions](xref:azure-maps-javascript.LinestringLayerOptions)
+      object. Options for
+
+      the layer can only be specified upon the layer's initial creation. Map
+      must be fully loaded before the
+
+      linestrings can be added. Use the addEventListener method with event type
+      'load'.
+    syntax:
+      content: >-
+        function addLinestrings(linestrings: Array<Feature<LineString |
+        MultiLineString, LinestringProperties>>, options?:
+        LinestringLayerOptions)
+      parameters:
+        - id: linestrings
+          type:
+            - >-
+              Array<atlas-service.atlas.atlas.data.Feature<atlas-service.atlas.atlas.data.LineString
+              | atlas-service.atlas.atlas.data.MultiLineString,
+              atlas-service.atlas.LinestringProperties>>
+          description: The linestrings to add.
+        - id: options
+          type:
+            - atlas-service.atlas.LinestringLayerOptions
+          description: |
+            The layer options for the linestrings.
+          optional: true
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.addPins
+    name: addPins
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Add a collection of points to a layer of the map as pins. The layer and
+      its options can be specified through a
+
+      [PinLayerOptions](xref:azure-maps-javascript.PinLayerOptions) object.
+      Options for the layer can
+
+      only be specified upon the layer's initial creation. Map must be fully
+      loaded before the pins can be added. Use
+
+      the addEventListener method with event type 'load'.
+    syntax:
+      content: >-
+        function addPins(pins: Array<Feature<Point, PinProperties>>, options?:
+        PinLayerOptions)
+      parameters:
+        - id: pins
+          type:
+            - >-
+              Array<atlas-service.atlas.atlas.data.Feature<atlas-service.atlas.atlas.data.Point,
+              atlas-service.atlas.PinProperties>>
+          description: The points to add.
+        - id: options
+          type:
+            - atlas-service.atlas.PinLayerOptions
+          description: |
+            The layer options for the pins.
+          optional: true
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.addPolygons
+    name: addPolygons
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Add a collection of polygons to a layer of the map. The layer and its
+      options can be specified through a
+
+      [PolygonLayerOptions](xref:azure-maps-javascript.PolygonLayerOptions)
+      object. Options for
+
+      the layer can only be specified upon the layer's initial creation. Map
+      must be fully loaded before the polygons
+
+      can be added. Use the addEventListener method with event type 'load'.
+    syntax:
+      content: >-
+        function addPolygons(polygons: Array<Feature<Polygon | MultiPolygon,
+        PolygonProperties>>, options?: PolygonLayerOptions)
+      parameters:
+        - id: polygons
+          type:
+            - >-
+              Array<atlas-service.atlas.atlas.data.Feature<atlas-service.atlas.atlas.data.Polygon
+              | atlas-service.atlas.atlas.data.MultiPolygon,
+              atlas-service.atlas.PolygonProperties>>
+          description: The polygons to add.
+        - id: options
+          type:
+            - atlas-service.atlas.PolygonLayerOptions
+          description: |
+            The layer options for the polygons.
+          optional: true
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.addRaster
+    name: addRaster
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Adds a raster layer to the map. The layer and its options can be specified
+      through a
+
+      [RasterLayerOptions](xref:azure-maps-javascript.RasterLayerOptions)
+      object. Options for
+
+      the layer can only be specified upon the layer's initial creation.
+    syntax:
+      content: 'function addRaster(tileSources: string[], options?: RasterLayerOptions)'
+      parameters:
+        - id: tileSources
+          type:
+            - 'string[]'
+          description: >-
+            A list of endpoints specified as strings from which raster images
+            can be requested. The
+
+            endpoints can be parameterized with the tags '{z}', '{x}' and '{y}'
+            to specify the zoom, x-index, and y-index of
+
+            the needed tile respectively. The map control will request and place
+            the tiles that are contained in the map's
+
+            viewport.
+        - id: options
+          type:
+            - atlas-service.atlas.RasterLayerOptions
+          description: |
+            The options for the raster layer.
+          optional: true
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.getCamera
+    name: getCamera
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the camera's current properties.
+    syntax:
+      content: function getCamera()
+      parameters: []
+      return:
+        type:
+          - >-
+            atlas-service.atlas.CameraOptions &
+            atlas-service.atlas.CameraBoundsOptions
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.getCanvas
+    name: getCanvas
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the HTMLCanvasElement that the map is drawn to.
+    syntax:
+      content: function getCanvas()
+      parameters: []
+      return:
+        type:
+          - HTMLCanvasElement
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.getCanvasContainer
+    name: getCanvasContainer
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the HTMLElement that contains the map's HTMLCanvasElement. The
+      map's events (e.g. panning and zooming)
+
+      are attached to this element.
+    syntax:
+      content: function getCanvasContainer()
+      parameters: []
+      return:
+        type:
+          - HTMLElement
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.getLayers
+    name: getLayers
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns a list of the map's layers from bottom to top.
+    syntax:
+      content: function getLayers()
+      parameters: []
+      return:
+        type:
+          - 'string[]'
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.getMapContainer
+    name: getMapContainer
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the HTMLElement that contains the map.
+    syntax:
+      content: function getMapContainer()
+      parameters: []
+      return:
+        type:
+          - HTMLElement
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.getServiceOptions
+    name: getServiceOptions
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the service options with which the map control was initialized.
+    syntax:
+      content: function getServiceOptions()
+      parameters: []
+      return:
+        type:
+          - atlas-service.atlas.ServiceOptions
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.getStyle
+    name: getStyle
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the map control's current style settings.
+    syntax:
+      content: function getStyle()
+      parameters: []
+      return:
+        type:
+          - atlas-service.atlas.StyleOptions
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.getTraffic
+    name: getTraffic
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Return the map control's current traffic settings.
+    syntax:
+      content: function getTraffic()
+      parameters: []
+      return:
+        type:
+          - atlas-service.atlas.TrafficOptions
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.getUserInteraction
+    name: getUserInteraction
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Return the map control's current user interaction handler settings.
+    syntax:
+      content: function getUserInteraction()
+      parameters: []
+      return:
+        type:
+          - atlas-service.atlas.UserInteractionOptions
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.remove
+    name: remove
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Clean up the map's resources. Map will not function correctly after
+      calling this method.
+    syntax:
+      content: function remove()
+      parameters: []
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.removeControl
+    name: removeControl
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Remove a control from the map.
+    syntax:
+      content: 'function removeControl(control: Control)'
+      parameters:
+        - id: control
+          type:
+            - atlas-service.atlas.Control
+          description: |
+            The control to remove.
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.removeEventListener
+    name: removeEventListener
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Remove an event listener from the map.
+    syntax:
+      content: 'function removeEventListener(type: string, callback: any)'
+      parameters:
+        - id: type
+          type:
+            - string
+          description: The event type.
+        - id: callback
+          type:
+            - any
+          description: |
+            The callback of the event listener.
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.removeEventListener_1
+    name: removeEventListener
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Remove an event listener from a layer of the map.
+    syntax:
+      content: 'function removeEventListener(type: string, layer: string, callback: any)'
+      parameters:
+        - id: type
+          type:
+            - string
+          description: The event type.
+        - id: layer
+          type:
+            - string
+          description: The layer of the map.
+        - id: callback
+          type:
+            - any
+          description: |
+            The callback of the event listener.
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.removeHtml
+    name: removeHtml
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Removes a custom HTMLElement from the map.
+    syntax:
+      content: 'function removeHtml(elementId: string)'
+      parameters:
+        - id: elementId
+          type:
+            - string
+          description: |
+            The id of element to remove.
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.removeLayers
+    name: removeLayers
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Removes a collection of layers from the map.
+    syntax:
+      content: 'function removeLayers(layerNames: string[])'
+      parameters:
+        - id: layerNames
+          type:
+            - 'string[]'
+          description: |
+            An array of layer names to remove from the map.
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.resize
+    name: resize
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Resize the map according to the dimensions of its container element.
+    syntax:
+      content: function resize()
+      parameters: []
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.setCamera
+    name: setCamera
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Set the camera of the map control with an animated transition. Any options
+      not specified will default to their
+
+      current values.
+    syntax:
+      content: 'function setCamera(options?: CameraOptions & AnimationOptions)'
+      parameters:
+        - id: options
+          type:
+            - >-
+              atlas-service.atlas.CameraOptions &
+              atlas-service.atlas.AnimationOptions
+          description: >
+            The options for setting the map's camera and for the animation of
+            any view change.
+          optional: true
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.setCameraBounds
+    name: setCameraBounds
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Set the camera bounds of the map control.
+    syntax:
+      content: 'function setCameraBounds(options?: CameraBoundsOptions)'
+      parameters:
+        - id: options
+          type:
+            - atlas-service.atlas.CameraBoundsOptions
+          description: |
+            The options for setting the map's camera bounds.
+          optional: true
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.setStyle
+    name: setStyle
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Set the map control's style options. Any options not specified will
+      default to their current values.
+    syntax:
+      content: 'function setStyle(options?: StyleOptions)'
+      parameters:
+        - id: options
+          type:
+            - atlas-service.atlas.StyleOptions
+          description: |
+            The options for setting the style of the map control.
+          optional: true
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.setTraffic
+    name: setTraffic
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Set the traffic options for the map. Any options not specified will
+      default to their current values.
+    syntax:
+      content: 'function setTraffic(options?: TrafficOptions)'
+      parameters:
+        - id: options
+          type:
+            - atlas-service.atlas.TrafficOptions
+          description: |
+            The options for defining the map's traffic display.
+          optional: true
+    package: atlas-service
+  - uid: atlas-service.atlas.Map.setUserInteraction
+    name: setUserInteraction
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Set the map control's user interaction handlers. Any options not specified
+      will default to their current values.
+    syntax:
+      content: 'function setUserInteraction(options?: UserInteractionOptions)'
+      parameters:
+        - id: options
+          type:
+            - atlas-service.atlas.UserInteractionOptions
+          description: |
+            The options for enabling/disabling the user interaction handlers.
+          optional: true
+    package: atlas-service
+references:
+  - uid: atlas-service.atlas.atlas.data.Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: atlas-service.atlas.atlas.data.Position
+  - uid: atlas-service.atlas.atlas.data.Geometry
+    spec.typeScript:
+      - name: Geometry
+        fullName: Geometry
+        uid: atlas-service.atlas.atlas.data.Geometry
+  - uid: >-
+      atlas-service.atlas.atlas.data.Feature<atlas-service.atlas.atlas.data.Geometry,
+      any>[]
+    spec.typeScript:
+      - name: Feature
+        fullName: Feature
+        uid: atlas-service.atlas.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: atlas-service.atlas.atlas.data.Geometry
+      - name: ', any>[]'
+        fullName: ', any>[]'
+  - uid: >-
+      Array<atlas-service.atlas.atlas.data.Feature<atlas-service.atlas.atlas.data.Geometry,
+      any>>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: atlas-service.atlas.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: atlas-service.atlas.atlas.data.Geometry
+      - name: ', any>>'
+        fullName: ', any>>'
+  - uid: 'atlas-service.atlas.atlas.data.Geometry[]'
+    spec.typeScript:
+      - name: Geometry
+        fullName: Geometry
+        uid: atlas-service.atlas.atlas.data.Geometry
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'atlas-service.atlas.atlas.data.Position[]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: atlas-service.atlas.atlas.data.Position
+      - name: '[]'
+        fullName: '[]'
+  - uid: atlas-service.atlas.atlas.data.BoundingBox
+    spec.typeScript:
+      - name: BoundingBox
+        fullName: BoundingBox
+        uid: atlas-service.atlas.atlas.data.BoundingBox
+  - uid: 'atlas-service.atlas.atlas.data.Position[][]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: atlas-service.atlas.atlas.data.Position
+      - name: '[][]'
+        fullName: '[][]'
+  - uid: 'atlas-service.atlas.atlas.data.Position[][][]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: atlas-service.atlas.atlas.data.Position
+      - name: '[][][]'
+        fullName: '[][][]'
+  - uid: >-
+      atlas-service.atlas.ServiceOptions & atlas-service.atlas.CameraOptions &
+      atlas-service.atlas.StyleOptions &
+      atlas-service.atlas.UserInteractionOptions
+    spec.typeScript:
+      - name: ServiceOptions
+        fullName: ServiceOptions
+        uid: atlas-service.atlas.ServiceOptions
+      - name: ' & '
+        fullName: ' & '
+      - name: CameraOptions
+        fullName: CameraOptions
+        uid: atlas-service.atlas.CameraOptions
+      - name: ' & '
+        fullName: ' & '
+      - name: StyleOptions
+        fullName: StyleOptions
+        uid: atlas-service.atlas.StyleOptions
+      - name: ' & '
+        fullName: ' & '
+      - name: UserInteractionOptions
+        fullName: UserInteractionOptions
+        uid: atlas-service.atlas.UserInteractionOptions
+  - uid: >-
+      Array<atlas-service.atlas.atlas.data.Feature<atlas-service.atlas.atlas.data.Point,
+      atlas-service.atlas.CircleProperties>>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: atlas-service.atlas.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Point
+        fullName: Point
+        uid: atlas-service.atlas.atlas.data.Point
+      - name: ', '
+        fullName: ', '
+      - name: CircleProperties
+        fullName: CircleProperties
+        uid: atlas-service.atlas.CircleProperties
+      - name: '>>'
+        fullName: '>>'
+  - uid: atlas-service.atlas.CircleLayerOptions
+    spec.typeScript:
+      - name: CircleLayerOptions
+        fullName: CircleLayerOptions
+        uid: atlas-service.atlas.CircleLayerOptions
+  - uid: atlas-service.atlas.Control
+    spec.typeScript:
+      - name: Control
+        fullName: Control
+        uid: atlas-service.atlas.Control
+  - uid: atlas-service.atlas.ControlOptions
+    spec.typeScript:
+      - name: ControlOptions
+        fullName: ControlOptions
+        uid: atlas-service.atlas.ControlOptions
+  - uid: >-
+      Array<atlas-service.atlas.atlas.data.Feature<atlas-service.atlas.atlas.data.LineString
+      | atlas-service.atlas.atlas.data.MultiLineString,
+      atlas-service.atlas.LinestringProperties>>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: atlas-service.atlas.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: LineString
+        fullName: LineString
+        uid: atlas-service.atlas.atlas.data.LineString
+      - name: ' | '
+        fullName: ' | '
+      - name: MultiLineString
+        fullName: MultiLineString
+        uid: atlas-service.atlas.atlas.data.MultiLineString
+      - name: ', '
+        fullName: ', '
+      - name: LinestringProperties
+        fullName: LinestringProperties
+        uid: atlas-service.atlas.LinestringProperties
+      - name: '>>'
+        fullName: '>>'
+  - uid: atlas-service.atlas.LinestringLayerOptions
+    spec.typeScript:
+      - name: LinestringLayerOptions
+        fullName: LinestringLayerOptions
+        uid: atlas-service.atlas.LinestringLayerOptions
+  - uid: >-
+      Array<atlas-service.atlas.atlas.data.Feature<atlas-service.atlas.atlas.data.Point,
+      atlas-service.atlas.PinProperties>>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: atlas-service.atlas.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Point
+        fullName: Point
+        uid: atlas-service.atlas.atlas.data.Point
+      - name: ', '
+        fullName: ', '
+      - name: PinProperties
+        fullName: PinProperties
+        uid: atlas-service.atlas.PinProperties
+      - name: '>>'
+        fullName: '>>'
+  - uid: atlas-service.atlas.PinLayerOptions
+    spec.typeScript:
+      - name: PinLayerOptions
+        fullName: PinLayerOptions
+        uid: atlas-service.atlas.PinLayerOptions
+  - uid: >-
+      Array<atlas-service.atlas.atlas.data.Feature<atlas-service.atlas.atlas.data.Polygon
+      | atlas-service.atlas.atlas.data.MultiPolygon,
+      atlas-service.atlas.PolygonProperties>>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: atlas-service.atlas.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Polygon
+        fullName: Polygon
+        uid: atlas-service.atlas.atlas.data.Polygon
+      - name: ' | '
+        fullName: ' | '
+      - name: MultiPolygon
+        fullName: MultiPolygon
+        uid: atlas-service.atlas.atlas.data.MultiPolygon
+      - name: ', '
+        fullName: ', '
+      - name: PolygonProperties
+        fullName: PolygonProperties
+        uid: atlas-service.atlas.PolygonProperties
+      - name: '>>'
+        fullName: '>>'
+  - uid: atlas-service.atlas.PolygonLayerOptions
+    spec.typeScript:
+      - name: PolygonLayerOptions
+        fullName: PolygonLayerOptions
+        uid: atlas-service.atlas.PolygonLayerOptions
+  - uid: atlas-service.atlas.RasterLayerOptions
+    spec.typeScript:
+      - name: RasterLayerOptions
+        fullName: RasterLayerOptions
+        uid: atlas-service.atlas.RasterLayerOptions
+  - uid: >-
+      atlas-service.atlas.CameraOptions &
+      atlas-service.atlas.CameraBoundsOptions
+    spec.typeScript:
+      - name: CameraOptions
+        fullName: CameraOptions
+        uid: atlas-service.atlas.CameraOptions
+      - name: ' & '
+        fullName: ' & '
+      - name: CameraBoundsOptions
+        fullName: CameraBoundsOptions
+        uid: atlas-service.atlas.CameraBoundsOptions
+  - uid: atlas-service.atlas.ServiceOptions
+    spec.typeScript:
+      - name: ServiceOptions
+        fullName: ServiceOptions
+        uid: atlas-service.atlas.ServiceOptions
+  - uid: atlas-service.atlas.StyleOptions
+    spec.typeScript:
+      - name: StyleOptions
+        fullName: StyleOptions
+        uid: atlas-service.atlas.StyleOptions
+  - uid: atlas-service.atlas.TrafficOptions
+    spec.typeScript:
+      - name: TrafficOptions
+        fullName: TrafficOptions
+        uid: atlas-service.atlas.TrafficOptions
+  - uid: atlas-service.atlas.UserInteractionOptions
+    spec.typeScript:
+      - name: UserInteractionOptions
+        fullName: UserInteractionOptions
+        uid: atlas-service.atlas.UserInteractionOptions
+  - uid: atlas-service.atlas.CameraOptions & atlas-service.atlas.AnimationOptions
+    spec.typeScript:
+      - name: CameraOptions
+        fullName: CameraOptions
+        uid: atlas-service.atlas.CameraOptions
+      - name: ' & '
+        fullName: ' & '
+      - name: AnimationOptions
+        fullName: AnimationOptions
+        uid: atlas-service.atlas.AnimationOptions
+  - uid: atlas-service.atlas.CameraBoundsOptions
+    spec.typeScript:
+      - name: CameraBoundsOptions
+        fullName: CameraBoundsOptions
+        uid: atlas-service.atlas.CameraBoundsOptions
+  - uid: atlas-service.atlas.PopupOptions
+    spec.typeScript:
+      - name: PopupOptions
+        fullName: PopupOptions
+        uid: atlas-service.atlas.PopupOptions
+  - uid: atlas-service.atlas.LayerOptions
+    spec.typeScript:
+      - name: LayerOptions
+        fullName: LayerOptions
+        uid: atlas-service.atlas.LayerOptions
+  - uid: atlas-service.atlas.Map
+    spec.typeScript:
+      - name: Map
+        fullName: Map
+        uid: atlas-service.atlas.Map
+  - uid: atlas-service.atlas.ControlPosition
+    spec.typeScript:
+      - name: ControlPosition
+        fullName: ControlPosition
+        uid: atlas-service.atlas.ControlPosition

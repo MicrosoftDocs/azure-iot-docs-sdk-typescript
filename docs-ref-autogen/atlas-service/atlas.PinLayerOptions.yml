@@ -1,0 +1,498 @@
+### YamlMime:UniversalReference
+items:
+  - uid: atlas-service.atlas.PinLayerOptions
+    name: PinLayerOptions
+    fullName: PinLayerOptions
+    children:
+      - atlas-service.atlas.PinLayerOptions.cluster
+      - atlas-service.atlas.PinLayerOptions.clusterIcon
+      - atlas-service.atlas.PinLayerOptions.fontColor
+      - atlas-service.atlas.PinLayerOptions.fontSize
+      - atlas-service.atlas.PinLayerOptions.icon
+      - atlas-service.atlas.PinLayerOptions.iconSize
+      - atlas-service.atlas.PinLayerOptions.name
+      - atlas-service.atlas.PinLayerOptions.textFont
+      - atlas-service.atlas.PinLayerOptions.textOffset
+      - atlas-service.atlas.PinLayerOptions.title
+    langs:
+      - typeScript
+    type: interface
+    summary: The options for a pin layer.
+    extends:
+      name: atlas-service.atlas.LayerOptions
+    source:
+      path: index.d.ts
+      startLine: 789
+      remote:
+        path: src/SDKs/Js/Services/typings\index.d.ts
+        repo: >-
+          https://msazure.visualstudio.com/DefaultCollection/One/_git/Azure-IoT-LocationBasedServices
+        branch: users/chgennar/declarationDocs
+    package: atlas-service
+  - uid: atlas-service.atlas.PinLayerOptions.cluster
+    name: cluster
+    fullName: cluster
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Whether the icons should cluster when they collide on the map, or stay
+      separate.
+    optional: true
+    syntax:
+      content: 'cluster?: boolean'
+      return:
+        type:
+          - boolean
+    package: atlas-service
+  - uid: atlas-service.atlas.PinLayerOptions.clusterIcon
+    name: clusterIcon
+    fullName: clusterIcon
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The icon to use to represent a cluster.
+    optional: true
+    syntax:
+      content: 'clusterIcon?: string'
+      return:
+        type:
+          - string
+    package: atlas-service
+  - uid: atlas-service.atlas.PinLayerOptions.fontColor
+    name: fontColor
+    fullName: fontColor
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The color of the title text.
+    optional: true
+    syntax:
+      content: 'fontColor?: string'
+      return:
+        type:
+          - string
+    package: atlas-service
+  - uid: atlas-service.atlas.PinLayerOptions.fontSize
+    name: fontSize
+    fullName: fontSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The size of the title text.
+    optional: true
+    syntax:
+      content: 'fontSize?: number'
+      return:
+        type:
+          - number
+    package: atlas-service
+  - uid: atlas-service.atlas.PinLayerOptions.icon
+    name: icon
+    fullName: icon
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The icon of the pins for the layer. Is used as the default if an icon is
+      not specified for a pin.
+    optional: true
+    syntax:
+      content: >-
+        icon?: "pin-darkblue" | "pin-blue" | "pin-red" | "pin-round-darkblue" |
+        "pin-round-blue" | "pin-round-red" | "none"
+      return:
+        type:
+          - >-
+            "pin-darkblue" | "pin-blue" | "pin-red" | "pin-round-darkblue" |
+            "pin-round-blue" | "pin-round-red" | "none"
+    package: atlas-service
+  - uid: atlas-service.atlas.PinLayerOptions.iconSize
+    name: iconSize
+    fullName: iconSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The factor by which the icon should be scaled. A value of 1 is the
+      original size; a value of 2 will double the
+
+      size of the icon.
+    optional: true
+    syntax:
+      content: 'iconSize?: number'
+      return:
+        type:
+          - number
+    package: atlas-service
+  - uid: atlas-service.atlas.PinLayerOptions.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The name of the layer.
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: atlas-service
+  - uid: atlas-service.atlas.PinLayerOptions.textFont
+    name: textFont
+    fullName: textFont
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The font for the title of the pin.
+    optional: true
+    syntax:
+      content: >-
+        textFont?: "SegoeUi-Bold" | "SegoeUi-Regular" | "StandardFont-Bold" |
+        "StandardFont-Regular"
+      return:
+        type:
+          - >-
+            "SegoeUi-Bold" | "SegoeUi-Regular" | "StandardFont-Bold" |
+            "StandardFont-Regular"
+    package: atlas-service
+  - uid: atlas-service.atlas.PinLayerOptions.textOffset
+    name: textOffset
+    fullName: textOffset
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      An array of [pixelsRight, pixelsDown] for how many pixels to the right and
+      down the title text should be
+
+      offset. Negative numbers can be used to offset the title left and up.
+    optional: true
+    syntax:
+      content: 'textOffset?: number[]'
+      return:
+        type:
+          - 'number[]'
+    package: atlas-service
+  - uid: atlas-service.atlas.PinLayerOptions.title
+    name: title
+    fullName: title
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The title of the pins for the layer. Is used as the default if a title is
+      not specified for a pin.
+    optional: true
+    syntax:
+      content: 'title?: string'
+      return:
+        type:
+          - string
+    package: atlas-service
+references:
+  - uid: atlas-service.atlas.atlas.data.Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: atlas-service.atlas.atlas.data.Position
+  - uid: atlas-service.atlas.atlas.data.Geometry
+    spec.typeScript:
+      - name: Geometry
+        fullName: Geometry
+        uid: atlas-service.atlas.atlas.data.Geometry
+  - uid: >-
+      atlas-service.atlas.atlas.data.Feature<atlas-service.atlas.atlas.data.Geometry,
+      any>[]
+    spec.typeScript:
+      - name: Feature
+        fullName: Feature
+        uid: atlas-service.atlas.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: atlas-service.atlas.atlas.data.Geometry
+      - name: ', any>[]'
+        fullName: ', any>[]'
+  - uid: >-
+      Array<atlas-service.atlas.atlas.data.Feature<atlas-service.atlas.atlas.data.Geometry,
+      any>>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: atlas-service.atlas.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: atlas-service.atlas.atlas.data.Geometry
+      - name: ', any>>'
+        fullName: ', any>>'
+  - uid: 'atlas-service.atlas.atlas.data.Geometry[]'
+    spec.typeScript:
+      - name: Geometry
+        fullName: Geometry
+        uid: atlas-service.atlas.atlas.data.Geometry
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'atlas-service.atlas.atlas.data.Position[]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: atlas-service.atlas.atlas.data.Position
+      - name: '[]'
+        fullName: '[]'
+  - uid: atlas-service.atlas.atlas.data.BoundingBox
+    spec.typeScript:
+      - name: BoundingBox
+        fullName: BoundingBox
+        uid: atlas-service.atlas.atlas.data.BoundingBox
+  - uid: 'atlas-service.atlas.atlas.data.Position[][]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: atlas-service.atlas.atlas.data.Position
+      - name: '[][]'
+        fullName: '[][]'
+  - uid: 'atlas-service.atlas.atlas.data.Position[][][]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: atlas-service.atlas.atlas.data.Position
+      - name: '[][][]'
+        fullName: '[][][]'
+  - uid: >-
+      atlas-service.atlas.ServiceOptions & atlas-service.atlas.CameraOptions &
+      atlas-service.atlas.StyleOptions &
+      atlas-service.atlas.UserInteractionOptions
+    spec.typeScript:
+      - name: ServiceOptions
+        fullName: ServiceOptions
+        uid: atlas-service.atlas.ServiceOptions
+      - name: ' & '
+        fullName: ' & '
+      - name: CameraOptions
+        fullName: CameraOptions
+        uid: atlas-service.atlas.CameraOptions
+      - name: ' & '
+        fullName: ' & '
+      - name: StyleOptions
+        fullName: StyleOptions
+        uid: atlas-service.atlas.StyleOptions
+      - name: ' & '
+        fullName: ' & '
+      - name: UserInteractionOptions
+        fullName: UserInteractionOptions
+        uid: atlas-service.atlas.UserInteractionOptions
+  - uid: >-
+      Array<atlas-service.atlas.atlas.data.Feature<atlas-service.atlas.atlas.data.Point,
+      atlas-service.atlas.CircleProperties>>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: atlas-service.atlas.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Point
+        fullName: Point
+        uid: atlas-service.atlas.atlas.data.Point
+      - name: ', '
+        fullName: ', '
+      - name: CircleProperties
+        fullName: CircleProperties
+        uid: atlas-service.atlas.CircleProperties
+      - name: '>>'
+        fullName: '>>'
+  - uid: atlas-service.atlas.CircleLayerOptions
+    spec.typeScript:
+      - name: CircleLayerOptions
+        fullName: CircleLayerOptions
+        uid: atlas-service.atlas.CircleLayerOptions
+  - uid: atlas-service.atlas.Control
+    spec.typeScript:
+      - name: Control
+        fullName: Control
+        uid: atlas-service.atlas.Control
+  - uid: atlas-service.atlas.ControlOptions
+    spec.typeScript:
+      - name: ControlOptions
+        fullName: ControlOptions
+        uid: atlas-service.atlas.ControlOptions
+  - uid: >-
+      Array<atlas-service.atlas.atlas.data.Feature<atlas-service.atlas.atlas.data.LineString
+      | atlas-service.atlas.atlas.data.MultiLineString,
+      atlas-service.atlas.LinestringProperties>>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: atlas-service.atlas.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: LineString
+        fullName: LineString
+        uid: atlas-service.atlas.atlas.data.LineString
+      - name: ' | '
+        fullName: ' | '
+      - name: MultiLineString
+        fullName: MultiLineString
+        uid: atlas-service.atlas.atlas.data.MultiLineString
+      - name: ', '
+        fullName: ', '
+      - name: LinestringProperties
+        fullName: LinestringProperties
+        uid: atlas-service.atlas.LinestringProperties
+      - name: '>>'
+        fullName: '>>'
+  - uid: atlas-service.atlas.LinestringLayerOptions
+    spec.typeScript:
+      - name: LinestringLayerOptions
+        fullName: LinestringLayerOptions
+        uid: atlas-service.atlas.LinestringLayerOptions
+  - uid: >-
+      Array<atlas-service.atlas.atlas.data.Feature<atlas-service.atlas.atlas.data.Point,
+      atlas-service.atlas.PinProperties>>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: atlas-service.atlas.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Point
+        fullName: Point
+        uid: atlas-service.atlas.atlas.data.Point
+      - name: ', '
+        fullName: ', '
+      - name: PinProperties
+        fullName: PinProperties
+        uid: atlas-service.atlas.PinProperties
+      - name: '>>'
+        fullName: '>>'
+  - uid: atlas-service.atlas.PinLayerOptions
+    spec.typeScript:
+      - name: PinLayerOptions
+        fullName: PinLayerOptions
+        uid: atlas-service.atlas.PinLayerOptions
+  - uid: >-
+      Array<atlas-service.atlas.atlas.data.Feature<atlas-service.atlas.atlas.data.Polygon
+      | atlas-service.atlas.atlas.data.MultiPolygon,
+      atlas-service.atlas.PolygonProperties>>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: atlas-service.atlas.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Polygon
+        fullName: Polygon
+        uid: atlas-service.atlas.atlas.data.Polygon
+      - name: ' | '
+        fullName: ' | '
+      - name: MultiPolygon
+        fullName: MultiPolygon
+        uid: atlas-service.atlas.atlas.data.MultiPolygon
+      - name: ', '
+        fullName: ', '
+      - name: PolygonProperties
+        fullName: PolygonProperties
+        uid: atlas-service.atlas.PolygonProperties
+      - name: '>>'
+        fullName: '>>'
+  - uid: atlas-service.atlas.PolygonLayerOptions
+    spec.typeScript:
+      - name: PolygonLayerOptions
+        fullName: PolygonLayerOptions
+        uid: atlas-service.atlas.PolygonLayerOptions
+  - uid: atlas-service.atlas.RasterLayerOptions
+    spec.typeScript:
+      - name: RasterLayerOptions
+        fullName: RasterLayerOptions
+        uid: atlas-service.atlas.RasterLayerOptions
+  - uid: >-
+      atlas-service.atlas.CameraOptions &
+      atlas-service.atlas.CameraBoundsOptions
+    spec.typeScript:
+      - name: CameraOptions
+        fullName: CameraOptions
+        uid: atlas-service.atlas.CameraOptions
+      - name: ' & '
+        fullName: ' & '
+      - name: CameraBoundsOptions
+        fullName: CameraBoundsOptions
+        uid: atlas-service.atlas.CameraBoundsOptions
+  - uid: atlas-service.atlas.ServiceOptions
+    spec.typeScript:
+      - name: ServiceOptions
+        fullName: ServiceOptions
+        uid: atlas-service.atlas.ServiceOptions
+  - uid: atlas-service.atlas.StyleOptions
+    spec.typeScript:
+      - name: StyleOptions
+        fullName: StyleOptions
+        uid: atlas-service.atlas.StyleOptions
+  - uid: atlas-service.atlas.TrafficOptions
+    spec.typeScript:
+      - name: TrafficOptions
+        fullName: TrafficOptions
+        uid: atlas-service.atlas.TrafficOptions
+  - uid: atlas-service.atlas.UserInteractionOptions
+    spec.typeScript:
+      - name: UserInteractionOptions
+        fullName: UserInteractionOptions
+        uid: atlas-service.atlas.UserInteractionOptions
+  - uid: atlas-service.atlas.CameraOptions & atlas-service.atlas.AnimationOptions
+    spec.typeScript:
+      - name: CameraOptions
+        fullName: CameraOptions
+        uid: atlas-service.atlas.CameraOptions
+      - name: ' & '
+        fullName: ' & '
+      - name: AnimationOptions
+        fullName: AnimationOptions
+        uid: atlas-service.atlas.AnimationOptions
+  - uid: atlas-service.atlas.CameraBoundsOptions
+    spec.typeScript:
+      - name: CameraBoundsOptions
+        fullName: CameraBoundsOptions
+        uid: atlas-service.atlas.CameraBoundsOptions
+  - uid: atlas-service.atlas.PopupOptions
+    spec.typeScript:
+      - name: PopupOptions
+        fullName: PopupOptions
+        uid: atlas-service.atlas.PopupOptions
+  - uid: atlas-service.atlas.LayerOptions
+    spec.typeScript:
+      - name: LayerOptions
+        fullName: LayerOptions
+        uid: atlas-service.atlas.LayerOptions
+  - uid: atlas-service.atlas.Map
+    spec.typeScript:
+      - name: Map
+        fullName: Map
+        uid: atlas-service.atlas.Map
+  - uid: atlas-service.atlas.ControlPosition
+    spec.typeScript:
+      - name: ControlPosition
+        fullName: ControlPosition
+        uid: atlas-service.atlas.ControlPosition

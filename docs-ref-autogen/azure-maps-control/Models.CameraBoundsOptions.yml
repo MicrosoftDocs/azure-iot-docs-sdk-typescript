@@ -1,0 +1,101 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-maps-control.Models.CameraBoundsOptions
+    name: CameraBoundsOptions
+    fullName: CameraBoundsOptions
+    children:
+      - azure-maps-control.Models.CameraBoundsOptions.bounds
+      - azure-maps-control.Models.CameraBoundsOptions.padding
+    langs:
+      - typeScript
+    type: interface
+    summary: The options for setting the bounds of the map control's camera.
+    extends:
+      name: Options
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.CameraBoundsOptions.bounds
+    name: bounds
+    fullName: bounds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The bounds of the map control's camera.
+    optional: true
+    syntax:
+      content: 'bounds?: BoundingBox'
+      return:
+        type:
+          - azure-maps-control.atlas.atlas.data.BoundingBox
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.CameraBoundsOptions.padding
+    name: padding
+    fullName: padding
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Padding in pixels for the given bounds. Either specify a number for the
+      padding of all sides of the map or
+
+      specify each side as an array of [top, right, bottom, left].
+    optional: true
+    syntax:
+      content: 'padding?: number | number[]'
+      return:
+        type:
+          - 'number | number[]'
+    package: azure-maps-control
+references:
+  - uid: azure-maps-control.Models.ControlStyle
+    spec.typeScript:
+      - name: ControlStyle
+        fullName: ControlStyle
+        uid: azure-maps-control.Models.ControlStyle
+  - uid: azure-maps-control.atlas.atlas.data.BoundingBox
+    spec.typeScript:
+      - name: BoundingBox
+        fullName: BoundingBox
+        uid: azure-maps-control.atlas.atlas.data.BoundingBox
+  - uid: azure-maps-control.atlas.atlas.data.Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.atlas.data.Position
+  - uid: azure-maps-control.Models.LayerOptions
+    spec.typeScript:
+      - name: LayerOptions
+        fullName: LayerOptions
+        uid: azure-maps-control.Models.LayerOptions
+  - uid: azure-maps-control.atlas.Map
+    spec.typeScript:
+      - name: Map
+        fullName: Map
+        uid: azure-maps-control.atlas.Map
+  - uid: azure-maps-control.Models.ControlOptions
+    spec.typeScript:
+      - name: ControlOptions
+        fullName: ControlOptions
+        uid: azure-maps-control.Models.ControlOptions
+  - uid: azure-maps-control.Models.ControlPosition
+    spec.typeScript:
+      - name: ControlPosition
+        fullName: ControlPosition
+        uid: azure-maps-control.Models.ControlPosition
+  - uid: >-
+      Array<azure-maps-control.atlas.atlas.data.Feature<azure-maps-control.atlas.atlas.data.Geometry,
+      any>>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.atlas.data.Geometry
+      - name: ', any>>'
+        fullName: ', any>>'

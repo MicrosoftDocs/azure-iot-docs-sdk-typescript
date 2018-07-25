@@ -1,0 +1,145 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-maps-control.Models.MapEventData
+    name: MapEventData
+    fullName: MapEventData
+    children:
+      - azure-maps-control.Models.MapEventData.coordinate
+      - azure-maps-control.Models.MapEventData.features
+      - azure-maps-control.Models.MapEventData.originalEvent
+      - azure-maps-control.Models.MapEventData.position
+      - azure-maps-control.Models.MapEventData.type
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      A MapEventData object is passed to the callback function when a map event
+      is fired.
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.MapEventData.coordinate
+    name: coordinate
+    fullName: coordinate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'The pixel coordinate where the event occurred as an array of [x, y].'
+    optional: true
+    syntax:
+      content: 'coordinate?: number[]'
+      return:
+        type:
+          - 'number[]'
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.MapEventData.features
+    name: features
+    fullName: features
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The features associated with the event.
+    optional: true
+    syntax:
+      content: 'features?: Array<Feature<Geometry, any>>'
+      return:
+        type:
+          - >-
+            Array<azure-maps-control.atlas.atlas.data.Feature<azure-maps-control.atlas.atlas.data.Geometry,
+            any>>
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.MapEventData.originalEvent
+    name: originalEvent
+    fullName: originalEvent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The original event that was fired.
+    syntax:
+      content: 'originalEvent: Event'
+      return:
+        type:
+          - Event
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.MapEventData.position
+    name: position
+    fullName: position
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The geographic position on the map where the event occurred.
+    optional: true
+    syntax:
+      content: 'position?: Position'
+      return:
+        type:
+          - azure-maps-control.atlas.atlas.data.Position
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.MapEventData.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The event type.
+    syntax:
+      content: 'type: string'
+      return:
+        type:
+          - string
+    package: azure-maps-control
+references:
+  - uid: azure-maps-control.Models.ControlStyle
+    spec.typeScript:
+      - name: ControlStyle
+        fullName: ControlStyle
+        uid: azure-maps-control.Models.ControlStyle
+  - uid: azure-maps-control.atlas.atlas.data.BoundingBox
+    spec.typeScript:
+      - name: BoundingBox
+        fullName: BoundingBox
+        uid: azure-maps-control.atlas.atlas.data.BoundingBox
+  - uid: azure-maps-control.atlas.atlas.data.Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.atlas.data.Position
+  - uid: azure-maps-control.Models.LayerOptions
+    spec.typeScript:
+      - name: LayerOptions
+        fullName: LayerOptions
+        uid: azure-maps-control.Models.LayerOptions
+  - uid: azure-maps-control.atlas.Map
+    spec.typeScript:
+      - name: Map
+        fullName: Map
+        uid: azure-maps-control.atlas.Map
+  - uid: azure-maps-control.Models.ControlOptions
+    spec.typeScript:
+      - name: ControlOptions
+        fullName: ControlOptions
+        uid: azure-maps-control.Models.ControlOptions
+  - uid: azure-maps-control.Models.ControlPosition
+    spec.typeScript:
+      - name: ControlPosition
+        fullName: ControlPosition
+        uid: azure-maps-control.Models.ControlPosition
+  - uid: >-
+      Array<azure-maps-control.atlas.atlas.data.Feature<azure-maps-control.atlas.atlas.data.Geometry,
+      any>>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.atlas.data.Geometry
+      - name: ', any>>'
+        fullName: ', any>>'

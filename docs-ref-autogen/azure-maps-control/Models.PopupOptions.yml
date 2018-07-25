@@ -1,0 +1,117 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-maps-control.Models.PopupOptions
+    name: PopupOptions
+    fullName: PopupOptions
+    children:
+      - azure-maps-control.Models.PopupOptions.content
+      - azure-maps-control.Models.PopupOptions.pixelOffset
+      - azure-maps-control.Models.PopupOptions.position
+    langs:
+      - typeScript
+    type: interface
+    summary: The options for a popup.
+    extends:
+      name: Options
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.PopupOptions.content
+    name: content
+    fullName: content
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The content to display within the popup.
+    optional: true
+    syntax:
+      content: 'content?: HTMLElement'
+      return:
+        type:
+          - HTMLElement
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.PopupOptions.pixelOffset
+    name: pixelOffset
+    fullName: pixelOffset
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      An array of [pixelsRight, pixelsDown] for how many pixels to the right and
+      down the anchor of the popup should be
+
+      offset. Negative numbers can be used to offset the popup left and up.
+    optional: true
+    syntax:
+      content: 'pixelOffset?: number[]'
+      return:
+        type:
+          - 'number[]'
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.PopupOptions.position
+    name: position
+    fullName: position
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The position on the map where the popup should be anchored.
+    optional: true
+    syntax:
+      content: 'position?: Position'
+      return:
+        type:
+          - azure-maps-control.atlas.atlas.data.Position
+    package: azure-maps-control
+references:
+  - uid: azure-maps-control.Models.ControlStyle
+    spec.typeScript:
+      - name: ControlStyle
+        fullName: ControlStyle
+        uid: azure-maps-control.Models.ControlStyle
+  - uid: azure-maps-control.atlas.atlas.data.BoundingBox
+    spec.typeScript:
+      - name: BoundingBox
+        fullName: BoundingBox
+        uid: azure-maps-control.atlas.atlas.data.BoundingBox
+  - uid: azure-maps-control.atlas.atlas.data.Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.atlas.data.Position
+  - uid: azure-maps-control.Models.LayerOptions
+    spec.typeScript:
+      - name: LayerOptions
+        fullName: LayerOptions
+        uid: azure-maps-control.Models.LayerOptions
+  - uid: azure-maps-control.atlas.Map
+    spec.typeScript:
+      - name: Map
+        fullName: Map
+        uid: azure-maps-control.atlas.Map
+  - uid: azure-maps-control.Models.ControlOptions
+    spec.typeScript:
+      - name: ControlOptions
+        fullName: ControlOptions
+        uid: azure-maps-control.Models.ControlOptions
+  - uid: azure-maps-control.Models.ControlPosition
+    spec.typeScript:
+      - name: ControlPosition
+        fullName: ControlPosition
+        uid: azure-maps-control.Models.ControlPosition
+  - uid: >-
+      Array<azure-maps-control.atlas.atlas.data.Feature<azure-maps-control.atlas.atlas.data.Geometry,
+      any>>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.atlas.data.Geometry
+      - name: ', any>>'
+        fullName: ', any>>'

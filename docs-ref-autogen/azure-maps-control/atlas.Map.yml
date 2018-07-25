@@ -60,10 +60,10 @@ items:
         - id: options
           type:
             - >-
-              azure-maps-control.atlas.ServiceOptions &
-              azure-maps-control.atlas.CameraOptions &
-              azure-maps-control.atlas.StyleOptions &
-              azure-maps-control.atlas.UserInteractionOptions
+              azure-maps-control.Models.ServiceOptions &
+              azure-maps-control.Models.CameraOptions &
+              azure-maps-control.Models.StyleOptions &
+              azure-maps-control.Models.UserInteractionOptions
           description: |
             Options for the initial display and interactability with the map.
     package: azure-maps-control
@@ -93,11 +93,11 @@ items:
           type:
             - >-
               Array<azure-maps-control.atlas.atlas.data.Feature<azure-maps-control.atlas.atlas.data.Point,
-              azure-maps-control.atlas.CircleProperties>>
+              azure-maps-control.Models.CircleProperties>>
           description: The circles to add.
         - id: options
           type:
-            - azure-maps-control.atlas.CircleLayerOptions
+            - azure-maps-control.Models.CircleLayerOptions
           description: |
             The layer options for the circles.
           optional: true
@@ -114,11 +114,11 @@ items:
       parameters:
         - id: control
           type:
-            - azure-maps-control.atlas.atlas.control.Control
+            - azure-maps-control.Models.Control
           description: The control to add.
         - id: options
           type:
-            - azure-maps-control.atlas.ControlOptions
+            - azure-maps-control.Models.ControlOptions
           description: |
             The options for the added control.
           optional: true
@@ -263,7 +263,7 @@ items:
           description: The HTMLElement to add.
         - id: position
           type:
-            - Position
+            - azure-maps-control.atlas.atlas.data.Position
           description: |
             The position to place the element.
       return:
@@ -323,11 +323,11 @@ items:
             - >-
               Array<azure-maps-control.atlas.atlas.data.Feature<azure-maps-control.atlas.atlas.data.LineString
               | azure-maps-control.atlas.atlas.data.MultiLineString,
-              azure-maps-control.atlas.LinestringProperties>>
+              azure-maps-control.Models.LinestringProperties>>
           description: The linestrings to add.
         - id: options
           type:
-            - azure-maps-control.atlas.LinestringLayerOptions
+            - azure-maps-control.Models.LinestringLayerOptions
           description: |
             The layer options for the linestrings.
           optional: true
@@ -358,11 +358,11 @@ items:
           type:
             - >-
               Array<azure-maps-control.atlas.atlas.data.Feature<azure-maps-control.atlas.atlas.data.Point,
-              azure-maps-control.atlas.PinProperties>>
+              azure-maps-control.Models.PinProperties>>
           description: The points to add.
         - id: options
           type:
-            - azure-maps-control.atlas.PinLayerOptions
+            - azure-maps-control.Models.PinLayerOptions
           description: |
             The layer options for the pins.
           optional: true
@@ -394,11 +394,11 @@ items:
             - >-
               Array<azure-maps-control.atlas.atlas.data.Feature<azure-maps-control.atlas.atlas.data.Polygon
               | azure-maps-control.atlas.atlas.data.MultiPolygon,
-              azure-maps-control.atlas.PolygonProperties>>
+              azure-maps-control.Models.PolygonProperties>>
           description: The polygons to add.
         - id: options
           type:
-            - azure-maps-control.atlas.PolygonLayerOptions
+            - azure-maps-control.Models.PolygonLayerOptions
           description: |
             The layer options for the polygons.
           optional: true
@@ -436,7 +436,7 @@ items:
             viewport.
         - id: options
           type:
-            - azure-maps-control.atlas.RasterLayerOptions
+            - azure-maps-control.Models.RasterLayerOptions
           description: |
             The options for the raster layer.
           optional: true
@@ -454,8 +454,8 @@ items:
       return:
         type:
           - >-
-            azure-maps-control.atlas.CameraOptions &
-            azure-maps-control.atlas.CameraBoundsOptions
+            azure-maps-control.Models.CameraOptions &
+            azure-maps-control.Models.CameraBoundsOptions
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.getCanvas
     name: getCanvas
@@ -529,7 +529,7 @@ items:
       parameters: []
       return:
         type:
-          - azure-maps-control.atlas.ServiceOptions
+          - azure-maps-control.Models.ServiceOptions
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.getStyle
     name: getStyle
@@ -543,7 +543,7 @@ items:
       parameters: []
       return:
         type:
-          - azure-maps-control.atlas.StyleOptions
+          - azure-maps-control.Models.StyleOptions
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.getTraffic
     name: getTraffic
@@ -557,7 +557,7 @@ items:
       parameters: []
       return:
         type:
-          - azure-maps-control.atlas.TrafficOptions
+          - azure-maps-control.Models.TrafficOptions
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.getUserInteraction
     name: getUserInteraction
@@ -571,7 +571,7 @@ items:
       parameters: []
       return:
         type:
-          - azure-maps-control.atlas.UserInteractionOptions
+          - azure-maps-control.Models.UserInteractionOptions
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.remove
     name: remove
@@ -598,7 +598,7 @@ items:
       parameters:
         - id: control
           type:
-            - azure-maps-control.atlas.atlas.control.Control
+            - azure-maps-control.Models.Control
           description: |
             The control to remove.
     package: azure-maps-control
@@ -706,8 +706,8 @@ items:
         - id: options
           type:
             - >-
-              azure-maps-control.atlas.CameraOptions &
-              azure-maps-control.atlas.AnimationOptions
+              azure-maps-control.Models.CameraOptions &
+              azure-maps-control.Models.AnimationOptions
           description: >
             The options for setting the map's camera and for the animation of
             any view change.
@@ -725,7 +725,7 @@ items:
       parameters:
         - id: options
           type:
-            - azure-maps-control.atlas.CameraBoundsOptions
+            - azure-maps-control.Models.CameraBoundsOptions
           description: |
             The options for setting the map's camera bounds.
           optional: true
@@ -744,7 +744,7 @@ items:
       parameters:
         - id: options
           type:
-            - azure-maps-control.atlas.StyleOptions
+            - azure-maps-control.Models.StyleOptions
           description: |
             The options for setting the style of the map control.
           optional: true
@@ -763,7 +763,7 @@ items:
       parameters:
         - id: options
           type:
-            - azure-maps-control.atlas.TrafficOptions
+            - azure-maps-control.Models.TrafficOptions
           description: |
             The options for defining the map's traffic display.
           optional: true
@@ -782,47 +782,42 @@ items:
       parameters:
         - id: options
           type:
-            - azure-maps-control.atlas.UserInteractionOptions
+            - azure-maps-control.Models.UserInteractionOptions
           description: |
             The options for enabling/disabling the user interaction handlers.
           optional: true
     package: azure-maps-control
 references:
-  - uid: azure-maps-control.atlas.atlas.control.CompassControlOptions
+  - uid: azure-maps-control.Models.CompassControlOptions
     spec.typeScript:
       - name: CompassControlOptions
         fullName: CompassControlOptions
-        uid: azure-maps-control.atlas.atlas.control.CompassControlOptions
+        uid: azure-maps-control.Models.CompassControlOptions
   - uid: azure-maps-control.atlas.Map
     spec.typeScript:
       - name: Map
         fullName: Map
         uid: azure-maps-control.atlas.Map
-  - uid: azure-maps-control.atlas.ControlOptions
+  - uid: azure-maps-control.Models.ControlOptions
     spec.typeScript:
       - name: ControlOptions
         fullName: ControlOptions
-        uid: azure-maps-control.atlas.ControlOptions
-  - uid: azure-maps-control.atlas.atlas.control.ControlStyle
-    spec.typeScript:
-      - name: ControlStyle
-        fullName: ControlStyle
-        uid: azure-maps-control.atlas.atlas.control.ControlStyle
-  - uid: azure-maps-control.atlas.atlas.control.PitchControlOptions
+        uid: azure-maps-control.Models.ControlOptions
+  - uid: azure-maps-control.Models.PitchControlOptions
     spec.typeScript:
       - name: PitchControlOptions
         fullName: PitchControlOptions
-        uid: azure-maps-control.atlas.atlas.control.PitchControlOptions
-  - uid: azure-maps-control.atlas.atlas.control.StyleControlOptions
+        uid: azure-maps-control.Models.PitchControlOptions
+  - uid: azure-maps-control.Models.StyleControlOptions
     spec.typeScript:
       - name: StyleControlOptions
         fullName: StyleControlOptions
-        uid: azure-maps-control.atlas.atlas.control.StyleControlOptions
-  - uid: azure-maps-control.atlas.atlas.control.ZoomControlOptions
+        uid: azure-maps-control.Models.StyleControlOptions
+  - uid: azure-maps-control.Models.ZoomControlOptions
     spec.typeScript:
       - name: ZoomControlOptions
         fullName: ZoomControlOptions
-        uid: azure-maps-control.atlas.atlas.control.ZoomControlOptions
+        uid: azure-maps-control.Models.ZoomControlOptions
   - uid: azure-maps-control.atlas.atlas.data.Position
     spec.typeScript:
       - name: Position
@@ -897,32 +892,32 @@ references:
       - name: '[][][]'
         fullName: '[][][]'
   - uid: >-
-      azure-maps-control.atlas.ServiceOptions &
-      azure-maps-control.atlas.CameraOptions &
-      azure-maps-control.atlas.StyleOptions &
-      azure-maps-control.atlas.UserInteractionOptions
+      azure-maps-control.Models.ServiceOptions &
+      azure-maps-control.Models.CameraOptions &
+      azure-maps-control.Models.StyleOptions &
+      azure-maps-control.Models.UserInteractionOptions
     spec.typeScript:
       - name: ServiceOptions
         fullName: ServiceOptions
-        uid: azure-maps-control.atlas.ServiceOptions
+        uid: azure-maps-control.Models.ServiceOptions
       - name: ' & '
         fullName: ' & '
       - name: CameraOptions
         fullName: CameraOptions
-        uid: azure-maps-control.atlas.CameraOptions
+        uid: azure-maps-control.Models.CameraOptions
       - name: ' & '
         fullName: ' & '
       - name: StyleOptions
         fullName: StyleOptions
-        uid: azure-maps-control.atlas.StyleOptions
+        uid: azure-maps-control.Models.StyleOptions
       - name: ' & '
         fullName: ' & '
       - name: UserInteractionOptions
         fullName: UserInteractionOptions
-        uid: azure-maps-control.atlas.UserInteractionOptions
+        uid: azure-maps-control.Models.UserInteractionOptions
   - uid: >-
       Array<azure-maps-control.atlas.atlas.data.Feature<azure-maps-control.atlas.atlas.data.Point,
-      azure-maps-control.atlas.CircleProperties>>
+      azure-maps-control.Models.CircleProperties>>
     spec.typeScript:
       - name: Array<
         fullName: Array<
@@ -938,23 +933,23 @@ references:
         fullName: ', '
       - name: CircleProperties
         fullName: CircleProperties
-        uid: azure-maps-control.atlas.CircleProperties
+        uid: azure-maps-control.Models.CircleProperties
       - name: '>>'
         fullName: '>>'
-  - uid: azure-maps-control.atlas.CircleLayerOptions
+  - uid: azure-maps-control.Models.CircleLayerOptions
     spec.typeScript:
       - name: CircleLayerOptions
         fullName: CircleLayerOptions
-        uid: azure-maps-control.atlas.CircleLayerOptions
-  - uid: azure-maps-control.atlas.atlas.control.Control
+        uid: azure-maps-control.Models.CircleLayerOptions
+  - uid: azure-maps-control.Models.Control
     spec.typeScript:
       - name: Control
         fullName: Control
-        uid: azure-maps-control.atlas.atlas.control.Control
+        uid: azure-maps-control.Models.Control
   - uid: >-
       Array<azure-maps-control.atlas.atlas.data.Feature<azure-maps-control.atlas.atlas.data.LineString
       | azure-maps-control.atlas.atlas.data.MultiLineString,
-      azure-maps-control.atlas.LinestringProperties>>
+      azure-maps-control.Models.LinestringProperties>>
     spec.typeScript:
       - name: Array<
         fullName: Array<
@@ -975,17 +970,17 @@ references:
         fullName: ', '
       - name: LinestringProperties
         fullName: LinestringProperties
-        uid: azure-maps-control.atlas.LinestringProperties
+        uid: azure-maps-control.Models.LinestringProperties
       - name: '>>'
         fullName: '>>'
-  - uid: azure-maps-control.atlas.LinestringLayerOptions
+  - uid: azure-maps-control.Models.LinestringLayerOptions
     spec.typeScript:
       - name: LinestringLayerOptions
         fullName: LinestringLayerOptions
-        uid: azure-maps-control.atlas.LinestringLayerOptions
+        uid: azure-maps-control.Models.LinestringLayerOptions
   - uid: >-
       Array<azure-maps-control.atlas.atlas.data.Feature<azure-maps-control.atlas.atlas.data.Point,
-      azure-maps-control.atlas.PinProperties>>
+      azure-maps-control.Models.PinProperties>>
     spec.typeScript:
       - name: Array<
         fullName: Array<
@@ -1001,18 +996,18 @@ references:
         fullName: ', '
       - name: PinProperties
         fullName: PinProperties
-        uid: azure-maps-control.atlas.PinProperties
+        uid: azure-maps-control.Models.PinProperties
       - name: '>>'
         fullName: '>>'
-  - uid: azure-maps-control.atlas.PinLayerOptions
+  - uid: azure-maps-control.Models.PinLayerOptions
     spec.typeScript:
       - name: PinLayerOptions
         fullName: PinLayerOptions
-        uid: azure-maps-control.atlas.PinLayerOptions
+        uid: azure-maps-control.Models.PinLayerOptions
   - uid: >-
       Array<azure-maps-control.atlas.atlas.data.Feature<azure-maps-control.atlas.atlas.data.Polygon
       | azure-maps-control.atlas.atlas.data.MultiPolygon,
-      azure-maps-control.atlas.PolygonProperties>>
+      azure-maps-control.Models.PolygonProperties>>
     spec.typeScript:
       - name: Array<
         fullName: Array<
@@ -1033,80 +1028,70 @@ references:
         fullName: ', '
       - name: PolygonProperties
         fullName: PolygonProperties
-        uid: azure-maps-control.atlas.PolygonProperties
+        uid: azure-maps-control.Models.PolygonProperties
       - name: '>>'
         fullName: '>>'
-  - uid: azure-maps-control.atlas.PolygonLayerOptions
+  - uid: azure-maps-control.Models.PolygonLayerOptions
     spec.typeScript:
       - name: PolygonLayerOptions
         fullName: PolygonLayerOptions
-        uid: azure-maps-control.atlas.PolygonLayerOptions
-  - uid: azure-maps-control.atlas.RasterLayerOptions
+        uid: azure-maps-control.Models.PolygonLayerOptions
+  - uid: azure-maps-control.Models.RasterLayerOptions
     spec.typeScript:
       - name: RasterLayerOptions
         fullName: RasterLayerOptions
-        uid: azure-maps-control.atlas.RasterLayerOptions
+        uid: azure-maps-control.Models.RasterLayerOptions
   - uid: >-
-      azure-maps-control.atlas.CameraOptions &
-      azure-maps-control.atlas.CameraBoundsOptions
+      azure-maps-control.Models.CameraOptions &
+      azure-maps-control.Models.CameraBoundsOptions
     spec.typeScript:
       - name: CameraOptions
         fullName: CameraOptions
-        uid: azure-maps-control.atlas.CameraOptions
+        uid: azure-maps-control.Models.CameraOptions
       - name: ' & '
         fullName: ' & '
       - name: CameraBoundsOptions
         fullName: CameraBoundsOptions
-        uid: azure-maps-control.atlas.CameraBoundsOptions
-  - uid: azure-maps-control.atlas.ServiceOptions
+        uid: azure-maps-control.Models.CameraBoundsOptions
+  - uid: azure-maps-control.Models.ServiceOptions
     spec.typeScript:
       - name: ServiceOptions
         fullName: ServiceOptions
-        uid: azure-maps-control.atlas.ServiceOptions
-  - uid: azure-maps-control.atlas.StyleOptions
+        uid: azure-maps-control.Models.ServiceOptions
+  - uid: azure-maps-control.Models.StyleOptions
     spec.typeScript:
       - name: StyleOptions
         fullName: StyleOptions
-        uid: azure-maps-control.atlas.StyleOptions
-  - uid: azure-maps-control.atlas.TrafficOptions
+        uid: azure-maps-control.Models.StyleOptions
+  - uid: azure-maps-control.Models.TrafficOptions
     spec.typeScript:
       - name: TrafficOptions
         fullName: TrafficOptions
-        uid: azure-maps-control.atlas.TrafficOptions
-  - uid: azure-maps-control.atlas.UserInteractionOptions
+        uid: azure-maps-control.Models.TrafficOptions
+  - uid: azure-maps-control.Models.UserInteractionOptions
     spec.typeScript:
       - name: UserInteractionOptions
         fullName: UserInteractionOptions
-        uid: azure-maps-control.atlas.UserInteractionOptions
+        uid: azure-maps-control.Models.UserInteractionOptions
   - uid: >-
-      azure-maps-control.atlas.CameraOptions &
-      azure-maps-control.atlas.AnimationOptions
+      azure-maps-control.Models.CameraOptions &
+      azure-maps-control.Models.AnimationOptions
     spec.typeScript:
       - name: CameraOptions
         fullName: CameraOptions
-        uid: azure-maps-control.atlas.CameraOptions
+        uid: azure-maps-control.Models.CameraOptions
       - name: ' & '
         fullName: ' & '
       - name: AnimationOptions
         fullName: AnimationOptions
-        uid: azure-maps-control.atlas.AnimationOptions
-  - uid: azure-maps-control.atlas.CameraBoundsOptions
+        uid: azure-maps-control.Models.AnimationOptions
+  - uid: azure-maps-control.Models.CameraBoundsOptions
     spec.typeScript:
       - name: CameraBoundsOptions
         fullName: CameraBoundsOptions
-        uid: azure-maps-control.atlas.CameraBoundsOptions
-  - uid: azure-maps-control.atlas.PopupOptions
+        uid: azure-maps-control.Models.CameraBoundsOptions
+  - uid: azure-maps-control.Models.PopupOptions
     spec.typeScript:
       - name: PopupOptions
         fullName: PopupOptions
-        uid: azure-maps-control.atlas.PopupOptions
-  - uid: azure-maps-control.atlas.LayerOptions
-    spec.typeScript:
-      - name: LayerOptions
-        fullName: LayerOptions
-        uid: azure-maps-control.atlas.LayerOptions
-  - uid: azure-maps-control.atlas.ControlPosition
-    spec.typeScript:
-      - name: ControlPosition
-        fullName: ControlPosition
-        uid: azure-maps-control.atlas.ControlPosition
+        uid: azure-maps-control.Models.PopupOptions

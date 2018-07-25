@@ -1,0 +1,185 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-maps-control.Models.LayerOptions
+    name: LayerOptions
+    fullName: LayerOptions
+    children:
+      - azure-maps-control.Models.LayerOptions.before
+      - azure-maps-control.Models.LayerOptions.defer
+      - azure-maps-control.Models.LayerOptions.maxZoom
+      - azure-maps-control.Models.LayerOptions.minZoom
+      - azure-maps-control.Models.LayerOptions.name
+      - azure-maps-control.Models.LayerOptions.opacity
+      - azure-maps-control.Models.LayerOptions.overwrite
+    langs:
+      - typeScript
+    type: interface
+    summary: The options for a layer of the map.
+    extends:
+      name: Options
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.LayerOptions.before
+    name: before
+    fullName: before
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The name of the layer to place this layer before.  If not specified, the
+      layer will be placed at the top of the
+
+      layer list.
+    optional: true
+    syntax:
+      content: 'before?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.LayerOptions.defer
+    name: defer
+    fullName: defer
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Whether to defer the layer's updates to the map until a subsequent layer's
+      update or an update to the map's
+
+      style options.
+    optional: true
+    syntax:
+      content: 'defer?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.LayerOptions.maxZoom
+    name: maxZoom
+    fullName: maxZoom
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The maximum zoom at which the layer will display inclusive.
+    optional: true
+    syntax:
+      content: 'maxZoom?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.LayerOptions.minZoom
+    name: minZoom
+    fullName: minZoom
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The minimum zoom at which the layer will display inclusive.
+    optional: true
+    syntax:
+      content: 'minZoom?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.LayerOptions.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The name of the layer.
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.LayerOptions.opacity
+    name: opacity
+    fullName: opacity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The opacity of the layer.
+    optional: true
+    syntax:
+      content: 'opacity?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.LayerOptions.overwrite
+    name: overwrite
+    fullName: overwrite
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Whether to overwrite previous data for the layer.
+    optional: true
+    syntax:
+      content: 'overwrite?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-maps-control
+references:
+  - uid: azure-maps-control.Models.ControlStyle
+    spec.typeScript:
+      - name: ControlStyle
+        fullName: ControlStyle
+        uid: azure-maps-control.Models.ControlStyle
+  - uid: azure-maps-control.atlas.atlas.data.BoundingBox
+    spec.typeScript:
+      - name: BoundingBox
+        fullName: BoundingBox
+        uid: azure-maps-control.atlas.atlas.data.BoundingBox
+  - uid: azure-maps-control.atlas.atlas.data.Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.atlas.data.Position
+  - uid: azure-maps-control.Models.LayerOptions
+    spec.typeScript:
+      - name: LayerOptions
+        fullName: LayerOptions
+        uid: azure-maps-control.Models.LayerOptions
+  - uid: azure-maps-control.atlas.Map
+    spec.typeScript:
+      - name: Map
+        fullName: Map
+        uid: azure-maps-control.atlas.Map
+  - uid: azure-maps-control.Models.ControlOptions
+    spec.typeScript:
+      - name: ControlOptions
+        fullName: ControlOptions
+        uid: azure-maps-control.Models.ControlOptions
+  - uid: azure-maps-control.Models.ControlPosition
+    spec.typeScript:
+      - name: ControlPosition
+        fullName: ControlPosition
+        uid: azure-maps-control.Models.ControlPosition
+  - uid: >-
+      Array<azure-maps-control.atlas.atlas.data.Feature<azure-maps-control.atlas.atlas.data.Geometry,
+      any>>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.atlas.data.Geometry
+      - name: ', any>>'
+        fullName: ', any>>'

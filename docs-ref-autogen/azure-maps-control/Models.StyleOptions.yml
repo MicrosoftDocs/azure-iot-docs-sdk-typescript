@@ -1,0 +1,115 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-maps-control.Models.StyleOptions
+    name: StyleOptions
+    fullName: StyleOptions
+    children:
+      - azure-maps-control.Models.StyleOptions.language
+      - azure-maps-control.Models.StyleOptions.style
+      - azure-maps-control.Models.StyleOptions.view
+    langs:
+      - typeScript
+    type: interface
+    summary: The options for the map's style.
+    extends:
+      name: Options
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.StyleOptions.language
+    name: language
+    fullName: language
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The language of the map labels.
+    optional: true
+    syntax:
+      content: 'language?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.StyleOptions.style
+    name: style
+    fullName: style
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The style of the map tiles.
+    optional: true
+    syntax:
+      content: 'style?: "road"'
+      return:
+        type:
+          - '"road"'
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.StyleOptions.view
+    name: view
+    fullName: view
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      The geopolitical view of the map.
+      <p>Unified: The unified view of the world.</p>
+    optional: true
+    syntax:
+      content: 'view?: "Unified"'
+      return:
+        type:
+          - '"Unified"'
+    package: azure-maps-control
+references:
+  - uid: azure-maps-control.Models.ControlStyle
+    spec.typeScript:
+      - name: ControlStyle
+        fullName: ControlStyle
+        uid: azure-maps-control.Models.ControlStyle
+  - uid: azure-maps-control.atlas.atlas.data.BoundingBox
+    spec.typeScript:
+      - name: BoundingBox
+        fullName: BoundingBox
+        uid: azure-maps-control.atlas.atlas.data.BoundingBox
+  - uid: azure-maps-control.atlas.atlas.data.Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.atlas.data.Position
+  - uid: azure-maps-control.Models.LayerOptions
+    spec.typeScript:
+      - name: LayerOptions
+        fullName: LayerOptions
+        uid: azure-maps-control.Models.LayerOptions
+  - uid: azure-maps-control.atlas.Map
+    spec.typeScript:
+      - name: Map
+        fullName: Map
+        uid: azure-maps-control.atlas.Map
+  - uid: azure-maps-control.Models.ControlOptions
+    spec.typeScript:
+      - name: ControlOptions
+        fullName: ControlOptions
+        uid: azure-maps-control.Models.ControlOptions
+  - uid: azure-maps-control.Models.ControlPosition
+    spec.typeScript:
+      - name: ControlPosition
+        fullName: ControlPosition
+        uid: azure-maps-control.Models.ControlPosition
+  - uid: >-
+      Array<azure-maps-control.atlas.atlas.data.Feature<azure-maps-control.atlas.atlas.data.Geometry,
+      any>>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.atlas.data.Geometry
+      - name: ', any>>'
+        fullName: ', any>>'

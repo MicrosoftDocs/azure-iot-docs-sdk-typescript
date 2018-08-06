@@ -5,6 +5,7 @@ items:
     fullName: ServiceOptions
     children:
       - azure-maps-control.Models.ServiceOptions.disable-telemetry
+      - azure-maps-control.Models.ServiceOptions.enable-accessibility
       - azure-maps-control.Models.ServiceOptions.session-id
       - azure-maps-control.Models.ServiceOptions.subscription-key
     langs:
@@ -24,6 +25,20 @@ items:
     summary: Disable telemetry collection
     syntax:
       content: 'disable-telemetry: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.ServiceOptions.enable-accessibility
+    name: enable-accessibility
+    fullName: enable-accessibility
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Enable accessibility. Default value: false'
+    syntax:
+      content: 'enable-accessibility: boolean'
       return:
         type:
           - boolean

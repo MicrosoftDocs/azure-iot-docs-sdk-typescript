@@ -7,9 +7,9 @@ items:
       - azure-maps-control.atlas.Popup.constructor
       - azure-maps-control.atlas.Popup.attach
       - azure-maps-control.atlas.Popup.close
+      - azure-maps-control.atlas.Popup.getPopupOptions
       - azure-maps-control.atlas.Popup.open
       - azure-maps-control.atlas.Popup.remove
-      - azure-maps-control.atlas.Popup.getPopupOptions
       - azure-maps-control.atlas.Popup.setPopupOptions
     langs:
       - typeScript
@@ -35,61 +35,38 @@ items:
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Popup.attach
     name: attach
-    fullName: attach
     children: []
+    type: method
     langs:
       - typeScript
-    type: property
     summary: Attaches the popup to the HTML document in a hidden state.
     syntax:
-      content: 'attach: (map: Map) => void'
+      content: 'function attach(map: Map)'
+      parameters:
+        - id: map
+          type:
+            - azure-maps-control.atlas.Map
+          description: |
+            The map.
       return:
         type:
-          - '(map: Map) => void'
+          - any
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Popup.close
     name: close
-    fullName: close
     children: []
+    type: method
     langs:
       - typeScript
-    type: property
     summary: >-
       Closes the popup on the map. The popup remains attached to the HTML
       document.
     syntax:
-      content: 'close: () => void'
+      content: function close()
+      parameters: []
       return:
         type:
-          - () => void
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Popup.open
-    name: open
-    fullName: open
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Opens the popup on the passed in map.
-    syntax:
-      content: 'open: (map: Map) => void'
-      return:
-        type:
-          - '(map: Map) => void'
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Popup.remove
-    name: remove
-    fullName: remove
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Closes the popup on the map and removes it from the HTML document.
-    syntax:
-      content: 'remove: () => void'
-      return:
-        type:
-          - () => void
+          - any
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Popup.getPopupOptions
     name: getPopupOptions
@@ -104,6 +81,39 @@ items:
       return:
         type:
           - azure-maps-control.Models.PopupOptions
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Popup.open
+    name: open
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Opens the popup on the passed in map.
+    syntax:
+      content: 'function open(map: Map)'
+      parameters:
+        - id: map
+          type:
+            - azure-maps-control.atlas.Map
+          description: |
+            The map.
+      return:
+        type:
+          - any
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Popup.remove
+    name: remove
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Closes the popup on the map and removes it from the HTML document.
+    syntax:
+      content: function remove()
+      parameters: []
+      return:
+        type:
+          - any
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Popup.setPopupOptions
     name: setPopupOptions

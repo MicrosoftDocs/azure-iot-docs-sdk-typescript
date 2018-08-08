@@ -1,86 +1,59 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-control.atlas.atlas.data.FeatureCollection
-    name: FeatureCollection
-    fullName: FeatureCollection
+  - uid: azure-maps-control.atlas.data.Position
+    name: Position
+    fullName: Position
     children:
-      - azure-maps-control.atlas.atlas.data.FeatureCollection.constructor
-      - azure-maps-control.atlas.atlas.data.FeatureCollection.features
-      - azure-maps-control.atlas.atlas.data.FeatureCollection.type
-      - azure-maps-control.atlas.atlas.data.FeatureCollection.TYPE
+      - azure-maps-control.atlas.data.Position.constructor
+      - azure-maps-control.atlas.data.Position.Array
     langs:
       - typeScript
     type: class
-    summary: >-
-      A GeoJSON FeatureCollection object - a JSON object that contains a
-      collection of GeoJSON features. The full
-
-      description is detailed in [RFC
-      7946](https://tools.ietf.org/html/rfc7946#section-3.3).
+    summary: |-
+      A Position is an array of coordinates.
+       Array should contain between two and three elements.
+       [longitude, latitude] or [longitude, latitude, elevation]
+    extends:
+      name: Array<number>
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.atlas.data.FeatureCollection.constructor
-    name: FeatureCollection
+  - uid: azure-maps-control.atlas.data.Position.constructor
+    name: Position
     children: []
     type: constructor
     langs:
       - typeScript
-    summary: Constructs a FeatureCollection.
+    summary: Constructs a Position.
     syntax:
-      content: 'new FeatureCollection(features: Feature<Geometry, any>[])'
+      content: 'new Position(longitude: number, latitude: number, elevation?: number)'
       parameters:
-        - id: features
+        - id: longitude
           type:
-            - >-
-              azure-maps-control.atlas.atlas.data.Feature<azure-maps-control.atlas.atlas.data.Geometry,
-              any>[]
+            - number
+          description: The position's longitude.
+        - id: latitude
+          type:
+            - number
+          description: The position's latitude.
+        - id: elevation
+          type:
+            - number
           description: |
-            The collection of features that make up the feature collection.
+            THe position's elevation.
+          optional: true
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.atlas.data.FeatureCollection.features
-    name: features
-    fullName: features
+  - uid: azure-maps-control.atlas.data.Position.Array
+    name: Array
+    fullName: Array
     children: []
     langs:
       - typeScript
     type: property
-    summary: The collection of GeoJSON features contained in the feature collection.
+    summary: ''
     syntax:
-      content: 'features: Array<Feature<Geometry, any>>'
+      content: 'static Array: ArrayConstructor'
       return:
         type:
-          - >-
-            Array<azure-maps-control.atlas.atlas.data.Feature<azure-maps-control.atlas.atlas.data.Geometry,
-            any>>
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.atlas.data.FeatureCollection.type
-    name: type
-    fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: A GeoJSON type descriptor with value "FeatureCollection".
-    syntax:
-      content: 'type: "FeatureCollection"'
-      return:
-        type:
-          - '"FeatureCollection"'
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.atlas.data.FeatureCollection.TYPE
-    name: TYPE
-    fullName: TYPE
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      A static GeoJSON type descriptor for the FeatureCollection class to be
-      used in runtime comparisons.
-    syntax:
-      content: 'static TYPE: string'
-      return:
-        type:
-          - string
+          - ArrayConstructor
     package: azure-maps-control
 references:
   - uid: azure-maps-control.Models.CompassControlOptions
@@ -113,77 +86,77 @@ references:
       - name: ZoomControlOptions
         fullName: ZoomControlOptions
         uid: azure-maps-control.Models.ZoomControlOptions
-  - uid: azure-maps-control.atlas.atlas.data.Position
+  - uid: azure-maps-control.atlas.data.Position
     spec.typeScript:
       - name: Position
         fullName: Position
-        uid: azure-maps-control.atlas.atlas.data.Position
-  - uid: azure-maps-control.atlas.atlas.data.Geometry
+        uid: azure-maps-control.atlas.data.Position
+  - uid: azure-maps-control.atlas.data.Geometry
     spec.typeScript:
       - name: Geometry
         fullName: Geometry
-        uid: azure-maps-control.atlas.atlas.data.Geometry
+        uid: azure-maps-control.atlas.data.Geometry
   - uid: >-
-      azure-maps-control.atlas.atlas.data.Feature<azure-maps-control.atlas.atlas.data.Geometry,
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
       any>[]
     spec.typeScript:
       - name: Feature
         fullName: Feature
-        uid: azure-maps-control.atlas.atlas.data.Feature
+        uid: azure-maps-control.atlas.data.Feature
       - name: <
         fullName: <
       - name: Geometry
         fullName: Geometry
-        uid: azure-maps-control.atlas.atlas.data.Geometry
+        uid: azure-maps-control.atlas.data.Geometry
       - name: ', any>[]'
         fullName: ', any>[]'
   - uid: >-
-      Array<azure-maps-control.atlas.atlas.data.Feature<azure-maps-control.atlas.atlas.data.Geometry,
+      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
       any>>
     spec.typeScript:
       - name: Array<
         fullName: Array<
       - name: Feature
         fullName: Feature
-        uid: azure-maps-control.atlas.atlas.data.Feature
+        uid: azure-maps-control.atlas.data.Feature
       - name: <
         fullName: <
       - name: Geometry
         fullName: Geometry
-        uid: azure-maps-control.atlas.atlas.data.Geometry
+        uid: azure-maps-control.atlas.data.Geometry
       - name: ', any>>'
         fullName: ', any>>'
-  - uid: 'azure-maps-control.atlas.atlas.data.Geometry[]'
+  - uid: 'azure-maps-control.atlas.data.Geometry[]'
     spec.typeScript:
       - name: Geometry
         fullName: Geometry
-        uid: azure-maps-control.atlas.atlas.data.Geometry
+        uid: azure-maps-control.atlas.data.Geometry
       - name: '[]'
         fullName: '[]'
-  - uid: 'azure-maps-control.atlas.atlas.data.Position[]'
+  - uid: 'azure-maps-control.atlas.data.Position[]'
     spec.typeScript:
       - name: Position
         fullName: Position
-        uid: azure-maps-control.atlas.atlas.data.Position
+        uid: azure-maps-control.atlas.data.Position
       - name: '[]'
         fullName: '[]'
-  - uid: azure-maps-control.atlas.atlas.data.BoundingBox
+  - uid: azure-maps-control.atlas.data.BoundingBox
     spec.typeScript:
       - name: BoundingBox
         fullName: BoundingBox
-        uid: azure-maps-control.atlas.atlas.data.BoundingBox
-  - uid: 'azure-maps-control.atlas.atlas.data.Position[][]'
+        uid: azure-maps-control.atlas.data.BoundingBox
+  - uid: 'azure-maps-control.atlas.data.Position[][]'
     spec.typeScript:
       - name: Position
         fullName: Position
-        uid: azure-maps-control.atlas.atlas.data.Position
+        uid: azure-maps-control.atlas.data.Position
       - name: '[][]'
         fullName: '[][]'
-  - uid: 'azure-maps-control.atlas.atlas.data.Position[][][]'
+  - uid: 'azure-maps-control.atlas.data.Position[][][]'
     spec.typeScript:
       - name: Position
         fullName: Position
-        uid: azure-maps-control.atlas.atlas.data.Position
+        uid: azure-maps-control.atlas.data.Position
       - name: '[][][]'
         fullName: '[][][]'
   - uid: >-
@@ -211,19 +184,19 @@ references:
         fullName: UserInteractionOptions
         uid: azure-maps-control.Models.UserInteractionOptions
   - uid: >-
-      Array<azure-maps-control.atlas.atlas.data.Feature<azure-maps-control.atlas.atlas.data.Point,
+      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
       azure-maps-control.Models.CircleProperties>>
     spec.typeScript:
       - name: Array<
         fullName: Array<
       - name: Feature
         fullName: Feature
-        uid: azure-maps-control.atlas.atlas.data.Feature
+        uid: azure-maps-control.atlas.data.Feature
       - name: <
         fullName: <
       - name: Point
         fullName: Point
-        uid: azure-maps-control.atlas.atlas.data.Point
+        uid: azure-maps-control.atlas.data.Point
       - name: ', '
         fullName: ', '
       - name: CircleProperties
@@ -242,25 +215,25 @@ references:
         fullName: Control
         uid: azure-maps-control.Models.Control
   - uid: >-
-      Array<azure-maps-control.atlas.atlas.data.Feature<azure-maps-control.atlas.atlas.data.LineString
-      | azure-maps-control.atlas.atlas.data.MultiLineString,
+      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.LineString
+      | azure-maps-control.atlas.data.MultiLineString,
       azure-maps-control.Models.LinestringProperties>>
     spec.typeScript:
       - name: Array<
         fullName: Array<
       - name: Feature
         fullName: Feature
-        uid: azure-maps-control.atlas.atlas.data.Feature
+        uid: azure-maps-control.atlas.data.Feature
       - name: <
         fullName: <
       - name: LineString
         fullName: LineString
-        uid: azure-maps-control.atlas.atlas.data.LineString
+        uid: azure-maps-control.atlas.data.LineString
       - name: ' | '
         fullName: ' | '
       - name: MultiLineString
         fullName: MultiLineString
-        uid: azure-maps-control.atlas.atlas.data.MultiLineString
+        uid: azure-maps-control.atlas.data.MultiLineString
       - name: ', '
         fullName: ', '
       - name: LinestringProperties
@@ -274,19 +247,19 @@ references:
         fullName: LinestringLayerOptions
         uid: azure-maps-control.Models.LinestringLayerOptions
   - uid: >-
-      Array<azure-maps-control.atlas.atlas.data.Feature<azure-maps-control.atlas.atlas.data.Point,
+      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
       azure-maps-control.Models.PinProperties>>
     spec.typeScript:
       - name: Array<
         fullName: Array<
       - name: Feature
         fullName: Feature
-        uid: azure-maps-control.atlas.atlas.data.Feature
+        uid: azure-maps-control.atlas.data.Feature
       - name: <
         fullName: <
       - name: Point
         fullName: Point
-        uid: azure-maps-control.atlas.atlas.data.Point
+        uid: azure-maps-control.atlas.data.Point
       - name: ', '
         fullName: ', '
       - name: PinProperties
@@ -300,25 +273,25 @@ references:
         fullName: PinLayerOptions
         uid: azure-maps-control.Models.PinLayerOptions
   - uid: >-
-      Array<azure-maps-control.atlas.atlas.data.Feature<azure-maps-control.atlas.atlas.data.Polygon
-      | azure-maps-control.atlas.atlas.data.MultiPolygon,
+      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Polygon
+      | azure-maps-control.atlas.data.MultiPolygon,
       azure-maps-control.Models.PolygonProperties>>
     spec.typeScript:
       - name: Array<
         fullName: Array<
       - name: Feature
         fullName: Feature
-        uid: azure-maps-control.atlas.atlas.data.Feature
+        uid: azure-maps-control.atlas.data.Feature
       - name: <
         fullName: <
       - name: Polygon
         fullName: Polygon
-        uid: azure-maps-control.atlas.atlas.data.Polygon
+        uid: azure-maps-control.atlas.data.Polygon
       - name: ' | '
         fullName: ' | '
       - name: MultiPolygon
         fullName: MultiPolygon
-        uid: azure-maps-control.atlas.atlas.data.MultiPolygon
+        uid: azure-maps-control.atlas.data.MultiPolygon
       - name: ', '
         fullName: ', '
       - name: PolygonProperties

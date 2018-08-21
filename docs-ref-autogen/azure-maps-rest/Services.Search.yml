@@ -1,0 +1,3201 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-maps-rest.Services.Search
+    name: Search
+    fullName: Search
+    children:
+      - azure-maps-rest.Services.Search.getSearchAddress
+      - azure-maps-rest.Services.Search.getSearchAddress_1
+      - azure-maps-rest.Services.Search.getSearchAddress_2
+      - azure-maps-rest.Services.Search.getSearchAddress_3
+      - azure-maps-rest.Services.Search.getSearchAddressReverse
+      - azure-maps-rest.Services.Search.getSearchAddressReverse_1
+      - azure-maps-rest.Services.Search.getSearchAddressReverse_2
+      - azure-maps-rest.Services.Search.getSearchAddressReverse_3
+      - azure-maps-rest.Services.Search.getSearchAddressReverseCrossStreet
+      - azure-maps-rest.Services.Search.getSearchAddressReverseCrossStreet_1
+      - azure-maps-rest.Services.Search.getSearchAddressReverseCrossStreet_2
+      - azure-maps-rest.Services.Search.getSearchAddressReverseCrossStreet_3
+      - >-
+        azure-maps-rest.Services.Search.getSearchAddressReverseCrossStreetWithHttpOperationResponse
+      - >-
+        azure-maps-rest.Services.Search.getSearchAddressReverseWithHttpOperationResponse
+      - azure-maps-rest.Services.Search.getSearchAddressStructured
+      - azure-maps-rest.Services.Search.getSearchAddressStructured_1
+      - azure-maps-rest.Services.Search.getSearchAddressStructured_2
+      - azure-maps-rest.Services.Search.getSearchAddressStructured_3
+      - >-
+        azure-maps-rest.Services.Search.getSearchAddressStructuredWithHttpOperationResponse
+      - >-
+        azure-maps-rest.Services.Search.getSearchAddressWithHttpOperationResponse
+      - >-
+        azure-maps-rest.Services.Search.getSearchAlongRouteWithHttpOperationResponse
+      - azure-maps-rest.Services.Search.getSearchFuzzy
+      - azure-maps-rest.Services.Search.getSearchFuzzy_1
+      - azure-maps-rest.Services.Search.getSearchFuzzy_2
+      - azure-maps-rest.Services.Search.getSearchFuzzy_3
+      - azure-maps-rest.Services.Search.getSearchFuzzyWithHttpOperationResponse
+      - >-
+        azure-maps-rest.Services.Search.getSearchInsideGeometryWithHttpOperationResponse
+      - azure-maps-rest.Services.Search.getSearchNearby
+      - azure-maps-rest.Services.Search.getSearchNearby_1
+      - azure-maps-rest.Services.Search.getSearchNearby_2
+      - azure-maps-rest.Services.Search.getSearchNearby_3
+      - azure-maps-rest.Services.Search.getSearchNearbyWithHttpOperationResponse
+      - azure-maps-rest.Services.Search.getSearchPOI
+      - azure-maps-rest.Services.Search.getSearchPOI_1
+      - azure-maps-rest.Services.Search.getSearchPOI_2
+      - azure-maps-rest.Services.Search.getSearchPOI_3
+      - azure-maps-rest.Services.Search.getSearchPOICategory
+      - azure-maps-rest.Services.Search.getSearchPOICategory_1
+      - azure-maps-rest.Services.Search.getSearchPOICategory_2
+      - azure-maps-rest.Services.Search.getSearchPOICategory_3
+      - >-
+        azure-maps-rest.Services.Search.getSearchPOICategoryWithHttpOperationResponse
+      - azure-maps-rest.Services.Search.getSearchPOIWithHttpOperationResponse
+      - azure-maps-rest.Services.Search.postSearchAlongRoute
+      - azure-maps-rest.Services.Search.postSearchAlongRoute_1
+      - azure-maps-rest.Services.Search.postSearchAlongRoute_2
+      - azure-maps-rest.Services.Search.postSearchAlongRoute_3
+      - >-
+        azure-maps-rest.Services.Search.postSearchAlongRouteWithHttpOperationResponse
+      - azure-maps-rest.Services.Search.postSearchInsideGeometry
+      - azure-maps-rest.Services.Search.postSearchInsideGeometry_1
+      - azure-maps-rest.Services.Search.postSearchInsideGeometry_2
+      - azure-maps-rest.Services.Search.postSearchInsideGeometry_3
+      - >-
+        azure-maps-rest.Services.Search.postSearchInsideGeometryWithHttpOperationResponse
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchAddress
+    name: getSearchAddress
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Address Geocoding**<br><br>In many cases, the complete search service
+      might be too much, for
+
+      instance if you are only interested in traditional geocoding. Search can
+      also be accessed for
+
+      address look up exclusively. The geocoding is performed by hitting the
+      geocode endpoint with
+
+      just the address or partial address in question. The geocoding search
+      index will be queried for
+
+      everything above the street level data. No POIs will be returned. Note
+      that the geocoder is very
+
+      tolerant of typos and incomplete addresses. It will also handle everything
+      from exact street
+
+      addresses or street or intersections as well as higher level geographies
+      such as city centers,
+
+      counties, states etc.
+    syntax:
+      content: 'function getSearchAddress(query: string)'
+      parameters:
+        - id: query
+          type:
+            - string
+          description: >
+            The address to search for (e.g., "1 Microsoft way, Redmond, WA"),
+            must be
+
+            properly URL encoded.
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchAddressResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchAddress_1
+    name: getSearchAddress
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Address Geocoding**<br><br>In many cases, the complete search service
+      might be too much, for
+
+      instance if you are only interested in traditional geocoding. Search can
+      also be accessed for
+
+      address look up exclusively. The geocoding is performed by hitting the
+      geocode endpoint with
+
+      just the address or partial address in question. The geocoding search
+      index will be queried for
+
+      everything above the street level data. No POIs will be returned. Note
+      that the geocoder is very
+
+      tolerant of typos and incomplete addresses. It will also handle everything
+      from exact street
+
+      addresses or street or intersections as well as higher level geographies
+      such as city centers,
+
+      counties, states etc.
+    syntax:
+      content: >-
+        function getSearchAddress(query: string, options:
+        SearchGetSearchAddressOptionalParams)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - azure-maps-rest.Models.SearchGetSearchAddressOptionalParams
+          description: ''
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchAddressResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchAddress_2
+    name: getSearchAddress
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Address Geocoding**<br><br>In many cases, the complete search service
+      might be too much, for
+
+      instance if you are only interested in traditional geocoding. Search can
+      also be accessed for
+
+      address look up exclusively. The geocoding is performed by hitting the
+      geocode endpoint with
+
+      just the address or partial address in question. The geocoding search
+      index will be queried for
+
+      everything above the street level data. No POIs will be returned. Note
+      that the geocoder is very
+
+      tolerant of typos and incomplete addresses. It will also handle everything
+      from exact street
+
+      addresses or street or intersections as well as higher level geographies
+      such as city centers,
+
+      counties, states etc.
+    syntax:
+      content: >-
+        function getSearchAddress(query: string, callback:
+        ServiceCallback<SearchAddressResponse>)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-maps-rest.Models.SearchAddressResponse>
+          description: ''
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchAddressResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchAddress_3
+    name: getSearchAddress
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Address Geocoding**<br><br>In many cases, the complete search service
+      might be too much, for
+
+      instance if you are only interested in traditional geocoding. Search can
+      also be accessed for
+
+      address look up exclusively. The geocoding is performed by hitting the
+      geocode endpoint with
+
+      just the address or partial address in question. The geocoding search
+      index will be queried for
+
+      everything above the street level data. No POIs will be returned. Note
+      that the geocoder is very
+
+      tolerant of typos and incomplete addresses. It will also handle everything
+      from exact street
+
+      addresses or street or intersections as well as higher level geographies
+      such as city centers,
+
+      counties, states etc.
+    syntax:
+      content: >-
+        function getSearchAddress(query: string, options:
+        SearchGetSearchAddressOptionalParams, callback:
+        ServiceCallback<SearchAddressResponse>)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - azure-maps-rest.Models.SearchGetSearchAddressOptionalParams
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-maps-rest.Models.SearchAddressResponse>
+          description: ''
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchAddressResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchAddressReverse
+    name: getSearchAddressReverse
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Reverse Geocode to an Address**<br><br>There may be times when you need
+      to translate a
+
+      coordinate (example: 37.786505, -122.3862) into a human understandable
+      street address. Most
+
+      often this is needed in tracking applications where you receive a GPS feed
+      from the device or
+
+      asset and wish to know what address where the coordinate is located. This
+      endpoint will return
+
+      address information for a given coordinate.
+    syntax:
+      content: 'function getSearchAddressReverse(query: string)'
+      parameters:
+        - id: query
+          type:
+            - string
+          description: >
+            The applicable query specified as a comma separated string composed
+            by
+
+            latitude followed by longitude e.g. "47.641268, -122.125679".
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchAddressReverseResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchAddressReverse_1
+    name: getSearchAddressReverse
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Reverse Geocode to an Address**<br><br>There may be times when you need
+      to translate a
+
+      coordinate (example: 37.786505, -122.3862) into a human understandable
+      street address. Most
+
+      often this is needed in tracking applications where you receive a GPS feed
+      from the device or
+
+      asset and wish to know what address where the coordinate is located. This
+      endpoint will return
+
+      address information for a given coordinate.
+    syntax:
+      content: >-
+        function getSearchAddressReverse(query: string, options:
+        SearchGetSearchAddressReverseOptionalParams)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - azure-maps-rest.Models.SearchGetSearchAddressReverseOptionalParams
+          description: ''
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchAddressReverseResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchAddressReverse_2
+    name: getSearchAddressReverse
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Reverse Geocode to an Address**<br><br>There may be times when you need
+      to translate a
+
+      coordinate (example: 37.786505, -122.3862) into a human understandable
+      street address. Most
+
+      often this is needed in tracking applications where you receive a GPS feed
+      from the device or
+
+      asset and wish to know what address where the coordinate is located. This
+      endpoint will return
+
+      address information for a given coordinate.
+    syntax:
+      content: >-
+        function getSearchAddressReverse(query: string, callback:
+        ServiceCallback<SearchAddressReverseResponse>)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - >-
+              ServiceCallback<azure-maps-rest.Models.SearchAddressReverseResponse>
+          description: ''
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchAddressReverseResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchAddressReverse_3
+    name: getSearchAddressReverse
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Reverse Geocode to an Address**<br><br>There may be times when you need
+      to translate a
+
+      coordinate (example: 37.786505, -122.3862) into a human understandable
+      street address. Most
+
+      often this is needed in tracking applications where you receive a GPS feed
+      from the device or
+
+      asset and wish to know what address where the coordinate is located. This
+      endpoint will return
+
+      address information for a given coordinate.
+    syntax:
+      content: >-
+        function getSearchAddressReverse(query: string, options:
+        SearchGetSearchAddressReverseOptionalParams, callback:
+        ServiceCallback<SearchAddressReverseResponse>)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - azure-maps-rest.Models.SearchGetSearchAddressReverseOptionalParams
+          description: ''
+        - id: callback
+          type:
+            - >-
+              ServiceCallback<azure-maps-rest.Models.SearchAddressReverseResponse>
+          description: ''
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchAddressReverseResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchAddressReverseCrossStreet
+    name: getSearchAddressReverseCrossStreet
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Reverse Geocode to a Cross Street**<br><br>There may be times when you
+      need to translate a
+
+      coordinate (example: 37.786505, -122.3862) into a human understandable
+      cross street. Most often
+
+      this is needed in tracking applications where you receive a GPS feed from
+      the device or asset
+
+      and wish to know what address where the coordinate is located.<br><br>This
+      endpoint will return
+
+      cross street information for a given coordinate.
+    syntax:
+      content: 'function getSearchAddressReverseCrossStreet(query: string)'
+      parameters:
+        - id: query
+          type:
+            - string
+          description: >
+            The applicable query specified as a comma separated string composed
+            by
+
+            latitude followed by longitude e.g. "47.641268, -122.125679".
+      return:
+        type:
+          - >-
+            Promise<azure-maps-rest.Models.SearchAddressReverseCrossStreetResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchAddressReverseCrossStreet_1
+    name: getSearchAddressReverseCrossStreet
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Reverse Geocode to a Cross Street**<br><br>There may be times when you
+      need to translate a
+
+      coordinate (example: 37.786505, -122.3862) into a human understandable
+      cross street. Most often
+
+      this is needed in tracking applications where you receive a GPS feed from
+      the device or asset
+
+      and wish to know what address where the coordinate is located.<br><br>This
+      endpoint will return
+
+      cross street information for a given coordinate.
+    syntax:
+      content: >-
+        function getSearchAddressReverseCrossStreet(query: string, options:
+        SearchGetSearchAddressReverseCrossStreetOptionalParams)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - >-
+              azure-maps-rest.Models.SearchGetSearchAddressReverseCrossStreetOptionalParams
+          description: ''
+      return:
+        type:
+          - >-
+            Promise<azure-maps-rest.Models.SearchAddressReverseCrossStreetResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchAddressReverseCrossStreet_2
+    name: getSearchAddressReverseCrossStreet
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Reverse Geocode to a Cross Street**<br><br>There may be times when you
+      need to translate a
+
+      coordinate (example: 37.786505, -122.3862) into a human understandable
+      cross street. Most often
+
+      this is needed in tracking applications where you receive a GPS feed from
+      the device or asset
+
+      and wish to know what address where the coordinate is located.<br><br>This
+      endpoint will return
+
+      cross street information for a given coordinate.
+    syntax:
+      content: >-
+        function getSearchAddressReverseCrossStreet(query: string, callback:
+        ServiceCallback<SearchAddressReverseCrossStreetResponse>)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - >-
+              ServiceCallback<azure-maps-rest.Models.SearchAddressReverseCrossStreetResponse>
+          description: ''
+      return:
+        type:
+          - >-
+            Promise<azure-maps-rest.Models.SearchAddressReverseCrossStreetResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchAddressReverseCrossStreet_3
+    name: getSearchAddressReverseCrossStreet
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Reverse Geocode to a Cross Street**<br><br>There may be times when you
+      need to translate a
+
+      coordinate (example: 37.786505, -122.3862) into a human understandable
+      cross street. Most often
+
+      this is needed in tracking applications where you receive a GPS feed from
+      the device or asset
+
+      and wish to know what address where the coordinate is located.<br><br>This
+      endpoint will return
+
+      cross street information for a given coordinate.
+    syntax:
+      content: >-
+        function getSearchAddressReverseCrossStreet(query: string, options:
+        SearchGetSearchAddressReverseCrossStreetOptionalParams, callback:
+        ServiceCallback<SearchAddressReverseCrossStreetResponse>)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - >-
+              azure-maps-rest.Models.SearchGetSearchAddressReverseCrossStreetOptionalParams
+          description: ''
+        - id: callback
+          type:
+            - >-
+              ServiceCallback<azure-maps-rest.Models.SearchAddressReverseCrossStreetResponse>
+          description: ''
+      return:
+        type:
+          - >-
+            Promise<azure-maps-rest.Models.SearchAddressReverseCrossStreetResponse>
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.Services.Search.getSearchAddressReverseCrossStreetWithHttpOperationResponse
+    name: getSearchAddressReverseCrossStreetWithHttpOperationResponse
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Reverse Geocode to a Cross Street**<br><br>There may be times when you
+      need to translate a
+
+      coordinate (example: 37.786505, -122.3862) into a human understandable
+      cross street. Most often
+
+      this is needed in tracking applications where you receive a GPS feed from
+      the device or asset
+
+      and wish to know what address where the coordinate is located.<br><br>This
+      endpoint will return
+
+      cross street information for a given coordinate.
+    syntax:
+      content: >-
+        function
+        getSearchAddressReverseCrossStreetWithHttpOperationResponse(query:
+        string, options?:
+        SearchGetSearchAddressReverseCrossStreetOptionalParams)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: >
+            The applicable query specified as a comma separated string composed
+            by
+
+            latitude followed by longitude e.g. "47.641268, -122.125679".
+        - id: options
+          type:
+            - >-
+              azure-maps-rest.Models.SearchGetSearchAddressReverseCrossStreetOptionalParams
+          description: |
+            Optional Parameters.
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<HttpOperationResponse<azure-maps-rest.Models.SearchAddressReverseCrossStreetResponse>>
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.Services.Search.getSearchAddressReverseWithHttpOperationResponse
+    name: getSearchAddressReverseWithHttpOperationResponse
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Reverse Geocode to an Address**<br><br>There may be times when you need
+      to translate a
+
+      coordinate (example: 37.786505, -122.3862) into a human understandable
+      street address. Most
+
+      often this is needed in tracking applications where you receive a GPS feed
+      from the device or
+
+      asset and wish to know what address where the coordinate is located. This
+      endpoint will return
+
+      address information for a given coordinate.
+    syntax:
+      content: >-
+        function getSearchAddressReverseWithHttpOperationResponse(query: string,
+        options?: SearchGetSearchAddressReverseOptionalParams)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: >
+            The applicable query specified as a comma separated string composed
+            by
+
+            latitude followed by longitude e.g. "47.641268, -122.125679".
+        - id: options
+          type:
+            - azure-maps-rest.Models.SearchGetSearchAddressReverseOptionalParams
+          description: |
+            Optional Parameters.
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<HttpOperationResponse<azure-maps-rest.Models.SearchAddressReverseResponse>>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchAddressStructured
+    name: getSearchAddressStructured
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Structured Address Geocoding**<br><br>Azure Address Geocoding can also
+      be accessed for
+
+      structured address look up exclusively. The geocoding search index will be
+      queried for
+
+      everything above the street level data. No POIs will be returned. Note
+      that the geocoder is very
+
+      tolerant of typos and incomplete addresses. It will also handle everything
+      from exact street
+
+      addresses or street or intersections as well as higher level geographies
+      such as city centers,
+
+      counties, states etc.
+    syntax:
+      content: 'function getSearchAddressStructured(countryCode: string)'
+      parameters:
+        - id: countryCode
+          type:
+            - string
+          description: |
+            The 2 or 3 letter country code portion of an address. E.g. US
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchAddressStructuredResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchAddressStructured_1
+    name: getSearchAddressStructured
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Structured Address Geocoding**<br><br>Azure Address Geocoding can also
+      be accessed for
+
+      structured address look up exclusively. The geocoding search index will be
+      queried for
+
+      everything above the street level data. No POIs will be returned. Note
+      that the geocoder is very
+
+      tolerant of typos and incomplete addresses. It will also handle everything
+      from exact street
+
+      addresses or street or intersections as well as higher level geographies
+      such as city centers,
+
+      counties, states etc.
+    syntax:
+      content: >-
+        function getSearchAddressStructured(countryCode: string, options:
+        SearchGetSearchAddressStructuredOptionalParams)
+      parameters:
+        - id: countryCode
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - >-
+              azure-maps-rest.Models.SearchGetSearchAddressStructuredOptionalParams
+          description: ''
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchAddressStructuredResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchAddressStructured_2
+    name: getSearchAddressStructured
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Structured Address Geocoding**<br><br>Azure Address Geocoding can also
+      be accessed for
+
+      structured address look up exclusively. The geocoding search index will be
+      queried for
+
+      everything above the street level data. No POIs will be returned. Note
+      that the geocoder is very
+
+      tolerant of typos and incomplete addresses. It will also handle everything
+      from exact street
+
+      addresses or street or intersections as well as higher level geographies
+      such as city centers,
+
+      counties, states etc.
+    syntax:
+      content: >-
+        function getSearchAddressStructured(countryCode: string, callback:
+        ServiceCallback<SearchAddressStructuredResponse>)
+      parameters:
+        - id: countryCode
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - >-
+              ServiceCallback<azure-maps-rest.Models.SearchAddressStructuredResponse>
+          description: ''
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchAddressStructuredResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchAddressStructured_3
+    name: getSearchAddressStructured
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Structured Address Geocoding**<br><br>Azure Address Geocoding can also
+      be accessed for
+
+      structured address look up exclusively. The geocoding search index will be
+      queried for
+
+      everything above the street level data. No POIs will be returned. Note
+      that the geocoder is very
+
+      tolerant of typos and incomplete addresses. It will also handle everything
+      from exact street
+
+      addresses or street or intersections as well as higher level geographies
+      such as city centers,
+
+      counties, states etc.
+    syntax:
+      content: >-
+        function getSearchAddressStructured(countryCode: string, options:
+        SearchGetSearchAddressStructuredOptionalParams, callback:
+        ServiceCallback<SearchAddressStructuredResponse>)
+      parameters:
+        - id: countryCode
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - >-
+              azure-maps-rest.Models.SearchGetSearchAddressStructuredOptionalParams
+          description: ''
+        - id: callback
+          type:
+            - >-
+              ServiceCallback<azure-maps-rest.Models.SearchAddressStructuredResponse>
+          description: ''
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchAddressStructuredResponse>
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.Services.Search.getSearchAddressStructuredWithHttpOperationResponse
+    name: getSearchAddressStructuredWithHttpOperationResponse
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Structured Address Geocoding**<br><br>Azure Address Geocoding can also
+      be accessed for
+
+      structured address look up exclusively. The geocoding search index will be
+      queried for
+
+      everything above the street level data. No POIs will be returned. Note
+      that the geocoder is very
+
+      tolerant of typos and incomplete addresses. It will also handle everything
+      from exact street
+
+      addresses or street or intersections as well as higher level geographies
+      such as city centers,
+
+      counties, states etc.
+    syntax:
+      content: >-
+        function
+        getSearchAddressStructuredWithHttpOperationResponse(countryCode: string,
+        options?: SearchGetSearchAddressStructuredOptionalParams)
+      parameters:
+        - id: countryCode
+          type:
+            - string
+          description: |
+            The 2 or 3 letter country code portion of an address. E.g. US
+        - id: options
+          type:
+            - >-
+              azure-maps-rest.Models.SearchGetSearchAddressStructuredOptionalParams
+          description: |
+            Optional Parameters.
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<HttpOperationResponse<azure-maps-rest.Models.SearchAddressStructuredResponse>>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchAddressWithHttpOperationResponse
+    name: getSearchAddressWithHttpOperationResponse
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Address Geocoding**<br><br>In many cases, the complete search service
+      might be too much, for
+
+      instance if you are only interested in traditional geocoding. Search can
+      also be accessed for
+
+      address look up exclusively. The geocoding is performed by hitting the
+      geocode endpoint with
+
+      just the address or partial address in question. The geocoding search
+      index will be queried for
+
+      everything above the street level data. No POIs will be returned. Note
+      that the geocoder is very
+
+      tolerant of typos and incomplete addresses. It will also handle everything
+      from exact street
+
+      addresses or street or intersections as well as higher level geographies
+      such as city centers,
+
+      counties, states etc.
+    syntax:
+      content: >-
+        function getSearchAddressWithHttpOperationResponse(query: string,
+        options?: SearchGetSearchAddressOptionalParams)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: >
+            The address to search for (e.g., "1 Microsoft way, Redmond, WA"),
+            must be
+
+            properly URL encoded.
+        - id: options
+          type:
+            - azure-maps-rest.Models.SearchGetSearchAddressOptionalParams
+          description: |
+            Optional Parameters.
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<HttpOperationResponse<azure-maps-rest.Models.SearchAddressResponse>>
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.Services.Search.getSearchAlongRouteWithHttpOperationResponse
+    name: getSearchAlongRouteWithHttpOperationResponse
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      The Search Along Route endpoint allows you to perform a fuzzy search for
+      POIs along a specified
+
+      route. This search is constrained by specifying the `maxDetourTime`
+      limiting measure.<br><br>To
+
+      send the route-points you will use a `GET` request where the `route`
+      parameter is represented as
+
+      a `GeoJSON LineString` type. Each route-point in `route` is represented as
+      a `GeoJSON Position`
+
+      type i.e. an array where the _longitude_ value is followed by the
+      _latitude_ value and the
+
+      _altitude_ value is ignored. The `route` should contain at least 2
+      route-points.<br><br>It is
+
+      possible that original route will be altered, some of it's points may be
+      skipped. If the route
+
+      that passes through the found point is faster than the original one, the
+      `detourTime` value in
+
+      the response is negative.
+    syntax:
+      content: >-
+        function getSearchAlongRouteWithHttpOperationResponse(query: string,
+        route: string, maxDetourTime: number, options?:
+        SearchGetSearchAlongRouteOptionalParams)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: >
+            The applicable query string (e.g., "burger joints", "pizza"). Can
+            _also_
+
+            be specified as a comma separated string composed by latitude
+            followed by longitude (e.g.,
+
+            "47.641268, -122.125679"). Must be properly URL encoded.
+        - id: route
+          type:
+            - string
+          description: >
+            This represents the route to search along and should be a valid
+            `GeoJSON
+
+            LineString` type. Please refer to [RFC
+            7946](https://tools.ietf.org/html/rfc7946#section-3.1.4)
+
+            for details.
+        - id: maxDetourTime
+          type:
+            - number
+          description: |
+            Maximum detour time of the point of interest in seconds. Max value
+            is 3600 seconds
+        - id: options
+          type:
+            - azure-maps-rest.Models.SearchGetSearchAlongRouteOptionalParams
+          description: |
+            Optional Parameters.
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<HttpOperationResponse<azure-maps-rest.Models.SearchAlongRouteResponse>>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchFuzzy
+    name: getSearchFuzzy
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Free Form Search**<br><br>The basic default API is Free Form Search
+      which handles the most
+
+      fuzzy of inputs handling any combination of address or POI tokens. This
+      search API is the
+
+      canonical 'single line search'. The Free Form Search API is a seamless
+      combination of POI search
+
+      and geocoding. The API can also be weighted with a contextual position
+      (lat./lon. pair), or
+
+      fully constrained by a coordinate and radius, or it can be executed more
+      generally without any
+
+      geo biasing anchor point.<br><br>We strongly advise you to use the
+      'countrySet' parameter to
+
+      specify only the countries for which your application needs coverage, as
+      the default behavior
+
+      will be to search the entire world, potentially returning unnecessary
+      results.<br><br> E.g.:
+
+      `countrySet`=US,FR <br><br>Please see [Search
+
+      Coverage](https://docs.microsoft.com/en-us/azure/location-based-services/geocoding-coverage)
+      for
+
+      a complete list of all the supported countries.<br><br>Most Search queries
+      default to
+
+      `maxFuzzyLevel`=2 to gain performance and also reduce unusual results.
+      This new default can be
+
+      overridden as needed per request by passing in the query param
+      `maxFuzzyLevel`=3 or 4.
+    syntax:
+      content: 'function getSearchFuzzy(query: string)'
+      parameters:
+        - id: query
+          type:
+            - string
+          description: >
+            The applicable query string (e.g., "seattle", "pizza"). Can _also_
+            be
+
+            specified as a comma separated string composed by latitude followed
+            by longitude (e.g.,
+
+            "47.641268, -122.125679"). Must be properly URL encoded.
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchFuzzyResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchFuzzy_1
+    name: getSearchFuzzy
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Free Form Search**<br><br>The basic default API is Free Form Search
+      which handles the most
+
+      fuzzy of inputs handling any combination of address or POI tokens. This
+      search API is the
+
+      canonical 'single line search'. The Free Form Search API is a seamless
+      combination of POI search
+
+      and geocoding. The API can also be weighted with a contextual position
+      (lat./lon. pair), or
+
+      fully constrained by a coordinate and radius, or it can be executed more
+      generally without any
+
+      geo biasing anchor point.<br><br>We strongly advise you to use the
+      'countrySet' parameter to
+
+      specify only the countries for which your application needs coverage, as
+      the default behavior
+
+      will be to search the entire world, potentially returning unnecessary
+      results.<br><br> E.g.:
+
+      `countrySet`=US,FR <br><br>Please see [Search
+
+      Coverage](https://docs.microsoft.com/en-us/azure/location-based-services/geocoding-coverage)
+      for
+
+      a complete list of all the supported countries.<br><br>Most Search queries
+      default to
+
+      `maxFuzzyLevel`=2 to gain performance and also reduce unusual results.
+      This new default can be
+
+      overridden as needed per request by passing in the query param
+      `maxFuzzyLevel`=3 or 4.
+    syntax:
+      content: >-
+        function getSearchFuzzy(query: string, options:
+        SearchGetSearchFuzzyOptionalParams)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - azure-maps-rest.Models.SearchGetSearchFuzzyOptionalParams
+          description: ''
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchFuzzyResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchFuzzy_2
+    name: getSearchFuzzy
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Free Form Search**<br><br>The basic default API is Free Form Search
+      which handles the most
+
+      fuzzy of inputs handling any combination of address or POI tokens. This
+      search API is the
+
+      canonical 'single line search'. The Free Form Search API is a seamless
+      combination of POI search
+
+      and geocoding. The API can also be weighted with a contextual position
+      (lat./lon. pair), or
+
+      fully constrained by a coordinate and radius, or it can be executed more
+      generally without any
+
+      geo biasing anchor point.<br><br>We strongly advise you to use the
+      'countrySet' parameter to
+
+      specify only the countries for which your application needs coverage, as
+      the default behavior
+
+      will be to search the entire world, potentially returning unnecessary
+      results.<br><br> E.g.:
+
+      `countrySet`=US,FR <br><br>Please see [Search
+
+      Coverage](https://docs.microsoft.com/en-us/azure/location-based-services/geocoding-coverage)
+      for
+
+      a complete list of all the supported countries.<br><br>Most Search queries
+      default to
+
+      `maxFuzzyLevel`=2 to gain performance and also reduce unusual results.
+      This new default can be
+
+      overridden as needed per request by passing in the query param
+      `maxFuzzyLevel`=3 or 4.
+    syntax:
+      content: >-
+        function getSearchFuzzy(query: string, callback:
+        ServiceCallback<SearchFuzzyResponse>)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-maps-rest.Models.SearchFuzzyResponse>
+          description: ''
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchFuzzyResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchFuzzy_3
+    name: getSearchFuzzy
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Free Form Search**<br><br>The basic default API is Free Form Search
+      which handles the most
+
+      fuzzy of inputs handling any combination of address or POI tokens. This
+      search API is the
+
+      canonical 'single line search'. The Free Form Search API is a seamless
+      combination of POI search
+
+      and geocoding. The API can also be weighted with a contextual position
+      (lat./lon. pair), or
+
+      fully constrained by a coordinate and radius, or it can be executed more
+      generally without any
+
+      geo biasing anchor point.<br><br>We strongly advise you to use the
+      'countrySet' parameter to
+
+      specify only the countries for which your application needs coverage, as
+      the default behavior
+
+      will be to search the entire world, potentially returning unnecessary
+      results.<br><br> E.g.:
+
+      `countrySet`=US,FR <br><br>Please see [Search
+
+      Coverage](https://docs.microsoft.com/en-us/azure/location-based-services/geocoding-coverage)
+      for
+
+      a complete list of all the supported countries.<br><br>Most Search queries
+      default to
+
+      `maxFuzzyLevel`=2 to gain performance and also reduce unusual results.
+      This new default can be
+
+      overridden as needed per request by passing in the query param
+      `maxFuzzyLevel`=3 or 4.
+    syntax:
+      content: >-
+        function getSearchFuzzy(query: string, options:
+        SearchGetSearchFuzzyOptionalParams, callback:
+        ServiceCallback<SearchFuzzyResponse>)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - azure-maps-rest.Models.SearchGetSearchFuzzyOptionalParams
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-maps-rest.Models.SearchFuzzyResponse>
+          description: ''
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchFuzzyResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchFuzzyWithHttpOperationResponse
+    name: getSearchFuzzyWithHttpOperationResponse
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Free Form Search**<br><br>The basic default API is Free Form Search
+      which handles the most
+
+      fuzzy of inputs handling any combination of address or POI tokens. This
+      search API is the
+
+      canonical 'single line search'. The Free Form Search API is a seamless
+      combination of POI search
+
+      and geocoding. The API can also be weighted with a contextual position
+      (lat./lon. pair), or
+
+      fully constrained by a coordinate and radius, or it can be executed more
+      generally without any
+
+      geo biasing anchor point.<br><br>We strongly advise you to use the
+      'countrySet' parameter to
+
+      specify only the countries for which your application needs coverage, as
+      the default behavior
+
+      will be to search the entire world, potentially returning unnecessary
+      results.<br><br> E.g.:
+
+      `countrySet`=US,FR <br><br>Please see [Search
+
+      Coverage](https://docs.microsoft.com/en-us/azure/location-based-services/geocoding-coverage)
+      for
+
+      a complete list of all the supported countries.<br><br>Most Search queries
+      default to
+
+      `maxFuzzyLevel`=2 to gain performance and also reduce unusual results.
+      This new default can be
+
+      overridden as needed per request by passing in the query param
+      `maxFuzzyLevel`=3 or 4.
+    syntax:
+      content: >-
+        function getSearchFuzzyWithHttpOperationResponse(query: string,
+        options?: SearchGetSearchFuzzyOptionalParams)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: >
+            The applicable query string (e.g., "seattle", "pizza"). Can _also_
+            be
+
+            specified as a comma separated string composed by latitude followed
+            by longitude (e.g.,
+
+            "47.641268, -122.125679"). Must be properly URL encoded.
+        - id: options
+          type:
+            - azure-maps-rest.Models.SearchGetSearchFuzzyOptionalParams
+          description: |
+            Optional Parameters.
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<HttpOperationResponse<azure-maps-rest.Models.SearchFuzzyResponse>>
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.Services.Search.getSearchInsideGeometryWithHttpOperationResponse
+    name: getSearchInsideGeometryWithHttpOperationResponse
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      The Search Geometry endpoint allows you to perform a free form search
+      inside a single geometry
+
+      or many of them. The search results that fall inside the
+      geometry/geometries will be
+
+      returned.<br><br>To send the geometry you will use a `GET` request where
+      the `geometry`
+
+      parameter is represented as a `GeoJSON` type. The geographical features to
+      be searched can be
+
+      modeled as Polygon and/or Circle geometries represented using any one of
+      the following `GeoJSON`
+
+      types:<ul><li>**GeoJSON FeatureCollection** <br>The `geometry` can be
+      represented as a `GeoJSON
+
+      FeatureCollection` object. This is the recommended option if the geometry
+      contains both Polygons
+
+      and Circles. The `FeatureCollection` can contain a max of 50 `GeoJSON
+      Feature` objects. Each
+
+      `Feature` object should represent either a Polygon or a Circle with the
+      following conditions:<ul
+
+      style="list-style-type:none"><li>A `Feature` object for the Polygon
+      geometry can have a max of
+
+      50 coordinates and it's properties must be empty.</li><li>A `Feature`
+      object for the Circle
+
+      geometry is composed of a _center_ represented using a `GeoJSON Point`
+      type and a _radius_ value
+
+      (in meters) which must be specified in the object's properties along with
+      the _subType_ property
+
+      whose value should be 'Circle'.</li></ul><br> Please see the Examples
+      section below for a sample
+
+      `FeatureCollection` representation.<br><br></li><li>**GeoJSON
+      GeometryCollection**<br>The
+
+      `geometry` can be represented as a `GeoJSON GeometryCollection` object.
+      This is the recommended
+
+      option if the geometry contains a list of Polygons only. The
+      `GeometryCollection` can contain a
+
+      max of 50 `GeoJSON Polygon` objects. Each `Polygon` object can have a max
+      of 50 coordinates.
+
+      Please see the Examples section below for a sample `GeometryCollection`
+
+      representation.<br><br></li><li>**GeoJSON Polygon**<br>The `geometry` can
+      be represented as a
+
+      `GeoJSON Polygon` object. This is the recommended option if the geometry
+      contains a single
+
+      Polygon. The `Polygon` object can have a max of 50 coordinates. Please see
+      the Examples section
+
+      below for a sample `Polygon` representation.<br><br></li></ul>.<br><br>
+    syntax:
+      content: >-
+        function getSearchInsideGeometryWithHttpOperationResponse(query: string,
+        geometry: string, options?: SearchGetSearchInsideGeometryOptionalParams)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: >
+            The applicable query string (e.g., "burger joints", "pizza"). Can
+            _also_
+
+            be specified as a comma separated string composed by latitude
+            followed by longitude (e.g.,
+
+            "47.641268, -122.125679"). Must be properly URL encoded.
+        - id: geometry
+          type:
+            - string
+          description: >
+            This represents the geometry for one or more geographical features
+
+            (parks, state boundary etc.) to search in and should be a GeoJSON
+            compliant type. Please refer
+
+            to [RFC 7946](https://tools.ietf.org/html/rfc7946) for details.
+        - id: options
+          type:
+            - azure-maps-rest.Models.SearchGetSearchInsideGeometryOptionalParams
+          description: |
+            Optional Parameters.
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<HttpOperationResponse<azure-maps-rest.Models.SearchGeometryResponse>>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchNearby
+    name: getSearchNearby
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Nearby Search**<br><br>If you have a use case for only retrieving POI
+      results around a
+
+      specific location, the nearby search method may be the right choice. This
+      endpoint will only
+
+      return POI results, and does not take in a search query parameter.
+    syntax:
+      content: 'function getSearchNearby(lat: number, lon: number)'
+      parameters:
+        - id: lat
+          type:
+            - number
+          description: |
+            Latitude where results should be biased. E.g. 37.337.
+        - id: lon
+          type:
+            - number
+          description: |
+            Longitude where results should be biased. E.g. -121.89.
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchNearbyResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchNearby_1
+    name: getSearchNearby
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Nearby Search**<br><br>If you have a use case for only retrieving POI
+      results around a
+
+      specific location, the nearby search method may be the right choice. This
+      endpoint will only
+
+      return POI results, and does not take in a search query parameter.
+    syntax:
+      content: >-
+        function getSearchNearby(lat: number, lon: number, options:
+        SearchGetSearchNearbyOptionalParams)
+      parameters:
+        - id: lat
+          type:
+            - number
+          description: ''
+        - id: lon
+          type:
+            - number
+          description: ''
+        - id: options
+          type:
+            - azure-maps-rest.Models.SearchGetSearchNearbyOptionalParams
+          description: ''
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchNearbyResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchNearby_2
+    name: getSearchNearby
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Nearby Search**<br><br>If you have a use case for only retrieving POI
+      results around a
+
+      specific location, the nearby search method may be the right choice. This
+      endpoint will only
+
+      return POI results, and does not take in a search query parameter.
+    syntax:
+      content: >-
+        function getSearchNearby(lat: number, lon: number, callback:
+        ServiceCallback<SearchNearbyResponse>)
+      parameters:
+        - id: lat
+          type:
+            - number
+          description: ''
+        - id: lon
+          type:
+            - number
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-maps-rest.Models.SearchNearbyResponse>
+          description: ''
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchNearbyResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchNearby_3
+    name: getSearchNearby
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Nearby Search**<br><br>If you have a use case for only retrieving POI
+      results around a
+
+      specific location, the nearby search method may be the right choice. This
+      endpoint will only
+
+      return POI results, and does not take in a search query parameter.
+    syntax:
+      content: >-
+        function getSearchNearby(lat: number, lon: number, options:
+        SearchGetSearchNearbyOptionalParams, callback:
+        ServiceCallback<SearchNearbyResponse>)
+      parameters:
+        - id: lat
+          type:
+            - number
+          description: ''
+        - id: lon
+          type:
+            - number
+          description: ''
+        - id: options
+          type:
+            - azure-maps-rest.Models.SearchGetSearchNearbyOptionalParams
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-maps-rest.Models.SearchNearbyResponse>
+          description: ''
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchNearbyResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchNearbyWithHttpOperationResponse
+    name: getSearchNearbyWithHttpOperationResponse
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Nearby Search**<br><br>If you have a use case for only retrieving POI
+      results around a
+
+      specific location, the nearby search method may be the right choice. This
+      endpoint will only
+
+      return POI results, and does not take in a search query parameter.
+    syntax:
+      content: >-
+        function getSearchNearbyWithHttpOperationResponse(lat: number, lon:
+        number, options?: SearchGetSearchNearbyOptionalParams)
+      parameters:
+        - id: lat
+          type:
+            - number
+          description: |
+            Latitude where results should be biased. E.g. 37.337.
+        - id: lon
+          type:
+            - number
+          description: |
+            Longitude where results should be biased. E.g. -121.89.
+        - id: options
+          type:
+            - azure-maps-rest.Models.SearchGetSearchNearbyOptionalParams
+          description: |
+            Optional Parameters.
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<HttpOperationResponse<azure-maps-rest.Models.SearchNearbyResponse>>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchPOI
+    name: getSearchPOI
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Get POI by Name**<br><br>If your search use case only requires POI
+      results, you may use the
+
+      POI endpoint for searching. This endpoint will only return POI results.
+    syntax:
+      content: 'function getSearchPOI(query: string)'
+      parameters:
+        - id: query
+          type:
+            - string
+          description: >
+            The POI name to search for (e.g., "statue of liberty", "starbucks"),
+            must
+
+            be properly URL encoded.
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchPoiResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchPOI_1
+    name: getSearchPOI
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Get POI by Name**<br><br>If your search use case only requires POI
+      results, you may use the
+
+      POI endpoint for searching. This endpoint will only return POI results.
+    syntax:
+      content: >-
+        function getSearchPOI(query: string, options:
+        SearchGetSearchPOIOptionalParams)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - azure-maps-rest.Models.SearchGetSearchPOIOptionalParams
+          description: ''
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchPoiResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchPOI_2
+    name: getSearchPOI
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Get POI by Name**<br><br>If your search use case only requires POI
+      results, you may use the
+
+      POI endpoint for searching. This endpoint will only return POI results.
+    syntax:
+      content: >-
+        function getSearchPOI(query: string, callback:
+        ServiceCallback<SearchPoiResponse>)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-maps-rest.Models.SearchPoiResponse>
+          description: ''
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchPoiResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchPOI_3
+    name: getSearchPOI
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Get POI by Name**<br><br>If your search use case only requires POI
+      results, you may use the
+
+      POI endpoint for searching. This endpoint will only return POI results.
+    syntax:
+      content: >-
+        function getSearchPOI(query: string, options:
+        SearchGetSearchPOIOptionalParams, callback:
+        ServiceCallback<SearchPoiResponse>)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - azure-maps-rest.Models.SearchGetSearchPOIOptionalParams
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-maps-rest.Models.SearchPoiResponse>
+          description: ''
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchPoiResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchPOICategory
+    name: getSearchPOICategory
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Get POI by Category**<br><br>If your search use case only requires POI
+      results filtered by
+
+      category, you may use the category endpoint. This endpoint will only
+      return POI results which
+
+      are categorized as specified.<br><br>List of available categories can be
+      found
+
+      [here](https://docs.microsoft.com/en-us/azure/azure-maps/search-categories).
+    syntax:
+      content: 'function getSearchPOICategory(query: string)'
+      parameters:
+        - id: query
+          type:
+            - string
+          description: |
+            The POI category to search for (e.g., "AIRPORT", "BEACH"), must be
+            properly URL encoded.
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchPoiCategoryResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchPOICategory_1
+    name: getSearchPOICategory
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Get POI by Category**<br><br>If your search use case only requires POI
+      results filtered by
+
+      category, you may use the category endpoint. This endpoint will only
+      return POI results which
+
+      are categorized as specified.<br><br>List of available categories can be
+      found
+
+      [here](https://docs.microsoft.com/en-us/azure/azure-maps/search-categories).
+    syntax:
+      content: >-
+        function getSearchPOICategory(query: string, options:
+        SearchGetSearchPOICategoryOptionalParams)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - azure-maps-rest.Models.SearchGetSearchPOICategoryOptionalParams
+          description: ''
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchPoiCategoryResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchPOICategory_2
+    name: getSearchPOICategory
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Get POI by Category**<br><br>If your search use case only requires POI
+      results filtered by
+
+      category, you may use the category endpoint. This endpoint will only
+      return POI results which
+
+      are categorized as specified.<br><br>List of available categories can be
+      found
+
+      [here](https://docs.microsoft.com/en-us/azure/azure-maps/search-categories).
+    syntax:
+      content: >-
+        function getSearchPOICategory(query: string, callback:
+        ServiceCallback<SearchPoiCategoryResponse>)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-maps-rest.Models.SearchPoiCategoryResponse>
+          description: ''
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchPoiCategoryResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchPOICategory_3
+    name: getSearchPOICategory
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Get POI by Category**<br><br>If your search use case only requires POI
+      results filtered by
+
+      category, you may use the category endpoint. This endpoint will only
+      return POI results which
+
+      are categorized as specified.<br><br>List of available categories can be
+      found
+
+      [here](https://docs.microsoft.com/en-us/azure/azure-maps/search-categories).
+    syntax:
+      content: >-
+        function getSearchPOICategory(query: string, options:
+        SearchGetSearchPOICategoryOptionalParams, callback:
+        ServiceCallback<SearchPoiCategoryResponse>)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - azure-maps-rest.Models.SearchGetSearchPOICategoryOptionalParams
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-maps-rest.Models.SearchPoiCategoryResponse>
+          description: ''
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchPoiCategoryResponse>
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.Services.Search.getSearchPOICategoryWithHttpOperationResponse
+    name: getSearchPOICategoryWithHttpOperationResponse
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Get POI by Category**<br><br>If your search use case only requires POI
+      results filtered by
+
+      category, you may use the category endpoint. This endpoint will only
+      return POI results which
+
+      are categorized as specified.<br><br>List of available categories can be
+      found
+
+      [here](https://docs.microsoft.com/en-us/azure/azure-maps/search-categories).
+    syntax:
+      content: >-
+        function getSearchPOICategoryWithHttpOperationResponse(query: string,
+        options?: SearchGetSearchPOICategoryOptionalParams)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: |
+            The POI category to search for (e.g., "AIRPORT", "BEACH"), must be
+            properly URL encoded.
+        - id: options
+          type:
+            - azure-maps-rest.Models.SearchGetSearchPOICategoryOptionalParams
+          description: |
+            Optional Parameters.
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<HttpOperationResponse<azure-maps-rest.Models.SearchPoiCategoryResponse>>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.getSearchPOIWithHttpOperationResponse
+    name: getSearchPOIWithHttpOperationResponse
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Get POI by Name**<br><br>If your search use case only requires POI
+      results, you may use the
+
+      POI endpoint for searching. This endpoint will only return POI results.
+    syntax:
+      content: >-
+        function getSearchPOIWithHttpOperationResponse(query: string, options?:
+        SearchGetSearchPOIOptionalParams)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: >
+            The POI name to search for (e.g., "statue of liberty", "starbucks"),
+            must
+
+            be properly URL encoded.
+        - id: options
+          type:
+            - azure-maps-rest.Models.SearchGetSearchPOIOptionalParams
+          description: |
+            Optional Parameters.
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<HttpOperationResponse<azure-maps-rest.Models.SearchPoiResponse>>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.postSearchAlongRoute
+    name: postSearchAlongRoute
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      The Search Along Route endpoint allows you to perform a fuzzy search for
+      POIs along a specified
+
+      route. This search is constrained by specifying the `maxDetourTime`
+      limiting measure.<br><br>To
+
+      send the route-points you will use a `POST` request where the request body
+      will contain the
+
+      `route` object represented as a `GeoJSON LineString` type and the
+      `Content-Type` header will be
+
+      set to `application/json`. Each route-point in `route` is represented as a
+      `GeoJSON Position`
+
+      type i.e. an array where the _longitude_ value is followed by the
+      _latitude_ value and the
+
+      _altitude_ value is ignored. The `route` should contain at least 2
+      route-points.<br><br>It is
+
+      possible that original route will be altered, some of it's points may be
+      skipped. If the route
+
+      that passes through the found point is faster than the original one, the
+      `detourTime` value in
+
+      the response is negative.
+    syntax:
+      content: >-
+        function postSearchAlongRoute(query: string, maxDetourTime: number,
+        searchAlongRouteRequestBody: SearchAlongRouteRequestBody)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: >
+            The applicable query string (e.g., "burger joints", "pizza"). Can
+            _also_
+
+            be specified as a comma separated string composed by latitude
+            followed by longitude (e.g.,
+
+            "47.641268, -122.125679"). Must be properly URL encoded.
+        - id: maxDetourTime
+          type:
+            - number
+          description: |
+            Maximum detour time of the point of interest in seconds. Max value
+            is 3600 seconds
+        - id: searchAlongRouteRequestBody
+          type:
+            - azure-maps-rest.Models.SearchAlongRouteRequestBody
+          description: >
+            This represents the route to
+
+            search along and should be a valid `GeoJSON LineString` type. Please
+            refer to [RFC
+
+            7946](https://tools.ietf.org/html/rfc7946#section-3.1.4) for
+            details.
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchAlongRouteResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.postSearchAlongRoute_1
+    name: postSearchAlongRoute
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      The Search Along Route endpoint allows you to perform a fuzzy search for
+      POIs along a specified
+
+      route. This search is constrained by specifying the `maxDetourTime`
+      limiting measure.<br><br>To
+
+      send the route-points you will use a `POST` request where the request body
+      will contain the
+
+      `route` object represented as a `GeoJSON LineString` type and the
+      `Content-Type` header will be
+
+      set to `application/json`. Each route-point in `route` is represented as a
+      `GeoJSON Position`
+
+      type i.e. an array where the _longitude_ value is followed by the
+      _latitude_ value and the
+
+      _altitude_ value is ignored. The `route` should contain at least 2
+      route-points.<br><br>It is
+
+      possible that original route will be altered, some of it's points may be
+      skipped. If the route
+
+      that passes through the found point is faster than the original one, the
+      `detourTime` value in
+
+      the response is negative.
+    syntax:
+      content: >-
+        function postSearchAlongRoute(query: string, maxDetourTime: number,
+        searchAlongRouteRequestBody: SearchAlongRouteRequestBody, options:
+        SearchPostSearchAlongRouteOptionalParams)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: ''
+        - id: maxDetourTime
+          type:
+            - number
+          description: ''
+        - id: searchAlongRouteRequestBody
+          type:
+            - azure-maps-rest.Models.SearchAlongRouteRequestBody
+          description: ''
+        - id: options
+          type:
+            - azure-maps-rest.Models.SearchPostSearchAlongRouteOptionalParams
+          description: ''
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchAlongRouteResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.postSearchAlongRoute_2
+    name: postSearchAlongRoute
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      The Search Along Route endpoint allows you to perform a fuzzy search for
+      POIs along a specified
+
+      route. This search is constrained by specifying the `maxDetourTime`
+      limiting measure.<br><br>To
+
+      send the route-points you will use a `POST` request where the request body
+      will contain the
+
+      `route` object represented as a `GeoJSON LineString` type and the
+      `Content-Type` header will be
+
+      set to `application/json`. Each route-point in `route` is represented as a
+      `GeoJSON Position`
+
+      type i.e. an array where the _longitude_ value is followed by the
+      _latitude_ value and the
+
+      _altitude_ value is ignored. The `route` should contain at least 2
+      route-points.<br><br>It is
+
+      possible that original route will be altered, some of it's points may be
+      skipped. If the route
+
+      that passes through the found point is faster than the original one, the
+      `detourTime` value in
+
+      the response is negative.
+    syntax:
+      content: >-
+        function postSearchAlongRoute(query: string, maxDetourTime: number,
+        searchAlongRouteRequestBody: SearchAlongRouteRequestBody, callback:
+        ServiceCallback<SearchAlongRouteResponse>)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: ''
+        - id: maxDetourTime
+          type:
+            - number
+          description: ''
+        - id: searchAlongRouteRequestBody
+          type:
+            - azure-maps-rest.Models.SearchAlongRouteRequestBody
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-maps-rest.Models.SearchAlongRouteResponse>
+          description: ''
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchAlongRouteResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.postSearchAlongRoute_3
+    name: postSearchAlongRoute
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      The Search Along Route endpoint allows you to perform a fuzzy search for
+      POIs along a specified
+
+      route. This search is constrained by specifying the `maxDetourTime`
+      limiting measure.<br><br>To
+
+      send the route-points you will use a `POST` request where the request body
+      will contain the
+
+      `route` object represented as a `GeoJSON LineString` type and the
+      `Content-Type` header will be
+
+      set to `application/json`. Each route-point in `route` is represented as a
+      `GeoJSON Position`
+
+      type i.e. an array where the _longitude_ value is followed by the
+      _latitude_ value and the
+
+      _altitude_ value is ignored. The `route` should contain at least 2
+      route-points.<br><br>It is
+
+      possible that original route will be altered, some of it's points may be
+      skipped. If the route
+
+      that passes through the found point is faster than the original one, the
+      `detourTime` value in
+
+      the response is negative.
+    syntax:
+      content: >-
+        function postSearchAlongRoute(query: string, maxDetourTime: number,
+        searchAlongRouteRequestBody: SearchAlongRouteRequestBody, options:
+        SearchPostSearchAlongRouteOptionalParams, callback:
+        ServiceCallback<SearchAlongRouteResponse>)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: ''
+        - id: maxDetourTime
+          type:
+            - number
+          description: ''
+        - id: searchAlongRouteRequestBody
+          type:
+            - azure-maps-rest.Models.SearchAlongRouteRequestBody
+          description: ''
+        - id: options
+          type:
+            - azure-maps-rest.Models.SearchPostSearchAlongRouteOptionalParams
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-maps-rest.Models.SearchAlongRouteResponse>
+          description: ''
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchAlongRouteResponse>
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.Services.Search.postSearchAlongRouteWithHttpOperationResponse
+    name: postSearchAlongRouteWithHttpOperationResponse
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      The Search Along Route endpoint allows you to perform a fuzzy search for
+      POIs along a specified
+
+      route. This search is constrained by specifying the `maxDetourTime`
+      limiting measure.<br><br>To
+
+      send the route-points you will use a `POST` request where the request body
+      will contain the
+
+      `route` object represented as a `GeoJSON LineString` type and the
+      `Content-Type` header will be
+
+      set to `application/json`. Each route-point in `route` is represented as a
+      `GeoJSON Position`
+
+      type i.e. an array where the _longitude_ value is followed by the
+      _latitude_ value and the
+
+      _altitude_ value is ignored. The `route` should contain at least 2
+      route-points.<br><br>It is
+
+      possible that original route will be altered, some of it's points may be
+      skipped. If the route
+
+      that passes through the found point is faster than the original one, the
+      `detourTime` value in
+
+      the response is negative.
+    syntax:
+      content: >-
+        function postSearchAlongRouteWithHttpOperationResponse(query: string,
+        maxDetourTime: number, searchAlongRouteRequestBody:
+        SearchAlongRouteRequestBody, options?:
+        SearchPostSearchAlongRouteOptionalParams)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: >
+            The applicable query string (e.g., "burger joints", "pizza"). Can
+            _also_
+
+            be specified as a comma separated string composed by latitude
+            followed by longitude (e.g.,
+
+            "47.641268, -122.125679"). Must be properly URL encoded.
+        - id: maxDetourTime
+          type:
+            - number
+          description: |
+            Maximum detour time of the point of interest in seconds. Max value
+            is 3600 seconds
+        - id: searchAlongRouteRequestBody
+          type:
+            - azure-maps-rest.Models.SearchAlongRouteRequestBody
+          description: >
+            This represents the route to
+
+            search along and should be a valid `GeoJSON LineString` type. Please
+            refer to [RFC
+
+            7946](https://tools.ietf.org/html/rfc7946#section-3.1.4) for
+            details.
+        - id: options
+          type:
+            - azure-maps-rest.Models.SearchPostSearchAlongRouteOptionalParams
+          description: |
+            Optional Parameters.
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<HttpOperationResponse<azure-maps-rest.Models.SearchAlongRouteResponse>>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.postSearchInsideGeometry
+    name: postSearchInsideGeometry
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      The Search Geometry endpoint allows you to perform a free form search
+      inside a single geometry
+
+      or many of them. The search results that fall inside the
+      geometry/geometries will be
+
+      returned.<br><br>To send the geometry you will use a `POST` request where
+      the request body will
+
+      contain the `geometry` object represented as a `GeoJSON` type and the
+      `Content-Type` header will
+
+      be set to `application/json`. The geographical features to be searched can
+      be modeled as Polygon
+
+      and/or Circle geometries represented using any one of the following
+      `GeoJSON`
+
+      types:<ul><li>**GeoJSON FeatureCollection** <br>The `geometry` can be
+      represented as a `GeoJSON
+
+      FeatureCollection` object. This is the recommended option if the geometry
+      contains both Polygons
+
+      and Circles. The `FeatureCollection` can contain a max of 50 `GeoJSON
+      Feature` objects. Each
+
+      `Feature` object should represent either a Polygon or a Circle with the
+      following conditions:<ul
+
+      style="list-style-type:none"><li>A `Feature` object for the Polygon
+      geometry can have a max of
+
+      50 coordinates and it's properties must be empty.</li><li>A `Feature`
+      object for the Circle
+
+      geometry is composed of a _center_ represented using a `GeoJSON Point`
+      type and a _radius_ value
+
+      (in meters) which must be specified in the object's properties along with
+      the _subType_ property
+
+      whose value should be 'Circle'.</li></ul><br> Please see the Examples
+      section below for a sample
+
+      `FeatureCollection` representation.<br><br></li><li>**GeoJSON
+      GeometryCollection**<br>The
+
+      `geometry` can be represented as a `GeoJSON GeometryCollection` object.
+      This is the recommended
+
+      option if the geometry contains a list of Polygons only. The
+      `GeometryCollection` can contain a
+
+      max of 50 `GeoJSON Polygon` objects. Each `Polygon` object can have a max
+      of 50 coordinates.
+
+      Please see the Examples section below for a sample `GeometryCollection`
+
+      representation.<br><br></li><li>**GeoJSON Polygon**<br>The `geometry` can
+      be represented as a
+
+      `GeoJSON Polygon` object. This is the recommended option if the geometry
+      contains a single
+
+      Polygon. The `Polygon` object can have a max of 50 coordinates. Please see
+      the Examples section
+
+      below for a sample `Polygon` representation.<br><br></li></ul>.<br><br>
+    syntax:
+      content: >-
+        function postSearchInsideGeometry(query: string,
+        searchInsideGeometryRequestBody: SearchInsideGeometryRequestBody)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: >
+            The applicable query string (e.g., "burger joints", "pizza"). Can
+            _also_
+
+            be specified as a comma separated string composed by latitude
+            followed by longitude (e.g.,
+
+            "47.641268, -122.125679"). Must be properly URL encoded.
+        - id: searchInsideGeometryRequestBody
+          type:
+            - azure-maps-rest.Models.SearchInsideGeometryRequestBody
+          description: >
+            This represents the
+
+            geometry for one or more geographical features (parks, state
+            boundary etc.) to search in and
+
+            should be a GeoJSON compliant type. Please refer to [RFC
+
+            7946](https://tools.ietf.org/html/rfc7946) for details.
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchGeometryResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.postSearchInsideGeometry_1
+    name: postSearchInsideGeometry
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      The Search Geometry endpoint allows you to perform a free form search
+      inside a single geometry
+
+      or many of them. The search results that fall inside the
+      geometry/geometries will be
+
+      returned.<br><br>To send the geometry you will use a `POST` request where
+      the request body will
+
+      contain the `geometry` object represented as a `GeoJSON` type and the
+      `Content-Type` header will
+
+      be set to `application/json`. The geographical features to be searched can
+      be modeled as Polygon
+
+      and/or Circle geometries represented using any one of the following
+      `GeoJSON`
+
+      types:<ul><li>**GeoJSON FeatureCollection** <br>The `geometry` can be
+      represented as a `GeoJSON
+
+      FeatureCollection` object. This is the recommended option if the geometry
+      contains both Polygons
+
+      and Circles. The `FeatureCollection` can contain a max of 50 `GeoJSON
+      Feature` objects. Each
+
+      `Feature` object should represent either a Polygon or a Circle with the
+      following conditions:<ul
+
+      style="list-style-type:none"><li>A `Feature` object for the Polygon
+      geometry can have a max of
+
+      50 coordinates and it's properties must be empty.</li><li>A `Feature`
+      object for the Circle
+
+      geometry is composed of a _center_ represented using a `GeoJSON Point`
+      type and a _radius_ value
+
+      (in meters) which must be specified in the object's properties along with
+      the _subType_ property
+
+      whose value should be 'Circle'.</li></ul><br> Please see the Examples
+      section below for a sample
+
+      `FeatureCollection` representation.<br><br></li><li>**GeoJSON
+      GeometryCollection**<br>The
+
+      `geometry` can be represented as a `GeoJSON GeometryCollection` object.
+      This is the recommended
+
+      option if the geometry contains a list of Polygons only. The
+      `GeometryCollection` can contain a
+
+      max of 50 `GeoJSON Polygon` objects. Each `Polygon` object can have a max
+      of 50 coordinates.
+
+      Please see the Examples section below for a sample `GeometryCollection`
+
+      representation.<br><br></li><li>**GeoJSON Polygon**<br>The `geometry` can
+      be represented as a
+
+      `GeoJSON Polygon` object. This is the recommended option if the geometry
+      contains a single
+
+      Polygon. The `Polygon` object can have a max of 50 coordinates. Please see
+      the Examples section
+
+      below for a sample `Polygon` representation.<br><br></li></ul>.<br><br>
+    syntax:
+      content: >-
+        function postSearchInsideGeometry(query: string,
+        searchInsideGeometryRequestBody: SearchInsideGeometryRequestBody,
+        options: SearchPostSearchInsideGeometryOptionalParams)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: ''
+        - id: searchInsideGeometryRequestBody
+          type:
+            - azure-maps-rest.Models.SearchInsideGeometryRequestBody
+          description: ''
+        - id: options
+          type:
+            - >-
+              azure-maps-rest.Models.SearchPostSearchInsideGeometryOptionalParams
+          description: ''
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchGeometryResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.postSearchInsideGeometry_2
+    name: postSearchInsideGeometry
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      The Search Geometry endpoint allows you to perform a free form search
+      inside a single geometry
+
+      or many of them. The search results that fall inside the
+      geometry/geometries will be
+
+      returned.<br><br>To send the geometry you will use a `POST` request where
+      the request body will
+
+      contain the `geometry` object represented as a `GeoJSON` type and the
+      `Content-Type` header will
+
+      be set to `application/json`. The geographical features to be searched can
+      be modeled as Polygon
+
+      and/or Circle geometries represented using any one of the following
+      `GeoJSON`
+
+      types:<ul><li>**GeoJSON FeatureCollection** <br>The `geometry` can be
+      represented as a `GeoJSON
+
+      FeatureCollection` object. This is the recommended option if the geometry
+      contains both Polygons
+
+      and Circles. The `FeatureCollection` can contain a max of 50 `GeoJSON
+      Feature` objects. Each
+
+      `Feature` object should represent either a Polygon or a Circle with the
+      following conditions:<ul
+
+      style="list-style-type:none"><li>A `Feature` object for the Polygon
+      geometry can have a max of
+
+      50 coordinates and it's properties must be empty.</li><li>A `Feature`
+      object for the Circle
+
+      geometry is composed of a _center_ represented using a `GeoJSON Point`
+      type and a _radius_ value
+
+      (in meters) which must be specified in the object's properties along with
+      the _subType_ property
+
+      whose value should be 'Circle'.</li></ul><br> Please see the Examples
+      section below for a sample
+
+      `FeatureCollection` representation.<br><br></li><li>**GeoJSON
+      GeometryCollection**<br>The
+
+      `geometry` can be represented as a `GeoJSON GeometryCollection` object.
+      This is the recommended
+
+      option if the geometry contains a list of Polygons only. The
+      `GeometryCollection` can contain a
+
+      max of 50 `GeoJSON Polygon` objects. Each `Polygon` object can have a max
+      of 50 coordinates.
+
+      Please see the Examples section below for a sample `GeometryCollection`
+
+      representation.<br><br></li><li>**GeoJSON Polygon**<br>The `geometry` can
+      be represented as a
+
+      `GeoJSON Polygon` object. This is the recommended option if the geometry
+      contains a single
+
+      Polygon. The `Polygon` object can have a max of 50 coordinates. Please see
+      the Examples section
+
+      below for a sample `Polygon` representation.<br><br></li></ul>.<br><br>
+    syntax:
+      content: >-
+        function postSearchInsideGeometry(query: string,
+        searchInsideGeometryRequestBody: SearchInsideGeometryRequestBody,
+        callback: ServiceCallback<SearchGeometryResponse>)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: ''
+        - id: searchInsideGeometryRequestBody
+          type:
+            - azure-maps-rest.Models.SearchInsideGeometryRequestBody
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-maps-rest.Models.SearchGeometryResponse>
+          description: ''
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchGeometryResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.Services.Search.postSearchInsideGeometry_3
+    name: postSearchInsideGeometry
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      The Search Geometry endpoint allows you to perform a free form search
+      inside a single geometry
+
+      or many of them. The search results that fall inside the
+      geometry/geometries will be
+
+      returned.<br><br>To send the geometry you will use a `POST` request where
+      the request body will
+
+      contain the `geometry` object represented as a `GeoJSON` type and the
+      `Content-Type` header will
+
+      be set to `application/json`. The geographical features to be searched can
+      be modeled as Polygon
+
+      and/or Circle geometries represented using any one of the following
+      `GeoJSON`
+
+      types:<ul><li>**GeoJSON FeatureCollection** <br>The `geometry` can be
+      represented as a `GeoJSON
+
+      FeatureCollection` object. This is the recommended option if the geometry
+      contains both Polygons
+
+      and Circles. The `FeatureCollection` can contain a max of 50 `GeoJSON
+      Feature` objects. Each
+
+      `Feature` object should represent either a Polygon or a Circle with the
+      following conditions:<ul
+
+      style="list-style-type:none"><li>A `Feature` object for the Polygon
+      geometry can have a max of
+
+      50 coordinates and it's properties must be empty.</li><li>A `Feature`
+      object for the Circle
+
+      geometry is composed of a _center_ represented using a `GeoJSON Point`
+      type and a _radius_ value
+
+      (in meters) which must be specified in the object's properties along with
+      the _subType_ property
+
+      whose value should be 'Circle'.</li></ul><br> Please see the Examples
+      section below for a sample
+
+      `FeatureCollection` representation.<br><br></li><li>**GeoJSON
+      GeometryCollection**<br>The
+
+      `geometry` can be represented as a `GeoJSON GeometryCollection` object.
+      This is the recommended
+
+      option if the geometry contains a list of Polygons only. The
+      `GeometryCollection` can contain a
+
+      max of 50 `GeoJSON Polygon` objects. Each `Polygon` object can have a max
+      of 50 coordinates.
+
+      Please see the Examples section below for a sample `GeometryCollection`
+
+      representation.<br><br></li><li>**GeoJSON Polygon**<br>The `geometry` can
+      be represented as a
+
+      `GeoJSON Polygon` object. This is the recommended option if the geometry
+      contains a single
+
+      Polygon. The `Polygon` object can have a max of 50 coordinates. Please see
+      the Examples section
+
+      below for a sample `Polygon` representation.<br><br></li></ul>.<br><br>
+    syntax:
+      content: >-
+        function postSearchInsideGeometry(query: string,
+        searchInsideGeometryRequestBody: SearchInsideGeometryRequestBody,
+        options: SearchPostSearchInsideGeometryOptionalParams, callback:
+        ServiceCallback<SearchGeometryResponse>)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: ''
+        - id: searchInsideGeometryRequestBody
+          type:
+            - azure-maps-rest.Models.SearchInsideGeometryRequestBody
+          description: ''
+        - id: options
+          type:
+            - >-
+              azure-maps-rest.Models.SearchPostSearchInsideGeometryOptionalParams
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-maps-rest.Models.SearchGeometryResponse>
+          description: ''
+      return:
+        type:
+          - Promise<azure-maps-rest.Models.SearchGeometryResponse>
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.Services.Search.postSearchInsideGeometryWithHttpOperationResponse
+    name: postSearchInsideGeometryWithHttpOperationResponse
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      The Search Geometry endpoint allows you to perform a free form search
+      inside a single geometry
+
+      or many of them. The search results that fall inside the
+      geometry/geometries will be
+
+      returned.<br><br>To send the geometry you will use a `POST` request where
+      the request body will
+
+      contain the `geometry` object represented as a `GeoJSON` type and the
+      `Content-Type` header will
+
+      be set to `application/json`. The geographical features to be searched can
+      be modeled as Polygon
+
+      and/or Circle geometries represented using any one of the following
+      `GeoJSON`
+
+      types:<ul><li>**GeoJSON FeatureCollection** <br>The `geometry` can be
+      represented as a `GeoJSON
+
+      FeatureCollection` object. This is the recommended option if the geometry
+      contains both Polygons
+
+      and Circles. The `FeatureCollection` can contain a max of 50 `GeoJSON
+      Feature` objects. Each
+
+      `Feature` object should represent either a Polygon or a Circle with the
+      following conditions:<ul
+
+      style="list-style-type:none"><li>A `Feature` object for the Polygon
+      geometry can have a max of
+
+      50 coordinates and it's properties must be empty.</li><li>A `Feature`
+      object for the Circle
+
+      geometry is composed of a _center_ represented using a `GeoJSON Point`
+      type and a _radius_ value
+
+      (in meters) which must be specified in the object's properties along with
+      the _subType_ property
+
+      whose value should be 'Circle'.</li></ul><br> Please see the Examples
+      section below for a sample
+
+      `FeatureCollection` representation.<br><br></li><li>**GeoJSON
+      GeometryCollection**<br>The
+
+      `geometry` can be represented as a `GeoJSON GeometryCollection` object.
+      This is the recommended
+
+      option if the geometry contains a list of Polygons only. The
+      `GeometryCollection` can contain a
+
+      max of 50 `GeoJSON Polygon` objects. Each `Polygon` object can have a max
+      of 50 coordinates.
+
+      Please see the Examples section below for a sample `GeometryCollection`
+
+      representation.<br><br></li><li>**GeoJSON Polygon**<br>The `geometry` can
+      be represented as a
+
+      `GeoJSON Polygon` object. This is the recommended option if the geometry
+      contains a single
+
+      Polygon. The `Polygon` object can have a max of 50 coordinates. Please see
+      the Examples section
+
+      below for a sample `Polygon` representation.<br><br></li></ul>.<br><br>
+    syntax:
+      content: >-
+        function postSearchInsideGeometryWithHttpOperationResponse(query:
+        string, searchInsideGeometryRequestBody:
+        SearchInsideGeometryRequestBody, options?:
+        SearchPostSearchInsideGeometryOptionalParams)
+      parameters:
+        - id: query
+          type:
+            - string
+          description: >
+            The applicable query string (e.g., "burger joints", "pizza"). Can
+            _also_
+
+            be specified as a comma separated string composed by latitude
+            followed by longitude (e.g.,
+
+            "47.641268, -122.125679"). Must be properly URL encoded.
+        - id: searchInsideGeometryRequestBody
+          type:
+            - azure-maps-rest.Models.SearchInsideGeometryRequestBody
+          description: >
+            This represents the
+
+            geometry for one or more geographical features (parks, state
+            boundary etc.) to search in and
+
+            should be a GeoJSON compliant type. Please refer to [RFC
+
+            7946](https://tools.ietf.org/html/rfc7946) for details.
+        - id: options
+          type:
+            - >-
+              azure-maps-rest.Models.SearchPostSearchInsideGeometryOptionalParams
+          description: |
+            Optional Parameters.
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<HttpOperationResponse<azure-maps-rest.Models.SearchGeometryResponse>>
+    package: azure-maps-rest
+references:
+  - uid: Promise<azure-maps-rest.Models.RouteDirectionsResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: RouteDirectionsResponse
+        fullName: RouteDirectionsResponse
+        uid: azure-maps-rest.Models.RouteDirectionsResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.Models.RouteGetRouteDirectionsOptionalParams
+    spec.typeScript:
+      - name: RouteGetRouteDirectionsOptionalParams
+        fullName: RouteGetRouteDirectionsOptionalParams
+        uid: azure-maps-rest.Models.RouteGetRouteDirectionsOptionalParams
+  - uid: ServiceCallback<azure-maps-rest.Models.RouteDirectionsResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: RouteDirectionsResponse
+        fullName: RouteDirectionsResponse
+        uid: azure-maps-rest.Models.RouteDirectionsResponse
+      - name: '>'
+        fullName: '>'
+  - uid: >-
+      Promise<HttpOperationResponse<azure-maps-rest.Models.RouteDirectionsResponse>>
+    spec.typeScript:
+      - name: Promise<HttpOperationResponse<
+        fullName: Promise<HttpOperationResponse<
+      - name: RouteDirectionsResponse
+        fullName: RouteDirectionsResponse
+        uid: azure-maps-rest.Models.RouteDirectionsResponse
+      - name: '>>'
+        fullName: '>>'
+  - uid: Promise<azure-maps-rest.Models.SearchAddressResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SearchAddressResponse
+        fullName: SearchAddressResponse
+        uid: azure-maps-rest.Models.SearchAddressResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.Models.SearchGetSearchAddressOptionalParams
+    spec.typeScript:
+      - name: SearchGetSearchAddressOptionalParams
+        fullName: SearchGetSearchAddressOptionalParams
+        uid: azure-maps-rest.Models.SearchGetSearchAddressOptionalParams
+  - uid: ServiceCallback<azure-maps-rest.Models.SearchAddressResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SearchAddressResponse
+        fullName: SearchAddressResponse
+        uid: azure-maps-rest.Models.SearchAddressResponse
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<azure-maps-rest.Models.SearchAddressReverseResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SearchAddressReverseResponse
+        fullName: SearchAddressReverseResponse
+        uid: azure-maps-rest.Models.SearchAddressReverseResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.Models.SearchGetSearchAddressReverseOptionalParams
+    spec.typeScript:
+      - name: SearchGetSearchAddressReverseOptionalParams
+        fullName: SearchGetSearchAddressReverseOptionalParams
+        uid: azure-maps-rest.Models.SearchGetSearchAddressReverseOptionalParams
+  - uid: ServiceCallback<azure-maps-rest.Models.SearchAddressReverseResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SearchAddressReverseResponse
+        fullName: SearchAddressReverseResponse
+        uid: azure-maps-rest.Models.SearchAddressReverseResponse
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<azure-maps-rest.Models.SearchAddressReverseCrossStreetResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SearchAddressReverseCrossStreetResponse
+        fullName: SearchAddressReverseCrossStreetResponse
+        uid: azure-maps-rest.Models.SearchAddressReverseCrossStreetResponse
+      - name: '>'
+        fullName: '>'
+  - uid: >-
+      azure-maps-rest.Models.SearchGetSearchAddressReverseCrossStreetOptionalParams
+    spec.typeScript:
+      - name: SearchGetSearchAddressReverseCrossStreetOptionalParams
+        fullName: SearchGetSearchAddressReverseCrossStreetOptionalParams
+        uid: >-
+          azure-maps-rest.Models.SearchGetSearchAddressReverseCrossStreetOptionalParams
+  - uid: >-
+      ServiceCallback<azure-maps-rest.Models.SearchAddressReverseCrossStreetResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SearchAddressReverseCrossStreetResponse
+        fullName: SearchAddressReverseCrossStreetResponse
+        uid: azure-maps-rest.Models.SearchAddressReverseCrossStreetResponse
+      - name: '>'
+        fullName: '>'
+  - uid: >-
+      Promise<HttpOperationResponse<azure-maps-rest.Models.SearchAddressReverseCrossStreetResponse>>
+    spec.typeScript:
+      - name: Promise<HttpOperationResponse<
+        fullName: Promise<HttpOperationResponse<
+      - name: SearchAddressReverseCrossStreetResponse
+        fullName: SearchAddressReverseCrossStreetResponse
+        uid: azure-maps-rest.Models.SearchAddressReverseCrossStreetResponse
+      - name: '>>'
+        fullName: '>>'
+  - uid: >-
+      Promise<HttpOperationResponse<azure-maps-rest.Models.SearchAddressReverseResponse>>
+    spec.typeScript:
+      - name: Promise<HttpOperationResponse<
+        fullName: Promise<HttpOperationResponse<
+      - name: SearchAddressReverseResponse
+        fullName: SearchAddressReverseResponse
+        uid: azure-maps-rest.Models.SearchAddressReverseResponse
+      - name: '>>'
+        fullName: '>>'
+  - uid: Promise<azure-maps-rest.Models.SearchAddressStructuredResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SearchAddressStructuredResponse
+        fullName: SearchAddressStructuredResponse
+        uid: azure-maps-rest.Models.SearchAddressStructuredResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.Models.SearchGetSearchAddressStructuredOptionalParams
+    spec.typeScript:
+      - name: SearchGetSearchAddressStructuredOptionalParams
+        fullName: SearchGetSearchAddressStructuredOptionalParams
+        uid: azure-maps-rest.Models.SearchGetSearchAddressStructuredOptionalParams
+  - uid: ServiceCallback<azure-maps-rest.Models.SearchAddressStructuredResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SearchAddressStructuredResponse
+        fullName: SearchAddressStructuredResponse
+        uid: azure-maps-rest.Models.SearchAddressStructuredResponse
+      - name: '>'
+        fullName: '>'
+  - uid: >-
+      Promise<HttpOperationResponse<azure-maps-rest.Models.SearchAddressStructuredResponse>>
+    spec.typeScript:
+      - name: Promise<HttpOperationResponse<
+        fullName: Promise<HttpOperationResponse<
+      - name: SearchAddressStructuredResponse
+        fullName: SearchAddressStructuredResponse
+        uid: azure-maps-rest.Models.SearchAddressStructuredResponse
+      - name: '>>'
+        fullName: '>>'
+  - uid: >-
+      Promise<HttpOperationResponse<azure-maps-rest.Models.SearchAddressResponse>>
+    spec.typeScript:
+      - name: Promise<HttpOperationResponse<
+        fullName: Promise<HttpOperationResponse<
+      - name: SearchAddressResponse
+        fullName: SearchAddressResponse
+        uid: azure-maps-rest.Models.SearchAddressResponse
+      - name: '>>'
+        fullName: '>>'
+  - uid: azure-maps-rest.Models.SearchGetSearchAlongRouteOptionalParams
+    spec.typeScript:
+      - name: SearchGetSearchAlongRouteOptionalParams
+        fullName: SearchGetSearchAlongRouteOptionalParams
+        uid: azure-maps-rest.Models.SearchGetSearchAlongRouteOptionalParams
+  - uid: >-
+      Promise<HttpOperationResponse<azure-maps-rest.Models.SearchAlongRouteResponse>>
+    spec.typeScript:
+      - name: Promise<HttpOperationResponse<
+        fullName: Promise<HttpOperationResponse<
+      - name: SearchAlongRouteResponse
+        fullName: SearchAlongRouteResponse
+        uid: azure-maps-rest.Models.SearchAlongRouteResponse
+      - name: '>>'
+        fullName: '>>'
+  - uid: Promise<azure-maps-rest.Models.SearchFuzzyResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SearchFuzzyResponse
+        fullName: SearchFuzzyResponse
+        uid: azure-maps-rest.Models.SearchFuzzyResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.Models.SearchGetSearchFuzzyOptionalParams
+    spec.typeScript:
+      - name: SearchGetSearchFuzzyOptionalParams
+        fullName: SearchGetSearchFuzzyOptionalParams
+        uid: azure-maps-rest.Models.SearchGetSearchFuzzyOptionalParams
+  - uid: ServiceCallback<azure-maps-rest.Models.SearchFuzzyResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SearchFuzzyResponse
+        fullName: SearchFuzzyResponse
+        uid: azure-maps-rest.Models.SearchFuzzyResponse
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<HttpOperationResponse<azure-maps-rest.Models.SearchFuzzyResponse>>
+    spec.typeScript:
+      - name: Promise<HttpOperationResponse<
+        fullName: Promise<HttpOperationResponse<
+      - name: SearchFuzzyResponse
+        fullName: SearchFuzzyResponse
+        uid: azure-maps-rest.Models.SearchFuzzyResponse
+      - name: '>>'
+        fullName: '>>'
+  - uid: azure-maps-rest.Models.SearchGetSearchInsideGeometryOptionalParams
+    spec.typeScript:
+      - name: SearchGetSearchInsideGeometryOptionalParams
+        fullName: SearchGetSearchInsideGeometryOptionalParams
+        uid: azure-maps-rest.Models.SearchGetSearchInsideGeometryOptionalParams
+  - uid: >-
+      Promise<HttpOperationResponse<azure-maps-rest.Models.SearchGeometryResponse>>
+    spec.typeScript:
+      - name: Promise<HttpOperationResponse<
+        fullName: Promise<HttpOperationResponse<
+      - name: SearchGeometryResponse
+        fullName: SearchGeometryResponse
+        uid: azure-maps-rest.Models.SearchGeometryResponse
+      - name: '>>'
+        fullName: '>>'
+  - uid: Promise<azure-maps-rest.Models.SearchNearbyResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SearchNearbyResponse
+        fullName: SearchNearbyResponse
+        uid: azure-maps-rest.Models.SearchNearbyResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.Models.SearchGetSearchNearbyOptionalParams
+    spec.typeScript:
+      - name: SearchGetSearchNearbyOptionalParams
+        fullName: SearchGetSearchNearbyOptionalParams
+        uid: azure-maps-rest.Models.SearchGetSearchNearbyOptionalParams
+  - uid: ServiceCallback<azure-maps-rest.Models.SearchNearbyResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SearchNearbyResponse
+        fullName: SearchNearbyResponse
+        uid: azure-maps-rest.Models.SearchNearbyResponse
+      - name: '>'
+        fullName: '>'
+  - uid: >-
+      Promise<HttpOperationResponse<azure-maps-rest.Models.SearchNearbyResponse>>
+    spec.typeScript:
+      - name: Promise<HttpOperationResponse<
+        fullName: Promise<HttpOperationResponse<
+      - name: SearchNearbyResponse
+        fullName: SearchNearbyResponse
+        uid: azure-maps-rest.Models.SearchNearbyResponse
+      - name: '>>'
+        fullName: '>>'
+  - uid: Promise<azure-maps-rest.Models.SearchPoiResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SearchPoiResponse
+        fullName: SearchPoiResponse
+        uid: azure-maps-rest.Models.SearchPoiResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.Models.SearchGetSearchPOIOptionalParams
+    spec.typeScript:
+      - name: SearchGetSearchPOIOptionalParams
+        fullName: SearchGetSearchPOIOptionalParams
+        uid: azure-maps-rest.Models.SearchGetSearchPOIOptionalParams
+  - uid: ServiceCallback<azure-maps-rest.Models.SearchPoiResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SearchPoiResponse
+        fullName: SearchPoiResponse
+        uid: azure-maps-rest.Models.SearchPoiResponse
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<azure-maps-rest.Models.SearchPoiCategoryResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SearchPoiCategoryResponse
+        fullName: SearchPoiCategoryResponse
+        uid: azure-maps-rest.Models.SearchPoiCategoryResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.Models.SearchGetSearchPOICategoryOptionalParams
+    spec.typeScript:
+      - name: SearchGetSearchPOICategoryOptionalParams
+        fullName: SearchGetSearchPOICategoryOptionalParams
+        uid: azure-maps-rest.Models.SearchGetSearchPOICategoryOptionalParams
+  - uid: ServiceCallback<azure-maps-rest.Models.SearchPoiCategoryResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SearchPoiCategoryResponse
+        fullName: SearchPoiCategoryResponse
+        uid: azure-maps-rest.Models.SearchPoiCategoryResponse
+      - name: '>'
+        fullName: '>'
+  - uid: >-
+      Promise<HttpOperationResponse<azure-maps-rest.Models.SearchPoiCategoryResponse>>
+    spec.typeScript:
+      - name: Promise<HttpOperationResponse<
+        fullName: Promise<HttpOperationResponse<
+      - name: SearchPoiCategoryResponse
+        fullName: SearchPoiCategoryResponse
+        uid: azure-maps-rest.Models.SearchPoiCategoryResponse
+      - name: '>>'
+        fullName: '>>'
+  - uid: Promise<HttpOperationResponse<azure-maps-rest.Models.SearchPoiResponse>>
+    spec.typeScript:
+      - name: Promise<HttpOperationResponse<
+        fullName: Promise<HttpOperationResponse<
+      - name: SearchPoiResponse
+        fullName: SearchPoiResponse
+        uid: azure-maps-rest.Models.SearchPoiResponse
+      - name: '>>'
+        fullName: '>>'
+  - uid: azure-maps-rest.Models.SearchAlongRouteRequestBody
+    spec.typeScript:
+      - name: SearchAlongRouteRequestBody
+        fullName: SearchAlongRouteRequestBody
+        uid: azure-maps-rest.Models.SearchAlongRouteRequestBody
+  - uid: Promise<azure-maps-rest.Models.SearchAlongRouteResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SearchAlongRouteResponse
+        fullName: SearchAlongRouteResponse
+        uid: azure-maps-rest.Models.SearchAlongRouteResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.Models.SearchPostSearchAlongRouteOptionalParams
+    spec.typeScript:
+      - name: SearchPostSearchAlongRouteOptionalParams
+        fullName: SearchPostSearchAlongRouteOptionalParams
+        uid: azure-maps-rest.Models.SearchPostSearchAlongRouteOptionalParams
+  - uid: ServiceCallback<azure-maps-rest.Models.SearchAlongRouteResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SearchAlongRouteResponse
+        fullName: SearchAlongRouteResponse
+        uid: azure-maps-rest.Models.SearchAlongRouteResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.Models.SearchInsideGeometryRequestBody
+    spec.typeScript:
+      - name: SearchInsideGeometryRequestBody
+        fullName: SearchInsideGeometryRequestBody
+        uid: azure-maps-rest.Models.SearchInsideGeometryRequestBody
+  - uid: Promise<azure-maps-rest.Models.SearchGeometryResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SearchGeometryResponse
+        fullName: SearchGeometryResponse
+        uid: azure-maps-rest.Models.SearchGeometryResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.Models.SearchPostSearchInsideGeometryOptionalParams
+    spec.typeScript:
+      - name: SearchPostSearchInsideGeometryOptionalParams
+        fullName: SearchPostSearchInsideGeometryOptionalParams
+        uid: azure-maps-rest.Models.SearchPostSearchInsideGeometryOptionalParams
+  - uid: ServiceCallback<azure-maps-rest.Models.SearchGeometryResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SearchGeometryResponse
+        fullName: SearchGeometryResponse
+        uid: azure-maps-rest.Models.SearchGeometryResponse
+      - name: '>'
+        fullName: '>'

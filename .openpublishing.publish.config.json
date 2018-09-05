@@ -4,6 +4,11 @@
   "docsets_to_publish": [
     {
       "docset_name": "azure-iot-docs-sdk-typescript",
+      "customized_tasks":{
+        "docset_prebuild":[
+           "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
+        ]
+      },
       "build_source_folder": ".",
       "build_output_subfolder": "azure-iot-docs-sdk-typescript",
       "locale": "en-us",
@@ -20,6 +25,14 @@
       "template_folder": "_themes",
       "customized_template_paths": [
         "_dependentPackages/uref.plugins/content"
+      ],
+      "JoinTOCPlugin": [
+        {
+          "TopLevelTOC": "docs-ref-mapping/maps-ref-toc.yml",
+          "TopLevelTOCUrl": "/javascript/api/docs-ref-mapping/toc.json",
+          "ReferenceTOC": "docs-ref-autogen/toc.yml",
+          "ReferenceTOCUrl": "/javascript/api/azure-iot-docs-sdk-typescript/toc.json"
+        }
       ]
     }
   ],

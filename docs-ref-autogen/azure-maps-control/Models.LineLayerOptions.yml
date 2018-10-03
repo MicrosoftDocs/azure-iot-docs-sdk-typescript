@@ -1,0 +1,639 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-maps-control.Models.LineLayerOptions
+    name: LineLayerOptions
+    fullName: LineLayerOptions
+    children:
+      - azure-maps-control.Models.LineLayerOptions.blur
+      - azure-maps-control.Models.LineLayerOptions.lineCap
+      - azure-maps-control.Models.LineLayerOptions.lineJoin
+      - azure-maps-control.Models.LineLayerOptions.offset
+      - azure-maps-control.Models.LineLayerOptions.source
+      - azure-maps-control.Models.LineLayerOptions.sourceLayer
+      - azure-maps-control.Models.LineLayerOptions.strokeColor
+      - azure-maps-control.Models.LineLayerOptions.strokeDashArray
+      - azure-maps-control.Models.LineLayerOptions.strokeGradient
+      - azure-maps-control.Models.LineLayerOptions.strokeOpacity
+      - azure-maps-control.Models.LineLayerOptions.strokeWidth
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+      Options used when rendering SimpleLine, SimplePolygon, CirclePolygon,
+
+      LineString, MultiLineString, Polygon, and MultiPolygon objects in a line
+      layer.
+    extends:
+      name: azure-maps-control.Models.LayerOptions
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.LineLayerOptions.blur
+    name: blur
+    fullName: blur
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The amount of blur to apply to the line in pixels.
+    optional: true
+    syntax:
+      content: 'blur?: number | Expression | StyleFunction'
+      return:
+        type:
+          - >-
+            number | azure-maps-control.Models.Expression |
+            azure-maps-control.Models.StyleFunction
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.LineLayerOptions.lineCap
+    name: lineCap
+    fullName: lineCap
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Specifies how the ends of the lines are rendered.
+    optional: true
+    syntax:
+      content: 'lineCap?: "butt" | "round" | "square"'
+      return:
+        type:
+          - '"butt" | "round" | "square"'
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.LineLayerOptions.lineJoin
+    name: lineJoin
+    fullName: lineJoin
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Specifies how the joints in the lines are rendered.
+    optional: true
+    syntax:
+      content: 'lineJoin?: "bevel" | "round" | "miter"'
+      return:
+        type:
+          - '"bevel" | "round" | "miter"'
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.LineLayerOptions.offset
+    name: offset
+    fullName: offset
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The line's offset.
+
+      A positive value offsets the line to the right, relative to the direction
+      of the line.
+
+      A negative value offsets to the left.
+    optional: true
+    syntax:
+      content: 'offset?: number | Expression | StyleFunction'
+      return:
+        type:
+          - >-
+            number | azure-maps-control.Models.Expression |
+            azure-maps-control.Models.StyleFunction
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.LineLayerOptions.source
+    name: source
+    fullName: source
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The id or instance of a data source which the layer will render.
+    syntax:
+      content: 'source: string | Source'
+      return:
+        type:
+          - string | azure-maps-control.atlas.source.Source
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.LineLayerOptions.sourceLayer
+    name: sourceLayer
+    fullName: sourceLayer
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Required when the source of the layer is a VectorTileSource.
+
+      A vector source can have multiple layers within it, this identifies which
+      one to render in this layer.
+
+      Prohibited for all other types of sources.
+    optional: true
+    syntax:
+      content: 'sourceLayer?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.LineLayerOptions.strokeColor
+    name: strokeColor
+    fullName: strokeColor
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Specifies the color of the line.
+    optional: true
+    syntax:
+      content: 'strokeColor?: string | Expression | StyleFunction'
+      return:
+        type:
+          - >-
+            string | azure-maps-control.Models.Expression |
+            azure-maps-control.Models.StyleFunction
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.LineLayerOptions.strokeDashArray
+    name: strokeDashArray
+    fullName: strokeDashArray
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Specifies the lengths of the alternating dashes and gaps that form the
+      dash pattern.
+
+      Numbers must be equal or greater than 0. The lengths are scaled by the
+      strokeWidth.
+
+      To convert a dash length to pixels, multiply the length by the current
+      stroke width.
+    optional: true
+    syntax:
+      content: 'strokeDashArray?: number[]'
+      return:
+        type:
+          - 'number[]'
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.LineLayerOptions.strokeGradient
+    name: strokeGradient
+    fullName: strokeGradient
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Defines a gradient with which to color the lines.
+      Can only be used with GeoJSON sources that specify true for lineMetrics.
+      Disabled if strokeDashArray is set.
+    optional: true
+    syntax:
+      content: 'strokeGradient?: string | Expression | StyleFunction'
+      return:
+        type:
+          - >-
+            string | azure-maps-control.Models.Expression |
+            azure-maps-control.Models.StyleFunction
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.LineLayerOptions.strokeOpacity
+    name: strokeOpacity
+    fullName: strokeOpacity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      A number between 0 and 1 that indicates the opacity at which the line will
+      be drawn.
+    optional: true
+    syntax:
+      content: 'strokeOpacity?: number | Expression | StyleFunction'
+      return:
+        type:
+          - >-
+            number | azure-maps-control.Models.Expression |
+            azure-maps-control.Models.StyleFunction
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.LineLayerOptions.strokeWidth
+    name: strokeWidth
+    fullName: strokeWidth
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The width of the line in pixels. Must be a value greater or equal to 0.
+    optional: true
+    syntax:
+      content: 'strokeWidth?: number | Expression | StyleFunction'
+      return:
+        type:
+          - >-
+            number | azure-maps-control.Models.Expression |
+            azure-maps-control.Models.StyleFunction
+    package: azure-maps-control
+references:
+  - uid: azure-maps-control.Models.deprecated.LayerOptions
+    name: LayerOptions
+    spec.typeScript:
+      - name: LayerOptions
+        fullName: LayerOptions
+        uid: azure-maps-control.Models.deprecated.LayerOptions
+  - uid: azure-maps-control.Models.Options
+    name: Options
+    spec.typeScript:
+      - name: Options
+        fullName: Options
+        uid: azure-maps-control.Models.Options
+  - uid: azure-maps-control.Models.LayerOptions
+    name: LayerOptions
+    spec.typeScript:
+      - name: LayerOptions
+        fullName: LayerOptions
+        uid: azure-maps-control.Models.LayerOptions
+  - uid: >-
+      number | azure-maps-control.Models.Expression |
+      azure-maps-control.Models.StyleFunction
+    name: StyleFunction
+    spec.typeScript:
+      - name: 'number | '
+        fullName: 'number | '
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.Models.Expression
+      - name: ' | '
+        fullName: ' | '
+      - name: StyleFunction
+        fullName: StyleFunction
+        uid: azure-maps-control.Models.StyleFunction
+  - uid: >-
+      string | azure-maps-control.Models.Expression |
+      azure-maps-control.Models.StyleFunction
+    name: StyleFunction
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.Models.Expression
+      - name: ' | '
+        fullName: ' | '
+      - name: StyleFunction
+        fullName: StyleFunction
+        uid: azure-maps-control.Models.StyleFunction
+  - uid: string | azure-maps-control.atlas.source.Source
+    name: Source
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+  - uid: azure-maps-control.atlas.data.BoundingBox
+    name: BoundingBox
+    spec.typeScript:
+      - name: BoundingBox
+        fullName: BoundingBox
+        uid: azure-maps-control.atlas.data.BoundingBox
+  - uid: azure-maps-control.atlas.Pixel
+    name: Pixel
+    spec.typeScript:
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
+  - uid: azure-maps-control.Models.Padding
+    name: Padding
+    spec.typeScript:
+      - name: Padding
+        fullName: Padding
+        uid: azure-maps-control.Models.Padding
+  - uid: azure-maps-control.Models.ControlStyle
+    name: ControlStyle
+    spec.typeScript:
+      - name: ControlStyle
+        fullName: ControlStyle
+        uid: azure-maps-control.Models.ControlStyle
+  - uid: azure-maps-control.atlas.Map
+    name: Map
+    spec.typeScript:
+      - name: Map
+        fullName: Map
+        uid: azure-maps-control.atlas.Map
+  - uid: azure-maps-control.Models.Control
+    name: Control
+    spec.typeScript:
+      - name: Control
+        fullName: Control
+        uid: azure-maps-control.Models.Control
+  - uid: azure-maps-control.Models.ControlOptions
+    name: ControlOptions
+    spec.typeScript:
+      - name: ControlOptions
+        fullName: ControlOptions
+        uid: azure-maps-control.Models.ControlOptions
+  - uid: azure-maps-control.Models.ControlPosition
+    name: ControlPosition
+    spec.typeScript:
+      - name: ControlPosition
+        fullName: ControlPosition
+        uid: azure-maps-control.Models.ControlPosition
+  - uid: >-
+      azure-maps-control.atlas.layer.Layer |
+      azure-maps-control.atlas.layer.Layer[]
+    name: 'Layer[]'
+    spec.typeScript:
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: ' | '
+        fullName: ' | '
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-control.atlas.HtmlMarker
+    name: HtmlMarker
+    spec.typeScript:
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+  - uid: >-
+      string | azure-maps-control.atlas.HtmlMarker | Array<string |
+      azure-maps-control.atlas.HtmlMarker>
+    name: HtmlMarker>
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+      - name: ' | Array<string | '
+        fullName: ' | Array<string | '
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-control.atlas.Popup
+    name: Popup
+    spec.typeScript:
+      - name: Popup
+        fullName: Popup
+        uid: azure-maps-control.atlas.Popup
+  - uid: >-
+      azure-maps-control.atlas.Pixel | azure-maps-control.Models.Expression |
+      azure-maps-control.Models.StyleFunction
+    name: StyleFunction
+    spec.typeScript:
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
+      - name: ' | '
+        fullName: ' | '
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.Models.Expression
+      - name: ' | '
+        fullName: ' | '
+      - name: StyleFunction
+        fullName: StyleFunction
+        uid: azure-maps-control.Models.StyleFunction
+  - uid: string | azure-maps-control.atlas.layer.Layer
+    name: Layer
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+  - uid: azure-maps-control.atlas.layer.Layer
+    name: Layer
+    spec.typeScript:
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+  - uid: 'azure-maps-control.atlas.layer.Layer[]'
+    name: 'Layer[]'
+    spec.typeScript:
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      azure-maps-control.atlas.data.Point |
+      azure-maps-control.atlas.data.BoundingBox
+    name: BoundingBox
+    spec.typeScript:
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ' | '
+        fullName: ' | '
+      - name: BoundingBox
+        fullName: BoundingBox
+        uid: azure-maps-control.atlas.data.BoundingBox
+  - uid: Array<string | azure-maps-control.atlas.layer.Layer>
+    name: Layer>
+    spec.typeScript:
+      - name: 'Array<string | '
+        fullName: 'Array<string | '
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-control.Models.Expression
+    name: Expression
+    spec.typeScript:
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.Models.Expression
+  - uid: >-
+      Array<azure-maps-control.atlas.Shape |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any>>
+    name: 'Geometry, any>>'
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any>>'
+        fullName: ', any>>'
+  - uid: >-
+      string | azure-maps-control.atlas.layer.Layer | Array<string |
+      azure-maps-control.atlas.layer.Layer>
+    name: Layer>
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: ' | Array<string | '
+        fullName: ' | Array<string | '
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-control.Models.MapMouseWheelEvent
+    name: MapMouseWheelEvent
+    spec.typeScript:
+      - name: MapMouseWheelEvent
+        fullName: MapMouseWheelEvent
+        uid: azure-maps-control.Models.MapMouseWheelEvent
+  - uid: >-
+      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.Shape>
+    name: Shape>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: '>'
+        fullName: '>'
+  - uid: 'azure-maps-control.atlas.Pixel[]'
+    name: 'Pixel[]'
+    spec.typeScript:
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-control.Models.ServiceOptions[]'
+    name: 'ServiceOptions[]'
+    spec.typeScript:
+      - name: ServiceOptions
+        fullName: ServiceOptions
+        uid: azure-maps-control.Models.ServiceOptions
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      azure-maps-control.atlas.source.Source |
+      azure-maps-control.atlas.source.Source[]
+    name: 'Source[]'
+    spec.typeScript:
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+      - name: ' | '
+        fullName: ' | '
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-control.atlas.source.Source
+    name: Source
+    spec.typeScript:
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+  - uid: >-
+      string | azure-maps-control.atlas.source.Source | Array<string |
+      azure-maps-control.atlas.source.Source>
+    name: Source>
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+      - name: ' | Array<string | '
+        fullName: ' | Array<string | '
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+      - name: '>'
+        fullName: '>'
+  - uid: 'azure-maps-control.Models.StyleOptions[]'
+    name: 'StyleOptions[]'
+    spec.typeScript:
+      - name: StyleOptions
+        fullName: StyleOptions
+        uid: azure-maps-control.Models.StyleOptions
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-control.Models.IconOptions
+    name: IconOptions
+    spec.typeScript:
+      - name: IconOptions
+        fullName: IconOptions
+        uid: azure-maps-control.Models.IconOptions
+  - uid: number | azure-maps-control.Models.Expression
+    name: Expression
+    spec.typeScript:
+      - name: 'number | '
+        fullName: 'number | '
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.Models.Expression
+  - uid: azure-maps-control.Models.TextOptions
+    name: TextOptions
+    spec.typeScript:
+      - name: TextOptions
+        fullName: TextOptions
+        uid: azure-maps-control.Models.TextOptions
+  - uid: 'string[] | azure-maps-control.Models.Expression'
+    name: Expression
+    spec.typeScript:
+      - name: 'string[] | '
+        fullName: 'string[] | '
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.Models.Expression
+  - uid: azure-maps-control.atlas.Pixel | azure-maps-control.Models.Expression
+    name: Expression
+    spec.typeScript:
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
+      - name: ' | '
+        fullName: ' | '
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.Models.Expression
+  - uid: azure-maps-control.Models.MediaLayerOptions
+    name: MediaLayerOptions
+    spec.typeScript:
+      - name: MediaLayerOptions
+        fullName: MediaLayerOptions
+        uid: azure-maps-control.Models.MediaLayerOptions
+  - uid: >-
+      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any>>
+    name: 'Geometry, any>>'
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any>>'
+        fullName: ', any>>'

@@ -5,21 +5,64 @@ items:
     fullName: BoundingBox
     children:
       - azure-maps-control.atlas.data.BoundingBox.constructor
+      - azure-maps-control.atlas.data.BoundingBox.constructor_1
       - azure-maps-control.atlas.data.BoundingBox.Array
+      - azure-maps-control.atlas.data.BoundingBox.containsPosition
+      - azure-maps-control.atlas.data.BoundingBox.crossesAntimeridian
+      - azure-maps-control.atlas.data.BoundingBox.fromBoundingBox
+      - azure-maps-control.atlas.data.BoundingBox.fromData
+      - azure-maps-control.atlas.data.BoundingBox.fromDimensions
+      - azure-maps-control.atlas.data.BoundingBox.fromEdges
+      - azure-maps-control.atlas.data.BoundingBox.fromLatLngs
+      - azure-maps-control.atlas.data.BoundingBox.fromPositions
+      - azure-maps-control.atlas.data.BoundingBox.getCenter
+      - azure-maps-control.atlas.data.BoundingBox.getEast
+      - azure-maps-control.atlas.data.BoundingBox.getHeight
+      - azure-maps-control.atlas.data.BoundingBox.getNorth
+      - azure-maps-control.atlas.data.BoundingBox.getNorthEast
+      - azure-maps-control.atlas.data.BoundingBox.getNorthWest
+      - azure-maps-control.atlas.data.BoundingBox.getSouth
+      - azure-maps-control.atlas.data.BoundingBox.getSouthEast
+      - azure-maps-control.atlas.data.BoundingBox.getSouthWest
+      - azure-maps-control.atlas.data.BoundingBox.getWest
+      - azure-maps-control.atlas.data.BoundingBox.getWidth
+      - azure-maps-control.atlas.data.BoundingBox.intersect
+      - azure-maps-control.atlas.data.BoundingBox.merge
+      - azure-maps-control.atlas.data.BoundingBox.splitOnAntimeridian
     langs:
       - typeScript
     type: class
     summary: >-
-      An array that defines a shape whose edges follow lines of constant
-      longitude,
+      A GeoJSON BoundingBox object - an array that defines a shape whose edges
+      follow lines of constant longitude,
 
-      latitude, and elevation. Array should contain 4 elements.
+      latitude, and elevation. All axes of the most southwesterly point are
+      followed by all axes of the more northeasterly
 
-      [minLon, minLat, maxLon, maxLat]
+      point. The axes order of the BoundingBox follows the axes order of
+      geometries. The full description is detailed in
+
+      [RFC 7946](https://tools.ietf.org/html/rfc7946#section-5).
     extends:
       name: Array<number>
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.constructor
+    name: BoundingBox
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a BoundingBox
+    syntax:
+      content: 'new BoundingBox(positions: number[])'
+      parameters:
+        - id: positions
+          type:
+            - 'number[]'
+          description: |
+            or [west, south, elevation1, east, north, elevation2]
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.constructor_1
     name: BoundingBox
     children: []
     type: constructor
@@ -54,6 +97,474 @@ items:
       return:
         type:
           - ArrayConstructor
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.containsPosition
+    name: containsPosition
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Determines if a position is within a bounding box.
+    syntax:
+      content: >-
+        static function containsPosition(bounds: BoundingBox, position:
+        Position)
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The bounding box to see if the position is in.
+        - id: position
+          type:
+            - azure-maps-control.atlas.data.Position
+          description: The position to see if it is in the bounding box.
+      return:
+        type:
+          - boolean
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.crossesAntimeridian
+    name: crossesAntimeridian
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns a boolean indicating if the bounding box crosses the antimeridian
+      or not.
+    syntax:
+      content: 'static function crossesAntimeridian(bounds: BoundingBox)'
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The bounding box to check.
+      return:
+        type:
+          - boolean
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.fromBoundingBox
+    name: fromBoundingBox
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Clones a bounding box.
+    syntax:
+      content: 'static function fromBoundingBox(boundingBox: BoundingBox)'
+      parameters:
+        - id: boundingBox
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: |
+            The bounding box to clone.
+      return:
+        type:
+          - azure-maps-control.atlas.data.BoundingBox
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.fromData
+    name: fromData
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Calculates the bounding box of a FeatureCollection, Feature, Geometry,
+      Shape or array of these objects.
+    syntax:
+      content: >-
+        static function fromData(data: FeatureCollection | Feature<Geometry,
+        any> | Geometry | Shape | Array<FeatureCollection | Feature<Geometry,
+        any> | Geometry>)
+      parameters:
+        - id: data
+          type:
+            - >-
+              azure-maps-control.atlas.data.FeatureCollection |
+              azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+              any> | azure-maps-control.atlas.data.Geometry |
+              azure-maps-control.atlas.Shape |
+              Array<azure-maps-control.atlas.data.FeatureCollection |
+              azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+              any> | azure-maps-control.atlas.data.Geometry>
+          description: >-
+            The FeatureCollection, Feature, Geometry, Shape or array of these
+            objects to calculate the bounding box for.
+      return:
+        type:
+          - azure-maps-control.atlas.data.BoundingBox
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.fromDimensions
+    name: fromDimensions
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Constructs a BoundingBox from the specified dimensions.
+    syntax:
+      content: >-
+        static function fromDimensions(center: Position, width: number, height:
+        number)
+      parameters:
+        - id: center
+          type:
+            - azure-maps-control.atlas.data.Position
+          description: The center position of the bounding box.
+        - id: width
+          type:
+            - number
+          description: The width of the bounding box.
+        - id: height
+          type:
+            - number
+          description: |
+            The height of the bounding box.
+      return:
+        type:
+          - azure-maps-control.atlas.data.BoundingBox
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.fromEdges
+    name: fromEdges
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Constructs a BoundingBox from the specified edges.
+    syntax:
+      content: >-
+        static function fromEdges(west: number, south: number, east: number,
+        north: number)
+      parameters:
+        - id: west
+          type:
+            - number
+          description: The west edge of the bounding box.
+        - id: south
+          type:
+            - number
+          description: The south edge of the bounding box.
+        - id: east
+          type:
+            - number
+          description: The east edge of the bounding box.
+        - id: north
+          type:
+            - number
+          description: |
+            The north edge of the bounding box.
+      return:
+        type:
+          - azure-maps-control.atlas.data.BoundingBox
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.fromLatLngs
+    name: fromLatLngs
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Creates a BoundingBox from any array of objects that contain coordinate
+      information.
+
+      Each object is either an array in the format; [lat, lng] or [lat, lng,
+      elv], or an object with the any combination of the following properties:
+
+      Longitude: lng, longitude, lon, x
+
+      Latitude: lat, latitude, y
+
+      Elevation: elv, elevation, alt, altitude, z
+    syntax:
+      content: 'static function fromLatLngs(latLngs: Array<any | number[]>)'
+      parameters:
+        - id: latLngs
+          type:
+            - 'Array<any | number[]>'
+          description: The objects that contain coordinate information.
+      return:
+        type:
+          - azure-maps-control.atlas.data.BoundingBox
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.fromPositions
+    name: fromPositions
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Creates a BoundingBox that contains all provided Position objects.
+    syntax:
+      content: 'static function fromPositions(positions: Position[])'
+      parameters:
+        - id: positions
+          type:
+            - 'azure-maps-control.atlas.data.Position[]'
+          description: An array of locations to use to generate the bounding box.
+      return:
+        type:
+          - azure-maps-control.atlas.data.BoundingBox
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.getCenter
+    name: getCenter
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Calculates the center of a bounding box.
+    syntax:
+      content: 'static function getCenter(bounds: BoundingBox)'
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: A bounding box to calculate the center of.
+      return:
+        type:
+          - azure-maps-control.atlas.data.Position
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.getEast
+    name: getEast
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the east position value of the bounding box.
+    syntax:
+      content: 'static function getEast(bounds: BoundingBox)'
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The bounding box to get the position from.
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.getHeight
+    name: getHeight
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the height of a bounding box in degrees.
+    syntax:
+      content: 'static function getHeight(bounds: BoundingBox)'
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The bounding box to check.
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.getNorth
+    name: getNorth
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the north position value of the bounding box.
+    syntax:
+      content: 'static function getNorth(bounds: BoundingBox)'
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The bounding box to get the position from.
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.getNorthEast
+    name: getNorthEast
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the north east position of the bounding box.
+    syntax:
+      content: 'static function getNorthEast(bounds: BoundingBox)'
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The bounding box to get the position from.
+      return:
+        type:
+          - azure-maps-control.atlas.data.Position
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.getNorthWest
+    name: getNorthWest
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the north west position of the bounding box.
+    syntax:
+      content: 'static function getNorthWest(bounds: BoundingBox)'
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The bounding box to get the position from.
+      return:
+        type:
+          - azure-maps-control.atlas.data.Position
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.getSouth
+    name: getSouth
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the south position value of the bounding box.
+    syntax:
+      content: 'static function getSouth(bounds: BoundingBox)'
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The bounding box to get the position from.
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.getSouthEast
+    name: getSouthEast
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the south east position of the bounding box.
+    syntax:
+      content: 'static function getSouthEast(bounds: BoundingBox)'
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The bounding box to get the position from.
+      return:
+        type:
+          - azure-maps-control.atlas.data.Position
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.getSouthWest
+    name: getSouthWest
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the south west position of the bounding box.
+    syntax:
+      content: 'static function getSouthWest(bounds: BoundingBox)'
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The bounding box to get the position from.
+      return:
+        type:
+          - azure-maps-control.atlas.data.Position
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.getWest
+    name: getWest
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the west position value of the bounding box.
+    syntax:
+      content: 'static function getWest(bounds: BoundingBox)'
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The bounding box to get the position from.
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.getWidth
+    name: getWidth
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the width of a bounding box in degrees.
+    syntax:
+      content: 'static function getWidth(bounds: BoundingBox)'
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The bounding box to check.
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.intersect
+    name: intersect
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Determines is two bounding boxes intersect.
+    syntax:
+      content: 'static function intersect(bounds1: BoundingBox, bounds2: BoundingBox)'
+      parameters:
+        - id: bounds1
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The first bounding box to compare with.
+        - id: bounds2
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The second bounding box to compare with.
+      return:
+        type:
+          - boolean
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.merge
+    name: merge
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Merges two bounding boxes together.
+    syntax:
+      content: 'static function merge(bounds1: BoundingBox, bounds2: BoundingBox)'
+      parameters:
+        - id: bounds1
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The first bounding box to merge with.
+        - id: bounds2
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The second bounding box to merge with.
+      return:
+        type:
+          - azure-maps-control.atlas.data.BoundingBox
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.splitOnAntimeridian
+    name: splitOnAntimeridian
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Splits a BoundingBox that crosses the Antimeridian into two BoundingBox's.
+      One entirely west of the Antimerdian and another entirely east of the
+      Antimerdian.
+    syntax:
+      content: 'static function splitOnAntimeridian(bounds: BoundingBox)'
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: |+
+
+      return:
+        type:
+          - 'azure-maps-control.atlas.data.BoundingBox[]'
     package: azure-maps-control
 references:
   - uid: azure-maps-control.Models.CompassControlOptions
@@ -98,17 +609,27 @@ references:
       - name: Position
         fullName: Position
         uid: azure-maps-control.atlas.data.Position
-  - uid: azure-maps-control.atlas.data.Geometry
-    name: Geometry
+  - uid: azure-maps-control.atlas.data.BoundingBox
+    name: BoundingBox
     spec.typeScript:
-      - name: Geometry
-        fullName: Geometry
-        uid: azure-maps-control.atlas.data.Geometry
+      - name: BoundingBox
+        fullName: BoundingBox
+        uid: azure-maps-control.atlas.data.BoundingBox
   - uid: >-
+      azure-maps-control.atlas.data.FeatureCollection |
       azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
-      any>[]
-    name: 'Geometry, any>[]'
+      any> | azure-maps-control.atlas.data.Geometry |
+      azure-maps-control.atlas.Shape |
+      Array<azure-maps-control.atlas.data.FeatureCollection |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.data.Geometry>
+    name: Geometry>
     spec.typeScript:
+      - name: FeatureCollection
+        fullName: FeatureCollection
+        uid: azure-maps-control.atlas.data.FeatureCollection
+      - name: ' | '
+        fullName: ' | '
       - name: Feature
         fullName: Feature
         uid: azure-maps-control.atlas.data.Feature
@@ -117,8 +638,54 @@ references:
       - name: Geometry
         fullName: Geometry
         uid: azure-maps-control.atlas.data.Geometry
-      - name: ', any>[]'
-        fullName: ', any>[]'
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ' | '
+        fullName: ' | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: ' | Array<'
+        fullName: ' | Array<'
+      - name: FeatureCollection
+        fullName: FeatureCollection
+        uid: azure-maps-control.atlas.data.FeatureCollection
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: '>'
+        fullName: '>'
+  - uid: 'azure-maps-control.atlas.data.Position[]'
+    name: 'Position[]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-control.atlas.data.BoundingBox[]'
+    name: 'BoundingBox[]'
+    spec.typeScript:
+      - name: BoundingBox
+        fullName: BoundingBox
+        uid: azure-maps-control.atlas.data.BoundingBox
+      - name: '[]'
+        fullName: '[]'
   - uid: >-
       Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
       any>>
@@ -144,20 +711,6 @@ references:
         uid: azure-maps-control.atlas.data.Geometry
       - name: '[]'
         fullName: '[]'
-  - uid: 'azure-maps-control.atlas.data.Position[]'
-    name: 'Position[]'
-    spec.typeScript:
-      - name: Position
-        fullName: Position
-        uid: azure-maps-control.atlas.data.Position
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-maps-control.atlas.data.BoundingBox
-    name: BoundingBox
-    spec.typeScript:
-      - name: BoundingBox
-        fullName: BoundingBox
-        uid: azure-maps-control.atlas.data.BoundingBox
   - uid: 'azure-maps-control.atlas.data.Position[][]'
     name: 'Position[][]'
     spec.typeScript:
@@ -174,6 +727,149 @@ references:
         uid: azure-maps-control.atlas.data.Position
       - name: '[][][]'
         fullName: '[][][]'
+  - uid: azure-maps-control.atlas.layer.Layer
+    name: Layer
+    spec.typeScript:
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+  - uid: string | azure-maps-control.atlas.source.Source
+    name: Source
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+  - uid: azure-maps-control.Models.BubbleLayerOptions
+    name: BubbleLayerOptions
+    spec.typeScript:
+      - name: BubbleLayerOptions
+        fullName: BubbleLayerOptions
+        uid: azure-maps-control.Models.BubbleLayerOptions
+  - uid: azure-maps-control.Models.LineLayerOptions
+    name: LineLayerOptions
+    spec.typeScript:
+      - name: LineLayerOptions
+        fullName: LineLayerOptions
+        uid: azure-maps-control.Models.LineLayerOptions
+  - uid: azure-maps-control.Models.PolygonLayerOptions
+    name: PolygonLayerOptions
+    spec.typeScript:
+      - name: PolygonLayerOptions
+        fullName: PolygonLayerOptions
+        uid: azure-maps-control.Models.PolygonLayerOptions
+  - uid: azure-maps-control.Models.SymbolLayerOptions
+    name: SymbolLayerOptions
+    spec.typeScript:
+      - name: SymbolLayerOptions
+        fullName: SymbolLayerOptions
+        uid: azure-maps-control.Models.SymbolLayerOptions
+  - uid: azure-maps-control.Models.TileLayerOptions
+    name: TileLayerOptions
+    spec.typeScript:
+      - name: TileLayerOptions
+        fullName: TileLayerOptions
+        uid: azure-maps-control.Models.TileLayerOptions
+  - uid: azure-maps-control.atlas.source.Source
+    name: Source
+    spec.typeScript:
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+  - uid: azure-maps-control.Models.DataSourceOptions
+    name: DataSourceOptions
+    spec.typeScript:
+      - name: DataSourceOptions
+        fullName: DataSourceOptions
+        uid: azure-maps-control.Models.DataSourceOptions
+  - uid: >-
+      azure-maps-control.atlas.data.FeatureCollection |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.data.Geometry |
+      azure-maps-control.atlas.data.Geometry[] |
+      azure-maps-control.atlas.data.GeometryCollection |
+      azure-maps-control.atlas.Shape | azure-maps-control.atlas.Shape[]
+    name: 'Shape[]'
+    spec.typeScript:
+      - name: FeatureCollection
+        fullName: FeatureCollection
+        uid: azure-maps-control.atlas.data.FeatureCollection
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ' | '
+        fullName: ' | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: '[] | '
+        fullName: '[] | '
+      - name: GeometryCollection
+        fullName: GeometryCollection
+        uid: azure-maps-control.atlas.data.GeometryCollection
+      - name: ' | '
+        fullName: ' | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: ' | '
+        fullName: ' | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-control.atlas.Shape
+    name: Shape
+    spec.typeScript:
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+  - uid: number | string | azure-maps-control.atlas.Shape
+    name: Shape
+    spec.typeScript:
+      - name: 'number | string | '
+        fullName: 'number | string | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+  - uid: azure-maps-control.atlas.data.FeatureCollection
+    name: FeatureCollection
+    spec.typeScript:
+      - name: FeatureCollection
+        fullName: FeatureCollection
+        uid: azure-maps-control.atlas.data.FeatureCollection
+  - uid: azure-maps-control.Models.VectorTileSourceOptions
+    name: VectorTileSourceOptions
+    spec.typeScript:
+      - name: VectorTileSourceOptions
+        fullName: VectorTileSourceOptions
+        uid: azure-maps-control.Models.VectorTileSourceOptions
+  - uid: azure-maps-control.Models.Expression
+    name: Expression
+    spec.typeScript:
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.Models.Expression
+  - uid: azure-maps-control.Models.HtmlMarkerOptions
+    name: HtmlMarkerOptions
+    spec.typeScript:
+      - name: HtmlMarkerOptions
+        fullName: HtmlMarkerOptions
+        uid: azure-maps-control.Models.HtmlMarkerOptions
   - uid: >-
       azure-maps-control.Models.ServiceOptions &
       azure-maps-control.Models.CameraOptions &
@@ -199,9 +895,45 @@ references:
       - name: UserInteractionOptions
         fullName: UserInteractionOptions
         uid: azure-maps-control.Models.UserInteractionOptions
+  - uid: azure-maps-control.Models.ControlManager
+    name: ControlManager
+    spec.typeScript:
+      - name: ControlManager
+        fullName: ControlManager
+        uid: azure-maps-control.Models.ControlManager
+  - uid: azure-maps-control.Models.EventManager
+    name: EventManager
+    spec.typeScript:
+      - name: EventManager
+        fullName: EventManager
+        uid: azure-maps-control.Models.EventManager
+  - uid: azure-maps-control.Models.ImageSpriteManager
+    name: ImageSpriteManager
+    spec.typeScript:
+      - name: ImageSpriteManager
+        fullName: ImageSpriteManager
+        uid: azure-maps-control.Models.ImageSpriteManager
+  - uid: azure-maps-control.Models.LayerManager
+    name: LayerManager
+    spec.typeScript:
+      - name: LayerManager
+        fullName: LayerManager
+        uid: azure-maps-control.Models.LayerManager
+  - uid: azure-maps-control.Models.HtmlMarkerManager
+    name: HtmlMarkerManager
+    spec.typeScript:
+      - name: HtmlMarkerManager
+        fullName: HtmlMarkerManager
+        uid: azure-maps-control.Models.HtmlMarkerManager
+  - uid: azure-maps-control.Models.SourceManager
+    name: SourceManager
+    spec.typeScript:
+      - name: SourceManager
+        fullName: SourceManager
+        uid: azure-maps-control.Models.SourceManager
   - uid: >-
       Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
-      azure-maps-control.Models.CircleProperties>>
+      azure-maps-control.Models.deprecated.CircleProperties>>
     name: CircleProperties>>
     spec.typeScript:
       - name: Array<
@@ -218,15 +950,15 @@ references:
         fullName: ', '
       - name: CircleProperties
         fullName: CircleProperties
-        uid: azure-maps-control.Models.CircleProperties
+        uid: azure-maps-control.Models.deprecated.CircleProperties
       - name: '>>'
         fullName: '>>'
-  - uid: azure-maps-control.Models.CircleLayerOptions
+  - uid: azure-maps-control.Models.deprecated.CircleLayerOptions
     name: CircleLayerOptions
     spec.typeScript:
       - name: CircleLayerOptions
         fullName: CircleLayerOptions
-        uid: azure-maps-control.Models.CircleLayerOptions
+        uid: azure-maps-control.Models.deprecated.CircleLayerOptions
   - uid: azure-maps-control.Models.Control
     name: Control
     spec.typeScript:
@@ -236,7 +968,7 @@ references:
   - uid: >-
       Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.LineString
       | azure-maps-control.atlas.data.MultiLineString,
-      azure-maps-control.Models.LinestringProperties>>
+      azure-maps-control.Models.deprecated.LinestringProperties>>
     name: LinestringProperties>>
     spec.typeScript:
       - name: Array<
@@ -258,18 +990,18 @@ references:
         fullName: ', '
       - name: LinestringProperties
         fullName: LinestringProperties
-        uid: azure-maps-control.Models.LinestringProperties
+        uid: azure-maps-control.Models.deprecated.LinestringProperties
       - name: '>>'
         fullName: '>>'
-  - uid: azure-maps-control.Models.LinestringLayerOptions
+  - uid: azure-maps-control.Models.deprecated.LinestringLayerOptions
     name: LinestringLayerOptions
     spec.typeScript:
       - name: LinestringLayerOptions
         fullName: LinestringLayerOptions
-        uid: azure-maps-control.Models.LinestringLayerOptions
+        uid: azure-maps-control.Models.deprecated.LinestringLayerOptions
   - uid: >-
       Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
-      azure-maps-control.Models.PinProperties>>
+      azure-maps-control.Models.deprecated.PinProperties>>
     name: PinProperties>>
     spec.typeScript:
       - name: Array<
@@ -286,19 +1018,19 @@ references:
         fullName: ', '
       - name: PinProperties
         fullName: PinProperties
-        uid: azure-maps-control.Models.PinProperties
+        uid: azure-maps-control.Models.deprecated.PinProperties
       - name: '>>'
         fullName: '>>'
-  - uid: azure-maps-control.Models.PinLayerOptions
+  - uid: azure-maps-control.Models.deprecated.PinLayerOptions
     name: PinLayerOptions
     spec.typeScript:
       - name: PinLayerOptions
         fullName: PinLayerOptions
-        uid: azure-maps-control.Models.PinLayerOptions
+        uid: azure-maps-control.Models.deprecated.PinLayerOptions
   - uid: >-
       Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Polygon
       | azure-maps-control.atlas.data.MultiPolygon,
-      azure-maps-control.Models.PolygonProperties>>
+      azure-maps-control.Models.deprecated.PolygonProperties>>
     name: PolygonProperties>>
     spec.typeScript:
       - name: Array<
@@ -320,21 +1052,15 @@ references:
         fullName: ', '
       - name: PolygonProperties
         fullName: PolygonProperties
-        uid: azure-maps-control.Models.PolygonProperties
+        uid: azure-maps-control.Models.deprecated.PolygonProperties
       - name: '>>'
         fullName: '>>'
-  - uid: azure-maps-control.Models.PolygonLayerOptions
-    name: PolygonLayerOptions
-    spec.typeScript:
-      - name: PolygonLayerOptions
-        fullName: PolygonLayerOptions
-        uid: azure-maps-control.Models.PolygonLayerOptions
-  - uid: azure-maps-control.Models.RasterLayerOptions
+  - uid: azure-maps-control.Models.deprecated.RasterLayerOptions
     name: RasterLayerOptions
     spec.typeScript:
       - name: RasterLayerOptions
         fullName: RasterLayerOptions
-        uid: azure-maps-control.Models.RasterLayerOptions
+        uid: azure-maps-control.Models.deprecated.RasterLayerOptions
   - uid: >-
       azure-maps-control.Models.CameraOptions &
       azure-maps-control.Models.CameraBoundsOptions
@@ -372,14 +1098,28 @@ references:
       - name: UserInteractionOptions
         fullName: UserInteractionOptions
         uid: azure-maps-control.Models.UserInteractionOptions
+  - uid: 'azure-maps-control.atlas.Pixel[]'
+    name: 'Pixel[]'
+    spec.typeScript:
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
+      - name: '[]'
+        fullName: '[]'
   - uid: >-
-      azure-maps-control.Models.CameraOptions &
+      azure-maps-control.Models.CameraOptions |
+      azure-maps-control.Models.CameraBoundsOptions &
       azure-maps-control.Models.AnimationOptions
     name: AnimationOptions
     spec.typeScript:
       - name: CameraOptions
         fullName: CameraOptions
         uid: azure-maps-control.Models.CameraOptions
+      - name: ' | '
+        fullName: ' | '
+      - name: CameraBoundsOptions
+        fullName: CameraBoundsOptions
+        uid: azure-maps-control.Models.CameraBoundsOptions
       - name: ' & '
         fullName: ' & '
       - name: AnimationOptions
@@ -391,9 +1131,36 @@ references:
       - name: CameraBoundsOptions
         fullName: CameraBoundsOptions
         uid: azure-maps-control.Models.CameraBoundsOptions
+  - uid: azure-maps-control.atlas.Pixel
+    name: Pixel
+    spec.typeScript:
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
   - uid: azure-maps-control.Models.PopupOptions
     name: PopupOptions
     spec.typeScript:
       - name: PopupOptions
         fullName: PopupOptions
         uid: azure-maps-control.Models.PopupOptions
+  - uid: >-
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any>
+    name: 'Geometry, any>'
+    spec.typeScript:
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any>'
+        fullName: ', any>'
+  - uid: azure-maps-control.atlas.data.Geometry
+    name: Geometry
+    spec.typeScript:
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry

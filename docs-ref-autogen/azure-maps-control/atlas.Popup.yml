@@ -7,9 +7,12 @@ items:
       - azure-maps-control.atlas.Popup.constructor
       - azure-maps-control.atlas.Popup.attach
       - azure-maps-control.atlas.Popup.close
-      - azure-maps-control.atlas.Popup.getPopupOptions
+      - azure-maps-control.atlas.Popup.isOpen
       - azure-maps-control.atlas.Popup.open
       - azure-maps-control.atlas.Popup.remove
+      - azure-maps-control.atlas.Popup.getOptions
+      - azure-maps-control.atlas.Popup.getPopupOptions
+      - azure-maps-control.atlas.Popup.setOptions
       - azure-maps-control.atlas.Popup.setPopupOptions
     langs:
       - typeScript
@@ -35,38 +38,89 @@ items:
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Popup.attach
     name: attach
+    fullName: attach
     children: []
-    type: method
     langs:
       - typeScript
+    type: property
     summary: Attaches the popup to the HTML document in a hidden state.
     syntax:
-      content: 'function attach(map: Map)'
-      parameters:
-        - id: map
-          type:
-            - azure-maps-control.atlas.Map
-          description: |
-            The map.
+      content: 'attach: (map: Map) => void'
       return:
         type:
-          - any
+          - '(map: Map) => void'
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Popup.close
     name: close
+    fullName: close
     children: []
-    type: method
     langs:
       - typeScript
+    type: property
     summary: >-
       Closes the popup on the map. The popup remains attached to the HTML
       document.
     syntax:
-      content: function close()
+      content: 'close: () => void'
+      return:
+        type:
+          - () => void
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Popup.isOpen
+    name: isOpen
+    fullName: isOpen
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Returns true if the popup is currently open, otherwise false.'
+    syntax:
+      content: 'isOpen: () => boolean'
+      return:
+        type:
+          - () => boolean
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Popup.open
+    name: open
+    fullName: open
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Opens the popup on the passed in map.
+    syntax:
+      content: 'open: (map: Map) => void'
+      return:
+        type:
+          - '(map: Map) => void'
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Popup.remove
+    name: remove
+    fullName: remove
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Closes the popup on the map and removes it from the HTML document.
+    syntax:
+      content: 'remove: () => void'
+      return:
+        type:
+          - () => void
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Popup.getOptions
+    name: getOptions
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the options for the popup.
+    syntax:
+      content: function getOptions()
       parameters: []
       return:
         type:
-          - any
+          - azure-maps-control.Models.PopupOptions
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Popup.getPopupOptions
     name: getPopupOptions
@@ -82,38 +136,24 @@ items:
         type:
           - azure-maps-control.Models.PopupOptions
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.Popup.open
-    name: open
+    deprecated:
+      content: Use getOptions() instead.
+  - uid: azure-maps-control.atlas.Popup.setOptions
+    name: setOptions
     children: []
     type: method
     langs:
       - typeScript
-    summary: Opens the popup on the passed in map.
+    summary: Sets the options for the popup.
     syntax:
-      content: 'function open(map: Map)'
+      content: 'function setOptions(options?: PopupOptions)'
       parameters:
-        - id: map
+        - id: options
           type:
-            - azure-maps-control.atlas.Map
+            - azure-maps-control.Models.PopupOptions
           description: |
-            The map.
-      return:
-        type:
-          - any
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Popup.remove
-    name: remove
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Closes the popup on the map and removes it from the HTML document.
-    syntax:
-      content: function remove()
-      parameters: []
-      return:
-        type:
-          - any
+            The options for the popup.
+          optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Popup.setPopupOptions
     name: setPopupOptions
@@ -128,10 +168,11 @@ items:
         - id: options
           type:
             - azure-maps-control.Models.PopupOptions
-          description: |
-            The options for the popup.
+          description: The options for the popup.
           optional: true
     package: azure-maps-control
+    deprecated:
+      content: Use setOptions(...) instead.
 references:
   - uid: azure-maps-control.Models.CompassControlOptions
     name: CompassControlOptions
@@ -175,17 +216,27 @@ references:
       - name: Position
         fullName: Position
         uid: azure-maps-control.atlas.data.Position
-  - uid: azure-maps-control.atlas.data.Geometry
-    name: Geometry
+  - uid: azure-maps-control.atlas.data.BoundingBox
+    name: BoundingBox
     spec.typeScript:
-      - name: Geometry
-        fullName: Geometry
-        uid: azure-maps-control.atlas.data.Geometry
+      - name: BoundingBox
+        fullName: BoundingBox
+        uid: azure-maps-control.atlas.data.BoundingBox
   - uid: >-
+      azure-maps-control.atlas.data.FeatureCollection |
       azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
-      any>[]
-    name: 'Geometry, any>[]'
+      any> | azure-maps-control.atlas.data.Geometry |
+      azure-maps-control.atlas.Shape |
+      Array<azure-maps-control.atlas.data.FeatureCollection |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.data.Geometry>
+    name: Geometry>
     spec.typeScript:
+      - name: FeatureCollection
+        fullName: FeatureCollection
+        uid: azure-maps-control.atlas.data.FeatureCollection
+      - name: ' | '
+        fullName: ' | '
       - name: Feature
         fullName: Feature
         uid: azure-maps-control.atlas.data.Feature
@@ -194,8 +245,54 @@ references:
       - name: Geometry
         fullName: Geometry
         uid: azure-maps-control.atlas.data.Geometry
-      - name: ', any>[]'
-        fullName: ', any>[]'
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ' | '
+        fullName: ' | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: ' | Array<'
+        fullName: ' | Array<'
+      - name: FeatureCollection
+        fullName: FeatureCollection
+        uid: azure-maps-control.atlas.data.FeatureCollection
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: '>'
+        fullName: '>'
+  - uid: 'azure-maps-control.atlas.data.Position[]'
+    name: 'Position[]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-control.atlas.data.BoundingBox[]'
+    name: 'BoundingBox[]'
+    spec.typeScript:
+      - name: BoundingBox
+        fullName: BoundingBox
+        uid: azure-maps-control.atlas.data.BoundingBox
+      - name: '[]'
+        fullName: '[]'
   - uid: >-
       Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
       any>>
@@ -221,20 +318,6 @@ references:
         uid: azure-maps-control.atlas.data.Geometry
       - name: '[]'
         fullName: '[]'
-  - uid: 'azure-maps-control.atlas.data.Position[]'
-    name: 'Position[]'
-    spec.typeScript:
-      - name: Position
-        fullName: Position
-        uid: azure-maps-control.atlas.data.Position
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-maps-control.atlas.data.BoundingBox
-    name: BoundingBox
-    spec.typeScript:
-      - name: BoundingBox
-        fullName: BoundingBox
-        uid: azure-maps-control.atlas.data.BoundingBox
   - uid: 'azure-maps-control.atlas.data.Position[][]'
     name: 'Position[][]'
     spec.typeScript:
@@ -251,6 +334,149 @@ references:
         uid: azure-maps-control.atlas.data.Position
       - name: '[][][]'
         fullName: '[][][]'
+  - uid: azure-maps-control.atlas.layer.Layer
+    name: Layer
+    spec.typeScript:
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+  - uid: string | azure-maps-control.atlas.source.Source
+    name: Source
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+  - uid: azure-maps-control.Models.BubbleLayerOptions
+    name: BubbleLayerOptions
+    spec.typeScript:
+      - name: BubbleLayerOptions
+        fullName: BubbleLayerOptions
+        uid: azure-maps-control.Models.BubbleLayerOptions
+  - uid: azure-maps-control.Models.LineLayerOptions
+    name: LineLayerOptions
+    spec.typeScript:
+      - name: LineLayerOptions
+        fullName: LineLayerOptions
+        uid: azure-maps-control.Models.LineLayerOptions
+  - uid: azure-maps-control.Models.PolygonLayerOptions
+    name: PolygonLayerOptions
+    spec.typeScript:
+      - name: PolygonLayerOptions
+        fullName: PolygonLayerOptions
+        uid: azure-maps-control.Models.PolygonLayerOptions
+  - uid: azure-maps-control.Models.SymbolLayerOptions
+    name: SymbolLayerOptions
+    spec.typeScript:
+      - name: SymbolLayerOptions
+        fullName: SymbolLayerOptions
+        uid: azure-maps-control.Models.SymbolLayerOptions
+  - uid: azure-maps-control.Models.TileLayerOptions
+    name: TileLayerOptions
+    spec.typeScript:
+      - name: TileLayerOptions
+        fullName: TileLayerOptions
+        uid: azure-maps-control.Models.TileLayerOptions
+  - uid: azure-maps-control.atlas.source.Source
+    name: Source
+    spec.typeScript:
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+  - uid: azure-maps-control.Models.DataSourceOptions
+    name: DataSourceOptions
+    spec.typeScript:
+      - name: DataSourceOptions
+        fullName: DataSourceOptions
+        uid: azure-maps-control.Models.DataSourceOptions
+  - uid: >-
+      azure-maps-control.atlas.data.FeatureCollection |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.data.Geometry |
+      azure-maps-control.atlas.data.Geometry[] |
+      azure-maps-control.atlas.data.GeometryCollection |
+      azure-maps-control.atlas.Shape | azure-maps-control.atlas.Shape[]
+    name: 'Shape[]'
+    spec.typeScript:
+      - name: FeatureCollection
+        fullName: FeatureCollection
+        uid: azure-maps-control.atlas.data.FeatureCollection
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ' | '
+        fullName: ' | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: '[] | '
+        fullName: '[] | '
+      - name: GeometryCollection
+        fullName: GeometryCollection
+        uid: azure-maps-control.atlas.data.GeometryCollection
+      - name: ' | '
+        fullName: ' | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: ' | '
+        fullName: ' | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-control.atlas.Shape
+    name: Shape
+    spec.typeScript:
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+  - uid: number | string | azure-maps-control.atlas.Shape
+    name: Shape
+    spec.typeScript:
+      - name: 'number | string | '
+        fullName: 'number | string | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+  - uid: azure-maps-control.atlas.data.FeatureCollection
+    name: FeatureCollection
+    spec.typeScript:
+      - name: FeatureCollection
+        fullName: FeatureCollection
+        uid: azure-maps-control.atlas.data.FeatureCollection
+  - uid: azure-maps-control.Models.VectorTileSourceOptions
+    name: VectorTileSourceOptions
+    spec.typeScript:
+      - name: VectorTileSourceOptions
+        fullName: VectorTileSourceOptions
+        uid: azure-maps-control.Models.VectorTileSourceOptions
+  - uid: azure-maps-control.Models.Expression
+    name: Expression
+    spec.typeScript:
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.Models.Expression
+  - uid: azure-maps-control.Models.HtmlMarkerOptions
+    name: HtmlMarkerOptions
+    spec.typeScript:
+      - name: HtmlMarkerOptions
+        fullName: HtmlMarkerOptions
+        uid: azure-maps-control.Models.HtmlMarkerOptions
   - uid: >-
       azure-maps-control.Models.ServiceOptions &
       azure-maps-control.Models.CameraOptions &
@@ -276,9 +502,45 @@ references:
       - name: UserInteractionOptions
         fullName: UserInteractionOptions
         uid: azure-maps-control.Models.UserInteractionOptions
+  - uid: azure-maps-control.Models.ControlManager
+    name: ControlManager
+    spec.typeScript:
+      - name: ControlManager
+        fullName: ControlManager
+        uid: azure-maps-control.Models.ControlManager
+  - uid: azure-maps-control.Models.EventManager
+    name: EventManager
+    spec.typeScript:
+      - name: EventManager
+        fullName: EventManager
+        uid: azure-maps-control.Models.EventManager
+  - uid: azure-maps-control.Models.ImageSpriteManager
+    name: ImageSpriteManager
+    spec.typeScript:
+      - name: ImageSpriteManager
+        fullName: ImageSpriteManager
+        uid: azure-maps-control.Models.ImageSpriteManager
+  - uid: azure-maps-control.Models.LayerManager
+    name: LayerManager
+    spec.typeScript:
+      - name: LayerManager
+        fullName: LayerManager
+        uid: azure-maps-control.Models.LayerManager
+  - uid: azure-maps-control.Models.HtmlMarkerManager
+    name: HtmlMarkerManager
+    spec.typeScript:
+      - name: HtmlMarkerManager
+        fullName: HtmlMarkerManager
+        uid: azure-maps-control.Models.HtmlMarkerManager
+  - uid: azure-maps-control.Models.SourceManager
+    name: SourceManager
+    spec.typeScript:
+      - name: SourceManager
+        fullName: SourceManager
+        uid: azure-maps-control.Models.SourceManager
   - uid: >-
       Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
-      azure-maps-control.Models.CircleProperties>>
+      azure-maps-control.Models.deprecated.CircleProperties>>
     name: CircleProperties>>
     spec.typeScript:
       - name: Array<
@@ -295,15 +557,15 @@ references:
         fullName: ', '
       - name: CircleProperties
         fullName: CircleProperties
-        uid: azure-maps-control.Models.CircleProperties
+        uid: azure-maps-control.Models.deprecated.CircleProperties
       - name: '>>'
         fullName: '>>'
-  - uid: azure-maps-control.Models.CircleLayerOptions
+  - uid: azure-maps-control.Models.deprecated.CircleLayerOptions
     name: CircleLayerOptions
     spec.typeScript:
       - name: CircleLayerOptions
         fullName: CircleLayerOptions
-        uid: azure-maps-control.Models.CircleLayerOptions
+        uid: azure-maps-control.Models.deprecated.CircleLayerOptions
   - uid: azure-maps-control.Models.Control
     name: Control
     spec.typeScript:
@@ -313,7 +575,7 @@ references:
   - uid: >-
       Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.LineString
       | azure-maps-control.atlas.data.MultiLineString,
-      azure-maps-control.Models.LinestringProperties>>
+      azure-maps-control.Models.deprecated.LinestringProperties>>
     name: LinestringProperties>>
     spec.typeScript:
       - name: Array<
@@ -335,18 +597,18 @@ references:
         fullName: ', '
       - name: LinestringProperties
         fullName: LinestringProperties
-        uid: azure-maps-control.Models.LinestringProperties
+        uid: azure-maps-control.Models.deprecated.LinestringProperties
       - name: '>>'
         fullName: '>>'
-  - uid: azure-maps-control.Models.LinestringLayerOptions
+  - uid: azure-maps-control.Models.deprecated.LinestringLayerOptions
     name: LinestringLayerOptions
     spec.typeScript:
       - name: LinestringLayerOptions
         fullName: LinestringLayerOptions
-        uid: azure-maps-control.Models.LinestringLayerOptions
+        uid: azure-maps-control.Models.deprecated.LinestringLayerOptions
   - uid: >-
       Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
-      azure-maps-control.Models.PinProperties>>
+      azure-maps-control.Models.deprecated.PinProperties>>
     name: PinProperties>>
     spec.typeScript:
       - name: Array<
@@ -363,19 +625,19 @@ references:
         fullName: ', '
       - name: PinProperties
         fullName: PinProperties
-        uid: azure-maps-control.Models.PinProperties
+        uid: azure-maps-control.Models.deprecated.PinProperties
       - name: '>>'
         fullName: '>>'
-  - uid: azure-maps-control.Models.PinLayerOptions
+  - uid: azure-maps-control.Models.deprecated.PinLayerOptions
     name: PinLayerOptions
     spec.typeScript:
       - name: PinLayerOptions
         fullName: PinLayerOptions
-        uid: azure-maps-control.Models.PinLayerOptions
+        uid: azure-maps-control.Models.deprecated.PinLayerOptions
   - uid: >-
       Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Polygon
       | azure-maps-control.atlas.data.MultiPolygon,
-      azure-maps-control.Models.PolygonProperties>>
+      azure-maps-control.Models.deprecated.PolygonProperties>>
     name: PolygonProperties>>
     spec.typeScript:
       - name: Array<
@@ -397,21 +659,15 @@ references:
         fullName: ', '
       - name: PolygonProperties
         fullName: PolygonProperties
-        uid: azure-maps-control.Models.PolygonProperties
+        uid: azure-maps-control.Models.deprecated.PolygonProperties
       - name: '>>'
         fullName: '>>'
-  - uid: azure-maps-control.Models.PolygonLayerOptions
-    name: PolygonLayerOptions
-    spec.typeScript:
-      - name: PolygonLayerOptions
-        fullName: PolygonLayerOptions
-        uid: azure-maps-control.Models.PolygonLayerOptions
-  - uid: azure-maps-control.Models.RasterLayerOptions
+  - uid: azure-maps-control.Models.deprecated.RasterLayerOptions
     name: RasterLayerOptions
     spec.typeScript:
       - name: RasterLayerOptions
         fullName: RasterLayerOptions
-        uid: azure-maps-control.Models.RasterLayerOptions
+        uid: azure-maps-control.Models.deprecated.RasterLayerOptions
   - uid: >-
       azure-maps-control.Models.CameraOptions &
       azure-maps-control.Models.CameraBoundsOptions
@@ -449,14 +705,28 @@ references:
       - name: UserInteractionOptions
         fullName: UserInteractionOptions
         uid: azure-maps-control.Models.UserInteractionOptions
+  - uid: 'azure-maps-control.atlas.Pixel[]'
+    name: 'Pixel[]'
+    spec.typeScript:
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
+      - name: '[]'
+        fullName: '[]'
   - uid: >-
-      azure-maps-control.Models.CameraOptions &
+      azure-maps-control.Models.CameraOptions |
+      azure-maps-control.Models.CameraBoundsOptions &
       azure-maps-control.Models.AnimationOptions
     name: AnimationOptions
     spec.typeScript:
       - name: CameraOptions
         fullName: CameraOptions
         uid: azure-maps-control.Models.CameraOptions
+      - name: ' | '
+        fullName: ' | '
+      - name: CameraBoundsOptions
+        fullName: CameraBoundsOptions
+        uid: azure-maps-control.Models.CameraBoundsOptions
       - name: ' & '
         fullName: ' & '
       - name: AnimationOptions
@@ -468,9 +738,36 @@ references:
       - name: CameraBoundsOptions
         fullName: CameraBoundsOptions
         uid: azure-maps-control.Models.CameraBoundsOptions
+  - uid: azure-maps-control.atlas.Pixel
+    name: Pixel
+    spec.typeScript:
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
   - uid: azure-maps-control.Models.PopupOptions
     name: PopupOptions
     spec.typeScript:
       - name: PopupOptions
         fullName: PopupOptions
         uid: azure-maps-control.Models.PopupOptions
+  - uid: >-
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any>
+    name: 'Geometry, any>'
+    spec.typeScript:
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any>'
+        fullName: ', any>'
+  - uid: azure-maps-control.atlas.data.Geometry
+    name: Geometry
+    spec.typeScript:
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry

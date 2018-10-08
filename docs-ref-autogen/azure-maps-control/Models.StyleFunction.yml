@@ -33,6 +33,8 @@ items:
       range.
 
       With values close to 1 the output increases linearly.
+
+      default: `1`
     optional: true
     syntax:
       content: 'base?: number'
@@ -57,6 +59,13 @@ items:
       more easily
 
       than those interpolated in RGB space.
+
+      <p>"rgb": Use the RGB color space.</p>
+
+      <p>"lab": Use the LAB color space.</p>
+
+      <p>"hcl": Use the HCL color space. Interpolating the Hue, Chroma, and
+      Luminance channels individually.</p>
     optional: true
     syntax:
       content: 'colorSpace?: "rgb" | "lab" | "hcl"'
@@ -78,6 +87,18 @@ items:
       If no default is provided, the style property's default is used.
 
       It is used in the following circumstances:
+
+      <p>In categorical functions, when the feature value does not match any of
+      the stop domain values.</p>
+
+      <p>In property and zoom-and-property functions, when a feature does not
+      contain a value for the specified property.</p>
+
+      <p>In identity functions, when the feature value is not valid for the
+      style property.</p>
+
+      <p>In interval or exponential property and zoom-and-property functions,
+      when the feature value is not numeric.</p>
     optional: true
     syntax:
       content: 'default?: any'
@@ -127,7 +148,25 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Specifies the type of the style function.
+    summary: >-
+      Specifies the type of the style function.
+
+      <p>"identity": A function that returns its input as the output.</p>
+
+      <p>"exponential": A function that generates an output by interpolating
+      between stops.
+
+      The domain (input values) must be numeric and the style property must
+      support interpolation.</p>
+
+      <p>"interval": A function that returns the output value of the stop just
+      less than the function input.
+
+      The domain (input value) must be numeric. Any style property may use
+      interval functions.</p>
+
+      <p>"categorical": A function that returns the output value of the stop
+      equal to the function input.</p>
     optional: true
     syntax:
       content: 'type?: "identity" | "exponential" | "interval" | "categorical"'
@@ -210,18 +249,18 @@ references:
       - name: Padding
         fullName: Padding
         uid: azure-maps-control.Models.Padding
+  - uid: azure-maps-control.atlas.data.Position
+    name: Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
   - uid: azure-maps-control.Models.ControlStyle
     name: ControlStyle
     spec.typeScript:
       - name: ControlStyle
         fullName: ControlStyle
         uid: azure-maps-control.Models.ControlStyle
-  - uid: azure-maps-control.atlas.Map
-    name: Map
-    spec.typeScript:
-      - name: Map
-        fullName: Map
-        uid: azure-maps-control.atlas.Map
   - uid: azure-maps-control.Models.Control
     name: Control
     spec.typeScript:
@@ -421,6 +460,12 @@ references:
         uid: azure-maps-control.atlas.Shape
       - name: '>'
         fullName: '>'
+  - uid: azure-maps-control.atlas.Map
+    name: Map
+    spec.typeScript:
+      - name: Map
+        fullName: Map
+        uid: azure-maps-control.atlas.Map
   - uid: 'azure-maps-control.atlas.Pixel[]'
     name: 'Pixel[]'
     spec.typeScript:
@@ -429,12 +474,12 @@ references:
         uid: azure-maps-control.atlas.Pixel
       - name: '[]'
         fullName: '[]'
-  - uid: 'azure-maps-control.Models.ServiceOptions[]'
-    name: 'ServiceOptions[]'
+  - uid: 'azure-maps-control.atlas.data.Position[]'
+    name: 'Position[]'
     spec.typeScript:
-      - name: ServiceOptions
-        fullName: ServiceOptions
-        uid: azure-maps-control.Models.ServiceOptions
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
       - name: '[]'
         fullName: '[]'
   - uid: >-
@@ -475,14 +520,6 @@ references:
         uid: azure-maps-control.atlas.source.Source
       - name: '>'
         fullName: '>'
-  - uid: 'azure-maps-control.Models.StyleOptions[]'
-    name: 'StyleOptions[]'
-    spec.typeScript:
-      - name: StyleOptions
-        fullName: StyleOptions
-        uid: azure-maps-control.Models.StyleOptions
-      - name: '[]'
-        fullName: '[]'
   - uid: azure-maps-control.Models.IconOptions
     name: IconOptions
     spec.typeScript:

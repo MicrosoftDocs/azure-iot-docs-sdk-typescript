@@ -7,6 +7,7 @@ items:
       - azure-maps-control.atlas.layer.SymbolLayer.constructor
       - azure-maps-control.atlas.layer.SymbolLayer.getOptions
       - azure-maps-control.atlas.layer.SymbolLayer.getSource
+      - azure-maps-control.atlas.layer.SymbolLayer.setOptions
     langs:
       - typeScript
     type: class
@@ -22,7 +23,7 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: Constructs a new PolygonLayer.
+    summary: Constructs a new SymbolLayer.
     syntax:
       content: >-
         new SymbolLayer(source: string | Source, id?: string, options?:
@@ -52,7 +53,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Gets the options of the polygon layer.
+    summary: Gets the options of the symbol layer.
     syntax:
       content: function getOptions()
       parameters: []
@@ -73,6 +74,21 @@ items:
       return:
         type:
           - string | azure-maps-control.atlas.source.Source
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.SymbolLayer.setOptions
+    name: setOptions
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Sets the options of the symbol layer.
+    syntax:
+      content: 'function setOptions(options: SymbolLayerOptions)'
+      parameters:
+        - id: options
+          type:
+            - azure-maps-control.Models.SymbolLayerOptions
+          description: ''
     package: azure-maps-control
 references:
   - uid: azure-maps-control.Models.CompassControlOptions
@@ -279,6 +295,27 @@ references:
       - name: TileLayerOptions
         fullName: TileLayerOptions
         uid: azure-maps-control.Models.TileLayerOptions
+  - uid: azure-maps-control.atlas.data.Polygon
+    name: Polygon
+    spec.typeScript:
+      - name: Polygon
+        fullName: Polygon
+        uid: azure-maps-control.atlas.data.Polygon
+  - uid: >-
+      azure-maps-control.atlas.data.LineString |
+      azure-maps-control.atlas.data.Position[]
+    name: 'Position[]'
+    spec.typeScript:
+      - name: LineString
+        fullName: LineString
+        uid: azure-maps-control.atlas.data.LineString
+      - name: ' | '
+        fullName: ' | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-control.atlas.source.Source
     name: Source
     spec.typeScript:
@@ -563,6 +600,12 @@ references:
         uid: azure-maps-control.Models.deprecated.PolygonProperties
       - name: '>>'
         fullName: '>>'
+  - uid: azure-maps-control.Models.deprecated.PolygonLayerOptions
+    name: PolygonLayerOptions
+    spec.typeScript:
+      - name: PolygonLayerOptions
+        fullName: PolygonLayerOptions
+        uid: azure-maps-control.Models.deprecated.PolygonLayerOptions
   - uid: azure-maps-control.Models.deprecated.RasterLayerOptions
     name: RasterLayerOptions
     spec.typeScript:
@@ -672,3 +715,30 @@ references:
       - name: Geometry
         fullName: Geometry
         uid: azure-maps-control.atlas.data.Geometry
+  - uid: >-
+      azure-maps-control.atlas.data.Position |
+      azure-maps-control.atlas.data.Position[] |
+      azure-maps-control.atlas.data.Position[][] |
+      azure-maps-control.atlas.data.Position[][][]
+    name: 'Position[][][]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: ' | '
+        fullName: ' | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[] | '
+        fullName: '[] | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[][] | '
+        fullName: '[][] | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[][][]'
+        fullName: '[][][]'

@@ -3,30 +3,11 @@ items:
   - uid: azure-maps-control.Models.Options
     name: Options
     fullName: Options
-    children:
-      - azure-maps-control.Models.Options.merge
+    children: []
     langs:
       - typeScript
     type: class
     summary: ''
-    package: azure-maps-control
-  - uid: azure-maps-control.Models.Options.merge
-    name: merge
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'function merge(valuesList: any[])'
-      parameters:
-        - id: valuesList
-          type:
-            - 'any[]'
-          description: ''
-      return:
-        type:
-          - this
     package: azure-maps-control
 references:
   - uid: azure-maps-control.Models.deprecated.LayerOptions
@@ -103,18 +84,18 @@ references:
       - name: Padding
         fullName: Padding
         uid: azure-maps-control.Models.Padding
+  - uid: azure-maps-control.atlas.data.Position
+    name: Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
   - uid: azure-maps-control.Models.ControlStyle
     name: ControlStyle
     spec.typeScript:
       - name: ControlStyle
         fullName: ControlStyle
         uid: azure-maps-control.Models.ControlStyle
-  - uid: azure-maps-control.atlas.Map
-    name: Map
-    spec.typeScript:
-      - name: Map
-        fullName: Map
-        uid: azure-maps-control.atlas.Map
   - uid: azure-maps-control.Models.Control
     name: Control
     spec.typeScript:
@@ -314,6 +295,12 @@ references:
         uid: azure-maps-control.atlas.Shape
       - name: '>'
         fullName: '>'
+  - uid: azure-maps-control.atlas.Map
+    name: Map
+    spec.typeScript:
+      - name: Map
+        fullName: Map
+        uid: azure-maps-control.atlas.Map
   - uid: 'azure-maps-control.atlas.Pixel[]'
     name: 'Pixel[]'
     spec.typeScript:
@@ -322,12 +309,12 @@ references:
         uid: azure-maps-control.atlas.Pixel
       - name: '[]'
         fullName: '[]'
-  - uid: 'azure-maps-control.Models.ServiceOptions[]'
-    name: 'ServiceOptions[]'
+  - uid: 'azure-maps-control.atlas.data.Position[]'
+    name: 'Position[]'
     spec.typeScript:
-      - name: ServiceOptions
-        fullName: ServiceOptions
-        uid: azure-maps-control.Models.ServiceOptions
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
       - name: '[]'
         fullName: '[]'
   - uid: >-
@@ -368,14 +355,6 @@ references:
         uid: azure-maps-control.atlas.source.Source
       - name: '>'
         fullName: '>'
-  - uid: 'azure-maps-control.Models.StyleOptions[]'
-    name: 'StyleOptions[]'
-    spec.typeScript:
-      - name: StyleOptions
-        fullName: StyleOptions
-        uid: azure-maps-control.Models.StyleOptions
-      - name: '[]'
-        fullName: '[]'
   - uid: azure-maps-control.Models.IconOptions
     name: IconOptions
     spec.typeScript:

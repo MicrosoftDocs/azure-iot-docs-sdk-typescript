@@ -26,6 +26,8 @@ items:
     summary: >-
       Indicates if the user can drag the position of the marker using the mouse
       or touch controls.
+
+      default `false`
     optional: true
     syntax:
       content: 'draggable?: boolean'
@@ -40,7 +42,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: The HTML content of the marker. Can be an HTMLElement or HTML string.
+    summary: |-
+      The HTML content of the marker. Can be an HTMLElement or HTML string.
+      Default is a blue pin SVG.
     optional: true
     syntax:
       content: 'htmlContent?: string | HTMLElement'
@@ -58,6 +62,7 @@ items:
     summary: |-
       An offset in pixels to move the popup relative to the markers center.
       Negatives indicate left and up.
+      default `[0, 0]`
     optional: true
     syntax:
       content: 'pixelOffset?: Pixel'
@@ -87,13 +92,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: The position of the marker.
+    summary: |-
+      The position of the marker.
+      default `[0, 0]`
     optional: true
     syntax:
       content: 'position?: Position'
       return:
         type:
-          - Position
+          - azure-maps-control.atlas.data.Position
     package: azure-maps-control
 references:
   - uid: azure-maps-control.Models.deprecated.LayerOptions
@@ -170,18 +177,18 @@ references:
       - name: Padding
         fullName: Padding
         uid: azure-maps-control.Models.Padding
+  - uid: azure-maps-control.atlas.data.Position
+    name: Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
   - uid: azure-maps-control.Models.ControlStyle
     name: ControlStyle
     spec.typeScript:
       - name: ControlStyle
         fullName: ControlStyle
         uid: azure-maps-control.Models.ControlStyle
-  - uid: azure-maps-control.atlas.Map
-    name: Map
-    spec.typeScript:
-      - name: Map
-        fullName: Map
-        uid: azure-maps-control.atlas.Map
   - uid: azure-maps-control.Models.Control
     name: Control
     spec.typeScript:
@@ -381,6 +388,12 @@ references:
         uid: azure-maps-control.atlas.Shape
       - name: '>'
         fullName: '>'
+  - uid: azure-maps-control.atlas.Map
+    name: Map
+    spec.typeScript:
+      - name: Map
+        fullName: Map
+        uid: azure-maps-control.atlas.Map
   - uid: 'azure-maps-control.atlas.Pixel[]'
     name: 'Pixel[]'
     spec.typeScript:
@@ -389,12 +402,12 @@ references:
         uid: azure-maps-control.atlas.Pixel
       - name: '[]'
         fullName: '[]'
-  - uid: 'azure-maps-control.Models.ServiceOptions[]'
-    name: 'ServiceOptions[]'
+  - uid: 'azure-maps-control.atlas.data.Position[]'
+    name: 'Position[]'
     spec.typeScript:
-      - name: ServiceOptions
-        fullName: ServiceOptions
-        uid: azure-maps-control.Models.ServiceOptions
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
       - name: '[]'
         fullName: '[]'
   - uid: >-
@@ -435,14 +448,6 @@ references:
         uid: azure-maps-control.atlas.source.Source
       - name: '>'
         fullName: '>'
-  - uid: 'azure-maps-control.Models.StyleOptions[]'
-    name: 'StyleOptions[]'
-    spec.typeScript:
-      - name: StyleOptions
-        fullName: StyleOptions
-        uid: azure-maps-control.Models.StyleOptions
-      - name: '[]'
-        fullName: '[]'
   - uid: azure-maps-control.Models.IconOptions
     name: IconOptions
     spec.typeScript:

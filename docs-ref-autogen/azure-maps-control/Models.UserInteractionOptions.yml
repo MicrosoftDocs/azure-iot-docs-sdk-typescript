@@ -26,7 +26,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Whether the Shift + left click and drag will draw a zoom box.
+    summary: |-
+      Whether the Shift + left click and drag will draw a zoom box.
+      default `true`
     optional: true
     syntax:
       content: 'boxZoomInteraction?: boolean'
@@ -41,7 +43,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Whether double left click will zoom the map inwards.
+    summary: |-
+      Whether double left click will zoom the map inwards.
+      default `true`
     optional: true
     syntax:
       content: 'dblClickZoomInteraction?: boolean'
@@ -56,7 +60,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Whether left click and drag will pan the map.
+    summary: |-
+      Whether left click and drag will pan the map.
+      default `true`
     optional: true
     syntax:
       content: 'dragPanInteraction?: boolean'
@@ -71,7 +77,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Whether right click and drag will rotate and pitch the map.
+    summary: |-
+      Whether right click and drag will rotate and pitch the map.
+      default `true`
     optional: true
     syntax:
       content: 'dragRotateInteraction?: boolean'
@@ -91,6 +99,8 @@ items:
       is disabled.  If true, only selected
 
       user interactions will enabled.
+
+      default `true`
     optional: true
     syntax:
       content: 'interactive?: boolean'
@@ -113,9 +123,9 @@ items:
 
       font-size: 14px; padding: 2px; } </style>
 
-      <p><span class="k-key">+=</span>: Increase zoom level by 1.</p>
+      <p><span class="k-key">+/=</span>: Increase zoom level by 1.</p>
 
-      <p><span class="k-key">Shift</span> + <span class="k-key">+=</span>:
+      <p><span class="k-key">Shift</span> + <span class="k-key">+/=</span>:
       Increase the zoom level by 2.</p>
 
       <p><span class="k-key">-</span>: Decrease zoom level by 1.</p>
@@ -142,6 +152,8 @@ items:
 
       <p><span class="k-key">Shift</span> + <span class="k-key">⇣</span>:
       Decrease pitch by 10 degrees.</p>
+
+      default `true`
     optional: true
     syntax:
       content: 'keyboardInteraction?: boolean'
@@ -156,7 +168,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Whether the map should zoom on scroll input.
+    summary: |-
+      Whether the map should zoom on scroll input.
+      default `true`
     optional: true
     syntax:
       content: 'scrollZoomInteraction?: boolean'
@@ -171,7 +185,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Whether touch interactions are enabled for touch devices.
+    summary: |-
+      Whether touch interactions are enabled for touch devices.
+      default `true`
     optional: true
     syntax:
       content: 'touchInteraction?: boolean'
@@ -254,18 +270,18 @@ references:
       - name: Padding
         fullName: Padding
         uid: azure-maps-control.Models.Padding
+  - uid: azure-maps-control.atlas.data.Position
+    name: Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
   - uid: azure-maps-control.Models.ControlStyle
     name: ControlStyle
     spec.typeScript:
       - name: ControlStyle
         fullName: ControlStyle
         uid: azure-maps-control.Models.ControlStyle
-  - uid: azure-maps-control.atlas.Map
-    name: Map
-    spec.typeScript:
-      - name: Map
-        fullName: Map
-        uid: azure-maps-control.atlas.Map
   - uid: azure-maps-control.Models.Control
     name: Control
     spec.typeScript:
@@ -465,6 +481,12 @@ references:
         uid: azure-maps-control.atlas.Shape
       - name: '>'
         fullName: '>'
+  - uid: azure-maps-control.atlas.Map
+    name: Map
+    spec.typeScript:
+      - name: Map
+        fullName: Map
+        uid: azure-maps-control.atlas.Map
   - uid: 'azure-maps-control.atlas.Pixel[]'
     name: 'Pixel[]'
     spec.typeScript:
@@ -473,12 +495,12 @@ references:
         uid: azure-maps-control.atlas.Pixel
       - name: '[]'
         fullName: '[]'
-  - uid: 'azure-maps-control.Models.ServiceOptions[]'
-    name: 'ServiceOptions[]'
+  - uid: 'azure-maps-control.atlas.data.Position[]'
+    name: 'Position[]'
     spec.typeScript:
-      - name: ServiceOptions
-        fullName: ServiceOptions
-        uid: azure-maps-control.Models.ServiceOptions
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
       - name: '[]'
         fullName: '[]'
   - uid: >-
@@ -519,14 +541,6 @@ references:
         uid: azure-maps-control.atlas.source.Source
       - name: '>'
         fullName: '>'
-  - uid: 'azure-maps-control.Models.StyleOptions[]'
-    name: 'StyleOptions[]'
-    spec.typeScript:
-      - name: StyleOptions
-        fullName: StyleOptions
-        uid: azure-maps-control.Models.StyleOptions
-      - name: '[]'
-        fullName: '[]'
   - uid: azure-maps-control.Models.IconOptions
     name: IconOptions
     spec.typeScript:

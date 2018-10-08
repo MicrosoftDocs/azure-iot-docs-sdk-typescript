@@ -8,7 +8,6 @@ items:
       - azure-maps-control.Models.StyleOptions.style
       - azure-maps-control.Models.StyleOptions.userRegion
       - azure-maps-control.Models.StyleOptions.view
-      - azure-maps-control.Models.StyleOptions.merge
     langs:
       - typeScript
     type: class
@@ -27,7 +26,9 @@ items:
       The language of the map labels.
 
       Supported language:
-      {@https://docs.microsoft.com/en-us/azure/azure-maps/supported-languages}
+      <xref:https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Fazure-maps%2Fsupported-languages>.
+
+      Default `atlas.getLanguage()`.
     optional: true
     syntax:
       content: 'language?: string'
@@ -68,6 +69,7 @@ items:
     summary: |-
       The geopolitical view of the map.
       <p>Unified: The unified view of the world.</p>
+      Default `atlas.getUserRegion()`.
     optional: true
     syntax:
       content: 'userRegion?: string'
@@ -94,24 +96,6 @@ items:
     package: azure-maps-control
     deprecated:
       content: Recommend using userRegion instead.
-  - uid: azure-maps-control.Models.StyleOptions.merge
-    name: merge
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'function merge(valueList: StyleOptions[])'
-      parameters:
-        - id: valueList
-          type:
-            - 'azure-maps-control.Models.StyleOptions[]'
-          description: ''
-      return:
-        type:
-          - this
-    package: azure-maps-control
 references:
   - uid: azure-maps-control.Models.deprecated.LayerOptions
     name: LayerOptions
@@ -187,18 +171,18 @@ references:
       - name: Padding
         fullName: Padding
         uid: azure-maps-control.Models.Padding
+  - uid: azure-maps-control.atlas.data.Position
+    name: Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
   - uid: azure-maps-control.Models.ControlStyle
     name: ControlStyle
     spec.typeScript:
       - name: ControlStyle
         fullName: ControlStyle
         uid: azure-maps-control.Models.ControlStyle
-  - uid: azure-maps-control.atlas.Map
-    name: Map
-    spec.typeScript:
-      - name: Map
-        fullName: Map
-        uid: azure-maps-control.atlas.Map
   - uid: azure-maps-control.Models.Control
     name: Control
     spec.typeScript:
@@ -398,6 +382,12 @@ references:
         uid: azure-maps-control.atlas.Shape
       - name: '>'
         fullName: '>'
+  - uid: azure-maps-control.atlas.Map
+    name: Map
+    spec.typeScript:
+      - name: Map
+        fullName: Map
+        uid: azure-maps-control.atlas.Map
   - uid: 'azure-maps-control.atlas.Pixel[]'
     name: 'Pixel[]'
     spec.typeScript:
@@ -406,12 +396,12 @@ references:
         uid: azure-maps-control.atlas.Pixel
       - name: '[]'
         fullName: '[]'
-  - uid: 'azure-maps-control.Models.ServiceOptions[]'
-    name: 'ServiceOptions[]'
+  - uid: 'azure-maps-control.atlas.data.Position[]'
+    name: 'Position[]'
     spec.typeScript:
-      - name: ServiceOptions
-        fullName: ServiceOptions
-        uid: azure-maps-control.Models.ServiceOptions
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
       - name: '[]'
         fullName: '[]'
   - uid: >-
@@ -452,14 +442,6 @@ references:
         uid: azure-maps-control.atlas.source.Source
       - name: '>'
         fullName: '>'
-  - uid: 'azure-maps-control.Models.StyleOptions[]'
-    name: 'StyleOptions[]'
-    spec.typeScript:
-      - name: StyleOptions
-        fullName: StyleOptions
-        uid: azure-maps-control.Models.StyleOptions
-      - name: '[]'
-        fullName: '[]'
   - uid: azure-maps-control.Models.IconOptions
     name: IconOptions
     spec.typeScript:

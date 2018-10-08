@@ -28,6 +28,8 @@ items:
     summary: >-
       A number between -1 and 1 that increases or decreases the contrast of the
       overlay.
+
+      Default `0`.
     optional: true
     syntax:
       content: 'contrast?: number'
@@ -47,6 +49,8 @@ items:
       added.
 
       Must be greater or equal to 0.
+
+      Default `300`.
     optional: true
     syntax:
       content: 'fadeDuration?: number'
@@ -64,6 +68,7 @@ items:
     summary: |-
       Rotates hues around the color wheel.
       A number in degrees.
+      Default `0`.
     optional: true
     syntax:
       content: 'hueRotation?: number'
@@ -81,6 +86,8 @@ items:
     summary: >-
       A number between 0 and 1 that increases or decreases the maximum
       brightness of the overlay.
+
+      Default `1`.
     optional: true
     syntax:
       content: 'maxBrightness?: number'
@@ -98,6 +105,8 @@ items:
     summary: >-
       A number between 0 and 1 that increases or decreases the minimum
       brightness of the overlay.
+
+      Default `0`.
     optional: true
     syntax:
       content: 'minBrightness?: number'
@@ -115,6 +124,8 @@ items:
     summary: >-
       A number between 0 and 1 that indicates the opacity at which the overlay
       will be drawn.
+
+      Default `1`.
     optional: true
     syntax:
       content: 'opacity?: number'
@@ -132,6 +143,8 @@ items:
     summary: >-
       A number between -1 and 1 that increases or decreases the saturation of
       the overlay.
+
+      Default `0`.
     optional: true
     syntax:
       content: 'saturation?: number'
@@ -214,18 +227,18 @@ references:
       - name: Padding
         fullName: Padding
         uid: azure-maps-control.Models.Padding
+  - uid: azure-maps-control.atlas.data.Position
+    name: Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
   - uid: azure-maps-control.Models.ControlStyle
     name: ControlStyle
     spec.typeScript:
       - name: ControlStyle
         fullName: ControlStyle
         uid: azure-maps-control.Models.ControlStyle
-  - uid: azure-maps-control.atlas.Map
-    name: Map
-    spec.typeScript:
-      - name: Map
-        fullName: Map
-        uid: azure-maps-control.atlas.Map
   - uid: azure-maps-control.Models.Control
     name: Control
     spec.typeScript:
@@ -425,6 +438,12 @@ references:
         uid: azure-maps-control.atlas.Shape
       - name: '>'
         fullName: '>'
+  - uid: azure-maps-control.atlas.Map
+    name: Map
+    spec.typeScript:
+      - name: Map
+        fullName: Map
+        uid: azure-maps-control.atlas.Map
   - uid: 'azure-maps-control.atlas.Pixel[]'
     name: 'Pixel[]'
     spec.typeScript:
@@ -433,12 +452,12 @@ references:
         uid: azure-maps-control.atlas.Pixel
       - name: '[]'
         fullName: '[]'
-  - uid: 'azure-maps-control.Models.ServiceOptions[]'
-    name: 'ServiceOptions[]'
+  - uid: 'azure-maps-control.atlas.data.Position[]'
+    name: 'Position[]'
     spec.typeScript:
-      - name: ServiceOptions
-        fullName: ServiceOptions
-        uid: azure-maps-control.Models.ServiceOptions
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
       - name: '[]'
         fullName: '[]'
   - uid: >-
@@ -479,14 +498,6 @@ references:
         uid: azure-maps-control.atlas.source.Source
       - name: '>'
         fullName: '>'
-  - uid: 'azure-maps-control.Models.StyleOptions[]'
-    name: 'StyleOptions[]'
-    spec.typeScript:
-      - name: StyleOptions
-        fullName: StyleOptions
-        uid: azure-maps-control.Models.StyleOptions
-      - name: '[]'
-        fullName: '[]'
   - uid: azure-maps-control.Models.IconOptions
     name: IconOptions
     spec.typeScript:

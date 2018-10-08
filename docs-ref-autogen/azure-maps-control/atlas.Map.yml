@@ -221,7 +221,7 @@ items:
           optional: true
     package: azure-maps-control
     deprecated:
-      content: recommend map.controls.add
+      content: Use map.controls.add instead.
   - uid: azure-maps-control.atlas.Map.addEventListener
     name: addEventListener
     children: []
@@ -294,7 +294,7 @@ items:
           description: The callback to fire when the event occurs.
     package: azure-maps-control
     deprecated:
-      content: recommend map.event.add
+      content: Use map.events.add instead.
   - uid: azure-maps-control.atlas.Map.addEventListener_1
     name: addEventListener
     children: []
@@ -347,14 +347,14 @@ items:
           description: The callback to fire when the event occurs.
     package: azure-maps-control
     deprecated:
-      content: recommend map.event.add
+      content: Use map.events.add instead.
   - uid: azure-maps-control.atlas.Map.addHtml
     name: addHtml
     children: []
     type: method
     langs:
       - typeScript
-    summary: Adds a custom HTMLElement to the map at a specified position.
+    summary: ''
     syntax:
       content: 'function addHtml(element: HTMLElement, position: Position)'
       parameters:
@@ -364,14 +364,17 @@ items:
           description: The HTMLElement to add.
         - id: position
           type:
-            - Position
-          description: The position to place the element.
+            - azure-maps-control.atlas.data.Position
+          description: |
+            The position to place the element.
       return:
         type:
           - string
     package: azure-maps-control
     deprecated:
-      content: recommend map.markers.add
+      content: |-
+        recommend map.markers.add
+        Adds a custom HTMLElement to the map at a specified position.
   - uid: azure-maps-control.atlas.Map.addIcon
     name: addIcon
     children: []
@@ -395,6 +398,8 @@ items:
             - HTMLImageElement
           description: The icon image.
     package: azure-maps-control
+    deprecated:
+      content: Use map.imageSprite.add instead.
   - uid: azure-maps-control.atlas.Map.addLinestrings
     name: addLinestrings
     children: []
@@ -433,7 +438,7 @@ items:
           optional: true
     package: azure-maps-control
     deprecated:
-      content: Use atlas.layer.LineLayer instead
+      content: Use atlas.layer.LineLayer instead.
   - uid: azure-maps-control.atlas.Map.addPins
     name: addPins
     children: []
@@ -469,7 +474,7 @@ items:
           optional: true
     package: azure-maps-control
     deprecated:
-      content: Use atlas.layer.SymbolLayer instead
+      content: Use atlas.layer.SymbolLayer instead.
   - uid: azure-maps-control.atlas.Map.addPolygons
     name: addPolygons
     children: []
@@ -501,12 +506,12 @@ items:
           description: The polygons to add.
         - id: options
           type:
-            - azure-maps-control.Models.PolygonLayerOptions
+            - azure-maps-control.Models.deprecated.PolygonLayerOptions
           description: The layer options for the polygons.
           optional: true
     package: azure-maps-control
     deprecated:
-      content: Use atlas.layer.PolygonLayer instead
+      content: Use atlas.layer.PolygonLayer instead.
   - uid: azure-maps-control.atlas.Map.addRaster
     name: addRaster
     children: []
@@ -545,14 +550,16 @@ items:
           optional: true
     package: azure-maps-control
     deprecated:
-      content: Use atlas.layer.TileLayer instead
+      content: Use atlas.layer.TileLayer instead.
   - uid: azure-maps-control.atlas.Map.areTilesLoaded
     name: areTilesLoaded
     children: []
     type: method
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Returns a boolean indicating if all tiles in the current viewport for all
+      sources have loaded or not.
     syntax:
       content: function areTilesLoaded()
       parameters: []
@@ -739,7 +746,7 @@ items:
             The pixels to be converted.
       return:
         type:
-          - 'Position[]'
+          - 'azure-maps-control.atlas.data.Position[]'
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.positionsToPixels
     name: positionsToPixels
@@ -755,7 +762,7 @@ items:
       parameters:
         - id: positions
           type:
-            - 'Position[]'
+            - 'azure-maps-control.atlas.data.Position[]'
           description: |
             The positions to be converted.
       return:
@@ -793,7 +800,7 @@ items:
           description: The control to remove.
     package: azure-maps-control
     deprecated:
-      content: recommend map.controls.remove
+      content: Use map.controls.remove instead.
   - uid: azure-maps-control.atlas.Map.removeEventListener
     name: removeEventListener
     children: []
@@ -814,7 +821,7 @@ items:
           description: The callback of the event listener.
     package: azure-maps-control
     deprecated:
-      content: recommend map.event.remove
+      content: Use map.events.remove instead.
   - uid: azure-maps-control.atlas.Map.removeEventListener_1
     name: removeEventListener
     children: []
@@ -839,24 +846,27 @@ items:
           description: The callback of the event listener.
     package: azure-maps-control
     deprecated:
-      content: recommend map.event.remove
+      content: Use map.events.remove instead.
   - uid: azure-maps-control.atlas.Map.removeHtml
     name: removeHtml
     children: []
     type: method
     langs:
       - typeScript
-    summary: Removes a custom HTMLElement from the map.
+    summary: ''
     syntax:
       content: 'function removeHtml(elementId: string)'
       parameters:
         - id: elementId
           type:
             - string
-          description: The id of element to remove.
+          description: |
+            The id of element to remove.
     package: azure-maps-control
     deprecated:
-      content: recommend map.markers.remove
+      content: |-
+        recommend map.markers.remove
+        Removes a custom HTMLElement from the map.
   - uid: azure-maps-control.atlas.Map.removeLayers
     name: removeLayers
     children: []
@@ -1229,6 +1239,27 @@ references:
       - name: TileLayerOptions
         fullName: TileLayerOptions
         uid: azure-maps-control.Models.TileLayerOptions
+  - uid: azure-maps-control.atlas.data.Polygon
+    name: Polygon
+    spec.typeScript:
+      - name: Polygon
+        fullName: Polygon
+        uid: azure-maps-control.atlas.data.Polygon
+  - uid: >-
+      azure-maps-control.atlas.data.LineString |
+      azure-maps-control.atlas.data.Position[]
+    name: 'Position[]'
+    spec.typeScript:
+      - name: LineString
+        fullName: LineString
+        uid: azure-maps-control.atlas.data.LineString
+      - name: ' | '
+        fullName: ' | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-control.atlas.source.Source
     name: Source
     spec.typeScript:
@@ -1513,6 +1544,12 @@ references:
         uid: azure-maps-control.Models.deprecated.PolygonProperties
       - name: '>>'
         fullName: '>>'
+  - uid: azure-maps-control.Models.deprecated.PolygonLayerOptions
+    name: PolygonLayerOptions
+    spec.typeScript:
+      - name: PolygonLayerOptions
+        fullName: PolygonLayerOptions
+        uid: azure-maps-control.Models.deprecated.PolygonLayerOptions
   - uid: azure-maps-control.Models.deprecated.RasterLayerOptions
     name: RasterLayerOptions
     spec.typeScript:
@@ -1622,3 +1659,30 @@ references:
       - name: Geometry
         fullName: Geometry
         uid: azure-maps-control.atlas.data.Geometry
+  - uid: >-
+      azure-maps-control.atlas.data.Position |
+      azure-maps-control.atlas.data.Position[] |
+      azure-maps-control.atlas.data.Position[][] |
+      azure-maps-control.atlas.data.Position[][][]
+    name: 'Position[][][]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: ' | '
+        fullName: ' | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[] | '
+        fullName: '[] | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[][] | '
+        fullName: '[][] | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[][][]'
+        fullName: '[][][]'

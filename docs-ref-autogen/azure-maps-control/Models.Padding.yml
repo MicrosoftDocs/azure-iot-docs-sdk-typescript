@@ -14,6 +14,8 @@ items:
     summary: >-
       Represent the amount of padding in pixels to add to the side of a
       BoundingBox when setting the camera of a map.
+    extends:
+      name: azure-maps-control.Models.Options
     package: azure-maps-control
   - uid: azure-maps-control.Models.Padding.bottom
     name: bottom
@@ -22,7 +24,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Amount of padding in pixels to add to the bottom.
+    summary: |-
+      Amount of padding in pixels to add to the bottom.
+      default `0`
     syntax:
       content: 'bottom: number'
       return:
@@ -36,7 +40,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Amount of padding in pixels to add to the left.
+    summary: |-
+      Amount of padding in pixels to add to the left.
+      default `0`
     syntax:
       content: 'left: number'
       return:
@@ -50,7 +56,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Amount of padding in pixels to add to the right.
+    summary: |-
+      Amount of padding in pixels to add to the right.
+      default `0`
     syntax:
       content: 'right: number'
       return:
@@ -64,7 +72,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Amount of padding in pixels to add to the top.
+    summary: |-
+      Amount of padding in pixels to add to the top.
+      default `0`
     syntax:
       content: 'top: number'
       return:
@@ -146,18 +156,18 @@ references:
       - name: Padding
         fullName: Padding
         uid: azure-maps-control.Models.Padding
+  - uid: azure-maps-control.atlas.data.Position
+    name: Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
   - uid: azure-maps-control.Models.ControlStyle
     name: ControlStyle
     spec.typeScript:
       - name: ControlStyle
         fullName: ControlStyle
         uid: azure-maps-control.Models.ControlStyle
-  - uid: azure-maps-control.atlas.Map
-    name: Map
-    spec.typeScript:
-      - name: Map
-        fullName: Map
-        uid: azure-maps-control.atlas.Map
   - uid: azure-maps-control.Models.Control
     name: Control
     spec.typeScript:
@@ -357,6 +367,12 @@ references:
         uid: azure-maps-control.atlas.Shape
       - name: '>'
         fullName: '>'
+  - uid: azure-maps-control.atlas.Map
+    name: Map
+    spec.typeScript:
+      - name: Map
+        fullName: Map
+        uid: azure-maps-control.atlas.Map
   - uid: 'azure-maps-control.atlas.Pixel[]'
     name: 'Pixel[]'
     spec.typeScript:
@@ -365,12 +381,12 @@ references:
         uid: azure-maps-control.atlas.Pixel
       - name: '[]'
         fullName: '[]'
-  - uid: 'azure-maps-control.Models.ServiceOptions[]'
-    name: 'ServiceOptions[]'
+  - uid: 'azure-maps-control.atlas.data.Position[]'
+    name: 'Position[]'
     spec.typeScript:
-      - name: ServiceOptions
-        fullName: ServiceOptions
-        uid: azure-maps-control.Models.ServiceOptions
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
       - name: '[]'
         fullName: '[]'
   - uid: >-
@@ -411,14 +427,6 @@ references:
         uid: azure-maps-control.atlas.source.Source
       - name: '>'
         fullName: '>'
-  - uid: 'azure-maps-control.Models.StyleOptions[]'
-    name: 'StyleOptions[]'
-    spec.typeScript:
-      - name: StyleOptions
-        fullName: StyleOptions
-        uid: azure-maps-control.Models.StyleOptions
-      - name: '[]'
-        fullName: '[]'
   - uid: azure-maps-control.Models.IconOptions
     name: IconOptions
     spec.typeScript:

@@ -28,6 +28,7 @@ items:
     summary: |-
       A bounding box that specifies where tiles are available.
       When specified, no tiles outside of the bounding box will be requested.
+      Default `[-180, -85.0511, 180, 85.0511]`.
     optional: true
     syntax:
       content: 'bounds?: BoundingBox'
@@ -47,6 +48,8 @@ items:
       specification,
 
       which reverses the Y coordinate axis.
+
+      Default `false`.
     optional: true
     syntax:
       content: 'isTMS?: boolean'
@@ -61,7 +64,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: An integer specifying the maximum zoom level to render the layer at.
+    summary: |-
+      An integer specifying the maximum zoom level to render the layer at.
+      Default `22`.
     optional: true
     syntax:
       content: 'maxSourceZoom?: number'
@@ -76,7 +81,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: An integer specifying the minimum zoom level to render the layer at.
+    summary: |-
+      An integer specifying the minimum zoom level to render the layer at.
+      Default `0`.
     optional: true
     syntax:
       content: 'minSourceZoom?: number'
@@ -111,6 +118,8 @@ items:
       tiles.
 
       For a seamless experience, the tile size must be a multiplier of 2.
+
+      Default `512`.
     optional: true
     syntax:
       content: 'tileSize?: number'
@@ -128,6 +137,23 @@ items:
     summary: >-
       A http/https URL to a TileJSON resource or a tile URL template that uses
       the following parameters:
+
+      <p>{x}: X position of the tile. Usually also needs {y} and {z}.</p>
+
+      <p>{y}: Y position of the tile. Usually also needs {x} and {z}.</p>
+
+      <p>{z}: Zoom level of the tile. Usually also needs {x} and {y}.</p>
+
+      <p>{quadkey}: Tile quadKey id based on the Bing Maps tile system naming
+      convention.</p>
+
+      <p>{bbox-epsg-3857}: A bounding box string with the format
+      {west},{south},{east},{north}
+
+      in the EPSG 3857 Spacial Reference System.</p>
+
+      <p>{subdomain}: A placeholder where the subdomain values if specified will
+      be added.</p>
     optional: true
     syntax:
       content: 'tileUrl?: string'
@@ -210,18 +236,18 @@ references:
       - name: Padding
         fullName: Padding
         uid: azure-maps-control.Models.Padding
+  - uid: azure-maps-control.atlas.data.Position
+    name: Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
   - uid: azure-maps-control.Models.ControlStyle
     name: ControlStyle
     spec.typeScript:
       - name: ControlStyle
         fullName: ControlStyle
         uid: azure-maps-control.Models.ControlStyle
-  - uid: azure-maps-control.atlas.Map
-    name: Map
-    spec.typeScript:
-      - name: Map
-        fullName: Map
-        uid: azure-maps-control.atlas.Map
   - uid: azure-maps-control.Models.Control
     name: Control
     spec.typeScript:
@@ -421,6 +447,12 @@ references:
         uid: azure-maps-control.atlas.Shape
       - name: '>'
         fullName: '>'
+  - uid: azure-maps-control.atlas.Map
+    name: Map
+    spec.typeScript:
+      - name: Map
+        fullName: Map
+        uid: azure-maps-control.atlas.Map
   - uid: 'azure-maps-control.atlas.Pixel[]'
     name: 'Pixel[]'
     spec.typeScript:
@@ -429,12 +461,12 @@ references:
         uid: azure-maps-control.atlas.Pixel
       - name: '[]'
         fullName: '[]'
-  - uid: 'azure-maps-control.Models.ServiceOptions[]'
-    name: 'ServiceOptions[]'
+  - uid: 'azure-maps-control.atlas.data.Position[]'
+    name: 'Position[]'
     spec.typeScript:
-      - name: ServiceOptions
-        fullName: ServiceOptions
-        uid: azure-maps-control.Models.ServiceOptions
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
       - name: '[]'
         fullName: '[]'
   - uid: >-
@@ -475,14 +507,6 @@ references:
         uid: azure-maps-control.atlas.source.Source
       - name: '>'
         fullName: '>'
-  - uid: 'azure-maps-control.Models.StyleOptions[]'
-    name: 'StyleOptions[]'
-    spec.typeScript:
-      - name: StyleOptions
-        fullName: StyleOptions
-        uid: azure-maps-control.Models.StyleOptions
-      - name: '[]'
-        fullName: '[]'
   - uid: azure-maps-control.Models.IconOptions
     name: IconOptions
     spec.typeScript:

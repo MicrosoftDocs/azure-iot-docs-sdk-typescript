@@ -5,12 +5,13 @@ items:
     fullName: Source
     children:
       - azure-maps-control.atlas.source.Source.constructor
+      - azure-maps-control.atlas.source.Source.getId
     langs:
       - typeScript
     type: class
     summary: |-
       A base abstract class in which all other source objects extend.
-       A source must be added to a layer before it is visible on the map.
+      A source must be added to a layer before it is visible on the map.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.source.Source.constructor
     name: Source
@@ -27,6 +28,20 @@ items:
             - string
           description: ''
           optional: true
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.source.Source.getId
+    name: getId
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the id of the data source
+    syntax:
+      content: function getId()
+      parameters: []
+      return:
+        type:
+          - string
     package: azure-maps-control
 references:
   - uid: azure-maps-control.Models.CompassControlOptions
@@ -233,6 +248,27 @@ references:
       - name: TileLayerOptions
         fullName: TileLayerOptions
         uid: azure-maps-control.Models.TileLayerOptions
+  - uid: azure-maps-control.atlas.data.Polygon
+    name: Polygon
+    spec.typeScript:
+      - name: Polygon
+        fullName: Polygon
+        uid: azure-maps-control.atlas.data.Polygon
+  - uid: >-
+      azure-maps-control.atlas.data.LineString |
+      azure-maps-control.atlas.data.Position[]
+    name: 'Position[]'
+    spec.typeScript:
+      - name: LineString
+        fullName: LineString
+        uid: azure-maps-control.atlas.data.LineString
+      - name: ' | '
+        fullName: ' | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-control.atlas.source.Source
     name: Source
     spec.typeScript:
@@ -517,6 +553,12 @@ references:
         uid: azure-maps-control.Models.deprecated.PolygonProperties
       - name: '>>'
         fullName: '>>'
+  - uid: azure-maps-control.Models.deprecated.PolygonLayerOptions
+    name: PolygonLayerOptions
+    spec.typeScript:
+      - name: PolygonLayerOptions
+        fullName: PolygonLayerOptions
+        uid: azure-maps-control.Models.deprecated.PolygonLayerOptions
   - uid: azure-maps-control.Models.deprecated.RasterLayerOptions
     name: RasterLayerOptions
     spec.typeScript:
@@ -626,3 +668,30 @@ references:
       - name: Geometry
         fullName: Geometry
         uid: azure-maps-control.atlas.data.Geometry
+  - uid: >-
+      azure-maps-control.atlas.data.Position |
+      azure-maps-control.atlas.data.Position[] |
+      azure-maps-control.atlas.data.Position[][] |
+      azure-maps-control.atlas.data.Position[][][]
+    name: 'Position[][][]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: ' | '
+        fullName: ' | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[] | '
+        fullName: '[] | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[][] | '
+        fullName: '[][] | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[][][]'
+        fullName: '[][][]'

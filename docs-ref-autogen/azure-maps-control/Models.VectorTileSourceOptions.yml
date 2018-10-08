@@ -49,6 +49,8 @@ items:
     summary: >-
       Specifies is the tile systems y coordinate uses the OSGeo Tile Map
       Services which reverses the Y coordinate axis.
+
+      default `false`
     optional: true
     syntax:
       content: 'isTMS?: boolean'
@@ -63,7 +65,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: An integer specifying the maximum zoom level to render the layer at.
+    summary: |-
+      An integer specifying the maximum zoom level to render the layer at.
+      default `22`
     optional: true
     syntax:
       content: 'maxZoom?: number'
@@ -78,7 +82,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: An integer specifying the minimum zoom level to render the layer at.
+    summary: |-
+      An integer specifying the minimum zoom level to render the layer at.
+      default `0`
     optional: true
     syntax:
       content: 'minZoom?: number'
@@ -99,6 +105,8 @@ items:
 
       For a seamless experience, the tile size must by a multiplier of 2. (i.e.
       256, 512, 1024…).
+
+      default `512`
     optional: true
     syntax:
       content: 'tileSize?: number'
@@ -113,29 +121,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: >-
+    summary: |-
       An array of one or more tile source URLs. Supported URL parameters:
-
-      <ul>
-
-      <li>`{x}` - X position of tile. Tile URL usually also needs {y} and
-      {z}.</li>
-
-      <li>`{y}` - Y position of tile. Tile URL usually also needs {x} and
-      {z}.</li>
-
-      <li>`{z}` - Zoom level of tile. Tile URL usually also needs {x} and
-      {y}.</li>
-
-      <li>`{quadkey}` - Tile quadkey id based on the Bing Maps tile system
-      naming convention.</li>
-
-      <li>`{bbox-epsg-3857}` - A bounding box string with the format
-      "{west},{south},{east},{north}" with coordinates in the EPSG 3857 Spatial
-      Reference System also commonly known as WGS84 Web Mercator. This is useful
-      when working with WMS imagery services.</li>
-
-      <ul>
+       <ul>
+           <li>`{x}` - X position of tile. Tile URL usually also needs {y} and {z}.</li>
+           <li>`{y}` - Y position of tile. Tile URL usually also needs {x} and {z}.</li>
+           <li>`{z}` - Zoom level of tile. Tile URL usually also needs {x} and {y}.</li>
+           <li>`{quadkey}` - Tile quadkey id based on the Bing Maps tile system naming convention.</li>
+           <li>`{bbox-epsg-3857}` - A bounding box string with the format "{west},{south},{east},{north}" with coordinates in the EPSG 3857 Spatial Reference System also commonly known as WGS84 Web Mercator. This is useful when working with WMS imagery services.</li>
+       <ul>
     optional: true
     syntax:
       content: 'tiles?: string[]'
@@ -235,18 +229,18 @@ references:
       - name: Padding
         fullName: Padding
         uid: azure-maps-control.Models.Padding
+  - uid: azure-maps-control.atlas.data.Position
+    name: Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
   - uid: azure-maps-control.Models.ControlStyle
     name: ControlStyle
     spec.typeScript:
       - name: ControlStyle
         fullName: ControlStyle
         uid: azure-maps-control.Models.ControlStyle
-  - uid: azure-maps-control.atlas.Map
-    name: Map
-    spec.typeScript:
-      - name: Map
-        fullName: Map
-        uid: azure-maps-control.atlas.Map
   - uid: azure-maps-control.Models.Control
     name: Control
     spec.typeScript:
@@ -446,6 +440,12 @@ references:
         uid: azure-maps-control.atlas.Shape
       - name: '>'
         fullName: '>'
+  - uid: azure-maps-control.atlas.Map
+    name: Map
+    spec.typeScript:
+      - name: Map
+        fullName: Map
+        uid: azure-maps-control.atlas.Map
   - uid: 'azure-maps-control.atlas.Pixel[]'
     name: 'Pixel[]'
     spec.typeScript:
@@ -454,12 +454,12 @@ references:
         uid: azure-maps-control.atlas.Pixel
       - name: '[]'
         fullName: '[]'
-  - uid: 'azure-maps-control.Models.ServiceOptions[]'
-    name: 'ServiceOptions[]'
+  - uid: 'azure-maps-control.atlas.data.Position[]'
+    name: 'Position[]'
     spec.typeScript:
-      - name: ServiceOptions
-        fullName: ServiceOptions
-        uid: azure-maps-control.Models.ServiceOptions
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
       - name: '[]'
         fullName: '[]'
   - uid: >-
@@ -500,14 +500,6 @@ references:
         uid: azure-maps-control.atlas.source.Source
       - name: '>'
         fullName: '>'
-  - uid: 'azure-maps-control.Models.StyleOptions[]'
-    name: 'StyleOptions[]'
-    spec.typeScript:
-      - name: StyleOptions
-        fullName: StyleOptions
-        uid: azure-maps-control.Models.StyleOptions
-      - name: '[]'
-        fullName: '[]'
   - uid: azure-maps-control.Models.IconOptions
     name: IconOptions
     spec.typeScript:

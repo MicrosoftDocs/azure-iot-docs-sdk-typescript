@@ -31,7 +31,7 @@ items:
       - typeScript
     summary: Constructs a Shape object and initializes it with the specified Feature.
     syntax:
-      content: 'new Shape(data: Feature<atlas.data.Geometry, any>)'
+      content: 'new Shape(data: Feature<data.Geometry, any>)'
       parameters:
         - id: data
           type:
@@ -50,7 +50,7 @@ items:
       Constructs a Shape object and initializes it with the specified Geometry,
       ID, and properties.
     syntax:
-      content: 'new Shape(data: atlas.data.Geometry, id?: string, properties?: any)'
+      content: 'new Shape(data: data.Geometry, id?: string, properties?: any)'
       parameters:
         - id: data
           type:
@@ -66,7 +66,8 @@ items:
         - id: properties
           type:
             - any
-          description: ''
+          description: |
+            User defined properties for the shape.
           optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Shape.addProperty
@@ -115,7 +116,11 @@ items:
       parameters: []
       return:
         type:
-          - 'Position | Position[] | Position[][] | Position[][][]'
+          - >-
+            azure-maps-control.atlas.data.Position |
+            azure-maps-control.atlas.data.Position[] |
+            azure-maps-control.atlas.data.Position[][] |
+            azure-maps-control.atlas.data.Position[][][]
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Shape.getId
     name: getId
@@ -192,10 +197,14 @@ items:
       parameters:
         - id: coords
           type:
-            - 'Position | Position[] | Position[][] | Position[][][]'
+            - >-
+              azure-maps-control.atlas.data.Position |
+              azure-maps-control.atlas.data.Position[] |
+              azure-maps-control.atlas.data.Position[][] |
+              azure-maps-control.atlas.data.Position[][][]
           description: >
             Point: Position, LineString: Position[], Polygon: Position[][],
-            MultiPoint[], MultiLineString: Position[][], MultiPolygon:
+            MultiPoint: Position[], MultiLineString: Position[][], MultiPolygon:
             Position[][]
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Shape.setProperties
@@ -435,6 +444,27 @@ references:
       - name: TileLayerOptions
         fullName: TileLayerOptions
         uid: azure-maps-control.Models.TileLayerOptions
+  - uid: azure-maps-control.atlas.data.Polygon
+    name: Polygon
+    spec.typeScript:
+      - name: Polygon
+        fullName: Polygon
+        uid: azure-maps-control.atlas.data.Polygon
+  - uid: >-
+      azure-maps-control.atlas.data.LineString |
+      azure-maps-control.atlas.data.Position[]
+    name: 'Position[]'
+    spec.typeScript:
+      - name: LineString
+        fullName: LineString
+        uid: azure-maps-control.atlas.data.LineString
+      - name: ' | '
+        fullName: ' | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-control.atlas.source.Source
     name: Source
     spec.typeScript:
@@ -719,6 +749,12 @@ references:
         uid: azure-maps-control.Models.deprecated.PolygonProperties
       - name: '>>'
         fullName: '>>'
+  - uid: azure-maps-control.Models.deprecated.PolygonLayerOptions
+    name: PolygonLayerOptions
+    spec.typeScript:
+      - name: PolygonLayerOptions
+        fullName: PolygonLayerOptions
+        uid: azure-maps-control.Models.deprecated.PolygonLayerOptions
   - uid: azure-maps-control.Models.deprecated.RasterLayerOptions
     name: RasterLayerOptions
     spec.typeScript:
@@ -828,3 +864,30 @@ references:
       - name: Geometry
         fullName: Geometry
         uid: azure-maps-control.atlas.data.Geometry
+  - uid: >-
+      azure-maps-control.atlas.data.Position |
+      azure-maps-control.atlas.data.Position[] |
+      azure-maps-control.atlas.data.Position[][] |
+      azure-maps-control.atlas.data.Position[][][]
+    name: 'Position[][][]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: ' | '
+        fullName: ' | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[] | '
+        fullName: '[] | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[][] | '
+        fullName: '[][] | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[][][]'
+        fullName: '[][][]'

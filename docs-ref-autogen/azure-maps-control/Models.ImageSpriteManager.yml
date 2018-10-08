@@ -4,7 +4,6 @@ items:
     name: ImageSpriteManager
     fullName: ImageSpriteManager
     children:
-      - azure-maps-control.Models.ImageSpriteManager.constructor
       - azure-maps-control.Models.ImageSpriteManager.add
       - azure-maps-control.Models.ImageSpriteManager.clear
       - azure-maps-control.Models.ImageSpriteManager.getImageIds
@@ -17,24 +16,6 @@ items:
       A manager for the map control's image sprite.
       Exposed through the imageSprite property of the atlas.Map class.
       Cannot be instantiated by the user.
-    package: azure-maps-control
-  - uid: azure-maps-control.Models.ImageSpriteManager.constructor
-    name: ImageSpriteManager
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: >-
-      Constructs the image sprite manager to be exposed only through the
-      imageSprite property of the Map class.
-    syntax:
-      content: 'new ImageSpriteManager(map: Map)'
-      parameters:
-        - id: map
-          type:
-            - azure-maps-control.atlas.Map
-          description: |
-            The Map object this will manage the image sprite for.
     package: azure-maps-control
   - uid: azure-maps-control.Models.ImageSpriteManager.add
     name: add
@@ -203,18 +184,18 @@ references:
       - name: Padding
         fullName: Padding
         uid: azure-maps-control.Models.Padding
+  - uid: azure-maps-control.atlas.data.Position
+    name: Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
   - uid: azure-maps-control.Models.ControlStyle
     name: ControlStyle
     spec.typeScript:
       - name: ControlStyle
         fullName: ControlStyle
         uid: azure-maps-control.Models.ControlStyle
-  - uid: azure-maps-control.atlas.Map
-    name: Map
-    spec.typeScript:
-      - name: Map
-        fullName: Map
-        uid: azure-maps-control.atlas.Map
   - uid: azure-maps-control.Models.Control
     name: Control
     spec.typeScript:
@@ -414,6 +395,12 @@ references:
         uid: azure-maps-control.atlas.Shape
       - name: '>'
         fullName: '>'
+  - uid: azure-maps-control.atlas.Map
+    name: Map
+    spec.typeScript:
+      - name: Map
+        fullName: Map
+        uid: azure-maps-control.atlas.Map
   - uid: 'azure-maps-control.atlas.Pixel[]'
     name: 'Pixel[]'
     spec.typeScript:
@@ -422,12 +409,12 @@ references:
         uid: azure-maps-control.atlas.Pixel
       - name: '[]'
         fullName: '[]'
-  - uid: 'azure-maps-control.Models.ServiceOptions[]'
-    name: 'ServiceOptions[]'
+  - uid: 'azure-maps-control.atlas.data.Position[]'
+    name: 'Position[]'
     spec.typeScript:
-      - name: ServiceOptions
-        fullName: ServiceOptions
-        uid: azure-maps-control.Models.ServiceOptions
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
       - name: '[]'
         fullName: '[]'
   - uid: >-
@@ -468,14 +455,6 @@ references:
         uid: azure-maps-control.atlas.source.Source
       - name: '>'
         fullName: '>'
-  - uid: 'azure-maps-control.Models.StyleOptions[]'
-    name: 'StyleOptions[]'
-    spec.typeScript:
-      - name: StyleOptions
-        fullName: StyleOptions
-        uid: azure-maps-control.Models.StyleOptions
-      - name: '[]'
-        fullName: '[]'
   - uid: azure-maps-control.Models.IconOptions
     name: IconOptions
     spec.typeScript:

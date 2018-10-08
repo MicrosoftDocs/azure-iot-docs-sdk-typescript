@@ -7,11 +7,11 @@ items:
       - azure-maps-control.atlas.Popup.constructor
       - azure-maps-control.atlas.Popup.attach
       - azure-maps-control.atlas.Popup.close
+      - azure-maps-control.atlas.Popup.getOptions
+      - azure-maps-control.atlas.Popup.getPopupOptions
       - azure-maps-control.atlas.Popup.isOpen
       - azure-maps-control.atlas.Popup.open
       - azure-maps-control.atlas.Popup.remove
-      - azure-maps-control.atlas.Popup.getOptions
-      - azure-maps-control.atlas.Popup.getPopupOptions
       - azure-maps-control.atlas.Popup.setOptions
       - azure-maps-control.atlas.Popup.setPopupOptions
     langs:
@@ -38,75 +38,32 @@ items:
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Popup.attach
     name: attach
-    fullName: attach
     children: []
+    type: method
     langs:
       - typeScript
-    type: property
     summary: Attaches the popup to the HTML document in a hidden state.
     syntax:
-      content: 'attach: (map: Map) => void'
-      return:
-        type:
-          - '(map: Map) => void'
+      content: 'function attach(map: Map)'
+      parameters:
+        - id: map
+          type:
+            - azure-maps-control.atlas.Map
+          description: |
+            The map.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Popup.close
     name: close
-    fullName: close
     children: []
+    type: method
     langs:
       - typeScript
-    type: property
     summary: >-
       Closes the popup on the map. The popup remains attached to the HTML
       document.
     syntax:
-      content: 'close: () => void'
-      return:
-        type:
-          - () => void
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Popup.isOpen
-    name: isOpen
-    fullName: isOpen
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: 'Returns true if the popup is currently open, otherwise false.'
-    syntax:
-      content: 'isOpen: () => boolean'
-      return:
-        type:
-          - () => boolean
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Popup.open
-    name: open
-    fullName: open
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Opens the popup on the passed in map.
-    syntax:
-      content: 'open: (map: Map) => void'
-      return:
-        type:
-          - '(map: Map) => void'
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Popup.remove
-    name: remove
-    fullName: remove
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Closes the popup on the map and removes it from the HTML document.
-    syntax:
-      content: 'remove: () => void'
-      return:
-        type:
-          - () => void
+      content: function close()
+      parameters: []
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Popup.getOptions
     name: getOptions
@@ -138,6 +95,47 @@ items:
     package: azure-maps-control
     deprecated:
       content: Use getOptions() instead.
+  - uid: azure-maps-control.atlas.Popup.isOpen
+    name: isOpen
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Returns true if the popup is currently open, otherwise false.'
+    syntax:
+      content: function isOpen()
+      parameters: []
+      return:
+        type:
+          - boolean
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Popup.open
+    name: open
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Opens the popup on the passed in map.
+    syntax:
+      content: 'function open(map: Map)'
+      parameters:
+        - id: map
+          type:
+            - azure-maps-control.atlas.Map
+          description: |
+            The map.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Popup.remove
+    name: remove
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Closes the popup on the map and removes it from the HTML document.
+    syntax:
+      content: function remove()
+      parameters: []
+    package: azure-maps-control
   - uid: azure-maps-control.atlas.Popup.setOptions
     name: setOptions
     children: []
@@ -378,6 +376,27 @@ references:
       - name: TileLayerOptions
         fullName: TileLayerOptions
         uid: azure-maps-control.Models.TileLayerOptions
+  - uid: azure-maps-control.atlas.data.Polygon
+    name: Polygon
+    spec.typeScript:
+      - name: Polygon
+        fullName: Polygon
+        uid: azure-maps-control.atlas.data.Polygon
+  - uid: >-
+      azure-maps-control.atlas.data.LineString |
+      azure-maps-control.atlas.data.Position[]
+    name: 'Position[]'
+    spec.typeScript:
+      - name: LineString
+        fullName: LineString
+        uid: azure-maps-control.atlas.data.LineString
+      - name: ' | '
+        fullName: ' | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-control.atlas.source.Source
     name: Source
     spec.typeScript:
@@ -662,6 +681,12 @@ references:
         uid: azure-maps-control.Models.deprecated.PolygonProperties
       - name: '>>'
         fullName: '>>'
+  - uid: azure-maps-control.Models.deprecated.PolygonLayerOptions
+    name: PolygonLayerOptions
+    spec.typeScript:
+      - name: PolygonLayerOptions
+        fullName: PolygonLayerOptions
+        uid: azure-maps-control.Models.deprecated.PolygonLayerOptions
   - uid: azure-maps-control.Models.deprecated.RasterLayerOptions
     name: RasterLayerOptions
     spec.typeScript:
@@ -771,3 +796,30 @@ references:
       - name: Geometry
         fullName: Geometry
         uid: azure-maps-control.atlas.data.Geometry
+  - uid: >-
+      azure-maps-control.atlas.data.Position |
+      azure-maps-control.atlas.data.Position[] |
+      azure-maps-control.atlas.data.Position[][] |
+      azure-maps-control.atlas.data.Position[][][]
+    name: 'Position[][][]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: ' | '
+        fullName: ' | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[] | '
+        fullName: '[] | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[][] | '
+        fullName: '[][] | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[][][]'
+        fullName: '[][][]'

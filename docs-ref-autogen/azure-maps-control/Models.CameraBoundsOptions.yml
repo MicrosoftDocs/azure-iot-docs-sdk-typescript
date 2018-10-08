@@ -22,7 +22,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: The bounds of the map control's camera.
+    summary: |-
+      The bounds of the map control's camera.
+      `default [-180, -89, 180, 90]`
     optional: true
     syntax:
       content: 'bounds?: BoundingBox'
@@ -40,6 +42,8 @@ items:
     summary: >-
       The maximum zoom level to allow when the map view transitions to the
       specified bounds.
+
+      `default 20`
     optional: true
     syntax:
       content: 'maxZoom?: number'
@@ -57,6 +61,8 @@ items:
     summary: >-
       An offset of the center of the given bounds relative to the map's center,
       measured in pixels.
+
+      `default [0, 0]`
     optional: true
     syntax:
       content: 'offset?: Pixel'
@@ -71,7 +77,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: The amount of padding in pixels to add to the given bounds.
+    summary: |-
+      The amount of padding in pixels to add to the given bounds.
+      `default {top: 0, bottom: 0, left: 0, right: 0}`
     optional: true
     syntax:
       content: 'padding?: Padding'
@@ -154,18 +162,18 @@ references:
       - name: Padding
         fullName: Padding
         uid: azure-maps-control.Models.Padding
+  - uid: azure-maps-control.atlas.data.Position
+    name: Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
   - uid: azure-maps-control.Models.ControlStyle
     name: ControlStyle
     spec.typeScript:
       - name: ControlStyle
         fullName: ControlStyle
         uid: azure-maps-control.Models.ControlStyle
-  - uid: azure-maps-control.atlas.Map
-    name: Map
-    spec.typeScript:
-      - name: Map
-        fullName: Map
-        uid: azure-maps-control.atlas.Map
   - uid: azure-maps-control.Models.Control
     name: Control
     spec.typeScript:
@@ -365,6 +373,12 @@ references:
         uid: azure-maps-control.atlas.Shape
       - name: '>'
         fullName: '>'
+  - uid: azure-maps-control.atlas.Map
+    name: Map
+    spec.typeScript:
+      - name: Map
+        fullName: Map
+        uid: azure-maps-control.atlas.Map
   - uid: 'azure-maps-control.atlas.Pixel[]'
     name: 'Pixel[]'
     spec.typeScript:
@@ -373,12 +387,12 @@ references:
         uid: azure-maps-control.atlas.Pixel
       - name: '[]'
         fullName: '[]'
-  - uid: 'azure-maps-control.Models.ServiceOptions[]'
-    name: 'ServiceOptions[]'
+  - uid: 'azure-maps-control.atlas.data.Position[]'
+    name: 'Position[]'
     spec.typeScript:
-      - name: ServiceOptions
-        fullName: ServiceOptions
-        uid: azure-maps-control.Models.ServiceOptions
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
       - name: '[]'
         fullName: '[]'
   - uid: >-
@@ -419,14 +433,6 @@ references:
         uid: azure-maps-control.atlas.source.Source
       - name: '>'
         fullName: '>'
-  - uid: 'azure-maps-control.Models.StyleOptions[]'
-    name: 'StyleOptions[]'
-    spec.typeScript:
-      - name: StyleOptions
-        fullName: StyleOptions
-        uid: azure-maps-control.Models.StyleOptions
-      - name: '[]'
-        fullName: '[]'
   - uid: azure-maps-control.Models.IconOptions
     name: IconOptions
     spec.typeScript:

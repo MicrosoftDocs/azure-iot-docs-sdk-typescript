@@ -35,6 +35,8 @@ items:
       previously drawn symbols.
 
       Tip: Set this to true if animating an symbol to ensure smooth rendering.
+
+      Default `false`.
     optional: true
     syntax:
       content: 'allowOverlap?: boolean'
@@ -52,6 +54,32 @@ items:
     summary: >-
       Specifies which part of the icon is placed closest to the icons anchor
       position on the map.
+
+      <p>`"center"`: The center of the icon is placed closest to the anchor.</p>
+
+      <p>`"left"`: The left side of the icon is placed closest to the
+      anchor.</p>
+
+      <p>`"right"`: The right side of the icon is placed closest to the
+      anchor.</p>
+
+      <p>`"top"`: The top of the icon is placed closest to the anchor.</p>
+
+      <p>`"bottom"`: The bottom of the icon is placed closest to the anchor.</p>
+
+      <p>`"top-left"`: The top left corner of the icon is placed closest to the
+      anchor.</p>
+
+      <p>`"top-right"`: The top right corner of the icon is placed closest to
+      the anchor.</p>
+
+      <p>`"bottom-left"`: The bottom left corner of the icon is placed closest
+      to the anchor.</p>
+
+      <p>`"bottom-right"`: The bottom right corner of the icon is placed closest
+      to the anchor.</p>
+
+      Default `"bottom"`.
     optional: true
     syntax:
       content: >-
@@ -73,6 +101,7 @@ items:
     summary: |-
       Specifies if other symbols can overlap this symbol.
       If true, other symbols can be visible even if they collide with the icon.
+      Default `false`.
     optional: true
     syntax:
       content: 'ignorePlacement?: boolean'
@@ -90,6 +119,8 @@ items:
     summary: >-
       The name of the image in the map's image sprite to use for drawing the
       icon.
+
+      Default `"pin-darkblue"`.
     optional: true
     syntax:
       content: 'image?: string | Expression | StyleFunction'
@@ -117,6 +148,8 @@ items:
 
       When combined with rotation the offset will be as if the rotated direction
       was up.
+
+      Default `[0, 0]`.
     optional: true
     syntax:
       content: 'offset?: Pixel | Expression | StyleFunction'
@@ -137,6 +170,8 @@ items:
     summary: >-
       A number between 0 and 1 that indicates the opacity at which the icon will
       be drawn.
+
+      Default `1`.
     optional: true
     syntax:
       content: 'opacity?: number | Expression | StyleFunction'
@@ -160,6 +195,8 @@ items:
       If true, text will display without their corresponding icons
 
       when the icon collides with other symbols and the text does not.
+
+      Default `false`.
     optional: true
     syntax:
       content: 'optional?: boolean'
@@ -174,7 +211,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: The amount to rotate the icon clockwise in degrees
+    summary: |-
+      The amount to rotate the icon clockwise in degrees
+      Default `0`.
     optional: true
     syntax:
       content: 'rotation?: number | Expression | StyleFunction'
@@ -191,9 +230,23 @@ items:
     langs:
       - typeScript
     type: property
-    summary: |-
+    summary: >-
       In combination with the placement property of a SymbolLayerOptions
+
       this determines the rotation behavior of icons.
+
+      <p>`"auto"`: When placement is "point" this is equivalent to "viewport".
+
+      When placement is "line" this is equivalent to "map".</p>
+
+      <p>`"map"`: When placement is "point" aligns icons east-west.
+
+      When placement is "line" aligns the icons' x-axes with the line.</p>
+
+      <p>`"viewport"`: Icons' x-axes will align with the x-axis of the
+      viewport.</p>
+
+      Default `"auto"`.
     optional: true
     syntax:
       content: 'rotationAlignment?: "auto" | "map" | "viewport"'
@@ -211,6 +264,7 @@ items:
     summary: |-
       Scales the original size of the icon by the provided factor.
       Must be greater or equal to 0.
+      Default `1`.
     optional: true
     syntax:
       content: 'size?: number | Expression | StyleFunction'
@@ -295,18 +349,18 @@ references:
       - name: Padding
         fullName: Padding
         uid: azure-maps-control.Models.Padding
+  - uid: azure-maps-control.atlas.data.Position
+    name: Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
   - uid: azure-maps-control.Models.ControlStyle
     name: ControlStyle
     spec.typeScript:
       - name: ControlStyle
         fullName: ControlStyle
         uid: azure-maps-control.Models.ControlStyle
-  - uid: azure-maps-control.atlas.Map
-    name: Map
-    spec.typeScript:
-      - name: Map
-        fullName: Map
-        uid: azure-maps-control.atlas.Map
   - uid: azure-maps-control.Models.Control
     name: Control
     spec.typeScript:
@@ -506,6 +560,12 @@ references:
         uid: azure-maps-control.atlas.Shape
       - name: '>'
         fullName: '>'
+  - uid: azure-maps-control.atlas.Map
+    name: Map
+    spec.typeScript:
+      - name: Map
+        fullName: Map
+        uid: azure-maps-control.atlas.Map
   - uid: 'azure-maps-control.atlas.Pixel[]'
     name: 'Pixel[]'
     spec.typeScript:
@@ -514,12 +574,12 @@ references:
         uid: azure-maps-control.atlas.Pixel
       - name: '[]'
         fullName: '[]'
-  - uid: 'azure-maps-control.Models.ServiceOptions[]'
-    name: 'ServiceOptions[]'
+  - uid: 'azure-maps-control.atlas.data.Position[]'
+    name: 'Position[]'
     spec.typeScript:
-      - name: ServiceOptions
-        fullName: ServiceOptions
-        uid: azure-maps-control.Models.ServiceOptions
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
       - name: '[]'
         fullName: '[]'
   - uid: >-
@@ -560,14 +620,6 @@ references:
         uid: azure-maps-control.atlas.source.Source
       - name: '>'
         fullName: '>'
-  - uid: 'azure-maps-control.Models.StyleOptions[]'
-    name: 'StyleOptions[]'
-    spec.typeScript:
-      - name: StyleOptions
-        fullName: StyleOptions
-        uid: azure-maps-control.Models.StyleOptions
-      - name: '[]'
-        fullName: '[]'
   - uid: azure-maps-control.Models.IconOptions
     name: IconOptions
     spec.typeScript:

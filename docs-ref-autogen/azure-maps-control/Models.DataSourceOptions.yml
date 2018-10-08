@@ -32,6 +32,8 @@ items:
       or not.
 
       If set to true, points will be clustered together into groups by radius.
+
+      default `false`
     optional: true
     syntax:
       content: 'cluster?: boolean'
@@ -65,7 +67,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: The radius of each cluster in pixels.
+    summary: |-
+      The radius of each cluster in pixels.
+      default `50`
     optional: true
     syntax:
       content: 'clusterRadius?: number'
@@ -83,6 +87,8 @@ items:
     summary: >-
       Maximum zoom level at which to create vector tiles (higher means greater
       detail at high zoom levels).
+
+      default `18`
     optional: true
     syntax:
       content: 'maxZoom?: number'
@@ -100,6 +106,8 @@ items:
     summary: >-
       The Douglas-Peucker simplification tolerance that is applied to the data
       when rendering (higher means simpler geometries and faster performance).
+
+      default `0.375`
     optional: true
     syntax:
       content: 'tolerance?: number'
@@ -182,18 +190,18 @@ references:
       - name: Padding
         fullName: Padding
         uid: azure-maps-control.Models.Padding
+  - uid: azure-maps-control.atlas.data.Position
+    name: Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
   - uid: azure-maps-control.Models.ControlStyle
     name: ControlStyle
     spec.typeScript:
       - name: ControlStyle
         fullName: ControlStyle
         uid: azure-maps-control.Models.ControlStyle
-  - uid: azure-maps-control.atlas.Map
-    name: Map
-    spec.typeScript:
-      - name: Map
-        fullName: Map
-        uid: azure-maps-control.atlas.Map
   - uid: azure-maps-control.Models.Control
     name: Control
     spec.typeScript:
@@ -393,6 +401,12 @@ references:
         uid: azure-maps-control.atlas.Shape
       - name: '>'
         fullName: '>'
+  - uid: azure-maps-control.atlas.Map
+    name: Map
+    spec.typeScript:
+      - name: Map
+        fullName: Map
+        uid: azure-maps-control.atlas.Map
   - uid: 'azure-maps-control.atlas.Pixel[]'
     name: 'Pixel[]'
     spec.typeScript:
@@ -401,12 +415,12 @@ references:
         uid: azure-maps-control.atlas.Pixel
       - name: '[]'
         fullName: '[]'
-  - uid: 'azure-maps-control.Models.ServiceOptions[]'
-    name: 'ServiceOptions[]'
+  - uid: 'azure-maps-control.atlas.data.Position[]'
+    name: 'Position[]'
     spec.typeScript:
-      - name: ServiceOptions
-        fullName: ServiceOptions
-        uid: azure-maps-control.Models.ServiceOptions
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
       - name: '[]'
         fullName: '[]'
   - uid: >-
@@ -447,14 +461,6 @@ references:
         uid: azure-maps-control.atlas.source.Source
       - name: '>'
         fullName: '>'
-  - uid: 'azure-maps-control.Models.StyleOptions[]'
-    name: 'StyleOptions[]'
-    spec.typeScript:
-      - name: StyleOptions
-        fullName: StyleOptions
-        uid: azure-maps-control.Models.StyleOptions
-      - name: '[]'
-        fullName: '[]'
   - uid: azure-maps-control.Models.IconOptions
     name: IconOptions
     spec.typeScript:

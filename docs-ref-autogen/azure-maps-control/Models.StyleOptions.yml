@@ -4,6 +4,7 @@ items:
     name: StyleOptions
     fullName: StyleOptions
     children:
+      - azure-maps-control.Models.StyleOptions.autoResize
       - azure-maps-control.Models.StyleOptions.language
       - azure-maps-control.Models.StyleOptions.style
       - azure-maps-control.Models.StyleOptions.userRegion
@@ -14,6 +15,27 @@ items:
     summary: The options for the map's style.
     extends:
       name: azure-maps-control.Models.Options
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.StyleOptions.autoResize
+    name: autoResize
+    fullName: autoResize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      If true the map will automatically resize whenever the window's size
+      changes.
+
+      Otherwise map.resize() must be called.
+
+      Default `true`.
+    optional: true
+    syntax:
+      content: 'autoResize?: boolean'
+      return:
+        type:
+          - boolean
     package: azure-maps-control
   - uid: azure-maps-control.Models.StyleOptions.language
     name: language

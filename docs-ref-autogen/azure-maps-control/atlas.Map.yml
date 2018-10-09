@@ -42,6 +42,7 @@ items:
       - azure-maps-control.atlas.Map.removeHtml
       - azure-maps-control.atlas.Map.removeLayers
       - azure-maps-control.atlas.Map.resize
+      - azure-maps-control.atlas.Map.resize_1
       - azure-maps-control.atlas.Map.setCamera
       - azure-maps-control.atlas.Map.setCameraBounds
       - azure-maps-control.atlas.Map.setServiceOptions
@@ -905,6 +906,44 @@ items:
             Optional additional properties to be added to event objects of
             events triggered by this method.
           optional: true
+      return:
+        type:
+          - any
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Map.resize_1
+    name: resize
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Resizes the map's container element then the map itself.
+    syntax:
+      content: >-
+        function resize(height: number | string, width: number | string,
+        eventData?: any)
+      parameters:
+        - id: height
+          type:
+            - number | string
+          description: >-
+            The height for the map and its container element. A number input is
+            assumed to be in pixels.
+        - id: width
+          type:
+            - number | string
+          description: >-
+            The width for the map and its container element. A number input is
+            assumed to be in pixels.
+        - id: eventData
+          type:
+            - any
+          description: >
+            Optional additional properties to be added to event objects of
+            events triggered by this method.
+          optional: true
+      return:
+        type:
+          - any
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.setCamera
     name: setCamera

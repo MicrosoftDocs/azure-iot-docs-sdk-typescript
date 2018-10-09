@@ -7,6 +7,7 @@ items:
       - azure-maps-control.Models.DataSourceOptions.cluster
       - azure-maps-control.Models.DataSourceOptions.clusterMaxZoom
       - azure-maps-control.Models.DataSourceOptions.clusterRadius
+      - azure-maps-control.Models.DataSourceOptions.lineMetrics
       - azure-maps-control.Models.DataSourceOptions.maxZoom
       - azure-maps-control.Models.DataSourceOptions.tolerance
     langs:
@@ -76,6 +77,24 @@ items:
       return:
         type:
           - number
+    package: azure-maps-control
+  - uid: azure-maps-control.Models.DataSourceOptions.lineMetrics
+    name: lineMetrics
+    fullName: lineMetrics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Specifies whether to calculate line distance metrics.
+      This is required for line layers that specify `lineGradient` values.
+      default `false`
+    optional: true
+    syntax:
+      content: 'lineMetrics?: boolean'
+      return:
+        type:
+          - boolean
     package: azure-maps-control
   - uid: azure-maps-control.Models.DataSourceOptions.maxZoom
     name: maxZoom

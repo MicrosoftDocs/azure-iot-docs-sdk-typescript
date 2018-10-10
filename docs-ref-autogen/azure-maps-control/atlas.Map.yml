@@ -5,6 +5,12 @@ items:
     fullName: Map
     children:
       - azure-maps-control.atlas.Map.constructor
+      - azure-maps-control.atlas.Map.controls
+      - azure-maps-control.atlas.Map.events
+      - azure-maps-control.atlas.Map.imageSprite
+      - azure-maps-control.atlas.Map.layers
+      - azure-maps-control.atlas.Map.markers
+      - azure-maps-control.atlas.Map.sources
       - azure-maps-control.atlas.Map.addCircles
       - azure-maps-control.atlas.Map.addControl
       - azure-maps-control.atlas.Map.addEventListener
@@ -15,6 +21,9 @@ items:
       - azure-maps-control.atlas.Map.addPins
       - azure-maps-control.atlas.Map.addPolygons
       - azure-maps-control.atlas.Map.addRaster
+      - azure-maps-control.atlas.Map.areTilesLoaded
+      - azure-maps-control.atlas.Map.clear
+      - azure-maps-control.atlas.Map.dispose
       - azure-maps-control.atlas.Map.getCamera
       - azure-maps-control.atlas.Map.getCanvas
       - azure-maps-control.atlas.Map.getCanvasContainer
@@ -24,6 +33,8 @@ items:
       - azure-maps-control.atlas.Map.getStyle
       - azure-maps-control.atlas.Map.getTraffic
       - azure-maps-control.atlas.Map.getUserInteraction
+      - azure-maps-control.atlas.Map.pixelsToPositions
+      - azure-maps-control.atlas.Map.positionsToPixels
       - azure-maps-control.atlas.Map.remove
       - azure-maps-control.atlas.Map.removeControl
       - azure-maps-control.atlas.Map.removeEventListener
@@ -31,11 +42,14 @@ items:
       - azure-maps-control.atlas.Map.removeHtml
       - azure-maps-control.atlas.Map.removeLayers
       - azure-maps-control.atlas.Map.resize
+      - azure-maps-control.atlas.Map.resize_1
       - azure-maps-control.atlas.Map.setCamera
       - azure-maps-control.atlas.Map.setCameraBounds
+      - azure-maps-control.atlas.Map.setServiceOptions
       - azure-maps-control.atlas.Map.setStyle
       - azure-maps-control.atlas.Map.setTraffic
       - azure-maps-control.atlas.Map.setUserInteraction
+      - azure-maps-control.atlas.Map.stop
     langs:
       - typeScript
     type: class
@@ -67,6 +81,90 @@ items:
           description: |
             Options for the initial display and interactability with the map.
     package: azure-maps-control
+  - uid: azure-maps-control.atlas.Map.controls
+    name: controls
+    fullName: controls
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'controls: ControlManager'
+      return:
+        type:
+          - azure-maps-control.Models.ControlManager
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Map.events
+    name: events
+    fullName: events
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'events: EventManager'
+      return:
+        type:
+          - azure-maps-control.Models.EventManager
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Map.imageSprite
+    name: imageSprite
+    fullName: imageSprite
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'imageSprite: ImageSpriteManager'
+      return:
+        type:
+          - azure-maps-control.Models.ImageSpriteManager
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Map.layers
+    name: layers
+    fullName: layers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'layers: LayerManager'
+      return:
+        type:
+          - azure-maps-control.Models.LayerManager
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Map.markers
+    name: markers
+    fullName: markers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'markers: HtmlMarkerManager'
+      return:
+        type:
+          - azure-maps-control.Models.HtmlMarkerManager
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Map.sources
+    name: sources
+    fullName: sources
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'sources: SourceManager'
+      return:
+        type:
+          - azure-maps-control.Models.SourceManager
+    package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.addCircles
     name: addCircles
     children: []
@@ -77,8 +175,7 @@ items:
       Add a collection of points to a layer of the map as circles. The layer and
       its options can be specified through a
 
-      [CircleLayerOptions](xref:azure-maps-javascript.CircleLayerOptions)
-      object. Options for the layer
+      CircleLayerOptions object. Options for the layer
 
       can only be specified upon the layer's initial creation. Map must be fully
       loaded before the circles can be
@@ -93,15 +190,16 @@ items:
           type:
             - >-
               Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
-              azure-maps-control.Models.CircleProperties>>
+              azure-maps-control.Models.deprecated.CircleProperties>>
           description: The circles to add.
         - id: options
           type:
-            - azure-maps-control.Models.CircleLayerOptions
-          description: |
-            The layer options for the circles.
+            - azure-maps-control.Models.deprecated.CircleLayerOptions
+          description: The layer options for the circles.
           optional: true
     package: azure-maps-control
+    deprecated:
+      content: Use atlas.layer.BubbleLayer instead.
   - uid: azure-maps-control.atlas.Map.addControl
     name: addControl
     children: []
@@ -119,10 +217,11 @@ items:
         - id: options
           type:
             - azure-maps-control.Models.ControlOptions
-          description: |
-            The options for the added control.
+          description: The options for the added control.
           optional: true
     package: azure-maps-control
+    deprecated:
+      content: Use map.controls.add instead.
   - uid: azure-maps-control.atlas.Map.addEventListener
     name: addEventListener
     children: []
@@ -192,9 +291,10 @@ items:
         - id: callback
           type:
             - any
-          description: |
-            The callback to fire when the event occurs.
+          description: The callback to fire when the event occurs.
     package: azure-maps-control
+    deprecated:
+      content: Use map.events.add instead.
   - uid: azure-maps-control.atlas.Map.addEventListener_1
     name: addEventListener
     children: []
@@ -244,16 +344,17 @@ items:
         - id: callback
           type:
             - any
-          description: |
-            The callback to fire when the event occurs.
+          description: The callback to fire when the event occurs.
     package: azure-maps-control
+    deprecated:
+      content: Use map.events.add instead.
   - uid: azure-maps-control.atlas.Map.addHtml
     name: addHtml
     children: []
     type: method
     langs:
       - typeScript
-    summary: Adds a custom HTMLElement to the map at a specified position.
+    summary: ''
     syntax:
       content: 'function addHtml(element: HTMLElement, position: Position)'
       parameters:
@@ -270,6 +371,10 @@ items:
         type:
           - string
     package: azure-maps-control
+    deprecated:
+      content: |-
+        recommend map.markers.add
+        Adds a custom HTMLElement to the map at a specified position.
   - uid: azure-maps-control.atlas.Map.addIcon
     name: addIcon
     children: []
@@ -291,9 +396,10 @@ items:
         - id: icon
           type:
             - HTMLImageElement
-          description: |
-            The icon image.
+          description: The icon image.
     package: azure-maps-control
+    deprecated:
+      content: Use map.imageSprite.add instead.
   - uid: azure-maps-control.atlas.Map.addLinestrings
     name: addLinestrings
     children: []
@@ -304,8 +410,7 @@ items:
       Add a collection of linestrings to a layer of the map. The layer and its
       options can be specified through a
 
-      [LinestringLayerOptions](xref:azure-maps-javascript.LinestringLayerOptions)
-      object. Options for
+      LinestringLayerOptions object. Options for
 
       the layer can only be specified upon the layer's initial creation. Map
       must be fully loaded before the
@@ -323,15 +428,16 @@ items:
             - >-
               Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.LineString
               | azure-maps-control.atlas.data.MultiLineString,
-              azure-maps-control.Models.LinestringProperties>>
+              azure-maps-control.Models.deprecated.LinestringProperties>>
           description: The linestrings to add.
         - id: options
           type:
-            - azure-maps-control.Models.LinestringLayerOptions
-          description: |
-            The layer options for the linestrings.
+            - azure-maps-control.Models.deprecated.LinestringLayerOptions
+          description: The layer options for the linestrings.
           optional: true
     package: azure-maps-control
+    deprecated:
+      content: Use atlas.layer.LineLayer instead.
   - uid: azure-maps-control.atlas.Map.addPins
     name: addPins
     children: []
@@ -342,8 +448,7 @@ items:
       Add a collection of points to a layer of the map as pins. The layer and
       its options can be specified through a
 
-      [PinLayerOptions](xref:azure-maps-javascript.PinLayerOptions) object.
-      Options for the layer can
+      PinLayerOptions object. Options for the layer can
 
       only be specified upon the layer's initial creation. Map must be fully
       loaded before the pins can be added. Use
@@ -358,15 +463,16 @@ items:
           type:
             - >-
               Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
-              azure-maps-control.Models.PinProperties>>
+              azure-maps-control.Models.deprecated.PinProperties>>
           description: The points to add.
         - id: options
           type:
-            - azure-maps-control.Models.PinLayerOptions
-          description: |
-            The layer options for the pins.
+            - azure-maps-control.Models.deprecated.PinLayerOptions
+          description: The layer options for the pins.
           optional: true
     package: azure-maps-control
+    deprecated:
+      content: Use atlas.layer.SymbolLayer instead.
   - uid: azure-maps-control.atlas.Map.addPolygons
     name: addPolygons
     children: []
@@ -377,8 +483,7 @@ items:
       Add a collection of polygons to a layer of the map. The layer and its
       options can be specified through a
 
-      [PolygonLayerOptions](xref:azure-maps-javascript.PolygonLayerOptions)
-      object. Options for
+      PolygonLayerOptions object. Options for
 
       the layer can only be specified upon the layer's initial creation. Map
       must be fully loaded before the polygons
@@ -394,15 +499,16 @@ items:
             - >-
               Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Polygon
               | azure-maps-control.atlas.data.MultiPolygon,
-              azure-maps-control.Models.PolygonProperties>>
+              azure-maps-control.Models.deprecated.PolygonProperties>>
           description: The polygons to add.
         - id: options
           type:
-            - azure-maps-control.Models.PolygonLayerOptions
-          description: |
-            The layer options for the polygons.
+            - azure-maps-control.Models.deprecated.PolygonLayerOptions
+          description: The layer options for the polygons.
           optional: true
     package: azure-maps-control
+    deprecated:
+      content: Use atlas.layer.PolygonLayer instead.
   - uid: azure-maps-control.atlas.Map.addRaster
     name: addRaster
     children: []
@@ -413,8 +519,7 @@ items:
       Adds a raster layer to the map. The layer and its options can be specified
       through a
 
-      [RasterLayerOptions](xref:azure-maps-javascript.RasterLayerOptions)
-      object. Options for
+      RasterLayerOptions object. Options for
 
       the layer can only be specified upon the layer's initial creation.
     syntax:
@@ -436,10 +541,53 @@ items:
             viewport.
         - id: options
           type:
-            - azure-maps-control.Models.RasterLayerOptions
-          description: |
-            The options for the raster layer.
+            - azure-maps-control.Models.deprecated.RasterLayerOptions
+          description: The options for the raster layer.
           optional: true
+    package: azure-maps-control
+    deprecated:
+      content: Use atlas.layer.TileLayer instead.
+  - uid: azure-maps-control.atlas.Map.areTilesLoaded
+    name: areTilesLoaded
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns a boolean indicating if all tiles in the current viewport for all
+      sources have loaded or not.
+    syntax:
+      content: function areTilesLoaded()
+      parameters: []
+      return:
+        type:
+          - boolean
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Map.clear
+    name: clear
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Removes all user added sources, layers, markers, and popups from the map.
+      User added images are preserved.
+    syntax:
+      content: function clear()
+      parameters: []
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Map.dispose
+    name: dispose
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Clean up the map's resources. Map will not function correctly after
+      calling this method.
+    syntax:
+      content: function dispose()
+      parameters: []
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.getCamera
     name: getCamera
@@ -503,6 +651,8 @@ items:
         type:
           - 'string[]'
     package: azure-maps-control
+    deprecated:
+      content: Use layers.getLayers() instead.
   - uid: azure-maps-control.atlas.Map.getMapContainer
     name: getMapContainer
     children: []
@@ -573,6 +723,48 @@ items:
         type:
           - azure-maps-control.Models.UserInteractionOptions
     package: azure-maps-control
+  - uid: azure-maps-control.atlas.Map.pixelsToPositions
+    name: pixelsToPositions
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Converts an array of Pixel objects to an array of geographic Positions
+      objects on the map.
+    syntax:
+      content: 'function pixelsToPositions(pixels: Pixel[])'
+      parameters:
+        - id: pixels
+          type:
+            - 'azure-maps-control.atlas.Pixel[]'
+          description: |
+            The pixels to be converted.
+      return:
+        type:
+          - 'azure-maps-control.atlas.data.Position[]'
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Map.positionsToPixels
+    name: positionsToPixels
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Converts an array of Positions objects to an array of Pixel objects
+      relative to the map container.
+    syntax:
+      content: 'function positionsToPixels(positions: Position[])'
+      parameters:
+        - id: positions
+          type:
+            - 'azure-maps-control.atlas.data.Position[]'
+          description: |
+            The positions to be converted.
+      return:
+        type:
+          - 'azure-maps-control.atlas.Pixel[]'
+    package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.remove
     name: remove
     children: []
@@ -586,6 +778,8 @@ items:
       content: function remove()
       parameters: []
     package: azure-maps-control
+    deprecated:
+      content: use map.dispose()
   - uid: azure-maps-control.atlas.Map.removeControl
     name: removeControl
     children: []
@@ -599,9 +793,10 @@ items:
         - id: control
           type:
             - azure-maps-control.Models.Control
-          description: |
-            The control to remove.
+          description: The control to remove.
     package: azure-maps-control
+    deprecated:
+      content: Use map.controls.remove instead.
   - uid: azure-maps-control.atlas.Map.removeEventListener
     name: removeEventListener
     children: []
@@ -619,9 +814,10 @@ items:
         - id: callback
           type:
             - any
-          description: |
-            The callback of the event listener.
+          description: The callback of the event listener.
     package: azure-maps-control
+    deprecated:
+      content: Use map.events.remove instead.
   - uid: azure-maps-control.atlas.Map.removeEventListener_1
     name: removeEventListener
     children: []
@@ -643,16 +839,17 @@ items:
         - id: callback
           type:
             - any
-          description: |
-            The callback of the event listener.
+          description: The callback of the event listener.
     package: azure-maps-control
+    deprecated:
+      content: Use map.events.remove instead.
   - uid: azure-maps-control.atlas.Map.removeHtml
     name: removeHtml
     children: []
     type: method
     langs:
       - typeScript
-    summary: Removes a custom HTMLElement from the map.
+    summary: ''
     syntax:
       content: 'function removeHtml(elementId: string)'
       parameters:
@@ -662,22 +859,31 @@ items:
           description: |
             The id of element to remove.
     package: azure-maps-control
+    deprecated:
+      content: |-
+        recommend map.markers.remove
+        Removes a custom HTMLElement from the map.
   - uid: azure-maps-control.atlas.Map.removeLayers
     name: removeLayers
     children: []
     type: method
     langs:
       - typeScript
-    summary: Removes a collection of layers from the map.
+    summary: >-
+      Removes a collection of layers from the map.
+
+      For each layer if a source by the name of "<layerName>-source" exists it
+      will be removed too.
     syntax:
       content: 'function removeLayers(layerNames: string[])'
       parameters:
         - id: layerNames
           type:
             - 'string[]'
-          description: |
-            An array of layer names to remove from the map.
+          description: An array of layer names to remove from the map.
     package: azure-maps-control
+    deprecated:
+      content: Use layers.remove instead.
   - uid: azure-maps-control.atlas.Map.resize
     name: resize
     children: []
@@ -686,8 +892,53 @@ items:
       - typeScript
     summary: Resize the map according to the dimensions of its container element.
     syntax:
-      content: function resize()
-      parameters: []
+      content: 'function resize(eventData?: any)'
+      parameters:
+        - id: eventData
+          type:
+            - any
+          description: >
+            Optional additional properties to be added to event objects of
+            events triggered by this method.
+          optional: true
+      return:
+        type:
+          - any
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Map.resize_1
+    name: resize
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Resizes the map's container element then the map itself.
+    syntax:
+      content: >-
+        function resize(height: number | string, width: number | string,
+        eventData?: any)
+      parameters:
+        - id: height
+          type:
+            - number | string
+          description: >-
+            The height for the map and its container element. A number input is
+            assumed to be in pixels.
+        - id: width
+          type:
+            - number | string
+          description: >-
+            The width for the map and its container element. A number input is
+            assumed to be in pixels.
+        - id: eventData
+          type:
+            - any
+          description: >
+            Optional additional properties to be added to event objects of
+            events triggered by this method.
+          optional: true
+      return:
+        type:
+          - any
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.setCamera
     name: setCamera
@@ -701,12 +952,15 @@ items:
 
       current values.
     syntax:
-      content: 'function setCamera(options?: CameraOptions & AnimationOptions)'
+      content: >-
+        function setCamera(options?: CameraOptions | CameraBoundsOptions &
+        AnimationOptions)
       parameters:
         - id: options
           type:
             - >-
-              azure-maps-control.Models.CameraOptions &
+              azure-maps-control.Models.CameraOptions |
+              azure-maps-control.Models.CameraBoundsOptions &
               azure-maps-control.Models.AnimationOptions
           description: >
             The options for setting the map's camera and for the animation of
@@ -726,9 +980,25 @@ items:
         - id: options
           type:
             - azure-maps-control.Models.CameraBoundsOptions
-          description: |
-            The options for setting the map's camera bounds.
+          description: The options for setting the map's camera bounds.
           optional: true
+    package: azure-maps-control
+    deprecated:
+      content: recommend setCamera.
+  - uid: azure-maps-control.atlas.Map.setServiceOptions
+    name: setServiceOptions
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Set the service options.
+    syntax:
+      content: 'function setServiceOptions(options: ServiceOptions)'
+      parameters:
+        - id: options
+          type:
+            - azure-maps-control.Models.ServiceOptions
+          description: ''
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.setStyle
     name: setStyle
@@ -787,51 +1057,81 @@ items:
             The options for enabling/disabling the user interaction handlers.
           optional: true
     package: azure-maps-control
+  - uid: azure-maps-control.atlas.Map.stop
+    name: stop
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Stops any animated transition that is currently underway.
+    syntax:
+      content: function stop()
+      parameters: []
+    package: azure-maps-control
 references:
   - uid: azure-maps-control.Models.CompassControlOptions
+    name: CompassControlOptions
     spec.typeScript:
       - name: CompassControlOptions
         fullName: CompassControlOptions
         uid: azure-maps-control.Models.CompassControlOptions
   - uid: azure-maps-control.atlas.Map
+    name: Map
     spec.typeScript:
       - name: Map
         fullName: Map
         uid: azure-maps-control.atlas.Map
   - uid: azure-maps-control.Models.ControlOptions
+    name: ControlOptions
     spec.typeScript:
       - name: ControlOptions
         fullName: ControlOptions
         uid: azure-maps-control.Models.ControlOptions
   - uid: azure-maps-control.Models.PitchControlOptions
+    name: PitchControlOptions
     spec.typeScript:
       - name: PitchControlOptions
         fullName: PitchControlOptions
         uid: azure-maps-control.Models.PitchControlOptions
   - uid: azure-maps-control.Models.StyleControlOptions
+    name: StyleControlOptions
     spec.typeScript:
       - name: StyleControlOptions
         fullName: StyleControlOptions
         uid: azure-maps-control.Models.StyleControlOptions
   - uid: azure-maps-control.Models.ZoomControlOptions
+    name: ZoomControlOptions
     spec.typeScript:
       - name: ZoomControlOptions
         fullName: ZoomControlOptions
         uid: azure-maps-control.Models.ZoomControlOptions
   - uid: azure-maps-control.atlas.data.Position
+    name: Position
     spec.typeScript:
       - name: Position
         fullName: Position
         uid: azure-maps-control.atlas.data.Position
-  - uid: azure-maps-control.atlas.data.Geometry
+  - uid: azure-maps-control.atlas.data.BoundingBox
+    name: BoundingBox
     spec.typeScript:
-      - name: Geometry
-        fullName: Geometry
-        uid: azure-maps-control.atlas.data.Geometry
+      - name: BoundingBox
+        fullName: BoundingBox
+        uid: azure-maps-control.atlas.data.BoundingBox
   - uid: >-
+      azure-maps-control.atlas.data.FeatureCollection |
       azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
-      any>[]
+      any> | azure-maps-control.atlas.data.Geometry |
+      azure-maps-control.atlas.Shape |
+      Array<azure-maps-control.atlas.data.FeatureCollection |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.data.Geometry>
+    name: Geometry>
     spec.typeScript:
+      - name: FeatureCollection
+        fullName: FeatureCollection
+        uid: azure-maps-control.atlas.data.FeatureCollection
+      - name: ' | '
+        fullName: ' | '
       - name: Feature
         fullName: Feature
         uid: azure-maps-control.atlas.data.Feature
@@ -840,11 +1140,58 @@ references:
       - name: Geometry
         fullName: Geometry
         uid: azure-maps-control.atlas.data.Geometry
-      - name: ', any>[]'
-        fullName: ', any>[]'
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ' | '
+        fullName: ' | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: ' | Array<'
+        fullName: ' | Array<'
+      - name: FeatureCollection
+        fullName: FeatureCollection
+        uid: azure-maps-control.atlas.data.FeatureCollection
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: '>'
+        fullName: '>'
+  - uid: 'azure-maps-control.atlas.data.Position[]'
+    name: 'Position[]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-control.atlas.data.BoundingBox[]'
+    name: 'BoundingBox[]'
+    spec.typeScript:
+      - name: BoundingBox
+        fullName: BoundingBox
+        uid: azure-maps-control.atlas.data.BoundingBox
+      - name: '[]'
+        fullName: '[]'
   - uid: >-
       Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
       any>>
+    name: 'Geometry, any>>'
     spec.typeScript:
       - name: Array<
         fullName: Array<
@@ -859,25 +1206,15 @@ references:
       - name: ', any>>'
         fullName: ', any>>'
   - uid: 'azure-maps-control.atlas.data.Geometry[]'
+    name: 'Geometry[]'
     spec.typeScript:
       - name: Geometry
         fullName: Geometry
         uid: azure-maps-control.atlas.data.Geometry
       - name: '[]'
         fullName: '[]'
-  - uid: 'azure-maps-control.atlas.data.Position[]'
-    spec.typeScript:
-      - name: Position
-        fullName: Position
-        uid: azure-maps-control.atlas.data.Position
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-maps-control.atlas.data.BoundingBox
-    spec.typeScript:
-      - name: BoundingBox
-        fullName: BoundingBox
-        uid: azure-maps-control.atlas.data.BoundingBox
   - uid: 'azure-maps-control.atlas.data.Position[][]'
+    name: 'Position[][]'
     spec.typeScript:
       - name: Position
         fullName: Position
@@ -885,17 +1222,183 @@ references:
       - name: '[][]'
         fullName: '[][]'
   - uid: 'azure-maps-control.atlas.data.Position[][][]'
+    name: 'Position[][][]'
     spec.typeScript:
       - name: Position
         fullName: Position
         uid: azure-maps-control.atlas.data.Position
       - name: '[][][]'
         fullName: '[][][]'
+  - uid: azure-maps-control.atlas.layer.Layer
+    name: Layer
+    spec.typeScript:
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+  - uid: string | azure-maps-control.atlas.source.Source
+    name: Source
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+  - uid: azure-maps-control.Models.BubbleLayerOptions
+    name: BubbleLayerOptions
+    spec.typeScript:
+      - name: BubbleLayerOptions
+        fullName: BubbleLayerOptions
+        uid: azure-maps-control.Models.BubbleLayerOptions
+  - uid: azure-maps-control.Models.LineLayerOptions
+    name: LineLayerOptions
+    spec.typeScript:
+      - name: LineLayerOptions
+        fullName: LineLayerOptions
+        uid: azure-maps-control.Models.LineLayerOptions
+  - uid: azure-maps-control.Models.PolygonLayerOptions
+    name: PolygonLayerOptions
+    spec.typeScript:
+      - name: PolygonLayerOptions
+        fullName: PolygonLayerOptions
+        uid: azure-maps-control.Models.PolygonLayerOptions
+  - uid: azure-maps-control.Models.SymbolLayerOptions
+    name: SymbolLayerOptions
+    spec.typeScript:
+      - name: SymbolLayerOptions
+        fullName: SymbolLayerOptions
+        uid: azure-maps-control.Models.SymbolLayerOptions
+  - uid: azure-maps-control.Models.TileLayerOptions
+    name: TileLayerOptions
+    spec.typeScript:
+      - name: TileLayerOptions
+        fullName: TileLayerOptions
+        uid: azure-maps-control.Models.TileLayerOptions
+  - uid: azure-maps-control.atlas.data.Polygon
+    name: Polygon
+    spec.typeScript:
+      - name: Polygon
+        fullName: Polygon
+        uid: azure-maps-control.atlas.data.Polygon
+  - uid: >-
+      azure-maps-control.atlas.data.LineString |
+      azure-maps-control.atlas.data.Position[]
+    name: 'Position[]'
+    spec.typeScript:
+      - name: LineString
+        fullName: LineString
+        uid: azure-maps-control.atlas.data.LineString
+      - name: ' | '
+        fullName: ' | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-control.atlas.source.Source
+    name: Source
+    spec.typeScript:
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+  - uid: azure-maps-control.Models.DataSourceOptions
+    name: DataSourceOptions
+    spec.typeScript:
+      - name: DataSourceOptions
+        fullName: DataSourceOptions
+        uid: azure-maps-control.Models.DataSourceOptions
+  - uid: >-
+      azure-maps-control.atlas.data.FeatureCollection |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.data.Geometry |
+      azure-maps-control.atlas.data.Geometry[] |
+      azure-maps-control.atlas.data.GeometryCollection |
+      azure-maps-control.atlas.Shape | azure-maps-control.atlas.Shape[]
+    name: 'Shape[]'
+    spec.typeScript:
+      - name: FeatureCollection
+        fullName: FeatureCollection
+        uid: azure-maps-control.atlas.data.FeatureCollection
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ' | '
+        fullName: ' | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: '[] | '
+        fullName: '[] | '
+      - name: GeometryCollection
+        fullName: GeometryCollection
+        uid: azure-maps-control.atlas.data.GeometryCollection
+      - name: ' | '
+        fullName: ' | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: ' | '
+        fullName: ' | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-control.atlas.Shape
+    name: Shape
+    spec.typeScript:
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+  - uid: number | string | azure-maps-control.atlas.Shape
+    name: Shape
+    spec.typeScript:
+      - name: 'number | string | '
+        fullName: 'number | string | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+  - uid: azure-maps-control.atlas.data.FeatureCollection
+    name: FeatureCollection
+    spec.typeScript:
+      - name: FeatureCollection
+        fullName: FeatureCollection
+        uid: azure-maps-control.atlas.data.FeatureCollection
+  - uid: azure-maps-control.Models.VectorTileSourceOptions
+    name: VectorTileSourceOptions
+    spec.typeScript:
+      - name: VectorTileSourceOptions
+        fullName: VectorTileSourceOptions
+        uid: azure-maps-control.Models.VectorTileSourceOptions
+  - uid: azure-maps-control.Models.Expression
+    name: Expression
+    spec.typeScript:
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.Models.Expression
+  - uid: azure-maps-control.Models.HtmlMarkerOptions
+    name: HtmlMarkerOptions
+    spec.typeScript:
+      - name: HtmlMarkerOptions
+        fullName: HtmlMarkerOptions
+        uid: azure-maps-control.Models.HtmlMarkerOptions
   - uid: >-
       azure-maps-control.Models.ServiceOptions &
       azure-maps-control.Models.CameraOptions &
       azure-maps-control.Models.StyleOptions &
       azure-maps-control.Models.UserInteractionOptions
+    name: UserInteractionOptions
     spec.typeScript:
       - name: ServiceOptions
         fullName: ServiceOptions
@@ -915,9 +1418,46 @@ references:
       - name: UserInteractionOptions
         fullName: UserInteractionOptions
         uid: azure-maps-control.Models.UserInteractionOptions
+  - uid: azure-maps-control.Models.ControlManager
+    name: ControlManager
+    spec.typeScript:
+      - name: ControlManager
+        fullName: ControlManager
+        uid: azure-maps-control.Models.ControlManager
+  - uid: azure-maps-control.Models.EventManager
+    name: EventManager
+    spec.typeScript:
+      - name: EventManager
+        fullName: EventManager
+        uid: azure-maps-control.Models.EventManager
+  - uid: azure-maps-control.Models.ImageSpriteManager
+    name: ImageSpriteManager
+    spec.typeScript:
+      - name: ImageSpriteManager
+        fullName: ImageSpriteManager
+        uid: azure-maps-control.Models.ImageSpriteManager
+  - uid: azure-maps-control.Models.LayerManager
+    name: LayerManager
+    spec.typeScript:
+      - name: LayerManager
+        fullName: LayerManager
+        uid: azure-maps-control.Models.LayerManager
+  - uid: azure-maps-control.Models.HtmlMarkerManager
+    name: HtmlMarkerManager
+    spec.typeScript:
+      - name: HtmlMarkerManager
+        fullName: HtmlMarkerManager
+        uid: azure-maps-control.Models.HtmlMarkerManager
+  - uid: azure-maps-control.Models.SourceManager
+    name: SourceManager
+    spec.typeScript:
+      - name: SourceManager
+        fullName: SourceManager
+        uid: azure-maps-control.Models.SourceManager
   - uid: >-
       Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
-      azure-maps-control.Models.CircleProperties>>
+      azure-maps-control.Models.deprecated.CircleProperties>>
+    name: CircleProperties>>
     spec.typeScript:
       - name: Array<
         fullName: Array<
@@ -933,15 +1473,17 @@ references:
         fullName: ', '
       - name: CircleProperties
         fullName: CircleProperties
-        uid: azure-maps-control.Models.CircleProperties
+        uid: azure-maps-control.Models.deprecated.CircleProperties
       - name: '>>'
         fullName: '>>'
-  - uid: azure-maps-control.Models.CircleLayerOptions
+  - uid: azure-maps-control.Models.deprecated.CircleLayerOptions
+    name: CircleLayerOptions
     spec.typeScript:
       - name: CircleLayerOptions
         fullName: CircleLayerOptions
-        uid: azure-maps-control.Models.CircleLayerOptions
+        uid: azure-maps-control.Models.deprecated.CircleLayerOptions
   - uid: azure-maps-control.Models.Control
+    name: Control
     spec.typeScript:
       - name: Control
         fullName: Control
@@ -949,7 +1491,8 @@ references:
   - uid: >-
       Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.LineString
       | azure-maps-control.atlas.data.MultiLineString,
-      azure-maps-control.Models.LinestringProperties>>
+      azure-maps-control.Models.deprecated.LinestringProperties>>
+    name: LinestringProperties>>
     spec.typeScript:
       - name: Array<
         fullName: Array<
@@ -970,17 +1513,19 @@ references:
         fullName: ', '
       - name: LinestringProperties
         fullName: LinestringProperties
-        uid: azure-maps-control.Models.LinestringProperties
+        uid: azure-maps-control.Models.deprecated.LinestringProperties
       - name: '>>'
         fullName: '>>'
-  - uid: azure-maps-control.Models.LinestringLayerOptions
+  - uid: azure-maps-control.Models.deprecated.LinestringLayerOptions
+    name: LinestringLayerOptions
     spec.typeScript:
       - name: LinestringLayerOptions
         fullName: LinestringLayerOptions
-        uid: azure-maps-control.Models.LinestringLayerOptions
+        uid: azure-maps-control.Models.deprecated.LinestringLayerOptions
   - uid: >-
       Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
-      azure-maps-control.Models.PinProperties>>
+      azure-maps-control.Models.deprecated.PinProperties>>
+    name: PinProperties>>
     spec.typeScript:
       - name: Array<
         fullName: Array<
@@ -996,18 +1541,20 @@ references:
         fullName: ', '
       - name: PinProperties
         fullName: PinProperties
-        uid: azure-maps-control.Models.PinProperties
+        uid: azure-maps-control.Models.deprecated.PinProperties
       - name: '>>'
         fullName: '>>'
-  - uid: azure-maps-control.Models.PinLayerOptions
+  - uid: azure-maps-control.Models.deprecated.PinLayerOptions
+    name: PinLayerOptions
     spec.typeScript:
       - name: PinLayerOptions
         fullName: PinLayerOptions
-        uid: azure-maps-control.Models.PinLayerOptions
+        uid: azure-maps-control.Models.deprecated.PinLayerOptions
   - uid: >-
       Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Polygon
       | azure-maps-control.atlas.data.MultiPolygon,
-      azure-maps-control.Models.PolygonProperties>>
+      azure-maps-control.Models.deprecated.PolygonProperties>>
+    name: PolygonProperties>>
     spec.typeScript:
       - name: Array<
         fullName: Array<
@@ -1028,22 +1575,25 @@ references:
         fullName: ', '
       - name: PolygonProperties
         fullName: PolygonProperties
-        uid: azure-maps-control.Models.PolygonProperties
+        uid: azure-maps-control.Models.deprecated.PolygonProperties
       - name: '>>'
         fullName: '>>'
-  - uid: azure-maps-control.Models.PolygonLayerOptions
+  - uid: azure-maps-control.Models.deprecated.PolygonLayerOptions
+    name: PolygonLayerOptions
     spec.typeScript:
       - name: PolygonLayerOptions
         fullName: PolygonLayerOptions
-        uid: azure-maps-control.Models.PolygonLayerOptions
-  - uid: azure-maps-control.Models.RasterLayerOptions
+        uid: azure-maps-control.Models.deprecated.PolygonLayerOptions
+  - uid: azure-maps-control.Models.deprecated.RasterLayerOptions
+    name: RasterLayerOptions
     spec.typeScript:
       - name: RasterLayerOptions
         fullName: RasterLayerOptions
-        uid: azure-maps-control.Models.RasterLayerOptions
+        uid: azure-maps-control.Models.deprecated.RasterLayerOptions
   - uid: >-
       azure-maps-control.Models.CameraOptions &
       azure-maps-control.Models.CameraBoundsOptions
+    name: CameraBoundsOptions
     spec.typeScript:
       - name: CameraOptions
         fullName: CameraOptions
@@ -1054,44 +1604,119 @@ references:
         fullName: CameraBoundsOptions
         uid: azure-maps-control.Models.CameraBoundsOptions
   - uid: azure-maps-control.Models.ServiceOptions
+    name: ServiceOptions
     spec.typeScript:
       - name: ServiceOptions
         fullName: ServiceOptions
         uid: azure-maps-control.Models.ServiceOptions
   - uid: azure-maps-control.Models.StyleOptions
+    name: StyleOptions
     spec.typeScript:
       - name: StyleOptions
         fullName: StyleOptions
         uid: azure-maps-control.Models.StyleOptions
   - uid: azure-maps-control.Models.TrafficOptions
+    name: TrafficOptions
     spec.typeScript:
       - name: TrafficOptions
         fullName: TrafficOptions
         uid: azure-maps-control.Models.TrafficOptions
   - uid: azure-maps-control.Models.UserInteractionOptions
+    name: UserInteractionOptions
     spec.typeScript:
       - name: UserInteractionOptions
         fullName: UserInteractionOptions
         uid: azure-maps-control.Models.UserInteractionOptions
+  - uid: 'azure-maps-control.atlas.Pixel[]'
+    name: 'Pixel[]'
+    spec.typeScript:
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
+      - name: '[]'
+        fullName: '[]'
   - uid: >-
-      azure-maps-control.Models.CameraOptions &
+      azure-maps-control.Models.CameraOptions |
+      azure-maps-control.Models.CameraBoundsOptions &
       azure-maps-control.Models.AnimationOptions
+    name: AnimationOptions
     spec.typeScript:
       - name: CameraOptions
         fullName: CameraOptions
         uid: azure-maps-control.Models.CameraOptions
+      - name: ' | '
+        fullName: ' | '
+      - name: CameraBoundsOptions
+        fullName: CameraBoundsOptions
+        uid: azure-maps-control.Models.CameraBoundsOptions
       - name: ' & '
         fullName: ' & '
       - name: AnimationOptions
         fullName: AnimationOptions
         uid: azure-maps-control.Models.AnimationOptions
   - uid: azure-maps-control.Models.CameraBoundsOptions
+    name: CameraBoundsOptions
     spec.typeScript:
       - name: CameraBoundsOptions
         fullName: CameraBoundsOptions
         uid: azure-maps-control.Models.CameraBoundsOptions
+  - uid: azure-maps-control.atlas.Pixel
+    name: Pixel
+    spec.typeScript:
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
   - uid: azure-maps-control.Models.PopupOptions
+    name: PopupOptions
     spec.typeScript:
       - name: PopupOptions
         fullName: PopupOptions
         uid: azure-maps-control.Models.PopupOptions
+  - uid: >-
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any>
+    name: 'Geometry, any>'
+    spec.typeScript:
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any>'
+        fullName: ', any>'
+  - uid: azure-maps-control.atlas.data.Geometry
+    name: Geometry
+    spec.typeScript:
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+  - uid: >-
+      azure-maps-control.atlas.data.Position |
+      azure-maps-control.atlas.data.Position[] |
+      azure-maps-control.atlas.data.Position[][] |
+      azure-maps-control.atlas.data.Position[][][]
+    name: 'Position[][][]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: ' | '
+        fullName: ' | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[] | '
+        fullName: '[] | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[][] | '
+        fullName: '[][] | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[][][]'
+        fullName: '[][][]'

@@ -14,10 +14,10 @@ items:
       - azure-maps-control.Models.UserInteractionOptions.touchInteraction
     langs:
       - typeScript
-    type: interface
+    type: class
     summary: The options for enabling/disabling user interaction with the map.
     extends:
-      name: Options
+      name: azure-maps-control.Models.Options
     package: azure-maps-control
   - uid: azure-maps-control.Models.UserInteractionOptions.boxZoomInteraction
     name: boxZoomInteraction
@@ -26,7 +26,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Whether the Shift + left click and drag will draw a zoom box.
+    summary: |-
+      Whether the Shift + left click and drag will draw a zoom box.
+      default `true`
     optional: true
     syntax:
       content: 'boxZoomInteraction?: boolean'
@@ -41,7 +43,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Whether double left click will zoom the map inwards.
+    summary: |-
+      Whether double left click will zoom the map inwards.
+      default `true`
     optional: true
     syntax:
       content: 'dblClickZoomInteraction?: boolean'
@@ -56,7 +60,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Whether left click and drag will pan the map.
+    summary: |-
+      Whether left click and drag will pan the map.
+      default `true`
     optional: true
     syntax:
       content: 'dragPanInteraction?: boolean'
@@ -71,7 +77,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Whether right click and drag will rotate and pitch the map.
+    summary: |-
+      Whether right click and drag will rotate and pitch the map.
+      default `true`
     optional: true
     syntax:
       content: 'dragRotateInteraction?: boolean'
@@ -91,6 +99,8 @@ items:
       is disabled.  If true, only selected
 
       user interactions will enabled.
+
+      default `true`
     optional: true
     syntax:
       content: 'interactive?: boolean'
@@ -113,9 +123,9 @@ items:
 
       font-size: 14px; padding: 2px; } </style>
 
-      <p><span class="k-key">+=</span>: Increase zoom level by 1.</p>
+      <p><span class="k-key">+/=</span>: Increase zoom level by 1.</p>
 
-      <p><span class="k-key">Shift</span> + <span class="k-key">+=</span>:
+      <p><span class="k-key">Shift</span> + <span class="k-key">+/=</span>:
       Increase the zoom level by 2.</p>
 
       <p><span class="k-key">-</span>: Decrease zoom level by 1.</p>
@@ -123,13 +133,13 @@ items:
       <p><span class="k-key">Shift</span> + <span class="k-key">-</span>:
       Decrease zoom level by 2.</p>
 
-      <p><span class="k-key">&gt;</span>: Pan right 100 pixels.</p>
+      <p><span class="k-key">⇢</span>: Pan right 100 pixels.</p>
 
-      <p><span class="k-key">&lt;</span>: Pan left 100 pixels.</p>
+      <p><span class="k-key">⇠</span>: Pan left 100 pixels.</p>
 
-      <p><span class="k-key">^</span>: Pan up 100 pixels.</p>
+      <p><span class="k-key">⇡</span>: Pan up 100 pixels.</p>
 
-      <p><span class="k-key">v</span>: Pan down 100 pixels.</p>
+      <p><span class="k-key">⇣</span>: Pan down 100 pixels.</p>
 
       <p><span class="k-key">Shift</span> + <span class="k-key">⇢</span>: Rotate
       15 degrees clockwise.</p>
@@ -142,6 +152,8 @@ items:
 
       <p><span class="k-key">Shift</span> + <span class="k-key">⇣</span>:
       Decrease pitch by 10 degrees.</p>
+
+      default `true`
     optional: true
     syntax:
       content: 'keyboardInteraction?: boolean'
@@ -156,7 +168,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Whether the map should zoom on scroll input.
+    summary: |-
+      Whether the map should zoom on scroll input.
+      default `true`
     optional: true
     syntax:
       content: 'scrollZoomInteraction?: boolean'
@@ -171,7 +185,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Whether touch interactions are enabled for touch devices.
+    summary: |-
+      Whether touch interactions are enabled for touch devices.
+      default `true`
     optional: true
     syntax:
       content: 'touchInteraction?: boolean'
@@ -180,44 +196,400 @@ items:
           - boolean
     package: azure-maps-control
 references:
-  - uid: azure-maps-control.Models.ControlStyle
+  - uid: azure-maps-control.Models.deprecated.LayerOptions
+    name: LayerOptions
     spec.typeScript:
-      - name: ControlStyle
-        fullName: ControlStyle
-        uid: azure-maps-control.Models.ControlStyle
-  - uid: azure-maps-control.atlas.data.BoundingBox
+      - name: LayerOptions
+        fullName: LayerOptions
+        uid: azure-maps-control.Models.deprecated.LayerOptions
+  - uid: azure-maps-control.Models.Options
+    name: Options
     spec.typeScript:
-      - name: BoundingBox
-        fullName: BoundingBox
-        uid: azure-maps-control.atlas.data.BoundingBox
-  - uid: azure-maps-control.atlas.data.Position
-    spec.typeScript:
-      - name: Position
-        fullName: Position
-        uid: azure-maps-control.atlas.data.Position
+      - name: Options
+        fullName: Options
+        uid: azure-maps-control.Models.Options
   - uid: azure-maps-control.Models.LayerOptions
+    name: LayerOptions
     spec.typeScript:
       - name: LayerOptions
         fullName: LayerOptions
         uid: azure-maps-control.Models.LayerOptions
-  - uid: azure-maps-control.atlas.Map
+  - uid: >-
+      number | azure-maps-control.Models.Expression |
+      azure-maps-control.Models.StyleFunction
+    name: StyleFunction
     spec.typeScript:
-      - name: Map
-        fullName: Map
-        uid: azure-maps-control.atlas.Map
+      - name: 'number | '
+        fullName: 'number | '
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.Models.Expression
+      - name: ' | '
+        fullName: ' | '
+      - name: StyleFunction
+        fullName: StyleFunction
+        uid: azure-maps-control.Models.StyleFunction
+  - uid: >-
+      string | azure-maps-control.Models.Expression |
+      azure-maps-control.Models.StyleFunction
+    name: StyleFunction
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.Models.Expression
+      - name: ' | '
+        fullName: ' | '
+      - name: StyleFunction
+        fullName: StyleFunction
+        uid: azure-maps-control.Models.StyleFunction
+  - uid: string | azure-maps-control.atlas.source.Source
+    name: Source
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+  - uid: azure-maps-control.atlas.data.BoundingBox
+    name: BoundingBox
+    spec.typeScript:
+      - name: BoundingBox
+        fullName: BoundingBox
+        uid: azure-maps-control.atlas.data.BoundingBox
+  - uid: azure-maps-control.atlas.Pixel
+    name: Pixel
+    spec.typeScript:
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
+  - uid: azure-maps-control.Models.Padding
+    name: Padding
+    spec.typeScript:
+      - name: Padding
+        fullName: Padding
+        uid: azure-maps-control.Models.Padding
+  - uid: azure-maps-control.atlas.data.Position
+    name: Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+  - uid: azure-maps-control.Models.ControlStyle
+    name: ControlStyle
+    spec.typeScript:
+      - name: ControlStyle
+        fullName: ControlStyle
+        uid: azure-maps-control.Models.ControlStyle
+  - uid: azure-maps-control.Models.Control
+    name: Control
+    spec.typeScript:
+      - name: Control
+        fullName: Control
+        uid: azure-maps-control.Models.Control
   - uid: azure-maps-control.Models.ControlOptions
+    name: ControlOptions
     spec.typeScript:
       - name: ControlOptions
         fullName: ControlOptions
         uid: azure-maps-control.Models.ControlOptions
   - uid: azure-maps-control.Models.ControlPosition
+    name: ControlPosition
     spec.typeScript:
       - name: ControlPosition
         fullName: ControlPosition
         uid: azure-maps-control.Models.ControlPosition
   - uid: >-
+      azure-maps-control.atlas.layer.Layer |
+      azure-maps-control.atlas.layer.Layer[]
+    name: 'Layer[]'
+    spec.typeScript:
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: ' | '
+        fullName: ' | '
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-control.atlas.HtmlMarker
+    name: HtmlMarker
+    spec.typeScript:
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+  - uid: >-
+      string | azure-maps-control.atlas.HtmlMarker | Array<string |
+      azure-maps-control.atlas.HtmlMarker>
+    name: HtmlMarker>
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+      - name: ' | Array<string | '
+        fullName: ' | Array<string | '
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-control.atlas.Popup
+    name: Popup
+    spec.typeScript:
+      - name: Popup
+        fullName: Popup
+        uid: azure-maps-control.atlas.Popup
+  - uid: >-
+      azure-maps-control.atlas.Pixel | azure-maps-control.Models.Expression |
+      azure-maps-control.Models.StyleFunction
+    name: StyleFunction
+    spec.typeScript:
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
+      - name: ' | '
+        fullName: ' | '
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.Models.Expression
+      - name: ' | '
+        fullName: ' | '
+      - name: StyleFunction
+        fullName: StyleFunction
+        uid: azure-maps-control.Models.StyleFunction
+  - uid: string | azure-maps-control.atlas.layer.Layer
+    name: Layer
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+  - uid: azure-maps-control.atlas.layer.Layer
+    name: Layer
+    spec.typeScript:
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+  - uid: 'azure-maps-control.atlas.layer.Layer[]'
+    name: 'Layer[]'
+    spec.typeScript:
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      azure-maps-control.atlas.data.Point |
+      azure-maps-control.atlas.data.BoundingBox
+    name: BoundingBox
+    spec.typeScript:
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ' | '
+        fullName: ' | '
+      - name: BoundingBox
+        fullName: BoundingBox
+        uid: azure-maps-control.atlas.data.BoundingBox
+  - uid: Array<string | azure-maps-control.atlas.layer.Layer>
+    name: Layer>
+    spec.typeScript:
+      - name: 'Array<string | '
+        fullName: 'Array<string | '
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-control.Models.Expression
+    name: Expression
+    spec.typeScript:
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.Models.Expression
+  - uid: >-
+      Array<azure-maps-control.atlas.Shape |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any>>
+    name: 'Geometry, any>>'
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any>>'
+        fullName: ', any>>'
+  - uid: >-
+      string | azure-maps-control.atlas.layer.Layer | Array<string |
+      azure-maps-control.atlas.layer.Layer>
+    name: Layer>
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: ' | Array<string | '
+        fullName: ' | Array<string | '
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-control.Models.MapMouseWheelEvent
+    name: MapMouseWheelEvent
+    spec.typeScript:
+      - name: MapMouseWheelEvent
+        fullName: MapMouseWheelEvent
+        uid: azure-maps-control.Models.MapMouseWheelEvent
+  - uid: >-
+      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.Shape>
+    name: Shape>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-control.atlas.Map
+    name: Map
+    spec.typeScript:
+      - name: Map
+        fullName: Map
+        uid: azure-maps-control.atlas.Map
+  - uid: 'azure-maps-control.atlas.Pixel[]'
+    name: 'Pixel[]'
+    spec.typeScript:
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-control.atlas.data.Position[]'
+    name: 'Position[]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      azure-maps-control.atlas.source.Source |
+      azure-maps-control.atlas.source.Source[]
+    name: 'Source[]'
+    spec.typeScript:
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+      - name: ' | '
+        fullName: ' | '
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-control.atlas.source.Source
+    name: Source
+    spec.typeScript:
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+  - uid: >-
+      string | azure-maps-control.atlas.source.Source | Array<string |
+      azure-maps-control.atlas.source.Source>
+    name: Source>
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+      - name: ' | Array<string | '
+        fullName: ' | Array<string | '
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-control.Models.IconOptions
+    name: IconOptions
+    spec.typeScript:
+      - name: IconOptions
+        fullName: IconOptions
+        uid: azure-maps-control.Models.IconOptions
+  - uid: number | azure-maps-control.Models.Expression
+    name: Expression
+    spec.typeScript:
+      - name: 'number | '
+        fullName: 'number | '
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.Models.Expression
+  - uid: azure-maps-control.Models.TextOptions
+    name: TextOptions
+    spec.typeScript:
+      - name: TextOptions
+        fullName: TextOptions
+        uid: azure-maps-control.Models.TextOptions
+  - uid: 'string[] | azure-maps-control.Models.Expression'
+    name: Expression
+    spec.typeScript:
+      - name: 'string[] | '
+        fullName: 'string[] | '
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.Models.Expression
+  - uid: azure-maps-control.atlas.Pixel | azure-maps-control.Models.Expression
+    name: Expression
+    spec.typeScript:
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
+      - name: ' | '
+        fullName: ' | '
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.Models.Expression
+  - uid: azure-maps-control.Models.MediaLayerOptions
+    name: MediaLayerOptions
+    spec.typeScript:
+      - name: MediaLayerOptions
+        fullName: MediaLayerOptions
+        uid: azure-maps-control.Models.MediaLayerOptions
+  - uid: >-
       Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
       any>>
+    name: 'Geometry, any>>'
     spec.typeScript:
       - name: Array<
         fullName: Array<

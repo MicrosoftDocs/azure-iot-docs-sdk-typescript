@@ -4,6 +4,9 @@ items:
     name: geojson
     fullName: geojson
     children:
+      - azure-maps-rest.atlas.service.geojson.GeoJsonRouteDirectionsResponse
+      - azure-maps-rest.atlas.service.geojson.GeoJsonSearchResponse
+      - azure-maps-rest.atlas.service.geojson.GeoJsonSearchReverseResponse
       - azure-maps-rest.atlas.service.geojson.SearchResponse
       - azure-maps-rest.atlas.service.geojson.SearchReverseResponse
     langs:
@@ -11,60 +14,46 @@ items:
     type: module
     summary: ''
     package: azure-maps-rest
-  - uid: azure-maps-rest.atlas.service.geojson.SearchResponse
-    name: SearchResponse
-    fullName: SearchResponse
-    children: []
-    langs:
-      - typeScript
-    type: class
-    summary: >-
-
-      "SearchResponse" is a type alias. It refers to SearchAddressResponse,
-      SearchAddressStructuredResponse, SearchAlongRouteResponse,
-      SearchFuzzyResponse, SearchGeometryResponse, SearchNearbyResponse,
-      SearchPoiCategoryResponse and SearchPoiResponse.
-    package: azure-maps-rest
-  - uid: azure-maps-rest.atlas.service.geojson.SearchReverseResponse
-    name: SearchReverseResponse
-    fullName: SearchReverseResponse
-    children: []
-    langs:
-      - typeScript
-    type: class
-    summary: >-
-
-      "SearchReverseResponse" is a type alias. It refers to
-      SearchAddressReverseCrossStreetResponse and SearchAddressReverseResponse.
-    package: azure-maps-rest
 references:
   - uid: azure-maps-rest.Models.RouteDirectionsResponse
+    name: RouteDirectionsResponse
     spec.typeScript:
       - name: RouteDirectionsResponse
         fullName: RouteDirectionsResponse
         uid: azure-maps-rest.Models.RouteDirectionsResponse
   - uid: azure-maps-rest.atlas.service.geojson.SearchResponse
+    name: SearchResponse
     spec.typeScript:
       - name: SearchResponse
         fullName: SearchResponse
         uid: azure-maps-rest.atlas.service.geojson.SearchResponse
   - uid: azure-maps-rest.atlas.service.geojson.SearchReverseResponse
+    name: SearchReverseResponse
     spec.typeScript:
       - name: SearchReverseResponse
         fullName: SearchReverseResponse
         uid: azure-maps-rest.atlas.service.geojson.SearchReverseResponse
   - uid: azure-maps-rest.Models.MapsClientOptions
+    name: MapsClientOptions
     spec.typeScript:
       - name: MapsClientOptions
         fullName: MapsClientOptions
         uid: azure-maps-rest.Models.MapsClientOptions
   - uid: azure-maps-rest.Services.Route
+    name: Route
     spec.typeScript:
       - name: Route
         fullName: Route
         uid: azure-maps-rest.Services.Route
   - uid: azure-maps-rest.Services.Search
+    name: Search
     spec.typeScript:
       - name: Search
         fullName: Search
         uid: azure-maps-rest.Services.Search
+  - uid: azure-maps-rest.atlas.service.geojson.GeoJsonRouteDirectionsResponse
+    name: GeoJsonRouteDirectionsResponse
+  - uid: azure-maps-rest.atlas.service.geojson.GeoJsonSearchResponse
+    name: GeoJsonSearchResponse
+  - uid: azure-maps-rest.atlas.service.geojson.GeoJsonSearchReverseResponse
+    name: GeoJsonSearchReverseResponse

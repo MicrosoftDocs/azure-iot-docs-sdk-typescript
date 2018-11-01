@@ -6,14 +6,15 @@ items:
     children: []
     langs:
       - typeScript
-    type: class
+    type: type alias
     summary: >-
       A base Geometry object in which all geometry shapes extend; Point,
       LineString, Polygon, MultiPoint, MultiLineString, MultiPolygon,
       GeometryCollection
-
-      "Geometry" is a type alias. It refers to Point, MultiPoint, LineString,
-      MultiLineString, Polygon and MultiPolygon.
+    syntax:
+      content: >-
+        type Geometry = Point | MultiPoint | LineString | MultiLineString |
+        Polygon | MultiPolygon
     package: azure-maps-control
 references:
   - uid: azure-maps-control.Models.CompassControlOptions

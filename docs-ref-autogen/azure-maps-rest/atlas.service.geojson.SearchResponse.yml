@@ -6,13 +6,14 @@ items:
     children: []
     langs:
       - typeScript
-    type: class
-    summary: >-
-
-      "SearchResponse" is a type alias. It refers to SearchAddressResponse,
-      SearchAddressStructuredResponse, SearchAlongRouteResponse,
-      SearchFuzzyResponse, SearchGeometryResponse, SearchNearbyResponse,
-      SearchPoiCategoryResponse and SearchPoiResponse.
+    type: type alias
+    summary: ''
+    syntax:
+      content: >-
+        type SearchResponse = SearchAddressResponse |
+        SearchAddressStructuredResponse | SearchAlongRouteResponse |
+        SearchFuzzyResponse | SearchGeometryResponse | SearchNearbyResponse |
+        SearchPoiCategoryResponse | SearchPoiResponse
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.Models.RouteDirectionsResponse

@@ -16,7 +16,7 @@ items:
       Cannot be instantiated by the user.
     package: azure-maps-control
   - uid: azure-maps-control.Models.HtmlMarkerManager.add
-    name: add
+    name: 'add(HtmlMarker, Position)'
     children: []
     type: method
     langs:
@@ -37,7 +37,7 @@ items:
           optional: true
     package: azure-maps-control
   - uid: azure-maps-control.Models.HtmlMarkerManager.clear
-    name: clear
+    name: clear()
     children: []
     type: method
     langs:
@@ -48,7 +48,7 @@ items:
       parameters: []
     package: azure-maps-control
   - uid: azure-maps-control.Models.HtmlMarkerManager.remove
-    name: remove
+    name: remove(string | HtmlMarker | Array<string | HtmlMarker>)
     children: []
     type: method
     langs:

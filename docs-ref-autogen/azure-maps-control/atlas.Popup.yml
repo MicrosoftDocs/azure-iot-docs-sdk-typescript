@@ -20,7 +20,7 @@ items:
     summary: An information window anchored at a specified position on a map.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Popup.constructor
-    name: Popup
+    name: Popup(PopupOptions)
     children: []
     type: constructor
     langs:
@@ -109,7 +109,7 @@ items:
           - () => void
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Popup.getOptions
-    name: getOptions
+    name: getOptions()
     children: []
     type: method
     langs:
@@ -123,7 +123,7 @@ items:
           - azure-maps-control.Models.PopupOptions
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Popup.getPopupOptions
-    name: getPopupOptions
+    name: getPopupOptions()
     children: []
     type: method
     langs:
@@ -139,7 +139,7 @@ items:
     deprecated:
       content: Use getOptions() instead.
   - uid: azure-maps-control.atlas.Popup.setOptions
-    name: setOptions
+    name: setOptions(PopupOptions)
     children: []
     type: method
     langs:
@@ -156,7 +156,7 @@ items:
           optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Popup.setPopupOptions
-    name: setPopupOptions
+    name: setPopupOptions(PopupOptions)
     children: []
     type: method
     langs:

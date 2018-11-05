@@ -28,7 +28,7 @@ items:
       name: azure-maps-control.atlas.source.Source
     package: azure-maps-control
   - uid: azure-maps-control.atlas.source.DataSource.constructor
-    name: DataSource
+    name: 'DataSource(string, DataSourceOptions)'
     children: []
     type: constructor
     langs:
@@ -60,7 +60,10 @@ items:
           optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.source.DataSource.add
-    name: add
+    name: >-
+      add(FeatureCollection | Feature<atlas.data.Geometry, any> |
+      atlas.data.Geometry | atlas.data.Geometry[] | GeometryCollection | Shape |
+      Shape[], number)
     children: []
     type: method
     langs:
@@ -97,7 +100,7 @@ items:
           optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.source.DataSource.clear
-    name: clear
+    name: clear()
     children: []
     type: method
     langs:
@@ -108,7 +111,7 @@ items:
       parameters: []
     package: azure-maps-control
   - uid: azure-maps-control.atlas.source.DataSource.dispose
-    name: dispose
+    name: dispose()
     children: []
     type: method
     langs:
@@ -119,7 +122,7 @@ items:
       parameters: []
     package: azure-maps-control
   - uid: azure-maps-control.atlas.source.DataSource.getOptions
-    name: getOptions
+    name: getOptions()
     children: []
     type: method
     langs:
@@ -133,7 +136,7 @@ items:
           - azure-maps-control.Models.DataSourceOptions
     package: azure-maps-control
   - uid: azure-maps-control.atlas.source.DataSource.getShapeById
-    name: getShapeById
+    name: getShapeById(string)
     children: []
     type: method
     langs:
@@ -156,7 +159,7 @@ items:
           - azure-maps-control.atlas.Shape
     package: azure-maps-control
   - uid: azure-maps-control.atlas.source.DataSource.remove
-    name: remove
+    name: remove(number | string | Shape)
     children: []
     type: method
     langs:
@@ -174,7 +177,7 @@ items:
           description: ''
     package: azure-maps-control
   - uid: azure-maps-control.atlas.source.DataSource.setOptions
-    name: setOptions
+    name: setOptions(DataSourceOptions)
     children: []
     type: method
     langs:
@@ -193,7 +196,7 @@ items:
           description: ''
     package: azure-maps-control
   - uid: azure-maps-control.atlas.source.DataSource.toJson
-    name: toJson
+    name: toJson()
     children: []
     type: method
     langs:

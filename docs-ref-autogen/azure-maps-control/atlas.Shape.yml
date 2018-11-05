@@ -24,7 +24,7 @@ items:
       update and maintain.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Shape.constructor
-    name: Shape
+    name: 'Shape(Feature<data.Geometry, any>)'
     children: []
     type: constructor
     langs:
@@ -41,7 +41,7 @@ items:
           description: a Geometry object
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Shape.constructor_1
-    name: Shape
+    name: 'Shape(data.Geometry, string, any)'
     children: []
     type: constructor
     langs:
@@ -71,7 +71,7 @@ items:
           optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Shape.addProperty
-    name: addProperty
+    name: 'addProperty(string, any)'
     children: []
     type: method
     langs:
@@ -91,7 +91,7 @@ items:
 
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Shape.getBounds
-    name: getBounds
+    name: getBounds()
     children: []
     type: method
     langs:
@@ -105,7 +105,7 @@ items:
           - azure-maps-control.atlas.data.BoundingBox
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Shape.getCoordinates
-    name: getCoordinates
+    name: getCoordinates()
     children: []
     type: method
     langs:
@@ -123,7 +123,7 @@ items:
             azure-maps-control.atlas.data.Position[][][]
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Shape.getId
-    name: getId
+    name: getId()
     children: []
     type: method
     langs:
@@ -137,7 +137,7 @@ items:
           - string
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Shape.getProperties
-    name: getProperties
+    name: getProperties()
     children: []
     type: method
     langs:
@@ -151,7 +151,7 @@ items:
           - any
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Shape.getType
-    name: getType
+    name: getType()
     children: []
     type: method
     langs:
@@ -165,7 +165,7 @@ items:
           - string
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Shape.isCircle
-    name: isCircle
+    name: isCircle()
     children: []
     type: method
     langs:
@@ -184,7 +184,7 @@ items:
           - boolean
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Shape.setCoordinates
-    name: setCoordinates
+    name: 'setCoordinates(Position | Position[] | Position[][] | Position[][][])'
     children: []
     type: method
     langs:
@@ -208,7 +208,7 @@ items:
             Position[][]
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Shape.setProperties
-    name: setProperties
+    name: setProperties(any)
     children: []
     type: method
     langs:
@@ -224,7 +224,7 @@ items:
 
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Shape.toJson
-    name: toJson
+    name: toJson()
     children: []
     type: method
     langs:

@@ -47,7 +47,7 @@ items:
       name: Array<number>
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.constructor
-    name: BoundingBox
+    name: 'BoundingBox(number[])'
     children: []
     type: constructor
     langs:
@@ -64,7 +64,7 @@ items:
             elevation1, east, north, elevation2]
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.constructor_1
-    name: BoundingBox
+    name: 'BoundingBox(Position, Position)'
     children: []
     type: constructor
     langs:
@@ -100,7 +100,7 @@ items:
           - ArrayConstructor
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.containsPosition
-    name: containsPosition
+    name: 'containsPosition(BoundingBox, Position)'
     children: []
     type: method
     langs:
@@ -124,7 +124,7 @@ items:
           - boolean
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.crossesAntimeridian
-    name: crossesAntimeridian
+    name: crossesAntimeridian(BoundingBox)
     children: []
     type: method
     langs:
@@ -144,7 +144,7 @@ items:
           - boolean
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.fromBoundingBox
-    name: fromBoundingBox
+    name: fromBoundingBox(BoundingBox)
     children: []
     type: method
     langs:
@@ -163,7 +163,9 @@ items:
           - azure-maps-control.atlas.data.BoundingBox
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.fromData
-    name: fromData
+    name: >-
+      fromData(FeatureCollection | Feature<Geometry, any> | Geometry | Shape |
+      Array<FeatureCollection | Feature<Geometry, any> | Geometry>)
     children: []
     type: method
     langs:
@@ -195,7 +197,7 @@ items:
           - azure-maps-control.atlas.data.BoundingBox
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.fromDimensions
-    name: fromDimensions
+    name: 'fromDimensions(Position, number, number)'
     children: []
     type: method
     langs:
@@ -224,7 +226,7 @@ items:
           - azure-maps-control.atlas.data.BoundingBox
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.fromEdges
-    name: fromEdges
+    name: 'fromEdges(number, number, number, number)'
     children: []
     type: method
     langs:
@@ -257,7 +259,7 @@ items:
           - azure-maps-control.atlas.data.BoundingBox
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.fromLatLngs
-    name: fromLatLngs
+    name: 'fromLatLngs(Array<any | number[]>)'
     children: []
     type: method
     langs:
@@ -286,7 +288,7 @@ items:
           - azure-maps-control.atlas.data.BoundingBox
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.fromPositions
-    name: fromPositions
+    name: 'fromPositions(Position[])'
     children: []
     type: method
     langs:
@@ -304,7 +306,7 @@ items:
           - azure-maps-control.atlas.data.BoundingBox
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.getCenter
-    name: getCenter
+    name: getCenter(BoundingBox)
     children: []
     type: method
     langs:
@@ -322,7 +324,7 @@ items:
           - azure-maps-control.atlas.data.Position
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.getEast
-    name: getEast
+    name: getEast(BoundingBox)
     children: []
     type: method
     langs:
@@ -340,7 +342,7 @@ items:
           - number
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.getHeight
-    name: getHeight
+    name: getHeight(BoundingBox)
     children: []
     type: method
     langs:
@@ -358,7 +360,7 @@ items:
           - number
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.getNorth
-    name: getNorth
+    name: getNorth(BoundingBox)
     children: []
     type: method
     langs:
@@ -376,7 +378,7 @@ items:
           - number
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.getNorthEast
-    name: getNorthEast
+    name: getNorthEast(BoundingBox)
     children: []
     type: method
     langs:
@@ -394,7 +396,7 @@ items:
           - azure-maps-control.atlas.data.Position
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.getNorthWest
-    name: getNorthWest
+    name: getNorthWest(BoundingBox)
     children: []
     type: method
     langs:
@@ -412,7 +414,7 @@ items:
           - azure-maps-control.atlas.data.Position
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.getSouth
-    name: getSouth
+    name: getSouth(BoundingBox)
     children: []
     type: method
     langs:
@@ -430,7 +432,7 @@ items:
           - number
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.getSouthEast
-    name: getSouthEast
+    name: getSouthEast(BoundingBox)
     children: []
     type: method
     langs:
@@ -448,7 +450,7 @@ items:
           - azure-maps-control.atlas.data.Position
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.getSouthWest
-    name: getSouthWest
+    name: getSouthWest(BoundingBox)
     children: []
     type: method
     langs:
@@ -466,7 +468,7 @@ items:
           - azure-maps-control.atlas.data.Position
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.getWest
-    name: getWest
+    name: getWest(BoundingBox)
     children: []
     type: method
     langs:
@@ -484,7 +486,7 @@ items:
           - number
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.getWidth
-    name: getWidth
+    name: getWidth(BoundingBox)
     children: []
     type: method
     langs:
@@ -502,7 +504,7 @@ items:
           - number
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.intersect
-    name: intersect
+    name: 'intersect(BoundingBox, BoundingBox)'
     children: []
     type: method
     langs:
@@ -524,7 +526,7 @@ items:
           - boolean
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.merge
-    name: merge
+    name: 'merge(BoundingBox, BoundingBox)'
     children: []
     type: method
     langs:
@@ -546,7 +548,7 @@ items:
           - azure-maps-control.atlas.data.BoundingBox
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.splitOnAntimeridian
-    name: splitOnAntimeridian
+    name: splitOnAntimeridian(BoundingBox)
     children: []
     type: method
     langs:

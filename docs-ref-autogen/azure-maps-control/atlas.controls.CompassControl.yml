@@ -13,7 +13,7 @@ items:
     summary: A control for changing the rotation of the map.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.controls.CompassControl.constructor
-    name: CompassControl
+    name: CompassControl(CompassControlOptions)
     children: []
     type: constructor
     langs:
@@ -30,7 +30,7 @@ items:
           optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.controls.CompassControl.onAdd
-    name: onAdd
+    name: 'onAdd(Map, ControlOptions)'
     children: []
     type: method
     langs:
@@ -54,7 +54,7 @@ items:
           - HTMLElement
     package: azure-maps-control
   - uid: azure-maps-control.atlas.controls.CompassControl.onRemove
-    name: onRemove
+    name: onRemove()
     children: []
     type: method
     langs:

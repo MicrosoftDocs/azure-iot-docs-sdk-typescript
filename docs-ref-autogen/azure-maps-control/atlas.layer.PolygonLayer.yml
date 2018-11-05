@@ -16,7 +16,7 @@ items:
       name: azure-maps-control.atlas.layer.Layer
     package: azure-maps-control
   - uid: azure-maps-control.atlas.layer.PolygonLayer.constructor
-    name: PolygonLayer
+    name: 'PolygonLayer(string | Source, string, PolygonLayerOptions)'
     children: []
     type: constructor
     langs:
@@ -46,7 +46,7 @@ items:
           optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.layer.PolygonLayer.getOptions
-    name: getOptions
+    name: getOptions()
     children: []
     type: method
     langs:
@@ -60,7 +60,7 @@ items:
           - azure-maps-control.Models.PolygonLayerOptions
     package: azure-maps-control
   - uid: azure-maps-control.atlas.layer.PolygonLayer.getSource
-    name: getSource
+    name: getSource()
     children: []
     type: method
     langs:
@@ -74,7 +74,7 @@ items:
           - string | azure-maps-control.atlas.source.Source
     package: azure-maps-control
   - uid: azure-maps-control.atlas.layer.PolygonLayer.setOptions
-    name: setOptions
+    name: setOptions(PolygonLayerOptions)
     children: []
     type: method
     langs:

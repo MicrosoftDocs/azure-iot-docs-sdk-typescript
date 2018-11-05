@@ -20,7 +20,7 @@ items:
       Cannot be instantiated by the user.
     package: azure-maps-control
   - uid: azure-maps-control.Models.LayerManager.add
-    name: add
+    name: 'add(Layer | Layer[], string | Layer)'
     children: []
     type: method
     langs:
@@ -47,7 +47,7 @@ items:
           optional: true
     package: azure-maps-control
   - uid: azure-maps-control.Models.LayerManager.clear
-    name: clear
+    name: clear()
     children: []
     type: method
     langs:
@@ -58,7 +58,7 @@ items:
       parameters: []
     package: azure-maps-control
   - uid: azure-maps-control.Models.LayerManager.getLayerById
-    name: getLayerById
+    name: getLayerById(string)
     children: []
     type: method
     langs:
@@ -77,7 +77,7 @@ items:
           - azure-maps-control.atlas.layer.Layer
     package: azure-maps-control
   - uid: azure-maps-control.Models.LayerManager.getLayers
-    name: getLayers
+    name: getLayers()
     children: []
     type: method
     langs:
@@ -91,7 +91,7 @@ items:
           - 'azure-maps-control.atlas.layer.Layer[]'
     package: azure-maps-control
   - uid: azure-maps-control.Models.LayerManager.getRenderedShapes
-    name: getRenderedShapes
+    name: 'getRenderedShapes(Point | BoundingBox, Array<string | Layer>, Expression)'
     children: []
     type: method
     langs:
@@ -144,7 +144,7 @@ items:
             any>>
     package: azure-maps-control
   - uid: azure-maps-control.Models.LayerManager.move
-    name: move
+    name: 'move(string | Layer, string | Layer)'
     children: []
     type: method
     langs:
@@ -165,7 +165,7 @@ items:
           optional: true
     package: azure-maps-control
   - uid: azure-maps-control.Models.LayerManager.remove
-    name: remove
+    name: remove(string | Layer | Array<string | Layer>)
     children: []
     type: method
     langs:

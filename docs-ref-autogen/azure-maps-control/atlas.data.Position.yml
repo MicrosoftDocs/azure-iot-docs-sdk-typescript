@@ -25,7 +25,7 @@ items:
       name: Array<number>
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.Position.constructor
-    name: Position
+    name: 'Position(number, number, number)'
     children: []
     type: constructor
     langs:
@@ -64,7 +64,7 @@ items:
           - ArrayConstructor
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.Position.areEqual
-    name: areEqual
+    name: 'areEqual(Position, Position, number)'
     children: []
     type: method
     langs:
@@ -95,7 +95,7 @@ items:
           - boolean
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.Position.fromLatLng
-    name: fromLatLng
+    name: fromLatLng(object)
     children: []
     type: method
     langs:
@@ -124,7 +124,7 @@ items:
           - azure-maps-control.atlas.data.Position
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.Position.fromLatLng_1
-    name: fromLatLng
+    name: 'fromLatLng(number, number, number)'
     children: []
     type: method
     langs:
@@ -151,7 +151,7 @@ items:
           - azure-maps-control.atlas.data.Position
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.Position.fromLatLng_2
-    name: fromLatLng
+    name: 'fromLatLng(number[])'
     children: []
     type: method
     langs:
@@ -173,7 +173,7 @@ items:
           - azure-maps-control.atlas.data.Position
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.Position.fromLatLngs
-    name: fromLatLngs
+    name: 'fromLatLngs(Array<any | number[]>)'
     children: []
     type: method
     langs:
@@ -202,7 +202,7 @@ items:
           - 'azure-maps-control.atlas.data.Position[]'
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.Position.fromPosition
-    name: fromPosition
+    name: fromPosition(Position)
     children: []
     type: method
     langs:

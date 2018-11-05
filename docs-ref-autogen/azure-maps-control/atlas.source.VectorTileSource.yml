@@ -19,7 +19,7 @@ items:
       name: azure-maps-control.atlas.source.Source
     package: azure-maps-control
   - uid: azure-maps-control.atlas.source.VectorTileSource.constructor
-    name: VectorTileSource
+    name: 'VectorTileSource(string, VectorTileSourceOptions)'
     children: []
     type: constructor
     langs:
@@ -40,7 +40,7 @@ items:
           optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.source.VectorTileSource.getOptions
-    name: getOptions
+    name: getOptions()
     children: []
     type: method
     langs:
@@ -54,7 +54,7 @@ items:
           - azure-maps-control.Models.VectorTileSourceOptions
     package: azure-maps-control
   - uid: azure-maps-control.atlas.source.VectorTileSource.getShape
-    name: getShape
+    name: 'getShape(string, Expression)'
     children: []
     type: method
     langs:

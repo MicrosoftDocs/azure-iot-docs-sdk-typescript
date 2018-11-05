@@ -16,7 +16,7 @@ items:
       name: azure-maps-control.atlas.layer.Layer
     package: azure-maps-control
   - uid: azure-maps-control.atlas.layer.BubbleLayer.constructor
-    name: BubbleLayer
+    name: 'BubbleLayer(string | Source, string, BubbleLayerOptions)'
     children: []
     type: constructor
     langs:
@@ -46,7 +46,7 @@ items:
           optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.layer.BubbleLayer.getOptions
-    name: getOptions
+    name: getOptions()
     children: []
     type: method
     langs:
@@ -60,7 +60,7 @@ items:
           - azure-maps-control.Models.BubbleLayerOptions
     package: azure-maps-control
   - uid: azure-maps-control.atlas.layer.BubbleLayer.getSource
-    name: getSource
+    name: getSource()
     children: []
     type: method
     langs:
@@ -74,7 +74,7 @@ items:
           - string | azure-maps-control.atlas.source.Source
     package: azure-maps-control
   - uid: azure-maps-control.atlas.layer.BubbleLayer.setOptions
-    name: setOptions
+    name: setOptions(BubbleLayerOptions)
     children: []
     type: method
     langs:

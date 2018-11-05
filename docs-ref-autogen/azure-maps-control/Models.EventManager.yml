@@ -22,7 +22,9 @@ items:
       Cannot be instantiated by the user.
     package: azure-maps-control
   - uid: azure-maps-control.Models.EventManager.add
-    name: add
+    name: >-
+      add("touchstart" | "touchend" | "touchmove" | "touchcancel", (e:
+      MapTouchEvent) => void)
     children: []
     type: method
     langs:
@@ -47,7 +49,9 @@ items:
           - any
     package: azure-maps-control
   - uid: azure-maps-control.Models.EventManager.add_1
-    name: add
+    name: >-
+      add("mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
+      "dblclick" | "mouseout" | "contextmenu", (e: MapMouseEvent) => void)
     children: []
     type: method
     langs:
@@ -75,7 +79,7 @@ items:
           - any
     package: azure-maps-control
   - uid: azure-maps-control.Models.EventManager.add_2
-    name: add
+    name: 'add("wheel", (e: MapMouseWheelEvent) => void)'
     children: []
     type: method
     langs:
@@ -98,7 +102,9 @@ items:
           - any
     package: azure-maps-control
   - uid: azure-maps-control.Models.EventManager.add_3
-    name: add
+    name: >-
+      add("error" | "load" | "movestart" | "move" | "moveend" | "resize", () =>
+      void)
     children: []
     type: method
     langs:
@@ -123,7 +129,9 @@ items:
           - any
     package: azure-maps-control
   - uid: azure-maps-control.Models.EventManager.add_4
-    name: add
+    name: >-
+      add("touchstart" | "touchend" | "touchmove" | "touchcancel", Layer |
+      Layer[], (e: MapTouchEvent) => void)
     children: []
     type: method
     langs:
@@ -155,7 +163,10 @@ items:
           - any
     package: azure-maps-control
   - uid: azure-maps-control.Models.EventManager.add_5
-    name: add
+    name: >-
+      add("mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
+      "dblclick" | "mouseout" | "mouseenter" | "mouseleave" | "contextmenu",
+      Layer | Layer[], (e: MapMouseEvent) => void)
     children: []
     type: method
     langs:
@@ -191,7 +202,7 @@ items:
           - any
     package: azure-maps-control
   - uid: azure-maps-control.Models.EventManager.add_6
-    name: add
+    name: 'add("wheel", Layer | Layer[], (e: MapMouseWheelEvent) => void)'
     children: []
     type: method
     langs:
@@ -222,7 +233,9 @@ items:
           - any
     package: azure-maps-control
   - uid: azure-maps-control.Models.EventManager.remove
-    name: remove
+    name: >-
+      remove(string, (e: void | MapMouseEvent | MapTouchEvent |
+      MapMouseWheelEvent) => void)
     children: []
     type: method
     langs:
@@ -249,7 +262,9 @@ items:
           - any
     package: azure-maps-control
   - uid: azure-maps-control.Models.EventManager.remove_1
-    name: remove
+    name: >-
+      remove(string, Layer | Layer[], (e: void | MapMouseEvent | MapTouchEvent |
+      MapMouseWheelEvent) => void)
     children: []
     type: method
     langs:

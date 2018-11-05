@@ -56,7 +56,9 @@ items:
     summary: The control for a visual and interactive web map.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.constructor
-    name: Map
+    name: >-
+      Map(string, ServiceOptions & CameraOptions & StyleOptions &
+      UserInteractionOptions)
     children: []
     type: constructor
     langs:
@@ -166,7 +168,7 @@ items:
           - azure-maps-control.Models.SourceManager
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.addCircles
-    name: addCircles
+    name: 'addCircles(Array<Feature<Point, CircleProperties>>, CircleLayerOptions)'
     children: []
     type: method
     langs:
@@ -201,7 +203,7 @@ items:
     deprecated:
       content: Use atlas.layer.BubbleLayer instead.
   - uid: azure-maps-control.atlas.Map.addControl
-    name: addControl
+    name: 'addControl(Control, ControlOptions)'
     children: []
     type: method
     langs:
@@ -223,7 +225,7 @@ items:
     deprecated:
       content: Use map.controls.add instead.
   - uid: azure-maps-control.atlas.Map.addEventListener
-    name: addEventListener
+    name: 'addEventListener(string, any)'
     children: []
     type: method
     langs:
@@ -296,7 +298,7 @@ items:
     deprecated:
       content: Use map.events.add instead.
   - uid: azure-maps-control.atlas.Map.addEventListener_1
-    name: addEventListener
+    name: 'addEventListener(string, string, any)'
     children: []
     type: method
     langs:
@@ -349,7 +351,7 @@ items:
     deprecated:
       content: Use map.events.add instead.
   - uid: azure-maps-control.atlas.Map.addHtml
-    name: addHtml
+    name: 'addHtml(HTMLElement, Position)'
     children: []
     type: method
     langs:
@@ -376,7 +378,7 @@ items:
         recommend map.markers.add
         Adds a custom HTMLElement to the map at a specified position.
   - uid: azure-maps-control.atlas.Map.addIcon
-    name: addIcon
+    name: 'addIcon(string, HTMLImageElement)'
     children: []
     type: method
     langs:
@@ -401,7 +403,9 @@ items:
     deprecated:
       content: Use map.imageSprite.add instead.
   - uid: azure-maps-control.atlas.Map.addLinestrings
-    name: addLinestrings
+    name: >-
+      addLinestrings(Array<Feature<LineString | MultiLineString,
+      LinestringProperties>>, LinestringLayerOptions)
     children: []
     type: method
     langs:
@@ -439,7 +443,7 @@ items:
     deprecated:
       content: Use atlas.layer.LineLayer instead.
   - uid: azure-maps-control.atlas.Map.addPins
-    name: addPins
+    name: 'addPins(Array<Feature<Point, PinProperties>>, PinLayerOptions)'
     children: []
     type: method
     langs:
@@ -474,7 +478,9 @@ items:
     deprecated:
       content: Use atlas.layer.SymbolLayer instead.
   - uid: azure-maps-control.atlas.Map.addPolygons
-    name: addPolygons
+    name: >-
+      addPolygons(Array<Feature<Polygon | MultiPolygon, PolygonProperties>>,
+      PolygonLayerOptions)
     children: []
     type: method
     langs:
@@ -510,7 +516,7 @@ items:
     deprecated:
       content: Use atlas.layer.PolygonLayer instead.
   - uid: azure-maps-control.atlas.Map.addRaster
-    name: addRaster
+    name: 'addRaster(string[], RasterLayerOptions)'
     children: []
     type: method
     langs:
@@ -548,7 +554,7 @@ items:
     deprecated:
       content: Use atlas.layer.TileLayer instead.
   - uid: azure-maps-control.atlas.Map.areTilesLoaded
-    name: areTilesLoaded
+    name: areTilesLoaded()
     children: []
     type: method
     langs:
@@ -564,7 +570,7 @@ items:
           - boolean
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.clear
-    name: clear
+    name: clear()
     children: []
     type: method
     langs:
@@ -577,7 +583,7 @@ items:
       parameters: []
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.dispose
-    name: dispose
+    name: dispose()
     children: []
     type: method
     langs:
@@ -590,7 +596,7 @@ items:
       parameters: []
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.getCamera
-    name: getCamera
+    name: getCamera()
     children: []
     type: method
     langs:
@@ -606,7 +612,7 @@ items:
             azure-maps-control.Models.CameraBoundsOptions
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.getCanvas
-    name: getCanvas
+    name: getCanvas()
     children: []
     type: method
     langs:
@@ -620,7 +626,7 @@ items:
           - HTMLCanvasElement
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.getCanvasContainer
-    name: getCanvasContainer
+    name: getCanvasContainer()
     children: []
     type: method
     langs:
@@ -638,7 +644,7 @@ items:
           - HTMLElement
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.getLayers
-    name: getLayers
+    name: getLayers()
     children: []
     type: method
     langs:
@@ -654,7 +660,7 @@ items:
     deprecated:
       content: Use layers.getLayers() instead.
   - uid: azure-maps-control.atlas.Map.getMapContainer
-    name: getMapContainer
+    name: getMapContainer()
     children: []
     type: method
     langs:
@@ -668,7 +674,7 @@ items:
           - HTMLElement
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.getServiceOptions
-    name: getServiceOptions
+    name: getServiceOptions()
     children: []
     type: method
     langs:
@@ -682,7 +688,7 @@ items:
           - azure-maps-control.Models.ServiceOptions
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.getStyle
-    name: getStyle
+    name: getStyle()
     children: []
     type: method
     langs:
@@ -696,7 +702,7 @@ items:
           - azure-maps-control.Models.StyleOptions
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.getTraffic
-    name: getTraffic
+    name: getTraffic()
     children: []
     type: method
     langs:
@@ -710,7 +716,7 @@ items:
           - azure-maps-control.Models.TrafficOptions
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.getUserInteraction
-    name: getUserInteraction
+    name: getUserInteraction()
     children: []
     type: method
     langs:
@@ -724,7 +730,7 @@ items:
           - azure-maps-control.Models.UserInteractionOptions
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.pixelsToPositions
-    name: pixelsToPositions
+    name: 'pixelsToPositions(Pixel[])'
     children: []
     type: method
     langs:
@@ -745,7 +751,7 @@ items:
           - 'azure-maps-control.atlas.data.Position[]'
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.positionsToPixels
-    name: positionsToPixels
+    name: 'positionsToPixels(Position[])'
     children: []
     type: method
     langs:
@@ -766,7 +772,7 @@ items:
           - 'azure-maps-control.atlas.Pixel[]'
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.remove
-    name: remove
+    name: remove()
     children: []
     type: method
     langs:
@@ -781,7 +787,7 @@ items:
     deprecated:
       content: use map.dispose()
   - uid: azure-maps-control.atlas.Map.removeControl
-    name: removeControl
+    name: removeControl(Control)
     children: []
     type: method
     langs:
@@ -798,7 +804,7 @@ items:
     deprecated:
       content: Use map.controls.remove instead.
   - uid: azure-maps-control.atlas.Map.removeEventListener
-    name: removeEventListener
+    name: 'removeEventListener(string, any)'
     children: []
     type: method
     langs:
@@ -819,7 +825,7 @@ items:
     deprecated:
       content: Use map.events.remove instead.
   - uid: azure-maps-control.atlas.Map.removeEventListener_1
-    name: removeEventListener
+    name: 'removeEventListener(string, string, any)'
     children: []
     type: method
     langs:
@@ -844,7 +850,7 @@ items:
     deprecated:
       content: Use map.events.remove instead.
   - uid: azure-maps-control.atlas.Map.removeHtml
-    name: removeHtml
+    name: removeHtml(string)
     children: []
     type: method
     langs:
@@ -864,7 +870,7 @@ items:
         recommend map.markers.remove
         Removes a custom HTMLElement from the map.
   - uid: azure-maps-control.atlas.Map.removeLayers
-    name: removeLayers
+    name: 'removeLayers(string[])'
     children: []
     type: method
     langs:
@@ -885,7 +891,7 @@ items:
     deprecated:
       content: Use layers.remove instead.
   - uid: azure-maps-control.atlas.Map.resize
-    name: resize
+    name: resize(any)
     children: []
     type: method
     langs:
@@ -906,7 +912,7 @@ items:
           - any
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.resize_1
-    name: resize
+    name: 'resize(number | string, number | string, any)'
     children: []
     type: method
     langs:
@@ -941,7 +947,7 @@ items:
           - any
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.setCamera
-    name: setCamera
+    name: setCamera(CameraOptions | CameraBoundsOptions & AnimationOptions)
     children: []
     type: method
     langs:
@@ -968,7 +974,7 @@ items:
           optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.setCameraBounds
-    name: setCameraBounds
+    name: setCameraBounds(CameraBoundsOptions)
     children: []
     type: method
     langs:
@@ -986,7 +992,7 @@ items:
     deprecated:
       content: recommend setCamera.
   - uid: azure-maps-control.atlas.Map.setServiceOptions
-    name: setServiceOptions
+    name: setServiceOptions(ServiceOptions)
     children: []
     type: method
     langs:
@@ -1001,7 +1007,7 @@ items:
           description: ''
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.setStyle
-    name: setStyle
+    name: setStyle(StyleOptions)
     children: []
     type: method
     langs:
@@ -1020,7 +1026,7 @@ items:
           optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.setTraffic
-    name: setTraffic
+    name: setTraffic(TrafficOptions)
     children: []
     type: method
     langs:
@@ -1039,7 +1045,7 @@ items:
           optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.setUserInteraction
-    name: setUserInteraction
+    name: setUserInteraction(UserInteractionOptions)
     children: []
     type: method
     langs:
@@ -1058,7 +1064,7 @@ items:
           optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.stop
-    name: stop
+    name: stop()
     children: []
     type: method
     langs:

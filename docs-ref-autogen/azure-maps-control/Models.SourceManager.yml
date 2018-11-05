@@ -18,7 +18,7 @@ items:
       Cannot be instantiated by the user.
     package: azure-maps-control
   - uid: azure-maps-control.Models.SourceManager.add
-    name: add
+    name: 'add(Source | Source[])'
     children: []
     type: method
     langs:
@@ -39,7 +39,7 @@ items:
 
     package: azure-maps-control
   - uid: azure-maps-control.Models.SourceManager.clear
-    name: clear
+    name: clear()
     children: []
     type: method
     langs:
@@ -50,7 +50,7 @@ items:
       parameters: []
     package: azure-maps-control
   - uid: azure-maps-control.Models.SourceManager.getById
-    name: getById
+    name: getById(string)
     children: []
     type: method
     langs:
@@ -69,7 +69,7 @@ items:
           - azure-maps-control.atlas.source.Source
     package: azure-maps-control
   - uid: azure-maps-control.Models.SourceManager.isSourceLoaded
-    name: isSourceLoaded
+    name: isSourceLoaded(string | Source)
     children: []
     type: method
     langs:
@@ -88,7 +88,7 @@ items:
           - boolean
     package: azure-maps-control
   - uid: azure-maps-control.Models.SourceManager.remove
-    name: remove
+    name: remove(string | Source | Array<string | Source>)
     children: []
     type: method
     langs:

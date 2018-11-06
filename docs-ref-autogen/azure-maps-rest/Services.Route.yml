@@ -16,7 +16,7 @@ items:
     summary: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Route.getRouteDirections
-    name: getRouteDirections
+    name: getRouteDirections(string)
     children: []
     type: method
     langs:
@@ -73,7 +73,7 @@ items:
           - Promise<azure-maps-rest.Models.RouteDirectionsResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Route.getRouteDirections_1
-    name: getRouteDirections
+    name: 'getRouteDirections(string, RouteGetRouteDirectionsOptionalParams)'
     children: []
     type: method
     langs:
@@ -123,7 +123,7 @@ items:
           - Promise<azure-maps-rest.Models.RouteDirectionsResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Route.getRouteDirections_2
-    name: getRouteDirections
+    name: 'getRouteDirections(string, ServiceCallback<RouteDirectionsResponse>)'
     children: []
     type: method
     langs:
@@ -173,7 +173,9 @@ items:
           - Promise<azure-maps-rest.Models.RouteDirectionsResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Route.getRouteDirections_3
-    name: getRouteDirections
+    name: >-
+      getRouteDirections(string, RouteGetRouteDirectionsOptionalParams,
+      ServiceCallback<RouteDirectionsResponse>)
     children: []
     type: method
     langs:
@@ -228,7 +230,9 @@ items:
           - Promise<azure-maps-rest.Models.RouteDirectionsResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Route.getRouteDirectionsWithHttpOperationResponse
-    name: getRouteDirectionsWithHttpOperationResponse
+    name: >-
+      getRouteDirectionsWithHttpOperationResponse(string,
+      RouteGetRouteDirectionsOptionalParams)
     children: []
     type: method
     langs:

@@ -71,7 +71,7 @@ items:
     summary: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchAddress
-    name: getSearchAddress
+    name: getSearchAddress(string)
     children: []
     type: method
     langs:
@@ -115,7 +115,7 @@ items:
           - Promise<azure-maps-rest.Models.SearchAddressResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchAddress_1
-    name: getSearchAddress
+    name: 'getSearchAddress(string, SearchGetSearchAddressOptionalParams)'
     children: []
     type: method
     langs:
@@ -161,7 +161,7 @@ items:
           - Promise<azure-maps-rest.Models.SearchAddressResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchAddress_2
-    name: getSearchAddress
+    name: 'getSearchAddress(string, ServiceCallback<SearchAddressResponse>)'
     children: []
     type: method
     langs:
@@ -207,7 +207,9 @@ items:
           - Promise<azure-maps-rest.Models.SearchAddressResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchAddress_3
-    name: getSearchAddress
+    name: >-
+      getSearchAddress(string, SearchGetSearchAddressOptionalParams,
+      ServiceCallback<SearchAddressResponse>)
     children: []
     type: method
     langs:
@@ -258,7 +260,7 @@ items:
           - Promise<azure-maps-rest.Models.SearchAddressResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchAddressReverse
-    name: getSearchAddressReverse
+    name: getSearchAddressReverse(string)
     children: []
     type: method
     langs:
@@ -293,7 +295,9 @@ items:
           - Promise<azure-maps-rest.Models.SearchAddressReverseResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchAddressReverse_1
-    name: getSearchAddressReverse
+    name: >-
+      getSearchAddressReverse(string,
+      SearchGetSearchAddressReverseOptionalParams)
     children: []
     type: method
     langs:
@@ -330,7 +334,9 @@ items:
           - Promise<azure-maps-rest.Models.SearchAddressReverseResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchAddressReverse_2
-    name: getSearchAddressReverse
+    name: >-
+      getSearchAddressReverse(string,
+      ServiceCallback<SearchAddressReverseResponse>)
     children: []
     type: method
     langs:
@@ -368,7 +374,10 @@ items:
           - Promise<azure-maps-rest.Models.SearchAddressReverseResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchAddressReverse_3
-    name: getSearchAddressReverse
+    name: >-
+      getSearchAddressReverse(string,
+      SearchGetSearchAddressReverseOptionalParams,
+      ServiceCallback<SearchAddressReverseResponse>)
     children: []
     type: method
     langs:
@@ -411,7 +420,7 @@ items:
           - Promise<azure-maps-rest.Models.SearchAddressReverseResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchAddressReverseCrossStreet
-    name: getSearchAddressReverseCrossStreet
+    name: getSearchAddressReverseCrossStreet(string)
     children: []
     type: method
     langs:
@@ -447,7 +456,9 @@ items:
             Promise<azure-maps-rest.Models.SearchAddressReverseCrossStreetResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchAddressReverseCrossStreet_1
-    name: getSearchAddressReverseCrossStreet
+    name: >-
+      getSearchAddressReverseCrossStreet(string,
+      SearchGetSearchAddressReverseCrossStreetOptionalParams)
     children: []
     type: method
     langs:
@@ -486,7 +497,9 @@ items:
             Promise<azure-maps-rest.Models.SearchAddressReverseCrossStreetResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchAddressReverseCrossStreet_2
-    name: getSearchAddressReverseCrossStreet
+    name: >-
+      getSearchAddressReverseCrossStreet(string,
+      ServiceCallback<SearchAddressReverseCrossStreetResponse>)
     children: []
     type: method
     langs:
@@ -525,7 +538,10 @@ items:
             Promise<azure-maps-rest.Models.SearchAddressReverseCrossStreetResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchAddressReverseCrossStreet_3
-    name: getSearchAddressReverseCrossStreet
+    name: >-
+      getSearchAddressReverseCrossStreet(string,
+      SearchGetSearchAddressReverseCrossStreetOptionalParams,
+      ServiceCallback<SearchAddressReverseCrossStreetResponse>)
     children: []
     type: method
     langs:
@@ -571,7 +587,9 @@ items:
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.Services.Search.getSearchAddressReverseCrossStreetWithHttpOperationResponse
-    name: getSearchAddressReverseCrossStreetWithHttpOperationResponse
+    name: >-
+      getSearchAddressReverseCrossStreetWithHttpOperationResponse(string,
+      SearchGetSearchAddressReverseCrossStreetOptionalParams)
     children: []
     type: method
     langs:
@@ -619,7 +637,9 @@ items:
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.Services.Search.getSearchAddressReverseWithHttpOperationResponse
-    name: getSearchAddressReverseWithHttpOperationResponse
+    name: >-
+      getSearchAddressReverseWithHttpOperationResponse(string,
+      SearchGetSearchAddressReverseOptionalParams)
     children: []
     type: method
     langs:
@@ -663,7 +683,7 @@ items:
             Promise<HttpOperationResponse<azure-maps-rest.Models.SearchAddressReverseResponse>>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchAddressStructured
-    name: getSearchAddressStructured
+    name: getSearchAddressStructured(string)
     children: []
     type: method
     langs:
@@ -698,7 +718,9 @@ items:
           - Promise<azure-maps-rest.Models.SearchAddressStructuredResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchAddressStructured_1
-    name: getSearchAddressStructured
+    name: >-
+      getSearchAddressStructured(string,
+      SearchGetSearchAddressStructuredOptionalParams)
     children: []
     type: method
     langs:
@@ -739,7 +761,9 @@ items:
           - Promise<azure-maps-rest.Models.SearchAddressStructuredResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchAddressStructured_2
-    name: getSearchAddressStructured
+    name: >-
+      getSearchAddressStructured(string,
+      ServiceCallback<SearchAddressStructuredResponse>)
     children: []
     type: method
     langs:
@@ -780,7 +804,10 @@ items:
           - Promise<azure-maps-rest.Models.SearchAddressStructuredResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchAddressStructured_3
-    name: getSearchAddressStructured
+    name: >-
+      getSearchAddressStructured(string,
+      SearchGetSearchAddressStructuredOptionalParams,
+      ServiceCallback<SearchAddressStructuredResponse>)
     children: []
     type: method
     langs:
@@ -828,7 +855,9 @@ items:
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.Services.Search.getSearchAddressStructuredWithHttpOperationResponse
-    name: getSearchAddressStructuredWithHttpOperationResponse
+    name: >-
+      getSearchAddressStructuredWithHttpOperationResponse(string,
+      SearchGetSearchAddressStructuredOptionalParams)
     children: []
     type: method
     langs:
@@ -874,7 +903,9 @@ items:
             Promise<HttpOperationResponse<azure-maps-rest.Models.SearchAddressStructuredResponse>>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchAddressWithHttpOperationResponse
-    name: getSearchAddressWithHttpOperationResponse
+    name: >-
+      getSearchAddressWithHttpOperationResponse(string,
+      SearchGetSearchAddressOptionalParams)
     children: []
     type: method
     langs:
@@ -928,7 +959,9 @@ items:
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.Services.Search.getSearchAlongRouteWithHttpOperationResponse
-    name: getSearchAlongRouteWithHttpOperationResponse
+    name: >-
+      getSearchAlongRouteWithHttpOperationResponse(string, string, number,
+      SearchGetSearchAlongRouteOptionalParams)
     children: []
     type: method
     langs:
@@ -1005,7 +1038,7 @@ items:
             Promise<HttpOperationResponse<azure-maps-rest.Models.SearchAlongRouteResponse>>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchFuzzy
-    name: getSearchFuzzy
+    name: getSearchFuzzy(string)
     children: []
     type: method
     langs:
@@ -1067,7 +1100,7 @@ items:
           - Promise<azure-maps-rest.Models.SearchFuzzyResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchFuzzy_1
-    name: getSearchFuzzy
+    name: 'getSearchFuzzy(string, SearchGetSearchFuzzyOptionalParams)'
     children: []
     type: method
     langs:
@@ -1128,7 +1161,7 @@ items:
           - Promise<azure-maps-rest.Models.SearchFuzzyResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchFuzzy_2
-    name: getSearchFuzzy
+    name: 'getSearchFuzzy(string, ServiceCallback<SearchFuzzyResponse>)'
     children: []
     type: method
     langs:
@@ -1189,7 +1222,9 @@ items:
           - Promise<azure-maps-rest.Models.SearchFuzzyResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchFuzzy_3
-    name: getSearchFuzzy
+    name: >-
+      getSearchFuzzy(string, SearchGetSearchFuzzyOptionalParams,
+      ServiceCallback<SearchFuzzyResponse>)
     children: []
     type: method
     langs:
@@ -1255,7 +1290,9 @@ items:
           - Promise<azure-maps-rest.Models.SearchFuzzyResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchFuzzyWithHttpOperationResponse
-    name: getSearchFuzzyWithHttpOperationResponse
+    name: >-
+      getSearchFuzzyWithHttpOperationResponse(string,
+      SearchGetSearchFuzzyOptionalParams)
     children: []
     type: method
     langs:
@@ -1327,7 +1364,9 @@ items:
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.Services.Search.getSearchInsideGeometryWithHttpOperationResponse
-    name: getSearchInsideGeometryWithHttpOperationResponse
+    name: >-
+      getSearchInsideGeometryWithHttpOperationResponse(string, string,
+      SearchGetSearchInsideGeometryOptionalParams)
     children: []
     type: method
     langs:
@@ -1437,7 +1476,7 @@ items:
             Promise<HttpOperationResponse<azure-maps-rest.Models.SearchGeometryResponse>>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchNearby
-    name: getSearchNearby
+    name: 'getSearchNearby(number, number)'
     children: []
     type: method
     langs:
@@ -1468,7 +1507,7 @@ items:
           - Promise<azure-maps-rest.Models.SearchNearbyResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchNearby_1
-    name: getSearchNearby
+    name: 'getSearchNearby(number, number, SearchGetSearchNearbyOptionalParams)'
     children: []
     type: method
     langs:
@@ -1503,7 +1542,7 @@ items:
           - Promise<azure-maps-rest.Models.SearchNearbyResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchNearby_2
-    name: getSearchNearby
+    name: 'getSearchNearby(number, number, ServiceCallback<SearchNearbyResponse>)'
     children: []
     type: method
     langs:
@@ -1538,7 +1577,9 @@ items:
           - Promise<azure-maps-rest.Models.SearchNearbyResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchNearby_3
-    name: getSearchNearby
+    name: >-
+      getSearchNearby(number, number, SearchGetSearchNearbyOptionalParams,
+      ServiceCallback<SearchNearbyResponse>)
     children: []
     type: method
     langs:
@@ -1578,7 +1619,9 @@ items:
           - Promise<azure-maps-rest.Models.SearchNearbyResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchNearbyWithHttpOperationResponse
-    name: getSearchNearbyWithHttpOperationResponse
+    name: >-
+      getSearchNearbyWithHttpOperationResponse(number, number,
+      SearchGetSearchNearbyOptionalParams)
     children: []
     type: method
     langs:
@@ -1618,7 +1661,7 @@ items:
             Promise<HttpOperationResponse<azure-maps-rest.Models.SearchNearbyResponse>>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchPOI
-    name: getSearchPOI
+    name: getSearchPOI(string)
     children: []
     type: method
     langs:
@@ -1644,7 +1687,7 @@ items:
           - Promise<azure-maps-rest.Models.SearchPoiResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchPOI_1
-    name: getSearchPOI
+    name: 'getSearchPOI(string, SearchGetSearchPOIOptionalParams)'
     children: []
     type: method
     langs:
@@ -1672,7 +1715,7 @@ items:
           - Promise<azure-maps-rest.Models.SearchPoiResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchPOI_2
-    name: getSearchPOI
+    name: 'getSearchPOI(string, ServiceCallback<SearchPoiResponse>)'
     children: []
     type: method
     langs:
@@ -1700,7 +1743,9 @@ items:
           - Promise<azure-maps-rest.Models.SearchPoiResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchPOI_3
-    name: getSearchPOI
+    name: >-
+      getSearchPOI(string, SearchGetSearchPOIOptionalParams,
+      ServiceCallback<SearchPoiResponse>)
     children: []
     type: method
     langs:
@@ -1733,7 +1778,7 @@ items:
           - Promise<azure-maps-rest.Models.SearchPoiResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchPOICategory
-    name: getSearchPOICategory
+    name: getSearchPOICategory(string)
     children: []
     type: method
     langs:
@@ -1763,7 +1808,7 @@ items:
           - Promise<azure-maps-rest.Models.SearchPoiCategoryResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchPOICategory_1
-    name: getSearchPOICategory
+    name: 'getSearchPOICategory(string, SearchGetSearchPOICategoryOptionalParams)'
     children: []
     type: method
     langs:
@@ -1797,7 +1842,7 @@ items:
           - Promise<azure-maps-rest.Models.SearchPoiCategoryResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchPOICategory_2
-    name: getSearchPOICategory
+    name: 'getSearchPOICategory(string, ServiceCallback<SearchPoiCategoryResponse>)'
     children: []
     type: method
     langs:
@@ -1831,7 +1876,9 @@ items:
           - Promise<azure-maps-rest.Models.SearchPoiCategoryResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchPOICategory_3
-    name: getSearchPOICategory
+    name: >-
+      getSearchPOICategory(string, SearchGetSearchPOICategoryOptionalParams,
+      ServiceCallback<SearchPoiCategoryResponse>)
     children: []
     type: method
     langs:
@@ -1871,7 +1918,9 @@ items:
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.Services.Search.getSearchPOICategoryWithHttpOperationResponse
-    name: getSearchPOICategoryWithHttpOperationResponse
+    name: >-
+      getSearchPOICategoryWithHttpOperationResponse(string,
+      SearchGetSearchPOICategoryOptionalParams)
     children: []
     type: method
     langs:
@@ -1910,7 +1959,9 @@ items:
             Promise<HttpOperationResponse<azure-maps-rest.Models.SearchPoiCategoryResponse>>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.getSearchPOIWithHttpOperationResponse
-    name: getSearchPOIWithHttpOperationResponse
+    name: >-
+      getSearchPOIWithHttpOperationResponse(string,
+      SearchGetSearchPOIOptionalParams)
     children: []
     type: method
     langs:
@@ -1945,7 +1996,7 @@ items:
             Promise<HttpOperationResponse<azure-maps-rest.Models.SearchPoiResponse>>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.postSearchAlongRoute
-    name: postSearchAlongRoute
+    name: 'postSearchAlongRoute(string, number, SearchAlongRouteRequestBody)'
     children: []
     type: method
     langs:
@@ -2017,7 +2068,9 @@ items:
           - Promise<azure-maps-rest.Models.SearchAlongRouteResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.postSearchAlongRoute_1
-    name: postSearchAlongRoute
+    name: >-
+      postSearchAlongRoute(string, number, SearchAlongRouteRequestBody,
+      SearchPostSearchAlongRouteOptionalParams)
     children: []
     type: method
     langs:
@@ -2078,7 +2131,9 @@ items:
           - Promise<azure-maps-rest.Models.SearchAlongRouteResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.postSearchAlongRoute_2
-    name: postSearchAlongRoute
+    name: >-
+      postSearchAlongRoute(string, number, SearchAlongRouteRequestBody,
+      ServiceCallback<SearchAlongRouteResponse>)
     children: []
     type: method
     langs:
@@ -2139,7 +2194,10 @@ items:
           - Promise<azure-maps-rest.Models.SearchAlongRouteResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.postSearchAlongRoute_3
-    name: postSearchAlongRoute
+    name: >-
+      postSearchAlongRoute(string, number, SearchAlongRouteRequestBody,
+      SearchPostSearchAlongRouteOptionalParams,
+      ServiceCallback<SearchAlongRouteResponse>)
     children: []
     type: method
     langs:
@@ -2206,7 +2264,9 @@ items:
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.Services.Search.postSearchAlongRouteWithHttpOperationResponse
-    name: postSearchAlongRouteWithHttpOperationResponse
+    name: >-
+      postSearchAlongRouteWithHttpOperationResponse(string, number,
+      SearchAlongRouteRequestBody, SearchPostSearchAlongRouteOptionalParams)
     children: []
     type: method
     langs:
@@ -2287,7 +2347,7 @@ items:
             Promise<HttpOperationResponse<azure-maps-rest.Models.SearchAlongRouteResponse>>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.postSearchInsideGeometry
-    name: postSearchInsideGeometry
+    name: 'postSearchInsideGeometry(string, SearchInsideGeometryRequestBody)'
     children: []
     type: method
     langs:
@@ -2395,7 +2455,9 @@ items:
           - Promise<azure-maps-rest.Models.SearchGeometryResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.postSearchInsideGeometry_1
-    name: postSearchInsideGeometry
+    name: >-
+      postSearchInsideGeometry(string, SearchInsideGeometryRequestBody,
+      SearchPostSearchInsideGeometryOptionalParams)
     children: []
     type: method
     langs:
@@ -2494,7 +2556,9 @@ items:
           - Promise<azure-maps-rest.Models.SearchGeometryResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.postSearchInsideGeometry_2
-    name: postSearchInsideGeometry
+    name: >-
+      postSearchInsideGeometry(string, SearchInsideGeometryRequestBody,
+      ServiceCallback<SearchGeometryResponse>)
     children: []
     type: method
     langs:
@@ -2592,7 +2656,10 @@ items:
           - Promise<azure-maps-rest.Models.SearchGeometryResponse>
     package: azure-maps-rest
   - uid: azure-maps-rest.Services.Search.postSearchInsideGeometry_3
-    name: postSearchInsideGeometry
+    name: >-
+      postSearchInsideGeometry(string, SearchInsideGeometryRequestBody,
+      SearchPostSearchInsideGeometryOptionalParams,
+      ServiceCallback<SearchGeometryResponse>)
     children: []
     type: method
     langs:
@@ -2697,7 +2764,10 @@ items:
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.Services.Search.postSearchInsideGeometryWithHttpOperationResponse
-    name: postSearchInsideGeometryWithHttpOperationResponse
+    name: >-
+      postSearchInsideGeometryWithHttpOperationResponse(string,
+      SearchInsideGeometryRequestBody,
+      SearchPostSearchInsideGeometryOptionalParams)
     children: []
     type: method
     langs:

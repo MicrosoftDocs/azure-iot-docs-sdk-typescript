@@ -6,11 +6,12 @@ items:
     children: []
     langs:
       - typeScript
-    type: class
-    summary: >-
-
-      "SearchReverseResponse" is a type alias. It refers to
-      SearchAddressReverseCrossStreetResponse and SearchAddressReverseResponse.
+    type: type alias
+    summary: ''
+    syntax:
+      content: >-
+        type SearchReverseResponse = SearchAddressReverseCrossStreetResponse |
+        SearchAddressReverseResponse
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.Models.RouteDirectionsResponse

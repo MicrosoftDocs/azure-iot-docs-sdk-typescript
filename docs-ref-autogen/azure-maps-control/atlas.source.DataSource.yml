@@ -8,10 +8,16 @@ items:
       - azure-maps-control.atlas.source.DataSource.add
       - azure-maps-control.atlas.source.DataSource.clear
       - azure-maps-control.atlas.source.DataSource.dispose
+      - azure-maps-control.atlas.source.DataSource.getClusterChildren
+      - azure-maps-control.atlas.source.DataSource.getClusterExpansionZoom
+      - azure-maps-control.atlas.source.DataSource.getClusterLeaves
       - azure-maps-control.atlas.source.DataSource.getOptions
       - azure-maps-control.atlas.source.DataSource.getShapeById
+      - azure-maps-control.atlas.source.DataSource.getShapes
+      - azure-maps-control.atlas.source.DataSource.importDataFromUrl
       - azure-maps-control.atlas.source.DataSource.remove
       - azure-maps-control.atlas.source.DataSource.setOptions
+      - azure-maps-control.atlas.source.DataSource.setShapes
       - azure-maps-control.atlas.source.DataSource.toJson
     langs:
       - typeScript
@@ -62,8 +68,9 @@ items:
   - uid: azure-maps-control.atlas.source.DataSource.add
     name: >-
       add(FeatureCollection | Feature<atlas.data.Geometry, any> |
-      atlas.data.Geometry | atlas.data.Geometry[] | GeometryCollection | Shape |
-      Shape[], number)
+      atlas.data.Geometry | GeometryCollection | Shape |
+      Array<Feature<atlas.data.Geometry, any> | atlas.data.Geometry | Shape>,
+      number)
     children: []
     type: method
     langs:
@@ -79,8 +86,9 @@ items:
     syntax:
       content: >-
         function add(data: FeatureCollection | Feature<atlas.data.Geometry, any>
-        | atlas.data.Geometry | atlas.data.Geometry[] | GeometryCollection |
-        Shape | Shape[], index?: number)
+        | atlas.data.Geometry | GeometryCollection | Shape |
+        Array<Feature<atlas.data.Geometry, any> | atlas.data.Geometry | Shape>,
+        index?: number)
       parameters:
         - id: data
           type:
@@ -88,9 +96,11 @@ items:
               azure-maps-control.atlas.data.FeatureCollection |
               azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
               any> | azure-maps-control.atlas.data.Geometry |
-              azure-maps-control.atlas.data.Geometry[] |
               azure-maps-control.atlas.data.GeometryCollection |
-              azure-maps-control.atlas.Shape | azure-maps-control.atlas.Shape[]
+              azure-maps-control.atlas.Shape |
+              Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+              any> | azure-maps-control.atlas.data.Geometry |
+              azure-maps-control.atlas.Shape>
           description: ''
         - id: index
           type:
@@ -120,6 +130,84 @@ items:
     syntax:
       content: function dispose()
       parameters: []
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.source.DataSource.getClusterChildren
+    name: getClusterChildren(number)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Retrieves the children of the given cluster on the next zoom level. This
+      may be a combination of shapes and sub-clusters.
+    syntax:
+      content: 'function getClusterChildren(clusterId: number)'
+      parameters:
+        - id: clusterId
+          type:
+            - number
+          description: |+
+
+      return:
+        type:
+          - >-
+            Promise<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+            any> | azure-maps-control.atlas.Shape>
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.source.DataSource.getClusterExpansionZoom
+    name: getClusterExpansionZoom(number)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Calculates a zoom level at which the cluster will start expanding or break
+      apart.
+    syntax:
+      content: 'function getClusterExpansionZoom(clusterId: number)'
+      parameters:
+        - id: clusterId
+          type:
+            - number
+          description: |+
+
+      return:
+        type:
+          - Promise<number>
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.source.DataSource.getClusterLeaves
+    name: 'getClusterLeaves(number, number, number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Retrieves shapes that are within the cluster.
+    syntax:
+      content: >-
+        function getClusterLeaves(clusterId: number, limit: number, offset:
+        number)
+      parameters:
+        - id: clusterId
+          type:
+            - number
+          description: ''
+        - id: limit
+          type:
+            - number
+          description: >-
+            The maximum number of features to return. Set to Infinity to return
+            all shapes.
+        - id: offset
+          type:
+            - number
+          description: >
+            The number of shapes to skip. Allows you to page through the shapes
+            in the cluster.
+      return:
+        type:
+          - >-
+            Promise<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+            any> | azure-maps-control.atlas.Shape>
     package: azure-maps-control
   - uid: azure-maps-control.atlas.source.DataSource.getOptions
     name: getOptions()
@@ -158,8 +246,51 @@ items:
         type:
           - azure-maps-control.atlas.Shape
     package: azure-maps-control
+  - uid: azure-maps-control.atlas.source.DataSource.getShapes
+    name: getShapes(Expression)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns all shapes that are in the DataSource and which satisfy the
+      specified filter expression.
+    syntax:
+      content: 'function getShapes(filter?: Expression)'
+      parameters:
+        - id: filter
+          type:
+            - azure-maps-control.atlas.Expression
+          description: |
+            a filter that will limit the query
+          optional: true
+      return:
+        type:
+          - 'azure-maps-control.atlas.Shape[]'
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.source.DataSource.importDataFromUrl
+    name: importDataFromUrl(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Downloads a GeoJSON document and imports its data into the data source.
+      The GeoJSON document must be on the same domain or accessible using CORS.
+    syntax:
+      content: 'function importDataFromUrl(url: string)'
+      parameters:
+        - id: url
+          type:
+            - string
+          description: |+
+
+      return:
+        type:
+          - Promise<void>
+    package: azure-maps-control
   - uid: azure-maps-control.atlas.source.DataSource.remove
-    name: remove(number | string | Shape)
+    name: 'remove(number | string | Shape | Feature<atlas.data.Geometry, any>)'
     children: []
     type: method
     langs:
@@ -169,12 +300,18 @@ items:
       If a string is passed in, it is assumed to be an id.
       If a number is passed in, removes the shape at that index.
     syntax:
-      content: 'function remove(shape: number | string | Shape)'
+      content: >-
+        function remove(shape: number | string | Shape |
+        Feature<atlas.data.Geometry, any>)
       parameters:
         - id: shape
           type:
-            - number | string | azure-maps-control.atlas.Shape
-          description: ''
+            - >-
+              number | string | azure-maps-control.atlas.Shape |
+              azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+              any>
+          description: |
+            The shape, shape id, or feature to be removed
     package: azure-maps-control
   - uid: azure-maps-control.atlas.source.DataSource.setOptions
     name: setOptions(DataSourceOptions)
@@ -193,7 +330,35 @@ items:
         - id: options
           type:
             - azure-maps-control.atlas.DataSourceOptions
-          description: ''
+          description: |
+            the DataSourceOptions to be set
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.source.DataSource.setShapes
+    name: >-
+      setShapes(FeatureCollection | Array<Feature<atlas.data.Geometry, any> |
+      atlas.data.Geometry | Shape>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Overwrites all shapes in the data source with the new array of shapes.
+    syntax:
+      content: >-
+        function setShapes(shape: FeatureCollection |
+        Array<Feature<atlas.data.Geometry, any> | atlas.data.Geometry | Shape>)
+      parameters:
+        - id: shape
+          type:
+            - >-
+              azure-maps-control.atlas.data.FeatureCollection |
+              Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+              any> | azure-maps-control.atlas.data.Geometry |
+              azure-maps-control.atlas.Shape>
+          description: |
+            the new shapes to update
+      return:
+        type:
+          - any
     package: azure-maps-control
   - uid: azure-maps-control.atlas.source.DataSource.toJson
     name: toJson()
@@ -372,6 +537,21 @@ references:
         uid: azure-maps-control.atlas.data.Position
       - name: '[][][]'
         fullName: '[][][]'
+  - uid: >-
+      azure-maps-control.atlas.data.Position[][] |
+      azure-maps-control.atlas.data.Position[]
+    name: 'Position[]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[][] | '
+        fullName: '[][] | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-control.atlas.deprecated.LayerOptions
     name: LayerOptions
     spec.typeScript:
@@ -485,10 +665,12 @@ references:
       azure-maps-control.atlas.data.FeatureCollection |
       azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
       any> | azure-maps-control.atlas.data.Geometry |
-      azure-maps-control.atlas.data.Geometry[] |
       azure-maps-control.atlas.data.GeometryCollection |
-      azure-maps-control.atlas.Shape | azure-maps-control.atlas.Shape[]
-    name: 'Shape[]'
+      azure-maps-control.atlas.Shape |
+      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.data.Geometry |
+      azure-maps-control.atlas.Shape>
+    name: Shape>
     spec.typeScript:
       - name: FeatureCollection
         fullName: FeatureCollection
@@ -510,11 +692,6 @@ references:
         uid: azure-maps-control.atlas.data.Geometry
       - name: ' | '
         fullName: ' | '
-      - name: Geometry
-        fullName: Geometry
-        uid: azure-maps-control.atlas.data.Geometry
-      - name: '[] | '
-        fullName: '[] | '
       - name: GeometryCollection
         fullName: GeometryCollection
         uid: azure-maps-control.atlas.data.GeometryCollection
@@ -523,27 +700,125 @@ references:
       - name: Shape
         fullName: Shape
         uid: azure-maps-control.atlas.Shape
+      - name: ' | Array<'
+        fullName: ' | Array<'
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
       - name: ' | '
         fullName: ' | '
       - name: Shape
         fullName: Shape
         uid: azure-maps-control.atlas.Shape
-      - name: '[]'
-        fullName: '[]'
+      - name: '>'
+        fullName: '>'
+  - uid: >-
+      Promise<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.Shape>
+    name: Shape>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: '>'
+        fullName: '>'
   - uid: azure-maps-control.atlas.Shape
     name: Shape
     spec.typeScript:
       - name: Shape
         fullName: Shape
         uid: azure-maps-control.atlas.Shape
-  - uid: number | string | azure-maps-control.atlas.Shape
-    name: Shape
+  - uid: azure-maps-control.atlas.Expression
+    name: Expression
+    spec.typeScript:
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.atlas.Expression
+  - uid: 'azure-maps-control.atlas.Shape[]'
+    name: 'Shape[]'
+    spec.typeScript:
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      number | string | azure-maps-control.atlas.Shape |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any>
+    name: 'Geometry, any>'
     spec.typeScript:
       - name: 'number | string | '
         fullName: 'number | string | '
       - name: Shape
         fullName: Shape
         uid: azure-maps-control.atlas.Shape
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any>'
+        fullName: ', any>'
+  - uid: >-
+      azure-maps-control.atlas.data.FeatureCollection |
+      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.data.Geometry |
+      azure-maps-control.atlas.Shape>
+    name: Shape>
+    spec.typeScript:
+      - name: FeatureCollection
+        fullName: FeatureCollection
+        uid: azure-maps-control.atlas.data.FeatureCollection
+      - name: ' | Array<'
+        fullName: ' | Array<'
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ' | '
+        fullName: ' | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: '>'
+        fullName: '>'
   - uid: azure-maps-control.atlas.data.FeatureCollection
     name: FeatureCollection
     spec.typeScript:
@@ -556,12 +831,6 @@ references:
       - name: VectorTileSourceOptions
         fullName: VectorTileSourceOptions
         uid: azure-maps-control.atlas.VectorTileSourceOptions
-  - uid: azure-maps-control.atlas.Expression
-    name: Expression
-    spec.typeScript:
-      - name: Expression
-        fullName: Expression
-        uid: azure-maps-control.atlas.Expression
   - uid: azure-maps-control.atlas.HtmlMarkerOptions
     name: HtmlMarkerOptions
     spec.typeScript:
@@ -937,6 +1206,19 @@ references:
       - name: ControlStyle
         fullName: ControlStyle
         uid: azure-maps-control.atlas.ControlStyle
+  - uid: 'azure-maps-control.atlas.Control | azure-maps-control.atlas.Control[]'
+    name: 'Control[]'
+    spec.typeScript:
+      - name: Control
+        fullName: Control
+        uid: azure-maps-control.atlas.Control
+      - name: ' | '
+        fullName: ' | '
+      - name: Control
+        fullName: Control
+        uid: azure-maps-control.atlas.Control
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-control.atlas.ControlPosition
     name: ControlPosition
     spec.typeScript:
@@ -1064,10 +1346,16 @@ references:
       - name: '[]'
         fullName: '[]'
   - uid: >-
+      azure-maps-control.atlas.data.Position |
       azure-maps-control.atlas.data.Point |
       azure-maps-control.atlas.data.BoundingBox
     name: BoundingBox
     spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: ' | '
+        fullName: ' | '
       - name: Point
         fullName: Point
         uid: azure-maps-control.atlas.data.Point

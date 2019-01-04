@@ -259,7 +259,7 @@ items:
           - azure-maps-control.atlas.data.BoundingBox
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.fromLatLngs
-    name: 'fromLatLngs(Array<any | number[]>)'
+    name: 'fromLatLngs(Array<object | number[]>)'
     children: []
     type: method
     langs:
@@ -277,11 +277,11 @@ items:
 
       Elevation: elv, elevation, alt, altitude, z
     syntax:
-      content: 'static function fromLatLngs(latLngs: Array<any | number[]>)'
+      content: 'static function fromLatLngs(latLngs: Array<object | number[]>)'
       parameters:
         - id: latLngs
           type:
-            - 'Array<any | number[]>'
+            - 'Array<object | number[]>'
           description: The objects that contain coordinate information.
       return:
         type:

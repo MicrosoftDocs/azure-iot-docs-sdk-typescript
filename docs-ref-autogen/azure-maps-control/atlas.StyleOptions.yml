@@ -6,6 +6,7 @@ items:
     children:
       - azure-maps-control.atlas.StyleOptions.autoResize
       - azure-maps-control.atlas.StyleOptions.language
+      - azure-maps-control.atlas.StyleOptions.preserveDrawingBuffer
       - azure-maps-control.atlas.StyleOptions.style
       - azure-maps-control.atlas.StyleOptions.userRegion
       - azure-maps-control.atlas.StyleOptions.view
@@ -57,6 +58,27 @@ items:
       return:
         type:
           - string
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.StyleOptions.preserveDrawingBuffer
+    name: preserveDrawingBuffer
+    fullName: preserveDrawingBuffer
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      If true, the map's canvas can be exported to a PNG using
+      map.getCanvas().toDataURL().
+
+      This option may only be set when initializing the map.
+
+      Default `false`
+    optional: true
+    syntax:
+      content: 'preserveDrawingBuffer?: boolean'
+      return:
+        type:
+          - boolean
     package: azure-maps-control
   - uid: azure-maps-control.atlas.StyleOptions.style
     name: style
@@ -1010,6 +1032,18 @@ references:
         uid: azure-maps-control.atlas.Popup
       - name: '[]'
         fullName: '[]'
+  - uid: azure-maps-control.atlas.HtmlMarker
+    name: HtmlMarker
+    spec.typeScript:
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+  - uid: azure-maps-control.atlas.Popup
+    name: Popup
+    spec.typeScript:
+      - name: Popup
+        fullName: Popup
+        uid: azure-maps-control.atlas.Popup
   - uid: number | azure-maps-control.atlas.Expression
     name: Expression
     spec.typeScript:
@@ -1018,12 +1052,6 @@ references:
       - name: Expression
         fullName: Expression
         uid: azure-maps-control.atlas.Expression
-  - uid: azure-maps-control.atlas.HtmlMarker
-    name: HtmlMarker
-    spec.typeScript:
-      - name: HtmlMarker
-        fullName: HtmlMarker
-        uid: azure-maps-control.atlas.HtmlMarker
   - uid: >-
       string | azure-maps-control.atlas.HtmlMarker | Array<string |
       azure-maps-control.atlas.HtmlMarker>
@@ -1041,12 +1069,6 @@ references:
         uid: azure-maps-control.atlas.HtmlMarker
       - name: '>'
         fullName: '>'
-  - uid: azure-maps-control.atlas.Popup
-    name: Popup
-    spec.typeScript:
-      - name: Popup
-        fullName: Popup
-        uid: azure-maps-control.atlas.Popup
   - uid: >-
       azure-maps-control.atlas.Pixel | azure-maps-control.atlas.Expression |
       azure-maps-control.atlas.StyleFunction

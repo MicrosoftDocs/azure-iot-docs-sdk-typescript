@@ -144,8 +144,9 @@ items:
       - typeScript
     type: property
     summary: The id or instance of a data source which the layer will render.
+    optional: true
     syntax:
-      content: 'source: string | Source'
+      content: 'source?: string | Source'
       return:
         type:
           - string | azure-maps-control.atlas.source.Source
@@ -222,7 +223,7 @@ items:
     type: property
     summary: |-
       Defines a gradient with which to color the lines.
-      Can only be used with GeoJSON sources that specify true for lineMetrics.
+      Requires the DataSource lineMetrics option to be set to true.
       Disabled if strokeDashArray is set.
     optional: true
     syntax:
@@ -1165,6 +1166,18 @@ references:
         uid: azure-maps-control.atlas.Popup
       - name: '[]'
         fullName: '[]'
+  - uid: azure-maps-control.atlas.HtmlMarker
+    name: HtmlMarker
+    spec.typeScript:
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+  - uid: azure-maps-control.atlas.Popup
+    name: Popup
+    spec.typeScript:
+      - name: Popup
+        fullName: Popup
+        uid: azure-maps-control.atlas.Popup
   - uid: number | azure-maps-control.atlas.Expression
     name: Expression
     spec.typeScript:
@@ -1173,12 +1186,6 @@ references:
       - name: Expression
         fullName: Expression
         uid: azure-maps-control.atlas.Expression
-  - uid: azure-maps-control.atlas.HtmlMarker
-    name: HtmlMarker
-    spec.typeScript:
-      - name: HtmlMarker
-        fullName: HtmlMarker
-        uid: azure-maps-control.atlas.HtmlMarker
   - uid: >-
       string | azure-maps-control.atlas.HtmlMarker | Array<string |
       azure-maps-control.atlas.HtmlMarker>
@@ -1196,12 +1203,6 @@ references:
         uid: azure-maps-control.atlas.HtmlMarker
       - name: '>'
         fullName: '>'
-  - uid: azure-maps-control.atlas.Popup
-    name: Popup
-    spec.typeScript:
-      - name: Popup
-        fullName: Popup
-        uid: azure-maps-control.atlas.Popup
   - uid: >-
       azure-maps-control.atlas.Pixel | azure-maps-control.atlas.Expression |
       azure-maps-control.atlas.StyleFunction

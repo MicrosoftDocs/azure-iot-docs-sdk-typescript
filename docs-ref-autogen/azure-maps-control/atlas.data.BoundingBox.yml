@@ -259,7 +259,7 @@ items:
           - azure-maps-control.atlas.data.BoundingBox
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.fromLatLngs
-    name: 'fromLatLngs(Array<any | number[]>)'
+    name: 'fromLatLngs(Array<object | number[]>)'
     children: []
     type: method
     langs:
@@ -277,11 +277,11 @@ items:
 
       Elevation: elv, elevation, alt, altitude, z
     syntax:
-      content: 'static function fromLatLngs(latLngs: Array<any | number[]>)'
+      content: 'static function fromLatLngs(latLngs: Array<object | number[]>)'
       parameters:
         - id: latLngs
           type:
-            - 'Array<any | number[]>'
+            - 'Array<object | number[]>'
           description: The objects that contain coordinate information.
       return:
         type:
@@ -1461,6 +1461,18 @@ references:
         uid: azure-maps-control.atlas.Popup
       - name: '[]'
         fullName: '[]'
+  - uid: azure-maps-control.atlas.HtmlMarker
+    name: HtmlMarker
+    spec.typeScript:
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+  - uid: azure-maps-control.atlas.Popup
+    name: Popup
+    spec.typeScript:
+      - name: Popup
+        fullName: Popup
+        uid: azure-maps-control.atlas.Popup
   - uid: number | azure-maps-control.atlas.Expression
     name: Expression
     spec.typeScript:
@@ -1469,12 +1481,6 @@ references:
       - name: Expression
         fullName: Expression
         uid: azure-maps-control.atlas.Expression
-  - uid: azure-maps-control.atlas.HtmlMarker
-    name: HtmlMarker
-    spec.typeScript:
-      - name: HtmlMarker
-        fullName: HtmlMarker
-        uid: azure-maps-control.atlas.HtmlMarker
   - uid: >-
       string | azure-maps-control.atlas.HtmlMarker | Array<string |
       azure-maps-control.atlas.HtmlMarker>
@@ -1492,12 +1498,6 @@ references:
         uid: azure-maps-control.atlas.HtmlMarker
       - name: '>'
         fullName: '>'
-  - uid: azure-maps-control.atlas.Popup
-    name: Popup
-    spec.typeScript:
-      - name: Popup
-        fullName: Popup
-        uid: azure-maps-control.atlas.Popup
   - uid: >-
       azure-maps-control.atlas.Pixel | azure-maps-control.atlas.Expression |
       azure-maps-control.atlas.StyleFunction

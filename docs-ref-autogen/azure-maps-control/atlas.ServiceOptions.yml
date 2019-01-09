@@ -27,7 +27,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Disable telemetry collection
+    summary: |-
+      Disable telemetry collection
+      This option may only be set when initializing the map.
     optional: true
     syntax:
       content: 'disable-telemetry?: boolean'
@@ -44,7 +46,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Disable telemetry collection
+    summary: |-
+      Disable telemetry collection
+      This option may only be set when initializing the map.
     optional: true
     syntax:
       content: 'disableTelemetry?: boolean'
@@ -125,7 +129,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: The customer subscription key used to authorize requests.
+    summary: |-
+      The customer subscription key used to authorize requests.
+      This option may only be set when initializing the map.
     optional: true
     syntax:
       content: 'subscription-key?: string'
@@ -142,7 +148,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: The customer subscription key used to authorize requests.
+    summary: |-
+      The customer subscription key used to authorize requests.
+      This option may only be set when initializing the map.
     optional: true
     syntax:
       content: 'subscriptionKey?: string'
@@ -1063,6 +1071,18 @@ references:
         uid: azure-maps-control.atlas.Popup
       - name: '[]'
         fullName: '[]'
+  - uid: azure-maps-control.atlas.HtmlMarker
+    name: HtmlMarker
+    spec.typeScript:
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+  - uid: azure-maps-control.atlas.Popup
+    name: Popup
+    spec.typeScript:
+      - name: Popup
+        fullName: Popup
+        uid: azure-maps-control.atlas.Popup
   - uid: number | azure-maps-control.atlas.Expression
     name: Expression
     spec.typeScript:
@@ -1071,12 +1091,6 @@ references:
       - name: Expression
         fullName: Expression
         uid: azure-maps-control.atlas.Expression
-  - uid: azure-maps-control.atlas.HtmlMarker
-    name: HtmlMarker
-    spec.typeScript:
-      - name: HtmlMarker
-        fullName: HtmlMarker
-        uid: azure-maps-control.atlas.HtmlMarker
   - uid: >-
       string | azure-maps-control.atlas.HtmlMarker | Array<string |
       azure-maps-control.atlas.HtmlMarker>
@@ -1094,12 +1108,6 @@ references:
         uid: azure-maps-control.atlas.HtmlMarker
       - name: '>'
         fullName: '>'
-  - uid: azure-maps-control.atlas.Popup
-    name: Popup
-    spec.typeScript:
-      - name: Popup
-        fullName: Popup
-        uid: azure-maps-control.atlas.Popup
   - uid: >-
       azure-maps-control.atlas.Pixel | azure-maps-control.atlas.Expression |
       azure-maps-control.atlas.StyleFunction

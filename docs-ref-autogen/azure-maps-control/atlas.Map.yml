@@ -179,10 +179,10 @@ items:
 
       CircleLayerOptions object. Options for the layer
 
-      can only be specified upon the layer's initial creation. Map must be fully
-      loaded before the circles can be
+      can only be specified upon the layer's initial creation. Map must be ready
+      before the circles can be
 
-      added. Use the addEventListener method with event type 'load'.
+      added. Use the events.add method with event type 'ready'.
     syntax:
       content: >-
         function addCircles(circles: Array<Feature<Point, CircleProperties>>,
@@ -386,10 +386,12 @@ items:
     langs:
       - typeScript
     summary: >-
-      Add an icon to the map to use for pins. Map and image must be fully loaded
-      before the icon can be added. Use the
+      Add an icon to the map to use for pins.
 
-      addEventListener method with event type 'load'.
+      Map must be ready and the image must be fully loaded before the icon can
+      be added.
+
+      Use the events.add method with event type 'ready'.
     syntax:
       content: 'function addIcon(id: string, icon: HTMLImageElement)'
       parameters:
@@ -419,10 +421,10 @@ items:
       LinestringLayerOptions object. Options for
 
       the layer can only be specified upon the layer's initial creation. Map
-      must be fully loaded before the
+      must be ready before the
 
-      linestrings can be added. Use the addEventListener method with event type
-      'load'.
+      linestrings can be added. Use the events.add method with event type
+      'ready'.
     syntax:
       content: >-
         function addLinestrings(linestrings: Array<Feature<LineString |
@@ -456,10 +458,10 @@ items:
 
       PinLayerOptions object. Options for the layer can
 
-      only be specified upon the layer's initial creation. Map must be fully
-      loaded before the pins can be added. Use
+      only be specified upon the layer's initial creation. Map must be ready
+      before the pins can be added. Use
 
-      the addEventListener method with event type 'load'.
+      the events.add method with event type 'ready'.
     syntax:
       content: >-
         function addPins(pins: Array<Feature<Point, PinProperties>>, options?:
@@ -494,9 +496,9 @@ items:
       PolygonLayerOptions object. Options for
 
       the layer can only be specified upon the layer's initial creation. Map
-      must be fully loaded before the polygons
+      must be ready before the polygons
 
-      can be added. Use the addEventListener method with event type 'load'.
+      can be added. Use the events.add method with event type 'ready'.
     syntax:
       content: >-
         function addPolygons(polygons: Array<Feature<Polygon | MultiPolygon,
@@ -911,9 +913,6 @@ items:
             Optional additional properties to be added to event objects of
             events triggered by this method.
           optional: true
-      return:
-        type:
-          - any
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.resize_1
     name: 'resize(number | string, number | string, any)'
@@ -946,9 +945,6 @@ items:
             Optional additional properties to be added to event objects of
             events triggered by this method.
           optional: true
-      return:
-        type:
-          - any
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.setCamera
     name: setCamera(CameraOptions | CameraBoundsOptions & AnimationOptions)
@@ -1970,6 +1966,18 @@ references:
         uid: azure-maps-control.atlas.Popup
       - name: '[]'
         fullName: '[]'
+  - uid: azure-maps-control.atlas.HtmlMarker
+    name: HtmlMarker
+    spec.typeScript:
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+  - uid: azure-maps-control.atlas.Popup
+    name: Popup
+    spec.typeScript:
+      - name: Popup
+        fullName: Popup
+        uid: azure-maps-control.atlas.Popup
   - uid: number | azure-maps-control.atlas.Expression
     name: Expression
     spec.typeScript:
@@ -1978,12 +1986,6 @@ references:
       - name: Expression
         fullName: Expression
         uid: azure-maps-control.atlas.Expression
-  - uid: azure-maps-control.atlas.HtmlMarker
-    name: HtmlMarker
-    spec.typeScript:
-      - name: HtmlMarker
-        fullName: HtmlMarker
-        uid: azure-maps-control.atlas.HtmlMarker
   - uid: >-
       string | azure-maps-control.atlas.HtmlMarker | Array<string |
       azure-maps-control.atlas.HtmlMarker>
@@ -2001,12 +2003,6 @@ references:
         uid: azure-maps-control.atlas.HtmlMarker
       - name: '>'
         fullName: '>'
-  - uid: azure-maps-control.atlas.Popup
-    name: Popup
-    spec.typeScript:
-      - name: Popup
-        fullName: Popup
-        uid: azure-maps-control.atlas.Popup
   - uid: >-
       azure-maps-control.atlas.Pixel | azure-maps-control.atlas.Expression |
       azure-maps-control.atlas.StyleFunction

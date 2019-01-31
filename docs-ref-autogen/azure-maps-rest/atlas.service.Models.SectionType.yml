@@ -1,16 +1,119 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.Models.SectionType
+    name: SectionType
+    fullName: SectionType
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - azure-maps-rest.atlas.service.Models.SectionType.CarTrain
+      - azure-maps-rest.atlas.service.Models.SectionType.Country
+      - azure-maps-rest.atlas.service.Models.SectionType.Ferry
+      - azure-maps-rest.atlas.service.Models.SectionType.Motorway
+      - azure-maps-rest.atlas.service.Models.SectionType.Pedestrian
+      - azure-maps-rest.atlas.service.Models.SectionType.TollRoad
+      - azure-maps-rest.atlas.service.Models.SectionType.TollVignette
+      - azure-maps-rest.atlas.service.Models.SectionType.Traffic
+      - azure-maps-rest.atlas.service.Models.SectionType.TravelMode
+      - azure-maps-rest.atlas.service.Models.SectionType.Tunnel
     langs:
       - typeScript
-    type: module
-    summary: ''
+    type: enum
+    summary: >-
+      Defines values for SectionType.
+
+      Possible values include: 'carTrain', 'country', 'ferry', 'motorway',
+
+      'pedestrian', 'tollRoad', 'tollVignette', 'traffic', 'travelMode',
+      'tunnel'
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SectionType.CarTrain
+    name: CarTrain
+    children: []
+    langs:
+      - typeScript
+    summary: Get sections if the route includes car trains.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SectionType.Country
+    name: Country
+    children: []
+    langs:
+      - typeScript
+    summary: Countries the route has parts in.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SectionType.Ferry
+    name: Ferry
+    children: []
+    langs:
+      - typeScript
+    summary: Get sections if the route includes ferries.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SectionType.Motorway
+    name: Motorway
+    children: []
+    langs:
+      - typeScript
+    summary: Get sections if the route includes motorways.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SectionType.Pedestrian
+    name: Pedestrian
+    children: []
+    langs:
+      - typeScript
+    summary: Get sections which are suited for pedestrians.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SectionType.TollRoad
+    name: TollRoad
+    children: []
+    langs:
+      - typeScript
+    summary: Get sections which require a toll to be payed.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SectionType.TollVignette
+    name: TollVignette
+    children: []
+    langs:
+      - typeScript
+    summary: Get sections which require a toll vignette to be present.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SectionType.Traffic
+    name: Traffic
+    children: []
+    langs:
+      - typeScript
+    summary: Get sections which contain traffic information.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SectionType.TravelMode
+    name: TravelMode
+    children: []
+    langs:
+      - typeScript
+    summary: Get sections in relation to the request parameter `travelMode`.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SectionType.Tunnel
+    name: Tunnel
+    children: []
+    langs:
+      - typeScript
+    summary: Get sections if the route includes tunnels.
+    type: field
+    numericValue: null
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

@@ -1,16 +1,45 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.Models.RouteMatrixSummary
+    name: RouteMatrixSummary
+    fullName: RouteMatrixSummary
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - azure-maps-rest.atlas.service.Models.RouteMatrixSummary.successfulRoutes
+      - azure-maps-rest.atlas.service.Models.RouteMatrixSummary.totalRoutes
     langs:
       - typeScript
-    type: module
+    type: interface
     summary: ''
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteMatrixSummary.successfulRoutes
+    name: successfulRoutes
+    fullName: successfulRoutes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'successfulRoutes?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteMatrixSummary.totalRoutes
+    name: totalRoutes
+    fullName: totalRoutes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'totalRoutes?: number'
+      return:
+        type:
+          - number
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

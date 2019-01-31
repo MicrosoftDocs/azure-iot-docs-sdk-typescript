@@ -1,16 +1,173 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.Models.SearchGeometryResult
+    name: SearchGeometryResult
+    fullName: SearchGeometryResult
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - azure-maps-rest.atlas.service.Models.SearchGeometryResult.address
+      - azure-maps-rest.atlas.service.Models.SearchGeometryResult.entityType
+      - azure-maps-rest.atlas.service.Models.SearchGeometryResult.entryPoints
+      - azure-maps-rest.atlas.service.Models.SearchGeometryResult.id
+      - azure-maps-rest.atlas.service.Models.SearchGeometryResult.info
+      - azure-maps-rest.atlas.service.Models.SearchGeometryResult.poi
+      - azure-maps-rest.atlas.service.Models.SearchGeometryResult.position
+      - azure-maps-rest.atlas.service.Models.SearchGeometryResult.score
+      - azure-maps-rest.atlas.service.Models.SearchGeometryResult.type
+      - azure-maps-rest.atlas.service.Models.SearchGeometryResult.viewport
     langs:
       - typeScript
-    type: module
+    type: interface
     summary: ''
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchGeometryResult.address
+    name: address
+    fullName: address
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'address?: SearchResultAddress'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.SearchResultAddress
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchGeometryResult.entityType
+    name: entityType
+    fullName: entityType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'entityType?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchGeometryResult.entryPoints
+    name: entryPoints
+    fullName: entryPoints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'entryPoints?: SearchResultEntryPoint[]'
+      return:
+        type:
+          - 'azure-maps-rest.atlas.service.Models.SearchResultEntryPoint[]'
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchGeometryResult.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchGeometryResult.info
+    name: info
+    fullName: info
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'info?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchGeometryResult.poi
+    name: poi
+    fullName: poi
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'poi?: SearchResultPoi'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.SearchResultPoi
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchGeometryResult.position
+    name: position
+    fullName: position
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'position?: CoordinateAbbreviated'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.CoordinateAbbreviated
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchGeometryResult.score
+    name: score
+    fullName: score
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'score?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchGeometryResult.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'type?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchGeometryResult.viewport
+    name: viewport
+    fullName: viewport
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'viewport?: SearchResultViewport'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.SearchResultViewport
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

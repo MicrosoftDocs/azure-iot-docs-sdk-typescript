@@ -1,16 +1,93 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.Models.SearchResultPoi
+    name: SearchResultPoi
+    fullName: SearchResultPoi
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - azure-maps-rest.atlas.service.Models.SearchResultPoi.categories
+      - azure-maps-rest.atlas.service.Models.SearchResultPoi.classifications
+      - azure-maps-rest.atlas.service.Models.SearchResultPoi.name
+      - azure-maps-rest.atlas.service.Models.SearchResultPoi.phone
+      - azure-maps-rest.atlas.service.Models.SearchResultPoi.url
     langs:
       - typeScript
-    type: module
+    type: interface
     summary: ''
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchResultPoi.categories
+    name: categories
+    fullName: categories
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'categories?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchResultPoi.classifications
+    name: classifications
+    fullName: classifications
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'classifications?: SearchResultPoiClassification[]'
+      return:
+        type:
+          - 'azure-maps-rest.atlas.service.Models.SearchResultPoiClassification[]'
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchResultPoi.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchResultPoi.phone
+    name: phone
+    fullName: phone
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'phone?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchResultPoi.url
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'url?: string'
+      return:
+        type:
+          - string
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

@@ -1,16 +1,46 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.Models.RouteResultGuidance
+    name: RouteResultGuidance
+    fullName: RouteResultGuidance
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - >-
+        azure-maps-rest.atlas.service.Models.RouteResultGuidance.instructionGroups
+      - azure-maps-rest.atlas.service.Models.RouteResultGuidance.instructions
     langs:
       - typeScript
-    type: module
+    type: interface
     summary: ''
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteResultGuidance.instructionGroups
+    name: instructionGroups
+    fullName: instructionGroups
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'instructionGroups?: RouteResultInstructionGroup[]'
+      return:
+        type:
+          - 'azure-maps-rest.atlas.service.Models.RouteResultInstructionGroup[]'
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteResultGuidance.instructions
+    name: instructions
+    fullName: instructions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'instructions?: RouteResultInstruction[]'
+      return:
+        type:
+          - 'azure-maps-rest.atlas.service.Models.RouteResultInstruction[]'
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

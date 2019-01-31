@@ -1,16 +1,142 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.Models.SearchPoiCategorySummary
+    name: SearchPoiCategorySummary
+    fullName: SearchPoiCategorySummary
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - azure-maps-rest.atlas.service.Models.SearchPoiCategorySummary.fuzzyLevel
+      - azure-maps-rest.atlas.service.Models.SearchPoiCategorySummary.geoBias
+      - azure-maps-rest.atlas.service.Models.SearchPoiCategorySummary.numResults
+      - azure-maps-rest.atlas.service.Models.SearchPoiCategorySummary.offset
+      - azure-maps-rest.atlas.service.Models.SearchPoiCategorySummary.query
+      - azure-maps-rest.atlas.service.Models.SearchPoiCategorySummary.queryTime
+      - azure-maps-rest.atlas.service.Models.SearchPoiCategorySummary.queryType
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchPoiCategorySummary.totalResults
     langs:
       - typeScript
-    type: module
+    type: interface
     summary: ''
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchPoiCategorySummary.fuzzyLevel
+    name: fuzzyLevel
+    fullName: fuzzyLevel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'fuzzyLevel?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchPoiCategorySummary.geoBias
+    name: geoBias
+    fullName: geoBias
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'geoBias?: SearchSummaryGeoBias'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.SearchSummaryGeoBias
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchPoiCategorySummary.numResults
+    name: numResults
+    fullName: numResults
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'numResults?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchPoiCategorySummary.offset
+    name: offset
+    fullName: offset
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'offset?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchPoiCategorySummary.query
+    name: query
+    fullName: query
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'query?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchPoiCategorySummary.queryTime
+    name: queryTime
+    fullName: queryTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'queryTime?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchPoiCategorySummary.queryType
+    name: queryType
+    fullName: queryType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'queryType?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchPoiCategorySummary.totalResults
+    name: totalResults
+    fullName: totalResults
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'totalResults?: number'
+      return:
+        type:
+          - number
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

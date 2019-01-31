@@ -1,16 +1,70 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseCrossStreetOptionalParams
+    name: SearchGetSearchAddressReverseCrossStreetOptionalParams
+    fullName: SearchGetSearchAddressReverseCrossStreetOptionalParams
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseCrossStreetOptionalParams.heading
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseCrossStreetOptionalParams.language
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseCrossStreetOptionalParams.radius
     langs:
       - typeScript
-    type: module
+    type: interface
     summary: ''
+    extends:
+      name: RequestOptionsBase
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseCrossStreetOptionalParams.heading
+    name: heading
+    fullName: heading
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'heading?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseCrossStreetOptionalParams.language
+    name: language
+    fullName: language
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'language?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseCrossStreetOptionalParams.radius
+    name: radius
+    fullName: radius
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'radius?: number'
+      return:
+        type:
+          - number
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

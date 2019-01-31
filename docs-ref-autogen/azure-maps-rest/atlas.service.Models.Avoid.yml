@@ -1,16 +1,78 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.Models.Avoid
+    name: Avoid
+    fullName: Avoid
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - azure-maps-rest.atlas.service.Models.Avoid.AlreadyUsedRoads
+      - azure-maps-rest.atlas.service.Models.Avoid.Carpools
+      - azure-maps-rest.atlas.service.Models.Avoid.Ferries
+      - azure-maps-rest.atlas.service.Models.Avoid.Motorways
+      - azure-maps-rest.atlas.service.Models.Avoid.TollRoads
+      - azure-maps-rest.atlas.service.Models.Avoid.UnpavedRoads
     langs:
       - typeScript
-    type: module
-    summary: ''
+    type: enum
+    summary: |-
+      Defines values for Avoid.
+      Possible values include: 'tollRoads', 'motorways', 'ferries',
+      'unpavedRoads', 'carpools', 'alreadyUsedRoads'
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.Avoid.AlreadyUsedRoads
+    name: AlreadyUsedRoads
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      Avoids using the same road multiple times. Most useful in conjunction with
+      `routeType`=thrilling.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.Avoid.Carpools
+    name: Carpools
+    children: []
+    langs:
+      - typeScript
+    summary: Avoids carpools
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.Avoid.Ferries
+    name: Ferries
+    children: []
+    langs:
+      - typeScript
+    summary: Avoids ferries
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.Avoid.Motorways
+    name: Motorways
+    children: []
+    langs:
+      - typeScript
+    summary: Avoids motorways
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.Avoid.TollRoads
+    name: TollRoads
+    children: []
+    langs:
+      - typeScript
+    summary: Avoids toll roads.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.Avoid.UnpavedRoads
+    name: UnpavedRoads
+    children: []
+    langs:
+      - typeScript
+    summary: Avoids unpaved roads
+    type: field
+    numericValue: null
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

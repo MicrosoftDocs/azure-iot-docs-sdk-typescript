@@ -1,16 +1,52 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchAddressReverseCrossStreetResponse
+    name: SearchAddressReverseCrossStreetResponse
+    fullName: SearchAddressReverseCrossStreetResponse
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchAddressReverseCrossStreetResponse.addresses
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchAddressReverseCrossStreetResponse.summary
     langs:
       - typeScript
-    type: module
+    type: interface
     summary: ''
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchAddressReverseCrossStreetResponse.addresses
+    name: addresses
+    fullName: addresses
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'addresses?: SearchAddressReverseCrossStreetResult[]'
+      return:
+        type:
+          - >-
+            azure-maps-rest.atlas.service.Models.SearchAddressReverseCrossStreetResult[]
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchAddressReverseCrossStreetResponse.summary
+    name: summary
+    fullName: summary
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'summary?: SearchAddressReverseCrossStreetSummary'
+      return:
+        type:
+          - >-
+            azure-maps-rest.atlas.service.Models.SearchAddressReverseCrossStreetSummary
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

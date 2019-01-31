@@ -1,16 +1,88 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometryType
+    name: GeoJSONGeometryType
+    fullName: GeoJSONGeometryType
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - >-
+        azure-maps-rest.atlas.service.Models.GeoJSONGeometryType.GeometryCollection
+      - azure-maps-rest.atlas.service.Models.GeoJSONGeometryType.LineString
+      - azure-maps-rest.atlas.service.Models.GeoJSONGeometryType.MultiLineString
+      - azure-maps-rest.atlas.service.Models.GeoJSONGeometryType.MultiPoint
+      - azure-maps-rest.atlas.service.Models.GeoJSONGeometryType.MultiPolygon
+      - azure-maps-rest.atlas.service.Models.GeoJSONGeometryType.Point
+      - azure-maps-rest.atlas.service.Models.GeoJSONGeometryType.Polygon
     langs:
       - typeScript
-    type: module
-    summary: ''
+    type: enum
+    summary: |-
+      Defines values for GeoJSONGeometryType.
+      Possible values include: 'Point', 'MultiPoint', 'LineString',
+      'MultiLineString', 'Polygon', 'MultiPolygon', 'GeometryCollection'
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.GeoJSONGeometryType.GeometryCollection
+    name: GeometryCollection
+    children: []
+    langs:
+      - typeScript
+    summary: '`GeoJSON GeometryCollection` geometry.'
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometryType.LineString
+    name: LineString
+    children: []
+    langs:
+      - typeScript
+    summary: '`GeoJSON LineString` geometry.'
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometryType.MultiLineString
+    name: MultiLineString
+    children: []
+    langs:
+      - typeScript
+    summary: '`GeoJSON MultiLineString` geometry.'
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometryType.MultiPoint
+    name: MultiPoint
+    children: []
+    langs:
+      - typeScript
+    summary: '`GeoJSON MultiPoint` geometry.'
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometryType.MultiPolygon
+    name: MultiPolygon
+    children: []
+    langs:
+      - typeScript
+    summary: '`GeoJSON MultiPolygon` geometry.'
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometryType.Point
+    name: Point
+    children: []
+    langs:
+      - typeScript
+    summary: '`GeoJSON Point` geometry.'
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometryType.Polygon
+    name: Polygon
+    children: []
+    langs:
+      - typeScript
+    summary: '`GeoJSON Polygon` geometry.'
+    type: field
+    numericValue: null
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

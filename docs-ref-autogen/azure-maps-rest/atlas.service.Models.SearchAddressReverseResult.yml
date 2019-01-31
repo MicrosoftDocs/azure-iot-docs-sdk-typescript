@@ -1,16 +1,45 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.Models.SearchAddressReverseResult
+    name: SearchAddressReverseResult
+    fullName: SearchAddressReverseResult
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - azure-maps-rest.atlas.service.Models.SearchAddressReverseResult.address
+      - azure-maps-rest.atlas.service.Models.SearchAddressReverseResult.position
     langs:
       - typeScript
-    type: module
+    type: interface
     summary: ''
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchAddressReverseResult.address
+    name: address
+    fullName: address
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'address?: SearchResultAddress'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.SearchResultAddress
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchAddressReverseResult.position
+    name: position
+    fullName: position
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'position?: string'
+      return:
+        type:
+          - string
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

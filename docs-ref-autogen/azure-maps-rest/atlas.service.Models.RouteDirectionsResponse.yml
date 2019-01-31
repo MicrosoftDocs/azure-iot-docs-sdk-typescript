@@ -1,16 +1,112 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.Models.RouteDirectionsResponse
+    name: RouteDirectionsResponse
+    fullName: RouteDirectionsResponse
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - azure-maps-rest.atlas.service.Models.RouteDirectionsResponse.copyright
+      - >-
+        azure-maps-rest.atlas.service.Models.RouteDirectionsResponse.formatVersion
+      - >-
+        azure-maps-rest.atlas.service.Models.RouteDirectionsResponse.optimizedWaypoints
+      - azure-maps-rest.atlas.service.Models.RouteDirectionsResponse.privacy
+      - azure-maps-rest.atlas.service.Models.RouteDirectionsResponse.report
+      - azure-maps-rest.atlas.service.Models.RouteDirectionsResponse.routes
     langs:
       - typeScript
-    type: module
+    type: interface
     summary: ''
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteDirectionsResponse.copyright
+    name: copyright
+    fullName: copyright
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'copyright?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteDirectionsResponse.formatVersion
+    name: formatVersion
+    fullName: formatVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'formatVersion?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RouteDirectionsResponse.optimizedWaypoints
+    name: optimizedWaypoints
+    fullName: optimizedWaypoints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'optimizedWaypoints?: RouteOptimizedWaypoint[]'
+      return:
+        type:
+          - 'azure-maps-rest.atlas.service.Models.RouteOptimizedWaypoint[]'
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteDirectionsResponse.privacy
+    name: privacy
+    fullName: privacy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'privacy?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteDirectionsResponse.report
+    name: report
+    fullName: report
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'report?: RouteResponseReport'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.RouteResponseReport
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteDirectionsResponse.routes
+    name: routes
+    fullName: routes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'routes?: RouteDirectionsResult[]'
+      return:
+        type:
+          - 'azure-maps-rest.atlas.service.Models.RouteDirectionsResult[]'
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

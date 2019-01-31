@@ -1,16 +1,736 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams
+    name: RoutePostRouteDirectionsOptionalParams
+    fullName: RoutePostRouteDirectionsOptionalParams
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.accelerationEfficiency
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.alternativeType
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.arriveAt
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.auxiliaryPowerInLitersPerHour
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.auxiliaryPowerInkW
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.avoid
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.computeBestOrder
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.computeTravelTimeFor
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.constantSpeedConsumptionInLitersPerHundredkm
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.constantSpeedConsumptionInkWhPerHundredkm
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.currentChargeInkWh
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.currentFuelInLiters
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.decelerationEfficiency
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.departAt
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.downhillEfficiency
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.fuelEnergyDensityInMJoulesPerLiter
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.hilliness
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.instructionsType
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.language
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.maxAlternatives
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.maxChargeInkWh
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.minDeviationDistance
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.minDeviationTime
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.report
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.routeRepresentation
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.routeType
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.sectionType
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.traffic
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.travelMode
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.uphillEfficiency
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.vehicleAxleWeight
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.vehicleEngineType
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.vehicleHeading
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.vehicleHeight
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.vehicleLength
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.vehicleLoadType
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.vehicleMaxSpeed
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.vehicleWeight
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.vehicleWidth
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.windingness
     langs:
       - typeScript
-    type: module
+    type: interface
     summary: ''
+    extends:
+      name: RequestOptionsBase
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.accelerationEfficiency
+    name: accelerationEfficiency
+    fullName: accelerationEfficiency
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'accelerationEfficiency?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.alternativeType
+    name: alternativeType
+    fullName: alternativeType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'alternativeType?: AlternativeRouteType'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.AlternativeRouteType
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.arriveAt
+    name: arriveAt
+    fullName: arriveAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'arriveAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.auxiliaryPowerInLitersPerHour
+    name: auxiliaryPowerInLitersPerHour
+    fullName: auxiliaryPowerInLitersPerHour
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'auxiliaryPowerInLitersPerHour?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.auxiliaryPowerInkW
+    name: auxiliaryPowerInkW
+    fullName: auxiliaryPowerInkW
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'auxiliaryPowerInkW?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.avoid
+    name: avoid
+    fullName: avoid
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'avoid?: Avoid'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.Avoid
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.computeBestOrder
+    name: computeBestOrder
+    fullName: computeBestOrder
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'computeBestOrder?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.computeTravelTimeFor
+    name: computeTravelTimeFor
+    fullName: computeTravelTimeFor
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'computeTravelTimeFor?: ComputeTravelTimeFor'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.ComputeTravelTimeFor
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.constantSpeedConsumptionInLitersPerHundredkm
+    name: constantSpeedConsumptionInLitersPerHundredkm
+    fullName: constantSpeedConsumptionInLitersPerHundredkm
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'constantSpeedConsumptionInLitersPerHundredkm?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.constantSpeedConsumptionInkWhPerHundredkm
+    name: constantSpeedConsumptionInkWhPerHundredkm
+    fullName: constantSpeedConsumptionInkWhPerHundredkm
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'constantSpeedConsumptionInkWhPerHundredkm?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.currentChargeInkWh
+    name: currentChargeInkWh
+    fullName: currentChargeInkWh
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'currentChargeInkWh?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.currentFuelInLiters
+    name: currentFuelInLiters
+    fullName: currentFuelInLiters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'currentFuelInLiters?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.decelerationEfficiency
+    name: decelerationEfficiency
+    fullName: decelerationEfficiency
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'decelerationEfficiency?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.departAt
+    name: departAt
+    fullName: departAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'departAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.downhillEfficiency
+    name: downhillEfficiency
+    fullName: downhillEfficiency
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'downhillEfficiency?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.fuelEnergyDensityInMJoulesPerLiter
+    name: fuelEnergyDensityInMJoulesPerLiter
+    fullName: fuelEnergyDensityInMJoulesPerLiter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'fuelEnergyDensityInMJoulesPerLiter?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.hilliness
+    name: hilliness
+    fullName: hilliness
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'hilliness?: Hilliness'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.Hilliness
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.instructionsType
+    name: instructionsType
+    fullName: instructionsType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'instructionsType?: RouteInstructionsType'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.RouteInstructionsType
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.language
+    name: language
+    fullName: language
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'language?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.maxAlternatives
+    name: maxAlternatives
+    fullName: maxAlternatives
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'maxAlternatives?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.maxChargeInkWh
+    name: maxChargeInkWh
+    fullName: maxChargeInkWh
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'maxChargeInkWh?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.minDeviationDistance
+    name: minDeviationDistance
+    fullName: minDeviationDistance
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'minDeviationDistance?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.minDeviationTime
+    name: minDeviationTime
+    fullName: minDeviationTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'minDeviationTime?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.report
+    name: report
+    fullName: report
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'report?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.routeRepresentation
+    name: routeRepresentation
+    fullName: routeRepresentation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'routeRepresentation?: RouteRepresentation'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.RouteRepresentation
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.routeType
+    name: routeType
+    fullName: routeType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'routeType?: RouteType'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.RouteType
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.sectionType
+    name: sectionType
+    fullName: sectionType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'sectionType?: SectionType'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.SectionType
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.traffic
+    name: traffic
+    fullName: traffic
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'traffic?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.travelMode
+    name: travelMode
+    fullName: travelMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'travelMode?: TravelMode'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.TravelMode
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.uphillEfficiency
+    name: uphillEfficiency
+    fullName: uphillEfficiency
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'uphillEfficiency?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.vehicleAxleWeight
+    name: vehicleAxleWeight
+    fullName: vehicleAxleWeight
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'vehicleAxleWeight?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.vehicleEngineType
+    name: vehicleEngineType
+    fullName: vehicleEngineType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'vehicleEngineType?: VehicleEngineType'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.VehicleEngineType
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.vehicleHeading
+    name: vehicleHeading
+    fullName: vehicleHeading
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'vehicleHeading?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.vehicleHeight
+    name: vehicleHeight
+    fullName: vehicleHeight
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'vehicleHeight?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.vehicleLength
+    name: vehicleLength
+    fullName: vehicleLength
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'vehicleLength?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.vehicleLoadType
+    name: vehicleLoadType
+    fullName: vehicleLoadType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'vehicleLoadType?: VehicleLoadType'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.VehicleLoadType
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.vehicleMaxSpeed
+    name: vehicleMaxSpeed
+    fullName: vehicleMaxSpeed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'vehicleMaxSpeed?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.vehicleWeight
+    name: vehicleWeight
+    fullName: vehicleWeight
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'vehicleWeight?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.vehicleWidth
+    name: vehicleWidth
+    fullName: vehicleWidth
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'vehicleWidth?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.windingness
+    name: windingness
+    fullName: windingness
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'windingness?: Windingness'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.Windingness
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

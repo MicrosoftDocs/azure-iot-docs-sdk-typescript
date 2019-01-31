@@ -1,16 +1,363 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver
+    name: GuidanceManeuver
+    fullName: GuidanceManeuver
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.ARRIVE
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.ARRIVELEFT
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.ARRIVERIGHT
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.BEARLEFT
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.BEARRIGHT
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.DEPART
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.ENTERFREEWAY
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.ENTERHIGHWAY
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.ENTERMOTORWAY
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.ENTRANCERAMP
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.FOLLOW
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.KEEPLEFT
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.KEEPRIGHT
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.MAKEUTURN
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.MOTORWAYEXITLEFT
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.MOTORWAYEXITRIGHT
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.ROUNDABOUTBACK
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.ROUNDABOUTCROSS
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.ROUNDABOUTLEFT
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.ROUNDABOUTRIGHT
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.SHARPLEFT
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.SHARPRIGHT
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.STRAIGHT
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.SWITCHMAINROAD
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.SWITCHPARALLELROAD
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.TAKEEXIT
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.TAKEFERRY
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.TRYMAKEUTURN
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.TURNLEFT
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.TURNRIGHT
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.WAYPOINTLEFT
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.WAYPOINTREACHED
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.WAYPOINTRIGHT
     langs:
       - typeScript
-    type: module
-    summary: ''
+    type: enum
+    summary: >-
+      Defines values for GuidanceManeuver.
+
+      Possible values include: 'ARRIVE', 'ARRIVE_LEFT', 'ARRIVE_RIGHT',
+      'DEPART',
+
+      'STRAIGHT', 'KEEP_RIGHT', 'BEAR_RIGHT', 'TURN_RIGHT', 'SHARP_RIGHT',
+
+      'KEEP_LEFT', 'BEAR_LEFT', 'TURN_LEFT', 'SHARP_LEFT', 'MAKE_UTURN',
+
+      'ENTER_MOTORWAY', 'ENTER_FREEWAY', 'ENTER_HIGHWAY', 'TAKE_EXIT',
+
+      'MOTORWAY_EXIT_LEFT', 'MOTORWAY_EXIT_RIGHT', 'TAKE_FERRY',
+
+      'ROUNDABOUT_CROSS', 'ROUNDABOUT_RIGHT', 'ROUNDABOUT_LEFT',
+
+      'ROUNDABOUT_BACK', 'TRY_MAKE_UTURN', 'FOLLOW', 'SWITCH_PARALLEL_ROAD',
+
+      'SWITCH_MAIN_ROAD', 'ENTRANCE_RAMP', 'WAYPOINT_LEFT', 'WAYPOINT_RIGHT',
+
+      'WAYPOINT_REACHED'
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.ARRIVE
+    name: ARRIVE
+    children: []
+    langs:
+      - typeScript
+    summary: You have arrived.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.ARRIVELEFT
+    name: ARRIVELEFT
+    children: []
+    langs:
+      - typeScript
+    summary: You have arrived. Your destination is on the left.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.ARRIVERIGHT
+    name: ARRIVERIGHT
+    children: []
+    langs:
+      - typeScript
+    summary: You have arrived. Your destination is on the right.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.BEARLEFT
+    name: BEARLEFT
+    children: []
+    langs:
+      - typeScript
+    summary: Bear left.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.BEARRIGHT
+    name: BEARRIGHT
+    children: []
+    langs:
+      - typeScript
+    summary: Bear right.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.DEPART
+    name: DEPART
+    children: []
+    langs:
+      - typeScript
+    summary: Leave.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.ENTERFREEWAY
+    name: ENTERFREEWAY
+    children: []
+    langs:
+      - typeScript
+    summary: Take the freeway.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.ENTERHIGHWAY
+    name: ENTERHIGHWAY
+    children: []
+    langs:
+      - typeScript
+    summary: Take the highway.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.ENTERMOTORWAY
+    name: ENTERMOTORWAY
+    children: []
+    langs:
+      - typeScript
+    summary: Take the motorway.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.ENTRANCERAMP
+    name: ENTRANCERAMP
+    children: []
+    langs:
+      - typeScript
+    summary: Take the ramp.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.FOLLOW
+    name: FOLLOW
+    children: []
+    langs:
+      - typeScript
+    summary: Follow.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.KEEPLEFT
+    name: KEEPLEFT
+    children: []
+    langs:
+      - typeScript
+    summary: Keep left.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.KEEPRIGHT
+    name: KEEPRIGHT
+    children: []
+    langs:
+      - typeScript
+    summary: Keep right.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.MAKEUTURN
+    name: MAKEUTURN
+    children: []
+    langs:
+      - typeScript
+    summary: Make a U-turn.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.MOTORWAYEXITLEFT
+    name: MOTORWAYEXITLEFT
+    children: []
+    langs:
+      - typeScript
+    summary: Take the left exit.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.MOTORWAYEXITRIGHT
+    name: MOTORWAYEXITRIGHT
+    children: []
+    langs:
+      - typeScript
+    summary: Take the right exit.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.ROUNDABOUTBACK
+    name: ROUNDABOUTBACK
+    children: []
+    langs:
+      - typeScript
+    summary: Go around the roundabout.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.ROUNDABOUTCROSS
+    name: ROUNDABOUTCROSS
+    children: []
+    langs:
+      - typeScript
+    summary: Cross the roundabout.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.ROUNDABOUTLEFT
+    name: ROUNDABOUTLEFT
+    children: []
+    langs:
+      - typeScript
+    summary: At the roundabout take the exit on the left.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.ROUNDABOUTRIGHT
+    name: ROUNDABOUTRIGHT
+    children: []
+    langs:
+      - typeScript
+    summary: At the roundabout take the exit on the right.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.SHARPLEFT
+    name: SHARPLEFT
+    children: []
+    langs:
+      - typeScript
+    summary: Turn sharp left.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.SHARPRIGHT
+    name: SHARPRIGHT
+    children: []
+    langs:
+      - typeScript
+    summary: Turn sharp right.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.STRAIGHT
+    name: STRAIGHT
+    children: []
+    langs:
+      - typeScript
+    summary: Keep straight on.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.SWITCHMAINROAD
+    name: SWITCHMAINROAD
+    children: []
+    langs:
+      - typeScript
+    summary: Switch to the main road.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.SWITCHPARALLELROAD
+    name: SWITCHPARALLELROAD
+    children: []
+    langs:
+      - typeScript
+    summary: Switch to the parallel road.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.TAKEEXIT
+    name: TAKEEXIT
+    children: []
+    langs:
+      - typeScript
+    summary: Take the exit.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.TAKEFERRY
+    name: TAKEFERRY
+    children: []
+    langs:
+      - typeScript
+    summary: Take the ferry.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.TRYMAKEUTURN
+    name: TRYMAKEUTURN
+    children: []
+    langs:
+      - typeScript
+    summary: Try to make a U-turn.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.TURNLEFT
+    name: TURNLEFT
+    children: []
+    langs:
+      - typeScript
+    summary: Turn left.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.TURNRIGHT
+    name: TURNRIGHT
+    children: []
+    langs:
+      - typeScript
+    summary: Turn right.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.WAYPOINTLEFT
+    name: WAYPOINTLEFT
+    children: []
+    langs:
+      - typeScript
+    summary: You have reached the waypoint. It is on the left.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.WAYPOINTREACHED
+    name: WAYPOINTREACHED
+    children: []
+    langs:
+      - typeScript
+    summary: You have reached the waypoint.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.WAYPOINTRIGHT
+    name: WAYPOINTRIGHT
+    children: []
+    langs:
+      - typeScript
+    summary: You have reached the waypoint. It is on the right.
+    type: field
+    numericValue: null
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

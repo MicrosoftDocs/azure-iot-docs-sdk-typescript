@@ -1,16 +1,60 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.Models.RouteType
+    name: RouteType
+    fullName: RouteType
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - azure-maps-rest.atlas.service.Models.RouteType.Eco
+      - azure-maps-rest.atlas.service.Models.RouteType.Fastest
+      - azure-maps-rest.atlas.service.Models.RouteType.Shortest
+      - azure-maps-rest.atlas.service.Models.RouteType.Thrilling
     langs:
       - typeScript
-    type: module
-    summary: ''
+    type: enum
+    summary: |-
+      Defines values for RouteType.
+      Possible values include: 'fastest', 'shortest', 'eco', 'thrilling'
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteType.Eco
+    name: Eco
+    children: []
+    langs:
+      - typeScript
+    summary: A route balanced by economy and speed.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteType.Fastest
+    name: Fastest
+    children: []
+    langs:
+      - typeScript
+    summary: The fastest route.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteType.Shortest
+    name: Shortest
+    children: []
+    langs:
+      - typeScript
+    summary: The shortest route by distance.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteType.Thrilling
+    name: Thrilling
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      Includes interesting or challenging roads and uses as few motorways as
+      possible. You can choose the level of turns included and also the degree
+      of hilliness. See the hilliness and windingness parameters for how to set
+      this. There is a limit of 900 km on routes planned with
+      routeType=thrilling
+    type: field
+    numericValue: null
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

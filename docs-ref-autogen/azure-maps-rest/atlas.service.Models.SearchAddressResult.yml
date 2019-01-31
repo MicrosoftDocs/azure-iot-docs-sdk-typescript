@@ -1,16 +1,141 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.Models.SearchAddressResult
+    name: SearchAddressResult
+    fullName: SearchAddressResult
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - azure-maps-rest.atlas.service.Models.SearchAddressResult.address
+      - azure-maps-rest.atlas.service.Models.SearchAddressResult.dataSources
+      - azure-maps-rest.atlas.service.Models.SearchAddressResult.entryPoints
+      - azure-maps-rest.atlas.service.Models.SearchAddressResult.id
+      - azure-maps-rest.atlas.service.Models.SearchAddressResult.position
+      - azure-maps-rest.atlas.service.Models.SearchAddressResult.score
+      - azure-maps-rest.atlas.service.Models.SearchAddressResult.type
+      - azure-maps-rest.atlas.service.Models.SearchAddressResult.viewport
     langs:
       - typeScript
-    type: module
+    type: interface
     summary: ''
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchAddressResult.address
+    name: address
+    fullName: address
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'address?: SearchResultAddress'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.SearchResultAddress
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchAddressResult.dataSources
+    name: dataSources
+    fullName: dataSources
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'dataSources?: DataSources'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.DataSources
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchAddressResult.entryPoints
+    name: entryPoints
+    fullName: entryPoints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'entryPoints?: SearchResultEntryPoint[]'
+      return:
+        type:
+          - 'azure-maps-rest.atlas.service.Models.SearchResultEntryPoint[]'
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchAddressResult.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchAddressResult.position
+    name: position
+    fullName: position
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'position?: CoordinateAbbreviated'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.CoordinateAbbreviated
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchAddressResult.score
+    name: score
+    fullName: score
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'score?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchAddressResult.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'type?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchAddressResult.viewport
+    name: viewport
+    fullName: viewport
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'viewport?: SearchResultViewport'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.SearchResultViewport
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

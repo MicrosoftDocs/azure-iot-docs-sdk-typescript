@@ -1,16 +1,47 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.Models.RouteInstructionsType
+    name: RouteInstructionsType
+    fullName: RouteInstructionsType
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - azure-maps-rest.atlas.service.Models.RouteInstructionsType.Coded
+      - azure-maps-rest.atlas.service.Models.RouteInstructionsType.Tagged
+      - azure-maps-rest.atlas.service.Models.RouteInstructionsType.Text
     langs:
       - typeScript
-    type: module
-    summary: ''
+    type: enum
+    summary: |-
+      Defines values for RouteInstructionsType.
+      Possible values include: 'coded', 'text', 'tagged'
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteInstructionsType.Coded
+    name: Coded
+    children: []
+    langs:
+      - typeScript
+    summary: Returns raw instruction data without human-readable messages.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteInstructionsType.Tagged
+    name: Tagged
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      Returns raw instruction data with tagged human-readable messages to permit
+      formatting.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteInstructionsType.Text
+    name: Text
+    children: []
+    langs:
+      - typeScript
+    summary: Returns raw instructions data with human-readable messages in plain text.
+    type: field
+    numericValue: null
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

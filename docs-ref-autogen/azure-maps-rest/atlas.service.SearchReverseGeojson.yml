@@ -1,16 +1,37 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.SearchReverseGeojson
+    name: SearchReverseGeojson
+    fullName: SearchReverseGeojson
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - azure-maps-rest.atlas.service.SearchReverseGeojson.getFeatures
     langs:
       - typeScript
-    type: module
-    summary: ''
+    type: class
+    summary: >-
+      A helper extension providing methods for accessing the response data in
+      GeoJSON format.
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.SearchReverseGeojson.getFeatures
+    name: getFeatures()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Returns a GeoJSON feature collection built from the addresses.
+      Each feature in the collection is a Point representing one address.
+      The properties of each feature match the properties of the `address`,
+      except the `position` property is omitted because it is already the
+      coordinate of the point. Each feature's properties also includes
+      a resultIndex. The resultIndex is the index of the route within the
+      original `addresses` array.
+    syntax:
+      content: function getFeatures()
+      parameters: []
+      return:
+        type:
+          - FeatureCollection<Point>
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

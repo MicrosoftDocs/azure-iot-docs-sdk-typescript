@@ -1,16 +1,45 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.Models.RouteRange
+    name: RouteRange
+    fullName: RouteRange
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - azure-maps-rest.atlas.service.Models.RouteRange.boundary
+      - azure-maps-rest.atlas.service.Models.RouteRange.center
     langs:
       - typeScript
-    type: module
+    type: interface
     summary: ''
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteRange.boundary
+    name: boundary
+    fullName: boundary
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'boundary?: Coordinate[]'
+      return:
+        type:
+          - 'azure-maps-rest.atlas.service.Models.Coordinate[]'
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteRange.center
+    name: center
+    fullName: center
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'center?: Coordinate'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.Coordinate
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

@@ -1,16 +1,45 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.Models.Windingness
+    name: Windingness
+    fullName: Windingness
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - azure-maps-rest.atlas.service.Models.Windingness.High
+      - azure-maps-rest.atlas.service.Models.Windingness.Low
+      - azure-maps-rest.atlas.service.Models.Windingness.Normal
     langs:
       - typeScript
-    type: module
-    summary: ''
+    type: enum
+    summary: |-
+      Defines values for Windingness.
+      Possible values include: 'low', 'normal', 'high'
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.Windingness.High
+    name: High
+    children: []
+    langs:
+      - typeScript
+    summary: high
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.Windingness.Low
+    name: Low
+    children: []
+    langs:
+      - typeScript
+    summary: low
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.Windingness.Normal
+    name: Normal
+    children: []
+    langs:
+      - typeScript
+    summary: normal
+    type: field
+    numericValue: null
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

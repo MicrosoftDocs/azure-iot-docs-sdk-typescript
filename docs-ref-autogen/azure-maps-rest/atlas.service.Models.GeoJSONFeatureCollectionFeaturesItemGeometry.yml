@@ -1,16 +1,50 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItemGeometry
+    name: GeoJSONFeatureCollectionFeaturesItemGeometry
+    fullName: GeoJSONFeatureCollectionFeaturesItemGeometry
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - >-
+        azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItemGeometry.coordinates
+      - >-
+        azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItemGeometry.type
     langs:
       - typeScript
-    type: module
+    type: interface
     summary: ''
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItemGeometry.coordinates
+    name: coordinates
+    fullName: coordinates
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'coordinates?: number[][]'
+      return:
+        type:
+          - 'number[][]'
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItemGeometry.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'type?: GeoJSONGeometryType'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.GeoJSONGeometryType
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

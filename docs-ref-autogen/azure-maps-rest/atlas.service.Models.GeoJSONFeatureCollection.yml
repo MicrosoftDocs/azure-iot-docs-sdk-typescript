@@ -1,16 +1,29 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollection
+    name: GeoJSONFeatureCollection
+    fullName: GeoJSONFeatureCollection
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollection.features
     langs:
       - typeScript
-    type: module
+    type: interface
     summary: ''
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollection.features
+    name: features
+    fullName: features
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'features: GeoJSONFeatureCollectionFeaturesItem[]'
+      return:
+        type:
+          - >-
+            azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItem[]
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

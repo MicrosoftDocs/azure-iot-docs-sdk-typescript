@@ -1,16 +1,34 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.IRequestLogOptions
+    name: IRequestLogOptions
+    fullName: IRequestLogOptions
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - >-
+        azure-maps-rest.atlas.service.IRequestLogOptions.logWarningIfTryOverThreshold
     langs:
       - typeScript
-    type: module
-    summary: ''
+    type: interface
+    summary: IRequestLogOptions configures the retry policy's behavior.
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.IRequestLogOptions.logWarningIfTryOverThreshold
+    name: logWarningIfTryOverThreshold
+    fullName: logWarningIfTryOverThreshold
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      LogWarningIfTryOverThreshold logs a warning if a tried operation takes
+      longer than the specified
+
+      duration in ms. Default is 3000ms.
+    syntax:
+      content: 'logWarningIfTryOverThreshold: number'
+      return:
+        type:
+          - number
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

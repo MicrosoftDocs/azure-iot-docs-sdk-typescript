@@ -1,16 +1,95 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.Pipeline
+    name: Pipeline
+    fullName: Pipeline
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - azure-maps-rest.atlas.service.Pipeline.constructor
+      - azure-maps-rest.atlas.service.Pipeline.factories
+      - azure-maps-rest.atlas.service.Pipeline.options
+      - azure-maps-rest.atlas.service.Pipeline.toServiceClientOptions
     langs:
       - typeScript
-    type: module
+    type: class
+    summary: >-
+      A Pipeline class containing HTTP request policies.
+
+      You can create a default Pipeline by calling MapsURL.newPipeline().
+
+      Or you can create a Pipeline with your own policies by the constructor of
+      Pipeline.
+
+      Refer to MapsURL.newPipeline() and provided policies as reference before
+
+      implementing your customized Pipeline.
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Pipeline.constructor
+    name: 'Pipeline(RequestPolicyFactory[], IPipelineOptions)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: >-
+      Creates an instance of Pipeline. Customize HTTPClient by implementing
+      IHttpClient interface.
+    syntax:
+      content: >-
+        new Pipeline(factories: RequestPolicyFactory[], options?:
+        IPipelineOptions)
+      parameters:
+        - id: factories
+          type:
+            - 'azure-maps-rest.atlas.service.RequestPolicyFactory[]'
+          description: ''
+        - id: options
+          type:
+            - azure-maps-rest.atlas.service.IPipelineOptions
+          description: ''
+          optional: true
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Pipeline.factories
+    name: factories
+    fullName: factories
+    children: []
+    langs:
+      - typeScript
+    type: property
     summary: ''
+    syntax:
+      content: 'factories: msRest.RequestPolicyFactory[]'
+      return:
+        type:
+          - 'msRest.RequestPolicyFactory[]'
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Pipeline.options
+    name: options
+    fullName: options
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'options: IPipelineOptions'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.IPipelineOptions
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Pipeline.toServiceClientOptions
+    name: toServiceClientOptions()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Transfer Pipeline object to ServiceClientOptions object which required by
+      ServiceClient constructor.
+    syntax:
+      content: function toServiceClientOptions()
+      parameters: []
+      return:
+        type:
+          - ServiceClientOptions
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

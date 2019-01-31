@@ -1,16 +1,99 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.Models.TravelMode
+    name: TravelMode
+    fullName: TravelMode
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - azure-maps-rest.atlas.service.Models.TravelMode.Bicycle
+      - azure-maps-rest.atlas.service.Models.TravelMode.Bus
+      - azure-maps-rest.atlas.service.Models.TravelMode.Car
+      - azure-maps-rest.atlas.service.Models.TravelMode.Motorcycle
+      - azure-maps-rest.atlas.service.Models.TravelMode.Pedestrian
+      - azure-maps-rest.atlas.service.Models.TravelMode.Taxi
+      - azure-maps-rest.atlas.service.Models.TravelMode.Truck
+      - azure-maps-rest.atlas.service.Models.TravelMode.Van
     langs:
       - typeScript
-    type: module
-    summary: ''
+    type: enum
+    summary: >-
+      Defines values for TravelMode.
+
+      Possible values include: 'car', 'truck', 'taxi', 'bus', 'van',
+      'motorcycle',
+
+      'bicycle', 'pedestrian'
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.TravelMode.Bicycle
+    name: Bicycle
+    children: []
+    langs:
+      - typeScript
+    summary: bicycle
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.TravelMode.Bus
+    name: Bus
+    children: []
+    langs:
+      - typeScript
+    summary: bus
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.TravelMode.Car
+    name: Car
+    children: []
+    langs:
+      - typeScript
+    summary: car
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.TravelMode.Motorcycle
+    name: Motorcycle
+    children: []
+    langs:
+      - typeScript
+    summary: motorcycle
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.TravelMode.Pedestrian
+    name: Pedestrian
+    children: []
+    langs:
+      - typeScript
+    summary: pedestrian
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.TravelMode.Taxi
+    name: Taxi
+    children: []
+    langs:
+      - typeScript
+    summary: taxi
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.TravelMode.Truck
+    name: Truck
+    children: []
+    langs:
+      - typeScript
+    summary: truck
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.TravelMode.Van
+    name: Van
+    children: []
+    langs:
+      - typeScript
+    summary: van
+    type: field
+    numericValue: null
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

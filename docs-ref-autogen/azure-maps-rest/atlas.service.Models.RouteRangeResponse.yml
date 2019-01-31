@@ -1,16 +1,93 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.Models.RouteRangeResponse
+    name: RouteRangeResponse
+    fullName: RouteRangeResponse
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - azure-maps-rest.atlas.service.Models.RouteRangeResponse.copyright
+      - azure-maps-rest.atlas.service.Models.RouteRangeResponse.formatVersion
+      - azure-maps-rest.atlas.service.Models.RouteRangeResponse.privacy
+      - azure-maps-rest.atlas.service.Models.RouteRangeResponse.reachableRange
+      - azure-maps-rest.atlas.service.Models.RouteRangeResponse.report
     langs:
       - typeScript
-    type: module
+    type: interface
     summary: ''
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteRangeResponse.copyright
+    name: copyright
+    fullName: copyright
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'copyright?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteRangeResponse.formatVersion
+    name: formatVersion
+    fullName: formatVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'formatVersion?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteRangeResponse.privacy
+    name: privacy
+    fullName: privacy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'privacy?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteRangeResponse.reachableRange
+    name: reachableRange
+    fullName: reachableRange
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'reachableRange?: RouteRange'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.RouteRange
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteRangeResponse.report
+    name: report
+    fullName: report
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'report?: RouteResponseReport'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.RouteResponseReport
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

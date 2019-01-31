@@ -1,16 +1,35 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.Models.DrivingSide
+    name: DrivingSide
+    fullName: DrivingSide
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - azure-maps-rest.atlas.service.Models.DrivingSide.LEFT
+      - azure-maps-rest.atlas.service.Models.DrivingSide.RIGHT
     langs:
       - typeScript
-    type: module
-    summary: ''
+    type: enum
+    summary: |-
+      Defines values for DrivingSide.
+      Possible values include: 'LEFT', 'RIGHT'
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.DrivingSide.LEFT
+    name: LEFT
+    children: []
+    langs:
+      - typeScript
+    summary: Left side.
+    type: field
+    numericValue: null
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.DrivingSide.RIGHT
+    name: RIGHT
+    children: []
+    langs:
+      - typeScript
+    summary: Right side.
+    type: field
+    numericValue: null
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

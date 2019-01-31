@@ -1,16 +1,159 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.Models.RouteResultSection
+    name: RouteResultSection
+    fullName: RouteResultSection
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - azure-maps-rest.atlas.service.Models.RouteResultSection.delayInSeconds
+      - >-
+        azure-maps-rest.atlas.service.Models.RouteResultSection.effectiveSpeedInKmh
+      - azure-maps-rest.atlas.service.Models.RouteResultSection.endPointIndex
+      - azure-maps-rest.atlas.service.Models.RouteResultSection.magnitudeOfDelay
+      - azure-maps-rest.atlas.service.Models.RouteResultSection.sectionType
+      - azure-maps-rest.atlas.service.Models.RouteResultSection.simpleCategory
+      - azure-maps-rest.atlas.service.Models.RouteResultSection.startPointIndex
+      - azure-maps-rest.atlas.service.Models.RouteResultSection.tec
+      - azure-maps-rest.atlas.service.Models.RouteResultSection.travelMode
     langs:
       - typeScript
-    type: module
+    type: interface
     summary: ''
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteResultSection.delayInSeconds
+    name: delayInSeconds
+    fullName: delayInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'delayInSeconds?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RouteResultSection.effectiveSpeedInKmh
+    name: effectiveSpeedInKmh
+    fullName: effectiveSpeedInKmh
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'effectiveSpeedInKmh?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteResultSection.endPointIndex
+    name: endPointIndex
+    fullName: endPointIndex
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'endPointIndex?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteResultSection.magnitudeOfDelay
+    name: magnitudeOfDelay
+    fullName: magnitudeOfDelay
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'magnitudeOfDelay?: MagnitudeOfDelay'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.MagnitudeOfDelay
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteResultSection.sectionType
+    name: sectionType
+    fullName: sectionType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'sectionType?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteResultSection.simpleCategory
+    name: simpleCategory
+    fullName: simpleCategory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'simpleCategory?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteResultSection.startPointIndex
+    name: startPointIndex
+    fullName: startPointIndex
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'startPointIndex?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteResultSection.tec
+    name: tec
+    fullName: tec
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'tec?: RouteResultSectionTec'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.RouteResultSectionTec
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.RouteResultSection.travelMode
+    name: travelMode
+    fullName: travelMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'travelMode?: string'
+      return:
+        type:
+          - string
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

@@ -1,16 +1,49 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.Models.SearchResultPoiClassificationName
+    name: SearchResultPoiClassificationName
+    fullName: SearchResultPoiClassificationName
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchResultPoiClassificationName.name
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchResultPoiClassificationName.nameLocale
     langs:
       - typeScript
-    type: module
+    type: interface
     summary: ''
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchResultPoiClassificationName.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchResultPoiClassificationName.nameLocale
+    name: nameLocale
+    fullName: nameLocale
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'nameLocale?: string'
+      return:
+        type:
+          - string
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

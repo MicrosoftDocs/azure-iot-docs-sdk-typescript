@@ -1,16 +1,126 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.Models.SearchAlongRouteSummary
+    name: SearchAlongRouteSummary
+    fullName: SearchAlongRouteSummary
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - azure-maps-rest.atlas.service.Models.SearchAlongRouteSummary.fuzzyLevel
+      - azure-maps-rest.atlas.service.Models.SearchAlongRouteSummary.numResults
+      - azure-maps-rest.atlas.service.Models.SearchAlongRouteSummary.offset
+      - azure-maps-rest.atlas.service.Models.SearchAlongRouteSummary.query
+      - azure-maps-rest.atlas.service.Models.SearchAlongRouteSummary.queryTime
+      - azure-maps-rest.atlas.service.Models.SearchAlongRouteSummary.queryType
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchAlongRouteSummary.totalResults
     langs:
       - typeScript
-    type: module
+    type: interface
     summary: ''
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchAlongRouteSummary.fuzzyLevel
+    name: fuzzyLevel
+    fullName: fuzzyLevel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'fuzzyLevel?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchAlongRouteSummary.numResults
+    name: numResults
+    fullName: numResults
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'numResults?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchAlongRouteSummary.offset
+    name: offset
+    fullName: offset
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'offset?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchAlongRouteSummary.query
+    name: query
+    fullName: query
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'query?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchAlongRouteSummary.queryTime
+    name: queryTime
+    fullName: queryTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'queryTime?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchAlongRouteSummary.queryType
+    name: queryType
+    fullName: queryType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'queryType?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchAlongRouteSummary.totalResults
+    name: totalResults
+    fullName: totalResults
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'totalResults?: number'
+      return:
+        type:
+          - number
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

@@ -1,16 +1,47 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary
+    name: BatchResponseSummary
+    fullName: BatchResponseSummary
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - >-
+        azure-maps-rest.atlas.service.Models.BatchResponseSummary.successfulRequests
+      - azure-maps-rest.atlas.service.Models.BatchResponseSummary.totalRequests
     langs:
       - typeScript
-    type: module
+    type: interface
     summary: ''
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.BatchResponseSummary.successfulRequests
+    name: successfulRequests
+    fullName: successfulRequests
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'successfulRequests?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary.totalRequests
+    name: totalRequests
+    fullName: totalRequests
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'totalRequests?: number'
+      return:
+        type:
+          - number
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

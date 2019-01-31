@@ -1,16 +1,58 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.MapsURL
+    name: MapsURL
+    fullName: MapsURL
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - azure-maps-rest.atlas.service.MapsURL.mapsUrl
+      - azure-maps-rest.atlas.service.MapsURL.newPipeline
     langs:
       - typeScript
-    type: module
-    summary: ''
+    type: class
+    summary: 'A MapsURL represents a base URL class for SearchURL, RouteURL and etc.'
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.MapsURL.mapsUrl
+    name: mapsUrl
+    fullName: mapsUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Base URL string value.
+    syntax:
+      content: 'mapsUrl: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.MapsURL.newPipeline
+    name: 'newPipeline(Credential, INewPipelineOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      A static method used to create a new Pipeline object with Credential
+      provided.
+    syntax:
+      content: >-
+        static function newPipeline(credential: Credential, pipelineOptions?:
+        INewPipelineOptions)
+      parameters:
+        - id: credential
+          type:
+            - azure-maps-rest.atlas.service.Credential
+          description: >-
+            Such as SubscriptionKeyCredential, TokenCredential, and
+            MapControlCredential.
+        - id: pipelineOptions
+          type:
+            - azure-maps-rest.atlas.service.INewPipelineOptions
+          description: ''
+          optional: true
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Pipeline
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

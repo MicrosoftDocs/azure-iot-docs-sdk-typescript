@@ -1,16 +1,45 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas
-    name: atlas
-    fullName: atlas
+  - uid: azure-maps-rest.atlas.service.Models.SearchResultViewport
+    name: SearchResultViewport
+    fullName: SearchResultViewport
     children:
-      - azure-maps-rest.atlas.AuthenticationManager
-      - azure-maps-rest.atlas.Map
-      - azure-maps-rest.atlas.RequestParameters
+      - azure-maps-rest.atlas.service.Models.SearchResultViewport.btmRightPoint
+      - azure-maps-rest.atlas.service.Models.SearchResultViewport.topLeftPoint
     langs:
       - typeScript
-    type: module
+    type: interface
     summary: ''
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchResultViewport.btmRightPoint
+    name: btmRightPoint
+    fullName: btmRightPoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'btmRightPoint?: CoordinateAbbreviated'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.CoordinateAbbreviated
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.SearchResultViewport.topLeftPoint
+    name: topLeftPoint
+    fullName: topLeftPoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'topLeftPoint?: CoordinateAbbreviated'
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Models.CoordinateAbbreviated
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary

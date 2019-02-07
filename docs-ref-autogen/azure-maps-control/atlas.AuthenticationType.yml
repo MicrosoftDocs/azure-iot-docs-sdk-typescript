@@ -1,47 +1,58 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-control.atlas.deprecated.PolygonProperties
-    name: PolygonProperties
-    fullName: PolygonProperties
+  - uid: azure-maps-control.atlas.AuthenticationType
+    name: AuthenticationType
+    fullName: AuthenticationType
     children:
-      - azure-maps-control.atlas.deprecated.PolygonProperties.color
-      - azure-maps-control.atlas.deprecated.PolygonProperties.outlineColor
+      - azure-maps-control.atlas.AuthenticationType.aad
+      - azure-maps-control.atlas.AuthenticationType.anonymous
+      - azure-maps-control.atlas.AuthenticationType.subscriptionKey
     langs:
       - typeScript
-    type: interface
-    summary: Individual properties that can be specified for a polygon feature.
+    type: enum
+    summary: >-
+      An enumeration used to specify the type of authentication mechanism to
+      use.
     package: azure-maps-control
-    deprecated:
-      content: Use new PolygonLayerOptions with atlas.layer.PolygonLayer instead.
-  - uid: azure-maps-control.atlas.deprecated.PolygonProperties.color
-    name: color
-    fullName: color
+  - uid: azure-maps-control.atlas.AuthenticationType.aad
+    name: aad
     children: []
     langs:
       - typeScript
-    type: property
-    summary: The fill color of the polygon.
-    optional: true
-    syntax:
-      content: 'color?: string'
-      return:
-        type:
-          - string
+    summary: >-
+      The AAD implicit grant mechanism. Recommended for pages protected by a
+      sign-in.
+
+      By default the page will be redirected to the AAD login when the map
+      control initializes.
+
+      Specify a logged-in `AuthenticationContext` in the `AuthenticationOptions`
+
+      for greater control over when/how the users signs in.
+    type: field
+    numericValue: null
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.deprecated.PolygonProperties.outlineColor
-    name: outlineColor
-    fullName: outlineColor
+  - uid: azure-maps-control.atlas.AuthenticationType.anonymous
+    name: anonymous
     children: []
     langs:
       - typeScript
-    type: property
-    summary: The outline color of the polygon.
-    optional: true
-    syntax:
-      content: 'outlineColor?: string'
-      return:
-        type:
-          - string
+    summary: >-
+      The anonymous authentication mechanism. Recommended for public pages.
+
+      Allows a callback responsible for acquiring an authentication token to be
+      provided.
+    type: field
+    numericValue: null
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.AuthenticationType.subscriptionKey
+    name: subscriptionKey
+    children: []
+    langs:
+      - typeScript
+    summary: The subscription key authentication mechanism.
+    type: field
+    numericValue: null
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions
@@ -219,18 +230,6 @@ references:
         uid: azure-maps-control.atlas.data.Position
       - name: '[]'
         fullName: '[]'
-  - uid: azure-maps-control.atlas.deprecated.LayerOptions
-    name: LayerOptions
-    spec.typeScript:
-      - name: LayerOptions
-        fullName: LayerOptions
-        uid: azure-maps-control.atlas.deprecated.LayerOptions
-  - uid: azure-maps-control.atlas.Options
-    name: Options
-    spec.typeScript:
-      - name: Options
-        fullName: Options
-        uid: azure-maps-control.atlas.Options
   - uid: azure-maps-control.atlas.layer.Layer
     name: Layer
     spec.typeScript:
@@ -529,6 +528,12 @@ references:
       - name: UserInteractionOptions
         fullName: UserInteractionOptions
         uid: azure-maps-control.atlas.UserInteractionOptions
+  - uid: azure-maps-control.atlas.AuthenticationManager
+    name: AuthenticationManager
+    spec.typeScript:
+      - name: AuthenticationManager
+        fullName: AuthenticationManager
+        uid: azure-maps-control.atlas.AuthenticationManager
   - uid: azure-maps-control.atlas.ControlManager
     name: ControlManager
     spec.typeScript:
@@ -565,142 +570,6 @@ references:
       - name: SourceManager
         fullName: SourceManager
         uid: azure-maps-control.atlas.SourceManager
-  - uid: >-
-      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
-      azure-maps-control.atlas.deprecated.CircleProperties>>
-    name: CircleProperties>>
-    spec.typeScript:
-      - name: Array<
-        fullName: Array<
-      - name: Feature
-        fullName: Feature
-        uid: azure-maps-control.atlas.data.Feature
-      - name: <
-        fullName: <
-      - name: Point
-        fullName: Point
-        uid: azure-maps-control.atlas.data.Point
-      - name: ', '
-        fullName: ', '
-      - name: CircleProperties
-        fullName: CircleProperties
-        uid: azure-maps-control.atlas.deprecated.CircleProperties
-      - name: '>>'
-        fullName: '>>'
-  - uid: azure-maps-control.atlas.deprecated.CircleLayerOptions
-    name: CircleLayerOptions
-    spec.typeScript:
-      - name: CircleLayerOptions
-        fullName: CircleLayerOptions
-        uid: azure-maps-control.atlas.deprecated.CircleLayerOptions
-  - uid: azure-maps-control.atlas.Control
-    name: Control
-    spec.typeScript:
-      - name: Control
-        fullName: Control
-        uid: azure-maps-control.atlas.Control
-  - uid: >-
-      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.LineString
-      | azure-maps-control.atlas.data.MultiLineString,
-      azure-maps-control.atlas.deprecated.LinestringProperties>>
-    name: LinestringProperties>>
-    spec.typeScript:
-      - name: Array<
-        fullName: Array<
-      - name: Feature
-        fullName: Feature
-        uid: azure-maps-control.atlas.data.Feature
-      - name: <
-        fullName: <
-      - name: LineString
-        fullName: LineString
-        uid: azure-maps-control.atlas.data.LineString
-      - name: ' | '
-        fullName: ' | '
-      - name: MultiLineString
-        fullName: MultiLineString
-        uid: azure-maps-control.atlas.data.MultiLineString
-      - name: ', '
-        fullName: ', '
-      - name: LinestringProperties
-        fullName: LinestringProperties
-        uid: azure-maps-control.atlas.deprecated.LinestringProperties
-      - name: '>>'
-        fullName: '>>'
-  - uid: azure-maps-control.atlas.deprecated.LinestringLayerOptions
-    name: LinestringLayerOptions
-    spec.typeScript:
-      - name: LinestringLayerOptions
-        fullName: LinestringLayerOptions
-        uid: azure-maps-control.atlas.deprecated.LinestringLayerOptions
-  - uid: >-
-      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
-      azure-maps-control.atlas.deprecated.PinProperties>>
-    name: PinProperties>>
-    spec.typeScript:
-      - name: Array<
-        fullName: Array<
-      - name: Feature
-        fullName: Feature
-        uid: azure-maps-control.atlas.data.Feature
-      - name: <
-        fullName: <
-      - name: Point
-        fullName: Point
-        uid: azure-maps-control.atlas.data.Point
-      - name: ', '
-        fullName: ', '
-      - name: PinProperties
-        fullName: PinProperties
-        uid: azure-maps-control.atlas.deprecated.PinProperties
-      - name: '>>'
-        fullName: '>>'
-  - uid: azure-maps-control.atlas.deprecated.PinLayerOptions
-    name: PinLayerOptions
-    spec.typeScript:
-      - name: PinLayerOptions
-        fullName: PinLayerOptions
-        uid: azure-maps-control.atlas.deprecated.PinLayerOptions
-  - uid: >-
-      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Polygon
-      | azure-maps-control.atlas.data.MultiPolygon,
-      azure-maps-control.atlas.deprecated.PolygonProperties>>
-    name: PolygonProperties>>
-    spec.typeScript:
-      - name: Array<
-        fullName: Array<
-      - name: Feature
-        fullName: Feature
-        uid: azure-maps-control.atlas.data.Feature
-      - name: <
-        fullName: <
-      - name: Polygon
-        fullName: Polygon
-        uid: azure-maps-control.atlas.data.Polygon
-      - name: ' | '
-        fullName: ' | '
-      - name: MultiPolygon
-        fullName: MultiPolygon
-        uid: azure-maps-control.atlas.data.MultiPolygon
-      - name: ', '
-        fullName: ', '
-      - name: PolygonProperties
-        fullName: PolygonProperties
-        uid: azure-maps-control.atlas.deprecated.PolygonProperties
-      - name: '>>'
-        fullName: '>>'
-  - uid: azure-maps-control.atlas.deprecated.PolygonLayerOptions
-    name: PolygonLayerOptions
-    spec.typeScript:
-      - name: PolygonLayerOptions
-        fullName: PolygonLayerOptions
-        uid: azure-maps-control.atlas.deprecated.PolygonLayerOptions
-  - uid: azure-maps-control.atlas.deprecated.RasterLayerOptions
-    name: RasterLayerOptions
-    spec.typeScript:
-      - name: RasterLayerOptions
-        fullName: RasterLayerOptions
-        uid: azure-maps-control.atlas.deprecated.RasterLayerOptions
   - uid: >-
       azure-maps-control.atlas.CameraOptions &
       azure-maps-control.atlas.CameraBoundsOptions
@@ -757,12 +626,6 @@ references:
       - name: AnimationOptions
         fullName: AnimationOptions
         uid: azure-maps-control.atlas.AnimationOptions
-  - uid: azure-maps-control.atlas.CameraBoundsOptions
-    name: CameraBoundsOptions
-    spec.typeScript:
-      - name: CameraBoundsOptions
-        fullName: CameraBoundsOptions
-        uid: azure-maps-control.atlas.CameraBoundsOptions
   - uid: azure-maps-control.atlas.Pixel
     name: Pixel
     spec.typeScript:
@@ -823,6 +686,30 @@ references:
         uid: azure-maps-control.atlas.data.Position
       - name: '[][][]'
         fullName: '[][][]'
+  - uid: azure-maps-control.atlas.Options
+    name: Options
+    spec.typeScript:
+      - name: Options
+        fullName: Options
+        uid: azure-maps-control.atlas.Options
+  - uid: azure-maps-control.atlas.AuthenticationType
+    name: AuthenticationType
+    spec.typeScript:
+      - name: AuthenticationType
+        fullName: AuthenticationType
+        uid: azure-maps-control.atlas.AuthenticationType
+  - uid: azure-maps-control.atlas.RequestParameters
+    name: RequestParameters
+    spec.typeScript:
+      - name: RequestParameters
+        fullName: RequestParameters
+        uid: azure-maps-control.atlas.RequestParameters
+  - uid: azure-maps-control.atlas.getAuthTokenCallback
+    name: getAuthTokenCallback
+    spec.typeScript:
+      - name: getAuthTokenCallback
+        fullName: getAuthTokenCallback
+        uid: azure-maps-control.atlas.getAuthTokenCallback
   - uid: azure-maps-control.atlas.LayerOptions
     name: LayerOptions
     spec.typeScript:
@@ -1115,6 +1002,12 @@ references:
         uid: azure-maps-control.atlas.Shape
       - name: '>'
         fullName: '>'
+  - uid: azure-maps-control.atlas.AuthenticationOptions
+    name: AuthenticationOptions
+    spec.typeScript:
+      - name: AuthenticationOptions
+        fullName: AuthenticationOptions
+        uid: azure-maps-control.atlas.AuthenticationOptions
   - uid: >-
       azure-maps-control.atlas.source.Source |
       azure-maps-control.atlas.source.Source[]

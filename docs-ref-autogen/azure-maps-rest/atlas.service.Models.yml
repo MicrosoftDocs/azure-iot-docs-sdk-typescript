@@ -8,7 +8,6 @@ items:
       - azure-maps-rest.atlas.service.Models.Avoid
       - azure-maps-rest.atlas.service.Models.ComputeTravelTimeFor
       - azure-maps-rest.atlas.service.Models.DrivingSide
-      - azure-maps-rest.atlas.service.Models.GeoJSONGeometryType
       - azure-maps-rest.atlas.service.Models.GuidanceInstructionType
       - azure-maps-rest.atlas.service.Models.GuidanceManeuver
       - azure-maps-rest.atlas.service.Models.Hilliness
@@ -32,13 +31,9 @@ items:
       - azure-maps-rest.atlas.service.Models.DataSourcesGeometry
       - azure-maps-rest.atlas.service.Models.ErrorModel
       - azure-maps-rest.atlas.service.Models.ErrorResponse
-      - azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollection
-      - >-
-        azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItem
-      - >-
-        azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItemGeometry
       - azure-maps-rest.atlas.service.Models.GeoJSONLineString
       - azure-maps-rest.atlas.service.Models.GeoJSONMultiPoint
+      - azure-maps-rest.atlas.service.Models.GeoJSONPoint
       - azure-maps-rest.atlas.service.Models.MapsClientOptions
       - azure-maps-rest.atlas.service.Models.RouteDirectionsRequestBody
       - azure-maps-rest.atlas.service.Models.RouteDirectionsResponse
@@ -46,6 +41,7 @@ items:
       - azure-maps-rest.atlas.service.Models.RouteDirectionsSummary
       - >-
         azure-maps-rest.atlas.service.Models.RouteGetRouteDirectionsOptionalParams
+      - azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams
       - azure-maps-rest.atlas.service.Models.RouteMatrixRequestBody
       - azure-maps-rest.atlas.service.Models.RouteMatrixResponse
       - azure-maps-rest.atlas.service.Models.RouteMatrixResult
@@ -129,6 +125,7 @@ items:
       - azure-maps-rest.atlas.service.Models.SearchResultViewport
       - azure-maps-rest.atlas.service.Models.SearchSummaryGeoBias
       - azure-maps-rest.atlas.service.Models.RouteGetRouteDirectionsResponse
+      - azure-maps-rest.atlas.service.Models.RouteGetRouteRangeResponse
       - azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsResponse
       - azure-maps-rest.atlas.service.Models.SearchGetSearchAddressResponse
       - >-
@@ -141,6 +138,7 @@ items:
       - azure-maps-rest.atlas.service.Models.SearchGetSearchNearbyResponse
       - azure-maps-rest.atlas.service.Models.SearchGetSearchPOICategoryResponse
       - azure-maps-rest.atlas.service.Models.SearchGetSearchPOIResponse
+      - azure-maps-rest.atlas.service.Models.SearchGetSearchPolygonResponse
       - azure-maps-rest.atlas.service.Models.SearchPostSearchAlongRouteResponse
       - >-
         azure-maps-rest.atlas.service.Models.SearchPostSearchInsideGeometryResponse
@@ -168,36 +166,12 @@ references:
       - name: ErrorModel
         fullName: ErrorModel
         uid: azure-maps-rest.atlas.service.Models.ErrorModel
-  - uid: >-
-      azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItem[]
-    name: 'GeoJSONFeatureCollectionFeaturesItem[]'
+  - uid: 'azure-maps-rest.atlas.service.Models.GeoJSONPoint[]'
+    name: 'GeoJSONPoint[]'
     spec.typeScript:
-      - name: GeoJSONFeatureCollectionFeaturesItem
-        fullName: GeoJSONFeatureCollectionFeaturesItem
-        uid: >-
-          azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItem
-      - name: '[]'
-        fullName: '[]'
-  - uid: >-
-      azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItemGeometry
-    name: GeoJSONFeatureCollectionFeaturesItemGeometry
-    spec.typeScript:
-      - name: GeoJSONFeatureCollectionFeaturesItemGeometry
-        fullName: GeoJSONFeatureCollectionFeaturesItemGeometry
-        uid: >-
-          azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItemGeometry
-  - uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometryType
-    name: GeoJSONGeometryType
-    spec.typeScript:
-      - name: GeoJSONGeometryType
-        fullName: GeoJSONGeometryType
-        uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometryType
-  - uid: 'azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollection[]'
-    name: 'GeoJSONFeatureCollection[]'
-    spec.typeScript:
-      - name: GeoJSONFeatureCollection
-        fullName: GeoJSONFeatureCollection
-        uid: azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollection
+      - name: GeoJSONPoint
+        fullName: GeoJSONPoint
+        uid: azure-maps-rest.atlas.service.Models.GeoJSONPoint
       - name: '[]'
         fullName: '[]'
   - uid: 'azure-maps-rest.atlas.service.Models.RouteOptimizedWaypoint[]'
@@ -1000,10 +974,8 @@ references:
     name: BatchResponse
   - uid: azure-maps-rest.atlas.service.Models.ErrorResponse
     name: ErrorResponse
-  - uid: azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollection
-    name: GeoJSONFeatureCollection
-  - uid: azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItem
-    name: GeoJSONFeatureCollectionFeaturesItem
+  - uid: azure-maps-rest.atlas.service.Models.GeoJSONPoint
+    name: GeoJSONPoint
   - uid: azure-maps-rest.atlas.service.Models.MapsClientOptions
     name: MapsClientOptions
   - uid: azure-maps-rest.atlas.service.Models.RouteDirectionsRequestBody
@@ -1014,6 +986,8 @@ references:
     name: RouteDirectionsResult
   - uid: azure-maps-rest.atlas.service.Models.RouteGetRouteDirectionsOptionalParams
     name: RouteGetRouteDirectionsOptionalParams
+  - uid: azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams
+    name: RouteGetRouteRangeOptionalParams
   - uid: azure-maps-rest.atlas.service.Models.RouteMatrixRequestBody
     name: RouteMatrixRequestBody
   - uid: azure-maps-rest.atlas.service.Models.RouteMatrixResponse
@@ -1118,6 +1092,8 @@ references:
     name: SearchResultPoiClassificationName
   - uid: azure-maps-rest.atlas.service.Models.RouteGetRouteDirectionsResponse
     name: RouteGetRouteDirectionsResponse
+  - uid: azure-maps-rest.atlas.service.Models.RouteGetRouteRangeResponse
+    name: RouteGetRouteRangeResponse
   - uid: azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsResponse
     name: RoutePostRouteDirectionsResponse
   - uid: azure-maps-rest.atlas.service.Models.SearchGetSearchAddressResponse
@@ -1138,6 +1114,8 @@ references:
     name: SearchGetSearchPOICategoryResponse
   - uid: azure-maps-rest.atlas.service.Models.SearchGetSearchPOIResponse
     name: SearchGetSearchPOIResponse
+  - uid: azure-maps-rest.atlas.service.Models.SearchGetSearchPolygonResponse
+    name: SearchGetSearchPolygonResponse
   - uid: azure-maps-rest.atlas.service.Models.SearchPostSearchAlongRouteResponse
     name: SearchPostSearchAlongRouteResponse
   - uid: >-

@@ -4,6 +4,7 @@ items:
     name: StyleControlOptions
     fullName: StyleControlOptions
     children:
+      - azure-maps-control.atlas.StyleControlOptions.mapStyles
       - azure-maps-control.atlas.StyleControlOptions.style
     langs:
       - typeScript
@@ -11,6 +12,34 @@ items:
     summary: The options for a StyleControl object.
     extends:
       name: azure-maps-control.atlas.Options
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.StyleControlOptions.mapStyles
+    name: mapStyles
+    fullName: mapStyles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The map styles to show in the control.
+
+      Style names are case sensitive.
+
+      If an included style isn't supported by the map it will be ignored.
+
+      Available styles can be found in the
+
+      [supported
+      styles](https://docs.microsoft.com/en-us/azure/azure-maps/supported-map-styles)
+      article.
+
+      Default `["road", "grayscale_dark", "night", "road_shaded_relief"]`
+    optional: true
+    syntax:
+      content: 'mapStyles?: string[]'
+      return:
+        type:
+          - 'string[]'
     package: azure-maps-control
   - uid: azure-maps-control.atlas.StyleControlOptions.style
     name: style
@@ -22,8 +51,9 @@ items:
     summary: |-
       The style of the control.
       Default `ControlStyle.light`.
+    optional: true
     syntax:
-      content: 'style: ControlStyle'
+      content: 'style?: ControlStyle'
       return:
         type:
           - azure-maps-control.atlas.ControlStyle

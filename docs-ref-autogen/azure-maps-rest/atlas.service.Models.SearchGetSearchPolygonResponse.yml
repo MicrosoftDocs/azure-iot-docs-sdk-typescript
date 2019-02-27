@@ -1,88 +1,15 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometryType
-    name: GeoJSONGeometryType
-    fullName: GeoJSONGeometryType
-    children:
-      - >-
-        azure-maps-rest.atlas.service.Models.GeoJSONGeometryType.GeometryCollection
-      - azure-maps-rest.atlas.service.Models.GeoJSONGeometryType.LineString
-      - azure-maps-rest.atlas.service.Models.GeoJSONGeometryType.MultiLineString
-      - azure-maps-rest.atlas.service.Models.GeoJSONGeometryType.MultiPoint
-      - azure-maps-rest.atlas.service.Models.GeoJSONGeometryType.MultiPolygon
-      - azure-maps-rest.atlas.service.Models.GeoJSONGeometryType.Point
-      - azure-maps-rest.atlas.service.Models.GeoJSONGeometryType.Polygon
-    langs:
-      - typeScript
-    type: enum
-    summary: |-
-      Defines values for GeoJSONGeometryType.
-      Possible values include: 'Point', 'MultiPoint', 'LineString',
-      'MultiLineString', 'Polygon', 'MultiPolygon', 'GeometryCollection'
-    package: azure-maps-rest
-  - uid: >-
-      azure-maps-rest.atlas.service.Models.GeoJSONGeometryType.GeometryCollection
-    name: GeometryCollection
+  - uid: azure-maps-rest.atlas.service.Models.SearchGetSearchPolygonResponse
+    name: SearchGetSearchPolygonResponse
+    fullName: SearchGetSearchPolygonResponse
     children: []
     langs:
       - typeScript
-    summary: '`GeoJSON GeometryCollection` geometry.'
-    type: field
-    numericValue: null
-    package: azure-maps-rest
-  - uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometryType.LineString
-    name: LineString
-    children: []
-    langs:
-      - typeScript
-    summary: '`GeoJSON LineString` geometry.'
-    type: field
-    numericValue: null
-    package: azure-maps-rest
-  - uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometryType.MultiLineString
-    name: MultiLineString
-    children: []
-    langs:
-      - typeScript
-    summary: '`GeoJSON MultiLineString` geometry.'
-    type: field
-    numericValue: null
-    package: azure-maps-rest
-  - uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometryType.MultiPoint
-    name: MultiPoint
-    children: []
-    langs:
-      - typeScript
-    summary: '`GeoJSON MultiPoint` geometry.'
-    type: field
-    numericValue: null
-    package: azure-maps-rest
-  - uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometryType.MultiPolygon
-    name: MultiPolygon
-    children: []
-    langs:
-      - typeScript
-    summary: '`GeoJSON MultiPolygon` geometry.'
-    type: field
-    numericValue: null
-    package: azure-maps-rest
-  - uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometryType.Point
-    name: Point
-    children: []
-    langs:
-      - typeScript
-    summary: '`GeoJSON Point` geometry.'
-    type: field
-    numericValue: null
-    package: azure-maps-rest
-  - uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometryType.Polygon
-    name: Polygon
-    children: []
-    langs:
-      - typeScript
-    summary: '`GeoJSON Polygon` geometry.'
-    type: field
-    numericValue: null
+    type: type alias
+    summary: Contains response data for the getSearchPolygon operation.
+    syntax:
+      content: type SearchGetSearchPolygonResponse = SearchPolygonResponse & Object
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary
@@ -103,36 +30,12 @@ references:
       - name: ErrorModel
         fullName: ErrorModel
         uid: azure-maps-rest.atlas.service.Models.ErrorModel
-  - uid: >-
-      azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItem[]
-    name: 'GeoJSONFeatureCollectionFeaturesItem[]'
+  - uid: 'azure-maps-rest.atlas.service.Models.GeoJSONPoint[]'
+    name: 'GeoJSONPoint[]'
     spec.typeScript:
-      - name: GeoJSONFeatureCollectionFeaturesItem
-        fullName: GeoJSONFeatureCollectionFeaturesItem
-        uid: >-
-          azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItem
-      - name: '[]'
-        fullName: '[]'
-  - uid: >-
-      azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItemGeometry
-    name: GeoJSONFeatureCollectionFeaturesItemGeometry
-    spec.typeScript:
-      - name: GeoJSONFeatureCollectionFeaturesItemGeometry
-        fullName: GeoJSONFeatureCollectionFeaturesItemGeometry
-        uid: >-
-          azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItemGeometry
-  - uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometryType
-    name: GeoJSONGeometryType
-    spec.typeScript:
-      - name: GeoJSONGeometryType
-        fullName: GeoJSONGeometryType
-        uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometryType
-  - uid: 'azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollection[]'
-    name: 'GeoJSONFeatureCollection[]'
-    spec.typeScript:
-      - name: GeoJSONFeatureCollection
-        fullName: GeoJSONFeatureCollection
-        uid: azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollection
+      - name: GeoJSONPoint
+        fullName: GeoJSONPoint
+        uid: azure-maps-rest.atlas.service.Models.GeoJSONPoint
       - name: '[]'
         fullName: '[]'
   - uid: 'azure-maps-rest.atlas.service.Models.RouteOptimizedWaypoint[]'

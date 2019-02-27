@@ -8,6 +8,7 @@ items:
       - azure-maps-control.atlas.MapTouchEvent.pixels
       - azure-maps-control.atlas.MapTouchEvent.position
       - azure-maps-control.atlas.MapTouchEvent.positions
+      - azure-maps-control.atlas.MapTouchEvent.shapes
     langs:
       - typeScript
     type: interface
@@ -76,6 +77,21 @@ items:
       return:
         type:
           - 'azure-maps-control.atlas.data.Position[]'
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.MapTouchEvent.shapes
+    name: shapes
+    fullName: shapes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The shapes of all touch points on the map.
+    optional: true
+    syntax:
+      content: 'shapes?: Shape[]'
+      return:
+        type:
+          - 'azure-maps-control.atlas.Shape[]'
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions

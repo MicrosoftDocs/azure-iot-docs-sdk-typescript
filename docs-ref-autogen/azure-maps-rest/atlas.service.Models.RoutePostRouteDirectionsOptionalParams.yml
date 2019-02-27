@@ -68,6 +68,8 @@ items:
       - >-
         azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.vehicleAxleWeight
       - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.vehicleCommercial
+      - >-
         azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.vehicleEngineType
       - >-
         azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.vehicleHeading
@@ -247,10 +249,10 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: 'constantSpeedConsumptionInkWhPerHundredkm?: number'
+      content: 'constantSpeedConsumptionInkWhPerHundredkm?: string'
       return:
         type:
-          - number
+          - string
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.currentChargeInkWh
@@ -589,6 +591,22 @@ items:
           - number
     package: azure-maps-rest
   - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.vehicleCommercial
+    name: vehicleCommercial
+    fullName: vehicleCommercial
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'vehicleCommercial?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-maps-rest
+  - uid: >-
       azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams.vehicleEngineType
     name: vehicleEngineType
     fullName: vehicleEngineType
@@ -751,36 +769,12 @@ references:
       - name: ErrorModel
         fullName: ErrorModel
         uid: azure-maps-rest.atlas.service.Models.ErrorModel
-  - uid: >-
-      azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItem[]
-    name: 'GeoJSONFeatureCollectionFeaturesItem[]'
+  - uid: 'azure-maps-rest.atlas.service.Models.GeoJSONPoint[]'
+    name: 'GeoJSONPoint[]'
     spec.typeScript:
-      - name: GeoJSONFeatureCollectionFeaturesItem
-        fullName: GeoJSONFeatureCollectionFeaturesItem
-        uid: >-
-          azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItem
-      - name: '[]'
-        fullName: '[]'
-  - uid: >-
-      azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItemGeometry
-    name: GeoJSONFeatureCollectionFeaturesItemGeometry
-    spec.typeScript:
-      - name: GeoJSONFeatureCollectionFeaturesItemGeometry
-        fullName: GeoJSONFeatureCollectionFeaturesItemGeometry
-        uid: >-
-          azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItemGeometry
-  - uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometryType
-    name: GeoJSONGeometryType
-    spec.typeScript:
-      - name: GeoJSONGeometryType
-        fullName: GeoJSONGeometryType
-        uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometryType
-  - uid: 'azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollection[]'
-    name: 'GeoJSONFeatureCollection[]'
-    spec.typeScript:
-      - name: GeoJSONFeatureCollection
-        fullName: GeoJSONFeatureCollection
-        uid: azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollection
+      - name: GeoJSONPoint
+        fullName: GeoJSONPoint
+        uid: azure-maps-rest.atlas.service.Models.GeoJSONPoint
       - name: '[]'
         fullName: '[]'
   - uid: 'azure-maps-rest.atlas.service.Models.RouteOptimizedWaypoint[]'

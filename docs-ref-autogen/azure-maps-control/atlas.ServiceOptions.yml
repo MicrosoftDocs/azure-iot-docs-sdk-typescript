@@ -7,6 +7,7 @@ items:
       - azure-maps-control.atlas.ServiceOptions.authOptions
       - azure-maps-control.atlas.ServiceOptions.disableTelemetry
       - azure-maps-control.atlas.ServiceOptions.enableAccessibility
+      - azure-maps-control.atlas.ServiceOptions.refreshExpiredTiles
       - azure-maps-control.atlas.ServiceOptions.sessionId
       - azure-maps-control.atlas.ServiceOptions.subscriptionKey
       - azure-maps-control.atlas.ServiceOptions.transformRequest
@@ -49,6 +50,7 @@ items:
     summary: |-
       Disable telemetry collection
       This option may only be set when initializing the map.
+      default: false
     optional: true
     syntax:
       content: 'disableTelemetry?: boolean'
@@ -63,10 +65,35 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Enable accessibility
+    summary: |-
+      Enable accessibility
+      default: false
     optional: true
     syntax:
       content: 'enableAccessibility?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.ServiceOptions.refreshExpiredTiles
+    name: refreshExpiredTiles
+    fullName: refreshExpiredTiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      A boolean that specifies if vector and raster tiles should be reloaded
+      when they expire (based on expires header).
+
+      This is useful for data sets that update frequently. When set to false,
+      each tile will be loaded once, when needed, and not reloaded when they
+      expire.
+
+      default: true
+    optional: true
+    syntax:
+      content: 'refreshExpiredTiles?: boolean'
       return:
         type:
           - boolean

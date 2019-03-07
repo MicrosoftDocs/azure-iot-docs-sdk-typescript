@@ -4,6 +4,7 @@ items:
     name: HtmlMarkerOptions
     fullName: HtmlMarkerOptions
     children:
+      - azure-maps-control.atlas.HtmlMarkerOptions.anchor
       - azure-maps-control.atlas.HtmlMarkerOptions.color
       - azure-maps-control.atlas.HtmlMarkerOptions.draggable
       - azure-maps-control.atlas.HtmlMarkerOptions.htmlContent
@@ -18,6 +19,25 @@ items:
     summary: Options for rendering an HtmlMarker object
     extends:
       name: azure-maps-control.atlas.Options
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.HtmlMarkerOptions.anchor
+    name: anchor
+    fullName: anchor
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Indicates the marker's location relative to its position on the map.
+      Optional values: `"center"`, `"top"`, `"bottom"`, `"left"`, `"right"`,
+      `"top-left"`, `"top-right"`, `"bottom-left"`, `"bottom-right"`.
+      Default `"center"`
+    optional: true
+    syntax:
+      content: 'anchor?: string'
+      return:
+        type:
+          - string
     package: azure-maps-control
   - uid: azure-maps-control.atlas.HtmlMarkerOptions.color
     name: color

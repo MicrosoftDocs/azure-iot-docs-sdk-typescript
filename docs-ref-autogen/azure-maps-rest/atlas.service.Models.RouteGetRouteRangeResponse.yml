@@ -1,68 +1,15 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItem
-    name: GeoJSONFeatureCollectionFeaturesItem
-    fullName: GeoJSONFeatureCollectionFeaturesItem
-    children:
-      - >-
-        azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItem.geometry
-      - >-
-        azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItem.properties
-      - >-
-        azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItem.type
-    langs:
-      - typeScript
-    type: interface
-    summary: ''
-    package: azure-maps-rest
-  - uid: >-
-      azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItem.geometry
-    name: geometry
-    fullName: geometry
+  - uid: azure-maps-rest.atlas.service.Models.RouteGetRouteRangeResponse
+    name: RouteGetRouteRangeResponse
+    fullName: RouteGetRouteRangeResponse
     children: []
     langs:
       - typeScript
-    type: property
-    summary: ''
-    optional: true
+    type: type alias
+    summary: Contains response data for the getRouteRange operation.
     syntax:
-      content: 'geometry?: GeoJSONFeatureCollectionFeaturesItemGeometry'
-      return:
-        type:
-          - >-
-            azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItemGeometry
-    package: azure-maps-rest
-  - uid: >-
-      azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItem.properties
-    name: properties
-    fullName: properties
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
-    syntax:
-      content: 'properties?: any'
-      return:
-        type:
-          - any
-    package: azure-maps-rest
-  - uid: >-
-      azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItem.type
-    name: type
-    fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    optional: true
-    syntax:
-      content: 'type?: string'
-      return:
-        type:
-          - string
+      content: type RouteGetRouteRangeResponse = RouteRangeResponse & Object
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary
@@ -83,36 +30,12 @@ references:
       - name: ErrorModel
         fullName: ErrorModel
         uid: azure-maps-rest.atlas.service.Models.ErrorModel
-  - uid: >-
-      azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItem[]
-    name: 'GeoJSONFeatureCollectionFeaturesItem[]'
+  - uid: 'azure-maps-rest.atlas.service.Models.GeoJSONPoint[]'
+    name: 'GeoJSONPoint[]'
     spec.typeScript:
-      - name: GeoJSONFeatureCollectionFeaturesItem
-        fullName: GeoJSONFeatureCollectionFeaturesItem
-        uid: >-
-          azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItem
-      - name: '[]'
-        fullName: '[]'
-  - uid: >-
-      azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItemGeometry
-    name: GeoJSONFeatureCollectionFeaturesItemGeometry
-    spec.typeScript:
-      - name: GeoJSONFeatureCollectionFeaturesItemGeometry
-        fullName: GeoJSONFeatureCollectionFeaturesItemGeometry
-        uid: >-
-          azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItemGeometry
-  - uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometryType
-    name: GeoJSONGeometryType
-    spec.typeScript:
-      - name: GeoJSONGeometryType
-        fullName: GeoJSONGeometryType
-        uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometryType
-  - uid: 'azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollection[]'
-    name: 'GeoJSONFeatureCollection[]'
-    spec.typeScript:
-      - name: GeoJSONFeatureCollection
-        fullName: GeoJSONFeatureCollection
-        uid: azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollection
+      - name: GeoJSONPoint
+        fullName: GeoJSONPoint
+        uid: azure-maps-rest.atlas.service.Models.GeoJSONPoint
       - name: '[]'
         fullName: '[]'
   - uid: 'azure-maps-rest.atlas.service.Models.RouteOptimizedWaypoint[]'

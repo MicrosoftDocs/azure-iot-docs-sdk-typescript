@@ -1,20 +1,63 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-control.atlas.data.Geometry
-    name: Geometry
-    fullName: Geometry
+  - uid: azure-maps-control.atlas.math.TimeUnits
+    name: TimeUnits
+    fullName: TimeUnits
+    children:
+      - azure-maps-control.atlas.math.TimeUnits.days
+      - azure-maps-control.atlas.math.TimeUnits.hours
+      - azure-maps-control.atlas.math.TimeUnits.minutes
+      - azure-maps-control.atlas.math.TimeUnits.ms
+      - azure-maps-control.atlas.math.TimeUnits.seconds
+    langs:
+      - typeScript
+    type: enum
+    summary: Units of measurement for time.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.TimeUnits.days
+    name: days
     children: []
     langs:
       - typeScript
-    type: type alias
-    summary: >-
-      A base Geometry object in which all geometry shapes extend; Point,
-      LineString, Polygon, MultiPoint, MultiLineString, MultiPolygon,
-      GeometryCollection
-    syntax:
-      content: >-
-        type Geometry = Point | MultiPoint | LineString | MultiLineString |
-        Polygon | MultiPolygon
+    summary: Represents a time in days (d).
+    type: field
+    numericValue: null
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.TimeUnits.hours
+    name: hours
+    children: []
+    langs:
+      - typeScript
+    summary: Represents a time in hours (hr).
+    type: field
+    numericValue: null
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.TimeUnits.minutes
+    name: minutes
+    children: []
+    langs:
+      - typeScript
+    summary: Represents a time in minutes (min).
+    type: field
+    numericValue: null
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.TimeUnits.ms
+    name: ms
+    children: []
+    langs:
+      - typeScript
+    summary: Represents a time in milliseconds (ms).
+    type: field
+    numericValue: null
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.TimeUnits.seconds
+    name: seconds
+    children: []
+    langs:
+      - typeScript
+    summary: Represents a time in seconds (s).
+    type: field
+    numericValue: null
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions

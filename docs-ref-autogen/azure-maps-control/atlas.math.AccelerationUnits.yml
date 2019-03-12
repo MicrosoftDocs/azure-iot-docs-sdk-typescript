@@ -1,20 +1,104 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-control.atlas.data.Geometry
-    name: Geometry
-    fullName: Geometry
+  - uid: azure-maps-control.atlas.math.AccelerationUnits
+    name: AccelerationUnits
+    fullName: AccelerationUnits
+    children:
+      - azure-maps-control.atlas.math.AccelerationUnits.feetPerSecondSquared
+      - azure-maps-control.atlas.math.AccelerationUnits.kilometersPerHourSecond
+      - >-
+        azure-maps-control.atlas.math.AccelerationUnits.kilometersPerSecondSquared
+      - azure-maps-control.atlas.math.AccelerationUnits.knotsPerSecond
+      - azure-maps-control.atlas.math.AccelerationUnits.metersPerSecondSquared
+      - azure-maps-control.atlas.math.AccelerationUnits.milesPerHourSecond
+      - azure-maps-control.atlas.math.AccelerationUnits.milesPerSecondSquared
+      - azure-maps-control.atlas.math.AccelerationUnits.standardGravity
+      - azure-maps-control.atlas.math.AccelerationUnits.yardsPerSecondSquared
+    langs:
+      - typeScript
+    type: enum
+    summary: Units of measurement for acceleration.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.AccelerationUnits.feetPerSecondSquared
+    name: feetPerSecondSquared
     children: []
     langs:
       - typeScript
-    type: type alias
-    summary: >-
-      A base Geometry object in which all geometry shapes extend; Point,
-      LineString, Polygon, MultiPoint, MultiLineString, MultiPolygon,
-      GeometryCollection
-    syntax:
-      content: >-
-        type Geometry = Point | MultiPoint | LineString | MultiLineString |
-        Polygon | MultiPolygon
+    summary: Represents an acceleration in feet per second squared (ft/s^2).
+    type: field
+    numericValue: null
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.AccelerationUnits.kilometersPerHourSecond
+    name: kilometersPerHourSecond
+    children: []
+    langs:
+      - typeScript
+    summary: Represents an acceleration in kilometers per hours second (km/h/s).
+    type: field
+    numericValue: null
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.AccelerationUnits.kilometersPerSecondSquared
+    name: kilometersPerSecondSquared
+    children: []
+    langs:
+      - typeScript
+    summary: Represents an acceleration in kilometers per second squared (km/s^2).
+    type: field
+    numericValue: null
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.AccelerationUnits.knotsPerSecond
+    name: knotsPerSecond
+    children: []
+    langs:
+      - typeScript
+    summary: Represents an acceleration in knots per second (knts/s).
+    type: field
+    numericValue: null
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.AccelerationUnits.metersPerSecondSquared
+    name: metersPerSecondSquared
+    children: []
+    langs:
+      - typeScript
+    summary: Represents an acceleration in meters per second squared (m/s^2).
+    type: field
+    numericValue: null
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.AccelerationUnits.milesPerHourSecond
+    name: milesPerHourSecond
+    children: []
+    langs:
+      - typeScript
+    summary: Represents an acceleration in miles per hour second (mi/h/s).
+    type: field
+    numericValue: null
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.AccelerationUnits.milesPerSecondSquared
+    name: milesPerSecondSquared
+    children: []
+    langs:
+      - typeScript
+    summary: Represents an acceleration in miles per second squared (mi/s^2).
+    type: field
+    numericValue: null
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.AccelerationUnits.standardGravity
+    name: standardGravity
+    children: []
+    langs:
+      - typeScript
+    summary: Represents an acceleration in standard gravity units (g).
+    type: field
+    numericValue: null
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.AccelerationUnits.yardsPerSecondSquared
+    name: yardsPerSecondSquared
+    children: []
+    langs:
+      - typeScript
+    summary: Represents an acceleration in yards per second squared (yds/s^2).
+    type: field
+    numericValue: null
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions

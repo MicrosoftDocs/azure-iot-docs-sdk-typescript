@@ -1,72 +1,83 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-control.atlas.controls.PitchControl
-    name: PitchControl
-    fullName: PitchControl
+  - uid: azure-maps-control.atlas.math.AreaUnits
+    name: AreaUnits
+    fullName: AreaUnits
     children:
-      - azure-maps-control.atlas.controls.PitchControl.constructor
-      - azure-maps-control.atlas.controls.PitchControl.onAdd
-      - azure-maps-control.atlas.controls.PitchControl.onRemove
+      - azure-maps-control.atlas.math.AreaUnits.acres
+      - azure-maps-control.atlas.math.AreaUnits.hectares
+      - azure-maps-control.atlas.math.AreaUnits.squareFeet
+      - azure-maps-control.atlas.math.AreaUnits.squareKilometers
+      - azure-maps-control.atlas.math.AreaUnits.squareMeters
+      - azure-maps-control.atlas.math.AreaUnits.squareMiles
+      - azure-maps-control.atlas.math.AreaUnits.squareYards
     langs:
       - typeScript
-    type: class
-    summary: A control for changing the pitch of the map.
+    type: enum
+    summary: Units of measurement for areas.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.controls.PitchControl.constructor
-    name: PitchControl(PitchControlOptions)
+  - uid: azure-maps-control.atlas.math.AreaUnits.acres
+    name: acres
     children: []
-    type: constructor
     langs:
       - typeScript
-    summary: Constructs a PitchControl.
-    syntax:
-      content: 'new PitchControl(options?: PitchControlOptions)'
-      parameters:
-        - id: options
-          type:
-            - azure-maps-control.atlas.PitchControlOptions
-          description: |
-            The options for the control.
-          optional: true
+    summary: Represents areas in acres (ac).
+    type: field
+    numericValue: null
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.controls.PitchControl.onAdd
-    name: 'onAdd(Map, ControlOptions)'
+  - uid: azure-maps-control.atlas.math.AreaUnits.hectares
+    name: hectares
     children: []
-    type: method
     langs:
       - typeScript
-    summary: >-
-      Initialization method for the control which is called when added to the
-      map.
-    syntax:
-      content: 'function onAdd(map: Map, options: ControlOptions)'
-      parameters:
-        - id: map
-          type:
-            - azure-maps-control.atlas.Map
-          description: The map that the control will be added to.
-        - id: options
-          type:
-            - azure-maps-control.atlas.ControlOptions
-          description: The ControlOptions for this control.
-      return:
-        type:
-          - HTMLElement
+    summary: Represents areas in hectares (ha).
+    type: field
+    numericValue: null
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.controls.PitchControl.onRemove
-    name: onRemove()
+  - uid: azure-maps-control.atlas.math.AreaUnits.squareFeet
+    name: squareFeet
     children: []
-    type: method
     langs:
       - typeScript
-    summary: >-
-      Method that is called when the control is removed from the map. Should
-      perform any necessary cleanup for the
-
-      control.
-    syntax:
-      content: function onRemove()
-      parameters: []
+    summary: Represents areas in feet (ft^2).
+    type: field
+    numericValue: null
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.AreaUnits.squareKilometers
+    name: squareKilometers
+    children: []
+    langs:
+      - typeScript
+    summary: Represents areas in square kilometers (km^2).
+    type: field
+    numericValue: null
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.AreaUnits.squareMeters
+    name: squareMeters
+    children: []
+    langs:
+      - typeScript
+    summary: Represents areas in square meters (m^2).
+    type: field
+    numericValue: null
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.AreaUnits.squareMiles
+    name: squareMiles
+    children: []
+    langs:
+      - typeScript
+    summary: Represents areas in miles (mi^2).
+    type: field
+    numericValue: null
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.AreaUnits.squareYards
+    name: squareYards
+    children: []
+    langs:
+      - typeScript
+    summary: Represents areas in yards (yds^2).
+    type: field
+    numericValue: null
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions
@@ -306,6 +317,170 @@ references:
       - name: Polygon
         fullName: Polygon
         uid: azure-maps-control.atlas.data.Polygon
+  - uid: string | azure-maps-control.atlas.math.AccelerationUnits
+    name: AccelerationUnits
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: AccelerationUnits
+        fullName: AccelerationUnits
+        uid: azure-maps-control.atlas.math.AccelerationUnits
+  - uid: string | azure-maps-control.atlas.math.DistanceUnits
+    name: DistanceUnits
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: DistanceUnits
+        fullName: DistanceUnits
+        uid: azure-maps-control.atlas.math.DistanceUnits
+  - uid: string | azure-maps-control.atlas.math.SpeedUnits
+    name: SpeedUnits
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: SpeedUnits
+        fullName: SpeedUnits
+        uid: azure-maps-control.atlas.math.SpeedUnits
+  - uid: string | azure-maps-control.atlas.math.TimeUnits
+    name: TimeUnits
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: TimeUnits
+        fullName: TimeUnits
+        uid: azure-maps-control.atlas.math.TimeUnits
+  - uid: >-
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+      any>
+    name: 'Point, any>'
+    spec.typeScript:
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ', any>'
+        fullName: ', any>'
+  - uid: azure-maps-control.atlas.math.AreaUnits
+    name: AreaUnits
+    spec.typeScript:
+      - name: AreaUnits
+        fullName: AreaUnits
+        uid: azure-maps-control.atlas.math.AreaUnits
+  - uid: >-
+      azure-maps-control.atlas.data.Position |
+      azure-maps-control.atlas.data.Point |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+      any>
+    name: 'Point, any>'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: ' | '
+        fullName: ' | '
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ', any>'
+        fullName: ', any>'
+  - uid: >-
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+      Object>
+    name: 'Point, Object>'
+    spec.typeScript:
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ', Object>'
+        fullName: ', Object>'
+  - uid: >-
+      azure-maps-control.atlas.data.Position[] |
+      azure-maps-control.atlas.data.Geometry |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.data.FeatureCollection |
+      azure-maps-control.atlas.data.GeometryCollection |
+      azure-maps-control.atlas.data.Geometry[] |
+      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any>>
+    name: 'Geometry, any>>'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[] | '
+        fullName: '[] | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: FeatureCollection
+        fullName: FeatureCollection
+        uid: azure-maps-control.atlas.data.FeatureCollection
+      - name: ' | '
+        fullName: ' | '
+      - name: GeometryCollection
+        fullName: GeometryCollection
+        uid: azure-maps-control.atlas.data.GeometryCollection
+      - name: ' | '
+        fullName: ' | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: '[] | Array<'
+        fullName: '[] | Array<'
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any>>'
+        fullName: ', any>>'
+  - uid: >-
+      azure-maps-control.atlas.data.Position |
+      azure-maps-control.atlas.data.Point
+    name: Point
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: ' | '
+        fullName: ' | '
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
   - uid: >-
       azure-maps-control.atlas.data.LineString |
       azure-maps-control.atlas.data.Position[]
@@ -321,6 +496,29 @@ references:
         uid: azure-maps-control.atlas.data.Position
       - name: '[]'
         fullName: '[]'
+  - uid: >-
+      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+      Object>>
+    name: 'Point, Object>>'
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ', Object>>'
+        fullName: ', Object>>'
+  - uid: azure-maps-control.atlas.math.TimeUnits
+    name: TimeUnits
+    spec.typeScript:
+      - name: TimeUnits
+        fullName: TimeUnits
+        uid: azure-maps-control.atlas.math.TimeUnits
   - uid: 'azure-maps-control.atlas.Pixel[]'
     name: 'Pixel[]'
     spec.typeScript:
@@ -519,19 +717,15 @@ references:
         uid: azure-maps-control.atlas.HtmlMarkerOptions
   - uid: >-
       azure-maps-control.atlas.ServiceOptions &
-      azure-maps-control.atlas.CameraOptions &
       azure-maps-control.atlas.StyleOptions &
-      azure-maps-control.atlas.UserInteractionOptions
-    name: UserInteractionOptions
+      azure-maps-control.atlas.UserInteractionOptions &
+      azure-maps-control.atlas.CameraOptions |
+      azure-maps-control.atlas.CameraBoundsOptions
+    name: CameraBoundsOptions
     spec.typeScript:
       - name: ServiceOptions
         fullName: ServiceOptions
         uid: azure-maps-control.atlas.ServiceOptions
-      - name: ' & '
-        fullName: ' & '
-      - name: CameraOptions
-        fullName: CameraOptions
-        uid: azure-maps-control.atlas.CameraOptions
       - name: ' & '
         fullName: ' & '
       - name: StyleOptions
@@ -542,6 +736,16 @@ references:
       - name: UserInteractionOptions
         fullName: UserInteractionOptions
         uid: azure-maps-control.atlas.UserInteractionOptions
+      - name: ' & '
+        fullName: ' & '
+      - name: CameraOptions
+        fullName: CameraOptions
+        uid: azure-maps-control.atlas.CameraOptions
+      - name: ' | '
+        fullName: ' | '
+      - name: CameraBoundsOptions
+        fullName: CameraBoundsOptions
+        uid: azure-maps-control.atlas.CameraBoundsOptions
   - uid: azure-maps-control.atlas.AuthenticationManager
     name: AuthenticationManager
     spec.typeScript:

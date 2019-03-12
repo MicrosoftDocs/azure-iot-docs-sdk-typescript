@@ -1,20 +1,89 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-control.atlas.data.Geometry
-    name: Geometry
-    fullName: Geometry
-    children: []
+  - uid: azure-maps-control.atlas.math.AffineTransform
+    name: AffineTransform
+    fullName: AffineTransform
+    children:
+      - azure-maps-control.atlas.math.AffineTransform.constructor
+      - azure-maps-control.atlas.math.AffineTransform.toSource
+      - azure-maps-control.atlas.math.AffineTransform.toTarget
     langs:
       - typeScript
-    type: type alias
-    summary: >-
-      A base Geometry object in which all geometry shapes extend; Point,
-      LineString, Polygon, MultiPoint, MultiLineString, MultiPolygon,
-      GeometryCollection
+    type: class
+    summary: An Affine Transform class generated from a set of reference points.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.AffineTransform.constructor
+    name: 'AffineTransform(number[][], number[][])'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: An Affine Transform class generated from a set of reference points.
     syntax:
-      content: >-
-        type Geometry = Point | MultiPoint | LineString | MultiLineString |
-        Polygon | MultiPolygon
+      content: 'new AffineTransform(source: number[][], target: number[][])'
+      parameters:
+        - id: source
+          type:
+            - 'number[][]'
+          description: >-
+            A set of reference points from the source reference system to
+            transform from.
+        - id: target
+          type:
+            - 'number[][]'
+          description: >
+            A set of reference points from the target reference system to
+            transform to.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.AffineTransform.toSource
+    name: 'toSource(number[][], number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Converts an array of points from the target reference system to the source
+      reference system.
+    syntax:
+      content: 'function toSource(targetPoints: number[][], decimals?: number)'
+      parameters:
+        - id: targetPoints
+          type:
+            - 'number[][]'
+          description: An array of points from the target reference system to transform.
+        - id: decimals
+          type:
+            - number
+          description: Number of decimal places to round the results off to.
+          optional: true
+      return:
+        type:
+          - 'number[][]'
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.AffineTransform.toTarget
+    name: 'toTarget(number[][], number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Converts an array of points from the source reference system to the target
+      reference system.
+    syntax:
+      content: 'function toTarget(sourcePoints: number[][], decimals?: number)'
+      parameters:
+        - id: sourcePoints
+          type:
+            - 'number[][]'
+          description: An array of points from the source reference system to transform.
+        - id: decimals
+          type:
+            - number
+          description: Number of decimal places to round the results off to.
+          optional: true
+      return:
+        type:
+          - 'number[][]'
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions

@@ -5,11 +5,11 @@ items:
     summary: ''
     children:
       - azure-maps-control.atlas
-      - azure-maps-control.atlas.controls
-      - azure-maps-control.atlas.controls.CompassControl
-      - azure-maps-control.atlas.controls.PitchControl
-      - azure-maps-control.atlas.controls.StyleControl
-      - azure-maps-control.atlas.controls.ZoomControl
+      - azure-maps-control.atlas.control
+      - azure-maps-control.atlas.control.CompassControl
+      - azure-maps-control.atlas.control.PitchControl
+      - azure-maps-control.atlas.control.StyleControl
+      - azure-maps-control.atlas.control.ZoomControl
       - azure-maps-control.atlas.data
       - azure-maps-control.atlas.data.BoundingBox
       - azure-maps-control.atlas.data.Feature
@@ -33,6 +33,12 @@ items:
       - azure-maps-control.atlas.layer.SymbolLayer
       - azure-maps-control.atlas.layer.TileLayer
       - azure-maps-control.atlas.math
+      - azure-maps-control.atlas.math.AccelerationUnits
+      - azure-maps-control.atlas.math.AreaUnits
+      - azure-maps-control.atlas.math.DistanceUnits
+      - azure-maps-control.atlas.math.SpeedUnits
+      - azure-maps-control.atlas.math.TimeUnits
+      - azure-maps-control.atlas.math.AffineTransform
       - azure-maps-control.atlas.source
       - azure-maps-control.atlas.source.DataSource
       - azure-maps-control.atlas.source.Source
@@ -51,6 +57,7 @@ items:
       - azure-maps-control.atlas.BubbleLayerOptions
       - azure-maps-control.atlas.CameraBoundsOptions
       - azure-maps-control.atlas.CameraOptions
+      - azure-maps-control.atlas.ClusteredProperties
       - azure-maps-control.atlas.CompassControlOptions
       - azure-maps-control.atlas.Control
       - azure-maps-control.atlas.ControlManager
@@ -99,15 +106,15 @@ items:
 references:
   - uid: azure-maps-control.atlas
     name: atlas
-  - uid: azure-maps-control.atlas.controls
-    name: controls
-  - uid: azure-maps-control.atlas.controls.CompassControl
+  - uid: azure-maps-control.atlas.control
+    name: control
+  - uid: azure-maps-control.atlas.control.CompassControl
     name: CompassControl
-  - uid: azure-maps-control.atlas.controls.PitchControl
+  - uid: azure-maps-control.atlas.control.PitchControl
     name: PitchControl
-  - uid: azure-maps-control.atlas.controls.StyleControl
+  - uid: azure-maps-control.atlas.control.StyleControl
     name: StyleControl
-  - uid: azure-maps-control.atlas.controls.ZoomControl
+  - uid: azure-maps-control.atlas.control.ZoomControl
     name: ZoomControl
   - uid: azure-maps-control.atlas.data
     name: data
@@ -155,6 +162,18 @@ references:
     name: TileLayer
   - uid: azure-maps-control.atlas.math
     name: math
+  - uid: azure-maps-control.atlas.math.AccelerationUnits
+    name: AccelerationUnits
+  - uid: azure-maps-control.atlas.math.AreaUnits
+    name: AreaUnits
+  - uid: azure-maps-control.atlas.math.DistanceUnits
+    name: DistanceUnits
+  - uid: azure-maps-control.atlas.math.SpeedUnits
+    name: SpeedUnits
+  - uid: azure-maps-control.atlas.math.TimeUnits
+    name: TimeUnits
+  - uid: azure-maps-control.atlas.math.AffineTransform
+    name: AffineTransform
   - uid: azure-maps-control.atlas.source
     name: source
   - uid: azure-maps-control.atlas.source.DataSource
@@ -191,6 +210,8 @@ references:
     name: CameraBoundsOptions
   - uid: azure-maps-control.atlas.CameraOptions
     name: CameraOptions
+  - uid: azure-maps-control.atlas.ClusteredProperties
+    name: ClusteredProperties
   - uid: azure-maps-control.atlas.CompassControlOptions
     name: CompassControlOptions
   - uid: azure-maps-control.atlas.Control

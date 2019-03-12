@@ -1,20 +1,73 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-control.atlas.data.Geometry
-    name: Geometry
-    fullName: Geometry
+  - uid: azure-maps-control.atlas.math.DistanceUnits
+    name: DistanceUnits
+    fullName: DistanceUnits
+    children:
+      - azure-maps-control.atlas.math.DistanceUnits.feet
+      - azure-maps-control.atlas.math.DistanceUnits.kilometers
+      - azure-maps-control.atlas.math.DistanceUnits.meters
+      - azure-maps-control.atlas.math.DistanceUnits.miles
+      - azure-maps-control.atlas.math.DistanceUnits.nauticalMiles
+      - azure-maps-control.atlas.math.DistanceUnits.yards
+    langs:
+      - typeScript
+    type: enum
+    summary: Units of measurement for distances.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.DistanceUnits.feet
+    name: feet
     children: []
     langs:
       - typeScript
-    type: type alias
-    summary: >-
-      A base Geometry object in which all geometry shapes extend; Point,
-      LineString, Polygon, MultiPoint, MultiLineString, MultiPolygon,
-      GeometryCollection
-    syntax:
-      content: >-
-        type Geometry = Point | MultiPoint | LineString | MultiLineString |
-        Polygon | MultiPolygon
+    summary: Represents a distance in feet (ft).
+    type: field
+    numericValue: null
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.DistanceUnits.kilometers
+    name: kilometers
+    children: []
+    langs:
+      - typeScript
+    summary: Represents a distance in kilometers (km).
+    type: field
+    numericValue: null
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.DistanceUnits.meters
+    name: meters
+    children: []
+    langs:
+      - typeScript
+    summary: Represents a distance in meters (m).
+    type: field
+    numericValue: null
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.DistanceUnits.miles
+    name: miles
+    children: []
+    langs:
+      - typeScript
+    summary: Represents a distance in miles (mi).
+    type: field
+    numericValue: null
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.DistanceUnits.nauticalMiles
+    name: nauticalMiles
+    children: []
+    langs:
+      - typeScript
+    summary: Represents a distance in nautical miles.
+    type: field
+    numericValue: null
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.DistanceUnits.yards
+    name: yards
+    children: []
+    langs:
+      - typeScript
+    summary: Represents a distance in yards (yds).
+    type: field
+    numericValue: null
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions

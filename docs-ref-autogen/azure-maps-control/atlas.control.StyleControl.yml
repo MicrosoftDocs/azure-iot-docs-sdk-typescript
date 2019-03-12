@@ -1,20 +1,73 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-control.atlas.data.Geometry
-    name: Geometry
-    fullName: Geometry
-    children: []
+  - uid: azure-maps-control.atlas.control.StyleControl
+    name: StyleControl
+    fullName: StyleControl
+    children:
+      - azure-maps-control.atlas.control.StyleControl.constructor
+      - azure-maps-control.atlas.control.StyleControl.onAdd
+      - azure-maps-control.atlas.control.StyleControl.onRemove
     langs:
       - typeScript
-    type: type alias
-    summary: >-
-      A base Geometry object in which all geometry shapes extend; Point,
-      LineString, Polygon, MultiPoint, MultiLineString, MultiPolygon,
-      GeometryCollection
+    type: class
+    summary: A control for changing the style of the map.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.control.StyleControl.constructor
+    name: StyleControl(StyleControlOptions)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a StyleControl.
     syntax:
-      content: >-
-        type Geometry = Point | MultiPoint | LineString | MultiLineString |
-        Polygon | MultiPolygon
+      content: 'new StyleControl(options?: StyleControlOptions)'
+      parameters:
+        - id: options
+          type:
+            - azure-maps-control.atlas.StyleControlOptions
+          description: |
+            The options for the control.
+          optional: true
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.control.StyleControl.onAdd
+    name: 'onAdd(Map, ControlOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Initialization method for the control which is called when added to the
+      map.
+    syntax:
+      content: 'function onAdd(map: Map, options?: ControlOptions)'
+      parameters:
+        - id: map
+          type:
+            - azure-maps-control.atlas.Map
+          description: The map that the control will be added to.
+        - id: options
+          type:
+            - azure-maps-control.atlas.ControlOptions
+          description: The ControlOptions for this control.
+          optional: true
+      return:
+        type:
+          - HTMLElement
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.control.StyleControl.onRemove
+    name: onRemove()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Method that is called when the control is removed from the map. Should
+      perform any necessary cleanup for the
+
+      control.
+    syntax:
+      content: function onRemove()
+      parameters: []
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions

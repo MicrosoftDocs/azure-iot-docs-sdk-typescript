@@ -1,263 +1,38 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-control.atlas.Shape
-    name: Shape
-    fullName: Shape
+  - uid: azure-maps-control.atlas.internal.EventEmitter
+    name: EventEmitter
+    fullName: EventEmitter<T>
     children:
-      - azure-maps-control.atlas.Shape.constructor
-      - azure-maps-control.atlas.Shape.constructor_1
-      - azure-maps-control.atlas.Shape.addProperty
-      - azure-maps-control.atlas.Shape.getBounds
-      - azure-maps-control.atlas.Shape.getCoordinates
-      - azure-maps-control.atlas.Shape.getId
-      - azure-maps-control.atlas.Shape.getProperties
-      - azure-maps-control.atlas.Shape.getType
-      - azure-maps-control.atlas.Shape.isCircle
-      - azure-maps-control.atlas.Shape.isRectangle
-      - azure-maps-control.atlas.Shape.setCoordinates
-      - azure-maps-control.atlas.Shape.setProperties
-      - azure-maps-control.atlas.Shape.toJson
+      - azure-maps-control.atlas.internal.EventEmitter.constructor
     langs:
       - typeScript
     type: class
     summary: >-
-      A helper class that wraps a Geometry or Feature and makes it easy to
-      update and maintain.
+      An internal abstract class that can be extended to provide event
+      listening/firing.
+
+      This class is for internal use only, and users will find little use with
+      it.
+
+      Not to be used by the Map class. MapCallbackHandler implements the more
+      complex logic for handling map events.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.Shape.constructor
-    name: 'Shape(Feature<data.Geometry, any>)'
+  - uid: azure-maps-control.atlas.internal.EventEmitter.constructor
+    name: 'EventEmitter(string[])'
     children: []
     type: constructor
     langs:
       - typeScript
-    summary: Constructs a Shape object and initializes it with the specified Feature.
+    summary: Constructs an EventEmitter
     syntax:
-      content: 'new Shape(data: Feature<data.Geometry, any>)'
+      content: 'new EventEmitter(eventTypes: string[])'
       parameters:
-        - id: data
+        - id: eventTypes
           type:
-            - >-
-              azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
-              any>
-          description: a Geometry object
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Shape.constructor_1
-    name: 'Shape(data.Geometry, string, any)'
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: >-
-      Constructs a Shape object and initializes it with the specified Geometry,
-      ID, and properties.
-    syntax:
-      content: 'new Shape(data: data.Geometry, id?: string, properties?: any)'
-      parameters:
-        - id: data
-          type:
-            - azure-maps-control.atlas.data.Geometry
-          description: a Geometry object
-        - id: id
-          type:
-            - string
-          description: >-
-            a unique id that the user assigns to the shape. If not provided, a
-            unique id value will be assigned to it.
-          optional: true
-        - id: properties
-          type:
-            - any
+            - 'string[]'
           description: |
-            User defined properties for the shape.
-          optional: true
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Shape.addProperty
-    name: 'addProperty(string, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Adds or updates an existing property value in the shape.
-    syntax:
-      content: 'function addProperty(key: string, value: any)'
-      parameters:
-        - id: key
-          type:
-            - string
-          description: ''
-        - id: value
-          type:
-            - any
-          description: |+
-
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Shape.getBounds
-    name: getBounds()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Gets the bounding box of the shape
-    syntax:
-      content: function getBounds()
-      parameters: []
-      return:
-        type:
-          - azure-maps-control.atlas.data.BoundingBox
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Shape.getCoordinates
-    name: getCoordinates()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Gets the coordinates of the shape.
-    syntax:
-      content: function getCoordinates()
-      parameters: []
-      return:
-        type:
-          - >-
-            azure-maps-control.atlas.data.Position |
-            azure-maps-control.atlas.data.Position[] |
-            azure-maps-control.atlas.data.Position[][] |
-            azure-maps-control.atlas.data.Position[][][]
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Shape.getId
-    name: getId()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Gets the id of the shape.
-    syntax:
-      content: function getId()
-      parameters: []
-      return:
-        type:
-          - string
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Shape.getProperties
-    name: getProperties()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Gets the properties of the shape.
-    syntax:
-      content: function getProperties()
-      parameters: []
-      return:
-        type:
-          - any
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Shape.getType
-    name: getType()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Returns a string indicating the type of geometry this shape contains.
-    syntax:
-      content: function getType()
-      parameters: []
-      return:
-        type:
-          - string
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Shape.isCircle
-    name: isCircle()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Indicates if the contained shape is a Circle, defined by the extended
-      GeoJSON specification supported by Azure Maps.
-
-      [Extended
-      Spec](https://docs.microsoft.com/en-us/azure/azure-maps/extend-geojson)
-    syntax:
-      content: function isCircle()
-      parameters: []
-      return:
-        type:
-          - boolean
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Shape.isRectangle
-    name: isRectangle()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Indicates if the contained shape is a Rectangle, defined by the extended
-      GeoJSON specification supported by Azure Maps.
-
-      [Extended
-      Spec](https://docs.microsoft.com/en-us/azure/azure-maps/extend-geojson)
-    syntax:
-      content: function isRectangle()
-      parameters: []
-      return:
-        type:
-          - boolean
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Shape.setCoordinates
-    name: 'setCoordinates(Position | Position[] | Position[][] | Position[][][])'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Updates the coordinates of the shape
-    syntax:
-      content: >-
-        function setCoordinates(coords: Position | Position[] | Position[][] |
-        Position[][][])
-      parameters:
-        - id: coords
-          type:
-            - >-
-              azure-maps-control.atlas.data.Position |
-              azure-maps-control.atlas.data.Position[] |
-              azure-maps-control.atlas.data.Position[][] |
-              azure-maps-control.atlas.data.Position[][][]
-          description: >
-            Point: Position, LineString: Position[], Polygon: Position[][],
-            MultiPoint: Position[], MultiLineString: Position[][], MultiPolygon:
-            Position[][]
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Shape.setProperties
-    name: setProperties(any)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Sets the properties on the shape. Overwrites all existing properties.
-    syntax:
-      content: 'function setProperties(properties: any)'
-      parameters:
-        - id: properties
-          type:
-            - any
-          description: |+
-
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Shape.toJson
-    name: toJson()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Returns a GeoJSON feature that represents the shape.
-    syntax:
-      content: function toJson()
-      parameters: []
-      return:
-        type:
-          - >-
-            azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
-            any>
+            The event types supported by this EventEmitter
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions

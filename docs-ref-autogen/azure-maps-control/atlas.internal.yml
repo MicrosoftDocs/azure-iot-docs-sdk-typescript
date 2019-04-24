@@ -1,178 +1,14 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-control.atlas.StyleFunction
-    name: StyleFunction
-    fullName: StyleFunction
+  - uid: azure-maps-control.atlas.internal
+    name: internal
+    fullName: internal
     children:
-      - azure-maps-control.atlas.StyleFunction.base
-      - azure-maps-control.atlas.StyleFunction.colorSpace
-      - azure-maps-control.atlas.StyleFunction.default
-      - azure-maps-control.atlas.StyleFunction.property
-      - azure-maps-control.atlas.StyleFunction.stops
-      - azure-maps-control.atlas.StyleFunction.type
+      - azure-maps-control.atlas.internal.EventEmitter
     langs:
       - typeScript
-    type: interface
-    summary: |-
-      A style function allows you to make the appearance of a map feature
-      change with the current zoom level and/or the feature's properties.
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.StyleFunction.base
-    name: base
-    fullName: base
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      The exponential base of the interpolation curve.
-
-      It controls the rate at which the function output increases.
-
-      Higher values make the output increase more towards the high end of the
-      range.
-
-      With values close to 1 the output increases linearly.
-
-      default: `1`
-    optional: true
-    syntax:
-      content: 'base?: number'
-      return:
-        type:
-          - number
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.StyleFunction.colorSpace
-    name: colorSpace
-    fullName: colorSpace
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      The color space in which colors are interpolated.
-
-      Interpolating colors in perceptual color spaces like LAB and HCL tend to
-      produce color ramps
-
-      that look more consistent and produce colors that can be differentiated
-      more easily
-
-      than those interpolated in RGB space.
-
-      <p>"rgb": Use the RGB color space.</p>
-
-      <p>"lab": Use the LAB color space.</p>
-
-      <p>"hcl": Use the HCL color space. Interpolating the Hue, Chroma, and
-      Luminance channels individually.</p>
-    optional: true
-    syntax:
-      content: 'colorSpace?: "rgb" | "lab" | "hcl"'
-      return:
-        type:
-          - '"rgb" | "lab" | "hcl"'
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.StyleFunction.default
-    name: default
-    fullName: default
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      A value to serve as a fallback function result when a value isn't
-      otherwise available.
-
-      If no default is provided, the style property's default is used.
-
-      It is used in the following circumstances:
-
-      <p>In categorical functions, when the feature value does not match any of
-      the stop domain values.</p>
-
-      <p>In property and zoom-and-property functions, when a feature does not
-      contain a value for the specified property.</p>
-
-      <p>In identity functions, when the feature value is not valid for the
-      style property.</p>
-
-      <p>In interval or exponential property and zoom-and-property functions,
-      when the feature value is not numeric.</p>
-    optional: true
-    syntax:
-      content: 'default?: any'
-      return:
-        type:
-          - any
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.StyleFunction.property
-    name: property
-    fullName: property
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The name of the feature's property to use as input for the style function.
-    optional: true
-    syntax:
-      content: 'property?: string'
-      return:
-        type:
-          - string
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.StyleFunction.stops
-    name: stops
-    fullName: stops
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      Functions are defined in terms of input and output values. A set of one
-      input value is known as a "stop."
-
-      Stop output values must be literal values (i.e. not functions or
-      expressions), and appropriate for the property.
-    optional: true
-    syntax:
-      content: 'stops?: any[][]'
-      return:
-        type:
-          - 'any[][]'
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.StyleFunction.type
-    name: type
-    fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      Specifies the type of the style function.
-
-      <p>"identity": A function that returns its input as the output.</p>
-
-      <p>"exponential": A function that generates an output by interpolating
-      between stops.
-
-      The domain (input values) must be numeric and the style property must
-      support interpolation.</p>
-
-      <p>"interval": A function that returns the output value of the stop just
-      less than the function input.
-
-      The domain (input value) must be numeric. Any style property may use
-      interval functions.</p>
-
-      <p>"categorical": A function that returns the output value of the stop
-      equal to the function input.</p>
-    optional: true
-    syntax:
-      content: 'type?: "identity" | "exponential" | "interval" | "categorical"'
-      return:
-        type:
-          - '"identity" | "exponential" | "interval" | "categorical"'
+    type: module
+    summary: ''
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions
@@ -1029,36 +865,22 @@ references:
       - name: LayerOptions
         fullName: LayerOptions
         uid: azure-maps-control.atlas.LayerOptions
-  - uid: >-
-      number | azure-maps-control.atlas.Expression |
-      azure-maps-control.atlas.StyleFunction
-    name: StyleFunction
+  - uid: number | azure-maps-control.atlas.Expression
+    name: Expression
     spec.typeScript:
       - name: 'number | '
         fullName: 'number | '
       - name: Expression
         fullName: Expression
         uid: azure-maps-control.atlas.Expression
-      - name: ' | '
-        fullName: ' | '
-      - name: StyleFunction
-        fullName: StyleFunction
-        uid: azure-maps-control.atlas.StyleFunction
-  - uid: >-
-      string | azure-maps-control.atlas.Expression |
-      azure-maps-control.atlas.StyleFunction
-    name: StyleFunction
+  - uid: string | azure-maps-control.atlas.Expression
+    name: Expression
     spec.typeScript:
       - name: 'string | '
         fullName: 'string | '
       - name: Expression
         fullName: Expression
         uid: azure-maps-control.atlas.Expression
-      - name: ' | '
-        fullName: ' | '
-      - name: StyleFunction
-        fullName: StyleFunction
-        uid: azure-maps-control.atlas.StyleFunction
   - uid: azure-maps-control.atlas.Padding | number
     name: Padding | number
     spec.typeScript:
@@ -1147,14 +969,6 @@ references:
       - name: Popup
         fullName: Popup
         uid: azure-maps-control.atlas.Popup
-  - uid: number | azure-maps-control.atlas.Expression
-    name: Expression
-    spec.typeScript:
-      - name: 'number | '
-        fullName: 'number | '
-      - name: Expression
-        fullName: Expression
-        uid: azure-maps-control.atlas.Expression
   - uid: >-
       string | azure-maps-control.atlas.HtmlMarker | Array<string |
       azure-maps-control.atlas.HtmlMarker>
@@ -1172,10 +986,8 @@ references:
         uid: azure-maps-control.atlas.HtmlMarker
       - name: '>'
         fullName: '>'
-  - uid: >-
-      azure-maps-control.atlas.Pixel | azure-maps-control.atlas.Expression |
-      azure-maps-control.atlas.StyleFunction
-    name: StyleFunction
+  - uid: azure-maps-control.atlas.Pixel | azure-maps-control.atlas.Expression
+    name: Expression
     spec.typeScript:
       - name: Pixel
         fullName: Pixel
@@ -1185,11 +997,6 @@ references:
       - name: Expression
         fullName: Expression
         uid: azure-maps-control.atlas.Expression
-      - name: ' | '
-        fullName: ' | '
-      - name: StyleFunction
-        fullName: StyleFunction
-        uid: azure-maps-control.atlas.StyleFunction
   - uid: azure-maps-control.atlas.MediaLayerOptions
     name: MediaLayerOptions
     spec.typeScript:
@@ -1384,14 +1191,5 @@ references:
       - name: Expression
         fullName: Expression
         uid: azure-maps-control.atlas.Expression
-  - uid: azure-maps-control.atlas.Pixel | azure-maps-control.atlas.Expression
-    name: Expression
-    spec.typeScript:
-      - name: Pixel
-        fullName: Pixel
-        uid: azure-maps-control.atlas.Pixel
-      - name: ' | '
-        fullName: ' | '
-      - name: Expression
-        fullName: Expression
-        uid: azure-maps-control.atlas.Expression
+  - uid: azure-maps-control.atlas.internal.EventEmitter
+    name: EventEmitter

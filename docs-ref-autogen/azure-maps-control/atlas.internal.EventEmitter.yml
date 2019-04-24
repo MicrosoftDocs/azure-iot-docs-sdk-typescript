@@ -1,94 +1,38 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-control.atlas.layer.SymbolLayer
-    name: SymbolLayer
-    fullName: SymbolLayer
+  - uid: azure-maps-control.atlas.internal.EventEmitter
+    name: EventEmitter
+    fullName: EventEmitter<T>
     children:
-      - azure-maps-control.atlas.layer.SymbolLayer.constructor
-      - azure-maps-control.atlas.layer.SymbolLayer.getOptions
-      - azure-maps-control.atlas.layer.SymbolLayer.getSource
-      - azure-maps-control.atlas.layer.SymbolLayer.setOptions
+      - azure-maps-control.atlas.internal.EventEmitter.constructor
     langs:
       - typeScript
     type: class
-    summary: |-
-      Renders point based data as symbols on the map using text and/or icons.
-      Symbols can also be created for line and polygon data as well.
-    extends:
-      name: azure-maps-control.atlas.layer.Layer
+    summary: >-
+      An internal abstract class that can be extended to provide event
+      listening/firing.
+
+      This class is for internal use only, and users will find little use with
+      it.
+
+      Not to be used by the Map class. MapCallbackHandler implements the more
+      complex logic for handling map events.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.SymbolLayer.constructor
-    name: 'SymbolLayer(string | Source, string, SymbolLayerOptions)'
+  - uid: azure-maps-control.atlas.internal.EventEmitter.constructor
+    name: 'EventEmitter(string[])'
     children: []
     type: constructor
     langs:
       - typeScript
-    summary: Constructs a new SymbolLayer.
+    summary: Constructs an EventEmitter
     syntax:
-      content: >-
-        new SymbolLayer(source: string | Source, id?: string, options?:
-        SymbolLayerOptions)
+      content: 'new EventEmitter(eventTypes: string[])'
       parameters:
-        - id: source
+        - id: eventTypes
           type:
-            - string | azure-maps-control.atlas.source.Source
-          description: The id or instance of a data source which the layer will render.
-        - id: id
-          type:
-            - string
-          description: >-
-            The id of the layer. If not specified a random one will be
-            generated.
-          optional: true
-        - id: options
-          type:
-            - azure-maps-control.atlas.SymbolLayerOptions
+            - 'string[]'
           description: |
-            The options of the polygon layer.
-          optional: true
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.SymbolLayer.getOptions
-    name: getOptions()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Gets the options of the symbol layer.
-    syntax:
-      content: function getOptions()
-      parameters: []
-      return:
-        type:
-          - azure-maps-control.atlas.SymbolLayerOptions
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.SymbolLayer.getSource
-    name: getSource()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Gets the source provided when creating the layer.
-    syntax:
-      content: function getSource()
-      parameters: []
-      return:
-        type:
-          - string | azure-maps-control.atlas.source.Source
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.SymbolLayer.setOptions
-    name: setOptions(SymbolLayerOptions)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Sets the options of the symbol layer.
-    syntax:
-      content: 'function setOptions(options: SymbolLayerOptions)'
-      parameters:
-        - id: options
-          type:
-            - azure-maps-control.atlas.SymbolLayerOptions
-          description: ''
+            The event types supported by this EventEmitter
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions

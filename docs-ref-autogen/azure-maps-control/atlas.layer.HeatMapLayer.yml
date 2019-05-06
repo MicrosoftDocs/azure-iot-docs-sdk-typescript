@@ -5,6 +5,8 @@ items:
     fullName: HeatMapLayer
     children:
       - azure-maps-control.atlas.layer.HeatMapLayer.constructor
+      - azure-maps-control.atlas.layer.HeatMapLayer.metadata
+      - azure-maps-control.atlas.layer.HeatMapLayer.getId
       - azure-maps-control.atlas.layer.HeatMapLayer.getOptions
       - azure-maps-control.atlas.layer.HeatMapLayer.getSource
       - azure-maps-control.atlas.layer.HeatMapLayer.setOptions
@@ -44,6 +46,35 @@ items:
           description: |
             The options of the line layer.
           optional: true
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.HeatMapLayer.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A property for associating custom data with the layer.
+    optional: true
+    syntax:
+      content: 'metadata?: any'
+      return:
+        type:
+          - any
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.HeatMapLayer.getId
+    name: getId()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the id of the layer
+    syntax:
+      content: function getId()
+      parameters: []
+      return:
+        type:
+          - string
     package: azure-maps-control
   - uid: azure-maps-control.atlas.layer.HeatMapLayer.getOptions
     name: getOptions()

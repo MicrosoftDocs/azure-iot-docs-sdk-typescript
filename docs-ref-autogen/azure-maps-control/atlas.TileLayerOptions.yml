@@ -5,12 +5,23 @@ items:
     fullName: TileLayerOptions
     children:
       - azure-maps-control.atlas.TileLayerOptions.bounds
+      - azure-maps-control.atlas.TileLayerOptions.contrast
+      - azure-maps-control.atlas.TileLayerOptions.fadeDuration
+      - azure-maps-control.atlas.TileLayerOptions.filter
+      - azure-maps-control.atlas.TileLayerOptions.hueRotation
       - azure-maps-control.atlas.TileLayerOptions.isTMS
+      - azure-maps-control.atlas.TileLayerOptions.maxBrightness
       - azure-maps-control.atlas.TileLayerOptions.maxSourceZoom
+      - azure-maps-control.atlas.TileLayerOptions.maxZoom
+      - azure-maps-control.atlas.TileLayerOptions.minBrightness
       - azure-maps-control.atlas.TileLayerOptions.minSourceZoom
+      - azure-maps-control.atlas.TileLayerOptions.minZoom
+      - azure-maps-control.atlas.TileLayerOptions.opacity
+      - azure-maps-control.atlas.TileLayerOptions.saturation
       - azure-maps-control.atlas.TileLayerOptions.subdomains
       - azure-maps-control.atlas.TileLayerOptions.tileSize
       - azure-maps-control.atlas.TileLayerOptions.tileUrl
+      - azure-maps-control.atlas.TileLayerOptions.visible
     langs:
       - typeScript
     type: interface
@@ -36,6 +47,81 @@ items:
         type:
           - azure-maps-control.atlas.data.BoundingBox
     package: azure-maps-control
+  - uid: azure-maps-control.atlas.TileLayerOptions.contrast
+    name: contrast
+    fullName: contrast
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      A number between -1 and 1 that increases or decreases the contrast of the
+      overlay.
+
+      Default `0`.
+    optional: true
+    syntax:
+      content: 'contrast?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.TileLayerOptions.fadeDuration
+    name: fadeDuration
+    fullName: fadeDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The duration in milliseconds of a fade transition when a new tile is
+      added.
+
+      Must be greater or equal to 0.
+
+      Default `300`.
+    optional: true
+    syntax:
+      content: 'fadeDuration?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.TileLayerOptions.filter
+    name: filter
+    fullName: filter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      An expression specifying conditions on source features.
+      Only features that match the filter are displayed.
+    optional: true
+    syntax:
+      content: 'filter?: Expression'
+      return:
+        type:
+          - azure-maps-control.atlas.Expression
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.TileLayerOptions.hueRotation
+    name: hueRotation
+    fullName: hueRotation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Rotates hues around the color wheel.
+      A number in degrees.
+      Default `0`.
+    optional: true
+    syntax:
+      content: 'hueRotation?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-control
   - uid: azure-maps-control.atlas.TileLayerOptions.isTMS
     name: isTMS
     fullName: isTMS
@@ -57,6 +143,25 @@ items:
         type:
           - boolean
     package: azure-maps-control
+  - uid: azure-maps-control.atlas.TileLayerOptions.maxBrightness
+    name: maxBrightness
+    fullName: maxBrightness
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      A number between 0 and 1 that increases or decreases the maximum
+      brightness of the overlay.
+
+      Default `1`.
+    optional: true
+    syntax:
+      content: 'maxBrightness?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-control
   - uid: azure-maps-control.atlas.TileLayerOptions.maxSourceZoom
     name: maxSourceZoom
     fullName: maxSourceZoom
@@ -76,6 +181,46 @@ items:
         type:
           - number
     package: azure-maps-control
+  - uid: azure-maps-control.atlas.TileLayerOptions.maxZoom
+    name: maxZoom
+    fullName: maxZoom
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      An integer specifying the maximum zoom level to render the layer at.
+
+      This value is exclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `24`.
+    optional: true
+    syntax:
+      content: 'maxZoom?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.TileLayerOptions.minBrightness
+    name: minBrightness
+    fullName: minBrightness
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      A number between 0 and 1 that increases or decreases the minimum
+      brightness of the overlay.
+
+      Default `0`.
+    optional: true
+    syntax:
+      content: 'minBrightness?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-control
   - uid: azure-maps-control.atlas.TileLayerOptions.minSourceZoom
     name: minSourceZoom
     fullName: minSourceZoom
@@ -91,6 +236,65 @@ items:
     optional: true
     syntax:
       content: 'minSourceZoom?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.TileLayerOptions.minZoom
+    name: minZoom
+    fullName: minZoom
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      An integer specifying the minimum zoom level to render the layer at.
+
+      This value is inclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `0`.
+    optional: true
+    syntax:
+      content: 'minZoom?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.TileLayerOptions.opacity
+    name: opacity
+    fullName: opacity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      A number between 0 and 1 that indicates the opacity at which the overlay
+      will be drawn.
+
+      Default `1`.
+    optional: true
+    syntax:
+      content: 'opacity?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.TileLayerOptions.saturation
+    name: saturation
+    fullName: saturation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      A number between -1 and 1 that increases or decreases the saturation of
+      the overlay.
+
+      Default `0`.
+    optional: true
+    syntax:
+      content: 'saturation?: number'
       return:
         type:
           - number
@@ -164,6 +368,23 @@ items:
       return:
         type:
           - string
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.TileLayerOptions.visible
+    name: visible
+    fullName: visible
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Specifies if the layer is visible or not.
+      Default `true`.
+    optional: true
+    syntax:
+      content: 'visible?: boolean'
+      return:
+        type:
+          - boolean
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions

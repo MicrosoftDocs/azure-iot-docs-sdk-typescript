@@ -5,6 +5,7 @@ items:
     fullName: VectorTileSource
     children:
       - azure-maps-control.atlas.source.VectorTileSource.constructor
+      - azure-maps-control.atlas.source.VectorTileSource.getId
       - azure-maps-control.atlas.source.VectorTileSource.getOptions
       - azure-maps-control.atlas.source.VectorTileSource.getShape
     langs:
@@ -38,6 +39,20 @@ items:
             - azure-maps-control.atlas.VectorTileSourceOptions
           description: ''
           optional: true
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.source.VectorTileSource.getId
+    name: getId()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the id of the data source
+    syntax:
+      content: function getId()
+      parameters: []
+      return:
+        type:
+          - string
     package: azure-maps-control
   - uid: azure-maps-control.atlas.source.VectorTileSource.getOptions
     name: getOptions()

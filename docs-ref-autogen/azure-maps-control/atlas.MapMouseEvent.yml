@@ -4,15 +4,48 @@ items:
     name: MapMouseEvent
     fullName: MapMouseEvent
     children:
+      - azure-maps-control.atlas.MapMouseEvent.map
+      - azure-maps-control.atlas.MapMouseEvent.originalEvent
       - azure-maps-control.atlas.MapMouseEvent.pixel
       - azure-maps-control.atlas.MapMouseEvent.position
+      - azure-maps-control.atlas.MapMouseEvent.preventDefault
       - azure-maps-control.atlas.MapMouseEvent.shapes
+      - azure-maps-control.atlas.MapMouseEvent.type
     langs:
       - typeScript
     type: interface
     summary: Event object returned by the maps when a mouse event occurs.
     extends:
       name: azure-maps-control.atlas.MapMouseWheelEvent
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.MapMouseEvent.map
+    name: map
+    fullName: map
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The `Map` instance in which the event occurred on.
+    syntax:
+      content: 'map: Map'
+      return:
+        type:
+          - azure-maps-control.atlas.Map
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.MapMouseEvent.originalEvent
+    name: originalEvent
+    fullName: originalEvent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The original event that was fired.
+    optional: true
+    syntax:
+      content: 'originalEvent?: Event'
+      return:
+        type:
+          - Event
     package: azure-maps-control
   - uid: azure-maps-control.atlas.MapMouseEvent.pixel
     name: pixel
@@ -43,6 +76,20 @@ items:
       return:
         type:
           - azure-maps-control.atlas.data.Position
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.MapMouseEvent.preventDefault
+    name: preventDefault
+    fullName: preventDefault
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Prevents event propagation bubbling up the event chain.
+    syntax:
+      content: 'preventDefault: () => void'
+      return:
+        type:
+          - () => void
     package: azure-maps-control
   - uid: azure-maps-control.atlas.MapMouseEvent.shapes
     name: shapes
@@ -83,6 +130,20 @@ items:
           - >-
             Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
             any> | azure-maps-control.atlas.Shape>
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.MapMouseEvent.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The event type.
+    syntax:
+      content: 'type: string'
+      return:
+        type:
+          - string
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions

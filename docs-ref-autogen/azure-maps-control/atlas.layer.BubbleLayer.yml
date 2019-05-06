@@ -5,6 +5,8 @@ items:
     fullName: BubbleLayer
     children:
       - azure-maps-control.atlas.layer.BubbleLayer.constructor
+      - azure-maps-control.atlas.layer.BubbleLayer.metadata
+      - azure-maps-control.atlas.layer.BubbleLayer.getId
       - azure-maps-control.atlas.layer.BubbleLayer.getOptions
       - azure-maps-control.atlas.layer.BubbleLayer.getSource
       - azure-maps-control.atlas.layer.BubbleLayer.setOptions
@@ -44,6 +46,35 @@ items:
           description: |
             The options of the bubble layer.
           optional: true
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.BubbleLayer.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A property for associating custom data with the layer.
+    optional: true
+    syntax:
+      content: 'metadata?: any'
+      return:
+        type:
+          - any
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.BubbleLayer.getId
+    name: getId()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the id of the layer
+    syntax:
+      content: function getId()
+      parameters: []
+      return:
+        type:
+          - string
     package: azure-maps-control
   - uid: azure-maps-control.atlas.layer.BubbleLayer.getOptions
     name: getOptions()

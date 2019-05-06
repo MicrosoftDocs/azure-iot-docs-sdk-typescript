@@ -11,6 +11,7 @@ items:
       - azure-maps-control.atlas.source.DataSource.getClusterChildren
       - azure-maps-control.atlas.source.DataSource.getClusterExpansionZoom
       - azure-maps-control.atlas.source.DataSource.getClusterLeaves
+      - azure-maps-control.atlas.source.DataSource.getId
       - azure-maps-control.atlas.source.DataSource.getOptions
       - azure-maps-control.atlas.source.DataSource.getShapeById
       - azure-maps-control.atlas.source.DataSource.getShapes
@@ -211,6 +212,20 @@ items:
           - >-
             Promise<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
             any> | azure-maps-control.atlas.Shape>
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.source.DataSource.getId
+    name: getId()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the id of the data source
+    syntax:
+      content: function getId()
+      parameters: []
+      return:
+        type:
+          - string
     package: azure-maps-control
   - uid: azure-maps-control.atlas.source.DataSource.getOptions
     name: getOptions()

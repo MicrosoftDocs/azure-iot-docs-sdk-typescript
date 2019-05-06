@@ -5,8 +5,11 @@ items:
     fullName: LineLayerOptions
     children:
       - azure-maps-control.atlas.LineLayerOptions.blur
+      - azure-maps-control.atlas.LineLayerOptions.filter
       - azure-maps-control.atlas.LineLayerOptions.lineCap
       - azure-maps-control.atlas.LineLayerOptions.lineJoin
+      - azure-maps-control.atlas.LineLayerOptions.maxZoom
+      - azure-maps-control.atlas.LineLayerOptions.minZoom
       - azure-maps-control.atlas.LineLayerOptions.offset
       - azure-maps-control.atlas.LineLayerOptions.source
       - azure-maps-control.atlas.LineLayerOptions.sourceLayer
@@ -15,6 +18,7 @@ items:
       - azure-maps-control.atlas.LineLayerOptions.strokeGradient
       - azure-maps-control.atlas.LineLayerOptions.strokeOpacity
       - azure-maps-control.atlas.LineLayerOptions.strokeWidth
+      - azure-maps-control.atlas.LineLayerOptions.visible
     langs:
       - typeScript
     type: interface
@@ -42,6 +46,23 @@ items:
       return:
         type:
           - number | azure-maps-control.atlas.Expression
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.LineLayerOptions.filter
+    name: filter
+    fullName: filter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      An expression specifying conditions on source features.
+      Only features that match the filter are displayed.
+    optional: true
+    syntax:
+      content: 'filter?: Expression'
+      return:
+        type:
+          - azure-maps-control.atlas.Expression
     package: azure-maps-control
   - uid: azure-maps-control.atlas.LineLayerOptions.lineCap
     name: lineCap
@@ -108,6 +129,48 @@ items:
       return:
         type:
           - '"bevel" | "round" | "miter"'
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.LineLayerOptions.maxZoom
+    name: maxZoom
+    fullName: maxZoom
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      An integer specifying the maximum zoom level to render the layer at.
+
+      This value is exclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `24`.
+    optional: true
+    syntax:
+      content: 'maxZoom?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.LineLayerOptions.minZoom
+    name: minZoom
+    fullName: minZoom
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      An integer specifying the minimum zoom level to render the layer at.
+
+      This value is inclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `0`.
+    optional: true
+    syntax:
+      content: 'minZoom?: number'
+      return:
+        type:
+          - number
     package: azure-maps-control
   - uid: azure-maps-control.atlas.LineLayerOptions.offset
     name: offset
@@ -261,6 +324,23 @@ items:
       return:
         type:
           - number | azure-maps-control.atlas.Expression
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.LineLayerOptions.visible
+    name: visible
+    fullName: visible
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Specifies if the layer is visible or not.
+      Default `true`.
+    optional: true
+    syntax:
+      content: 'visible?: boolean'
+      return:
+        type:
+          - boolean
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions

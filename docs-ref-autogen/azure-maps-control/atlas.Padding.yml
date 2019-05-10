@@ -603,12 +603,40 @@ references:
       - name: '>'
         fullName: '>'
   - uid: >-
-      Promise<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
-      any> | azure-maps-control.atlas.Shape>
-    name: Shape>
+      Promise<Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      azure-maps-control.atlas.ClusteredProperties | any> |
+      azure-maps-control.atlas.Shape>>
+    name: Shape>>
     spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
+      - name: Promise<Array<
+        fullName: Promise<Array<
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', '
+        fullName: ', '
+      - name: ClusteredProperties
+        fullName: ClusteredProperties
+        uid: azure-maps-control.atlas.ClusteredProperties
+      - name: ' | any> | '
+        fullName: ' | any> | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: '>>'
+        fullName: '>>'
+  - uid: >-
+      Promise<Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.Shape>>
+    name: Shape>>
+    spec.typeScript:
+      - name: Promise<Array<
+        fullName: Promise<Array<
       - name: Feature
         fullName: Feature
         uid: azure-maps-control.atlas.data.Feature
@@ -622,8 +650,8 @@ references:
       - name: Shape
         fullName: Shape
         uid: azure-maps-control.atlas.Shape
-      - name: '>'
-        fullName: '>'
+      - name: '>>'
+        fullName: '>>'
   - uid: azure-maps-control.atlas.Shape
     name: Shape
     spec.typeScript:

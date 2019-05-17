@@ -1,0 +1,2006 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-maps-control.atlas.Expression
+    name: Expression
+    fullName: Expression
+    children:
+      - azure-maps-control.atlas.Expression.Array
+      - azure-maps-control.atlas.Expression.concat
+      - azure-maps-control.atlas.Expression.concat_1
+      - azure-maps-control.atlas.Expression.every
+      - azure-maps-control.atlas.Expression.filter_1
+      - azure-maps-control.atlas.Expression.filter
+      - azure-maps-control.atlas.Expression.forEach
+      - azure-maps-control.atlas.Expression.indexOf
+      - azure-maps-control.atlas.Expression.join
+      - azure-maps-control.atlas.Expression.lastIndexOf
+      - azure-maps-control.atlas.Expression.length
+      - azure-maps-control.atlas.Expression.map
+      - azure-maps-control.atlas.Expression.pop
+      - azure-maps-control.atlas.Expression.push
+      - azure-maps-control.atlas.Expression.reduce
+      - azure-maps-control.atlas.Expression.reduce_1
+      - azure-maps-control.atlas.Expression.reduce_2
+      - azure-maps-control.atlas.Expression.reduceRight
+      - azure-maps-control.atlas.Expression.reduceRight_1
+      - azure-maps-control.atlas.Expression.reduceRight_2
+      - azure-maps-control.atlas.Expression.reverse
+      - azure-maps-control.atlas.Expression.shift
+      - azure-maps-control.atlas.Expression.slice
+      - azure-maps-control.atlas.Expression.some
+      - azure-maps-control.atlas.Expression.sort
+      - azure-maps-control.atlas.Expression.splice
+      - azure-maps-control.atlas.Expression.splice_1
+      - azure-maps-control.atlas.Expression.toLocaleString
+      - azure-maps-control.atlas.Expression.toString
+      - azure-maps-control.atlas.Expression.unshift
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Can be specified as the value of filter or certain layer options.
+
+      An expression defines a formula for computing the value of the property.
+
+      Expressions are represented as JSON arrays.
+
+      The first element of an expression is a string naming the expression
+      operator.
+    extends:
+      name: Array<any>
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.Array
+    name: Array
+    fullName: Array
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'Array: ArrayConstructor'
+      return:
+        type:
+          - ArrayConstructor
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.concat
+    name: 'concat(ConcatArray<any>[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Combines two or more arrays.
+    syntax:
+      content: 'function concat(items: ConcatArray<any>[])'
+      parameters:
+        - id: items
+          type:
+            - 'ConcatArray<any>[]'
+          description: |
+            Additional items to add to the end of array1.
+      return:
+        type:
+          - 'any[]'
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.concat_1
+    name: 'concat(T | ConcatArray<T>[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Combines two or more arrays.
+    syntax:
+      content: 'function concat(items: T | ConcatArray<T>[])'
+      parameters:
+        - id: items
+          type:
+            - 'T | ConcatArray<T>[]'
+          description: |
+            Additional items to add to the end of array1.
+      return:
+        type:
+          - 'any[]'
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.every
+    name: 'every((value: any, index: number, array: any[]) => boolean, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Determines whether all the members of an array satisfy the specified test.
+    syntax:
+      content: >-
+        function every(callbackfn: (value: any, index: number, array: any[]) =>
+        boolean, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: any, index: number, array: any[]) => boolean'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls the callbackfn function for each element in array1 until the
+            callbackfn returns false, or until the end of the array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - boolean
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.filter_1
+    name: 'filter((value: any, index: number, array: any[]) => any, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: any, index: number, array: any[]) =>
+        any, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: any, index: number, array: any[]) => any'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - 'any[]'
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.filter
+    name: 'filter((value: any, index: number, array: any[]) => boolean, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter<S>(callbackfn: (value: any, index: number, array: any[])
+        => boolean, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: any, index: number, array: any[]) => boolean'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - 'S[]'
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.forEach
+    name: 'forEach((value: any, index: number, array: any[]) => void, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Performs the specified action for each element in an array.
+    syntax:
+      content: >-
+        function forEach(callbackfn: (value: any, index: number, array: any[])
+        => void, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: any, index: number, array: any[]) => void'
+          description: >-
+            A function that accepts up to three arguments. forEach calls the
+            callbackfn function one time for each element in the array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.indexOf
+    name: 'indexOf(any, number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the index of the first occurrence of a value in an array.
+    syntax:
+      content: 'function indexOf(searchElement: any, fromIndex?: number)'
+      parameters:
+        - id: searchElement
+          type:
+            - any
+          description: The value to locate in the array.
+        - id: fromIndex
+          type:
+            - number
+          description: >
+            The array index at which to begin the search. If fromIndex is
+            omitted, the search starts at index 0.
+          optional: true
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.join
+    name: join(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Adds all the elements of an array separated by the specified separator
+      string.
+    syntax:
+      content: 'function join(separator?: string)'
+      parameters:
+        - id: separator
+          type:
+            - string
+          description: >
+            A string used to separate one element of an array from the next in
+            the resulting String. If omitted, the array elements are separated
+            with a comma.
+          optional: true
+      return:
+        type:
+          - string
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.lastIndexOf
+    name: 'lastIndexOf(any, number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the index of the last occurrence of a specified value in an array.
+    syntax:
+      content: 'function lastIndexOf(searchElement: any, fromIndex?: number)'
+      parameters:
+        - id: searchElement
+          type:
+            - any
+          description: The value to locate in the array.
+        - id: fromIndex
+          type:
+            - number
+          description: >
+            The array index at which to begin the search. If fromIndex is
+            omitted, the search starts at the last index in the array.
+          optional: true
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.length
+    name: length
+    fullName: length
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Gets or sets the length of the array. This is a number one higher than the
+      highest element defined in an array.
+    syntax:
+      content: 'length: number'
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.map
+    name: 'map((value: any, index: number, array: any[]) => U, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Calls a defined callback function on each element of an array, and returns
+      an array that contains the results.
+    syntax:
+      content: >-
+        function map<U>(callbackfn: (value: any, index: number, array: any[]) =>
+        U, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: any, index: number, array: any[]) => U'
+          description: >-
+            A function that accepts up to three arguments. The map method calls
+            the callbackfn function one time for each element in the array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - 'U[]'
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.pop
+    name: pop()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Removes the last element from an array and returns it.
+    syntax:
+      content: function pop()
+      parameters: []
+      return:
+        type:
+          - any | undefined
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.push
+    name: 'push(any[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Appends new elements to an array, and returns the new length of the array.'
+    syntax:
+      content: 'function push(items: any[])'
+      parameters:
+        - id: items
+          type:
+            - 'any[]'
+          description: |
+            New elements of the Array.
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.reduce
+    name: >-
+      reduce((previousValue: any, currentValue: any, currentIndex: number,
+      array: any[]) => any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Calls the specified callback function for all the elements in an array.
+      The return value of the callback function is the accumulated result, and
+      is provided as an argument in the next call to the callback function.
+    syntax:
+      content: >-
+        function reduce(callbackfn: (previousValue: any, currentValue: any,
+        currentIndex: number, array: any[]) => any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (previousValue: any, currentValue: any, currentIndex: number,
+              array: any[]) => any
+          description: >-
+            A function that accepts up to four arguments. The reduce method
+            calls the callbackfn function one time for each element in the
+            array.
+      return:
+        type:
+          - any
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.reduce_1
+    name: >-
+      reduce((previousValue: any, currentValue: any, currentIndex: number,
+      array: any[]) => any, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Calls the specified callback function for all the elements in an array.
+      The return value of the callback function is the accumulated result, and
+      is provided as an argument in the next call to the callback function.
+    syntax:
+      content: >-
+        function reduce(callbackfn: (previousValue: any, currentValue: any,
+        currentIndex: number, array: any[]) => any, initialValue: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (previousValue: any, currentValue: any, currentIndex: number,
+              array: any[]) => any
+          description: ''
+        - id: initialValue
+          type:
+            - any
+          description: ''
+      return:
+        type:
+          - any
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.reduce_2
+    name: >-
+      reduce((previousValue: U, currentValue: any, currentIndex: number, array:
+      any[]) => U, U)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Calls the specified callback function for all the elements in an array.
+      The return value of the callback function is the accumulated result, and
+      is provided as an argument in the next call to the callback function.
+    syntax:
+      content: >-
+        function reduce<U>(callbackfn: (previousValue: U, currentValue: any,
+        currentIndex: number, array: any[]) => U, initialValue: U)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (previousValue: U, currentValue: any, currentIndex: number, array:
+              any[]) => U
+          description: >-
+            A function that accepts up to four arguments. The reduce method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: initialValue
+          type:
+            - U
+          description: >
+            If initialValue is specified, it is used as the initial value to
+            start the accumulation. The first call to the callbackfn function
+            provides this value as an argument instead of an array value.
+      return:
+        type:
+          - U
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.reduceRight
+    name: >-
+      reduceRight((previousValue: any, currentValue: any, currentIndex: number,
+      array: any[]) => any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Calls the specified callback function for all the elements in an array, in
+      descending order. The return value of the callback function is the
+      accumulated result, and is provided as an argument in the next call to the
+      callback function.
+    syntax:
+      content: >-
+        function reduceRight(callbackfn: (previousValue: any, currentValue: any,
+        currentIndex: number, array: any[]) => any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (previousValue: any, currentValue: any, currentIndex: number,
+              array: any[]) => any
+          description: >-
+            A function that accepts up to four arguments. The reduceRight method
+            calls the callbackfn function one time for each element in the
+            array.
+      return:
+        type:
+          - any
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.reduceRight_1
+    name: >-
+      reduceRight((previousValue: any, currentValue: any, currentIndex: number,
+      array: any[]) => any, any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Calls the specified callback function for all the elements in an array, in
+      descending order. The return value of the callback function is the
+      accumulated result, and is provided as an argument in the next call to the
+      callback function.
+    syntax:
+      content: >-
+        function reduceRight(callbackfn: (previousValue: any, currentValue: any,
+        currentIndex: number, array: any[]) => any, initialValue: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (previousValue: any, currentValue: any, currentIndex: number,
+              array: any[]) => any
+          description: ''
+        - id: initialValue
+          type:
+            - any
+          description: ''
+      return:
+        type:
+          - any
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.reduceRight_2
+    name: >-
+      reduceRight((previousValue: U, currentValue: any, currentIndex: number,
+      array: any[]) => U, U)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Calls the specified callback function for all the elements in an array, in
+      descending order. The return value of the callback function is the
+      accumulated result, and is provided as an argument in the next call to the
+      callback function.
+    syntax:
+      content: >-
+        function reduceRight<U>(callbackfn: (previousValue: U, currentValue:
+        any, currentIndex: number, array: any[]) => U, initialValue: U)
+      parameters:
+        - id: callbackfn
+          type:
+            - >-
+              (previousValue: U, currentValue: any, currentIndex: number, array:
+              any[]) => U
+          description: >-
+            A function that accepts up to four arguments. The reduceRight method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: initialValue
+          type:
+            - U
+          description: >
+            If initialValue is specified, it is used as the initial value to
+            start the accumulation. The first call to the callbackfn function
+            provides this value as an argument instead of an array value.
+      return:
+        type:
+          - U
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.reverse
+    name: reverse()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Reverses the elements in an Array.
+    syntax:
+      content: function reverse()
+      parameters: []
+      return:
+        type:
+          - 'any[]'
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.shift
+    name: shift()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Removes the first element from an array and returns it.
+    syntax:
+      content: function shift()
+      parameters: []
+      return:
+        type:
+          - any | undefined
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.slice
+    name: 'slice(number, number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns a section of an array.
+    syntax:
+      content: 'function slice(start?: number, end?: number)'
+      parameters:
+        - id: start
+          type:
+            - number
+          description: The beginning of the specified portion of the array.
+          optional: true
+        - id: end
+          type:
+            - number
+          description: |
+            The end of the specified portion of the array.
+          optional: true
+      return:
+        type:
+          - 'any[]'
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.some
+    name: 'some((value: any, index: number, array: any[]) => boolean, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether the specified callback function returns true for any
+      element of an array.
+    syntax:
+      content: >-
+        function some(callbackfn: (value: any, index: number, array: any[]) =>
+        boolean, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: any, index: number, array: any[]) => boolean'
+          description: >-
+            A function that accepts up to three arguments. The some method calls
+            the callbackfn function for each element in array1 until the
+            callbackfn returns true, or until the end of the array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - boolean
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.sort
+    name: 'sort((a: any, b: any) => number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Sorts an array.
+    syntax:
+      content: 'function sort(compareFn?: (a: any, b: any) => number)'
+      parameters:
+        - id: compareFn
+          type:
+            - '(a: any, b: any) => number'
+          description: >
+            The name of the function used to determine the order of the
+            elements. If omitted, the elements are sorted in ascending, ASCII
+            character order.
+          optional: true
+      return:
+        type:
+          - this
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.splice
+    name: 'splice(number, number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Removes elements from an array and, if necessary, inserts new elements in
+      their place, returning the deleted elements.
+    syntax:
+      content: 'function splice(start: number, deleteCount?: number)'
+      parameters:
+        - id: start
+          type:
+            - number
+          description: >-
+            The zero-based location in the array from which to start removing
+            elements.
+        - id: deleteCount
+          type:
+            - number
+          description: |
+            The number of elements to remove.
+          optional: true
+      return:
+        type:
+          - 'any[]'
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.splice_1
+    name: 'splice(number, number, any[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Removes elements from an array and, if necessary, inserts new elements in
+      their place, returning the deleted elements.
+    syntax:
+      content: 'function splice(start: number, deleteCount: number, items: any[])'
+      parameters:
+        - id: start
+          type:
+            - number
+          description: >-
+            The zero-based location in the array from which to start removing
+            elements.
+        - id: deleteCount
+          type:
+            - number
+          description: The number of elements to remove.
+        - id: items
+          type:
+            - 'any[]'
+          description: |
+            Elements to insert into the array in place of the deleted elements.
+      return:
+        type:
+          - 'any[]'
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.toLocaleString
+    name: toLocaleString()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns a string representation of an array. The elements are converted to
+      string using their toLocalString methods.
+    syntax:
+      content: function toLocaleString()
+      parameters: []
+      return:
+        type:
+          - string
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.toString
+    name: toString()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns a string representation of an array.
+    syntax:
+      content: function toString()
+      parameters: []
+      return:
+        type:
+          - string
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.unshift
+    name: 'unshift(any[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Inserts new elements at the start of an array.
+    syntax:
+      content: 'function unshift(items: any[])'
+      parameters:
+        - id: items
+          type:
+            - 'any[]'
+          description: |
+            Elements to insert at the start of the Array.
+      return:
+        type:
+          - number
+    package: azure-maps-control
+references:
+  - uid: azure-maps-control.atlas.CompassControlOptions
+    name: CompassControlOptions
+    spec.typeScript:
+      - name: CompassControlOptions
+        fullName: CompassControlOptions
+        uid: azure-maps-control.atlas.CompassControlOptions
+  - uid: azure-maps-control.atlas.Map
+    name: Map
+    spec.typeScript:
+      - name: Map
+        fullName: Map
+        uid: azure-maps-control.atlas.Map
+  - uid: azure-maps-control.atlas.ControlOptions
+    name: ControlOptions
+    spec.typeScript:
+      - name: ControlOptions
+        fullName: ControlOptions
+        uid: azure-maps-control.atlas.ControlOptions
+  - uid: azure-maps-control.atlas.PitchControlOptions
+    name: PitchControlOptions
+    spec.typeScript:
+      - name: PitchControlOptions
+        fullName: PitchControlOptions
+        uid: azure-maps-control.atlas.PitchControlOptions
+  - uid: azure-maps-control.atlas.StyleControlOptions
+    name: StyleControlOptions
+    spec.typeScript:
+      - name: StyleControlOptions
+        fullName: StyleControlOptions
+        uid: azure-maps-control.atlas.StyleControlOptions
+  - uid: azure-maps-control.atlas.ZoomControlOptions
+    name: ZoomControlOptions
+    spec.typeScript:
+      - name: ZoomControlOptions
+        fullName: ZoomControlOptions
+        uid: azure-maps-control.atlas.ZoomControlOptions
+  - uid: azure-maps-control.atlas.data.Position
+    name: Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+  - uid: azure-maps-control.atlas.data.BoundingBox
+    name: BoundingBox
+    spec.typeScript:
+      - name: BoundingBox
+        fullName: BoundingBox
+        uid: azure-maps-control.atlas.data.BoundingBox
+  - uid: >-
+      azure-maps-control.atlas.data.FeatureCollection |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.data.Geometry |
+      azure-maps-control.atlas.Shape |
+      Array<azure-maps-control.atlas.data.FeatureCollection |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.data.Geometry>
+    name: Geometry>
+    spec.typeScript:
+      - name: FeatureCollection
+        fullName: FeatureCollection
+        uid: azure-maps-control.atlas.data.FeatureCollection
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ' | '
+        fullName: ' | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: ' | Array<'
+        fullName: ' | Array<'
+      - name: FeatureCollection
+        fullName: FeatureCollection
+        uid: azure-maps-control.atlas.data.FeatureCollection
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: '>'
+        fullName: '>'
+  - uid: 'azure-maps-control.atlas.data.Position[]'
+    name: 'Position[]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-control.atlas.data.BoundingBox[]'
+    name: 'BoundingBox[]'
+    spec.typeScript:
+      - name: BoundingBox
+        fullName: BoundingBox
+        uid: azure-maps-control.atlas.data.BoundingBox
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any>>
+    name: 'Geometry, any>>'
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any>>'
+        fullName: ', any>>'
+  - uid: 'azure-maps-control.atlas.data.Geometry[]'
+    name: 'Geometry[]'
+    spec.typeScript:
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-control.atlas.data.Position[][]'
+    name: 'Position[][]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[][]'
+        fullName: '[][]'
+  - uid: 'azure-maps-control.atlas.data.Position[][][]'
+    name: 'Position[][][]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[][][]'
+        fullName: '[][][]'
+  - uid: >-
+      azure-maps-control.atlas.data.Position[][] |
+      azure-maps-control.atlas.data.Position[]
+    name: 'Position[]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[][] | '
+        fullName: '[][] | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-control.atlas.layer.Layer
+    name: Layer
+    spec.typeScript:
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+  - uid: string | azure-maps-control.atlas.source.Source
+    name: Source
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+  - uid: azure-maps-control.atlas.BubbleLayerOptions
+    name: BubbleLayerOptions
+    spec.typeScript:
+      - name: BubbleLayerOptions
+        fullName: BubbleLayerOptions
+        uid: azure-maps-control.atlas.BubbleLayerOptions
+  - uid: azure-maps-control.atlas.HeatMapLayerOptions
+    name: HeatMapLayerOptions
+    spec.typeScript:
+      - name: HeatMapLayerOptions
+        fullName: HeatMapLayerOptions
+        uid: azure-maps-control.atlas.HeatMapLayerOptions
+  - uid: azure-maps-control.atlas.ImageLayerOptions
+    name: ImageLayerOptions
+    spec.typeScript:
+      - name: ImageLayerOptions
+        fullName: ImageLayerOptions
+        uid: azure-maps-control.atlas.ImageLayerOptions
+  - uid: azure-maps-control.atlas.LineLayerOptions
+    name: LineLayerOptions
+    spec.typeScript:
+      - name: LineLayerOptions
+        fullName: LineLayerOptions
+        uid: azure-maps-control.atlas.LineLayerOptions
+  - uid: azure-maps-control.atlas.PolygonLayerOptions
+    name: PolygonLayerOptions
+    spec.typeScript:
+      - name: PolygonLayerOptions
+        fullName: PolygonLayerOptions
+        uid: azure-maps-control.atlas.PolygonLayerOptions
+  - uid: azure-maps-control.atlas.SymbolLayerOptions
+    name: SymbolLayerOptions
+    spec.typeScript:
+      - name: SymbolLayerOptions
+        fullName: SymbolLayerOptions
+        uid: azure-maps-control.atlas.SymbolLayerOptions
+  - uid: azure-maps-control.atlas.TileLayerOptions
+    name: TileLayerOptions
+    spec.typeScript:
+      - name: TileLayerOptions
+        fullName: TileLayerOptions
+        uid: azure-maps-control.atlas.TileLayerOptions
+  - uid: azure-maps-control.atlas.data.Polygon
+    name: Polygon
+    spec.typeScript:
+      - name: Polygon
+        fullName: Polygon
+        uid: azure-maps-control.atlas.data.Polygon
+  - uid: string | azure-maps-control.atlas.math.AccelerationUnits
+    name: AccelerationUnits
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: AccelerationUnits
+        fullName: AccelerationUnits
+        uid: azure-maps-control.atlas.math.AccelerationUnits
+  - uid: string | azure-maps-control.atlas.math.DistanceUnits
+    name: DistanceUnits
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: DistanceUnits
+        fullName: DistanceUnits
+        uid: azure-maps-control.atlas.math.DistanceUnits
+  - uid: string | azure-maps-control.atlas.math.SpeedUnits
+    name: SpeedUnits
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: SpeedUnits
+        fullName: SpeedUnits
+        uid: azure-maps-control.atlas.math.SpeedUnits
+  - uid: string | azure-maps-control.atlas.math.TimeUnits
+    name: TimeUnits
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: TimeUnits
+        fullName: TimeUnits
+        uid: azure-maps-control.atlas.math.TimeUnits
+  - uid: >-
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+      any>
+    name: 'Point, any>'
+    spec.typeScript:
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ', any>'
+        fullName: ', any>'
+  - uid: azure-maps-control.atlas.math.AreaUnits
+    name: AreaUnits
+    spec.typeScript:
+      - name: AreaUnits
+        fullName: AreaUnits
+        uid: azure-maps-control.atlas.math.AreaUnits
+  - uid: >-
+      azure-maps-control.atlas.data.Position |
+      azure-maps-control.atlas.data.Point |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+      any>
+    name: 'Point, any>'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: ' | '
+        fullName: ' | '
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ', any>'
+        fullName: ', any>'
+  - uid: >-
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+      Object>
+    name: 'Point, Object>'
+    spec.typeScript:
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ', Object>'
+        fullName: ', Object>'
+  - uid: >-
+      azure-maps-control.atlas.data.Position[] |
+      azure-maps-control.atlas.data.Geometry |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.data.FeatureCollection |
+      azure-maps-control.atlas.data.GeometryCollection |
+      azure-maps-control.atlas.data.Geometry[] |
+      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any>>
+    name: 'Geometry, any>>'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[] | '
+        fullName: '[] | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: FeatureCollection
+        fullName: FeatureCollection
+        uid: azure-maps-control.atlas.data.FeatureCollection
+      - name: ' | '
+        fullName: ' | '
+      - name: GeometryCollection
+        fullName: GeometryCollection
+        uid: azure-maps-control.atlas.data.GeometryCollection
+      - name: ' | '
+        fullName: ' | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: '[] | Array<'
+        fullName: '[] | Array<'
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any>>'
+        fullName: ', any>>'
+  - uid: >-
+      azure-maps-control.atlas.data.Position |
+      azure-maps-control.atlas.data.Point
+    name: Point
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: ' | '
+        fullName: ' | '
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+  - uid: >-
+      azure-maps-control.atlas.data.LineString |
+      azure-maps-control.atlas.data.Position[]
+    name: 'Position[]'
+    spec.typeScript:
+      - name: LineString
+        fullName: LineString
+        uid: azure-maps-control.atlas.data.LineString
+      - name: ' | '
+        fullName: ' | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+      Object>>
+    name: 'Point, Object>>'
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ', Object>>'
+        fullName: ', Object>>'
+  - uid: azure-maps-control.atlas.math.TimeUnits
+    name: TimeUnits
+    spec.typeScript:
+      - name: TimeUnits
+        fullName: TimeUnits
+        uid: azure-maps-control.atlas.math.TimeUnits
+  - uid: 'azure-maps-control.atlas.Pixel[]'
+    name: 'Pixel[]'
+    spec.typeScript:
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-control.atlas.source.Source
+    name: Source
+    spec.typeScript:
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+  - uid: azure-maps-control.atlas.DataSourceOptions
+    name: DataSourceOptions
+    spec.typeScript:
+      - name: DataSourceOptions
+        fullName: DataSourceOptions
+        uid: azure-maps-control.atlas.DataSourceOptions
+  - uid: >-
+      azure-maps-control.atlas.data.FeatureCollection |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.data.Geometry |
+      azure-maps-control.atlas.data.GeometryCollection |
+      azure-maps-control.atlas.Shape |
+      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.data.Geometry |
+      azure-maps-control.atlas.Shape>
+    name: Shape>
+    spec.typeScript:
+      - name: FeatureCollection
+        fullName: FeatureCollection
+        uid: azure-maps-control.atlas.data.FeatureCollection
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ' | '
+        fullName: ' | '
+      - name: GeometryCollection
+        fullName: GeometryCollection
+        uid: azure-maps-control.atlas.data.GeometryCollection
+      - name: ' | '
+        fullName: ' | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: ' | Array<'
+        fullName: ' | Array<'
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ' | '
+        fullName: ' | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: '>'
+        fullName: '>'
+  - uid: >-
+      Promise<Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      azure-maps-control.atlas.ClusteredProperties | any> |
+      azure-maps-control.atlas.Shape>>
+    name: Shape>>
+    spec.typeScript:
+      - name: Promise<Array<
+        fullName: Promise<Array<
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', '
+        fullName: ', '
+      - name: ClusteredProperties
+        fullName: ClusteredProperties
+        uid: azure-maps-control.atlas.ClusteredProperties
+      - name: ' | any> | '
+        fullName: ' | any> | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: '>>'
+        fullName: '>>'
+  - uid: >-
+      Promise<Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.Shape>>
+    name: Shape>>
+    spec.typeScript:
+      - name: Promise<Array<
+        fullName: Promise<Array<
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: '>>'
+        fullName: '>>'
+  - uid: azure-maps-control.atlas.Shape
+    name: Shape
+    spec.typeScript:
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+  - uid: azure-maps-control.atlas.Expression
+    name: Expression
+    spec.typeScript:
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.atlas.Expression
+  - uid: 'azure-maps-control.atlas.Shape[]'
+    name: 'Shape[]'
+    spec.typeScript:
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      number | string | azure-maps-control.atlas.Shape |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any>
+    name: 'Geometry, any>'
+    spec.typeScript:
+      - name: 'number | string | '
+        fullName: 'number | string | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any>'
+        fullName: ', any>'
+  - uid: >-
+      azure-maps-control.atlas.data.FeatureCollection |
+      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.data.Geometry |
+      azure-maps-control.atlas.Shape>
+    name: Shape>
+    spec.typeScript:
+      - name: FeatureCollection
+        fullName: FeatureCollection
+        uid: azure-maps-control.atlas.data.FeatureCollection
+      - name: ' | Array<'
+        fullName: ' | Array<'
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ' | '
+        fullName: ' | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-control.atlas.data.FeatureCollection
+    name: FeatureCollection
+    spec.typeScript:
+      - name: FeatureCollection
+        fullName: FeatureCollection
+        uid: azure-maps-control.atlas.data.FeatureCollection
+  - uid: azure-maps-control.atlas.VectorTileSourceOptions
+    name: VectorTileSourceOptions
+    spec.typeScript:
+      - name: VectorTileSourceOptions
+        fullName: VectorTileSourceOptions
+        uid: azure-maps-control.atlas.VectorTileSourceOptions
+  - uid: azure-maps-control.atlas.HtmlMarkerOptions
+    name: HtmlMarkerOptions
+    spec.typeScript:
+      - name: HtmlMarkerOptions
+        fullName: HtmlMarkerOptions
+        uid: azure-maps-control.atlas.HtmlMarkerOptions
+  - uid: >-
+      azure-maps-control.atlas.ServiceOptions &
+      azure-maps-control.atlas.StyleOptions &
+      azure-maps-control.atlas.UserInteractionOptions &
+      azure-maps-control.atlas.CameraOptions |
+      azure-maps-control.atlas.CameraBoundsOptions
+    name: CameraBoundsOptions
+    spec.typeScript:
+      - name: ServiceOptions
+        fullName: ServiceOptions
+        uid: azure-maps-control.atlas.ServiceOptions
+      - name: ' & '
+        fullName: ' & '
+      - name: StyleOptions
+        fullName: StyleOptions
+        uid: azure-maps-control.atlas.StyleOptions
+      - name: ' & '
+        fullName: ' & '
+      - name: UserInteractionOptions
+        fullName: UserInteractionOptions
+        uid: azure-maps-control.atlas.UserInteractionOptions
+      - name: ' & '
+        fullName: ' & '
+      - name: CameraOptions
+        fullName: CameraOptions
+        uid: azure-maps-control.atlas.CameraOptions
+      - name: ' | '
+        fullName: ' | '
+      - name: CameraBoundsOptions
+        fullName: CameraBoundsOptions
+        uid: azure-maps-control.atlas.CameraBoundsOptions
+  - uid: azure-maps-control.atlas.AuthenticationManager
+    name: AuthenticationManager
+    spec.typeScript:
+      - name: AuthenticationManager
+        fullName: AuthenticationManager
+        uid: azure-maps-control.atlas.AuthenticationManager
+  - uid: azure-maps-control.atlas.ControlManager
+    name: ControlManager
+    spec.typeScript:
+      - name: ControlManager
+        fullName: ControlManager
+        uid: azure-maps-control.atlas.ControlManager
+  - uid: azure-maps-control.atlas.EventManager
+    name: EventManager
+    spec.typeScript:
+      - name: EventManager
+        fullName: EventManager
+        uid: azure-maps-control.atlas.EventManager
+  - uid: azure-maps-control.atlas.ImageSpriteManager
+    name: ImageSpriteManager
+    spec.typeScript:
+      - name: ImageSpriteManager
+        fullName: ImageSpriteManager
+        uid: azure-maps-control.atlas.ImageSpriteManager
+  - uid: azure-maps-control.atlas.LayerManager
+    name: LayerManager
+    spec.typeScript:
+      - name: LayerManager
+        fullName: LayerManager
+        uid: azure-maps-control.atlas.LayerManager
+  - uid: azure-maps-control.atlas.HtmlMarkerManager
+    name: HtmlMarkerManager
+    spec.typeScript:
+      - name: HtmlMarkerManager
+        fullName: HtmlMarkerManager
+        uid: azure-maps-control.atlas.HtmlMarkerManager
+  - uid: azure-maps-control.atlas.SourceManager
+    name: SourceManager
+    spec.typeScript:
+      - name: SourceManager
+        fullName: SourceManager
+        uid: azure-maps-control.atlas.SourceManager
+  - uid: >-
+      azure-maps-control.atlas.CameraOptions &
+      azure-maps-control.atlas.CameraBoundsOptions
+    name: CameraBoundsOptions
+    spec.typeScript:
+      - name: CameraOptions
+        fullName: CameraOptions
+        uid: azure-maps-control.atlas.CameraOptions
+      - name: ' & '
+        fullName: ' & '
+      - name: CameraBoundsOptions
+        fullName: CameraBoundsOptions
+        uid: azure-maps-control.atlas.CameraBoundsOptions
+  - uid: azure-maps-control.atlas.ServiceOptions
+    name: ServiceOptions
+    spec.typeScript:
+      - name: ServiceOptions
+        fullName: ServiceOptions
+        uid: azure-maps-control.atlas.ServiceOptions
+  - uid: azure-maps-control.atlas.StyleOptions
+    name: StyleOptions
+    spec.typeScript:
+      - name: StyleOptions
+        fullName: StyleOptions
+        uid: azure-maps-control.atlas.StyleOptions
+  - uid: azure-maps-control.atlas.TrafficOptions
+    name: TrafficOptions
+    spec.typeScript:
+      - name: TrafficOptions
+        fullName: TrafficOptions
+        uid: azure-maps-control.atlas.TrafficOptions
+  - uid: azure-maps-control.atlas.UserInteractionOptions
+    name: UserInteractionOptions
+    spec.typeScript:
+      - name: UserInteractionOptions
+        fullName: UserInteractionOptions
+        uid: azure-maps-control.atlas.UserInteractionOptions
+  - uid: >-
+      azure-maps-control.atlas.CameraOptions |
+      azure-maps-control.atlas.CameraBoundsOptions &
+      azure-maps-control.atlas.AnimationOptions
+    name: AnimationOptions
+    spec.typeScript:
+      - name: CameraOptions
+        fullName: CameraOptions
+        uid: azure-maps-control.atlas.CameraOptions
+      - name: ' | '
+        fullName: ' | '
+      - name: CameraBoundsOptions
+        fullName: CameraBoundsOptions
+        uid: azure-maps-control.atlas.CameraBoundsOptions
+      - name: ' & '
+        fullName: ' & '
+      - name: AnimationOptions
+        fullName: AnimationOptions
+        uid: azure-maps-control.atlas.AnimationOptions
+  - uid: azure-maps-control.atlas.Pixel
+    name: Pixel
+    spec.typeScript:
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
+  - uid: azure-maps-control.atlas.PopupOptions
+    name: PopupOptions
+    spec.typeScript:
+      - name: PopupOptions
+        fullName: PopupOptions
+        uid: azure-maps-control.atlas.PopupOptions
+  - uid: >-
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any>
+    name: 'Geometry, any>'
+    spec.typeScript:
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any>'
+        fullName: ', any>'
+  - uid: azure-maps-control.atlas.data.Geometry
+    name: Geometry
+    spec.typeScript:
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+  - uid: >-
+      azure-maps-control.atlas.data.Position |
+      azure-maps-control.atlas.data.Position[] |
+      azure-maps-control.atlas.data.Position[][] |
+      azure-maps-control.atlas.data.Position[][][]
+    name: 'Position[][][]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: ' | '
+        fullName: ' | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[] | '
+        fullName: '[] | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[][] | '
+        fullName: '[][] | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[][][]'
+        fullName: '[][][]'
+  - uid: azure-maps-control.atlas.Options
+    name: Options
+    spec.typeScript:
+      - name: Options
+        fullName: Options
+        uid: azure-maps-control.atlas.Options
+  - uid: azure-maps-control.atlas.AuthenticationType
+    name: AuthenticationType
+    spec.typeScript:
+      - name: AuthenticationType
+        fullName: AuthenticationType
+        uid: azure-maps-control.atlas.AuthenticationType
+  - uid: azure-maps-control.atlas.RequestParameters
+    name: RequestParameters
+    spec.typeScript:
+      - name: RequestParameters
+        fullName: RequestParameters
+        uid: azure-maps-control.atlas.RequestParameters
+  - uid: azure-maps-control.atlas.getAuthTokenCallback
+    name: getAuthTokenCallback
+    spec.typeScript:
+      - name: getAuthTokenCallback
+        fullName: getAuthTokenCallback
+        uid: azure-maps-control.atlas.getAuthTokenCallback
+  - uid: azure-maps-control.atlas.LayerOptions
+    name: LayerOptions
+    spec.typeScript:
+      - name: LayerOptions
+        fullName: LayerOptions
+        uid: azure-maps-control.atlas.LayerOptions
+  - uid: number | azure-maps-control.atlas.Expression
+    name: Expression
+    spec.typeScript:
+      - name: 'number | '
+        fullName: 'number | '
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.atlas.Expression
+  - uid: string | azure-maps-control.atlas.Expression
+    name: Expression
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.atlas.Expression
+  - uid: azure-maps-control.atlas.Padding | number
+    name: Padding | number
+    spec.typeScript:
+      - name: Padding
+        fullName: Padding
+        uid: azure-maps-control.atlas.Padding
+      - name: ' | number'
+        fullName: ' | number'
+  - uid: azure-maps-control.atlas.ControlStyle
+    name: ControlStyle
+    spec.typeScript:
+      - name: ControlStyle
+        fullName: ControlStyle
+        uid: azure-maps-control.atlas.ControlStyle
+  - uid: 'azure-maps-control.atlas.Control | azure-maps-control.atlas.Control[]'
+    name: 'Control[]'
+    spec.typeScript:
+      - name: Control
+        fullName: Control
+        uid: azure-maps-control.atlas.Control
+      - name: ' | '
+        fullName: ' | '
+      - name: Control
+        fullName: Control
+        uid: azure-maps-control.atlas.Control
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-control.atlas.ControlPosition
+    name: ControlPosition
+    spec.typeScript:
+      - name: ControlPosition
+        fullName: ControlPosition
+        uid: azure-maps-control.atlas.ControlPosition
+  - uid: >-
+      azure-maps-control.atlas.layer.Layer |
+      azure-maps-control.atlas.layer.Layer[]
+    name: 'Layer[]'
+    spec.typeScript:
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: ' | '
+        fullName: ' | '
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      azure-maps-control.atlas.HtmlMarker |
+      azure-maps-control.atlas.HtmlMarker[]
+    name: 'HtmlMarker[]'
+    spec.typeScript:
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+      - name: ' | '
+        fullName: ' | '
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-control.atlas.Popup | azure-maps-control.atlas.Popup[]'
+    name: 'Popup[]'
+    spec.typeScript:
+      - name: Popup
+        fullName: Popup
+        uid: azure-maps-control.atlas.Popup
+      - name: ' | '
+        fullName: ' | '
+      - name: Popup
+        fullName: Popup
+        uid: azure-maps-control.atlas.Popup
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-control.atlas.HtmlMarker
+    name: HtmlMarker
+    spec.typeScript:
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+  - uid: azure-maps-control.atlas.Popup
+    name: Popup
+    spec.typeScript:
+      - name: Popup
+        fullName: Popup
+        uid: azure-maps-control.atlas.Popup
+  - uid: >-
+      string | azure-maps-control.atlas.HtmlMarker | Array<string |
+      azure-maps-control.atlas.HtmlMarker>
+    name: HtmlMarker>
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+      - name: ' | Array<string | '
+        fullName: ' | Array<string | '
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-control.atlas.Pixel | azure-maps-control.atlas.Expression
+    name: Expression
+    spec.typeScript:
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
+      - name: ' | '
+        fullName: ' | '
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.atlas.Expression
+  - uid: azure-maps-control.atlas.MediaLayerOptions
+    name: MediaLayerOptions
+    spec.typeScript:
+      - name: MediaLayerOptions
+        fullName: MediaLayerOptions
+        uid: azure-maps-control.atlas.MediaLayerOptions
+  - uid: string | azure-maps-control.atlas.layer.Layer
+    name: Layer
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+  - uid: 'azure-maps-control.atlas.layer.Layer[]'
+    name: 'Layer[]'
+    spec.typeScript:
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      azure-maps-control.atlas.data.Position |
+      azure-maps-control.atlas.data.Point |
+      azure-maps-control.atlas.data.BoundingBox
+    name: BoundingBox
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: ' | '
+        fullName: ' | '
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ' | '
+        fullName: ' | '
+      - name: BoundingBox
+        fullName: BoundingBox
+        uid: azure-maps-control.atlas.data.BoundingBox
+  - uid: Array<string | azure-maps-control.atlas.layer.Layer>
+    name: Layer>
+    spec.typeScript:
+      - name: 'Array<string | '
+        fullName: 'Array<string | '
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: '>'
+        fullName: '>'
+  - uid: >-
+      Array<azure-maps-control.atlas.Shape |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any>>
+    name: 'Geometry, any>>'
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any>>'
+        fullName: ', any>>'
+  - uid: >-
+      string | azure-maps-control.atlas.layer.Layer | Array<string |
+      azure-maps-control.atlas.layer.Layer>
+    name: Layer>
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: ' | Array<string | '
+        fullName: ' | Array<string | '
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-control.atlas.MapEvent
+    name: MapEvent
+    spec.typeScript:
+      - name: MapEvent
+        fullName: MapEvent
+        uid: azure-maps-control.atlas.MapEvent
+  - uid: azure-maps-control.atlas.MapMouseWheelEvent
+    name: MapMouseWheelEvent
+    spec.typeScript:
+      - name: MapMouseWheelEvent
+        fullName: MapMouseWheelEvent
+        uid: azure-maps-control.atlas.MapMouseWheelEvent
+  - uid: >-
+      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.Shape>
+    name: Shape>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-control.atlas.AuthenticationOptions
+    name: AuthenticationOptions
+    spec.typeScript:
+      - name: AuthenticationOptions
+        fullName: AuthenticationOptions
+        uid: azure-maps-control.atlas.AuthenticationOptions
+  - uid: >-
+      azure-maps-control.atlas.source.Source |
+      azure-maps-control.atlas.source.Source[]
+    name: 'Source[]'
+    spec.typeScript:
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+      - name: ' | '
+        fullName: ' | '
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      string | azure-maps-control.atlas.source.Source | Array<string |
+      azure-maps-control.atlas.source.Source>
+    name: Source>
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+      - name: ' | Array<string | '
+        fullName: ' | Array<string | '
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-control.atlas.IconOptions
+    name: IconOptions
+    spec.typeScript:
+      - name: IconOptions
+        fullName: IconOptions
+        uid: azure-maps-control.atlas.IconOptions
+  - uid: azure-maps-control.atlas.TextOptions
+    name: TextOptions
+    spec.typeScript:
+      - name: TextOptions
+        fullName: TextOptions
+        uid: azure-maps-control.atlas.TextOptions
+  - uid: azure-maps-control.atlas.HtmlMarker | azure-maps-control.atlas.Popup
+    name: Popup
+    spec.typeScript:
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+      - name: ' | '
+        fullName: ' | '
+      - name: Popup
+        fullName: Popup
+        uid: azure-maps-control.atlas.Popup
+  - uid: 'string[] | azure-maps-control.atlas.Expression'
+    name: Expression
+    spec.typeScript:
+      - name: 'string[] | '
+        fullName: 'string[] | '
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.atlas.Expression

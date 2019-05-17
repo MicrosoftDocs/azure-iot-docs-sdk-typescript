@@ -1,0 +1,2772 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-maps-control.atlas.math
+    name: math
+    fullName: math
+    children:
+      - azure-maps-control.atlas.math.AccelerationUnits
+      - azure-maps-control.atlas.math.AffineTransform
+      - azure-maps-control.atlas.math.AreaUnits
+      - azure-maps-control.atlas.math.boundingBoxToPolygon
+      - azure-maps-control.atlas.math.convertAcceleration
+      - azure-maps-control.atlas.math.convertArea
+      - azure-maps-control.atlas.math.convertDistance
+      - azure-maps-control.atlas.math.convertSpeed
+      - azure-maps-control.atlas.math.convertTimespan
+      - azure-maps-control.atlas.math.DistanceUnits
+      - azure-maps-control.atlas.math.getAcceleration
+      - azure-maps-control.atlas.math.getAccelerationFromFeatures
+      - azure-maps-control.atlas.math.getAccelerationFromSpeeds
+      - azure-maps-control.atlas.math.getArea
+      - azure-maps-control.atlas.math.getCardinalSpline
+      - azure-maps-control.atlas.math.getClosestPointOnGeometry
+      - azure-maps-control.atlas.math.getConvexHull
+      - azure-maps-control.atlas.math.getDestination
+      - azure-maps-control.atlas.math.getDistanceTo
+      - azure-maps-control.atlas.math.getEarthRadius
+      - azure-maps-control.atlas.math.getGeodesicPath
+      - azure-maps-control.atlas.math.getHeading
+      - azure-maps-control.atlas.math.getLengthOfPath
+      - azure-maps-control.atlas.math.getPixelHeading
+      - azure-maps-control.atlas.math.getPointsWithHeadingsAlongPath
+      - azure-maps-control.atlas.math.getPointWithHeadingAlongPath
+      - azure-maps-control.atlas.math.getPosition
+      - azure-maps-control.atlas.math.getPositionAlongPath
+      - azure-maps-control.atlas.math.getPositions
+      - azure-maps-control.atlas.math.getPositionsAlongPath
+      - azure-maps-control.atlas.math.getRegularPolygonPath
+      - azure-maps-control.atlas.math.getSpeed
+      - azure-maps-control.atlas.math.getSpeedFromFeatures
+      - azure-maps-control.atlas.math.getTimespan
+      - azure-maps-control.atlas.math.getTravelDistance
+      - azure-maps-control.atlas.math.interpolate
+      - azure-maps-control.atlas.math.mercatorPixelsToPositions
+      - azure-maps-control.atlas.math.mercatorPositionsToPixels
+      - azure-maps-control.atlas.math.normalizeLatitude
+      - azure-maps-control.atlas.math.normalizeLongitude
+      - azure-maps-control.atlas.math.parseTimestamp
+      - azure-maps-control.atlas.math.rotatePositions
+      - azure-maps-control.atlas.math.SpeedUnits
+      - azure-maps-control.atlas.math.TimeUnits
+    langs:
+      - typeScript
+    type: module
+    summary: ''
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.boundingBoxToPolygon
+    name: boundingBoxToPolygon(BoundingBox)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Takes a BoundingBox and converts it to a polygon.
+    syntax:
+      content: 'function boundingBoxToPolygon(bounds: BoundingBox)'
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The BoundingBox to convert to a Polygon.
+      return:
+        type:
+          - azure-maps-control.atlas.data.Polygon
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.convertAcceleration
+    name: >-
+      convertAcceleration(number, string | AccelerationUnits, string |
+      AccelerationUnits, number)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |-
+      Converts an acceleration value from one unit to another.
+      Supported units:
+         milesPerSecondSquared, kilometersPerSecondSquared, metersPerSecondSquared, feetPerSecondSquared
+         yardsPerSecondSquared, kilometersPerHoursSecond, milesPerHourSecond, knotsPerSecond, standardGravity
+    syntax:
+      content: >-
+        function convertAcceleration(acceleration: number, fromUnits: string |
+        AccelerationUnits, toUnits: string | AccelerationUnits, decimals?:
+        number)
+      parameters:
+        - id: acceleration
+          type:
+            - number
+          description: The acceleration value to convert.
+        - id: fromUnits
+          type:
+            - string | azure-maps-control.atlas.math.AccelerationUnits
+          description: The acceleration units the value is in.
+        - id: toUnits
+          type:
+            - string | azure-maps-control.atlas.math.AccelerationUnits
+          description: The acceleration units to convert to.
+        - id: decimals
+          type:
+            - number
+          description: The number of decimal places to round the result to.
+          optional: true
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.convertArea
+    name: 'convertArea(number, string, string, number)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Converts an area value from one unit to another.
+
+      Supported units: squareMeters, acres, hectares, squareFeet, squareYards,
+      squareMiles, squareKilometers
+    syntax:
+      content: >-
+        function convertArea(area: number, fromUnits: string, toUnits: string,
+        decimals?: number)
+      parameters:
+        - id: area
+          type:
+            - number
+          description: The area value to convert.
+        - id: fromUnits
+          type:
+            - string
+          description: The area units the value is in.
+        - id: toUnits
+          type:
+            - string
+          description: The area units to convert to.
+        - id: decimals
+          type:
+            - number
+          description: The number of decimal places to round the result to.
+          optional: true
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.convertDistance
+    name: >-
+      convertDistance(number, string | DistanceUnits, string | DistanceUnits,
+      number)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Converts a distance from one distance units to another. Supported units:
+      miles, nauticalMiles, yards, meters, kilometers, feet
+    syntax:
+      content: >-
+        function convertDistance(distance: number, fromUnits: string |
+        DistanceUnits, toUnits: string | DistanceUnits, decimals?: number)
+      parameters:
+        - id: distance
+          type:
+            - number
+          description: A number that represents a distance to convert.
+        - id: fromUnits
+          type:
+            - string | azure-maps-control.atlas.math.DistanceUnits
+          description: The distance units the original distance is in.
+        - id: toUnits
+          type:
+            - string | azure-maps-control.atlas.math.DistanceUnits
+          description: The desired distance units to convert to.
+        - id: decimals
+          type:
+            - number
+          description: >-
+            Specifies the number of decimal places to round the result to. If
+            undefined, no rounding will occur.
+          optional: true
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.convertSpeed
+    name: 'convertSpeed(number, string | SpeedUnits, string | SpeedUnits, number)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |-
+      Converts a speed value from one unit to another.
+      Supported units:
+         kilometersPerHour, milesPerHour, metersPerSecond, feetPerSecond, knots, mach
+    syntax:
+      content: >-
+        function convertSpeed(speed: number, fromUnits: string | SpeedUnits,
+        toUnits: string | SpeedUnits, decimals?: number)
+      parameters:
+        - id: speed
+          type:
+            - number
+          description: The speed value to convert.
+        - id: fromUnits
+          type:
+            - string | azure-maps-control.atlas.math.SpeedUnits
+          description: The speed units to convert from.
+        - id: toUnits
+          type:
+            - string | azure-maps-control.atlas.math.SpeedUnits
+          description: The speed units to convert to.
+        - id: decimals
+          type:
+            - number
+          description: The number of decimal places to round the result to.
+          optional: true
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.convertTimespan
+    name: 'convertTimespan(number, string | TimeUnits, string | TimeUnits, number)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |-
+      Converts a timespan value from one unit to another.
+      Supported units:
+         ms (milliseconds), hours, minutes, seconds
+    syntax:
+      content: >-
+        function convertTimespan(timespan: number, fromUnits: string |
+        TimeUnits, toUnits: string | TimeUnits, decimals?: number)
+      parameters:
+        - id: timespan
+          type:
+            - number
+          description: The time value to convert.
+        - id: fromUnits
+          type:
+            - string | azure-maps-control.atlas.math.TimeUnits
+          description: The time units to convert from.
+        - id: toUnits
+          type:
+            - string | azure-maps-control.atlas.math.TimeUnits
+          description: The time units to convert to.
+        - id: decimals
+          type:
+            - number
+          description: The number of decimal places to round the result to.
+          optional: true
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.getAcceleration
+    name: >-
+      getAcceleration(number, number, number, string | SpeedUnits, string |
+      DistanceUnits, string | TimeUnits, string | AccelerationUnits, number)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Calculates an acceleration based on an initial speed, travel distance and
+      timespan. Formula: a = 2*(d - v*t)/t^2
+    syntax:
+      content: >-
+        function getAcceleration(initialSpeed: number, distance: number,
+        timespan: number, speedUnits?: string | SpeedUnits, distanceUnits?:
+        string | DistanceUnits, timeUnits?: string | TimeUnits,
+        accelerationUnits?: string | AccelerationUnits, decimals?: number)
+      parameters:
+        - id: initialSpeed
+          type:
+            - number
+          description: The initial speed.
+        - id: distance
+          type:
+            - number
+          description: The distance that has been travelled.
+        - id: timespan
+          type:
+            - number
+          description: The timespan that was travelled.
+        - id: speedUnits
+          type:
+            - string | azure-maps-control.atlas.math.SpeedUnits
+          description: The units of the speed information. If not specified m/s are used.
+          optional: true
+        - id: distanceUnits
+          type:
+            - string | azure-maps-control.atlas.math.DistanceUnits
+          description: >-
+            The units of the distance information. If not specified meters are
+            used.
+          optional: true
+        - id: timeUnits
+          type:
+            - string | azure-maps-control.atlas.math.TimeUnits
+          description: >-
+            The units of the timespan information. If not specified seconds are
+            used.
+          optional: true
+        - id: accelerationUnits
+          type:
+            - string | azure-maps-control.atlas.math.AccelerationUnits
+          description: >-
+            The units to return the acceleration value in. If not specified
+            m/s^2 are used.
+          optional: true
+        - id: decimals
+          type:
+            - number
+          description: The number of decimal places to round the result to.
+          optional: true
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.getAccelerationFromFeatures
+    name: >-
+      getAccelerationFromFeatures(Feature<Point, any>, Feature<Point, any>,
+      string, string, string | SpeedUnits, string | AccelerationUnits, number)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Calculates an acceleration between two point features that have a
+      timestamp property and optionally a speed property.
+
+      if speeds are provided, ignore distance between points as the path may not
+      have been straight and calculate: a = (v2 - v1)/(t2 - t1)
+
+      if speeds not provided or only provided on first point, calculate straight
+      line distance between points and calculate: a = 2*(d - v*t)/t^2
+    syntax:
+      content: >-
+        function getAccelerationFromFeatures(origin: Feature<Point, any>,
+        destination: Feature<Point, any>, timestampProperty: string,
+        speedProperty?: string, speedUnits?: string | SpeedUnits,
+        accelerationUnits?: string | AccelerationUnits, decimals?: number)
+      parameters:
+        - id: origin
+          type:
+            - >-
+              azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+              any>
+          description: The initial point in which the acceleration is calculated from.
+        - id: destination
+          type:
+            - >-
+              azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+              any>
+          description: The final point in which the acceleration is calculated from.
+        - id: timestampProperty
+          type:
+            - string
+          description: >-
+            The name of the property on the features that contains the timestamp
+            information.
+        - id: speedProperty
+          type:
+            - string
+          description: >-
+            The name of the property on the features that contains a speed
+            information.
+          optional: true
+        - id: speedUnits
+          type:
+            - string | azure-maps-control.atlas.math.SpeedUnits
+          description: The units of the speed information. If not specified m/s is used.
+          optional: true
+        - id: accelerationUnits
+          type:
+            - string | azure-maps-control.atlas.math.AccelerationUnits
+          description: >-
+            The units to return the acceleration value in. If not specified
+            m/s^2 are used.
+          optional: true
+        - id: decimals
+          type:
+            - number
+          description: The number of decimal places to round the result to.
+          optional: true
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.getAccelerationFromSpeeds
+    name: >-
+      getAccelerationFromSpeeds(number, number, number, string | SpeedUnits,
+      string | TimeUnits, string | AccelerationUnits, number)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Calculates an acceleration based on an initial speed, final speed and
+      timespan. Formula: a = 2* (v2 - v1)/t
+    syntax:
+      content: >-
+        function getAccelerationFromSpeeds(initialSpeed: number, finalSpeed:
+        number, timespan: number, speedUnits?: string | SpeedUnits, timeUnits?:
+        string | TimeUnits, accelerationUnits?: string | AccelerationUnits,
+        decimals?: number)
+      parameters:
+        - id: initialSpeed
+          type:
+            - number
+          description: The initial speed.
+        - id: finalSpeed
+          type:
+            - number
+          description: The final speed.
+        - id: timespan
+          type:
+            - number
+          description: The timespan that was travelled.
+        - id: speedUnits
+          type:
+            - string | azure-maps-control.atlas.math.SpeedUnits
+          description: >-
+            The units of the speed information. If not specified meters are
+            used.
+          optional: true
+        - id: timeUnits
+          type:
+            - string | azure-maps-control.atlas.math.TimeUnits
+          description: >-
+            The units of the timespan information. If not specified seconds are
+            used.
+          optional: true
+        - id: accelerationUnits
+          type:
+            - string | azure-maps-control.atlas.math.AccelerationUnits
+          description: >-
+            The units to return the acceleration value in. If not specified
+            m/s^2 are used.
+          optional: true
+        - id: decimals
+          type:
+            - number
+          description: The number of decimal places to round the result to.
+          optional: true
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.getArea
+    name: 'getArea(atlas, AreaUnits, number)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Calculates the approximate area of a geometry in the specified units
+    syntax:
+      content: 'function getArea(data: atlas, areaUnits?: AreaUnits, decimals?: number)'
+      parameters:
+        - id: data
+          type:
+            - atlas
+          description: ''
+        - id: areaUnits
+          type:
+            - azure-maps-control.atlas.math.AreaUnits
+          description: Unit of area measurement. Default is squareMeters.
+          optional: true
+        - id: decimals
+          type:
+            - number
+          description: The number of decimal places to round the result to.
+          optional: true
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.getCardinalSpline
+    name: 'getCardinalSpline(Position[], number, number, boolean)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Calculates an array of positions that form a cardinal spline between the
+      specified array of positions.
+    syntax:
+      content: >-
+        function getCardinalSpline(positions: Position[], tension?: number,
+        nodeSize?: number, close?: boolean)
+      parameters:
+        - id: positions
+          type:
+            - 'azure-maps-control.atlas.data.Position[]'
+          description: The array of positions to calculate the spline through.
+        - id: tension
+          type:
+            - number
+          description: >-
+            A number that indicates the tightness of the curve. Can be any
+            number, although a value between 0 and 1 is usually used. Default:
+            0.5
+          optional: true
+        - id: nodeSize
+          type:
+            - number
+          description: 'Number of nodes to insert between each position. Default: 15'
+          optional: true
+        - id: close
+          type:
+            - boolean
+          description: >-
+            A boolean indicating if the spline should be a closed ring or not.
+            Default: false
+          optional: true
+      return:
+        type:
+          - 'azure-maps-control.atlas.data.Position[]'
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.getClosestPointOnGeometry
+    name: >-
+      getClosestPointOnGeometry(Position | Point | Feature<Point, any>, atlas,
+      string | DistanceUnits, number)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Calculates the closest point on the edge of a geometry to a specified
+      point or position.
+
+      The returned point feature will have a `distance` property that specifies
+      the distance between the two points in the specified units.
+
+      If the geometry is a Point, that points position will be used for the
+      result.
+
+      If the geometry is a MultiPoint, the distances to the individual positions
+      will be used.
+
+      If the geometry is a Polygon or MultiPolygon, the point closest to any
+      edge will be returned regardless of if the point intersects the geometry
+      or not.
+    syntax:
+      content: >-
+        function getClosestPointOnGeometry(pt: Position | Point | Feature<Point,
+        any>, geom: atlas, units?: string | DistanceUnits, decimals?: number)
+      parameters:
+        - id: pt
+          type:
+            - >-
+              azure-maps-control.atlas.data.Position |
+              azure-maps-control.atlas.data.Point |
+              azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+              any>
+          description: >-
+            The point or position to find the closest point on the edge of the
+            geometry.
+        - id: geom
+          type:
+            - atlas
+          description: The geometry to find the closest point on.
+        - id: units
+          type:
+            - string | azure-maps-control.atlas.math.DistanceUnits
+          description: Unit of distance measurement. Default is meters.
+          optional: true
+        - id: decimals
+          type:
+            - number
+          description: The number of decimal places to round the result to.
+          optional: true
+      return:
+        type:
+          - >-
+            azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+            Object>
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.getConvexHull
+    name: >-
+      getConvexHull(Position[] | atlas.data.Geometry |
+      Feature<atlas.data.Geometry, any> | FeatureCollection | GeometryCollection
+      | atlas.data.Geometry[] | Array<Feature<atlas.data.Geometry, any>>)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Calculates a Convex Hull from an array of positions, geometries or
+      features.
+    syntax:
+      content: >-
+        function getConvexHull(data: Position[] | atlas.data.Geometry |
+        Feature<atlas.data.Geometry, any> | FeatureCollection |
+        GeometryCollection | atlas.data.Geometry[] |
+        Array<Feature<atlas.data.Geometry, any>>)
+      parameters:
+        - id: data
+          type:
+            - >-
+              azure-maps-control.atlas.data.Position[] |
+              azure-maps-control.atlas.data.Geometry |
+              azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+              any> | azure-maps-control.atlas.data.FeatureCollection |
+              azure-maps-control.atlas.data.GeometryCollection |
+              azure-maps-control.atlas.data.Geometry[] |
+              Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+              any>>
+          description: >-
+            The array of positions, geometries or features to calculate a convex
+            hull for.
+      return:
+        type:
+          - azure-maps-control.atlas.data.Polygon
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.getDestination
+    name: 'getDestination(Position | Point, number, number, string | DistanceUnits)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Calculates a destination position based on a starting position, a heading,
+      a distance, and a distance unit type.
+    syntax:
+      content: >-
+        function getDestination(origin: Position | Point, heading: number,
+        distance: number, units?: string | DistanceUnits)
+      parameters:
+        - id: origin
+          type:
+            - >-
+              azure-maps-control.atlas.data.Position |
+              azure-maps-control.atlas.data.Point
+          description: Position that the destination is relative to.
+        - id: heading
+          type:
+            - number
+          description: >-
+            A heading angle between 0 - 360 degrees. 0 - North, 90 - East, 180 -
+            South, 270 - West.
+        - id: distance
+          type:
+            - number
+          description: Distance that destination is away.
+        - id: units
+          type:
+            - string | azure-maps-control.atlas.math.DistanceUnits
+          description: Unit of distance measurement. Default is meters.
+          optional: true
+      return:
+        type:
+          - azure-maps-control.atlas.data.Position
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.getDistanceTo
+    name: 'getDistanceTo(Position | Point, Position | Point, string | DistanceUnits)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Calculate the distance between two position objects on the surface of the
+      earth using the Haversine formula.
+    syntax:
+      content: >-
+        function getDistanceTo(origin: Position | Point, destination: Position |
+        Point, units?: string | DistanceUnits)
+      parameters:
+        - id: origin
+          type:
+            - >-
+              azure-maps-control.atlas.data.Position |
+              azure-maps-control.atlas.data.Point
+          description: First position to calculate distance between.
+        - id: destination
+          type:
+            - >-
+              azure-maps-control.atlas.data.Position |
+              azure-maps-control.atlas.data.Point
+          description: Second position to calculate distance between.
+        - id: units
+          type:
+            - string | azure-maps-control.atlas.math.DistanceUnits
+          description: Unit of distance measurement. Default is meters.
+          optional: true
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.getEarthRadius
+    name: getEarthRadius(string | DistanceUnits)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Retrieves the radius of the earth in a specific distance unit for WGS84.
+    syntax:
+      content: 'function getEarthRadius(units?: string | DistanceUnits)'
+      parameters:
+        - id: units
+          type:
+            - string | azure-maps-control.atlas.math.DistanceUnits
+          description: 'Unit of distance measurement. Default: meters'
+          optional: true
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.getGeodesicPath
+    name: 'getGeodesicPath(LineString | Position[], number)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Takes an array of positions objects and fills in the space between them
+      with accurately positioned positions to form an approximated Geodesic
+      path.
+    syntax:
+      content: >-
+        function getGeodesicPath(path: LineString | Position[], nodeSize?:
+        number)
+      parameters:
+        - id: path
+          type:
+            - >-
+              azure-maps-control.atlas.data.LineString |
+              azure-maps-control.atlas.data.Position[]
+          description: Array of position objects that form a path to fill in.
+        - id: nodeSize
+          type:
+            - number
+          description: 'Number of nodes to insert between each position. Default: 15'
+          optional: true
+      return:
+        type:
+          - 'azure-maps-control.atlas.data.Position[]'
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.getHeading
+    name: 'getHeading(Position | Point, Position | Point)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Calculates the heading from one position object to another.
+    syntax:
+      content: >-
+        function getHeading(origin: Position | Point, destination: Position |
+        Point)
+      parameters:
+        - id: origin
+          type:
+            - >-
+              azure-maps-control.atlas.data.Position |
+              azure-maps-control.atlas.data.Point
+          description: Point of origin.
+        - id: destination
+          type:
+            - >-
+              azure-maps-control.atlas.data.Position |
+              azure-maps-control.atlas.data.Point
+          description: Destination to calculate relative heading to.
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.getLengthOfPath
+    name: 'getLengthOfPath(LineString | Position[], string | DistanceUnits)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Calculates the distance between all position objects in an array.
+    syntax:
+      content: >-
+        function getLengthOfPath(path: LineString | Position[], units?: string |
+        DistanceUnits)
+      parameters:
+        - id: path
+          type:
+            - >-
+              azure-maps-control.atlas.data.LineString |
+              azure-maps-control.atlas.data.Position[]
+          description: >-
+            The array of position objects that make up the path to calculate the
+            length of.
+        - id: units
+          type:
+            - string | azure-maps-control.atlas.math.DistanceUnits
+          description: 'Unit of distance measurement. Default: meters'
+          optional: true
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.getPixelHeading
+    name: 'getPixelHeading(Position | Point, Position | Point)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Calculates the pixel accurate heading from one position to another based
+      on the Mercator map projection. This heading is visually accurate.
+    syntax:
+      content: >-
+        function getPixelHeading(origin: Position | Point, destination: Position
+        | Point)
+      parameters:
+        - id: origin
+          type:
+            - >-
+              azure-maps-control.atlas.data.Position |
+              azure-maps-control.atlas.data.Point
+          description: ''
+        - id: destination
+          type:
+            - >-
+              azure-maps-control.atlas.data.Position |
+              azure-maps-control.atlas.data.Point
+          description: |+
+
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.getPointsWithHeadingsAlongPath
+    name: 'getPointsWithHeadingsAlongPath(LineString | Position[], number)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Gets an array of evenly spaced points with headings along a path.
+    syntax:
+      content: >-
+        function getPointsWithHeadingsAlongPath(path: LineString | Position[],
+        numPoints: number)
+      parameters:
+        - id: path
+          type:
+            - >-
+              azure-maps-control.atlas.data.LineString |
+              azure-maps-control.atlas.data.Position[]
+          description: The path to get the positions from.
+        - id: numPoints
+          type:
+            - number
+          description: The number of points to get.
+      return:
+        type:
+          - >-
+            Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+            Object>>
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.getPointWithHeadingAlongPath
+    name: >-
+      getPointWithHeadingAlongPath(LineString | Position[], number, string |
+      DistanceUnits)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Gets a point with heading a specified distance along a path.
+    syntax:
+      content: >-
+        function getPointWithHeadingAlongPath(path: LineString | Position[],
+        distance: number, units?: string | DistanceUnits)
+      parameters:
+        - id: path
+          type:
+            - >-
+              azure-maps-control.atlas.data.LineString |
+              azure-maps-control.atlas.data.Position[]
+          description: The path to get the point from.
+        - id: distance
+          type:
+            - number
+          description: The distance along the path to get the point at.
+        - id: units
+          type:
+            - string | azure-maps-control.atlas.math.DistanceUnits
+          description: The distance units.
+          optional: true
+      return:
+        type:
+          - >-
+            azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+            Object>
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.getPosition
+    name: 'getPosition(Position | Point | Feature<Point, any>)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Gets the position of an object that is a position, point, or point
+      feature.
+    syntax:
+      content: 'function getPosition(data: Position | Point | Feature<Point, any>)'
+      parameters:
+        - id: data
+          type:
+            - >-
+              azure-maps-control.atlas.data.Position |
+              azure-maps-control.atlas.data.Point |
+              azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+              any>
+          description: The data object to extract the position from.
+      return:
+        type:
+          - azure-maps-control.atlas.data.Position
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.getPositionAlongPath
+    name: >-
+      getPositionAlongPath(LineString | Position[], number, string |
+      DistanceUnits)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Calculates the position object on a path that is a specified distance away
+      from the start of the path. If the specified distance is longer
+
+      than the length of the path, the last position of the path will be
+      returned.
+    syntax:
+      content: >-
+        function getPositionAlongPath(path: LineString | Position[], distance:
+        number, units?: string | DistanceUnits)
+      parameters:
+        - id: path
+          type:
+            - >-
+              azure-maps-control.atlas.data.LineString |
+              azure-maps-control.atlas.data.Position[]
+          description: A polyline or array of position coordinates that form a path.
+        - id: distance
+          type:
+            - number
+          description: >-
+            The distance along the path (from the start) to calculate the
+            position for.
+        - id: units
+          type:
+            - string | azure-maps-control.atlas.math.DistanceUnits
+          description: Unit of distance measurement. Default is meters.
+          optional: true
+      return:
+        type:
+          - azure-maps-control.atlas.data.Position
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.getPositions
+    name: >-
+      getPositions(Position[] | atlas.data.Geometry |
+      Feature<atlas.data.Geometry, any> | FeatureCollection | GeometryCollection
+      | atlas.data.Geometry[] | Array<Feature<atlas.data.Geometry, any>>)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Retrieves an array of all positions in the provided geometry, feature or
+      array of geometries/features.
+    syntax:
+      content: >-
+        function getPositions(data: Position[] | atlas.data.Geometry |
+        Feature<atlas.data.Geometry, any> | FeatureCollection |
+        GeometryCollection | atlas.data.Geometry[] |
+        Array<Feature<atlas.data.Geometry, any>>)
+      parameters:
+        - id: data
+          type:
+            - >-
+              azure-maps-control.atlas.data.Position[] |
+              azure-maps-control.atlas.data.Geometry |
+              azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+              any> | azure-maps-control.atlas.data.FeatureCollection |
+              azure-maps-control.atlas.data.GeometryCollection |
+              azure-maps-control.atlas.data.Geometry[] |
+              Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+              any>>
+          description: The geometries or features to retrieve the positions from.
+      return:
+        type:
+          - 'azure-maps-control.atlas.data.Position[]'
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.getPositionsAlongPath
+    name: 'getPositionsAlongPath(LineString | Position[], number)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Gets an array of evenly spaced positions along a path.
+    syntax:
+      content: >-
+        function getPositionsAlongPath(path: LineString | Position[],
+        numPositions: number)
+      parameters:
+        - id: path
+          type:
+            - >-
+              azure-maps-control.atlas.data.LineString |
+              azure-maps-control.atlas.data.Position[]
+          description: The path to get the positions from.
+        - id: numPositions
+          type:
+            - number
+          description: The number of positions to get.
+      return:
+        type:
+          - 'azure-maps-control.atlas.data.Position[]'
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.getRegularPolygonPath
+    name: >-
+      getRegularPolygonPath(Position | Point, number, number, string |
+      DistanceUnits, number)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Calculates an array of position objects that are an equal distance away
+      from a central point to create a regular polygon.
+    syntax:
+      content: >-
+        function getRegularPolygonPath(origin: Position | Point, radius: number,
+        numberOfPositions: number, units?: string | DistanceUnits, offset?:
+        number)
+      parameters:
+        - id: origin
+          type:
+            - >-
+              azure-maps-control.atlas.data.Position |
+              azure-maps-control.atlas.data.Point
+          description: Center of the regular polygon.
+        - id: radius
+          type:
+            - number
+          description: Radius of the regular polygon.
+        - id: numberOfPositions
+          type:
+            - number
+          description: Number of positions the polygon should have.
+        - id: units
+          type:
+            - string | azure-maps-control.atlas.math.DistanceUnits
+          description: Unit of distance measurement. Default is meters.
+          optional: true
+        - id: offset
+          type:
+            - number
+          description: >-
+            An offset to rotate the polygon. When 0 the first position will
+            align with North.
+          optional: true
+      return:
+        type:
+          - 'azure-maps-control.atlas.data.Position[]'
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.getSpeed
+    name: >-
+      getSpeed(Position | Point | Feature<Point, any>, Position | Point |
+      Feature<Point, any>, number, string | TimeUnits, string | SpeedUnits,
+      number)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Calculates the average speed of travel between two points based on the
+      provided amount of time.
+    syntax:
+      content: >-
+        function getSpeed(origin: Position | Point | Feature<Point, any>,
+        destination: Position | Point | Feature<Point, any>, timespan: number,
+        timeUnits?: string | TimeUnits, speedUnits?: string | SpeedUnits,
+        decimals?: number)
+      parameters:
+        - id: origin
+          type:
+            - >-
+              azure-maps-control.atlas.data.Position |
+              azure-maps-control.atlas.data.Point |
+              azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+              any>
+          description: The initial point in which the speed is calculated from.
+        - id: destination
+          type:
+            - >-
+              azure-maps-control.atlas.data.Position |
+              azure-maps-control.atlas.data.Point |
+              azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+              any>
+          description: The final point in which the speed is calculated from.
+        - id: timespan
+          type:
+            - number
+          description: ''
+        - id: timeUnits
+          type:
+            - string | azure-maps-control.atlas.math.TimeUnits
+          description: The units of the time value. If not specified seconds are used.
+          optional: true
+        - id: speedUnits
+          type:
+            - string | azure-maps-control.atlas.math.SpeedUnits
+          description: >-
+            The units to return the speed value in. If not specified m/s are
+            used.
+          optional: true
+        - id: decimals
+          type:
+            - number
+          description: The number of decimal places to round the result to.
+          optional: true
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.getSpeedFromFeatures
+    name: >-
+      getSpeedFromFeatures(Feature<Point, any>, Feature<Point, any>, string,
+      string | SpeedUnits, number)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Calculates the average speed of travel between two point features that
+      have a property containing a timestamp.
+
+      The timestamp can be;
+       - A JavaScript Date object
+       - A number which represents the number of milliseconds since Jan 1st, 1970.
+       - A string which uses one of the following formats:
+           - ISO8601 date format (i.e. 2012-04-23T18:25:43.511Z)
+           - RFC282 / IETF date syntax (section 3.3)
+           - OData Date string (i.e. "/Date(1235764800000)/")
+    syntax:
+      content: >-
+        function getSpeedFromFeatures(origin: Feature<Point, any>, destination:
+        Feature<Point, any>, timestampProperty: string, speedUnits?: string |
+        SpeedUnits, decimals?: number)
+      parameters:
+        - id: origin
+          type:
+            - >-
+              azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+              any>
+          description: The initial point in which the speed is calculated from.
+        - id: destination
+          type:
+            - >-
+              azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+              any>
+          description: The final point in which the speed is calculated from.
+        - id: timestampProperty
+          type:
+            - string
+          description: >-
+            The name of the property on the features which has the timestamp
+            information.
+        - id: speedUnits
+          type:
+            - string | azure-maps-control.atlas.math.SpeedUnits
+          description: >-
+            The units to return the speed value in. If not specified m/s are
+            used.
+          optional: true
+        - id: decimals
+          type:
+            - number
+          description: The number of decimal places to round the result to.
+          optional: true
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.getTimespan
+    name: >-
+      getTimespan(Date | string | number, Date | string | number, TimeUnits,
+      number)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |-
+      Calculates the timespan between two dates or timestamps.
+      Timestamps can be;
+       - A JavaScript Date object
+       - A number which represents the number of milliseconds since Jan 1st, 1970.
+       - A string which uses one of the following formats:
+           - ISO8601 date format (i.e. 2012-04-23T18:25:43.511Z)
+           - RFC282 / IETF date syntax (section 3.3)
+           - OData Date string (i.e. "/Date(1235764800000)/")
+    syntax:
+      content: >-
+        function getTimespan(startTime: Date | string | number, endTime: Date |
+        string | number, units?: TimeUnits, decimals?: number)
+      parameters:
+        - id: startTime
+          type:
+            - Date | string | number
+          description: The start date or time.
+        - id: endTime
+          type:
+            - Date | string | number
+          description: The end date or time.
+        - id: units
+          type:
+            - azure-maps-control.atlas.math.TimeUnits
+          description: >-
+            The units to return the time value in. If not specified seconds are
+            used.
+          optional: true
+        - id: decimals
+          type:
+            - number
+          description: ''
+          optional: true
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.getTravelDistance
+    name: >-
+      getTravelDistance(string, number, number, number, string | TimeUnits,
+      string | SpeedUnits, string, number)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Calculates the distance traveled for a specified timespan, speed and
+      optionally an acceleration.
+
+      Formula: d = v*t + 0.5*a*t^2
+    syntax:
+      content: >-
+        function getTravelDistance(distanceUnits: string, timespan: number,
+        speed: number, acceleration?: number, timeUnits?: string | TimeUnits,
+        speedUnits?: string | SpeedUnits, accelerationUnits?: string, decimals?:
+        number)
+      parameters:
+        - id: distanceUnits
+          type:
+            - string
+          description: The distance units in which to return the distance in.
+        - id: timespan
+          type:
+            - number
+          description: The timespan to calculate the distance for.
+        - id: speed
+          type:
+            - number
+          description: The initial or constant speed.
+        - id: acceleration
+          type:
+            - number
+          description: Optional. An acceleration which increases the speed over time.
+          optional: true
+        - id: timeUnits
+          type:
+            - string | azure-maps-control.atlas.math.TimeUnits
+          description: The units of the timespan. If not specified seconds are used.
+          optional: true
+        - id: speedUnits
+          type:
+            - string | azure-maps-control.atlas.math.SpeedUnits
+          description: The units of the speed value. If not specified m/s are used.
+          optional: true
+        - id: accelerationUnits
+          type:
+            - string
+          description: >-
+            Optional. The units of the acceleration value. If not specified
+            m/s^2 are used.
+          optional: true
+        - id: decimals
+          type:
+            - number
+          description: The number of decimal places to round the result to.
+          optional: true
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.interpolate
+    name: 'interpolate(Position | Point, Position | Point, number)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Calculates a position object that is a fractional distance between two
+      position objects.
+    syntax:
+      content: >-
+        function interpolate(origin: Position | Point, destination: Position |
+        Point, fraction?: number)
+      parameters:
+        - id: origin
+          type:
+            - >-
+              azure-maps-control.atlas.data.Position |
+              azure-maps-control.atlas.data.Point
+          description: First position to calculate mid-point between.
+        - id: destination
+          type:
+            - >-
+              azure-maps-control.atlas.data.Position |
+              azure-maps-control.atlas.data.Point
+          description: Second position to calculate mid-point between.
+        - id: fraction
+          type:
+            - number
+          description: The fractional parameter to calculate a mid-point for. Default 0.5.
+          optional: true
+      return:
+        type:
+          - azure-maps-control.atlas.data.Position
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.mercatorPixelsToPositions
+    name: 'mercatorPixelsToPositions(Pixel[], number)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Converts an array of global Mercator pixel coordinates into an array of
+      geospatial positions at a specified zoom level.
+
+      Global pixel coordinates are relative to the top left corner of the map
+      [-180, 90].
+    syntax:
+      content: 'function mercatorPixelsToPositions(pixels: Pixel[], zoom: number)'
+      parameters:
+        - id: pixels
+          type:
+            - 'azure-maps-control.atlas.Pixel[]'
+          description: Array of pixel coordinates.
+        - id: zoom
+          type:
+            - number
+          description: Zoom level.
+      return:
+        type:
+          - 'azure-maps-control.atlas.data.Position[]'
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.mercatorPositionsToPixels
+    name: 'mercatorPositionsToPixels(Position[], number)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Converts an array of positions into an array of global Mercator pixel
+      coordinates at a specified zoom level.
+    syntax:
+      content: 'function mercatorPositionsToPixels(positions: Position[], zoom: number)'
+      parameters:
+        - id: positions
+          type:
+            - 'azure-maps-control.atlas.data.Position[]'
+          description: Array of positions.
+        - id: zoom
+          type:
+            - number
+          description: Zoom level.
+      return:
+        type:
+          - 'azure-maps-control.atlas.Pixel[]'
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.normalizeLatitude
+    name: normalizeLatitude(number)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Normalizes a latitude value between -90 and 90 degrees.
+    syntax:
+      content: 'function normalizeLatitude(lat: number)'
+      parameters:
+        - id: lat
+          type:
+            - number
+          description: |
+            The latitude value to normalize.
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.normalizeLongitude
+    name: normalizeLongitude(number)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Normalizes a longitude value between -180 and 180 degrees.
+    syntax:
+      content: 'function normalizeLongitude(lng: number)'
+      parameters:
+        - id: lng
+          type:
+            - number
+          description: |
+            The longitude value to normalize.
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.parseTimestamp
+    name: parseTimestamp(Date | string | number)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |-
+      Parses a timestamp into a JavaScript Date object.
+      Timestamps can be;
+       - A JavaScript Date object
+       - A number which represents the number of milliseconds since Jan 1st, 1970.
+       - A string which uses one of the following formats:
+           - ISO8601 date format (i.e. 2012-04-23T18:25:43.511Z)
+           - RFC282 / IETF date syntax (section 3.3)
+           - OData Date string (i.e. "/Date(1235764800000)/")
+    syntax:
+      content: 'function parseTimestamp(timestamp: Date | string | number)'
+      parameters:
+        - id: timestamp
+          type:
+            - Date | string | number
+          description: The timestamp value to parse.
+      return:
+        type:
+          - Date
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.rotatePositions
+    name: 'rotatePositions(Position[], Position | Point, number)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Takes an array of positions and rotates them around a given position for
+      the specified angle of rotation.
+    syntax:
+      content: >-
+        function rotatePositions(positions: Position[], origin: Position |
+        Point, angle: number)
+      parameters:
+        - id: positions
+          type:
+            - 'azure-maps-control.atlas.data.Position[]'
+          description: An array of positions to be rotated.
+        - id: origin
+          type:
+            - >-
+              azure-maps-control.atlas.data.Position |
+              azure-maps-control.atlas.data.Point
+          description: The position to rotate the positions around.
+        - id: angle
+          type:
+            - number
+          description: |
+            The amount to rotate the array of positions in degrees clockwise.
+      return:
+        type:
+          - 'azure-maps-control.atlas.data.Position[]'
+    package: azure-maps-control
+references:
+  - uid: azure-maps-control.atlas.CompassControlOptions
+    name: CompassControlOptions
+    spec.typeScript:
+      - name: CompassControlOptions
+        fullName: CompassControlOptions
+        uid: azure-maps-control.atlas.CompassControlOptions
+  - uid: azure-maps-control.atlas.Map
+    name: Map
+    spec.typeScript:
+      - name: Map
+        fullName: Map
+        uid: azure-maps-control.atlas.Map
+  - uid: azure-maps-control.atlas.ControlOptions
+    name: ControlOptions
+    spec.typeScript:
+      - name: ControlOptions
+        fullName: ControlOptions
+        uid: azure-maps-control.atlas.ControlOptions
+  - uid: azure-maps-control.atlas.PitchControlOptions
+    name: PitchControlOptions
+    spec.typeScript:
+      - name: PitchControlOptions
+        fullName: PitchControlOptions
+        uid: azure-maps-control.atlas.PitchControlOptions
+  - uid: azure-maps-control.atlas.StyleControlOptions
+    name: StyleControlOptions
+    spec.typeScript:
+      - name: StyleControlOptions
+        fullName: StyleControlOptions
+        uid: azure-maps-control.atlas.StyleControlOptions
+  - uid: azure-maps-control.atlas.ZoomControlOptions
+    name: ZoomControlOptions
+    spec.typeScript:
+      - name: ZoomControlOptions
+        fullName: ZoomControlOptions
+        uid: azure-maps-control.atlas.ZoomControlOptions
+  - uid: azure-maps-control.atlas.data.Position
+    name: Position
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+  - uid: azure-maps-control.atlas.data.BoundingBox
+    name: BoundingBox
+    spec.typeScript:
+      - name: BoundingBox
+        fullName: BoundingBox
+        uid: azure-maps-control.atlas.data.BoundingBox
+  - uid: >-
+      azure-maps-control.atlas.data.FeatureCollection |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.data.Geometry |
+      azure-maps-control.atlas.Shape |
+      Array<azure-maps-control.atlas.data.FeatureCollection |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.data.Geometry>
+    name: Geometry>
+    spec.typeScript:
+      - name: FeatureCollection
+        fullName: FeatureCollection
+        uid: azure-maps-control.atlas.data.FeatureCollection
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ' | '
+        fullName: ' | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: ' | Array<'
+        fullName: ' | Array<'
+      - name: FeatureCollection
+        fullName: FeatureCollection
+        uid: azure-maps-control.atlas.data.FeatureCollection
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: '>'
+        fullName: '>'
+  - uid: 'azure-maps-control.atlas.data.Position[]'
+    name: 'Position[]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-control.atlas.data.BoundingBox[]'
+    name: 'BoundingBox[]'
+    spec.typeScript:
+      - name: BoundingBox
+        fullName: BoundingBox
+        uid: azure-maps-control.atlas.data.BoundingBox
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any>>
+    name: 'Geometry, any>>'
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any>>'
+        fullName: ', any>>'
+  - uid: 'azure-maps-control.atlas.data.Geometry[]'
+    name: 'Geometry[]'
+    spec.typeScript:
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-control.atlas.data.Position[][]'
+    name: 'Position[][]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[][]'
+        fullName: '[][]'
+  - uid: 'azure-maps-control.atlas.data.Position[][][]'
+    name: 'Position[][][]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[][][]'
+        fullName: '[][][]'
+  - uid: >-
+      azure-maps-control.atlas.data.Position[][] |
+      azure-maps-control.atlas.data.Position[]
+    name: 'Position[]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[][] | '
+        fullName: '[][] | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-control.atlas.layer.Layer
+    name: Layer
+    spec.typeScript:
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+  - uid: string | azure-maps-control.atlas.source.Source
+    name: Source
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+  - uid: azure-maps-control.atlas.BubbleLayerOptions
+    name: BubbleLayerOptions
+    spec.typeScript:
+      - name: BubbleLayerOptions
+        fullName: BubbleLayerOptions
+        uid: azure-maps-control.atlas.BubbleLayerOptions
+  - uid: azure-maps-control.atlas.HeatMapLayerOptions
+    name: HeatMapLayerOptions
+    spec.typeScript:
+      - name: HeatMapLayerOptions
+        fullName: HeatMapLayerOptions
+        uid: azure-maps-control.atlas.HeatMapLayerOptions
+  - uid: azure-maps-control.atlas.ImageLayerOptions
+    name: ImageLayerOptions
+    spec.typeScript:
+      - name: ImageLayerOptions
+        fullName: ImageLayerOptions
+        uid: azure-maps-control.atlas.ImageLayerOptions
+  - uid: azure-maps-control.atlas.LineLayerOptions
+    name: LineLayerOptions
+    spec.typeScript:
+      - name: LineLayerOptions
+        fullName: LineLayerOptions
+        uid: azure-maps-control.atlas.LineLayerOptions
+  - uid: azure-maps-control.atlas.PolygonLayerOptions
+    name: PolygonLayerOptions
+    spec.typeScript:
+      - name: PolygonLayerOptions
+        fullName: PolygonLayerOptions
+        uid: azure-maps-control.atlas.PolygonLayerOptions
+  - uid: azure-maps-control.atlas.SymbolLayerOptions
+    name: SymbolLayerOptions
+    spec.typeScript:
+      - name: SymbolLayerOptions
+        fullName: SymbolLayerOptions
+        uid: azure-maps-control.atlas.SymbolLayerOptions
+  - uid: azure-maps-control.atlas.TileLayerOptions
+    name: TileLayerOptions
+    spec.typeScript:
+      - name: TileLayerOptions
+        fullName: TileLayerOptions
+        uid: azure-maps-control.atlas.TileLayerOptions
+  - uid: azure-maps-control.atlas.data.Polygon
+    name: Polygon
+    spec.typeScript:
+      - name: Polygon
+        fullName: Polygon
+        uid: azure-maps-control.atlas.data.Polygon
+  - uid: string | azure-maps-control.atlas.math.AccelerationUnits
+    name: AccelerationUnits
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: AccelerationUnits
+        fullName: AccelerationUnits
+        uid: azure-maps-control.atlas.math.AccelerationUnits
+  - uid: string | azure-maps-control.atlas.math.DistanceUnits
+    name: DistanceUnits
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: DistanceUnits
+        fullName: DistanceUnits
+        uid: azure-maps-control.atlas.math.DistanceUnits
+  - uid: string | azure-maps-control.atlas.math.SpeedUnits
+    name: SpeedUnits
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: SpeedUnits
+        fullName: SpeedUnits
+        uid: azure-maps-control.atlas.math.SpeedUnits
+  - uid: string | azure-maps-control.atlas.math.TimeUnits
+    name: TimeUnits
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: TimeUnits
+        fullName: TimeUnits
+        uid: azure-maps-control.atlas.math.TimeUnits
+  - uid: >-
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+      any>
+    name: 'Point, any>'
+    spec.typeScript:
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ', any>'
+        fullName: ', any>'
+  - uid: azure-maps-control.atlas.math.AreaUnits
+    name: AreaUnits
+    spec.typeScript:
+      - name: AreaUnits
+        fullName: AreaUnits
+        uid: azure-maps-control.atlas.math.AreaUnits
+  - uid: >-
+      azure-maps-control.atlas.data.Position |
+      azure-maps-control.atlas.data.Point |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+      any>
+    name: 'Point, any>'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: ' | '
+        fullName: ' | '
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ', any>'
+        fullName: ', any>'
+  - uid: >-
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+      Object>
+    name: 'Point, Object>'
+    spec.typeScript:
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ', Object>'
+        fullName: ', Object>'
+  - uid: >-
+      azure-maps-control.atlas.data.Position[] |
+      azure-maps-control.atlas.data.Geometry |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.data.FeatureCollection |
+      azure-maps-control.atlas.data.GeometryCollection |
+      azure-maps-control.atlas.data.Geometry[] |
+      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any>>
+    name: 'Geometry, any>>'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[] | '
+        fullName: '[] | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: FeatureCollection
+        fullName: FeatureCollection
+        uid: azure-maps-control.atlas.data.FeatureCollection
+      - name: ' | '
+        fullName: ' | '
+      - name: GeometryCollection
+        fullName: GeometryCollection
+        uid: azure-maps-control.atlas.data.GeometryCollection
+      - name: ' | '
+        fullName: ' | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: '[] | Array<'
+        fullName: '[] | Array<'
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any>>'
+        fullName: ', any>>'
+  - uid: >-
+      azure-maps-control.atlas.data.Position |
+      azure-maps-control.atlas.data.Point
+    name: Point
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: ' | '
+        fullName: ' | '
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+  - uid: >-
+      azure-maps-control.atlas.data.LineString |
+      azure-maps-control.atlas.data.Position[]
+    name: 'Position[]'
+    spec.typeScript:
+      - name: LineString
+        fullName: LineString
+        uid: azure-maps-control.atlas.data.LineString
+      - name: ' | '
+        fullName: ' | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+      Object>>
+    name: 'Point, Object>>'
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ', Object>>'
+        fullName: ', Object>>'
+  - uid: azure-maps-control.atlas.math.TimeUnits
+    name: TimeUnits
+    spec.typeScript:
+      - name: TimeUnits
+        fullName: TimeUnits
+        uid: azure-maps-control.atlas.math.TimeUnits
+  - uid: 'azure-maps-control.atlas.Pixel[]'
+    name: 'Pixel[]'
+    spec.typeScript:
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-control.atlas.source.Source
+    name: Source
+    spec.typeScript:
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+  - uid: azure-maps-control.atlas.DataSourceOptions
+    name: DataSourceOptions
+    spec.typeScript:
+      - name: DataSourceOptions
+        fullName: DataSourceOptions
+        uid: azure-maps-control.atlas.DataSourceOptions
+  - uid: >-
+      azure-maps-control.atlas.data.FeatureCollection |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.data.Geometry |
+      azure-maps-control.atlas.data.GeometryCollection |
+      azure-maps-control.atlas.Shape |
+      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.data.Geometry |
+      azure-maps-control.atlas.Shape>
+    name: Shape>
+    spec.typeScript:
+      - name: FeatureCollection
+        fullName: FeatureCollection
+        uid: azure-maps-control.atlas.data.FeatureCollection
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ' | '
+        fullName: ' | '
+      - name: GeometryCollection
+        fullName: GeometryCollection
+        uid: azure-maps-control.atlas.data.GeometryCollection
+      - name: ' | '
+        fullName: ' | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: ' | Array<'
+        fullName: ' | Array<'
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ' | '
+        fullName: ' | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: '>'
+        fullName: '>'
+  - uid: >-
+      Promise<Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      azure-maps-control.atlas.ClusteredProperties | any> |
+      azure-maps-control.atlas.Shape>>
+    name: Shape>>
+    spec.typeScript:
+      - name: Promise<Array<
+        fullName: Promise<Array<
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', '
+        fullName: ', '
+      - name: ClusteredProperties
+        fullName: ClusteredProperties
+        uid: azure-maps-control.atlas.ClusteredProperties
+      - name: ' | any> | '
+        fullName: ' | any> | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: '>>'
+        fullName: '>>'
+  - uid: >-
+      Promise<Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.Shape>>
+    name: Shape>>
+    spec.typeScript:
+      - name: Promise<Array<
+        fullName: Promise<Array<
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: '>>'
+        fullName: '>>'
+  - uid: azure-maps-control.atlas.Shape
+    name: Shape
+    spec.typeScript:
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+  - uid: azure-maps-control.atlas.Expression
+    name: Expression
+    spec.typeScript:
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.atlas.Expression
+  - uid: 'azure-maps-control.atlas.Shape[]'
+    name: 'Shape[]'
+    spec.typeScript:
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      number | string | azure-maps-control.atlas.Shape |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any>
+    name: 'Geometry, any>'
+    spec.typeScript:
+      - name: 'number | string | '
+        fullName: 'number | string | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any>'
+        fullName: ', any>'
+  - uid: >-
+      azure-maps-control.atlas.data.FeatureCollection |
+      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.data.Geometry |
+      azure-maps-control.atlas.Shape>
+    name: Shape>
+    spec.typeScript:
+      - name: FeatureCollection
+        fullName: FeatureCollection
+        uid: azure-maps-control.atlas.data.FeatureCollection
+      - name: ' | Array<'
+        fullName: ' | Array<'
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ' | '
+        fullName: ' | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-control.atlas.data.FeatureCollection
+    name: FeatureCollection
+    spec.typeScript:
+      - name: FeatureCollection
+        fullName: FeatureCollection
+        uid: azure-maps-control.atlas.data.FeatureCollection
+  - uid: azure-maps-control.atlas.VectorTileSourceOptions
+    name: VectorTileSourceOptions
+    spec.typeScript:
+      - name: VectorTileSourceOptions
+        fullName: VectorTileSourceOptions
+        uid: azure-maps-control.atlas.VectorTileSourceOptions
+  - uid: azure-maps-control.atlas.HtmlMarkerOptions
+    name: HtmlMarkerOptions
+    spec.typeScript:
+      - name: HtmlMarkerOptions
+        fullName: HtmlMarkerOptions
+        uid: azure-maps-control.atlas.HtmlMarkerOptions
+  - uid: >-
+      azure-maps-control.atlas.ServiceOptions &
+      azure-maps-control.atlas.StyleOptions &
+      azure-maps-control.atlas.UserInteractionOptions &
+      azure-maps-control.atlas.CameraOptions |
+      azure-maps-control.atlas.CameraBoundsOptions
+    name: CameraBoundsOptions
+    spec.typeScript:
+      - name: ServiceOptions
+        fullName: ServiceOptions
+        uid: azure-maps-control.atlas.ServiceOptions
+      - name: ' & '
+        fullName: ' & '
+      - name: StyleOptions
+        fullName: StyleOptions
+        uid: azure-maps-control.atlas.StyleOptions
+      - name: ' & '
+        fullName: ' & '
+      - name: UserInteractionOptions
+        fullName: UserInteractionOptions
+        uid: azure-maps-control.atlas.UserInteractionOptions
+      - name: ' & '
+        fullName: ' & '
+      - name: CameraOptions
+        fullName: CameraOptions
+        uid: azure-maps-control.atlas.CameraOptions
+      - name: ' | '
+        fullName: ' | '
+      - name: CameraBoundsOptions
+        fullName: CameraBoundsOptions
+        uid: azure-maps-control.atlas.CameraBoundsOptions
+  - uid: azure-maps-control.atlas.AuthenticationManager
+    name: AuthenticationManager
+    spec.typeScript:
+      - name: AuthenticationManager
+        fullName: AuthenticationManager
+        uid: azure-maps-control.atlas.AuthenticationManager
+  - uid: azure-maps-control.atlas.ControlManager
+    name: ControlManager
+    spec.typeScript:
+      - name: ControlManager
+        fullName: ControlManager
+        uid: azure-maps-control.atlas.ControlManager
+  - uid: azure-maps-control.atlas.EventManager
+    name: EventManager
+    spec.typeScript:
+      - name: EventManager
+        fullName: EventManager
+        uid: azure-maps-control.atlas.EventManager
+  - uid: azure-maps-control.atlas.ImageSpriteManager
+    name: ImageSpriteManager
+    spec.typeScript:
+      - name: ImageSpriteManager
+        fullName: ImageSpriteManager
+        uid: azure-maps-control.atlas.ImageSpriteManager
+  - uid: azure-maps-control.atlas.LayerManager
+    name: LayerManager
+    spec.typeScript:
+      - name: LayerManager
+        fullName: LayerManager
+        uid: azure-maps-control.atlas.LayerManager
+  - uid: azure-maps-control.atlas.HtmlMarkerManager
+    name: HtmlMarkerManager
+    spec.typeScript:
+      - name: HtmlMarkerManager
+        fullName: HtmlMarkerManager
+        uid: azure-maps-control.atlas.HtmlMarkerManager
+  - uid: azure-maps-control.atlas.SourceManager
+    name: SourceManager
+    spec.typeScript:
+      - name: SourceManager
+        fullName: SourceManager
+        uid: azure-maps-control.atlas.SourceManager
+  - uid: >-
+      azure-maps-control.atlas.CameraOptions &
+      azure-maps-control.atlas.CameraBoundsOptions
+    name: CameraBoundsOptions
+    spec.typeScript:
+      - name: CameraOptions
+        fullName: CameraOptions
+        uid: azure-maps-control.atlas.CameraOptions
+      - name: ' & '
+        fullName: ' & '
+      - name: CameraBoundsOptions
+        fullName: CameraBoundsOptions
+        uid: azure-maps-control.atlas.CameraBoundsOptions
+  - uid: azure-maps-control.atlas.ServiceOptions
+    name: ServiceOptions
+    spec.typeScript:
+      - name: ServiceOptions
+        fullName: ServiceOptions
+        uid: azure-maps-control.atlas.ServiceOptions
+  - uid: azure-maps-control.atlas.StyleOptions
+    name: StyleOptions
+    spec.typeScript:
+      - name: StyleOptions
+        fullName: StyleOptions
+        uid: azure-maps-control.atlas.StyleOptions
+  - uid: azure-maps-control.atlas.TrafficOptions
+    name: TrafficOptions
+    spec.typeScript:
+      - name: TrafficOptions
+        fullName: TrafficOptions
+        uid: azure-maps-control.atlas.TrafficOptions
+  - uid: azure-maps-control.atlas.UserInteractionOptions
+    name: UserInteractionOptions
+    spec.typeScript:
+      - name: UserInteractionOptions
+        fullName: UserInteractionOptions
+        uid: azure-maps-control.atlas.UserInteractionOptions
+  - uid: >-
+      azure-maps-control.atlas.CameraOptions |
+      azure-maps-control.atlas.CameraBoundsOptions &
+      azure-maps-control.atlas.AnimationOptions
+    name: AnimationOptions
+    spec.typeScript:
+      - name: CameraOptions
+        fullName: CameraOptions
+        uid: azure-maps-control.atlas.CameraOptions
+      - name: ' | '
+        fullName: ' | '
+      - name: CameraBoundsOptions
+        fullName: CameraBoundsOptions
+        uid: azure-maps-control.atlas.CameraBoundsOptions
+      - name: ' & '
+        fullName: ' & '
+      - name: AnimationOptions
+        fullName: AnimationOptions
+        uid: azure-maps-control.atlas.AnimationOptions
+  - uid: azure-maps-control.atlas.Pixel
+    name: Pixel
+    spec.typeScript:
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
+  - uid: azure-maps-control.atlas.PopupOptions
+    name: PopupOptions
+    spec.typeScript:
+      - name: PopupOptions
+        fullName: PopupOptions
+        uid: azure-maps-control.atlas.PopupOptions
+  - uid: >-
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any>
+    name: 'Geometry, any>'
+    spec.typeScript:
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any>'
+        fullName: ', any>'
+  - uid: azure-maps-control.atlas.data.Geometry
+    name: Geometry
+    spec.typeScript:
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+  - uid: >-
+      azure-maps-control.atlas.data.Position |
+      azure-maps-control.atlas.data.Position[] |
+      azure-maps-control.atlas.data.Position[][] |
+      azure-maps-control.atlas.data.Position[][][]
+    name: 'Position[][][]'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: ' | '
+        fullName: ' | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[] | '
+        fullName: '[] | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[][] | '
+        fullName: '[][] | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[][][]'
+        fullName: '[][][]'
+  - uid: azure-maps-control.atlas.Options
+    name: Options
+    spec.typeScript:
+      - name: Options
+        fullName: Options
+        uid: azure-maps-control.atlas.Options
+  - uid: azure-maps-control.atlas.AuthenticationType
+    name: AuthenticationType
+    spec.typeScript:
+      - name: AuthenticationType
+        fullName: AuthenticationType
+        uid: azure-maps-control.atlas.AuthenticationType
+  - uid: azure-maps-control.atlas.RequestParameters
+    name: RequestParameters
+    spec.typeScript:
+      - name: RequestParameters
+        fullName: RequestParameters
+        uid: azure-maps-control.atlas.RequestParameters
+  - uid: azure-maps-control.atlas.getAuthTokenCallback
+    name: getAuthTokenCallback
+    spec.typeScript:
+      - name: getAuthTokenCallback
+        fullName: getAuthTokenCallback
+        uid: azure-maps-control.atlas.getAuthTokenCallback
+  - uid: azure-maps-control.atlas.LayerOptions
+    name: LayerOptions
+    spec.typeScript:
+      - name: LayerOptions
+        fullName: LayerOptions
+        uid: azure-maps-control.atlas.LayerOptions
+  - uid: number | azure-maps-control.atlas.Expression
+    name: Expression
+    spec.typeScript:
+      - name: 'number | '
+        fullName: 'number | '
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.atlas.Expression
+  - uid: string | azure-maps-control.atlas.Expression
+    name: Expression
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.atlas.Expression
+  - uid: azure-maps-control.atlas.Padding | number
+    name: Padding | number
+    spec.typeScript:
+      - name: Padding
+        fullName: Padding
+        uid: azure-maps-control.atlas.Padding
+      - name: ' | number'
+        fullName: ' | number'
+  - uid: azure-maps-control.atlas.ControlStyle
+    name: ControlStyle
+    spec.typeScript:
+      - name: ControlStyle
+        fullName: ControlStyle
+        uid: azure-maps-control.atlas.ControlStyle
+  - uid: 'azure-maps-control.atlas.Control | azure-maps-control.atlas.Control[]'
+    name: 'Control[]'
+    spec.typeScript:
+      - name: Control
+        fullName: Control
+        uid: azure-maps-control.atlas.Control
+      - name: ' | '
+        fullName: ' | '
+      - name: Control
+        fullName: Control
+        uid: azure-maps-control.atlas.Control
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-control.atlas.ControlPosition
+    name: ControlPosition
+    spec.typeScript:
+      - name: ControlPosition
+        fullName: ControlPosition
+        uid: azure-maps-control.atlas.ControlPosition
+  - uid: >-
+      azure-maps-control.atlas.layer.Layer |
+      azure-maps-control.atlas.layer.Layer[]
+    name: 'Layer[]'
+    spec.typeScript:
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: ' | '
+        fullName: ' | '
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      azure-maps-control.atlas.HtmlMarker |
+      azure-maps-control.atlas.HtmlMarker[]
+    name: 'HtmlMarker[]'
+    spec.typeScript:
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+      - name: ' | '
+        fullName: ' | '
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-control.atlas.Popup | azure-maps-control.atlas.Popup[]'
+    name: 'Popup[]'
+    spec.typeScript:
+      - name: Popup
+        fullName: Popup
+        uid: azure-maps-control.atlas.Popup
+      - name: ' | '
+        fullName: ' | '
+      - name: Popup
+        fullName: Popup
+        uid: azure-maps-control.atlas.Popup
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-control.atlas.HtmlMarker
+    name: HtmlMarker
+    spec.typeScript:
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+  - uid: azure-maps-control.atlas.Popup
+    name: Popup
+    spec.typeScript:
+      - name: Popup
+        fullName: Popup
+        uid: azure-maps-control.atlas.Popup
+  - uid: >-
+      string | azure-maps-control.atlas.HtmlMarker | Array<string |
+      azure-maps-control.atlas.HtmlMarker>
+    name: HtmlMarker>
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+      - name: ' | Array<string | '
+        fullName: ' | Array<string | '
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-control.atlas.Pixel | azure-maps-control.atlas.Expression
+    name: Expression
+    spec.typeScript:
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
+      - name: ' | '
+        fullName: ' | '
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.atlas.Expression
+  - uid: azure-maps-control.atlas.MediaLayerOptions
+    name: MediaLayerOptions
+    spec.typeScript:
+      - name: MediaLayerOptions
+        fullName: MediaLayerOptions
+        uid: azure-maps-control.atlas.MediaLayerOptions
+  - uid: string | azure-maps-control.atlas.layer.Layer
+    name: Layer
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+  - uid: 'azure-maps-control.atlas.layer.Layer[]'
+    name: 'Layer[]'
+    spec.typeScript:
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      azure-maps-control.atlas.data.Position |
+      azure-maps-control.atlas.data.Point |
+      azure-maps-control.atlas.data.BoundingBox
+    name: BoundingBox
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: ' | '
+        fullName: ' | '
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ' | '
+        fullName: ' | '
+      - name: BoundingBox
+        fullName: BoundingBox
+        uid: azure-maps-control.atlas.data.BoundingBox
+  - uid: Array<string | azure-maps-control.atlas.layer.Layer>
+    name: Layer>
+    spec.typeScript:
+      - name: 'Array<string | '
+        fullName: 'Array<string | '
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: '>'
+        fullName: '>'
+  - uid: >-
+      Array<azure-maps-control.atlas.Shape |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any>>
+    name: 'Geometry, any>>'
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any>>'
+        fullName: ', any>>'
+  - uid: >-
+      string | azure-maps-control.atlas.layer.Layer | Array<string |
+      azure-maps-control.atlas.layer.Layer>
+    name: Layer>
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: ' | Array<string | '
+        fullName: ' | Array<string | '
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-control.atlas.MapEvent
+    name: MapEvent
+    spec.typeScript:
+      - name: MapEvent
+        fullName: MapEvent
+        uid: azure-maps-control.atlas.MapEvent
+  - uid: azure-maps-control.atlas.MapMouseWheelEvent
+    name: MapMouseWheelEvent
+    spec.typeScript:
+      - name: MapMouseWheelEvent
+        fullName: MapMouseWheelEvent
+        uid: azure-maps-control.atlas.MapMouseWheelEvent
+  - uid: >-
+      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.Shape>
+    name: Shape>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-control.atlas.AuthenticationOptions
+    name: AuthenticationOptions
+    spec.typeScript:
+      - name: AuthenticationOptions
+        fullName: AuthenticationOptions
+        uid: azure-maps-control.atlas.AuthenticationOptions
+  - uid: >-
+      azure-maps-control.atlas.source.Source |
+      azure-maps-control.atlas.source.Source[]
+    name: 'Source[]'
+    spec.typeScript:
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+      - name: ' | '
+        fullName: ' | '
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      string | azure-maps-control.atlas.source.Source | Array<string |
+      azure-maps-control.atlas.source.Source>
+    name: Source>
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+      - name: ' | Array<string | '
+        fullName: ' | Array<string | '
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-control.atlas.IconOptions
+    name: IconOptions
+    spec.typeScript:
+      - name: IconOptions
+        fullName: IconOptions
+        uid: azure-maps-control.atlas.IconOptions
+  - uid: azure-maps-control.atlas.TextOptions
+    name: TextOptions
+    spec.typeScript:
+      - name: TextOptions
+        fullName: TextOptions
+        uid: azure-maps-control.atlas.TextOptions
+  - uid: azure-maps-control.atlas.HtmlMarker | azure-maps-control.atlas.Popup
+    name: Popup
+    spec.typeScript:
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+      - name: ' | '
+        fullName: ' | '
+      - name: Popup
+        fullName: Popup
+        uid: azure-maps-control.atlas.Popup
+  - uid: 'string[] | azure-maps-control.atlas.Expression'
+    name: Expression
+    spec.typeScript:
+      - name: 'string[] | '
+        fullName: 'string[] | '
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.atlas.Expression
+  - uid: azure-maps-control.atlas.math.AccelerationUnits
+    name: AccelerationUnits
+  - uid: azure-maps-control.atlas.math.AffineTransform
+    name: AffineTransform
+  - uid: azure-maps-control.atlas.math.boundingBoxToPolygon
+    name: boundingBoxToPolygon
+  - uid: azure-maps-control.atlas.math.convertAcceleration
+    name: convertAcceleration
+  - uid: azure-maps-control.atlas.math.convertArea
+    name: convertArea
+  - uid: azure-maps-control.atlas.math.convertDistance
+    name: convertDistance
+  - uid: azure-maps-control.atlas.math.convertSpeed
+    name: convertSpeed
+  - uid: azure-maps-control.atlas.math.convertTimespan
+    name: convertTimespan
+  - uid: azure-maps-control.atlas.math.DistanceUnits
+    name: DistanceUnits
+  - uid: azure-maps-control.atlas.math.getAcceleration
+    name: getAcceleration
+  - uid: azure-maps-control.atlas.math.getAccelerationFromFeatures
+    name: getAccelerationFromFeatures
+  - uid: azure-maps-control.atlas.math.getAccelerationFromSpeeds
+    name: getAccelerationFromSpeeds
+  - uid: azure-maps-control.atlas.math.getArea
+    name: getArea
+  - uid: azure-maps-control.atlas.math.getCardinalSpline
+    name: getCardinalSpline
+  - uid: azure-maps-control.atlas.math.getClosestPointOnGeometry
+    name: getClosestPointOnGeometry
+  - uid: azure-maps-control.atlas.math.getConvexHull
+    name: getConvexHull
+  - uid: azure-maps-control.atlas.math.getDestination
+    name: getDestination
+  - uid: azure-maps-control.atlas.math.getDistanceTo
+    name: getDistanceTo
+  - uid: azure-maps-control.atlas.math.getEarthRadius
+    name: getEarthRadius
+  - uid: azure-maps-control.atlas.math.getGeodesicPath
+    name: getGeodesicPath
+  - uid: azure-maps-control.atlas.math.getHeading
+    name: getHeading
+  - uid: azure-maps-control.atlas.math.getLengthOfPath
+    name: getLengthOfPath
+  - uid: azure-maps-control.atlas.math.getPixelHeading
+    name: getPixelHeading
+  - uid: azure-maps-control.atlas.math.getPointsWithHeadingsAlongPath
+    name: getPointsWithHeadingsAlongPath
+  - uid: azure-maps-control.atlas.math.getPointWithHeadingAlongPath
+    name: getPointWithHeadingAlongPath
+  - uid: azure-maps-control.atlas.math.getPosition
+    name: getPosition
+  - uid: azure-maps-control.atlas.math.getPositionAlongPath
+    name: getPositionAlongPath
+  - uid: azure-maps-control.atlas.math.getPositions
+    name: getPositions
+  - uid: azure-maps-control.atlas.math.getPositionsAlongPath
+    name: getPositionsAlongPath
+  - uid: azure-maps-control.atlas.math.getRegularPolygonPath
+    name: getRegularPolygonPath
+  - uid: azure-maps-control.atlas.math.getSpeed
+    name: getSpeed
+  - uid: azure-maps-control.atlas.math.getSpeedFromFeatures
+    name: getSpeedFromFeatures
+  - uid: azure-maps-control.atlas.math.getTimespan
+    name: getTimespan
+  - uid: azure-maps-control.atlas.math.getTravelDistance
+    name: getTravelDistance
+  - uid: azure-maps-control.atlas.math.interpolate
+    name: interpolate
+  - uid: azure-maps-control.atlas.math.mercatorPixelsToPositions
+    name: mercatorPixelsToPositions
+  - uid: azure-maps-control.atlas.math.mercatorPositionsToPixels
+    name: mercatorPositionsToPixels
+  - uid: azure-maps-control.atlas.math.normalizeLatitude
+    name: normalizeLatitude
+  - uid: azure-maps-control.atlas.math.normalizeLongitude
+    name: normalizeLongitude
+  - uid: azure-maps-control.atlas.math.parseTimestamp
+    name: parseTimestamp
+  - uid: azure-maps-control.atlas.math.rotatePositions
+    name: rotatePositions
+  - uid: azure-maps-control.atlas.math.SpeedUnits
+    name: SpeedUnits

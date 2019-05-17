@@ -1,0 +1,605 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-maps-rest
+    name: azure-maps-rest
+    summary: ''
+    children:
+      - azure-maps-rest.atlas
+      - azure-maps-rest.atlas.AuthenticationManager
+      - azure-maps-rest.atlas.Map
+      - azure-maps-rest.atlas.RequestParameters
+      - azure-maps-rest.atlas.service
+      - azure-maps-rest.atlas.service.Aborter
+      - azure-maps-rest.atlas.service.BaseRequestPolicy
+      - azure-maps-rest.atlas.service.CalculateRouteDirectionsOptions
+      - azure-maps-rest.atlas.service.CalculateRouteDirectionsResponse
+      - azure-maps-rest.atlas.service.Credential
+      - azure-maps-rest.atlas.service.CredentialPolicy
+      - azure-maps-rest.atlas.service.CredentialPolicyCreator
+      - azure-maps-rest.atlas.service.HttpHeaders
+      - azure-maps-rest.atlas.service.HttpOperationResponse
+      - azure-maps-rest.atlas.service.HttpPipelineLogLevel
+      - azure-maps-rest.atlas.service.IBaseGeojson
+      - azure-maps-rest.atlas.service.IHttpClient
+      - azure-maps-rest.atlas.service.IHttpPipelineLogger
+      - azure-maps-rest.atlas.service.INewPipelineOptions
+      - azure-maps-rest.atlas.service.IPipelineOptions
+      - azure-maps-rest.atlas.service.IRequestLogOptions
+      - azure-maps-rest.atlas.service.IRetryOptions
+      - azure-maps-rest.atlas.service.LoggingPolicyFactory
+      - azure-maps-rest.atlas.service.MapControlCredential
+      - azure-maps-rest.atlas.service.MapControlCredentialPolicy
+      - azure-maps-rest.atlas.service.MapsURL
+      - azure-maps-rest.atlas.service.Models
+      - azure-maps-rest.atlas.service.Models.AlternativeRouteType
+      - azure-maps-rest.atlas.service.Models.Avoid
+      - azure-maps-rest.atlas.service.Models.BatchRequestBody
+      - azure-maps-rest.atlas.service.Models.BatchResponse
+      - azure-maps-rest.atlas.service.Models.BatchResponseSummary
+      - azure-maps-rest.atlas.service.Models.ComputeTravelTimeFor
+      - azure-maps-rest.atlas.service.Models.Coordinate
+      - azure-maps-rest.atlas.service.Models.CoordinateAbbreviated
+      - azure-maps-rest.atlas.service.Models.DataSources
+      - azure-maps-rest.atlas.service.Models.DataSourcesGeometry
+      - azure-maps-rest.atlas.service.Models.DrivingSide
+      - azure-maps-rest.atlas.service.Models.ErrorModel
+      - azure-maps-rest.atlas.service.Models.ErrorResponse
+      - azure-maps-rest.atlas.service.Models.GeoJSONLineString
+      - azure-maps-rest.atlas.service.Models.GeoJSONMultiPoint
+      - azure-maps-rest.atlas.service.Models.GeoJSONPoint
+      - azure-maps-rest.atlas.service.Models.GuidanceInstructionType
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver
+      - azure-maps-rest.atlas.service.Models.Hilliness
+      - azure-maps-rest.atlas.service.Models.MagnitudeOfDelay
+      - azure-maps-rest.atlas.service.Models.MapsClientOptions
+      - azure-maps-rest.atlas.service.Models.RouteDirectionsRequestBody
+      - azure-maps-rest.atlas.service.Models.RouteDirectionsResponse
+      - azure-maps-rest.atlas.service.Models.RouteDirectionsResult
+      - azure-maps-rest.atlas.service.Models.RouteDirectionsSummary
+      - >-
+        azure-maps-rest.atlas.service.Models.RouteGetRouteDirectionsOptionalParams
+      - azure-maps-rest.atlas.service.Models.RouteGetRouteDirectionsResponse
+      - azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams
+      - azure-maps-rest.atlas.service.Models.RouteGetRouteRangeResponse
+      - azure-maps-rest.atlas.service.Models.RouteInstructionsType
+      - azure-maps-rest.atlas.service.Models.RouteMatrixRequestBody
+      - azure-maps-rest.atlas.service.Models.RouteMatrixResponse
+      - azure-maps-rest.atlas.service.Models.RouteMatrixResult
+      - azure-maps-rest.atlas.service.Models.RouteMatrixResultResponse
+      - azure-maps-rest.atlas.service.Models.RouteMatrixSummary
+      - azure-maps-rest.atlas.service.Models.RouteOptimizedWaypoint
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams
+      - azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsResponse
+      - azure-maps-rest.atlas.service.Models.RouteRange
+      - azure-maps-rest.atlas.service.Models.RouteRangeResponse
+      - azure-maps-rest.atlas.service.Models.RouteRepresentation
+      - azure-maps-rest.atlas.service.Models.RouteResponseReport
+      - azure-maps-rest.atlas.service.Models.RouteResponseReportEffectiveSetting
+      - azure-maps-rest.atlas.service.Models.RouteResultGuidance
+      - azure-maps-rest.atlas.service.Models.RouteResultInstruction
+      - azure-maps-rest.atlas.service.Models.RouteResultInstructionGroup
+      - azure-maps-rest.atlas.service.Models.RouteResultLeg
+      - azure-maps-rest.atlas.service.Models.RouteResultLegSummary
+      - azure-maps-rest.atlas.service.Models.RouteResultSection
+      - azure-maps-rest.atlas.service.Models.RouteResultSectionTec
+      - azure-maps-rest.atlas.service.Models.RouteResultSectionTecCause
+      - azure-maps-rest.atlas.service.Models.RouteType
+      - azure-maps-rest.atlas.service.Models.SearchAddressResponse
+      - azure-maps-rest.atlas.service.Models.SearchAddressResult
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchAddressReverseCrossStreetResponse
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchAddressReverseCrossStreetResult
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchAddressReverseCrossStreetSummary
+      - azure-maps-rest.atlas.service.Models.SearchAddressReverseResponse
+      - azure-maps-rest.atlas.service.Models.SearchAddressReverseResult
+      - azure-maps-rest.atlas.service.Models.SearchAddressReverseSummary
+      - azure-maps-rest.atlas.service.Models.SearchAddressStructuredResponse
+      - azure-maps-rest.atlas.service.Models.SearchAddressStructuredResult
+      - azure-maps-rest.atlas.service.Models.SearchAddressStructuredSummary
+      - azure-maps-rest.atlas.service.Models.SearchAddressSummary
+      - azure-maps-rest.atlas.service.Models.SearchAlongRouteRequestBody
+      - azure-maps-rest.atlas.service.Models.SearchAlongRouteResponse
+      - azure-maps-rest.atlas.service.Models.SearchAlongRouteResult
+      - azure-maps-rest.atlas.service.Models.SearchAlongRouteSummary
+      - azure-maps-rest.atlas.service.Models.SearchFuzzyResponse
+      - azure-maps-rest.atlas.service.Models.SearchFuzzyResult
+      - azure-maps-rest.atlas.service.Models.SearchFuzzySummary
+      - azure-maps-rest.atlas.service.Models.SearchGeometryResponse
+      - azure-maps-rest.atlas.service.Models.SearchGeometryResult
+      - azure-maps-rest.atlas.service.Models.SearchGeometrySummary
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchGetSearchAddressOptionalParams
+      - azure-maps-rest.atlas.service.Models.SearchGetSearchAddressResponse
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseCrossStreetOptionalParams
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseCrossStreetResponse
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseOptionalParams
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseResponse
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchGetSearchAddressStructuredOptionalParams
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchGetSearchAddressStructuredResponse
+      - azure-maps-rest.atlas.service.Models.SearchGetSearchFuzzyOptionalParams
+      - azure-maps-rest.atlas.service.Models.SearchGetSearchFuzzyResponse
+      - azure-maps-rest.atlas.service.Models.SearchGetSearchNearbyOptionalParams
+      - azure-maps-rest.atlas.service.Models.SearchGetSearchNearbyResponse
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchGetSearchPOICategoryOptionalParams
+      - azure-maps-rest.atlas.service.Models.SearchGetSearchPOICategoryResponse
+      - azure-maps-rest.atlas.service.Models.SearchGetSearchPOIOptionalParams
+      - azure-maps-rest.atlas.service.Models.SearchGetSearchPOIResponse
+      - azure-maps-rest.atlas.service.Models.SearchGetSearchPolygonResponse
+      - azure-maps-rest.atlas.service.Models.SearchIndexSet
+      - azure-maps-rest.atlas.service.Models.SearchInsideGeometryRequestBody
+      - azure-maps-rest.atlas.service.Models.SearchNearbyResponse
+      - azure-maps-rest.atlas.service.Models.SearchNearbyResult
+      - azure-maps-rest.atlas.service.Models.SearchNearbySummary
+      - azure-maps-rest.atlas.service.Models.SearchPoiCategoryResponse
+      - azure-maps-rest.atlas.service.Models.SearchPoiCategoryResult
+      - azure-maps-rest.atlas.service.Models.SearchPoiCategorySummary
+      - azure-maps-rest.atlas.service.Models.SearchPoiResponse
+      - azure-maps-rest.atlas.service.Models.SearchPoiResult
+      - azure-maps-rest.atlas.service.Models.SearchPoiSummary
+      - azure-maps-rest.atlas.service.Models.SearchPolygonResponse
+      - azure-maps-rest.atlas.service.Models.SearchPolygonResult
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchPostSearchAlongRouteOptionalParams
+      - azure-maps-rest.atlas.service.Models.SearchPostSearchAlongRouteResponse
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchPostSearchInsideGeometryOptionalParams
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchPostSearchInsideGeometryResponse
+      - azure-maps-rest.atlas.service.Models.SearchResultAddress
+      - azure-maps-rest.atlas.service.Models.SearchResultAddressRanges
+      - azure-maps-rest.atlas.service.Models.SearchResultEntryPoint
+      - azure-maps-rest.atlas.service.Models.SearchResultPoi
+      - azure-maps-rest.atlas.service.Models.SearchResultPoiClassification
+      - azure-maps-rest.atlas.service.Models.SearchResultPoiClassificationName
+      - azure-maps-rest.atlas.service.Models.SearchResultViewport
+      - azure-maps-rest.atlas.service.Models.SearchSummaryGeoBias
+      - azure-maps-rest.atlas.service.Models.SectionType
+      - azure-maps-rest.atlas.service.Models.TravelMode
+      - azure-maps-rest.atlas.service.Models.Type
+      - azure-maps-rest.atlas.service.Models.VehicleEngineType
+      - azure-maps-rest.atlas.service.Models.VehicleLoadType
+      - azure-maps-rest.atlas.service.Models.Windingness
+      - azure-maps-rest.atlas.service.Pipeline
+      - azure-maps-rest.atlas.service.RequestPolicy
+      - azure-maps-rest.atlas.service.RequestPolicyFactory
+      - azure-maps-rest.atlas.service.RequestPolicyOptions
+      - azure-maps-rest.atlas.service.RestError
+      - azure-maps-rest.atlas.service.RetryPolicyFactory
+      - azure-maps-rest.atlas.service.RetryPolicyType
+      - azure-maps-rest.atlas.service.RouteGeojson
+      - azure-maps-rest.atlas.service.RouteURL
+      - azure-maps-rest.atlas.service.SearchAddressOptions
+      - azure-maps-rest.atlas.service.SearchAddressResponse
+      - azure-maps-rest.atlas.service.SearchAddressReverseCrossStreetOptions
+      - azure-maps-rest.atlas.service.SearchAddressReverseCrossStreetResponse
+      - azure-maps-rest.atlas.service.SearchAddressReverseOptions
+      - azure-maps-rest.atlas.service.SearchAddressReverseResponse
+      - azure-maps-rest.atlas.service.SearchAddressStructuredOptions
+      - azure-maps-rest.atlas.service.SearchAddressStructuredResponse
+      - azure-maps-rest.atlas.service.SearchAlongRouteOptions
+      - azure-maps-rest.atlas.service.SearchAlongRouteRequestBody
+      - azure-maps-rest.atlas.service.SearchAlongRouteResponse
+      - azure-maps-rest.atlas.service.SearchFuzzyOptions
+      - azure-maps-rest.atlas.service.SearchFuzzyResponse
+      - azure-maps-rest.atlas.service.SearchGeojson
+      - azure-maps-rest.atlas.service.SearchInsideGeometryOptions
+      - azure-maps-rest.atlas.service.SearchInsideGeometryRequestBody
+      - azure-maps-rest.atlas.service.SearchInsideGeometryResponse
+      - azure-maps-rest.atlas.service.SearchNearbyOptions
+      - azure-maps-rest.atlas.service.SearchNearbyResponse
+      - azure-maps-rest.atlas.service.SearchPOICategoryOptions
+      - azure-maps-rest.atlas.service.SearchPOICategoryResponse
+      - azure-maps-rest.atlas.service.SearchPOIOptions
+      - azure-maps-rest.atlas.service.SearchPOIResponse
+      - azure-maps-rest.atlas.service.SearchReverseGeojson
+      - azure-maps-rest.atlas.service.SearchURL
+      - azure-maps-rest.atlas.service.SubscriptionKeyCredential
+      - azure-maps-rest.atlas.service.SubscriptionKeyCredentialPolicy
+      - azure-maps-rest.atlas.service.TokenCredential
+      - azure-maps-rest.atlas.service.TokenCredentialPolicy
+      - azure-maps-rest.atlas.service.WebResource
+      - azure-maps-rest.atlas.service.WithGeojson
+    type: package
+    langs:
+      - typeScript
+references:
+  - uid: azure-maps-rest.atlas
+    name: atlas
+  - uid: azure-maps-rest.atlas.AuthenticationManager
+    name: AuthenticationManager
+  - uid: azure-maps-rest.atlas.Map
+    name: Map
+  - uid: azure-maps-rest.atlas.RequestParameters
+    name: RequestParameters
+  - uid: azure-maps-rest.atlas.service
+    name: service
+  - uid: azure-maps-rest.atlas.service.Aborter
+    name: Aborter
+  - uid: azure-maps-rest.atlas.service.BaseRequestPolicy
+    name: BaseRequestPolicy
+  - uid: azure-maps-rest.atlas.service.CalculateRouteDirectionsOptions
+    name: CalculateRouteDirectionsOptions
+  - uid: azure-maps-rest.atlas.service.CalculateRouteDirectionsResponse
+    name: CalculateRouteDirectionsResponse
+  - uid: azure-maps-rest.atlas.service.Credential
+    name: Credential
+  - uid: azure-maps-rest.atlas.service.CredentialPolicy
+    name: CredentialPolicy
+  - uid: azure-maps-rest.atlas.service.CredentialPolicyCreator
+    name: CredentialPolicyCreator
+  - uid: azure-maps-rest.atlas.service.HttpHeaders
+    name: HttpHeaders
+  - uid: azure-maps-rest.atlas.service.HttpOperationResponse
+    name: HttpOperationResponse
+  - uid: azure-maps-rest.atlas.service.HttpPipelineLogLevel
+    name: HttpPipelineLogLevel
+  - uid: azure-maps-rest.atlas.service.IBaseGeojson
+    name: IBaseGeojson
+  - uid: azure-maps-rest.atlas.service.IHttpClient
+    name: IHttpClient
+  - uid: azure-maps-rest.atlas.service.IHttpPipelineLogger
+    name: IHttpPipelineLogger
+  - uid: azure-maps-rest.atlas.service.INewPipelineOptions
+    name: INewPipelineOptions
+  - uid: azure-maps-rest.atlas.service.IPipelineOptions
+    name: IPipelineOptions
+  - uid: azure-maps-rest.atlas.service.IRequestLogOptions
+    name: IRequestLogOptions
+  - uid: azure-maps-rest.atlas.service.IRetryOptions
+    name: IRetryOptions
+  - uid: azure-maps-rest.atlas.service.LoggingPolicyFactory
+    name: LoggingPolicyFactory
+  - uid: azure-maps-rest.atlas.service.MapControlCredential
+    name: MapControlCredential
+  - uid: azure-maps-rest.atlas.service.MapControlCredentialPolicy
+    name: MapControlCredentialPolicy
+  - uid: azure-maps-rest.atlas.service.MapsURL
+    name: MapsURL
+  - uid: azure-maps-rest.atlas.service.Models
+    name: Models
+  - uid: azure-maps-rest.atlas.service.Models.AlternativeRouteType
+    name: AlternativeRouteType
+  - uid: azure-maps-rest.atlas.service.Models.Avoid
+    name: Avoid
+  - uid: azure-maps-rest.atlas.service.Models.BatchRequestBody
+    name: BatchRequestBody
+  - uid: azure-maps-rest.atlas.service.Models.BatchResponse
+    name: BatchResponse
+  - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary
+    name: BatchResponseSummary
+  - uid: azure-maps-rest.atlas.service.Models.ComputeTravelTimeFor
+    name: ComputeTravelTimeFor
+  - uid: azure-maps-rest.atlas.service.Models.Coordinate
+    name: Coordinate
+  - uid: azure-maps-rest.atlas.service.Models.CoordinateAbbreviated
+    name: CoordinateAbbreviated
+  - uid: azure-maps-rest.atlas.service.Models.DataSources
+    name: DataSources
+  - uid: azure-maps-rest.atlas.service.Models.DataSourcesGeometry
+    name: DataSourcesGeometry
+  - uid: azure-maps-rest.atlas.service.Models.DrivingSide
+    name: DrivingSide
+  - uid: azure-maps-rest.atlas.service.Models.ErrorModel
+    name: ErrorModel
+  - uid: azure-maps-rest.atlas.service.Models.ErrorResponse
+    name: ErrorResponse
+  - uid: azure-maps-rest.atlas.service.Models.GeoJSONLineString
+    name: GeoJSONLineString
+  - uid: azure-maps-rest.atlas.service.Models.GeoJSONMultiPoint
+    name: GeoJSONMultiPoint
+  - uid: azure-maps-rest.atlas.service.Models.GeoJSONPoint
+    name: GeoJSONPoint
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceInstructionType
+    name: GuidanceInstructionType
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver
+    name: GuidanceManeuver
+  - uid: azure-maps-rest.atlas.service.Models.Hilliness
+    name: Hilliness
+  - uid: azure-maps-rest.atlas.service.Models.MagnitudeOfDelay
+    name: MagnitudeOfDelay
+  - uid: azure-maps-rest.atlas.service.Models.MapsClientOptions
+    name: MapsClientOptions
+  - uid: azure-maps-rest.atlas.service.Models.RouteDirectionsRequestBody
+    name: RouteDirectionsRequestBody
+  - uid: azure-maps-rest.atlas.service.Models.RouteDirectionsResponse
+    name: RouteDirectionsResponse
+  - uid: azure-maps-rest.atlas.service.Models.RouteDirectionsResult
+    name: RouteDirectionsResult
+  - uid: azure-maps-rest.atlas.service.Models.RouteDirectionsSummary
+    name: RouteDirectionsSummary
+  - uid: azure-maps-rest.atlas.service.Models.RouteGetRouteDirectionsOptionalParams
+    name: RouteGetRouteDirectionsOptionalParams
+  - uid: azure-maps-rest.atlas.service.Models.RouteGetRouteDirectionsResponse
+    name: RouteGetRouteDirectionsResponse
+  - uid: azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams
+    name: RouteGetRouteRangeOptionalParams
+  - uid: azure-maps-rest.atlas.service.Models.RouteGetRouteRangeResponse
+    name: RouteGetRouteRangeResponse
+  - uid: azure-maps-rest.atlas.service.Models.RouteInstructionsType
+    name: RouteInstructionsType
+  - uid: azure-maps-rest.atlas.service.Models.RouteMatrixRequestBody
+    name: RouteMatrixRequestBody
+  - uid: azure-maps-rest.atlas.service.Models.RouteMatrixResponse
+    name: RouteMatrixResponse
+  - uid: azure-maps-rest.atlas.service.Models.RouteMatrixResult
+    name: RouteMatrixResult
+  - uid: azure-maps-rest.atlas.service.Models.RouteMatrixResultResponse
+    name: RouteMatrixResultResponse
+  - uid: azure-maps-rest.atlas.service.Models.RouteMatrixSummary
+    name: RouteMatrixSummary
+  - uid: azure-maps-rest.atlas.service.Models.RouteOptimizedWaypoint
+    name: RouteOptimizedWaypoint
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams
+    name: RoutePostRouteDirectionsOptionalParams
+  - uid: azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsResponse
+    name: RoutePostRouteDirectionsResponse
+  - uid: azure-maps-rest.atlas.service.Models.RouteRange
+    name: RouteRange
+  - uid: azure-maps-rest.atlas.service.Models.RouteRangeResponse
+    name: RouteRangeResponse
+  - uid: azure-maps-rest.atlas.service.Models.RouteRepresentation
+    name: RouteRepresentation
+  - uid: azure-maps-rest.atlas.service.Models.RouteResponseReport
+    name: RouteResponseReport
+  - uid: azure-maps-rest.atlas.service.Models.RouteResponseReportEffectiveSetting
+    name: RouteResponseReportEffectiveSetting
+  - uid: azure-maps-rest.atlas.service.Models.RouteResultGuidance
+    name: RouteResultGuidance
+  - uid: azure-maps-rest.atlas.service.Models.RouteResultInstruction
+    name: RouteResultInstruction
+  - uid: azure-maps-rest.atlas.service.Models.RouteResultInstructionGroup
+    name: RouteResultInstructionGroup
+  - uid: azure-maps-rest.atlas.service.Models.RouteResultLeg
+    name: RouteResultLeg
+  - uid: azure-maps-rest.atlas.service.Models.RouteResultLegSummary
+    name: RouteResultLegSummary
+  - uid: azure-maps-rest.atlas.service.Models.RouteResultSection
+    name: RouteResultSection
+  - uid: azure-maps-rest.atlas.service.Models.RouteResultSectionTec
+    name: RouteResultSectionTec
+  - uid: azure-maps-rest.atlas.service.Models.RouteResultSectionTecCause
+    name: RouteResultSectionTecCause
+  - uid: azure-maps-rest.atlas.service.Models.RouteType
+    name: RouteType
+  - uid: azure-maps-rest.atlas.service.Models.SearchAddressResponse
+    name: SearchAddressResponse
+  - uid: azure-maps-rest.atlas.service.Models.SearchAddressResult
+    name: SearchAddressResult
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchAddressReverseCrossStreetResponse
+    name: SearchAddressReverseCrossStreetResponse
+  - uid: azure-maps-rest.atlas.service.Models.SearchAddressReverseCrossStreetResult
+    name: SearchAddressReverseCrossStreetResult
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchAddressReverseCrossStreetSummary
+    name: SearchAddressReverseCrossStreetSummary
+  - uid: azure-maps-rest.atlas.service.Models.SearchAddressReverseResponse
+    name: SearchAddressReverseResponse
+  - uid: azure-maps-rest.atlas.service.Models.SearchAddressReverseResult
+    name: SearchAddressReverseResult
+  - uid: azure-maps-rest.atlas.service.Models.SearchAddressReverseSummary
+    name: SearchAddressReverseSummary
+  - uid: azure-maps-rest.atlas.service.Models.SearchAddressStructuredResponse
+    name: SearchAddressStructuredResponse
+  - uid: azure-maps-rest.atlas.service.Models.SearchAddressStructuredResult
+    name: SearchAddressStructuredResult
+  - uid: azure-maps-rest.atlas.service.Models.SearchAddressStructuredSummary
+    name: SearchAddressStructuredSummary
+  - uid: azure-maps-rest.atlas.service.Models.SearchAddressSummary
+    name: SearchAddressSummary
+  - uid: azure-maps-rest.atlas.service.Models.SearchAlongRouteRequestBody
+    name: SearchAlongRouteRequestBody
+  - uid: azure-maps-rest.atlas.service.Models.SearchAlongRouteResponse
+    name: SearchAlongRouteResponse
+  - uid: azure-maps-rest.atlas.service.Models.SearchAlongRouteResult
+    name: SearchAlongRouteResult
+  - uid: azure-maps-rest.atlas.service.Models.SearchAlongRouteSummary
+    name: SearchAlongRouteSummary
+  - uid: azure-maps-rest.atlas.service.Models.SearchFuzzyResponse
+    name: SearchFuzzyResponse
+  - uid: azure-maps-rest.atlas.service.Models.SearchFuzzyResult
+    name: SearchFuzzyResult
+  - uid: azure-maps-rest.atlas.service.Models.SearchFuzzySummary
+    name: SearchFuzzySummary
+  - uid: azure-maps-rest.atlas.service.Models.SearchGeometryResponse
+    name: SearchGeometryResponse
+  - uid: azure-maps-rest.atlas.service.Models.SearchGeometryResult
+    name: SearchGeometryResult
+  - uid: azure-maps-rest.atlas.service.Models.SearchGeometrySummary
+    name: SearchGeometrySummary
+  - uid: azure-maps-rest.atlas.service.Models.SearchGetSearchAddressOptionalParams
+    name: SearchGetSearchAddressOptionalParams
+  - uid: azure-maps-rest.atlas.service.Models.SearchGetSearchAddressResponse
+    name: SearchGetSearchAddressResponse
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseCrossStreetOptionalParams
+    name: SearchGetSearchAddressReverseCrossStreetOptionalParams
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseCrossStreetResponse
+    name: SearchGetSearchAddressReverseCrossStreetResponse
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseOptionalParams
+    name: SearchGetSearchAddressReverseOptionalParams
+  - uid: azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseResponse
+    name: SearchGetSearchAddressReverseResponse
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchGetSearchAddressStructuredOptionalParams
+    name: SearchGetSearchAddressStructuredOptionalParams
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchGetSearchAddressStructuredResponse
+    name: SearchGetSearchAddressStructuredResponse
+  - uid: azure-maps-rest.atlas.service.Models.SearchGetSearchFuzzyOptionalParams
+    name: SearchGetSearchFuzzyOptionalParams
+  - uid: azure-maps-rest.atlas.service.Models.SearchGetSearchFuzzyResponse
+    name: SearchGetSearchFuzzyResponse
+  - uid: azure-maps-rest.atlas.service.Models.SearchGetSearchNearbyOptionalParams
+    name: SearchGetSearchNearbyOptionalParams
+  - uid: azure-maps-rest.atlas.service.Models.SearchGetSearchNearbyResponse
+    name: SearchGetSearchNearbyResponse
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchGetSearchPOICategoryOptionalParams
+    name: SearchGetSearchPOICategoryOptionalParams
+  - uid: azure-maps-rest.atlas.service.Models.SearchGetSearchPOICategoryResponse
+    name: SearchGetSearchPOICategoryResponse
+  - uid: azure-maps-rest.atlas.service.Models.SearchGetSearchPOIOptionalParams
+    name: SearchGetSearchPOIOptionalParams
+  - uid: azure-maps-rest.atlas.service.Models.SearchGetSearchPOIResponse
+    name: SearchGetSearchPOIResponse
+  - uid: azure-maps-rest.atlas.service.Models.SearchGetSearchPolygonResponse
+    name: SearchGetSearchPolygonResponse
+  - uid: azure-maps-rest.atlas.service.Models.SearchIndexSet
+    name: SearchIndexSet
+  - uid: azure-maps-rest.atlas.service.Models.SearchInsideGeometryRequestBody
+    name: SearchInsideGeometryRequestBody
+  - uid: azure-maps-rest.atlas.service.Models.SearchNearbyResponse
+    name: SearchNearbyResponse
+  - uid: azure-maps-rest.atlas.service.Models.SearchNearbyResult
+    name: SearchNearbyResult
+  - uid: azure-maps-rest.atlas.service.Models.SearchNearbySummary
+    name: SearchNearbySummary
+  - uid: azure-maps-rest.atlas.service.Models.SearchPoiCategoryResponse
+    name: SearchPoiCategoryResponse
+  - uid: azure-maps-rest.atlas.service.Models.SearchPoiCategoryResult
+    name: SearchPoiCategoryResult
+  - uid: azure-maps-rest.atlas.service.Models.SearchPoiCategorySummary
+    name: SearchPoiCategorySummary
+  - uid: azure-maps-rest.atlas.service.Models.SearchPoiResponse
+    name: SearchPoiResponse
+  - uid: azure-maps-rest.atlas.service.Models.SearchPoiResult
+    name: SearchPoiResult
+  - uid: azure-maps-rest.atlas.service.Models.SearchPoiSummary
+    name: SearchPoiSummary
+  - uid: azure-maps-rest.atlas.service.Models.SearchPolygonResponse
+    name: SearchPolygonResponse
+  - uid: azure-maps-rest.atlas.service.Models.SearchPolygonResult
+    name: SearchPolygonResult
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchPostSearchAlongRouteOptionalParams
+    name: SearchPostSearchAlongRouteOptionalParams
+  - uid: azure-maps-rest.atlas.service.Models.SearchPostSearchAlongRouteResponse
+    name: SearchPostSearchAlongRouteResponse
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchPostSearchInsideGeometryOptionalParams
+    name: SearchPostSearchInsideGeometryOptionalParams
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchPostSearchInsideGeometryResponse
+    name: SearchPostSearchInsideGeometryResponse
+  - uid: azure-maps-rest.atlas.service.Models.SearchResultAddress
+    name: SearchResultAddress
+  - uid: azure-maps-rest.atlas.service.Models.SearchResultAddressRanges
+    name: SearchResultAddressRanges
+  - uid: azure-maps-rest.atlas.service.Models.SearchResultEntryPoint
+    name: SearchResultEntryPoint
+  - uid: azure-maps-rest.atlas.service.Models.SearchResultPoi
+    name: SearchResultPoi
+  - uid: azure-maps-rest.atlas.service.Models.SearchResultPoiClassification
+    name: SearchResultPoiClassification
+  - uid: azure-maps-rest.atlas.service.Models.SearchResultPoiClassificationName
+    name: SearchResultPoiClassificationName
+  - uid: azure-maps-rest.atlas.service.Models.SearchResultViewport
+    name: SearchResultViewport
+  - uid: azure-maps-rest.atlas.service.Models.SearchSummaryGeoBias
+    name: SearchSummaryGeoBias
+  - uid: azure-maps-rest.atlas.service.Models.SectionType
+    name: SectionType
+  - uid: azure-maps-rest.atlas.service.Models.TravelMode
+    name: TravelMode
+  - uid: azure-maps-rest.atlas.service.Models.Type
+    name: Type
+  - uid: azure-maps-rest.atlas.service.Models.VehicleEngineType
+    name: VehicleEngineType
+  - uid: azure-maps-rest.atlas.service.Models.VehicleLoadType
+    name: VehicleLoadType
+  - uid: azure-maps-rest.atlas.service.Models.Windingness
+    name: Windingness
+  - uid: azure-maps-rest.atlas.service.Pipeline
+    name: Pipeline
+  - uid: azure-maps-rest.atlas.service.RequestPolicy
+    name: RequestPolicy
+  - uid: azure-maps-rest.atlas.service.RequestPolicyFactory
+    name: RequestPolicyFactory
+  - uid: azure-maps-rest.atlas.service.RequestPolicyOptions
+    name: RequestPolicyOptions
+  - uid: azure-maps-rest.atlas.service.RestError
+    name: RestError
+  - uid: azure-maps-rest.atlas.service.RetryPolicyFactory
+    name: RetryPolicyFactory
+  - uid: azure-maps-rest.atlas.service.RetryPolicyType
+    name: RetryPolicyType
+  - uid: azure-maps-rest.atlas.service.RouteGeojson
+    name: RouteGeojson
+  - uid: azure-maps-rest.atlas.service.RouteURL
+    name: RouteURL
+  - uid: azure-maps-rest.atlas.service.SearchAddressOptions
+    name: SearchAddressOptions
+  - uid: azure-maps-rest.atlas.service.SearchAddressResponse
+    name: SearchAddressResponse
+  - uid: azure-maps-rest.atlas.service.SearchAddressReverseCrossStreetOptions
+    name: SearchAddressReverseCrossStreetOptions
+  - uid: azure-maps-rest.atlas.service.SearchAddressReverseCrossStreetResponse
+    name: SearchAddressReverseCrossStreetResponse
+  - uid: azure-maps-rest.atlas.service.SearchAddressReverseOptions
+    name: SearchAddressReverseOptions
+  - uid: azure-maps-rest.atlas.service.SearchAddressReverseResponse
+    name: SearchAddressReverseResponse
+  - uid: azure-maps-rest.atlas.service.SearchAddressStructuredOptions
+    name: SearchAddressStructuredOptions
+  - uid: azure-maps-rest.atlas.service.SearchAddressStructuredResponse
+    name: SearchAddressStructuredResponse
+  - uid: azure-maps-rest.atlas.service.SearchAlongRouteOptions
+    name: SearchAlongRouteOptions
+  - uid: azure-maps-rest.atlas.service.SearchAlongRouteRequestBody
+    name: SearchAlongRouteRequestBody
+  - uid: azure-maps-rest.atlas.service.SearchAlongRouteResponse
+    name: SearchAlongRouteResponse
+  - uid: azure-maps-rest.atlas.service.SearchFuzzyOptions
+    name: SearchFuzzyOptions
+  - uid: azure-maps-rest.atlas.service.SearchFuzzyResponse
+    name: SearchFuzzyResponse
+  - uid: azure-maps-rest.atlas.service.SearchGeojson
+    name: SearchGeojson
+  - uid: azure-maps-rest.atlas.service.SearchInsideGeometryOptions
+    name: SearchInsideGeometryOptions
+  - uid: azure-maps-rest.atlas.service.SearchInsideGeometryRequestBody
+    name: SearchInsideGeometryRequestBody
+  - uid: azure-maps-rest.atlas.service.SearchInsideGeometryResponse
+    name: SearchInsideGeometryResponse
+  - uid: azure-maps-rest.atlas.service.SearchNearbyOptions
+    name: SearchNearbyOptions
+  - uid: azure-maps-rest.atlas.service.SearchNearbyResponse
+    name: SearchNearbyResponse
+  - uid: azure-maps-rest.atlas.service.SearchPOICategoryOptions
+    name: SearchPOICategoryOptions
+  - uid: azure-maps-rest.atlas.service.SearchPOICategoryResponse
+    name: SearchPOICategoryResponse
+  - uid: azure-maps-rest.atlas.service.SearchPOIOptions
+    name: SearchPOIOptions
+  - uid: azure-maps-rest.atlas.service.SearchPOIResponse
+    name: SearchPOIResponse
+  - uid: azure-maps-rest.atlas.service.SearchReverseGeojson
+    name: SearchReverseGeojson
+  - uid: azure-maps-rest.atlas.service.SearchURL
+    name: SearchURL
+  - uid: azure-maps-rest.atlas.service.SubscriptionKeyCredential
+    name: SubscriptionKeyCredential
+  - uid: azure-maps-rest.atlas.service.SubscriptionKeyCredentialPolicy
+    name: SubscriptionKeyCredentialPolicy
+  - uid: azure-maps-rest.atlas.service.TokenCredential
+    name: TokenCredential
+  - uid: azure-maps-rest.atlas.service.TokenCredentialPolicy
+    name: TokenCredentialPolicy
+  - uid: azure-maps-rest.atlas.service.WebResource
+    name: WebResource
+  - uid: azure-maps-rest.atlas.service.WithGeojson
+    name: WithGeojson

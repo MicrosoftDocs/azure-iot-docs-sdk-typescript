@@ -1,0 +1,1556 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-maps-rest.atlas.service.SearchURL
+    name: SearchURL
+    fullName: SearchURL
+    children:
+      - azure-maps-rest.atlas.service.SearchURL.mapsUrl
+      - azure-maps-rest.atlas.service.SearchURL.newPipeline
+      - azure-maps-rest.atlas.service.SearchURL.searchAddress
+      - azure-maps-rest.atlas.service.SearchURL.searchAddressReverse
+      - azure-maps-rest.atlas.service.SearchURL.searchAddressReverseCrossStreet
+      - azure-maps-rest.atlas.service.SearchURL.searchAddressStructured
+      - azure-maps-rest.atlas.service.SearchURL.searchAlongRoute
+      - azure-maps-rest.atlas.service.SearchURL.searchFuzzy
+      - azure-maps-rest.atlas.service.SearchURL.searchInsideGeometry
+      - azure-maps-rest.atlas.service.SearchURL.searchNearby
+      - azure-maps-rest.atlas.service.SearchURL.searchPOI
+      - azure-maps-rest.atlas.service.SearchURL.searchPOICategory
+      - azure-maps-rest.atlas.service.SearchURL.constructor
+    langs:
+      - typeScript
+    type: class
+    summary: A SearchURL represents a URL to the Azure Maps search operations.
+    extends:
+      name: azure-maps-rest.atlas.service.MapsURL
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.SearchURL.mapsUrl
+    name: mapsUrl
+    fullName: mapsUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Base URL string value.
+    syntax:
+      content: 'mapsUrl: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.SearchURL.newPipeline
+    name: 'newPipeline(Credential, INewPipelineOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      A static method used to create a new Pipeline object with Credential
+      provided.
+    syntax:
+      content: >-
+        static function newPipeline(credential: Credential, pipelineOptions?:
+        INewPipelineOptions)
+      parameters:
+        - id: credential
+          type:
+            - azure-maps-rest.atlas.service.Credential
+          description: >-
+            Such as SubscriptionKeyCredential, TokenCredential, and
+            MapControlCredential.
+        - id: pipelineOptions
+          type:
+            - azure-maps-rest.atlas.service.INewPipelineOptions
+          description: ''
+          optional: true
+      return:
+        type:
+          - azure-maps-rest.atlas.service.Pipeline
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.SearchURL.searchAddress
+    name: 'searchAddress(Aborter, string, SearchAddressOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Address Geocoding** In many cases, the complete search service might be
+      too much, for
+
+      instance if you are only interested in traditional geocoding.
+
+      Search can also be accessed for address look up exclusively.
+
+      The geocoding is performed by hitting the geocode endpoint with just the
+      address or
+
+      partial address in question.
+
+      The geocoding search index will be queried for everything above the street
+      level data.
+
+      No POIs will be returned.
+
+      Note that the geocoder is very tolerant of typos and incomplete addresses.
+
+      It will also handle everything from exact street addresses or street or
+      intersections
+
+      as well as higher level geographies such as city centers, counties, states
+      etc.
+
+      Uses the Get Search Address API:
+      https://docs.microsoft.com/rest/api/maps/search/getsearchaddress
+    syntax:
+      content: >-
+        function searchAddress(aborter: Aborter, query: string, options?:
+        SearchAddressOptions)
+      parameters:
+        - id: aborter
+          type:
+            - azure-maps-rest.atlas.service.Aborter
+          description: >-
+            Create a new Aborter instance with Aborter.none or
+            Aborter.timeout(),
+
+            goto documents of Aborter for more examples about request
+            cancellation.
+        - id: query
+          type:
+            - string
+          description: 'The address to search for (e.g., "1 Microsoft way, Redmond, WA").'
+        - id: options
+          type:
+            - azure-maps-rest.atlas.service.SearchAddressOptions
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-maps-rest.atlas.service.SearchAddressResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.SearchURL.searchAddressReverse
+    name: >-
+      searchAddressReverse(Aborter, GeoJSON.Position,
+      SearchAddressReverseOptions)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Reverse Geocode to an Address** There may be times when you need to
+      translate a
+
+      coordinate (example: -122.3862, 37.786505) into a human understandable
+      street address.
+
+      Most often this is needed in tracking applications where you receive a GPS
+      feed from the device or
+
+      asset and wish to know what address where the coordinate is located.
+
+      This endpoint will return address information for a given coordinate.
+
+      Uses the Get Search Address Reverse API:
+      https://docs.microsoft.com/rest/api/maps/search/getsearchaddressreverse
+    syntax:
+      content: >-
+        function searchAddressReverse(aborter: Aborter, position:
+        GeoJSON.Position, options?: SearchAddressReverseOptions)
+      parameters:
+        - id: aborter
+          type:
+            - azure-maps-rest.atlas.service.Aborter
+          description: >-
+            Create a new Aborter instance with Aborter.none or
+            Aborter.timeout(),
+
+            goto documents of Aborter for more examples about request
+            cancellation.
+        - id: position
+          type:
+            - GeoJSON.Position
+          description: >-
+            The position to reverse search,
+
+            a coordinate array of `[longitude, latitude]` e.g. `[-122.125679,
+            47.641268]`.
+        - id: options
+          type:
+            - azure-maps-rest.atlas.service.SearchAddressReverseOptions
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-maps-rest.atlas.service.SearchAddressReverseResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.SearchURL.searchAddressReverseCrossStreet
+    name: >-
+      searchAddressReverseCrossStreet(Aborter, GeoJSON.Position,
+      SearchAddressReverseCrossStreetOptions)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Reverse Geocode to a Cross Street** There may be times when you need to
+      translate a
+
+      coordinate (example: -122.3862, 37.786505) into a human understandable
+      cross street.
+
+      Most often this is needed in tracking applications where you receive a GPS
+      feed from the device or asset
+
+      and wish to know what address where the coordinate is located.
+
+      This endpoint will return cross street information for a given coordinate.
+
+      Uses the Get Search Address Reverse Cross Street API:
+      https://docs.microsoft.com/rest/api/maps/search/getsearchaddressreversecrossstreet
+    syntax:
+      content: >-
+        function searchAddressReverseCrossStreet(aborter: Aborter, position:
+        GeoJSON.Position, options?: SearchAddressReverseCrossStreetOptions)
+      parameters:
+        - id: aborter
+          type:
+            - azure-maps-rest.atlas.service.Aborter
+          description: >-
+            Create a new Aborter instance with Aborter.none or
+            Aborter.timeout(),
+
+            goto documents of Aborter for more examples about request
+            cancellation.
+        - id: position
+          type:
+            - GeoJSON.Position
+          description: >-
+            The position to reverse search,
+
+            a coordinate array of `[longitude, latitude]` e.g. `[-122.125679,
+            47.641268]`.
+        - id: options
+          type:
+            - >-
+              azure-maps-rest.atlas.service.SearchAddressReverseCrossStreetOptions
+          description: ''
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<azure-maps-rest.atlas.service.SearchAddressReverseCrossStreetResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.SearchURL.searchAddressStructured
+    name: 'searchAddressStructured(Aborter, string, SearchAddressStructuredOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Structured Address Geocoding** Azure Address Geocoding can also be
+      accessed for
+
+      structured address look up exclusively.
+
+      The geocoding search index will be queried for everything above the street
+      level data.
+
+      No POIs will be returned. Note that the geocoder is very tolerant of typos
+      and incomplete addresses.
+
+      It will also handle everything from exact street addresses or street or
+      intersections as well as
+
+      higher level geographies such as city centers, counties, states etc.
+
+      Uses the Get Search Address Structured API:
+      https://docs.microsoft.com/rest/api/maps/search/getsearchaddressstructured
+    syntax:
+      content: >-
+        function searchAddressStructured(aborter: Aborter, countryCode: string,
+        options?: SearchAddressStructuredOptions)
+      parameters:
+        - id: aborter
+          type:
+            - azure-maps-rest.atlas.service.Aborter
+          description: >-
+            Create a new Aborter instance with Aborter.none or
+            Aborter.timeout(),
+
+            goto documents of Aborter for more examples about request
+            cancellation.
+        - id: countryCode
+          type:
+            - string
+          description: >-
+            The 2 or 3 letter
+
+            [ISO3166-1](https://www.iso.org/iso-3166-country-codes.html) country
+            code portion of an address.
+
+            E.g. US.
+        - id: options
+          type:
+            - azure-maps-rest.atlas.service.SearchAddressStructuredOptions
+          description: ''
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<azure-maps-rest.atlas.service.SearchAddressStructuredResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.SearchURL.searchAlongRoute
+    name: >-
+      searchAlongRoute(Aborter, string, number, SearchAlongRouteRequestBody,
+      SearchAlongRouteOptions)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      The Search Along Route endpoint allows you to perform a fuzzy search for
+      POIs along a specified
+
+      route.
+
+      This search is constrained by specifying the `maxDetourTime` limiting
+      measure.
+
+      To send the route-points you will use a `body` which will contain the
+      `route` object represented
+
+      as a `GeoJSON LineString` type and the `Content-Type` header will be set
+      to `application/json`.
+
+      Each route-point in `route` is represented as a `GeoJSON Position` type
+      i.e. an array where the
+
+      _longitude_ value is followed by the _latitude_ value and the _altitude_
+      value is ignored.
+
+      The `route` should contain at least 2 route-points.
+
+      It is possible that original route will be altered, some of it's points
+      may be skipped.
+
+      If the route that passes through the found point is faster than the
+      original one, the `detourTime` value in
+
+      the response is negative.
+
+      Uses the Post Search Along Route API:
+      https://docs.microsoft.com/rest/api/maps/search/postsearchalongroute
+    syntax:
+      content: >-
+        function searchAlongRoute(aborter: Aborter, query: string,
+        maxDetourTime: number, body: SearchAlongRouteRequestBody, options?:
+        SearchAlongRouteOptions)
+      parameters:
+        - id: aborter
+          type:
+            - azure-maps-rest.atlas.service.Aborter
+          description: >-
+            Create a new Aborter instance with Aborter.none or
+            Aborter.timeout(),
+
+            goto documents of Aborter for more examples about request
+            cancellation.
+        - id: query
+          type:
+            - string
+          description: 'The applicable query string (e.g., "seattle", "pizza").'
+        - id: maxDetourTime
+          type:
+            - number
+          description: >-
+            Maximum detour time of the point of interest in seconds. Max value
+            is 3600
+
+            seconds
+        - id: body
+          type:
+            - azure-maps-rest.atlas.service.Models.SearchAlongRouteRequestBody
+          description: >-
+            This represents the route to search along and should be a
+
+            valid `GeoJSON LineString` type. Please refer to [RFC
+
+            7946](https://tools.ietf.org/html/rfc7946#section-3.1.4) for
+            details.
+        - id: options
+          type:
+            - azure-maps-rest.atlas.service.SearchAlongRouteOptions
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-maps-rest.atlas.service.SearchAlongRouteResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.SearchURL.searchFuzzy
+    name: 'searchFuzzy(Aborter, string | GeoJSON.Position, SearchFuzzyOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Free Form Search** The basic default API is Free Form Search which
+      handles the most
+
+      fuzzy of inputs handling any combination of address or POI tokens.
+
+      This search API is the canonical 'single line search'.
+
+      The Free Form Search API is a seamless combination of POI search and
+      geocoding.
+
+      The API can also be weighted with a contextual position (lat./lon. pair),
+      or
+
+      fully constrained by a coordinate and radius, or it can be executed more
+      generally without any
+
+      geo biasing anchor point.
+
+      We strongly advise you to use the 'countrySet' parameter to specify only
+      the countries for
+
+      which your application needs coverage, as the default behavior will be to
+      search the entire world,
+
+      potentially returning unnecessary results. E.g.: `countrySet`=US,FR.
+      Please see [Search Coverage]
+
+      (https://docs.microsoft.com/azure/location-based-services/geocoding-coverage)
+      for
+
+      a complete list of all the supported countries.
+
+      Most Search queries default to `maxFuzzyLevel`=2 to gain performance and
+      also reduce unusual results.
+
+      This new default can be overridden as needed per request by passing in the
+      query param `maxFuzzyLevel`=3 or 4.
+
+      Uses the Get Search Fuzzy API:
+      https://docs.microsoft.com/rest/api/maps/search/getsearchfuzzy
+    syntax:
+      content: >-
+        function searchFuzzy(aborter: Aborter, query: string | GeoJSON.Position,
+        options?: SearchFuzzyOptions)
+      parameters:
+        - id: aborter
+          type:
+            - azure-maps-rest.atlas.service.Aborter
+          description: >-
+            Create a new Aborter instance with Aborter.none or
+            Aborter.timeout(),
+
+            goto documents of Aborter for more examples about request
+            cancellation.
+        - id: query
+          type:
+            - string | GeoJSON.Position
+          description: >-
+            The applicable query string (e.g., "seattle", "pizza").
+
+            Can _also_ be specified as a coordinate array of `[longitude,
+            latitude]` (e.g., `[-122.125679, 47.641268]`).
+        - id: options
+          type:
+            - azure-maps-rest.atlas.service.SearchFuzzyOptions
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-maps-rest.atlas.service.SearchFuzzyResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.SearchURL.searchInsideGeometry
+    name: >-
+      searchInsideGeometry(Aborter, string, SearchInsideGeometryRequestBody,
+      SearchInsideGeometryOptions)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      The Search Geometry endpoint allows you to perform a free form search
+      inside a single geometry
+
+      or many of them.
+
+      The search results that fall inside the geometry/geometries will be
+      returned.
+
+      The geographical features to be searched can be modeled as Polygon and/or
+      Circle geometries
+
+      represented using any one of the following `GeoJSON` types: **GeoJSON
+      FeatureCollection**,
+
+      The `geometry` can be represented as a `GeoJSON FeatureCollection` object.
+
+      This is the recommended option if the geometry contains both Polygons and
+      Circles.
+
+      The `FeatureCollection` can contain a max of 50 `GeoJSON Feature` objects.
+
+      Each `Feature` object should represent either a Polygon or a Circle with
+      the following conditions:
+
+      A `Feature` object for the Polygon geometry can have a max of 50
+      coordinates and it's properties must be empty.
+
+      A `Feature` object for the Circle geometry is composed of a _center_
+      represented using a `GeoJSON Point` type and a _radius_ value
+
+      (in meters) which must be specified in the object's properties along with
+      the _subType_ property
+
+      whose value should be 'Circle'.
+
+      Please see the Examples section below for a sample `FeatureCollection`
+      representation.
+
+      **GeoJSON GeometryCollection**, The `geometry` can be represented as a
+      `GeoJSON GeometryCollection` object.
+
+      This is the recommended option if the geometry contains a list of Polygons
+      only.
+
+      The `GeometryCollection` can contain a max of 50 `GeoJSON Polygon`
+      objects.
+
+      Each `Polygon` object can have a max of 50 coordinates.
+
+      Please see the Examples section below for a sample `GeometryCollection`
+      representation.
+
+      **GeoJSON Polygon**, The `geometry` can be represented as a `GeoJSON
+      Polygon` object.
+
+      This is the recommended option if the geometry contains a single Polygon.
+
+      The `Polygon` object can have a max of 50 coordinates.
+
+      Uses the Post Search Inside Geometry API:
+      https://docs.microsoft.com/rest/api/maps/search/postsearchinsidegeometry
+    syntax:
+      content: >-
+        function searchInsideGeometry(aborter: Aborter, query: string, body:
+        SearchInsideGeometryRequestBody, options?: SearchInsideGeometryOptions)
+      parameters:
+        - id: aborter
+          type:
+            - azure-maps-rest.atlas.service.Aborter
+          description: >-
+            Create a new Aborter instance with Aborter.none or
+            Aborter.timeout(),
+
+            goto documents of Aborter for more examples about request
+            cancellation.
+        - id: query
+          type:
+            - string
+          description: 'The applicable query string (e.g., "seattle", "pizza").'
+        - id: body
+          type:
+            - >-
+              azure-maps-rest.atlas.service.Models.SearchInsideGeometryRequestBody
+          description: >-
+            This represents the geometry for one or more geographical
+
+            features (parks, state boundary etc.) to search in and should be a
+            GeoJSON compliant type.
+
+            Please refer to [RFC 7946](https://tools.ietf.org/html/rfc7946) for
+            details.
+        - id: options
+          type:
+            - azure-maps-rest.atlas.service.SearchInsideGeometryOptions
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-maps-rest.atlas.service.SearchInsideGeometryResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.SearchURL.searchNearby
+    name: 'searchNearby(Aborter, GeoJSON.Position, SearchNearbyOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Nearby Search** If you have a use case for only retrieving POI results
+      around a
+
+      specific location, the nearby search method may be the right choice.
+
+      This endpoint will only return POI results, and does not take in a search
+      query parameter.
+
+      Uses the Get Search Nearby API:
+      https://docs.microsoft.com/rest/api/maps/search/getsearchnearby
+    syntax:
+      content: >-
+        function searchNearby(aborter: Aborter, location: GeoJSON.Position,
+        options?: SearchNearbyOptions)
+      parameters:
+        - id: aborter
+          type:
+            - azure-maps-rest.atlas.service.Aborter
+          description: >-
+            Create a new Aborter instance with Aborter.none or
+            Aborter.timeout(),
+
+            goto documents of Aborter for more examples about request
+            cancellation.
+        - id: location
+          type:
+            - GeoJSON.Position
+          description: >-
+            Location where results should be biased.
+
+            Should be an array of `[longitude, latitude]`, E.g. `[-121.89,
+            37.337]`.
+        - id: options
+          type:
+            - azure-maps-rest.atlas.service.SearchNearbyOptions
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-maps-rest.atlas.service.SearchNearbyResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.SearchURL.searchPOI
+    name: 'searchPOI(Aborter, string, SearchPOIOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Get POI by Name** If your search use case only requires POI results, you
+      may use the
+
+      POI endpoint for searching.
+
+      This endpoint will only return POI results.
+
+      Uses the Get Search POI API:
+      https://docs.microsoft.com/rest/api/maps/search/getsearchpoi
+    syntax:
+      content: >-
+        function searchPOI(aborter: Aborter, query: string, options?:
+        SearchPOIOptions)
+      parameters:
+        - id: aborter
+          type:
+            - azure-maps-rest.atlas.service.Aborter
+          description: >-
+            Create a new Aborter instance with Aborter.none or
+            Aborter.timeout(),
+
+            goto documents of Aborter for more examples about request
+            cancellation.
+        - id: query
+          type:
+            - string
+          description: 'The POI name to search for (e.g., "statue of liberty", "starbucks").'
+        - id: options
+          type:
+            - azure-maps-rest.atlas.service.SearchPOIOptions
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-maps-rest.atlas.service.SearchPOIResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.SearchURL.searchPOICategory
+    name: 'searchPOICategory(Aborter, string, SearchPOICategoryOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      **Get POI by Category** If your search use case only requires POI results
+      filtered by
+
+      category, you may use the category endpoint.
+
+      This endpoint will only return POI results which are categorized as
+      specified.
+
+      List of available categories can be found
+      [here](https://docs.microsoft.com/azure/azure-maps/search-categories).
+
+      Uses the Get Search POI Category API:
+      https://docs.microsoft.com/rest/api/maps/search/getsearchpoicategory
+    syntax:
+      content: >-
+        function searchPOICategory(aborter: Aborter, query: string, options?:
+        SearchPOICategoryOptions)
+      parameters:
+        - id: aborter
+          type:
+            - azure-maps-rest.atlas.service.Aborter
+          description: >-
+            Create a new Aborter instance with Aborter.none or
+            Aborter.timeout(),
+
+            goto documents of Aborter for more examples about request
+            cancellation.
+        - id: query
+          type:
+            - string
+          description: 'The POI category to search for (e.g., "AIRPORT", "BEACH").'
+        - id: options
+          type:
+            - azure-maps-rest.atlas.service.SearchPOICategoryOptions
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-maps-rest.atlas.service.SearchPOICategoryResponse>
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.SearchURL.constructor
+    name: 'SearchURL(Pipeline, string)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Creates an instance of SearchURL.
+    syntax:
+      content: 'new SearchURL(pipeline: Pipeline, mapsUrl?: string)'
+      parameters:
+        - id: pipeline
+          type:
+            - azure-maps-rest.atlas.service.Pipeline
+          description: |-
+            Call MapsURL.newPipeline() to create a default
+            pipeline, or provide a customized pipeline.
+        - id: mapsUrl
+          type:
+            - string
+          description: |-
+            A URL string pointing to Azure Maps service, default is
+            `"https://atlas.microsoft.com"`.
+          optional: true
+    package: azure-maps-rest
+references:
+  - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary
+    name: BatchResponseSummary
+    spec.typeScript:
+      - name: BatchResponseSummary
+        fullName: BatchResponseSummary
+        uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary
+  - uid: azure-maps-rest.atlas.service.Models.DataSourcesGeometry
+    name: DataSourcesGeometry
+    spec.typeScript:
+      - name: DataSourcesGeometry
+        fullName: DataSourcesGeometry
+        uid: azure-maps-rest.atlas.service.Models.DataSourcesGeometry
+  - uid: azure-maps-rest.atlas.service.Models.ErrorModel
+    name: ErrorModel
+    spec.typeScript:
+      - name: ErrorModel
+        fullName: ErrorModel
+        uid: azure-maps-rest.atlas.service.Models.ErrorModel
+  - uid: 'azure-maps-rest.atlas.service.RequestPolicyFactory[]'
+    name: 'RequestPolicyFactory[]'
+    spec.typeScript:
+      - name: RequestPolicyFactory
+        fullName: RequestPolicyFactory
+        uid: azure-maps-rest.atlas.service.RequestPolicyFactory
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-rest.atlas.service.Models.GeoJSONPoint[]'
+    name: 'GeoJSONPoint[]'
+    spec.typeScript:
+      - name: GeoJSONPoint
+        fullName: GeoJSONPoint
+        uid: azure-maps-rest.atlas.service.Models.GeoJSONPoint
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-rest.atlas.service.Models.RouteOptimizedWaypoint[]'
+    name: 'RouteOptimizedWaypoint[]'
+    spec.typeScript:
+      - name: RouteOptimizedWaypoint
+        fullName: RouteOptimizedWaypoint
+        uid: azure-maps-rest.atlas.service.Models.RouteOptimizedWaypoint
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.RouteResponseReport
+    name: RouteResponseReport
+    spec.typeScript:
+      - name: RouteResponseReport
+        fullName: RouteResponseReport
+        uid: azure-maps-rest.atlas.service.Models.RouteResponseReport
+  - uid: 'azure-maps-rest.atlas.service.Models.RouteDirectionsResult[]'
+    name: 'RouteDirectionsResult[]'
+    spec.typeScript:
+      - name: RouteDirectionsResult
+        fullName: RouteDirectionsResult
+        uid: azure-maps-rest.atlas.service.Models.RouteDirectionsResult
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.RouteResultGuidance
+    name: RouteResultGuidance
+    spec.typeScript:
+      - name: RouteResultGuidance
+        fullName: RouteResultGuidance
+        uid: azure-maps-rest.atlas.service.Models.RouteResultGuidance
+  - uid: 'azure-maps-rest.atlas.service.Models.RouteResultLeg[]'
+    name: 'RouteResultLeg[]'
+    spec.typeScript:
+      - name: RouteResultLeg
+        fullName: RouteResultLeg
+        uid: azure-maps-rest.atlas.service.Models.RouteResultLeg
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-rest.atlas.service.Models.RouteResultSection[]'
+    name: 'RouteResultSection[]'
+    spec.typeScript:
+      - name: RouteResultSection
+        fullName: RouteResultSection
+        uid: azure-maps-rest.atlas.service.Models.RouteResultSection
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.RouteDirectionsSummary
+    name: RouteDirectionsSummary
+    spec.typeScript:
+      - name: RouteDirectionsSummary
+        fullName: RouteDirectionsSummary
+        uid: azure-maps-rest.atlas.service.Models.RouteDirectionsSummary
+  - uid: azure-maps-rest.atlas.service.Models.AlternativeRouteType
+    name: AlternativeRouteType
+    spec.typeScript:
+      - name: AlternativeRouteType
+        fullName: AlternativeRouteType
+        uid: azure-maps-rest.atlas.service.Models.AlternativeRouteType
+  - uid: azure-maps-rest.atlas.service.Models.Avoid
+    name: Avoid
+    spec.typeScript:
+      - name: Avoid
+        fullName: Avoid
+        uid: azure-maps-rest.atlas.service.Models.Avoid
+  - uid: azure-maps-rest.atlas.service.Models.ComputeTravelTimeFor
+    name: ComputeTravelTimeFor
+    spec.typeScript:
+      - name: ComputeTravelTimeFor
+        fullName: ComputeTravelTimeFor
+        uid: azure-maps-rest.atlas.service.Models.ComputeTravelTimeFor
+  - uid: azure-maps-rest.atlas.service.Models.Hilliness
+    name: Hilliness
+    spec.typeScript:
+      - name: Hilliness
+        fullName: Hilliness
+        uid: azure-maps-rest.atlas.service.Models.Hilliness
+  - uid: azure-maps-rest.atlas.service.Models.RouteInstructionsType
+    name: RouteInstructionsType
+    spec.typeScript:
+      - name: RouteInstructionsType
+        fullName: RouteInstructionsType
+        uid: azure-maps-rest.atlas.service.Models.RouteInstructionsType
+  - uid: azure-maps-rest.atlas.service.Models.RouteRepresentation
+    name: RouteRepresentation
+    spec.typeScript:
+      - name: RouteRepresentation
+        fullName: RouteRepresentation
+        uid: azure-maps-rest.atlas.service.Models.RouteRepresentation
+  - uid: azure-maps-rest.atlas.service.Models.RouteType
+    name: RouteType
+    spec.typeScript:
+      - name: RouteType
+        fullName: RouteType
+        uid: azure-maps-rest.atlas.service.Models.RouteType
+  - uid: azure-maps-rest.atlas.service.Models.SectionType
+    name: SectionType
+    spec.typeScript:
+      - name: SectionType
+        fullName: SectionType
+        uid: azure-maps-rest.atlas.service.Models.SectionType
+  - uid: azure-maps-rest.atlas.service.Models.TravelMode
+    name: TravelMode
+    spec.typeScript:
+      - name: TravelMode
+        fullName: TravelMode
+        uid: azure-maps-rest.atlas.service.Models.TravelMode
+  - uid: azure-maps-rest.atlas.service.Models.VehicleEngineType
+    name: VehicleEngineType
+    spec.typeScript:
+      - name: VehicleEngineType
+        fullName: VehicleEngineType
+        uid: azure-maps-rest.atlas.service.Models.VehicleEngineType
+  - uid: azure-maps-rest.atlas.service.Models.VehicleLoadType
+    name: VehicleLoadType
+    spec.typeScript:
+      - name: VehicleLoadType
+        fullName: VehicleLoadType
+        uid: azure-maps-rest.atlas.service.Models.VehicleLoadType
+  - uid: azure-maps-rest.atlas.service.Models.Windingness
+    name: Windingness
+    spec.typeScript:
+      - name: Windingness
+        fullName: Windingness
+        uid: azure-maps-rest.atlas.service.Models.Windingness
+  - uid: azure-maps-rest.atlas.service.Models.GeoJSONMultiPoint
+    name: GeoJSONMultiPoint
+    spec.typeScript:
+      - name: GeoJSONMultiPoint
+        fullName: GeoJSONMultiPoint
+        uid: azure-maps-rest.atlas.service.Models.GeoJSONMultiPoint
+  - uid: 'azure-maps-rest.atlas.service.Models.RouteMatrixResult[][]'
+    name: 'RouteMatrixResult[][]'
+    spec.typeScript:
+      - name: RouteMatrixResult
+        fullName: RouteMatrixResult
+        uid: azure-maps-rest.atlas.service.Models.RouteMatrixResult
+      - name: '[][]'
+        fullName: '[][]'
+  - uid: azure-maps-rest.atlas.service.Models.RouteMatrixSummary
+    name: RouteMatrixSummary
+    spec.typeScript:
+      - name: RouteMatrixSummary
+        fullName: RouteMatrixSummary
+        uid: azure-maps-rest.atlas.service.Models.RouteMatrixSummary
+  - uid: azure-maps-rest.atlas.service.Models.RouteMatrixResultResponse
+    name: RouteMatrixResultResponse
+    spec.typeScript:
+      - name: RouteMatrixResultResponse
+        fullName: RouteMatrixResultResponse
+        uid: azure-maps-rest.atlas.service.Models.RouteMatrixResultResponse
+  - uid: azure-maps-rest.atlas.service.Models.RouteResultLegSummary
+    name: RouteResultLegSummary
+    spec.typeScript:
+      - name: RouteResultLegSummary
+        fullName: RouteResultLegSummary
+        uid: azure-maps-rest.atlas.service.Models.RouteResultLegSummary
+  - uid: 'azure-maps-rest.atlas.service.Models.Coordinate[]'
+    name: 'Coordinate[]'
+    spec.typeScript:
+      - name: Coordinate
+        fullName: Coordinate
+        uid: azure-maps-rest.atlas.service.Models.Coordinate
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.Coordinate
+    name: Coordinate
+    spec.typeScript:
+      - name: Coordinate
+        fullName: Coordinate
+        uid: azure-maps-rest.atlas.service.Models.Coordinate
+  - uid: azure-maps-rest.atlas.service.Models.RouteRange
+    name: RouteRange
+    spec.typeScript:
+      - name: RouteRange
+        fullName: RouteRange
+        uid: azure-maps-rest.atlas.service.Models.RouteRange
+  - uid: 'azure-maps-rest.atlas.service.Models.RouteResponseReportEffectiveSetting[]'
+    name: 'RouteResponseReportEffectiveSetting[]'
+    spec.typeScript:
+      - name: RouteResponseReportEffectiveSetting
+        fullName: RouteResponseReportEffectiveSetting
+        uid: >-
+          azure-maps-rest.atlas.service.Models.RouteResponseReportEffectiveSetting
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-rest.atlas.service.Models.RouteResultInstructionGroup[]'
+    name: 'RouteResultInstructionGroup[]'
+    spec.typeScript:
+      - name: RouteResultInstructionGroup
+        fullName: RouteResultInstructionGroup
+        uid: azure-maps-rest.atlas.service.Models.RouteResultInstructionGroup
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-rest.atlas.service.Models.RouteResultInstruction[]'
+    name: 'RouteResultInstruction[]'
+    spec.typeScript:
+      - name: RouteResultInstruction
+        fullName: RouteResultInstruction
+        uid: azure-maps-rest.atlas.service.Models.RouteResultInstruction
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.DrivingSide
+    name: DrivingSide
+    spec.typeScript:
+      - name: DrivingSide
+        fullName: DrivingSide
+        uid: azure-maps-rest.atlas.service.Models.DrivingSide
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceInstructionType
+    name: GuidanceInstructionType
+    spec.typeScript:
+      - name: GuidanceInstructionType
+        fullName: GuidanceInstructionType
+        uid: azure-maps-rest.atlas.service.Models.GuidanceInstructionType
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver
+    name: GuidanceManeuver
+    spec.typeScript:
+      - name: GuidanceManeuver
+        fullName: GuidanceManeuver
+        uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver
+  - uid: azure-maps-rest.atlas.service.Models.MagnitudeOfDelay
+    name: MagnitudeOfDelay
+    spec.typeScript:
+      - name: MagnitudeOfDelay
+        fullName: MagnitudeOfDelay
+        uid: azure-maps-rest.atlas.service.Models.MagnitudeOfDelay
+  - uid: azure-maps-rest.atlas.service.Models.RouteResultSectionTec
+    name: RouteResultSectionTec
+    spec.typeScript:
+      - name: RouteResultSectionTec
+        fullName: RouteResultSectionTec
+        uid: azure-maps-rest.atlas.service.Models.RouteResultSectionTec
+  - uid: 'azure-maps-rest.atlas.service.Models.RouteResultSectionTecCause[]'
+    name: 'RouteResultSectionTecCause[]'
+    spec.typeScript:
+      - name: RouteResultSectionTecCause
+        fullName: RouteResultSectionTecCause
+        uid: azure-maps-rest.atlas.service.Models.RouteResultSectionTecCause
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-rest.atlas.service.Models.SearchAddressResult[]'
+    name: 'SearchAddressResult[]'
+    spec.typeScript:
+      - name: SearchAddressResult
+        fullName: SearchAddressResult
+        uid: azure-maps-rest.atlas.service.Models.SearchAddressResult
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.SearchAddressSummary
+    name: SearchAddressSummary
+    spec.typeScript:
+      - name: SearchAddressSummary
+        fullName: SearchAddressSummary
+        uid: azure-maps-rest.atlas.service.Models.SearchAddressSummary
+  - uid: azure-maps-rest.atlas.service.Models.SearchResultAddress
+    name: SearchResultAddress
+    spec.typeScript:
+      - name: SearchResultAddress
+        fullName: SearchResultAddress
+        uid: azure-maps-rest.atlas.service.Models.SearchResultAddress
+  - uid: azure-maps-rest.atlas.service.Models.DataSources
+    name: DataSources
+    spec.typeScript:
+      - name: DataSources
+        fullName: DataSources
+        uid: azure-maps-rest.atlas.service.Models.DataSources
+  - uid: 'azure-maps-rest.atlas.service.Models.SearchResultEntryPoint[]'
+    name: 'SearchResultEntryPoint[]'
+    spec.typeScript:
+      - name: SearchResultEntryPoint
+        fullName: SearchResultEntryPoint
+        uid: azure-maps-rest.atlas.service.Models.SearchResultEntryPoint
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.CoordinateAbbreviated
+    name: CoordinateAbbreviated
+    spec.typeScript:
+      - name: CoordinateAbbreviated
+        fullName: CoordinateAbbreviated
+        uid: azure-maps-rest.atlas.service.Models.CoordinateAbbreviated
+  - uid: azure-maps-rest.atlas.service.Models.SearchResultViewport
+    name: SearchResultViewport
+    spec.typeScript:
+      - name: SearchResultViewport
+        fullName: SearchResultViewport
+        uid: azure-maps-rest.atlas.service.Models.SearchResultViewport
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchAddressReverseCrossStreetResult[]
+    name: 'SearchAddressReverseCrossStreetResult[]'
+    spec.typeScript:
+      - name: SearchAddressReverseCrossStreetResult
+        fullName: SearchAddressReverseCrossStreetResult
+        uid: >-
+          azure-maps-rest.atlas.service.Models.SearchAddressReverseCrossStreetResult
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchAddressReverseCrossStreetSummary
+    name: SearchAddressReverseCrossStreetSummary
+    spec.typeScript:
+      - name: SearchAddressReverseCrossStreetSummary
+        fullName: SearchAddressReverseCrossStreetSummary
+        uid: >-
+          azure-maps-rest.atlas.service.Models.SearchAddressReverseCrossStreetSummary
+  - uid: 'azure-maps-rest.atlas.service.Models.SearchAddressReverseResult[]'
+    name: 'SearchAddressReverseResult[]'
+    spec.typeScript:
+      - name: SearchAddressReverseResult
+        fullName: SearchAddressReverseResult
+        uid: azure-maps-rest.atlas.service.Models.SearchAddressReverseResult
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.SearchAddressReverseSummary
+    name: SearchAddressReverseSummary
+    spec.typeScript:
+      - name: SearchAddressReverseSummary
+        fullName: SearchAddressReverseSummary
+        uid: azure-maps-rest.atlas.service.Models.SearchAddressReverseSummary
+  - uid: 'azure-maps-rest.atlas.service.Models.SearchAddressStructuredResult[]'
+    name: 'SearchAddressStructuredResult[]'
+    spec.typeScript:
+      - name: SearchAddressStructuredResult
+        fullName: SearchAddressStructuredResult
+        uid: azure-maps-rest.atlas.service.Models.SearchAddressStructuredResult
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.SearchAddressStructuredSummary
+    name: SearchAddressStructuredSummary
+    spec.typeScript:
+      - name: SearchAddressStructuredSummary
+        fullName: SearchAddressStructuredSummary
+        uid: azure-maps-rest.atlas.service.Models.SearchAddressStructuredSummary
+  - uid: azure-maps-rest.atlas.service.Models.SearchResultAddressRanges
+    name: SearchResultAddressRanges
+    spec.typeScript:
+      - name: SearchResultAddressRanges
+        fullName: SearchResultAddressRanges
+        uid: azure-maps-rest.atlas.service.Models.SearchResultAddressRanges
+  - uid: azure-maps-rest.atlas.service.Models.SearchSummaryGeoBias
+    name: SearchSummaryGeoBias
+    spec.typeScript:
+      - name: SearchSummaryGeoBias
+        fullName: SearchSummaryGeoBias
+        uid: azure-maps-rest.atlas.service.Models.SearchSummaryGeoBias
+  - uid: azure-maps-rest.atlas.service.Models.GeoJSONLineString
+    name: GeoJSONLineString
+    spec.typeScript:
+      - name: GeoJSONLineString
+        fullName: GeoJSONLineString
+        uid: azure-maps-rest.atlas.service.Models.GeoJSONLineString
+  - uid: 'azure-maps-rest.atlas.service.Models.SearchAlongRouteResult[]'
+    name: 'SearchAlongRouteResult[]'
+    spec.typeScript:
+      - name: SearchAlongRouteResult
+        fullName: SearchAlongRouteResult
+        uid: azure-maps-rest.atlas.service.Models.SearchAlongRouteResult
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.SearchAlongRouteSummary
+    name: SearchAlongRouteSummary
+    spec.typeScript:
+      - name: SearchAlongRouteSummary
+        fullName: SearchAlongRouteSummary
+        uid: azure-maps-rest.atlas.service.Models.SearchAlongRouteSummary
+  - uid: azure-maps-rest.atlas.service.Models.SearchResultPoi
+    name: SearchResultPoi
+    spec.typeScript:
+      - name: SearchResultPoi
+        fullName: SearchResultPoi
+        uid: azure-maps-rest.atlas.service.Models.SearchResultPoi
+  - uid: 'azure-maps-rest.atlas.service.Models.SearchFuzzyResult[]'
+    name: 'SearchFuzzyResult[]'
+    spec.typeScript:
+      - name: SearchFuzzyResult
+        fullName: SearchFuzzyResult
+        uid: azure-maps-rest.atlas.service.Models.SearchFuzzyResult
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.SearchFuzzySummary
+    name: SearchFuzzySummary
+    spec.typeScript:
+      - name: SearchFuzzySummary
+        fullName: SearchFuzzySummary
+        uid: azure-maps-rest.atlas.service.Models.SearchFuzzySummary
+  - uid: 'azure-maps-rest.atlas.service.Models.SearchGeometryResult[]'
+    name: 'SearchGeometryResult[]'
+    spec.typeScript:
+      - name: SearchGeometryResult
+        fullName: SearchGeometryResult
+        uid: azure-maps-rest.atlas.service.Models.SearchGeometryResult
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.SearchGeometrySummary
+    name: SearchGeometrySummary
+    spec.typeScript:
+      - name: SearchGeometrySummary
+        fullName: SearchGeometrySummary
+        uid: azure-maps-rest.atlas.service.Models.SearchGeometrySummary
+  - uid: 'azure-maps-rest.atlas.service.Models.SearchIndexSet[]'
+    name: 'SearchIndexSet[]'
+    spec.typeScript:
+      - name: SearchIndexSet
+        fullName: SearchIndexSet
+        uid: azure-maps-rest.atlas.service.Models.SearchIndexSet
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-rest.atlas.service.Models.SearchNearbyResult[]'
+    name: 'SearchNearbyResult[]'
+    spec.typeScript:
+      - name: SearchNearbyResult
+        fullName: SearchNearbyResult
+        uid: azure-maps-rest.atlas.service.Models.SearchNearbyResult
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.SearchNearbySummary
+    name: SearchNearbySummary
+    spec.typeScript:
+      - name: SearchNearbySummary
+        fullName: SearchNearbySummary
+        uid: azure-maps-rest.atlas.service.Models.SearchNearbySummary
+  - uid: 'azure-maps-rest.atlas.service.Models.SearchPoiCategoryResult[]'
+    name: 'SearchPoiCategoryResult[]'
+    spec.typeScript:
+      - name: SearchPoiCategoryResult
+        fullName: SearchPoiCategoryResult
+        uid: azure-maps-rest.atlas.service.Models.SearchPoiCategoryResult
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.SearchPoiCategorySummary
+    name: SearchPoiCategorySummary
+    spec.typeScript:
+      - name: SearchPoiCategorySummary
+        fullName: SearchPoiCategorySummary
+        uid: azure-maps-rest.atlas.service.Models.SearchPoiCategorySummary
+  - uid: 'azure-maps-rest.atlas.service.Models.SearchPoiResult[]'
+    name: 'SearchPoiResult[]'
+    spec.typeScript:
+      - name: SearchPoiResult
+        fullName: SearchPoiResult
+        uid: azure-maps-rest.atlas.service.Models.SearchPoiResult
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.SearchPoiSummary
+    name: SearchPoiSummary
+    spec.typeScript:
+      - name: SearchPoiSummary
+        fullName: SearchPoiSummary
+        uid: azure-maps-rest.atlas.service.Models.SearchPoiSummary
+  - uid: 'azure-maps-rest.atlas.service.Models.SearchPolygonResult[]'
+    name: 'SearchPolygonResult[]'
+    spec.typeScript:
+      - name: SearchPolygonResult
+        fullName: SearchPolygonResult
+        uid: azure-maps-rest.atlas.service.Models.SearchPolygonResult
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.Type
+    name: Type
+    spec.typeScript:
+      - name: Type
+        fullName: Type
+        uid: azure-maps-rest.atlas.service.Models.Type
+  - uid: 'azure-maps-rest.atlas.service.Models.SearchResultPoiClassification[]'
+    name: 'SearchResultPoiClassification[]'
+    spec.typeScript:
+      - name: SearchResultPoiClassification
+        fullName: SearchResultPoiClassification
+        uid: azure-maps-rest.atlas.service.Models.SearchResultPoiClassification
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-rest.atlas.service.Models.SearchResultPoiClassificationName[]'
+    name: 'SearchResultPoiClassificationName[]'
+    spec.typeScript:
+      - name: SearchResultPoiClassificationName
+        fullName: SearchResultPoiClassificationName
+        uid: azure-maps-rest.atlas.service.Models.SearchResultPoiClassificationName
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Aborter
+    name: Aborter
+    spec.typeScript:
+      - name: Aborter
+        fullName: Aborter
+        uid: azure-maps-rest.atlas.service.Aborter
+  - uid: azure-maps-rest.atlas.service.IRequestLogOptions
+    name: IRequestLogOptions
+    spec.typeScript:
+      - name: IRequestLogOptions
+        fullName: IRequestLogOptions
+        uid: azure-maps-rest.atlas.service.IRequestLogOptions
+  - uid: azure-maps-rest.atlas.service.Credential
+    name: Credential
+    spec.typeScript:
+      - name: Credential
+        fullName: Credential
+        uid: azure-maps-rest.atlas.service.Credential
+  - uid: azure-maps-rest.atlas.Map
+    name: Map
+    spec.typeScript:
+      - name: Map
+        fullName: Map
+        uid: azure-maps-rest.atlas.Map
+  - uid: azure-maps-rest.atlas.service.MapControlCredentialPolicy
+    name: MapControlCredentialPolicy
+    spec.typeScript:
+      - name: MapControlCredentialPolicy
+        fullName: MapControlCredentialPolicy
+        uid: azure-maps-rest.atlas.service.MapControlCredentialPolicy
+  - uid: azure-maps-rest.atlas.service.CredentialPolicy
+    name: CredentialPolicy
+    spec.typeScript:
+      - name: CredentialPolicy
+        fullName: CredentialPolicy
+        uid: azure-maps-rest.atlas.service.CredentialPolicy
+  - uid: azure-maps-rest.atlas.service.INewPipelineOptions
+    name: INewPipelineOptions
+    spec.typeScript:
+      - name: INewPipelineOptions
+        fullName: INewPipelineOptions
+        uid: azure-maps-rest.atlas.service.INewPipelineOptions
+  - uid: azure-maps-rest.atlas.service.Pipeline
+    name: Pipeline
+    spec.typeScript:
+      - name: Pipeline
+        fullName: Pipeline
+        uid: azure-maps-rest.atlas.service.Pipeline
+  - uid: azure-maps-rest.atlas.service.IPipelineOptions
+    name: IPipelineOptions
+    spec.typeScript:
+      - name: IPipelineOptions
+        fullName: IPipelineOptions
+        uid: azure-maps-rest.atlas.service.IPipelineOptions
+  - uid: azure-maps-rest.atlas.service.IRetryOptions
+    name: IRetryOptions
+    spec.typeScript:
+      - name: IRetryOptions
+        fullName: IRetryOptions
+        uid: azure-maps-rest.atlas.service.IRetryOptions
+  - uid: azure-maps-rest.atlas.service.MapsURL
+    name: MapsURL
+    spec.typeScript:
+      - name: MapsURL
+        fullName: MapsURL
+        uid: azure-maps-rest.atlas.service.MapsURL
+  - uid: azure-maps-rest.atlas.service.CalculateRouteDirectionsOptions
+    name: CalculateRouteDirectionsOptions
+    spec.typeScript:
+      - name: CalculateRouteDirectionsOptions
+        fullName: CalculateRouteDirectionsOptions
+        uid: azure-maps-rest.atlas.service.CalculateRouteDirectionsOptions
+  - uid: Promise<azure-maps-rest.atlas.service.CalculateRouteDirectionsResponse>
+    name: CalculateRouteDirectionsResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: CalculateRouteDirectionsResponse
+        fullName: CalculateRouteDirectionsResponse
+        uid: azure-maps-rest.atlas.service.CalculateRouteDirectionsResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.atlas.service.SearchAddressOptions
+    name: SearchAddressOptions
+    spec.typeScript:
+      - name: SearchAddressOptions
+        fullName: SearchAddressOptions
+        uid: azure-maps-rest.atlas.service.SearchAddressOptions
+  - uid: Promise<azure-maps-rest.atlas.service.SearchAddressResponse>
+    name: SearchAddressResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SearchAddressResponse
+        fullName: SearchAddressResponse
+        uid: azure-maps-rest.atlas.service.SearchAddressResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.atlas.service.SearchAddressReverseOptions
+    name: SearchAddressReverseOptions
+    spec.typeScript:
+      - name: SearchAddressReverseOptions
+        fullName: SearchAddressReverseOptions
+        uid: azure-maps-rest.atlas.service.SearchAddressReverseOptions
+  - uid: Promise<azure-maps-rest.atlas.service.SearchAddressReverseResponse>
+    name: SearchAddressReverseResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SearchAddressReverseResponse
+        fullName: SearchAddressReverseResponse
+        uid: azure-maps-rest.atlas.service.SearchAddressReverseResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.atlas.service.SearchAddressReverseCrossStreetOptions
+    name: SearchAddressReverseCrossStreetOptions
+    spec.typeScript:
+      - name: SearchAddressReverseCrossStreetOptions
+        fullName: SearchAddressReverseCrossStreetOptions
+        uid: azure-maps-rest.atlas.service.SearchAddressReverseCrossStreetOptions
+  - uid: >-
+      Promise<azure-maps-rest.atlas.service.SearchAddressReverseCrossStreetResponse>
+    name: SearchAddressReverseCrossStreetResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SearchAddressReverseCrossStreetResponse
+        fullName: SearchAddressReverseCrossStreetResponse
+        uid: azure-maps-rest.atlas.service.SearchAddressReverseCrossStreetResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.atlas.service.SearchAddressStructuredOptions
+    name: SearchAddressStructuredOptions
+    spec.typeScript:
+      - name: SearchAddressStructuredOptions
+        fullName: SearchAddressStructuredOptions
+        uid: azure-maps-rest.atlas.service.SearchAddressStructuredOptions
+  - uid: Promise<azure-maps-rest.atlas.service.SearchAddressStructuredResponse>
+    name: SearchAddressStructuredResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SearchAddressStructuredResponse
+        fullName: SearchAddressStructuredResponse
+        uid: azure-maps-rest.atlas.service.SearchAddressStructuredResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.atlas.service.Models.SearchAlongRouteRequestBody
+    name: SearchAlongRouteRequestBody
+    spec.typeScript:
+      - name: SearchAlongRouteRequestBody
+        fullName: SearchAlongRouteRequestBody
+        uid: azure-maps-rest.atlas.service.Models.SearchAlongRouteRequestBody
+  - uid: azure-maps-rest.atlas.service.SearchAlongRouteOptions
+    name: SearchAlongRouteOptions
+    spec.typeScript:
+      - name: SearchAlongRouteOptions
+        fullName: SearchAlongRouteOptions
+        uid: azure-maps-rest.atlas.service.SearchAlongRouteOptions
+  - uid: Promise<azure-maps-rest.atlas.service.SearchAlongRouteResponse>
+    name: SearchAlongRouteResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SearchAlongRouteResponse
+        fullName: SearchAlongRouteResponse
+        uid: azure-maps-rest.atlas.service.SearchAlongRouteResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.atlas.service.SearchFuzzyOptions
+    name: SearchFuzzyOptions
+    spec.typeScript:
+      - name: SearchFuzzyOptions
+        fullName: SearchFuzzyOptions
+        uid: azure-maps-rest.atlas.service.SearchFuzzyOptions
+  - uid: Promise<azure-maps-rest.atlas.service.SearchFuzzyResponse>
+    name: SearchFuzzyResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SearchFuzzyResponse
+        fullName: SearchFuzzyResponse
+        uid: azure-maps-rest.atlas.service.SearchFuzzyResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.atlas.service.Models.SearchInsideGeometryRequestBody
+    name: SearchInsideGeometryRequestBody
+    spec.typeScript:
+      - name: SearchInsideGeometryRequestBody
+        fullName: SearchInsideGeometryRequestBody
+        uid: azure-maps-rest.atlas.service.Models.SearchInsideGeometryRequestBody
+  - uid: azure-maps-rest.atlas.service.SearchInsideGeometryOptions
+    name: SearchInsideGeometryOptions
+    spec.typeScript:
+      - name: SearchInsideGeometryOptions
+        fullName: SearchInsideGeometryOptions
+        uid: azure-maps-rest.atlas.service.SearchInsideGeometryOptions
+  - uid: Promise<azure-maps-rest.atlas.service.SearchInsideGeometryResponse>
+    name: SearchInsideGeometryResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SearchInsideGeometryResponse
+        fullName: SearchInsideGeometryResponse
+        uid: azure-maps-rest.atlas.service.SearchInsideGeometryResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.atlas.service.SearchNearbyOptions
+    name: SearchNearbyOptions
+    spec.typeScript:
+      - name: SearchNearbyOptions
+        fullName: SearchNearbyOptions
+        uid: azure-maps-rest.atlas.service.SearchNearbyOptions
+  - uid: Promise<azure-maps-rest.atlas.service.SearchNearbyResponse>
+    name: SearchNearbyResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SearchNearbyResponse
+        fullName: SearchNearbyResponse
+        uid: azure-maps-rest.atlas.service.SearchNearbyResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.atlas.service.SearchPOIOptions
+    name: SearchPOIOptions
+    spec.typeScript:
+      - name: SearchPOIOptions
+        fullName: SearchPOIOptions
+        uid: azure-maps-rest.atlas.service.SearchPOIOptions
+  - uid: Promise<azure-maps-rest.atlas.service.SearchPOIResponse>
+    name: SearchPOIResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SearchPOIResponse
+        fullName: SearchPOIResponse
+        uid: azure-maps-rest.atlas.service.SearchPOIResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.atlas.service.SearchPOICategoryOptions
+    name: SearchPOICategoryOptions
+    spec.typeScript:
+      - name: SearchPOICategoryOptions
+        fullName: SearchPOICategoryOptions
+        uid: azure-maps-rest.atlas.service.SearchPOICategoryOptions
+  - uid: Promise<azure-maps-rest.atlas.service.SearchPOICategoryResponse>
+    name: SearchPOICategoryResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SearchPOICategoryResponse
+        fullName: SearchPOICategoryResponse
+        uid: azure-maps-rest.atlas.service.SearchPOICategoryResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.atlas.service.SubscriptionKeyCredentialPolicy
+    name: SubscriptionKeyCredentialPolicy
+    spec.typeScript:
+      - name: SubscriptionKeyCredentialPolicy
+        fullName: SubscriptionKeyCredentialPolicy
+        uid: azure-maps-rest.atlas.service.SubscriptionKeyCredentialPolicy
+  - uid: azure-maps-rest.atlas.service.TokenCredentialPolicy
+    name: TokenCredentialPolicy
+    spec.typeScript:
+      - name: TokenCredentialPolicy
+        fullName: TokenCredentialPolicy
+        uid: azure-maps-rest.atlas.service.TokenCredentialPolicy
+  - uid: azure-maps-rest.atlas.service.TokenCredential
+    name: TokenCredential
+    spec.typeScript:
+      - name: TokenCredential
+        fullName: TokenCredential
+        uid: azure-maps-rest.atlas.service.TokenCredential
+  - uid: azure-maps-rest.atlas.service.IHttpClient
+    name: IHttpClient
+    spec.typeScript:
+      - name: IHttpClient
+        fullName: IHttpClient
+        uid: azure-maps-rest.atlas.service.IHttpClient
+  - uid: azure-maps-rest.atlas.service.IHttpPipelineLogger
+    name: IHttpPipelineLogger
+    spec.typeScript:
+      - name: IHttpPipelineLogger
+        fullName: IHttpPipelineLogger
+        uid: azure-maps-rest.atlas.service.IHttpPipelineLogger
+  - uid: azure-maps-rest.atlas.service.RetryPolicyType
+    name: RetryPolicyType
+    spec.typeScript:
+      - name: RetryPolicyType
+        fullName: RetryPolicyType
+        uid: azure-maps-rest.atlas.service.RetryPolicyType
+  - uid: azure-maps-rest.atlas.service.RequestPolicyFactory
+    name: RequestPolicyFactory
+    spec.typeScript:
+      - name: RequestPolicyFactory
+        fullName: RequestPolicyFactory
+        uid: azure-maps-rest.atlas.service.RequestPolicyFactory
+  - uid: azure-maps-rest.atlas.RequestParameters
+    name: RequestParameters
+    spec.typeScript:
+      - name: RequestParameters
+        fullName: RequestParameters
+        uid: azure-maps-rest.atlas.RequestParameters
+  - uid: azure-maps-rest.atlas.AuthenticationManager
+    name: AuthenticationManager
+    spec.typeScript:
+      - name: AuthenticationManager
+        fullName: AuthenticationManager
+        uid: azure-maps-rest.atlas.AuthenticationManager

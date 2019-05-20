@@ -5,17 +5,15 @@ items:
     fullName: math
     children:
       - azure-maps-control.atlas.math.AccelerationUnits
-      - azure-maps-control.atlas.math.AreaUnits
-      - azure-maps-control.atlas.math.DistanceUnits
-      - azure-maps-control.atlas.math.SpeedUnits
-      - azure-maps-control.atlas.math.TimeUnits
       - azure-maps-control.atlas.math.AffineTransform
+      - azure-maps-control.atlas.math.AreaUnits
       - azure-maps-control.atlas.math.boundingBoxToPolygon
       - azure-maps-control.atlas.math.convertAcceleration
       - azure-maps-control.atlas.math.convertArea
       - azure-maps-control.atlas.math.convertDistance
       - azure-maps-control.atlas.math.convertSpeed
       - azure-maps-control.atlas.math.convertTimespan
+      - azure-maps-control.atlas.math.DistanceUnits
       - azure-maps-control.atlas.math.getAcceleration
       - azure-maps-control.atlas.math.getAccelerationFromFeatures
       - azure-maps-control.atlas.math.getAccelerationFromSpeeds
@@ -30,8 +28,8 @@ items:
       - azure-maps-control.atlas.math.getHeading
       - azure-maps-control.atlas.math.getLengthOfPath
       - azure-maps-control.atlas.math.getPixelHeading
-      - azure-maps-control.atlas.math.getPointWithHeadingAlongPath
       - azure-maps-control.atlas.math.getPointsWithHeadingsAlongPath
+      - azure-maps-control.atlas.math.getPointWithHeadingAlongPath
       - azure-maps-control.atlas.math.getPosition
       - azure-maps-control.atlas.math.getPositionAlongPath
       - azure-maps-control.atlas.math.getPositions
@@ -48,6 +46,8 @@ items:
       - azure-maps-control.atlas.math.normalizeLongitude
       - azure-maps-control.atlas.math.parseTimestamp
       - azure-maps-control.atlas.math.rotatePositions
+      - azure-maps-control.atlas.math.SpeedUnits
+      - azure-maps-control.atlas.math.TimeUnits
     langs:
       - typeScript
     type: module
@@ -831,6 +831,34 @@ items:
         type:
           - number
     package: azure-maps-control
+  - uid: azure-maps-control.atlas.math.getPointsWithHeadingsAlongPath
+    name: 'getPointsWithHeadingsAlongPath(LineString | Position[], number)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Gets an array of evenly spaced points with headings along a path.
+    syntax:
+      content: >-
+        function getPointsWithHeadingsAlongPath(path: LineString | Position[],
+        numPoints: number)
+      parameters:
+        - id: path
+          type:
+            - >-
+              azure-maps-control.atlas.data.LineString |
+              azure-maps-control.atlas.data.Position[]
+          description: The path to get the positions from.
+        - id: numPoints
+          type:
+            - number
+          description: The number of points to get.
+      return:
+        type:
+          - >-
+            Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+            Object>>
+    package: azure-maps-control
   - uid: azure-maps-control.atlas.math.getPointWithHeadingAlongPath
     name: >-
       getPointWithHeadingAlongPath(LineString | Position[], number, string |
@@ -865,34 +893,6 @@ items:
           - >-
             azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
             Object>
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.math.getPointsWithHeadingsAlongPath
-    name: 'getPointsWithHeadingsAlongPath(LineString | Position[], number)'
-    children: []
-    type: function
-    langs:
-      - typeScript
-    summary: Gets an array of evenly spaced points with headings along a path.
-    syntax:
-      content: >-
-        function getPointsWithHeadingsAlongPath(path: LineString | Position[],
-        numPoints: number)
-      parameters:
-        - id: path
-          type:
-            - >-
-              azure-maps-control.atlas.data.LineString |
-              azure-maps-control.atlas.data.Position[]
-          description: The path to get the positions from.
-        - id: numPoints
-          type:
-            - number
-          description: The number of points to get.
-      return:
-        type:
-          - >-
-            Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
-            Object>>
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.getPosition
     name: 'getPosition(Position | Point | Feature<Point, any>)'
@@ -2688,10 +2688,6 @@ references:
         uid: azure-maps-control.atlas.Expression
   - uid: azure-maps-control.atlas.math.AccelerationUnits
     name: AccelerationUnits
-  - uid: azure-maps-control.atlas.math.DistanceUnits
-    name: DistanceUnits
-  - uid: azure-maps-control.atlas.math.SpeedUnits
-    name: SpeedUnits
   - uid: azure-maps-control.atlas.math.AffineTransform
     name: AffineTransform
   - uid: azure-maps-control.atlas.math.boundingBoxToPolygon
@@ -2706,6 +2702,8 @@ references:
     name: convertSpeed
   - uid: azure-maps-control.atlas.math.convertTimespan
     name: convertTimespan
+  - uid: azure-maps-control.atlas.math.DistanceUnits
+    name: DistanceUnits
   - uid: azure-maps-control.atlas.math.getAcceleration
     name: getAcceleration
   - uid: azure-maps-control.atlas.math.getAccelerationFromFeatures
@@ -2734,10 +2732,10 @@ references:
     name: getLengthOfPath
   - uid: azure-maps-control.atlas.math.getPixelHeading
     name: getPixelHeading
-  - uid: azure-maps-control.atlas.math.getPointWithHeadingAlongPath
-    name: getPointWithHeadingAlongPath
   - uid: azure-maps-control.atlas.math.getPointsWithHeadingsAlongPath
     name: getPointsWithHeadingsAlongPath
+  - uid: azure-maps-control.atlas.math.getPointWithHeadingAlongPath
+    name: getPointWithHeadingAlongPath
   - uid: azure-maps-control.atlas.math.getPosition
     name: getPosition
   - uid: azure-maps-control.atlas.math.getPositionAlongPath
@@ -2770,3 +2768,5 @@ references:
     name: parseTimestamp
   - uid: azure-maps-control.atlas.math.rotatePositions
     name: rotatePositions
+  - uid: azure-maps-control.atlas.math.SpeedUnits
+    name: SpeedUnits

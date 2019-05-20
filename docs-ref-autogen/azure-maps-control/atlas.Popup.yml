@@ -4,35 +4,18 @@ items:
     name: Popup
     fullName: Popup
     children:
-      - azure-maps-control.atlas.Popup.constructor
       - azure-maps-control.atlas.Popup.attach
       - azure-maps-control.atlas.Popup.close
+      - azure-maps-control.atlas.Popup.getOptions
       - azure-maps-control.atlas.Popup.isOpen
       - azure-maps-control.atlas.Popup.open
+      - azure-maps-control.atlas.Popup.constructor
       - azure-maps-control.atlas.Popup.remove
-      - azure-maps-control.atlas.Popup.getOptions
       - azure-maps-control.atlas.Popup.setOptions
     langs:
       - typeScript
     type: class
     summary: An information window anchored at a specified position on a map.
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Popup.constructor
-    name: Popup(PopupOptions)
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: Constructs a Popup object and initializes it with the specified options.
-    syntax:
-      content: 'new Popup(options?: PopupOptions)'
-      parameters:
-        - id: options
-          type:
-            - azure-maps-control.atlas.PopupOptions
-          description: |
-            The options for the popup.
-          optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Popup.attach
     name: attach
@@ -64,6 +47,20 @@ items:
         type:
           - () => void
     package: azure-maps-control
+  - uid: azure-maps-control.atlas.Popup.getOptions
+    name: getOptions()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the options for the popup.
+    syntax:
+      content: function getOptions()
+      parameters: []
+      return:
+        type:
+          - azure-maps-control.atlas.PopupOptions
+    package: azure-maps-control
   - uid: azure-maps-control.atlas.Popup.isOpen
     name: isOpen
     fullName: isOpen
@@ -92,6 +89,23 @@ items:
         type:
           - '(map: Map) => void'
     package: azure-maps-control
+  - uid: azure-maps-control.atlas.Popup.constructor
+    name: Popup(PopupOptions)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a Popup object and initializes it with the specified options.
+    syntax:
+      content: 'new Popup(options?: PopupOptions)'
+      parameters:
+        - id: options
+          type:
+            - azure-maps-control.atlas.PopupOptions
+          description: |
+            The options for the popup.
+          optional: true
+    package: azure-maps-control
   - uid: azure-maps-control.atlas.Popup.remove
     name: remove
     fullName: remove
@@ -105,20 +119,6 @@ items:
       return:
         type:
           - () => void
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Popup.getOptions
-    name: getOptions()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Returns the options for the popup.
-    syntax:
-      content: function getOptions()
-      parameters: []
-      return:
-        type:
-          - azure-maps-control.atlas.PopupOptions
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Popup.setOptions
     name: setOptions(PopupOptions)

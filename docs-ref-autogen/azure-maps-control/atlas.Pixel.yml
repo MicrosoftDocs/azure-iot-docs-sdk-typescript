@@ -4,27 +4,23 @@ items:
     name: Pixel
     fullName: Pixel
     children:
-      - azure-maps-control.atlas.Pixel.constructor
-      - azure-maps-control.atlas.Pixel.length
       - azure-maps-control.atlas.Pixel.Array
       - azure-maps-control.atlas.Pixel.concat
       - azure-maps-control.atlas.Pixel.concat_1
-      - azure-maps-control.atlas.Pixel.copyWithin
-      - azure-maps-control.atlas.Pixel.entries
       - azure-maps-control.atlas.Pixel.every
-      - azure-maps-control.atlas.Pixel.fill
-      - azure-maps-control.atlas.Pixel.filter
       - azure-maps-control.atlas.Pixel.filter_1
-      - azure-maps-control.atlas.Pixel.find
-      - azure-maps-control.atlas.Pixel.find_1
-      - azure-maps-control.atlas.Pixel.findIndex
+      - azure-maps-control.atlas.Pixel.filter
       - azure-maps-control.atlas.Pixel.forEach
-      - azure-maps-control.atlas.Pixel.includes
+      - azure-maps-control.atlas.Pixel.fromData
+      - azure-maps-control.atlas.Pixel.getDistance
+      - azure-maps-control.atlas.Pixel.getX
+      - azure-maps-control.atlas.Pixel.getY
       - azure-maps-control.atlas.Pixel.indexOf
       - azure-maps-control.atlas.Pixel.join
-      - azure-maps-control.atlas.Pixel.keys
       - azure-maps-control.atlas.Pixel.lastIndexOf
+      - azure-maps-control.atlas.Pixel.length
       - azure-maps-control.atlas.Pixel.map
+      - azure-maps-control.atlas.Pixel.constructor
       - azure-maps-control.atlas.Pixel.pop
       - azure-maps-control.atlas.Pixel.push
       - azure-maps-control.atlas.Pixel.reduce
@@ -43,55 +39,12 @@ items:
       - azure-maps-control.atlas.Pixel.toLocaleString
       - azure-maps-control.atlas.Pixel.toString
       - azure-maps-control.atlas.Pixel.unshift
-      - azure-maps-control.atlas.Pixel.values
-      - azure-maps-control.atlas.Pixel.fromData
-      - azure-maps-control.atlas.Pixel.getDistance
-      - azure-maps-control.atlas.Pixel.getX
-      - azure-maps-control.atlas.Pixel.getY
     langs:
       - typeScript
     type: class
     summary: 'Represent a pixel coordinate or offset. Extends an array of [x, y].'
     extends:
       name: Array<number>
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Pixel.constructor
-    name: 'Pixel(number, number)'
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: >-
-      Constructs a Pixel object and initializes it with the specified x and y
-      coordinates.
-    syntax:
-      content: 'new Pixel(x: number, y: number)'
-      parameters:
-        - id: x
-          type:
-            - number
-          description: The horizontal pixel offset.
-        - id: 'y'
-          type:
-            - number
-          description: |
-            The vertical pixel offset.
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Pixel.length
-    name: length
-    fullName: length
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      Gets or sets the length of the array. This is a number one higher than the
-      highest element defined in an array.
-    syntax:
-      content: 'length: number'
-      return:
-        type:
-          - number
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Pixel.Array
     name: Array
@@ -145,61 +98,6 @@ items:
         type:
           - 'number[]'
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.Pixel.copyWithin
-    name: 'copyWithin(number, number, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the this object after copying a section of the array identified by
-      start and end
-
-      to the same array starting at position target
-    syntax:
-      content: 'function copyWithin(target: number, start: number, end?: number)'
-      parameters:
-        - id: target
-          type:
-            - number
-          description: >-
-            If target is negative, it is treated as length+target where length
-            is the
-
-            length of the array.
-        - id: start
-          type:
-            - number
-          description: >-
-            If start is negative, it is treated as length+start. If end is
-            negative, it
-
-            is treated as length+end.
-        - id: end
-          type:
-            - number
-          description: >
-            If not specified, length of the this object is used as its default
-            value.
-          optional: true
-      return:
-        type:
-          - this
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Pixel.entries
-    name: entries()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: 'Returns an iterable of key, value pairs for every entry in the array'
-    syntax:
-      content: function entries()
-      parameters: []
-      return:
-        type:
-          - IterableIterator<Object>
-    package: azure-maps-control
   - uid: azure-maps-control.atlas.Pixel.every
     name: 'every((value: number, index: number, array: number[]) => boolean, any)'
     children: []
@@ -230,77 +128,6 @@ items:
       return:
         type:
           - boolean
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Pixel.fill
-    name: 'fill(number, number, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the this object after filling the section identified by start and
-      end with value
-    syntax:
-      content: 'function fill(value: number, start?: number, end?: number)'
-      parameters:
-        - id: value
-          type:
-            - number
-          description: value to fill array section with
-        - id: start
-          type:
-            - number
-          description: >-
-            index to start filling the array at. If start is negative, it is
-            treated as
-
-            length+start where length is the length of the array.
-          optional: true
-        - id: end
-          type:
-            - number
-          description: >
-            index to stop filling the array at. If end is negative, it is
-            treated as
-
-            length+end.
-          optional: true
-      return:
-        type:
-          - this
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Pixel.filter
-    name: 'filter((value: number, index: number, array: number[]) => boolean, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter<S>(callbackfn: (value: number, index: number, array:
-        number[]) => boolean, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: number, index: number, array: number[]) => boolean'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - 'S[]'
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Pixel.filter_1
     name: 'filter((value: number, index: number, array: number[]) => any, any)'
@@ -335,120 +162,38 @@ items:
         type:
           - 'number[]'
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.Pixel.find
-    name: >-
-      find((this: void, value: number, index: number, obj: number[]) => boolean,
-      any)
+  - uid: azure-maps-control.atlas.Pixel.filter
+    name: 'filter((value: number, index: number, array: number[]) => boolean, any)'
     children: []
     type: method
     langs:
       - typeScript
     summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
     syntax:
       content: >-
-        function find<S>(predicate: (this: void, value: number, index: number,
-        obj: number[]) => boolean, thisArg?: any)
-      parameters:
-        - id: predicate
-          type:
-            - >-
-              (this: void, value: number, index: number, obj: number[]) =>
-              boolean
-          description: >-
-            find calls predicate once for each element of the array, in
-            ascending
-
-            order, until it finds one where predicate returns true. If such an
-            element is found, find
-
-            immediately returns that element value. Otherwise, find returns
-            undefined.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            If provided, it will be used as the this value for each invocation
-            of
-
-            predicate. If it is not provided, undefined is used instead.
-          optional: true
-      return:
-        type:
-          - S | undefined
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Pixel.find_1
-    name: 'find((value: number, index: number, obj: number[]) => boolean, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
-    syntax:
-      content: >-
-        function find(predicate: (value: number, index: number, obj: number[])
-        => boolean, thisArg?: any)
-      parameters:
-        - id: predicate
-          type:
-            - '(value: number, index: number, obj: number[]) => boolean'
-          description: ''
-        - id: thisArg
-          type:
-            - any
-          description: ''
-          optional: true
-      return:
-        type:
-          - number | undefined
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Pixel.findIndex
-    name: 'findIndex((value: number, index: number, obj: number[]) => boolean, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the index of the first element in the array where predicate is
-      true, and -1
-
-      otherwise.
-    syntax:
-      content: >-
-        function findIndex(predicate: (value: number, index: number, obj:
+        function filter<S>(callbackfn: (value: number, index: number, array:
         number[]) => boolean, thisArg?: any)
       parameters:
-        - id: predicate
+        - id: callbackfn
           type:
-            - '(value: number, index: number, obj: number[]) => boolean'
+            - '(value: number, index: number, array: number[]) => boolean'
           description: >-
-            find calls predicate once for each element of the array, in
-            ascending
-
-            order, until it finds one where predicate returns true. If such an
-            element is found,
-
-            findIndex immediately returns that element index. Otherwise,
-            findIndex returns -1.
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
         - id: thisArg
           type:
             - any
           description: >
-            If provided, it will be used as the this value for each invocation
-            of
-
-            predicate. If it is not provided, undefined is used instead.
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
           optional: true
       return:
         type:
-          - number
+          - 'S[]'
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Pixel.forEach
     name: 'forEach((value: number, index: number, array: number[]) => void, any)'
@@ -477,32 +222,91 @@ items:
             value.
           optional: true
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.Pixel.includes
-    name: 'includes(number, number)'
+  - uid: azure-maps-control.atlas.Pixel.fromData
+    name: fromData(object)
     children: []
     type: method
     langs:
       - typeScript
     summary: >-
-      Determines whether an array includes a certain element, returning true or
-      false as appropriate.
+      Generates a Pixel object from an object that contains coordinate
+      information.
+
+      The object is scanned for x and y properties using a case insensitive
+      test.
     syntax:
-      content: 'function includes(searchElement: number, fromIndex?: number)'
+      content: 'static function fromData(data: object)'
       parameters:
-        - id: searchElement
+        - id: data
           type:
-            - number
-          description: The element to search for.
-        - id: fromIndex
-          type:
-            - number
-          description: >
-            The position in this array at which to begin searching for
-            searchElement.
-          optional: true
+            - object
+          description: The object to extract coordinate information from.
       return:
         type:
-          - boolean
+          - azure-maps-control.atlas.Pixel
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Pixel.getDistance
+    name: 'getDistance(Pixel, Pixel)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Calculates the distance between two pixels.
+      Returned value is in screen pixel units.
+    syntax:
+      content: 'static function getDistance(p1: Pixel, p2: Pixel)'
+      parameters:
+        - id: p1
+          type:
+            - azure-maps-control.atlas.Pixel
+          description: The first pixel.
+        - id: p2
+          type:
+            - azure-maps-control.atlas.Pixel
+          description: |
+            The second pixel.
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Pixel.getX
+    name: getX(Pixel)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Return the x coordinate of the specified pixel.
+    syntax:
+      content: 'static function getX(pixel: Pixel)'
+      parameters:
+        - id: pixel
+          type:
+            - azure-maps-control.atlas.Pixel
+          description: |
+            The pixel to get the x coordinate of.
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Pixel.getY
+    name: getY(Pixel)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Return the y coordinate of the specified pixel.
+    syntax:
+      content: 'static function getY(pixel: Pixel)'
+      parameters:
+        - id: pixel
+          type:
+            - azure-maps-control.atlas.Pixel
+          description: |
+            The pixel to get the y coordinate of.
+      return:
+        type:
+          - number
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Pixel.indexOf
     name: 'indexOf(number, number)'
@@ -553,20 +357,6 @@ items:
         type:
           - string
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.Pixel.keys
-    name: keys()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Returns an iterable of keys in the array
-    syntax:
-      content: function keys()
-      parameters: []
-      return:
-        type:
-          - IterableIterator<number>
-    package: azure-maps-control
   - uid: azure-maps-control.atlas.Pixel.lastIndexOf
     name: 'lastIndexOf(number, number)'
     children: []
@@ -588,6 +378,22 @@ items:
             The array index at which to begin the search. If fromIndex is
             omitted, the search starts at the last index in the array.
           optional: true
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Pixel.length
+    name: length
+    fullName: length
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Gets or sets the length of the array. This is a number one higher than the
+      highest element defined in an array.
+    syntax:
+      content: 'length: number'
       return:
         type:
           - number
@@ -623,6 +429,28 @@ items:
       return:
         type:
           - 'U[]'
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Pixel.constructor
+    name: 'Pixel(number, number)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: >-
+      Constructs a Pixel object and initializes it with the specified x and y
+      coordinates.
+    syntax:
+      content: 'new Pixel(x: number, y: number)'
+      parameters:
+        - id: x
+          type:
+            - number
+          description: The horizontal pixel offset.
+        - id: 'y'
+          type:
+            - number
+          description: |
+            The vertical pixel offset.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Pixel.pop
     name: pop()
@@ -1070,106 +898,6 @@ items:
             - 'number[]'
           description: |
             Elements to insert at the start of the Array.
-      return:
-        type:
-          - number
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Pixel.values
-    name: values()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Returns an iterable of values in the array
-    syntax:
-      content: function values()
-      parameters: []
-      return:
-        type:
-          - IterableIterator<number>
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Pixel.fromData
-    name: fromData(object)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Generates a Pixel object from an object that contains coordinate
-      information.
-
-      The object is scanned for x and y properties using a case insensitive
-      test.
-    syntax:
-      content: 'static function fromData(data: object)'
-      parameters:
-        - id: data
-          type:
-            - object
-          description: The object to extract coordinate information from.
-      return:
-        type:
-          - azure-maps-control.atlas.Pixel
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Pixel.getDistance
-    name: 'getDistance(Pixel, Pixel)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: |-
-      Calculates the distance between two pixels.
-      Returned value is in screen pixel units.
-    syntax:
-      content: 'static function getDistance(p1: Pixel, p2: Pixel)'
-      parameters:
-        - id: p1
-          type:
-            - azure-maps-control.atlas.Pixel
-          description: The first pixel.
-        - id: p2
-          type:
-            - azure-maps-control.atlas.Pixel
-          description: |
-            The second pixel.
-      return:
-        type:
-          - number
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Pixel.getX
-    name: getX(Pixel)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Return the x coordinate of the specified pixel.
-    syntax:
-      content: 'static function getX(pixel: Pixel)'
-      parameters:
-        - id: pixel
-          type:
-            - azure-maps-control.atlas.Pixel
-          description: |
-            The pixel to get the x coordinate of.
-      return:
-        type:
-          - number
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Pixel.getY
-    name: getY(Pixel)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Return the y coordinate of the specified pixel.
-    syntax:
-      content: 'static function getY(pixel: Pixel)'
-      parameters:
-        - id: pixel
-          type:
-            - azure-maps-control.atlas.Pixel
-          description: |
-            The pixel to get the y coordinate of.
       return:
         type:
           - number

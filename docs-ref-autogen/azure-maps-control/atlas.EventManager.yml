@@ -4,31 +4,31 @@ items:
     name: EventManager
     fullName: EventManager
     children:
-      - azure-maps-control.atlas.EventManager.add
-      - azure-maps-control.atlas.EventManager.add_1
-      - azure-maps-control.atlas.EventManager.add_2
-      - azure-maps-control.atlas.EventManager.add_3
       - azure-maps-control.atlas.EventManager.add_4
-      - azure-maps-control.atlas.EventManager.add_5
-      - azure-maps-control.atlas.EventManager.add_6
-      - azure-maps-control.atlas.EventManager.add_7
       - azure-maps-control.atlas.EventManager.add_8
+      - azure-maps-control.atlas.EventManager.add_3
+      - azure-maps-control.atlas.EventManager.add_1
+      - azure-maps-control.atlas.EventManager.add_6
       - azure-maps-control.atlas.EventManager.add_9
-      - azure-maps-control.atlas.EventManager.addOnce
-      - azure-maps-control.atlas.EventManager.addOnce_1
-      - azure-maps-control.atlas.EventManager.addOnce_2
-      - azure-maps-control.atlas.EventManager.addOnce_3
+      - azure-maps-control.atlas.EventManager.add
+      - azure-maps-control.atlas.EventManager.add_5
+      - azure-maps-control.atlas.EventManager.add_2
+      - azure-maps-control.atlas.EventManager.add_7
       - azure-maps-control.atlas.EventManager.addOnce_4
-      - azure-maps-control.atlas.EventManager.addOnce_5
-      - azure-maps-control.atlas.EventManager.addOnce_6
-      - azure-maps-control.atlas.EventManager.addOnce_7
       - azure-maps-control.atlas.EventManager.addOnce_8
+      - azure-maps-control.atlas.EventManager.addOnce_3
+      - azure-maps-control.atlas.EventManager.addOnce_1
+      - azure-maps-control.atlas.EventManager.addOnce_6
       - azure-maps-control.atlas.EventManager.addOnce_9
+      - azure-maps-control.atlas.EventManager.addOnce
+      - azure-maps-control.atlas.EventManager.addOnce_5
+      - azure-maps-control.atlas.EventManager.addOnce_2
+      - azure-maps-control.atlas.EventManager.addOnce_7
       - azure-maps-control.atlas.EventManager.invoke
       - azure-maps-control.atlas.EventManager.invoke_1
       - azure-maps-control.atlas.EventManager.remove
-      - azure-maps-control.atlas.EventManager.remove_1
       - azure-maps-control.atlas.EventManager.remove_2
+      - azure-maps-control.atlas.EventManager.remove_1
       - azure-maps-control.atlas.EventManager.remove_3
     langs:
       - typeScript
@@ -37,99 +37,6 @@ items:
       A manager for the map control's events.
       Exposed through the events property of the atlas.Map class.
       Cannot be instantiated by the user.
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add
-    name: >-
-      add("touchstart" | "touchend" | "touchmove" | "touchcancel", (e:
-      MapTouchEvent) => void)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Adds a touch event to the map.
-    syntax:
-      content: >-
-        function add(eventType: "touchstart" | "touchend" | "touchmove" |
-        "touchcancel", callback: (e: MapTouchEvent) => void)
-      parameters:
-        - id: eventType
-          type:
-            - '"touchstart" | "touchend" | "touchmove" | "touchcancel"'
-          description: The touch event name.
-        - id: callback
-          type:
-            - '(e: MapTouchEvent) => void'
-          description: |
-            The event handler callback.
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add_1
-    name: >-
-      add("mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
-      "dblclick" | "mouseout" | "contextmenu", (e: MapMouseEvent) => void)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Adds a mouse event to the map.
-    syntax:
-      content: >-
-        function add(eventType: "mousedown" | "mouseup" | "mouseover" |
-        "mousemove" | "click" | "dblclick" | "mouseout" | "contextmenu",
-        callback: (e: MapMouseEvent) => void)
-      parameters:
-        - id: eventType
-          type:
-            - >-
-              "mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
-              "dblclick" | "mouseout" | "contextmenu"
-          description: The mouse event name.
-        - id: callback
-          type:
-            - '(e: MapMouseEvent) => void'
-          description: |
-            The event handler callback.
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add_2
-    name: 'add("wheel", (e: MapMouseWheelEvent) => void)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Adds a wheel event to the map.
-    syntax:
-      content: >-
-        function add(eventType: "wheel", callback: (e: MapMouseWheelEvent) =>
-        void)
-      parameters:
-        - id: eventType
-          type:
-            - '"wheel"'
-          description: The wheel event name.
-        - id: callback
-          type:
-            - '(e: MapMouseWheelEvent) => void'
-          description: |
-            The event handler callback.
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add_3
-    name: 'add("error", (e: MapErrorEvent) => void)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Adds an event to the map.
-    syntax:
-      content: 'function add(eventType: "error", callback: (e: MapErrorEvent) => void)'
-      parameters:
-        - id: eventType
-          type:
-            - '"error"'
-          description: The error event name.
-        - id: callback
-          type:
-            - '(e: MapErrorEvent) => void'
-          description: |
-            The event handler callback.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.EventManager.add_4
     name: >-
@@ -163,101 +70,6 @@ items:
         - id: callback
           type:
             - '(e: MapEvent) => void'
-          description: |
-            The event handler callback.
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add_5
-    name: >-
-      add("touchstart" | "touchend" | "touchmove" | "touchcancel", Layer |
-      Layer[], (e: MapTouchEvent) => void)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Adds a touch event to the map.
-    syntax:
-      content: >-
-        function add(eventType: "touchstart" | "touchend" | "touchmove" |
-        "touchcancel", target: Layer | Layer[], callback: (e: MapTouchEvent) =>
-        void)
-      parameters:
-        - id: eventType
-          type:
-            - '"touchstart" | "touchend" | "touchmove" | "touchcancel"'
-          description: The touch event name.
-        - id: target
-          type:
-            - >-
-              azure-maps-control.atlas.layer.Layer |
-              azure-maps-control.atlas.layer.Layer[]
-          description: The layer(s) to add the event for.
-        - id: callback
-          type:
-            - '(e: MapTouchEvent) => void'
-          description: |
-            The event handler callback.
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add_6
-    name: >-
-      add("mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
-      "dblclick" | "mouseout" | "mouseenter" | "mouseleave" | "contextmenu",
-      Layer | Layer[], (e: MapMouseEvent) => void)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Adds a mouse event to the map.
-    syntax:
-      content: >-
-        function add(eventType: "mousedown" | "mouseup" | "mouseover" |
-        "mousemove" | "click" | "dblclick" | "mouseout" | "mouseenter" |
-        "mouseleave" | "contextmenu", target: Layer | Layer[], callback: (e:
-        MapMouseEvent) => void)
-      parameters:
-        - id: eventType
-          type:
-            - >-
-              "mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
-              "dblclick" | "mouseout" | "mouseenter" | "mouseleave" |
-              "contextmenu"
-          description: The mouse event name.
-        - id: target
-          type:
-            - >-
-              azure-maps-control.atlas.layer.Layer |
-              azure-maps-control.atlas.layer.Layer[]
-          description: The layer(s) to add the event for.
-        - id: callback
-          type:
-            - '(e: MapMouseEvent) => void'
-          description: |
-            The event handler callback.
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add_7
-    name: 'add("wheel", Layer | Layer[], (e: MapMouseWheelEvent) => void)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Adds a wheel event to the map.
-    syntax:
-      content: >-
-        function add(eventType: "wheel", target: Layer | Layer[], callback: (e:
-        MapMouseWheelEvent) => void)
-      parameters:
-        - id: eventType
-          type:
-            - '"wheel"'
-          description: The wheel event name.
-        - id: target
-          type:
-            - >-
-              azure-maps-control.atlas.layer.Layer |
-              azure-maps-control.atlas.layer.Layer[]
-          description: The layer(s) to add the event for.
-        - id: callback
-          type:
-            - '(e: MapMouseWheelEvent) => void'
           description: |
             The event handler callback.
     package: azure-maps-control
@@ -298,6 +110,89 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.add_3
+    name: 'add("error", (e: MapErrorEvent) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds an event to the map.
+    syntax:
+      content: 'function add(eventType: "error", callback: (e: MapErrorEvent) => void)'
+      parameters:
+        - id: eventType
+          type:
+            - '"error"'
+          description: The error event name.
+        - id: callback
+          type:
+            - '(e: MapErrorEvent) => void'
+          description: |
+            The event handler callback.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.add_1
+    name: >-
+      add("mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
+      "dblclick" | "mouseout" | "contextmenu", (e: MapMouseEvent) => void)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds a mouse event to the map.
+    syntax:
+      content: >-
+        function add(eventType: "mousedown" | "mouseup" | "mouseover" |
+        "mousemove" | "click" | "dblclick" | "mouseout" | "contextmenu",
+        callback: (e: MapMouseEvent) => void)
+      parameters:
+        - id: eventType
+          type:
+            - >-
+              "mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
+              "dblclick" | "mouseout" | "contextmenu"
+          description: The mouse event name.
+        - id: callback
+          type:
+            - '(e: MapMouseEvent) => void'
+          description: |
+            The event handler callback.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.add_6
+    name: >-
+      add("mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
+      "dblclick" | "mouseout" | "mouseenter" | "mouseleave" | "contextmenu",
+      Layer | Layer[], (e: MapMouseEvent) => void)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds a mouse event to the map.
+    syntax:
+      content: >-
+        function add(eventType: "mousedown" | "mouseup" | "mouseover" |
+        "mousemove" | "click" | "dblclick" | "mouseout" | "mouseenter" |
+        "mouseleave" | "contextmenu", target: Layer | Layer[], callback: (e:
+        MapMouseEvent) => void)
+      parameters:
+        - id: eventType
+          type:
+            - >-
+              "mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
+              "dblclick" | "mouseout" | "mouseenter" | "mouseleave" |
+              "contextmenu"
+          description: The mouse event name.
+        - id: target
+          type:
+            - >-
+              azure-maps-control.atlas.layer.Layer |
+              azure-maps-control.atlas.layer.Layer[]
+          description: The layer(s) to add the event for.
+        - id: callback
+          type:
+            - '(e: MapMouseEvent) => void'
+          description: |
+            The event handler callback.
+    package: azure-maps-control
   - uid: azure-maps-control.atlas.EventManager.add_9
     name: 'add("open" | "close", Popup | Popup[], (e: TargetedEvent) => void)'
     children: []
@@ -324,9 +219,9 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce
+  - uid: azure-maps-control.atlas.EventManager.add
     name: >-
-      addOnce("touchstart" | "touchend" | "touchmove" | "touchcancel", (e:
+      add("touchstart" | "touchend" | "touchmove" | "touchcancel", (e:
       MapTouchEvent) => void)
     children: []
     type: method
@@ -335,7 +230,7 @@ items:
     summary: Adds a touch event to the map.
     syntax:
       content: >-
-        function addOnce(eventType: "touchstart" | "touchend" | "touchmove" |
+        function add(eventType: "touchstart" | "touchend" | "touchmove" |
         "touchcancel", callback: (e: MapTouchEvent) => void)
       parameters:
         - id: eventType
@@ -347,42 +242,40 @@ items:
             - '(e: MapTouchEvent) => void'
           description: |
             The event handler callback.
-      return:
-        type:
-          - any
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_1
+  - uid: azure-maps-control.atlas.EventManager.add_5
     name: >-
-      addOnce("mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
-      "dblclick" | "mouseout" | "contextmenu", (e: MapMouseEvent) => void)
+      add("touchstart" | "touchend" | "touchmove" | "touchcancel", Layer |
+      Layer[], (e: MapTouchEvent) => void)
     children: []
     type: method
     langs:
       - typeScript
-    summary: Adds a mouse event to the map.
+    summary: Adds a touch event to the map.
     syntax:
       content: >-
-        function addOnce(eventType: "mousedown" | "mouseup" | "mouseover" |
-        "mousemove" | "click" | "dblclick" | "mouseout" | "contextmenu",
-        callback: (e: MapMouseEvent) => void)
+        function add(eventType: "touchstart" | "touchend" | "touchmove" |
+        "touchcancel", target: Layer | Layer[], callback: (e: MapTouchEvent) =>
+        void)
       parameters:
         - id: eventType
           type:
+            - '"touchstart" | "touchend" | "touchmove" | "touchcancel"'
+          description: The touch event name.
+        - id: target
+          type:
             - >-
-              "mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
-              "dblclick" | "mouseout" | "contextmenu"
-          description: The mouse event name.
+              azure-maps-control.atlas.layer.Layer |
+              azure-maps-control.atlas.layer.Layer[]
+          description: The layer(s) to add the event for.
         - id: callback
           type:
-            - '(e: MapMouseEvent) => void'
+            - '(e: MapTouchEvent) => void'
           description: |
             The event handler callback.
-      return:
-        type:
-          - any
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_2
-    name: 'addOnce("wheel", (e: MapMouseWheelEvent) => void)'
+  - uid: azure-maps-control.atlas.EventManager.add_2
+    name: 'add("wheel", (e: MapMouseWheelEvent) => void)'
     children: []
     type: method
     langs:
@@ -390,8 +283,8 @@ items:
     summary: Adds a wheel event to the map.
     syntax:
       content: >-
-        function addOnce(eventType: "wheel", callback: (e: MapMouseWheelEvent)
-        => void)
+        function add(eventType: "wheel", callback: (e: MapMouseWheelEvent) =>
+        void)
       parameters:
         - id: eventType
           type:
@@ -402,34 +295,34 @@ items:
             - '(e: MapMouseWheelEvent) => void'
           description: |
             The event handler callback.
-      return:
-        type:
-          - any
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_3
-    name: 'addOnce("error", (e: MapErrorEvent) => void)'
+  - uid: azure-maps-control.atlas.EventManager.add_7
+    name: 'add("wheel", Layer | Layer[], (e: MapMouseWheelEvent) => void)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: Adds an event to the map.
+    summary: Adds a wheel event to the map.
     syntax:
       content: >-
-        function addOnce(eventType: "error", callback: (e: MapErrorEvent) =>
-        void)
+        function add(eventType: "wheel", target: Layer | Layer[], callback: (e:
+        MapMouseWheelEvent) => void)
       parameters:
         - id: eventType
           type:
-            - '"error"'
-          description: The error event name.
+            - '"wheel"'
+          description: The wheel event name.
+        - id: target
+          type:
+            - >-
+              azure-maps-control.atlas.layer.Layer |
+              azure-maps-control.atlas.layer.Layer[]
+          description: The layer(s) to add the event for.
         - id: callback
           type:
-            - '(e: MapErrorEvent) => void'
+            - '(e: MapMouseWheelEvent) => void'
           description: |
             The event handler callback.
-      return:
-        type:
-          - any
     package: azure-maps-control
   - uid: azure-maps-control.atlas.EventManager.addOnce_4
     name: >-
@@ -463,103 +356,6 @@ items:
         - id: callback
           type:
             - '(e: MapEvent) => void'
-          description: |
-            The event handler callback.
-      return:
-        type:
-          - any
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_5
-    name: >-
-      addOnce("touchstart" | "touchend" | "touchmove" | "touchcancel", Layer,
-      (e: MapTouchEvent) => void)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Adds a touch event to the map.
-    syntax:
-      content: >-
-        function addOnce(eventType: "touchstart" | "touchend" | "touchmove" |
-        "touchcancel", target: Layer, callback: (e: MapTouchEvent) => void)
-      parameters:
-        - id: eventType
-          type:
-            - '"touchstart" | "touchend" | "touchmove" | "touchcancel"'
-          description: The touch event name.
-        - id: target
-          type:
-            - azure-maps-control.atlas.layer.Layer
-          description: The layer(s) to add the event for.
-        - id: callback
-          type:
-            - '(e: MapTouchEvent) => void'
-          description: |
-            The event handler callback.
-      return:
-        type:
-          - any
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_6
-    name: >-
-      addOnce("mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
-      "dblclick" | "mouseout" | "mouseenter" | "mouseleave" | "contextmenu",
-      Layer, (e: MapMouseEvent) => void)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Adds a mouse event to the map.
-    syntax:
-      content: >-
-        function addOnce(eventType: "mousedown" | "mouseup" | "mouseover" |
-        "mousemove" | "click" | "dblclick" | "mouseout" | "mouseenter" |
-        "mouseleave" | "contextmenu", target: Layer, callback: (e:
-        MapMouseEvent) => void)
-      parameters:
-        - id: eventType
-          type:
-            - >-
-              "mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
-              "dblclick" | "mouseout" | "mouseenter" | "mouseleave" |
-              "contextmenu"
-          description: The mouse event name.
-        - id: target
-          type:
-            - azure-maps-control.atlas.layer.Layer
-          description: The layer(s) to add the event for.
-        - id: callback
-          type:
-            - '(e: MapMouseEvent) => void'
-          description: |
-            The event handler callback.
-      return:
-        type:
-          - any
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_7
-    name: 'addOnce("wheel", Layer, (e: MapMouseWheelEvent) => void)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Adds a wheel event to the map.
-    syntax:
-      content: >-
-        function addOnce(eventType: "wheel", target: Layer, callback: (e:
-        MapMouseWheelEvent) => void)
-      parameters:
-        - id: eventType
-          type:
-            - '"wheel"'
-          description: The wheel event name.
-        - id: target
-          type:
-            - azure-maps-control.atlas.layer.Layer
-          description: The layer(s) to add the event for.
-        - id: callback
-          type:
-            - '(e: MapMouseWheelEvent) => void'
           description: |
             The event handler callback.
       return:
@@ -604,6 +400,98 @@ items:
         type:
           - any
     package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.addOnce_3
+    name: 'addOnce("error", (e: MapErrorEvent) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds an event to the map.
+    syntax:
+      content: >-
+        function addOnce(eventType: "error", callback: (e: MapErrorEvent) =>
+        void)
+      parameters:
+        - id: eventType
+          type:
+            - '"error"'
+          description: The error event name.
+        - id: callback
+          type:
+            - '(e: MapErrorEvent) => void'
+          description: |
+            The event handler callback.
+      return:
+        type:
+          - any
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.addOnce_1
+    name: >-
+      addOnce("mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
+      "dblclick" | "mouseout" | "contextmenu", (e: MapMouseEvent) => void)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds a mouse event to the map.
+    syntax:
+      content: >-
+        function addOnce(eventType: "mousedown" | "mouseup" | "mouseover" |
+        "mousemove" | "click" | "dblclick" | "mouseout" | "contextmenu",
+        callback: (e: MapMouseEvent) => void)
+      parameters:
+        - id: eventType
+          type:
+            - >-
+              "mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
+              "dblclick" | "mouseout" | "contextmenu"
+          description: The mouse event name.
+        - id: callback
+          type:
+            - '(e: MapMouseEvent) => void'
+          description: |
+            The event handler callback.
+      return:
+        type:
+          - any
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.addOnce_6
+    name: >-
+      addOnce("mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
+      "dblclick" | "mouseout" | "mouseenter" | "mouseleave" | "contextmenu",
+      Layer, (e: MapMouseEvent) => void)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds a mouse event to the map.
+    syntax:
+      content: >-
+        function addOnce(eventType: "mousedown" | "mouseup" | "mouseover" |
+        "mousemove" | "click" | "dblclick" | "mouseout" | "mouseenter" |
+        "mouseleave" | "contextmenu", target: Layer, callback: (e:
+        MapMouseEvent) => void)
+      parameters:
+        - id: eventType
+          type:
+            - >-
+              "mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
+              "dblclick" | "mouseout" | "mouseenter" | "mouseleave" |
+              "contextmenu"
+          description: The mouse event name.
+        - id: target
+          type:
+            - azure-maps-control.atlas.layer.Layer
+          description: The layer(s) to add the event for.
+        - id: callback
+          type:
+            - '(e: MapMouseEvent) => void'
+          description: |
+            The event handler callback.
+      return:
+        type:
+          - any
+    package: azure-maps-control
   - uid: azure-maps-control.atlas.EventManager.addOnce_9
     name: 'addOnce("open" | "close", Popup, (e: TargetedEvent) => void)'
     children: []
@@ -627,6 +515,118 @@ items:
         - id: callback
           type:
             - '(e: TargetedEvent) => void'
+          description: |
+            The event handler callback.
+      return:
+        type:
+          - any
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.addOnce
+    name: >-
+      addOnce("touchstart" | "touchend" | "touchmove" | "touchcancel", (e:
+      MapTouchEvent) => void)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds a touch event to the map.
+    syntax:
+      content: >-
+        function addOnce(eventType: "touchstart" | "touchend" | "touchmove" |
+        "touchcancel", callback: (e: MapTouchEvent) => void)
+      parameters:
+        - id: eventType
+          type:
+            - '"touchstart" | "touchend" | "touchmove" | "touchcancel"'
+          description: The touch event name.
+        - id: callback
+          type:
+            - '(e: MapTouchEvent) => void'
+          description: |
+            The event handler callback.
+      return:
+        type:
+          - any
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.addOnce_5
+    name: >-
+      addOnce("touchstart" | "touchend" | "touchmove" | "touchcancel", Layer,
+      (e: MapTouchEvent) => void)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds a touch event to the map.
+    syntax:
+      content: >-
+        function addOnce(eventType: "touchstart" | "touchend" | "touchmove" |
+        "touchcancel", target: Layer, callback: (e: MapTouchEvent) => void)
+      parameters:
+        - id: eventType
+          type:
+            - '"touchstart" | "touchend" | "touchmove" | "touchcancel"'
+          description: The touch event name.
+        - id: target
+          type:
+            - azure-maps-control.atlas.layer.Layer
+          description: The layer(s) to add the event for.
+        - id: callback
+          type:
+            - '(e: MapTouchEvent) => void'
+          description: |
+            The event handler callback.
+      return:
+        type:
+          - any
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.addOnce_2
+    name: 'addOnce("wheel", (e: MapMouseWheelEvent) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds a wheel event to the map.
+    syntax:
+      content: >-
+        function addOnce(eventType: "wheel", callback: (e: MapMouseWheelEvent)
+        => void)
+      parameters:
+        - id: eventType
+          type:
+            - '"wheel"'
+          description: The wheel event name.
+        - id: callback
+          type:
+            - '(e: MapMouseWheelEvent) => void'
+          description: |
+            The event handler callback.
+      return:
+        type:
+          - any
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.addOnce_7
+    name: 'addOnce("wheel", Layer, (e: MapMouseWheelEvent) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds a wheel event to the map.
+    syntax:
+      content: >-
+        function addOnce(eventType: "wheel", target: Layer, callback: (e:
+        MapMouseWheelEvent) => void)
+      parameters:
+        - id: eventType
+          type:
+            - '"wheel"'
+          description: The wheel event name.
+        - id: target
+          type:
+            - azure-maps-control.atlas.layer.Layer
+          description: The layer(s) to add the event for.
+        - id: callback
+          type:
+            - '(e: MapMouseWheelEvent) => void'
           description: |
             The event handler callback.
       return:
@@ -720,6 +720,34 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.remove_2
+    name: 'remove(string, HtmlMarker | HtmlMarker[], (e: TargetedEvent) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Removes an event listener from the HtmlMarker(s).
+    syntax:
+      content: >-
+        function remove(eventType: string, target: HtmlMarker | HtmlMarker[],
+        callback: (e: TargetedEvent) => void)
+      parameters:
+        - id: eventType
+          type:
+            - string
+          description: The event name.
+        - id: target
+          type:
+            - >-
+              azure-maps-control.atlas.HtmlMarker |
+              azure-maps-control.atlas.HtmlMarker[]
+          description: The HtmlMarker(s) to remove the event for.
+        - id: callback
+          type:
+            - '(e: TargetedEvent) => void'
+          description: |
+            The event handler callback.
+    package: azure-maps-control
   - uid: azure-maps-control.atlas.EventManager.remove_1
     name: >-
       remove(string, Layer | Layer[], (e: void | MapMouseEvent | MapTouchEvent |
@@ -749,34 +777,6 @@ items:
             - >-
               (e: void | MapMouseEvent | MapTouchEvent | MapMouseWheelEvent) =>
               void
-          description: |
-            The event handler callback.
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.remove_2
-    name: 'remove(string, HtmlMarker | HtmlMarker[], (e: TargetedEvent) => void)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Removes an event listener from the HtmlMarker(s).
-    syntax:
-      content: >-
-        function remove(eventType: string, target: HtmlMarker | HtmlMarker[],
-        callback: (e: TargetedEvent) => void)
-      parameters:
-        - id: eventType
-          type:
-            - string
-          description: The event name.
-        - id: target
-          type:
-            - >-
-              azure-maps-control.atlas.HtmlMarker |
-              azure-maps-control.atlas.HtmlMarker[]
-          description: The HtmlMarker(s) to remove the event for.
-        - id: callback
-          type:
-            - '(e: TargetedEvent) => void'
           description: |
             The event handler callback.
     package: azure-maps-control

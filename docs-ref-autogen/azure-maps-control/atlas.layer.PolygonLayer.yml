@@ -4,11 +4,11 @@ items:
     name: PolygonLayer
     fullName: PolygonLayer
     children:
-      - azure-maps-control.atlas.layer.PolygonLayer.constructor
-      - azure-maps-control.atlas.layer.PolygonLayer.metadata
       - azure-maps-control.atlas.layer.PolygonLayer.getId
       - azure-maps-control.atlas.layer.PolygonLayer.getOptions
       - azure-maps-control.atlas.layer.PolygonLayer.getSource
+      - azure-maps-control.atlas.layer.PolygonLayer.metadata
+      - azure-maps-control.atlas.layer.PolygonLayer.constructor
       - azure-maps-control.atlas.layer.PolygonLayer.setOptions
     langs:
       - typeScript
@@ -16,51 +16,6 @@ items:
     summary: Renders filled Polygon and MultiPolygon objects on the map.
     extends:
       name: azure-maps-control.atlas.layer.Layer
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.PolygonLayer.constructor
-    name: 'PolygonLayer(string | Source, string, PolygonLayerOptions)'
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: Constructs a new PolygonLayer.
-    syntax:
-      content: >-
-        new PolygonLayer(source: string | Source, id?: string, options?:
-        PolygonLayerOptions)
-      parameters:
-        - id: source
-          type:
-            - string | azure-maps-control.atlas.source.Source
-          description: The id or instance of a data source which the layer will render.
-        - id: id
-          type:
-            - string
-          description: >-
-            The id of the layer. If not specified a random one will be
-            generated.
-          optional: true
-        - id: options
-          type:
-            - azure-maps-control.atlas.PolygonLayerOptions
-          description: |
-            The options of the polygon layer.
-          optional: true
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.PolygonLayer.metadata
-    name: metadata
-    fullName: metadata
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: A property for associating custom data with the layer.
-    optional: true
-    syntax:
-      content: 'metadata?: any'
-      return:
-        type:
-          - any
     package: azure-maps-control
   - uid: azure-maps-control.atlas.layer.PolygonLayer.getId
     name: getId()
@@ -103,6 +58,51 @@ items:
       return:
         type:
           - string | azure-maps-control.atlas.source.Source
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.PolygonLayer.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A property for associating custom data with the layer.
+    optional: true
+    syntax:
+      content: 'metadata?: any'
+      return:
+        type:
+          - any
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.PolygonLayer.constructor
+    name: 'PolygonLayer(string | Source, string, PolygonLayerOptions)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a new PolygonLayer.
+    syntax:
+      content: >-
+        new PolygonLayer(source: string | Source, id?: string, options?:
+        PolygonLayerOptions)
+      parameters:
+        - id: source
+          type:
+            - string | azure-maps-control.atlas.source.Source
+          description: The id or instance of a data source which the layer will render.
+        - id: id
+          type:
+            - string
+          description: >-
+            The id of the layer. If not specified a random one will be
+            generated.
+          optional: true
+        - id: options
+          type:
+            - azure-maps-control.atlas.PolygonLayerOptions
+          description: |
+            The options of the polygon layer.
+          optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.layer.PolygonLayer.setOptions
     name: setOptions(PolygonLayerOptions)

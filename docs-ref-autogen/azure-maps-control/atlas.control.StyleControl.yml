@@ -4,30 +4,13 @@ items:
     name: StyleControl
     fullName: StyleControl
     children:
-      - azure-maps-control.atlas.control.StyleControl.constructor
       - azure-maps-control.atlas.control.StyleControl.onAdd
       - azure-maps-control.atlas.control.StyleControl.onRemove
+      - azure-maps-control.atlas.control.StyleControl.constructor
     langs:
       - typeScript
     type: class
     summary: A control for changing the style of the map.
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.control.StyleControl.constructor
-    name: StyleControl(StyleControlOptions)
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: Constructs a StyleControl.
-    syntax:
-      content: 'new StyleControl(options?: StyleControlOptions)'
-      parameters:
-        - id: options
-          type:
-            - azure-maps-control.atlas.StyleControlOptions
-          description: |
-            The options for the control.
-          optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.control.StyleControl.onAdd
     name: 'onAdd(Map, ControlOptions)'
@@ -68,6 +51,23 @@ items:
     syntax:
       content: function onRemove()
       parameters: []
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.control.StyleControl.constructor
+    name: StyleControl(StyleControlOptions)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a StyleControl.
+    syntax:
+      content: 'new StyleControl(options?: StyleControlOptions)'
+      parameters:
+        - id: options
+          type:
+            - azure-maps-control.atlas.StyleControlOptions
+          description: |
+            The options for the control.
+          optional: true
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions

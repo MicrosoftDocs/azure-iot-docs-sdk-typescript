@@ -4,9 +4,9 @@ items:
     name: DataSource
     fullName: DataSource
     children:
+      - azure-maps-control.atlas.source.DataSource.constructor
       - azure-maps-control.atlas.source.DataSource.add
       - azure-maps-control.atlas.source.DataSource.clear
-      - azure-maps-control.atlas.source.DataSource.constructor
       - azure-maps-control.atlas.source.DataSource.dispose
       - azure-maps-control.atlas.source.DataSource.getClusterChildren
       - azure-maps-control.atlas.source.DataSource.getClusterExpansionZoom
@@ -33,6 +33,38 @@ items:
       PolygonLayer, BubbleLayer, and HeatMapLayer.
     extends:
       name: azure-maps-control.atlas.source.Source
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.source.DataSource.constructor
+    name: 'DataSource(string, DataSourceOptions)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: >-
+      A data source class that makes it easy to manage shapes data that will be
+      displayed on the map.
+
+      A data source must be added to a layer before it is visible on the map.
+
+      The `DataSource` class may be used with the `SymbolLayer`, `LineLayer`,
+      `PolygonLayer`, `BubbleLayer`, and `HeatMapLayer`.
+    syntax:
+      content: 'new DataSource(id?: string, options?: DataSourceOptions)'
+      parameters:
+        - id: id
+          type:
+            - string
+          description: >-
+            a unique id that the user assigns to the data source. If this is not
+            specified, then the data source will automatically be assigned an
+            id.
+          optional: true
+        - id: options
+          type:
+            - azure-maps-control.atlas.DataSourceOptions
+          description: |
+            the options for the data source.
+          optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.source.DataSource.add
     name: >-
@@ -88,38 +120,6 @@ items:
     syntax:
       content: function clear()
       parameters: []
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.source.DataSource.constructor
-    name: 'DataSource(string, DataSourceOptions)'
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: >-
-      A data source class that makes it easy to manage shapes data that will be
-      displayed on the map.
-
-      A data source must be added to a layer before it is visible on the map.
-
-      The `DataSource` class may be used with the `SymbolLayer`, `LineLayer`,
-      `PolygonLayer`, `BubbleLayer`, and `HeatMapLayer`.
-    syntax:
-      content: 'new DataSource(id?: string, options?: DataSourceOptions)'
-      parameters:
-        - id: id
-          type:
-            - string
-          description: >-
-            a unique id that the user assigns to the data source. If this is not
-            specified, then the data source will automatically be assigned an
-            id.
-          optional: true
-        - id: options
-          type:
-            - azure-maps-control.atlas.DataSourceOptions
-          description: |
-            the options for the data source.
-          optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.source.DataSource.dispose
     name: dispose()

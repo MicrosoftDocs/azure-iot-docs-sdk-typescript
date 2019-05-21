@@ -4,8 +4,8 @@ items:
     name: GeometryCollection
     fullName: GeometryCollection
     children:
-      - azure-maps-control.atlas.data.GeometryCollection.geometries
       - azure-maps-control.atlas.data.GeometryCollection.constructor
+      - azure-maps-control.atlas.data.GeometryCollection.geometries
       - azure-maps-control.atlas.data.GeometryCollection.type
       - azure-maps-control.atlas.data.GeometryCollection.TYPE
     langs:
@@ -17,20 +17,6 @@ items:
 
       full description is detailed in [RFC
       7946](https://tools.ietf.org/html/rfc7946#section-3.1.8).
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.GeometryCollection.geometries
-    name: geometries
-    fullName: geometries
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The collection of GeoJSON geometries contained in the geometry collection.
-    syntax:
-      content: 'geometries: Geometry[]'
-      return:
-        type:
-          - 'azure-maps-control.atlas.data.Geometry[]'
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.GeometryCollection.constructor
     name: 'GeometryCollection(Geometry[])'
@@ -47,6 +33,20 @@ items:
             - 'azure-maps-control.atlas.data.Geometry[]'
           description: |
             The collection of geometries that make up the geometry collection.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.GeometryCollection.geometries
+    name: geometries
+    fullName: geometries
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The collection of GeoJSON geometries contained in the geometry collection.
+    syntax:
+      content: 'geometries: Geometry[]'
+      return:
+        type:
+          - 'azure-maps-control.atlas.data.Geometry[]'
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.GeometryCollection.type
     name: type

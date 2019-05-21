@@ -4,17 +4,49 @@ items:
     name: BoundingBox
     fullName: BoundingBox
     children:
-      - azure-maps-control.atlas.data.BoundingBox.Array
       - azure-maps-control.atlas.data.BoundingBox.constructor
       - azure-maps-control.atlas.data.BoundingBox.constructor_1
+      - azure-maps-control.atlas.data.BoundingBox.length
+      - azure-maps-control.atlas.data.BoundingBox.Array
       - azure-maps-control.atlas.data.BoundingBox.concat
       - azure-maps-control.atlas.data.BoundingBox.concat_1
+      - azure-maps-control.atlas.data.BoundingBox.copyWithin
+      - azure-maps-control.atlas.data.BoundingBox.entries
+      - azure-maps-control.atlas.data.BoundingBox.every
+      - azure-maps-control.atlas.data.BoundingBox.fill
+      - azure-maps-control.atlas.data.BoundingBox.filter
+      - azure-maps-control.atlas.data.BoundingBox.filter_1
+      - azure-maps-control.atlas.data.BoundingBox.find
+      - azure-maps-control.atlas.data.BoundingBox.find_1
+      - azure-maps-control.atlas.data.BoundingBox.findIndex
+      - azure-maps-control.atlas.data.BoundingBox.forEach
+      - azure-maps-control.atlas.data.BoundingBox.includes
+      - azure-maps-control.atlas.data.BoundingBox.indexOf
+      - azure-maps-control.atlas.data.BoundingBox.join
+      - azure-maps-control.atlas.data.BoundingBox.keys
+      - azure-maps-control.atlas.data.BoundingBox.lastIndexOf
+      - azure-maps-control.atlas.data.BoundingBox.map
+      - azure-maps-control.atlas.data.BoundingBox.pop
+      - azure-maps-control.atlas.data.BoundingBox.push
+      - azure-maps-control.atlas.data.BoundingBox.reduce
+      - azure-maps-control.atlas.data.BoundingBox.reduce_1
+      - azure-maps-control.atlas.data.BoundingBox.reduce_2
+      - azure-maps-control.atlas.data.BoundingBox.reduceRight
+      - azure-maps-control.atlas.data.BoundingBox.reduceRight_1
+      - azure-maps-control.atlas.data.BoundingBox.reduceRight_2
+      - azure-maps-control.atlas.data.BoundingBox.reverse
+      - azure-maps-control.atlas.data.BoundingBox.shift
+      - azure-maps-control.atlas.data.BoundingBox.slice
+      - azure-maps-control.atlas.data.BoundingBox.some
+      - azure-maps-control.atlas.data.BoundingBox.sort
+      - azure-maps-control.atlas.data.BoundingBox.splice
+      - azure-maps-control.atlas.data.BoundingBox.splice_1
+      - azure-maps-control.atlas.data.BoundingBox.toLocaleString
+      - azure-maps-control.atlas.data.BoundingBox.toString
+      - azure-maps-control.atlas.data.BoundingBox.unshift
+      - azure-maps-control.atlas.data.BoundingBox.values
       - azure-maps-control.atlas.data.BoundingBox.containsPosition
       - azure-maps-control.atlas.data.BoundingBox.crossesAntimeridian
-      - azure-maps-control.atlas.data.BoundingBox.every
-      - azure-maps-control.atlas.data.BoundingBox.filter_1
-      - azure-maps-control.atlas.data.BoundingBox.filter
-      - azure-maps-control.atlas.data.BoundingBox.forEach
       - azure-maps-control.atlas.data.BoundingBox.fromBoundingBox
       - azure-maps-control.atlas.data.BoundingBox.fromData
       - azure-maps-control.atlas.data.BoundingBox.fromDimensions
@@ -32,32 +64,9 @@ items:
       - azure-maps-control.atlas.data.BoundingBox.getSouthWest
       - azure-maps-control.atlas.data.BoundingBox.getWest
       - azure-maps-control.atlas.data.BoundingBox.getWidth
-      - azure-maps-control.atlas.data.BoundingBox.indexOf
       - azure-maps-control.atlas.data.BoundingBox.intersect
-      - azure-maps-control.atlas.data.BoundingBox.join
-      - azure-maps-control.atlas.data.BoundingBox.lastIndexOf
-      - azure-maps-control.atlas.data.BoundingBox.length
-      - azure-maps-control.atlas.data.BoundingBox.map
       - azure-maps-control.atlas.data.BoundingBox.merge
-      - azure-maps-control.atlas.data.BoundingBox.pop
-      - azure-maps-control.atlas.data.BoundingBox.push
-      - azure-maps-control.atlas.data.BoundingBox.reduce
-      - azure-maps-control.atlas.data.BoundingBox.reduce_1
-      - azure-maps-control.atlas.data.BoundingBox.reduce_2
-      - azure-maps-control.atlas.data.BoundingBox.reduceRight
-      - azure-maps-control.atlas.data.BoundingBox.reduceRight_1
-      - azure-maps-control.atlas.data.BoundingBox.reduceRight_2
-      - azure-maps-control.atlas.data.BoundingBox.reverse
-      - azure-maps-control.atlas.data.BoundingBox.shift
-      - azure-maps-control.atlas.data.BoundingBox.slice
-      - azure-maps-control.atlas.data.BoundingBox.some
-      - azure-maps-control.atlas.data.BoundingBox.sort
-      - azure-maps-control.atlas.data.BoundingBox.splice
-      - azure-maps-control.atlas.data.BoundingBox.splice_1
       - azure-maps-control.atlas.data.BoundingBox.splitOnAntimeridian
-      - azure-maps-control.atlas.data.BoundingBox.toLocaleString
-      - azure-maps-control.atlas.data.BoundingBox.toString
-      - azure-maps-control.atlas.data.BoundingBox.unshift
     langs:
       - typeScript
     type: class
@@ -74,20 +83,6 @@ items:
       [RFC 7946](https://tools.ietf.org/html/rfc7946#section-5).
     extends:
       name: Array<number>
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.BoundingBox.Array
-    name: Array
-    fullName: Array
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      content: 'static Array: ArrayConstructor'
-      return:
-        type:
-          - ArrayConstructor
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.constructor
     name: 'BoundingBox(number[])'
@@ -128,6 +123,36 @@ items:
           description: |
             The northeastern most position of the bounding box.
     package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.length
+    name: length
+    fullName: length
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Gets or sets the length of the array. This is a number one higher than the
+      highest element defined in an array.
+    syntax:
+      content: 'length: number'
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.Array
+    name: Array
+    fullName: Array
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'static Array: ArrayConstructor'
+      return:
+        type:
+          - ArrayConstructor
+    package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.concat
     name: 'concat(ConcatArray<number>[])'
     children: []
@@ -166,49 +191,60 @@ items:
         type:
           - 'number[]'
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.BoundingBox.containsPosition
-    name: 'containsPosition(BoundingBox, Position)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Determines if a position is within a bounding box.
-    syntax:
-      content: >-
-        static function containsPosition(bounds: BoundingBox, position:
-        Position)
-      parameters:
-        - id: bounds
-          type:
-            - azure-maps-control.atlas.data.BoundingBox
-          description: The bounding box to see if the position is in.
-        - id: position
-          type:
-            - azure-maps-control.atlas.data.Position
-          description: The position to see if it is in the bounding box.
-      return:
-        type:
-          - boolean
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.BoundingBox.crossesAntimeridian
-    name: crossesAntimeridian(BoundingBox)
+  - uid: azure-maps-control.atlas.data.BoundingBox.copyWithin
+    name: 'copyWithin(number, number, number)'
     children: []
     type: method
     langs:
       - typeScript
     summary: >-
-      Returns a boolean indicating if the bounding box crosses the antimeridian
-      or not.
+      Returns the this object after copying a section of the array identified by
+      start and end
+
+      to the same array starting at position target
     syntax:
-      content: 'static function crossesAntimeridian(bounds: BoundingBox)'
+      content: 'function copyWithin(target: number, start: number, end?: number)'
       parameters:
-        - id: bounds
+        - id: target
           type:
-            - azure-maps-control.atlas.data.BoundingBox
-          description: The bounding box to check.
+            - number
+          description: >-
+            If target is negative, it is treated as length+target where length
+            is the
+
+            length of the array.
+        - id: start
+          type:
+            - number
+          description: >-
+            If start is negative, it is treated as length+start. If end is
+            negative, it
+
+            is treated as length+end.
+        - id: end
+          type:
+            - number
+          description: >
+            If not specified, length of the this object is used as its default
+            value.
+          optional: true
       return:
         type:
-          - boolean
+          - this
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.entries
+    name: entries()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Returns an iterable of key, value pairs for every entry in the array'
+    syntax:
+      content: function entries()
+      parameters: []
+      return:
+        type:
+          - IterableIterator<Object>
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.every
     name: 'every((value: number, index: number, array: number[]) => boolean, any)'
@@ -241,38 +277,43 @@ items:
         type:
           - boolean
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.BoundingBox.filter_1
-    name: 'filter((value: number, index: number, array: number[]) => any, any)'
+  - uid: azure-maps-control.atlas.data.BoundingBox.fill
+    name: 'fill(number, number, number)'
     children: []
     type: method
     langs:
       - typeScript
     summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
+      Returns the this object after filling the section identified by start and
+      end with value
     syntax:
-      content: >-
-        function filter(callbackfn: (value: number, index: number, array:
-        number[]) => any, thisArg?: any)
+      content: 'function fill(value: number, start?: number, end?: number)'
       parameters:
-        - id: callbackfn
+        - id: value
           type:
-            - '(value: number, index: number, array: number[]) => any'
+            - number
+          description: value to fill array section with
+        - id: start
+          type:
+            - number
           description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
+            index to start filling the array at. If start is negative, it is
+            treated as
+
+            length+start where length is the length of the array.
+          optional: true
+        - id: end
           type:
-            - any
+            - number
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            index to stop filling the array at. If end is negative, it is
+            treated as
+
+            length+end.
           optional: true
       return:
         type:
-          - 'number[]'
+          - this
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.filter
     name: 'filter((value: number, index: number, array: number[]) => boolean, any)'
@@ -307,6 +348,154 @@ items:
         type:
           - 'S[]'
     package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.filter_1
+    name: 'filter((value: number, index: number, array: number[]) => any, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: number, index: number, array:
+        number[]) => any, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type:
+            - '(value: number, index: number, array: number[]) => any'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+          optional: true
+      return:
+        type:
+          - 'number[]'
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.find
+    name: >-
+      find((this: void, value: number, index: number, obj: number[]) => boolean,
+      any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the value of the first element in the array where predicate is
+      true, and undefined
+
+      otherwise.
+    syntax:
+      content: >-
+        function find<S>(predicate: (this: void, value: number, index: number,
+        obj: number[]) => boolean, thisArg?: any)
+      parameters:
+        - id: predicate
+          type:
+            - >-
+              (this: void, value: number, index: number, obj: number[]) =>
+              boolean
+          description: >-
+            find calls predicate once for each element of the array, in
+            ascending
+
+            order, until it finds one where predicate returns true. If such an
+            element is found, find
+
+            immediately returns that element value. Otherwise, find returns
+            undefined.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            If provided, it will be used as the this value for each invocation
+            of
+
+            predicate. If it is not provided, undefined is used instead.
+          optional: true
+      return:
+        type:
+          - S | undefined
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.find_1
+    name: 'find((value: number, index: number, obj: number[]) => boolean, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the value of the first element in the array where predicate is
+      true, and undefined
+
+      otherwise.
+    syntax:
+      content: >-
+        function find(predicate: (value: number, index: number, obj: number[])
+        => boolean, thisArg?: any)
+      parameters:
+        - id: predicate
+          type:
+            - '(value: number, index: number, obj: number[]) => boolean'
+          description: ''
+        - id: thisArg
+          type:
+            - any
+          description: ''
+          optional: true
+      return:
+        type:
+          - number | undefined
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.findIndex
+    name: 'findIndex((value: number, index: number, obj: number[]) => boolean, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns the index of the first element in the array where predicate is
+      true, and -1
+
+      otherwise.
+    syntax:
+      content: >-
+        function findIndex(predicate: (value: number, index: number, obj:
+        number[]) => boolean, thisArg?: any)
+      parameters:
+        - id: predicate
+          type:
+            - '(value: number, index: number, obj: number[]) => boolean'
+          description: >-
+            find calls predicate once for each element of the array, in
+            ascending
+
+            order, until it finds one where predicate returns true. If such an
+            element is found,
+
+            findIndex immediately returns that element index. Otherwise,
+            findIndex returns -1.
+        - id: thisArg
+          type:
+            - any
+          description: >
+            If provided, it will be used as the this value for each invocation
+            of
+
+            predicate. If it is not provided, undefined is used instead.
+          optional: true
+      return:
+        type:
+          - number
+    package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.forEach
     name: 'forEach((value: number, index: number, array: number[]) => void, any)'
     children: []
@@ -334,365 +523,32 @@ items:
             value.
           optional: true
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.BoundingBox.fromBoundingBox
-    name: fromBoundingBox(BoundingBox)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Clones a bounding box.
-    syntax:
-      content: 'static function fromBoundingBox(boundingBox: BoundingBox)'
-      parameters:
-        - id: boundingBox
-          type:
-            - azure-maps-control.atlas.data.BoundingBox
-          description: |
-            The bounding box to clone.
-      return:
-        type:
-          - azure-maps-control.atlas.data.BoundingBox
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.BoundingBox.fromData
-    name: >-
-      fromData(FeatureCollection | Feature<Geometry, any> | Geometry | Shape |
-      Array<FeatureCollection | Feature<Geometry, any> | Geometry>)
+  - uid: azure-maps-control.atlas.data.BoundingBox.includes
+    name: 'includes(number, number)'
     children: []
     type: method
     langs:
       - typeScript
     summary: >-
-      Calculates the bounding box of a FeatureCollection, Feature, Geometry,
-      Shape or array of these objects.
+      Determines whether an array includes a certain element, returning true or
+      false as appropriate.
     syntax:
-      content: >-
-        static function fromData(data: FeatureCollection | Feature<Geometry,
-        any> | Geometry | Shape | Array<FeatureCollection | Feature<Geometry,
-        any> | Geometry>)
+      content: 'function includes(searchElement: number, fromIndex?: number)'
       parameters:
-        - id: data
-          type:
-            - >-
-              azure-maps-control.atlas.data.FeatureCollection |
-              azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
-              any> | azure-maps-control.atlas.data.Geometry |
-              azure-maps-control.atlas.Shape |
-              Array<azure-maps-control.atlas.data.FeatureCollection |
-              azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
-              any> | azure-maps-control.atlas.data.Geometry>
-          description: >-
-            The FeatureCollection, Feature, Geometry, Shape or array of these
-            objects to calculate the bounding box for.
-      return:
-        type:
-          - azure-maps-control.atlas.data.BoundingBox
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.BoundingBox.fromDimensions
-    name: 'fromDimensions(Position, number, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Constructs a BoundingBox from the specified dimensions.
-    syntax:
-      content: >-
-        static function fromDimensions(center: Position, width: number, height:
-        number)
-      parameters:
-        - id: center
-          type:
-            - azure-maps-control.atlas.data.Position
-          description: The center position of the bounding box.
-        - id: width
+        - id: searchElement
           type:
             - number
-          description: The width of the bounding box.
-        - id: height
+          description: The element to search for.
+        - id: fromIndex
           type:
             - number
-          description: |
-            The height of the bounding box.
+          description: >
+            The position in this array at which to begin searching for
+            searchElement.
+          optional: true
       return:
         type:
-          - azure-maps-control.atlas.data.BoundingBox
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.BoundingBox.fromEdges
-    name: 'fromEdges(number, number, number, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Constructs a BoundingBox from the specified edges.
-    syntax:
-      content: >-
-        static function fromEdges(west: number, south: number, east: number,
-        north: number)
-      parameters:
-        - id: west
-          type:
-            - number
-          description: The west edge of the bounding box.
-        - id: south
-          type:
-            - number
-          description: The south edge of the bounding box.
-        - id: east
-          type:
-            - number
-          description: The east edge of the bounding box.
-        - id: north
-          type:
-            - number
-          description: |
-            The north edge of the bounding box.
-      return:
-        type:
-          - azure-maps-control.atlas.data.BoundingBox
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.BoundingBox.fromLatLngs
-    name: 'fromLatLngs(Array<any | number[]>)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Creates a BoundingBox from any array of objects that contain coordinate
-      information.
-
-      Each object is either an array in the format; [lat, lng] or [lat, lng,
-      elv], or an object with the any combination of the following properties:
-
-      Longitude: lng, longitude, lon, x
-
-      Latitude: lat, latitude, y
-
-      Elevation: elv, elevation, alt, altitude, z
-    syntax:
-      content: 'static function fromLatLngs(latLngs: Array<any | number[]>)'
-      parameters:
-        - id: latLngs
-          type:
-            - 'Array<any | number[]>'
-          description: The objects that contain coordinate information.
-      return:
-        type:
-          - azure-maps-control.atlas.data.BoundingBox
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.BoundingBox.fromPositions
-    name: 'fromPositions(Position[])'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Creates a BoundingBox that contains all provided Position objects.
-    syntax:
-      content: 'static function fromPositions(positions: Position[])'
-      parameters:
-        - id: positions
-          type:
-            - 'azure-maps-control.atlas.data.Position[]'
-          description: An array of locations to use to generate the bounding box.
-      return:
-        type:
-          - azure-maps-control.atlas.data.BoundingBox
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.BoundingBox.getCenter
-    name: getCenter(BoundingBox)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Calculates the center of a bounding box.
-    syntax:
-      content: 'static function getCenter(bounds: BoundingBox)'
-      parameters:
-        - id: bounds
-          type:
-            - azure-maps-control.atlas.data.BoundingBox
-          description: A bounding box to calculate the center of.
-      return:
-        type:
-          - azure-maps-control.atlas.data.Position
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.BoundingBox.getEast
-    name: getEast(BoundingBox)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Returns the east position value of the bounding box.
-    syntax:
-      content: 'static function getEast(bounds: BoundingBox)'
-      parameters:
-        - id: bounds
-          type:
-            - azure-maps-control.atlas.data.BoundingBox
-          description: The bounding box to get the position from.
-      return:
-        type:
-          - number
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.BoundingBox.getHeight
-    name: getHeight(BoundingBox)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Gets the height of a bounding box in degrees.
-    syntax:
-      content: 'static function getHeight(bounds: BoundingBox)'
-      parameters:
-        - id: bounds
-          type:
-            - azure-maps-control.atlas.data.BoundingBox
-          description: The bounding box to check.
-      return:
-        type:
-          - number
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.BoundingBox.getNorth
-    name: getNorth(BoundingBox)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Returns the north position value of the bounding box.
-    syntax:
-      content: 'static function getNorth(bounds: BoundingBox)'
-      parameters:
-        - id: bounds
-          type:
-            - azure-maps-control.atlas.data.BoundingBox
-          description: The bounding box to get the position from.
-      return:
-        type:
-          - number
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.BoundingBox.getNorthEast
-    name: getNorthEast(BoundingBox)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Returns the north east position of the bounding box.
-    syntax:
-      content: 'static function getNorthEast(bounds: BoundingBox)'
-      parameters:
-        - id: bounds
-          type:
-            - azure-maps-control.atlas.data.BoundingBox
-          description: The bounding box to get the position from.
-      return:
-        type:
-          - azure-maps-control.atlas.data.Position
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.BoundingBox.getNorthWest
-    name: getNorthWest(BoundingBox)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Returns the north west position of the bounding box.
-    syntax:
-      content: 'static function getNorthWest(bounds: BoundingBox)'
-      parameters:
-        - id: bounds
-          type:
-            - azure-maps-control.atlas.data.BoundingBox
-          description: The bounding box to get the position from.
-      return:
-        type:
-          - azure-maps-control.atlas.data.Position
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.BoundingBox.getSouth
-    name: getSouth(BoundingBox)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Returns the south position value of the bounding box.
-    syntax:
-      content: 'static function getSouth(bounds: BoundingBox)'
-      parameters:
-        - id: bounds
-          type:
-            - azure-maps-control.atlas.data.BoundingBox
-          description: The bounding box to get the position from.
-      return:
-        type:
-          - number
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.BoundingBox.getSouthEast
-    name: getSouthEast(BoundingBox)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Returns the south east position of the bounding box.
-    syntax:
-      content: 'static function getSouthEast(bounds: BoundingBox)'
-      parameters:
-        - id: bounds
-          type:
-            - azure-maps-control.atlas.data.BoundingBox
-          description: The bounding box to get the position from.
-      return:
-        type:
-          - azure-maps-control.atlas.data.Position
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.BoundingBox.getSouthWest
-    name: getSouthWest(BoundingBox)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Returns the south west position of the bounding box.
-    syntax:
-      content: 'static function getSouthWest(bounds: BoundingBox)'
-      parameters:
-        - id: bounds
-          type:
-            - azure-maps-control.atlas.data.BoundingBox
-          description: The bounding box to get the position from.
-      return:
-        type:
-          - azure-maps-control.atlas.data.Position
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.BoundingBox.getWest
-    name: getWest(BoundingBox)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Returns the west position value of the bounding box.
-    syntax:
-      content: 'static function getWest(bounds: BoundingBox)'
-      parameters:
-        - id: bounds
-          type:
-            - azure-maps-control.atlas.data.BoundingBox
-          description: The bounding box to get the position from.
-      return:
-        type:
-          - number
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.BoundingBox.getWidth
-    name: getWidth(BoundingBox)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Gets the width of a bounding box in degrees.
-    syntax:
-      content: 'static function getWidth(bounds: BoundingBox)'
-      parameters:
-        - id: bounds
-          type:
-            - azure-maps-control.atlas.data.BoundingBox
-          description: The bounding box to check.
-      return:
-        type:
-          - number
+          - boolean
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.indexOf
     name: 'indexOf(number, number)'
@@ -719,28 +575,6 @@ items:
         type:
           - number
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.BoundingBox.intersect
-    name: 'intersect(BoundingBox, BoundingBox)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Determines is two bounding boxes intersect.
-    syntax:
-      content: 'static function intersect(bounds1: BoundingBox, bounds2: BoundingBox)'
-      parameters:
-        - id: bounds1
-          type:
-            - azure-maps-control.atlas.data.BoundingBox
-          description: The first bounding box to compare with.
-        - id: bounds2
-          type:
-            - azure-maps-control.atlas.data.BoundingBox
-          description: The second bounding box to compare with.
-      return:
-        type:
-          - boolean
-    package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.join
     name: join(string)
     children: []
@@ -765,6 +599,20 @@ items:
         type:
           - string
     package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.keys
+    name: keys()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns an iterable of keys in the array
+    syntax:
+      content: function keys()
+      parameters: []
+      return:
+        type:
+          - IterableIterator<number>
+    package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.lastIndexOf
     name: 'lastIndexOf(number, number)'
     children: []
@@ -786,22 +634,6 @@ items:
             The array index at which to begin the search. If fromIndex is
             omitted, the search starts at the last index in the array.
           optional: true
-      return:
-        type:
-          - number
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.BoundingBox.length
-    name: length
-    fullName: length
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      Gets or sets the length of the array. This is a number one higher than the
-      highest element defined in an array.
-    syntax:
-      content: 'length: number'
       return:
         type:
           - number
@@ -837,28 +669,6 @@ items:
       return:
         type:
           - 'U[]'
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.BoundingBox.merge
-    name: 'merge(BoundingBox, BoundingBox)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Merges two bounding boxes together.
-    syntax:
-      content: 'static function merge(bounds1: BoundingBox, bounds2: BoundingBox)'
-      parameters:
-        - id: bounds1
-          type:
-            - azure-maps-control.atlas.data.BoundingBox
-          description: The first bounding box to merge with.
-        - id: bounds2
-          type:
-            - azure-maps-control.atlas.data.BoundingBox
-          description: The second bounding box to merge with.
-      return:
-        type:
-          - azure-maps-control.atlas.data.BoundingBox
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.pop
     name: pop()
@@ -1261,28 +1071,6 @@ items:
         type:
           - 'number[]'
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.BoundingBox.splitOnAntimeridian
-    name: splitOnAntimeridian(BoundingBox)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Splits a BoundingBox that crosses the Antimeridian into two BoundingBox's.
-      One entirely west of the Antimerdian and another entirely east of the
-      Antimerdian.
-    syntax:
-      content: 'static function splitOnAntimeridian(bounds: BoundingBox)'
-      parameters:
-        - id: bounds
-          type:
-            - azure-maps-control.atlas.data.BoundingBox
-          description: |+
-
-      return:
-        type:
-          - 'azure-maps-control.atlas.data.BoundingBox[]'
-    package: azure-maps-control
   - uid: azure-maps-control.atlas.data.BoundingBox.toLocaleString
     name: toLocaleString()
     children: []
@@ -1331,6 +1119,490 @@ items:
       return:
         type:
           - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.values
+    name: values()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns an iterable of values in the array
+    syntax:
+      content: function values()
+      parameters: []
+      return:
+        type:
+          - IterableIterator<number>
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.containsPosition
+    name: 'containsPosition(BoundingBox, Position)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Determines if a position is within a bounding box.
+    syntax:
+      content: >-
+        static function containsPosition(bounds: BoundingBox, position:
+        Position)
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The bounding box to see if the position is in.
+        - id: position
+          type:
+            - azure-maps-control.atlas.data.Position
+          description: The position to see if it is in the bounding box.
+      return:
+        type:
+          - boolean
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.crossesAntimeridian
+    name: crossesAntimeridian(BoundingBox)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns a boolean indicating if the bounding box crosses the antimeridian
+      or not.
+    syntax:
+      content: 'static function crossesAntimeridian(bounds: BoundingBox)'
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The bounding box to check.
+      return:
+        type:
+          - boolean
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.fromBoundingBox
+    name: fromBoundingBox(BoundingBox)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Clones a bounding box.
+    syntax:
+      content: 'static function fromBoundingBox(boundingBox: BoundingBox)'
+      parameters:
+        - id: boundingBox
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: |
+            The bounding box to clone.
+      return:
+        type:
+          - azure-maps-control.atlas.data.BoundingBox
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.fromData
+    name: >-
+      fromData(FeatureCollection | Feature<Geometry, any> | Geometry | Shape |
+      Array<FeatureCollection | Feature<Geometry, any> | Geometry>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Calculates the bounding box of a FeatureCollection, Feature, Geometry,
+      Shape or array of these objects.
+    syntax:
+      content: >-
+        static function fromData(data: FeatureCollection | Feature<Geometry,
+        any> | Geometry | Shape | Array<FeatureCollection | Feature<Geometry,
+        any> | Geometry>)
+      parameters:
+        - id: data
+          type:
+            - >-
+              azure-maps-control.atlas.data.FeatureCollection |
+              azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+              any> | azure-maps-control.atlas.data.Geometry |
+              azure-maps-control.atlas.Shape |
+              Array<azure-maps-control.atlas.data.FeatureCollection |
+              azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+              any> | azure-maps-control.atlas.data.Geometry>
+          description: >-
+            The FeatureCollection, Feature, Geometry, Shape or array of these
+            objects to calculate the bounding box for.
+      return:
+        type:
+          - azure-maps-control.atlas.data.BoundingBox
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.fromDimensions
+    name: 'fromDimensions(Position, number, number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Constructs a BoundingBox from the specified dimensions.
+    syntax:
+      content: >-
+        static function fromDimensions(center: Position, width: number, height:
+        number)
+      parameters:
+        - id: center
+          type:
+            - azure-maps-control.atlas.data.Position
+          description: The center position of the bounding box.
+        - id: width
+          type:
+            - number
+          description: The width of the bounding box.
+        - id: height
+          type:
+            - number
+          description: |
+            The height of the bounding box.
+      return:
+        type:
+          - azure-maps-control.atlas.data.BoundingBox
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.fromEdges
+    name: 'fromEdges(number, number, number, number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Constructs a BoundingBox from the specified edges.
+    syntax:
+      content: >-
+        static function fromEdges(west: number, south: number, east: number,
+        north: number)
+      parameters:
+        - id: west
+          type:
+            - number
+          description: The west edge of the bounding box.
+        - id: south
+          type:
+            - number
+          description: The south edge of the bounding box.
+        - id: east
+          type:
+            - number
+          description: The east edge of the bounding box.
+        - id: north
+          type:
+            - number
+          description: |
+            The north edge of the bounding box.
+      return:
+        type:
+          - azure-maps-control.atlas.data.BoundingBox
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.fromLatLngs
+    name: 'fromLatLngs(Array<object | number[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Creates a BoundingBox from any array of objects that contain coordinate
+      information.
+
+      Each object is either an array in the format; [lat, lng] or [lat, lng,
+      elv], or an object with the any combination of the following properties:
+
+      Longitude: lng, longitude, lon, x
+
+      Latitude: lat, latitude, y
+
+      Elevation: elv, elevation, alt, altitude, z
+    syntax:
+      content: 'static function fromLatLngs(latLngs: Array<object | number[]>)'
+      parameters:
+        - id: latLngs
+          type:
+            - 'Array<object | number[]>'
+          description: The objects that contain coordinate information.
+      return:
+        type:
+          - azure-maps-control.atlas.data.BoundingBox
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.fromPositions
+    name: 'fromPositions(Position[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Creates a BoundingBox that contains all provided Position objects.
+    syntax:
+      content: 'static function fromPositions(positions: Position[])'
+      parameters:
+        - id: positions
+          type:
+            - 'azure-maps-control.atlas.data.Position[]'
+          description: An array of locations to use to generate the bounding box.
+      return:
+        type:
+          - azure-maps-control.atlas.data.BoundingBox
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.getCenter
+    name: getCenter(BoundingBox)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Calculates the center of a bounding box.
+    syntax:
+      content: 'static function getCenter(bounds: BoundingBox)'
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: A bounding box to calculate the center of.
+      return:
+        type:
+          - azure-maps-control.atlas.data.Position
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.getEast
+    name: getEast(BoundingBox)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the east position value of the bounding box.
+    syntax:
+      content: 'static function getEast(bounds: BoundingBox)'
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The bounding box to get the position from.
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.getHeight
+    name: getHeight(BoundingBox)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the height of a bounding box in degrees.
+    syntax:
+      content: 'static function getHeight(bounds: BoundingBox)'
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The bounding box to check.
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.getNorth
+    name: getNorth(BoundingBox)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the north position value of the bounding box.
+    syntax:
+      content: 'static function getNorth(bounds: BoundingBox)'
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The bounding box to get the position from.
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.getNorthEast
+    name: getNorthEast(BoundingBox)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the north east position of the bounding box.
+    syntax:
+      content: 'static function getNorthEast(bounds: BoundingBox)'
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The bounding box to get the position from.
+      return:
+        type:
+          - azure-maps-control.atlas.data.Position
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.getNorthWest
+    name: getNorthWest(BoundingBox)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the north west position of the bounding box.
+    syntax:
+      content: 'static function getNorthWest(bounds: BoundingBox)'
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The bounding box to get the position from.
+      return:
+        type:
+          - azure-maps-control.atlas.data.Position
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.getSouth
+    name: getSouth(BoundingBox)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the south position value of the bounding box.
+    syntax:
+      content: 'static function getSouth(bounds: BoundingBox)'
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The bounding box to get the position from.
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.getSouthEast
+    name: getSouthEast(BoundingBox)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the south east position of the bounding box.
+    syntax:
+      content: 'static function getSouthEast(bounds: BoundingBox)'
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The bounding box to get the position from.
+      return:
+        type:
+          - azure-maps-control.atlas.data.Position
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.getSouthWest
+    name: getSouthWest(BoundingBox)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the south west position of the bounding box.
+    syntax:
+      content: 'static function getSouthWest(bounds: BoundingBox)'
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The bounding box to get the position from.
+      return:
+        type:
+          - azure-maps-control.atlas.data.Position
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.getWest
+    name: getWest(BoundingBox)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the west position value of the bounding box.
+    syntax:
+      content: 'static function getWest(bounds: BoundingBox)'
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The bounding box to get the position from.
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.getWidth
+    name: getWidth(BoundingBox)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the width of a bounding box in degrees.
+    syntax:
+      content: 'static function getWidth(bounds: BoundingBox)'
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The bounding box to check.
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.intersect
+    name: 'intersect(BoundingBox, BoundingBox)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Determines is two bounding boxes intersect.
+    syntax:
+      content: 'static function intersect(bounds1: BoundingBox, bounds2: BoundingBox)'
+      parameters:
+        - id: bounds1
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The first bounding box to compare with.
+        - id: bounds2
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The second bounding box to compare with.
+      return:
+        type:
+          - boolean
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.merge
+    name: 'merge(BoundingBox, BoundingBox)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Merges two bounding boxes together.
+    syntax:
+      content: 'static function merge(bounds1: BoundingBox, bounds2: BoundingBox)'
+      parameters:
+        - id: bounds1
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The first bounding box to merge with.
+        - id: bounds2
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: The second bounding box to merge with.
+      return:
+        type:
+          - azure-maps-control.atlas.data.BoundingBox
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.BoundingBox.splitOnAntimeridian
+    name: splitOnAntimeridian(BoundingBox)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Splits a BoundingBox that crosses the Antimeridian into two BoundingBox's.
+      One entirely west of the Antimerdian and another entirely east of the
+      Antimerdian.
+    syntax:
+      content: 'static function splitOnAntimeridian(bounds: BoundingBox)'
+      parameters:
+        - id: bounds
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: |+
+
+      return:
+        type:
+          - 'azure-maps-control.atlas.data.BoundingBox[]'
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions

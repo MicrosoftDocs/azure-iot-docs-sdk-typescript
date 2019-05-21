@@ -4,9 +4,9 @@ items:
     name: Polygon
     fullName: Polygon
     children:
+      - azure-maps-control.atlas.data.Polygon.constructor
       - azure-maps-control.atlas.data.Polygon.bbox
       - azure-maps-control.atlas.data.Polygon.coordinates
-      - azure-maps-control.atlas.data.Polygon.constructor
       - azure-maps-control.atlas.data.Polygon.type
       - azure-maps-control.atlas.data.Polygon.TYPE
     langs:
@@ -17,6 +17,29 @@ items:
       polygon. The full description is detailed in
 
       [RFC 7946](https://tools.ietf.org/html/rfc7946#section-3.1.6).
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.Polygon.constructor
+    name: 'Polygon(Position[][] | Position[], BoundingBox)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a Polygon.
+    syntax:
+      content: 'new Polygon(coordinates: Position[][] | Position[], bbox?: BoundingBox)'
+      parameters:
+        - id: coordinates
+          type:
+            - >-
+              azure-maps-control.atlas.data.Position[][] |
+              azure-maps-control.atlas.data.Position[]
+          description: The array of linear ring coordinate arrays defining the polygon.
+        - id: bbox
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: |
+            The bounding box of the polygon.
+          optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.Polygon.bbox
     name: bbox
@@ -46,29 +69,6 @@ items:
       return:
         type:
           - 'azure-maps-control.atlas.data.Position[][]'
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.Polygon.constructor
-    name: 'Polygon(Position[][] | Position[], BoundingBox)'
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: Constructs a Polygon.
-    syntax:
-      content: 'new Polygon(coordinates: Position[][] | Position[], bbox?: BoundingBox)'
-      parameters:
-        - id: coordinates
-          type:
-            - >-
-              azure-maps-control.atlas.data.Position[][] |
-              azure-maps-control.atlas.data.Position[]
-          description: The array of linear ring coordinate arrays defining the polygon.
-        - id: bbox
-          type:
-            - azure-maps-control.atlas.data.BoundingBox
-          description: |
-            The bounding box of the polygon.
-          optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.Polygon.type
     name: type

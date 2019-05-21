@@ -4,12 +4,12 @@ items:
     name: ImageLayer
     fullName: ImageLayer
     children:
-      - azure-maps-control.atlas.layer.ImageLayer.getCoordinatesFromEdges
-      - azure-maps-control.atlas.layer.ImageLayer.getId
-      - azure-maps-control.atlas.layer.ImageLayer.getOptions
       - azure-maps-control.atlas.layer.ImageLayer.constructor
       - azure-maps-control.atlas.layer.ImageLayer.metadata
+      - azure-maps-control.atlas.layer.ImageLayer.getId
+      - azure-maps-control.atlas.layer.ImageLayer.getOptions
       - azure-maps-control.atlas.layer.ImageLayer.setOptions
+      - azure-maps-control.atlas.layer.ImageLayer.getCoordinatesFromEdges
     langs:
       - typeScript
     type: class
@@ -18,6 +18,86 @@ items:
       the map. Also known as a ground or image overlay.
     extends:
       name: azure-maps-control.atlas.layer.Layer
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.ImageLayer.constructor
+    name: 'ImageLayer(ImageLayerOptions, string)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a new ImageLayer.
+    syntax:
+      content: 'new ImageLayer(options: ImageLayerOptions, id?: string)'
+      parameters:
+        - id: options
+          type:
+            - azure-maps-control.atlas.ImageLayerOptions
+          description: The options for the tile layer.
+        - id: id
+          type:
+            - string
+          description: >
+            The id of the layer. If not specified a random one will be
+            generated.
+          optional: true
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.ImageLayer.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A property for associating custom data with the layer.
+    optional: true
+    syntax:
+      content: 'metadata?: any'
+      return:
+        type:
+          - any
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.ImageLayer.getId
+    name: getId()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the id of the layer
+    syntax:
+      content: function getId()
+      parameters: []
+      return:
+        type:
+          - string
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.ImageLayer.getOptions
+    name: getOptions()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the options of the tile layer.
+    syntax:
+      content: function getOptions()
+      parameters: []
+      return:
+        type:
+          - azure-maps-control.atlas.ImageLayerOptions
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.ImageLayer.setOptions
+    name: setOptions(ImageLayerOptions)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Sets the options of the tile layer.
+    syntax:
+      content: 'function setOptions(options: ImageLayerOptions)'
+      parameters:
+        - id: options
+          type:
+            - azure-maps-control.atlas.ImageLayerOptions
+          description: ''
     package: azure-maps-control
   - uid: azure-maps-control.atlas.layer.ImageLayer.getCoordinatesFromEdges
     name: 'getCoordinatesFromEdges(number, number, number, number, number)'
@@ -62,86 +142,6 @@ items:
       return:
         type:
           - 'azure-maps-control.atlas.data.Position[]'
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.getId
-    name: getId()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Gets the id of the layer
-    syntax:
-      content: function getId()
-      parameters: []
-      return:
-        type:
-          - string
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.getOptions
-    name: getOptions()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Gets the options of the tile layer.
-    syntax:
-      content: function getOptions()
-      parameters: []
-      return:
-        type:
-          - azure-maps-control.atlas.ImageLayerOptions
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.constructor
-    name: 'ImageLayer(ImageLayerOptions, string)'
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: Constructs a new ImageLayer.
-    syntax:
-      content: 'new ImageLayer(options: ImageLayerOptions, id?: string)'
-      parameters:
-        - id: options
-          type:
-            - azure-maps-control.atlas.ImageLayerOptions
-          description: The options for the tile layer.
-        - id: id
-          type:
-            - string
-          description: >
-            The id of the layer. If not specified a random one will be
-            generated.
-          optional: true
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.metadata
-    name: metadata
-    fullName: metadata
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: A property for associating custom data with the layer.
-    optional: true
-    syntax:
-      content: 'metadata?: any'
-      return:
-        type:
-          - any
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.setOptions
-    name: setOptions(ImageLayerOptions)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Sets the options of the tile layer.
-    syntax:
-      content: 'function setOptions(options: ImageLayerOptions)'
-      parameters:
-        - id: options
-          type:
-            - azure-maps-control.atlas.ImageLayerOptions
-          description: ''
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions

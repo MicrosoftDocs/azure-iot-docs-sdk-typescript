@@ -4,13 +4,45 @@ items:
     name: MapMouseWheelEvent
     fullName: MapMouseWheelEvent
     children:
+      - azure-maps-control.atlas.MapMouseWheelEvent.map
+      - azure-maps-control.atlas.MapMouseWheelEvent.originalEvent
       - azure-maps-control.atlas.MapMouseWheelEvent.preventDefault
+      - azure-maps-control.atlas.MapMouseWheelEvent.type
     langs:
       - typeScript
     type: interface
     summary: Event object returned by the maps when a wheel event occurs.
     extends:
       name: azure-maps-control.atlas.MapEvent
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.MapMouseWheelEvent.map
+    name: map
+    fullName: map
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The `Map` instance in which the event occurred on.
+    syntax:
+      content: 'map: Map'
+      return:
+        type:
+          - azure-maps-control.atlas.Map
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.MapMouseWheelEvent.originalEvent
+    name: originalEvent
+    fullName: originalEvent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The original event that was fired.
+    optional: true
+    syntax:
+      content: 'originalEvent?: Event'
+      return:
+        type:
+          - Event
     package: azure-maps-control
   - uid: azure-maps-control.atlas.MapMouseWheelEvent.preventDefault
     name: preventDefault
@@ -25,6 +57,20 @@ items:
       return:
         type:
           - () => void
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.MapMouseWheelEvent.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The event type.
+    syntax:
+      content: 'type: string'
+      return:
+        type:
+          - string
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions
@@ -548,12 +594,40 @@ references:
       - name: '>'
         fullName: '>'
   - uid: >-
-      Promise<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
-      any> | azure-maps-control.atlas.Shape>
-    name: Shape>
+      Promise<Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      azure-maps-control.atlas.ClusteredProperties | any> |
+      azure-maps-control.atlas.Shape>>
+    name: Shape>>
     spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
+      - name: Promise<Array<
+        fullName: Promise<Array<
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', '
+        fullName: ', '
+      - name: ClusteredProperties
+        fullName: ClusteredProperties
+        uid: azure-maps-control.atlas.ClusteredProperties
+      - name: ' | any> | '
+        fullName: ' | any> | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: '>>'
+        fullName: '>>'
+  - uid: >-
+      Promise<Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.Shape>>
+    name: Shape>>
+    spec.typeScript:
+      - name: Promise<Array<
+        fullName: Promise<Array<
       - name: Feature
         fullName: Feature
         uid: azure-maps-control.atlas.data.Feature
@@ -567,8 +641,8 @@ references:
       - name: Shape
         fullName: Shape
         uid: azure-maps-control.atlas.Shape
-      - name: '>'
-        fullName: '>'
+      - name: '>>'
+        fullName: '>>'
   - uid: azure-maps-control.atlas.Shape
     name: Shape
     spec.typeScript:

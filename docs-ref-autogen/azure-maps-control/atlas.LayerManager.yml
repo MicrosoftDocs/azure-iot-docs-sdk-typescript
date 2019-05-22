@@ -11,6 +11,7 @@ items:
       - azure-maps-control.atlas.LayerManager.getRenderedShapes
       - azure-maps-control.atlas.LayerManager.move
       - azure-maps-control.atlas.LayerManager.remove
+      - azure-maps-control.atlas.LayerManager.setFloorNumber
     langs:
       - typeScript
     type: interface
@@ -205,6 +206,23 @@ items:
               azure-maps-control.atlas.layer.Layer>
           description: |
             One or more layers or their ids for removal.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.LayerManager.setFloorNumber
+    name: setFloorNumber(number)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Set the floor number for indoor map.
+      This is used only in 'indoor' style.
+    syntax:
+      content: 'function setFloorNumber(floornum: number)'
+      parameters:
+        - id: floornum
+          type:
+            - number
+          description: ''
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions
@@ -728,12 +746,40 @@ references:
       - name: '>'
         fullName: '>'
   - uid: >-
-      Promise<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
-      any> | azure-maps-control.atlas.Shape>
-    name: Shape>
+      Promise<Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      azure-maps-control.atlas.ClusteredProperties | any> |
+      azure-maps-control.atlas.Shape>>
+    name: Shape>>
     spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
+      - name: Promise<Array<
+        fullName: Promise<Array<
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', '
+        fullName: ', '
+      - name: ClusteredProperties
+        fullName: ClusteredProperties
+        uid: azure-maps-control.atlas.ClusteredProperties
+      - name: ' | any> | '
+        fullName: ' | any> | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: '>>'
+        fullName: '>>'
+  - uid: >-
+      Promise<Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.Shape>>
+    name: Shape>>
+    spec.typeScript:
+      - name: Promise<Array<
+        fullName: Promise<Array<
       - name: Feature
         fullName: Feature
         uid: azure-maps-control.atlas.data.Feature
@@ -747,8 +793,8 @@ references:
       - name: Shape
         fullName: Shape
         uid: azure-maps-control.atlas.Shape
-      - name: '>'
-        fullName: '>'
+      - name: '>>'
+        fullName: '>>'
   - uid: azure-maps-control.atlas.Shape
     name: Shape
     spec.typeScript:

@@ -6,11 +6,15 @@ items:
     children:
       - azure-maps-control.atlas.MediaLayerOptions.contrast
       - azure-maps-control.atlas.MediaLayerOptions.fadeDuration
+      - azure-maps-control.atlas.MediaLayerOptions.filter
       - azure-maps-control.atlas.MediaLayerOptions.hueRotation
       - azure-maps-control.atlas.MediaLayerOptions.maxBrightness
+      - azure-maps-control.atlas.MediaLayerOptions.maxZoom
       - azure-maps-control.atlas.MediaLayerOptions.minBrightness
+      - azure-maps-control.atlas.MediaLayerOptions.minZoom
       - azure-maps-control.atlas.MediaLayerOptions.opacity
       - azure-maps-control.atlas.MediaLayerOptions.saturation
+      - azure-maps-control.atlas.MediaLayerOptions.visible
     langs:
       - typeScript
     type: interface
@@ -58,6 +62,23 @@ items:
         type:
           - number
     package: azure-maps-control
+  - uid: azure-maps-control.atlas.MediaLayerOptions.filter
+    name: filter
+    fullName: filter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      An expression specifying conditions on source features.
+      Only features that match the filter are displayed.
+    optional: true
+    syntax:
+      content: 'filter?: Expression'
+      return:
+        type:
+          - azure-maps-control.atlas.Expression
+    package: azure-maps-control
   - uid: azure-maps-control.atlas.MediaLayerOptions.hueRotation
     name: hueRotation
     fullName: hueRotation
@@ -95,6 +116,27 @@ items:
         type:
           - number
     package: azure-maps-control
+  - uid: azure-maps-control.atlas.MediaLayerOptions.maxZoom
+    name: maxZoom
+    fullName: maxZoom
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      An integer specifying the maximum zoom level to render the layer at.
+
+      This value is exclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `24`.
+    optional: true
+    syntax:
+      content: 'maxZoom?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-control
   - uid: azure-maps-control.atlas.MediaLayerOptions.minBrightness
     name: minBrightness
     fullName: minBrightness
@@ -110,6 +152,27 @@ items:
     optional: true
     syntax:
       content: 'minBrightness?: number'
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.MediaLayerOptions.minZoom
+    name: minZoom
+    fullName: minZoom
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      An integer specifying the minimum zoom level to render the layer at.
+
+      This value is inclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `0`.
+    optional: true
+    syntax:
+      content: 'minZoom?: number'
       return:
         type:
           - number
@@ -151,6 +214,23 @@ items:
       return:
         type:
           - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.MediaLayerOptions.visible
+    name: visible
+    fullName: visible
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Specifies if the layer is visible or not.
+      Default `true`.
+    optional: true
+    syntax:
+      content: 'visible?: boolean'
+      return:
+        type:
+          - boolean
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions
@@ -674,12 +754,40 @@ references:
       - name: '>'
         fullName: '>'
   - uid: >-
-      Promise<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
-      any> | azure-maps-control.atlas.Shape>
-    name: Shape>
+      Promise<Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      azure-maps-control.atlas.ClusteredProperties | any> |
+      azure-maps-control.atlas.Shape>>
+    name: Shape>>
     spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
+      - name: Promise<Array<
+        fullName: Promise<Array<
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', '
+        fullName: ', '
+      - name: ClusteredProperties
+        fullName: ClusteredProperties
+        uid: azure-maps-control.atlas.ClusteredProperties
+      - name: ' | any> | '
+        fullName: ' | any> | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: '>>'
+        fullName: '>>'
+  - uid: >-
+      Promise<Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.Shape>>
+    name: Shape>>
+    spec.typeScript:
+      - name: Promise<Array<
+        fullName: Promise<Array<
       - name: Feature
         fullName: Feature
         uid: azure-maps-control.atlas.data.Feature
@@ -693,8 +801,8 @@ references:
       - name: Shape
         fullName: Shape
         uid: azure-maps-control.atlas.Shape
-      - name: '>'
-        fullName: '>'
+      - name: '>>'
+        fullName: '>>'
   - uid: azure-maps-control.atlas.Shape
     name: Shape
     spec.typeScript:

@@ -6,8 +6,10 @@ items:
     children:
       - azure-maps-control.atlas.PopupOptions.closeButton
       - azure-maps-control.atlas.PopupOptions.content
+      - azure-maps-control.atlas.PopupOptions.fillColor
       - azure-maps-control.atlas.PopupOptions.pixelOffset
       - azure-maps-control.atlas.PopupOptions.position
+      - azure-maps-control.atlas.PopupOptions.showPointer
     langs:
       - typeScript
     type: interface
@@ -49,6 +51,23 @@ items:
         type:
           - HTMLElement | string
     package: azure-maps-control
+  - uid: azure-maps-control.atlas.PopupOptions.fillColor
+    name: fillColor
+    fullName: fillColor
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Specifies the fill color of the popup.
+      default `"#FFFFFF"`
+    optional: true
+    syntax:
+      content: 'fillColor?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-control
   - uid: azure-maps-control.atlas.PopupOptions.pixelOffset
     name: pixelOffset
     fullName: pixelOffset
@@ -86,6 +105,23 @@ items:
       return:
         type:
           - azure-maps-control.atlas.data.Position
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.PopupOptions.showPointer
+    name: showPointer
+    fullName: showPointer
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Specifies if the pointer should be displayed in the popup or not.
+      default `true`
+    optional: true
+    syntax:
+      content: 'showPointer?: boolean'
+      return:
+        type:
+          - boolean
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions
@@ -295,6 +331,24 @@ references:
       - name: ImageLayerOptions
         fullName: ImageLayerOptions
         uid: azure-maps-control.atlas.ImageLayerOptions
+  - uid: 'Promise<azure-maps-control.atlas.Pixel[]>'
+    name: 'Pixel[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: 'azure-maps-control.atlas.Pixel[]'
+    name: 'Pixel[]'
+    spec.typeScript:
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-control.atlas.LineLayerOptions
     name: LineLayerOptions
     spec.typeScript:
@@ -527,14 +581,6 @@ references:
       - name: TimeUnits
         fullName: TimeUnits
         uid: azure-maps-control.atlas.math.TimeUnits
-  - uid: 'azure-maps-control.atlas.Pixel[]'
-    name: 'Pixel[]'
-    spec.typeScript:
-      - name: Pixel
-        fullName: Pixel
-        uid: azure-maps-control.atlas.Pixel
-      - name: '[]'
-        fullName: '[]'
   - uid: azure-maps-control.atlas.source.Source
     name: Source
     spec.typeScript:
@@ -664,12 +710,6 @@ references:
       - name: Shape
         fullName: Shape
         uid: azure-maps-control.atlas.Shape
-  - uid: azure-maps-control.atlas.Expression
-    name: Expression
-    spec.typeScript:
-      - name: Expression
-        fullName: Expression
-        uid: azure-maps-control.atlas.Expression
   - uid: 'azure-maps-control.atlas.Shape[]'
     name: 'Shape[]'
     spec.typeScript:
@@ -745,6 +785,12 @@ references:
       - name: VectorTileSourceOptions
         fullName: VectorTileSourceOptions
         uid: azure-maps-control.atlas.VectorTileSourceOptions
+  - uid: azure-maps-control.atlas.Expression
+    name: Expression
+    spec.typeScript:
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.atlas.Expression
   - uid: azure-maps-control.atlas.HtmlMarkerOptions
     name: HtmlMarkerOptions
     spec.typeScript:
@@ -1074,6 +1120,14 @@ references:
       - name: Popup
         fullName: Popup
         uid: azure-maps-control.atlas.Popup
+  - uid: 'azure-maps-control.atlas.HtmlMarker[]'
+    name: 'HtmlMarker[]'
+    spec.typeScript:
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+      - name: '[]'
+        fullName: '[]'
   - uid: >-
       string | azure-maps-control.atlas.HtmlMarker | Array<string |
       azure-maps-control.atlas.HtmlMarker>

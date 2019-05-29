@@ -21,7 +21,11 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: >-
+      A set of attributes describing a maneuver, e.g. 'Turn right', 'Keep left',
+      'Take the ferry',
+
+      'Take the motorway', 'Arrive'.
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.Models.RouteResultInstruction.countryCode
     name: countryCode
@@ -30,7 +34,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      3-character [ISO 3166-1](https://www.iso.org/iso-3166-country-codes.html)
+      alpha-3 country
+
+      code. E.g. USA.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'countryCode?: string'
@@ -45,7 +56,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Indicates left-hand vs. right-hand side driving at the point of the
+      maneuver. Possible values
+
+      include: 'LEFT', 'RIGHT'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'drivingSide?: DrivingSide'
@@ -61,7 +79,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Type of the instruction, e.g., turn or change of road form. Possible
+      values include: 'TURN',
+
+      'ROAD_CHANGE', 'LOCATION_DEPARTURE', 'LOCATION_ARRIVAL', 'DIRECTION_INFO',
+      'LOCATION_WAYPOINT'
     optional: true
     syntax:
       content: 'instructionType?: GuidanceInstructionType'
@@ -76,7 +99,29 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      A code identifying the maneuver. Possible values include: 'ARRIVE',
+      'ARRIVE_LEFT',
+
+      'ARRIVE_RIGHT', 'DEPART', 'STRAIGHT', 'KEEP_RIGHT', 'BEAR_RIGHT',
+      'TURN_RIGHT', 'SHARP_RIGHT',
+
+      'KEEP_LEFT', 'BEAR_LEFT', 'TURN_LEFT', 'SHARP_LEFT', 'MAKE_UTURN',
+      'ENTER_MOTORWAY',
+
+      'ENTER_FREEWAY', 'ENTER_HIGHWAY', 'TAKE_EXIT', 'MOTORWAY_EXIT_LEFT',
+      'MOTORWAY_EXIT_RIGHT',
+
+      'TAKE_FERRY', 'ROUNDABOUT_CROSS', 'ROUNDABOUT_RIGHT', 'ROUNDABOUT_LEFT',
+      'ROUNDABOUT_BACK',
+
+      'TRY_MAKE_UTURN', 'FOLLOW', 'SWITCH_PARALLEL_ROAD', 'SWITCH_MAIN_ROAD',
+      'ENTRANCE_RAMP',
+
+      'WAYPOINT_LEFT', 'WAYPOINT_RIGHT', 'WAYPOINT_REACHED'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'maneuver?: GuidanceManeuver'
@@ -91,7 +136,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      A human-readable message for the maneuver.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'message?: string'
@@ -122,7 +171,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      It is possible to optionally combine the instruction with the next one.
+      This can be used to
+
+      build messages like "Turn left and then turn right".
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'possibleCombineWithNext?: boolean'
@@ -138,7 +194,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Distance from the start of the route to the point of the instruction.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'routeOffsetInMeters?: number'
@@ -153,7 +213,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Street name of the next significant road segment after the maneuver, or of
+      the street that
+
+      should be followed.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'street?: string'
@@ -169,7 +236,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Estimated travel time up to the point corresponding to
+      routeOffsetInMeters.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'travelTimeInSeconds?: number'
@@ -178,6 +250,14 @@ items:
           - number
     package: azure-maps-rest
 references:
+  - uid: 'azure-maps-rest.atlas.service.Models.BatchRequestBodyBatchItemsItem[]'
+    name: 'BatchRequestBodyBatchItemsItem[]'
+    spec.typeScript:
+      - name: BatchRequestBodyBatchItemsItem
+        fullName: BatchRequestBodyBatchItemsItem
+        uid: azure-maps-rest.atlas.service.Models.BatchRequestBodyBatchItemsItem
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary
     name: BatchResponseSummary
     spec.typeScript:
@@ -196,14 +276,22 @@ references:
       - name: ErrorModel
         fullName: ErrorModel
         uid: azure-maps-rest.atlas.service.Models.ErrorModel
-  - uid: 'azure-maps-rest.atlas.service.RequestPolicyFactory[]'
-    name: 'RequestPolicyFactory[]'
+  - uid: >-
+      azure-maps-rest.atlas.service.RequestPolicyFactory[] |
+      (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void | Object[]
+    name: >-
+      RequestPolicyFactory[] | (defaultRequestPolicyFactories:
+      RequestPolicyFactory[]) => void | Object[]
     spec.typeScript:
       - name: RequestPolicyFactory
         fullName: RequestPolicyFactory
         uid: azure-maps-rest.atlas.service.RequestPolicyFactory
-      - name: '[]'
-        fullName: '[]'
+      - name: >-
+          [] | (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void |
+          Object[]
+        fullName: >-
+          [] | (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void |
+          Object[]
   - uid: 'azure-maps-rest.atlas.service.Models.GeoJSONPoint[]'
     name: 'GeoJSONPoint[]'
     spec.typeScript:
@@ -573,6 +661,12 @@ references:
       - name: SearchAlongRouteSummary
         fullName: SearchAlongRouteSummary
         uid: azure-maps-rest.atlas.service.Models.SearchAlongRouteSummary
+  - uid: azure-maps-rest.atlas.service.Models.EntityType
+    name: EntityType
+    spec.typeScript:
+      - name: EntityType
+        fullName: EntityType
+        uid: azure-maps-rest.atlas.service.Models.EntityType
   - uid: azure-maps-rest.atlas.service.Models.SearchResultPoi
     name: SearchResultPoi
     spec.typeScript:
@@ -735,6 +829,14 @@ references:
       - name: Pipeline
         fullName: Pipeline
         uid: azure-maps-rest.atlas.service.Pipeline
+  - uid: 'azure-maps-rest.atlas.service.RequestPolicyFactory[]'
+    name: 'RequestPolicyFactory[]'
+    spec.typeScript:
+      - name: RequestPolicyFactory
+        fullName: RequestPolicyFactory
+        uid: azure-maps-rest.atlas.service.RequestPolicyFactory
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-rest.atlas.service.IPipelineOptions
     name: IPipelineOptions
     spec.typeScript:

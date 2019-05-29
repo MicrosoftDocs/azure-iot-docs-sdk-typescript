@@ -40,6 +40,9 @@
             - uid: azure-maps-control.atlas.control.CompassControl
               name: CompassControl
               items: []
+            - uid: azure-maps-control.atlas.control.FloorPickerControl
+              name: FloorPickerControl
+              items: []
             - uid: azure-maps-control.atlas.control.PitchControl
               name: PitchControl
               items: []
@@ -108,6 +111,12 @@
           items: []
         - uid: azure-maps-control.atlas.Expression
           name: Expression
+          items: []
+        - uid: azure-maps-control.atlas.FloorChangeEvent
+          name: FloorChangeEvent
+          items: []
+        - uid: azure-maps-control.atlas.FloorPickerControlOptions
+          name: FloorPickerControlOptions
           items: []
         - uid: azure-maps-control.atlas.getAuthTokenCallback
           name: getAuthTokenCallback
@@ -424,6 +433,10 @@
                 - uid: azure-maps-rest.atlas.service.Models.BatchRequestBody
                   name: BatchRequestBody
                   items: []
+                - uid: >-
+                    azure-maps-rest.atlas.service.Models.BatchRequestBodyBatchItemsItem
+                  name: BatchRequestBodyBatchItemsItem
+                  items: []
                 - uid: azure-maps-rest.atlas.service.Models.BatchResponse
                   name: BatchResponse
                   items: []
@@ -447,6 +460,9 @@
                   items: []
                 - uid: azure-maps-rest.atlas.service.Models.DrivingSide
                   name: DrivingSide
+                  items: []
+                - uid: azure-maps-rest.atlas.service.Models.EntityType
+                  name: EntityType
                   items: []
                 - uid: azure-maps-rest.atlas.service.Models.ErrorModel
                   name: ErrorModel

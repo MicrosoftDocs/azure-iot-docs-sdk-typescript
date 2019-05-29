@@ -44,21 +44,22 @@ items:
       Defines values for GuidanceManeuver.
 
       Possible values include: 'ARRIVE', 'ARRIVE_LEFT', 'ARRIVE_RIGHT',
-      'DEPART',
+      'DEPART', 'STRAIGHT',
 
-      'STRAIGHT', 'KEEP_RIGHT', 'BEAR_RIGHT', 'TURN_RIGHT', 'SHARP_RIGHT',
+      'KEEP_RIGHT', 'BEAR_RIGHT', 'TURN_RIGHT', 'SHARP_RIGHT', 'KEEP_LEFT',
+      'BEAR_LEFT', 'TURN_LEFT',
 
-      'KEEP_LEFT', 'BEAR_LEFT', 'TURN_LEFT', 'SHARP_LEFT', 'MAKE_UTURN',
-
-      'ENTER_MOTORWAY', 'ENTER_FREEWAY', 'ENTER_HIGHWAY', 'TAKE_EXIT',
+      'SHARP_LEFT', 'MAKE_UTURN', 'ENTER_MOTORWAY', 'ENTER_FREEWAY',
+      'ENTER_HIGHWAY', 'TAKE_EXIT',
 
       'MOTORWAY_EXIT_LEFT', 'MOTORWAY_EXIT_RIGHT', 'TAKE_FERRY',
+      'ROUNDABOUT_CROSS',
 
-      'ROUNDABOUT_CROSS', 'ROUNDABOUT_RIGHT', 'ROUNDABOUT_LEFT',
+      'ROUNDABOUT_RIGHT', 'ROUNDABOUT_LEFT', 'ROUNDABOUT_BACK',
+      'TRY_MAKE_UTURN', 'FOLLOW',
 
-      'ROUNDABOUT_BACK', 'TRY_MAKE_UTURN', 'FOLLOW', 'SWITCH_PARALLEL_ROAD',
-
-      'SWITCH_MAIN_ROAD', 'ENTRANCE_RAMP', 'WAYPOINT_LEFT', 'WAYPOINT_RIGHT',
+      'SWITCH_PARALLEL_ROAD', 'SWITCH_MAIN_ROAD', 'ENTRANCE_RAMP',
+      'WAYPOINT_LEFT', 'WAYPOINT_RIGHT',
 
       'WAYPOINT_REACHED'
     package: azure-maps-rest
@@ -360,6 +361,14 @@ items:
     numericValue: null
     package: azure-maps-rest
 references:
+  - uid: 'azure-maps-rest.atlas.service.Models.BatchRequestBodyBatchItemsItem[]'
+    name: 'BatchRequestBodyBatchItemsItem[]'
+    spec.typeScript:
+      - name: BatchRequestBodyBatchItemsItem
+        fullName: BatchRequestBodyBatchItemsItem
+        uid: azure-maps-rest.atlas.service.Models.BatchRequestBodyBatchItemsItem
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary
     name: BatchResponseSummary
     spec.typeScript:
@@ -378,14 +387,22 @@ references:
       - name: ErrorModel
         fullName: ErrorModel
         uid: azure-maps-rest.atlas.service.Models.ErrorModel
-  - uid: 'azure-maps-rest.atlas.service.RequestPolicyFactory[]'
-    name: 'RequestPolicyFactory[]'
+  - uid: >-
+      azure-maps-rest.atlas.service.RequestPolicyFactory[] |
+      (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void | Object[]
+    name: >-
+      RequestPolicyFactory[] | (defaultRequestPolicyFactories:
+      RequestPolicyFactory[]) => void | Object[]
     spec.typeScript:
       - name: RequestPolicyFactory
         fullName: RequestPolicyFactory
         uid: azure-maps-rest.atlas.service.RequestPolicyFactory
-      - name: '[]'
-        fullName: '[]'
+      - name: >-
+          [] | (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void |
+          Object[]
+        fullName: >-
+          [] | (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void |
+          Object[]
   - uid: 'azure-maps-rest.atlas.service.Models.GeoJSONPoint[]'
     name: 'GeoJSONPoint[]'
     spec.typeScript:
@@ -755,6 +772,12 @@ references:
       - name: SearchAlongRouteSummary
         fullName: SearchAlongRouteSummary
         uid: azure-maps-rest.atlas.service.Models.SearchAlongRouteSummary
+  - uid: azure-maps-rest.atlas.service.Models.EntityType
+    name: EntityType
+    spec.typeScript:
+      - name: EntityType
+        fullName: EntityType
+        uid: azure-maps-rest.atlas.service.Models.EntityType
   - uid: azure-maps-rest.atlas.service.Models.SearchResultPoi
     name: SearchResultPoi
     spec.typeScript:
@@ -917,6 +940,14 @@ references:
       - name: Pipeline
         fullName: Pipeline
         uid: azure-maps-rest.atlas.service.Pipeline
+  - uid: 'azure-maps-rest.atlas.service.RequestPolicyFactory[]'
+    name: 'RequestPolicyFactory[]'
+    spec.typeScript:
+      - name: RequestPolicyFactory
+        fullName: RequestPolicyFactory
+        uid: azure-maps-rest.atlas.service.RequestPolicyFactory
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-rest.atlas.service.IPipelineOptions
     name: IPipelineOptions
     spec.typeScript:

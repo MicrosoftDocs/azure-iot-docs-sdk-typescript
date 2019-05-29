@@ -33,7 +33,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: The address of the result
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.Models.SearchResultAddress.buildingNumber
     name: buildingNumber
@@ -42,7 +42,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Building Number property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'buildingNumber?: string'
@@ -57,7 +61,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Country property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'country?: string'
@@ -72,7 +80,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Country Code property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'countryCode?: string'
@@ -87,7 +99,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Country Code ISO3 property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'countryCodeISO3?: string'
@@ -103,7 +119,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Country Secondary Subdivision property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'countrySecondarySubdivision?: string'
@@ -119,7 +139,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Country Subdivision property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'countrySubdivision?: string'
@@ -135,7 +159,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Country Subdividion Name property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'countrySubdivisionName?: string'
@@ -151,7 +179,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Country Tertiary Subdivision property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'countryTertiarySubdivision?: string'
@@ -166,7 +198,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Cross Street property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'crossStreet?: string'
@@ -182,7 +218,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Extended Postal Code property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'extendedPostalCode?: string'
@@ -197,7 +237,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Free form Address property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'freeformAddress?: string'
@@ -212,7 +256,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Municipality property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'municipality?: string'
@@ -228,7 +276,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Municipality Subdivision property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'municipalitySubdivision?: string'
@@ -243,7 +295,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Postal Code property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'postalCode?: string'
@@ -258,7 +314,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      number of routes
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'routeNumbers?: number[]'
@@ -273,7 +333,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Street property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'street?: string'
@@ -288,7 +352,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Street Name property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'streetName?: string'
@@ -304,7 +372,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Street Name and Number property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'streetNameAndNumber?: string'
@@ -319,7 +391,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Street Number property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'streetNumber?: string'
@@ -328,6 +404,14 @@ items:
           - string
     package: azure-maps-rest
 references:
+  - uid: 'azure-maps-rest.atlas.service.Models.BatchRequestBodyBatchItemsItem[]'
+    name: 'BatchRequestBodyBatchItemsItem[]'
+    spec.typeScript:
+      - name: BatchRequestBodyBatchItemsItem
+        fullName: BatchRequestBodyBatchItemsItem
+        uid: azure-maps-rest.atlas.service.Models.BatchRequestBodyBatchItemsItem
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary
     name: BatchResponseSummary
     spec.typeScript:
@@ -346,14 +430,22 @@ references:
       - name: ErrorModel
         fullName: ErrorModel
         uid: azure-maps-rest.atlas.service.Models.ErrorModel
-  - uid: 'azure-maps-rest.atlas.service.RequestPolicyFactory[]'
-    name: 'RequestPolicyFactory[]'
+  - uid: >-
+      azure-maps-rest.atlas.service.RequestPolicyFactory[] |
+      (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void | Object[]
+    name: >-
+      RequestPolicyFactory[] | (defaultRequestPolicyFactories:
+      RequestPolicyFactory[]) => void | Object[]
     spec.typeScript:
       - name: RequestPolicyFactory
         fullName: RequestPolicyFactory
         uid: azure-maps-rest.atlas.service.RequestPolicyFactory
-      - name: '[]'
-        fullName: '[]'
+      - name: >-
+          [] | (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void |
+          Object[]
+        fullName: >-
+          [] | (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void |
+          Object[]
   - uid: 'azure-maps-rest.atlas.service.Models.GeoJSONPoint[]'
     name: 'GeoJSONPoint[]'
     spec.typeScript:
@@ -723,6 +815,12 @@ references:
       - name: SearchAlongRouteSummary
         fullName: SearchAlongRouteSummary
         uid: azure-maps-rest.atlas.service.Models.SearchAlongRouteSummary
+  - uid: azure-maps-rest.atlas.service.Models.EntityType
+    name: EntityType
+    spec.typeScript:
+      - name: EntityType
+        fullName: EntityType
+        uid: azure-maps-rest.atlas.service.Models.EntityType
   - uid: azure-maps-rest.atlas.service.Models.SearchResultPoi
     name: SearchResultPoi
     spec.typeScript:
@@ -885,6 +983,14 @@ references:
       - name: Pipeline
         fullName: Pipeline
         uid: azure-maps-rest.atlas.service.Pipeline
+  - uid: 'azure-maps-rest.atlas.service.RequestPolicyFactory[]'
+    name: 'RequestPolicyFactory[]'
+    spec.typeScript:
+      - name: RequestPolicyFactory
+        fullName: RequestPolicyFactory
+        uid: azure-maps-rest.atlas.service.RequestPolicyFactory
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-rest.atlas.service.IPipelineOptions
     name: IPipelineOptions
     spec.typeScript:

@@ -7,6 +7,7 @@ items:
       - azure-maps-rest.atlas.service.Models.AlternativeRouteType
       - azure-maps-rest.atlas.service.Models.Avoid
       - azure-maps-rest.atlas.service.Models.BatchRequestBody
+      - azure-maps-rest.atlas.service.Models.BatchRequestBodyBatchItemsItem
       - azure-maps-rest.atlas.service.Models.BatchResponse
       - azure-maps-rest.atlas.service.Models.BatchResponseSummary
       - azure-maps-rest.atlas.service.Models.ComputeTravelTimeFor
@@ -15,6 +16,7 @@ items:
       - azure-maps-rest.atlas.service.Models.DataSources
       - azure-maps-rest.atlas.service.Models.DataSourcesGeometry
       - azure-maps-rest.atlas.service.Models.DrivingSide
+      - azure-maps-rest.atlas.service.Models.EntityType
       - azure-maps-rest.atlas.service.Models.ErrorModel
       - azure-maps-rest.atlas.service.Models.ErrorResponse
       - azure-maps-rest.atlas.service.Models.GeoJSONLineString
@@ -148,6 +150,14 @@ items:
     summary: ''
     package: azure-maps-rest
 references:
+  - uid: 'azure-maps-rest.atlas.service.Models.BatchRequestBodyBatchItemsItem[]'
+    name: 'BatchRequestBodyBatchItemsItem[]'
+    spec.typeScript:
+      - name: BatchRequestBodyBatchItemsItem
+        fullName: BatchRequestBodyBatchItemsItem
+        uid: azure-maps-rest.atlas.service.Models.BatchRequestBodyBatchItemsItem
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary
     name: BatchResponseSummary
     spec.typeScript:
@@ -166,14 +176,22 @@ references:
       - name: ErrorModel
         fullName: ErrorModel
         uid: azure-maps-rest.atlas.service.Models.ErrorModel
-  - uid: 'azure-maps-rest.atlas.service.RequestPolicyFactory[]'
-    name: 'RequestPolicyFactory[]'
+  - uid: >-
+      azure-maps-rest.atlas.service.RequestPolicyFactory[] |
+      (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void | Object[]
+    name: >-
+      RequestPolicyFactory[] | (defaultRequestPolicyFactories:
+      RequestPolicyFactory[]) => void | Object[]
     spec.typeScript:
       - name: RequestPolicyFactory
         fullName: RequestPolicyFactory
         uid: azure-maps-rest.atlas.service.RequestPolicyFactory
-      - name: '[]'
-        fullName: '[]'
+      - name: >-
+          [] | (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void |
+          Object[]
+        fullName: >-
+          [] | (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void |
+          Object[]
   - uid: 'azure-maps-rest.atlas.service.Models.GeoJSONPoint[]'
     name: 'GeoJSONPoint[]'
     spec.typeScript:
@@ -543,6 +561,12 @@ references:
       - name: SearchAlongRouteSummary
         fullName: SearchAlongRouteSummary
         uid: azure-maps-rest.atlas.service.Models.SearchAlongRouteSummary
+  - uid: azure-maps-rest.atlas.service.Models.EntityType
+    name: EntityType
+    spec.typeScript:
+      - name: EntityType
+        fullName: EntityType
+        uid: azure-maps-rest.atlas.service.Models.EntityType
   - uid: azure-maps-rest.atlas.service.Models.SearchResultPoi
     name: SearchResultPoi
     spec.typeScript:
@@ -705,6 +729,14 @@ references:
       - name: Pipeline
         fullName: Pipeline
         uid: azure-maps-rest.atlas.service.Pipeline
+  - uid: 'azure-maps-rest.atlas.service.RequestPolicyFactory[]'
+    name: 'RequestPolicyFactory[]'
+    spec.typeScript:
+      - name: RequestPolicyFactory
+        fullName: RequestPolicyFactory
+        uid: azure-maps-rest.atlas.service.RequestPolicyFactory
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-rest.atlas.service.IPipelineOptions
     name: IPipelineOptions
     spec.typeScript:
@@ -968,6 +1000,8 @@ references:
         uid: azure-maps-rest.atlas.AuthenticationManager
   - uid: azure-maps-rest.atlas.service.Models.BatchRequestBody
     name: BatchRequestBody
+  - uid: azure-maps-rest.atlas.service.Models.BatchRequestBodyBatchItemsItem
+    name: BatchRequestBodyBatchItemsItem
   - uid: azure-maps-rest.atlas.service.Models.BatchResponse
     name: BatchResponse
   - uid: azure-maps-rest.atlas.service.Models.ErrorResponse

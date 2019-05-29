@@ -21,7 +21,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: An interface representing SearchAddressStructuredResult.
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.Models.SearchAddressStructuredResult.address
     name: address
@@ -77,7 +77,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Entry Points array
     optional: true
     syntax:
       content: 'entryPoints?: SearchResultEntryPoint[]'
@@ -92,7 +92,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Id property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'id?: string'
@@ -138,7 +142,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Type property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
     optional: true
     syntax:
       content: 'type?: string'
@@ -163,6 +171,14 @@ items:
           - azure-maps-rest.atlas.service.Models.SearchResultViewport
     package: azure-maps-rest
 references:
+  - uid: 'azure-maps-rest.atlas.service.Models.BatchRequestBodyBatchItemsItem[]'
+    name: 'BatchRequestBodyBatchItemsItem[]'
+    spec.typeScript:
+      - name: BatchRequestBodyBatchItemsItem
+        fullName: BatchRequestBodyBatchItemsItem
+        uid: azure-maps-rest.atlas.service.Models.BatchRequestBodyBatchItemsItem
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary
     name: BatchResponseSummary
     spec.typeScript:
@@ -181,14 +197,22 @@ references:
       - name: ErrorModel
         fullName: ErrorModel
         uid: azure-maps-rest.atlas.service.Models.ErrorModel
-  - uid: 'azure-maps-rest.atlas.service.RequestPolicyFactory[]'
-    name: 'RequestPolicyFactory[]'
+  - uid: >-
+      azure-maps-rest.atlas.service.RequestPolicyFactory[] |
+      (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void | Object[]
+    name: >-
+      RequestPolicyFactory[] | (defaultRequestPolicyFactories:
+      RequestPolicyFactory[]) => void | Object[]
     spec.typeScript:
       - name: RequestPolicyFactory
         fullName: RequestPolicyFactory
         uid: azure-maps-rest.atlas.service.RequestPolicyFactory
-      - name: '[]'
-        fullName: '[]'
+      - name: >-
+          [] | (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void |
+          Object[]
+        fullName: >-
+          [] | (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void |
+          Object[]
   - uid: 'azure-maps-rest.atlas.service.Models.GeoJSONPoint[]'
     name: 'GeoJSONPoint[]'
     spec.typeScript:
@@ -558,6 +582,12 @@ references:
       - name: SearchAlongRouteSummary
         fullName: SearchAlongRouteSummary
         uid: azure-maps-rest.atlas.service.Models.SearchAlongRouteSummary
+  - uid: azure-maps-rest.atlas.service.Models.EntityType
+    name: EntityType
+    spec.typeScript:
+      - name: EntityType
+        fullName: EntityType
+        uid: azure-maps-rest.atlas.service.Models.EntityType
   - uid: azure-maps-rest.atlas.service.Models.SearchResultPoi
     name: SearchResultPoi
     spec.typeScript:
@@ -720,6 +750,14 @@ references:
       - name: Pipeline
         fullName: Pipeline
         uid: azure-maps-rest.atlas.service.Pipeline
+  - uid: 'azure-maps-rest.atlas.service.RequestPolicyFactory[]'
+    name: 'RequestPolicyFactory[]'
+    spec.typeScript:
+      - name: RequestPolicyFactory
+        fullName: RequestPolicyFactory
+        uid: azure-maps-rest.atlas.service.RequestPolicyFactory
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-rest.atlas.service.IPipelineOptions
     name: IPipelineOptions
     spec.typeScript:

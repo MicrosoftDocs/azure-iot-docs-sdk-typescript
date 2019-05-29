@@ -79,7 +79,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Optional Parameters.
     extends:
       name: RequestOptionsBase
     package: azure-maps-rest
@@ -107,7 +107,26 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >
+      Specifies the efficiency of converting chemical energy stored in fuel to
+      kinetic energy when
+
+      the vehicle accelerates _(i.e.
+      KineticEnergyGained/ChemicalEnergyConsumed).
+
+      ChemicalEnergyConsumed_ is obtained by converting consumed fuel to
+      chemical energy using
+
+      **fuelEnergyDensityInMJoulesPerLiter**.
+
+      Must be paired with **decelerationEfficiency**.
+
+
+      The range of values allowed are 0.0 to 1/**decelerationEfficiency**.
+
+
+      Sensible Values : for **Combustion Model** : 0.33, for **Electric Model**
+      : 0.66
     optional: true
     syntax:
       content: 'accelerationEfficiency?: number'
@@ -123,7 +142,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >
+      Specifies the amount of power consumed for sustaining auxiliary systems,
+      in kilowatts (kW).
+
+      It can be used to specify consumption due to devices and systems such as
+      AC systems, radio,
+
+      heating, etc.
+
+
+      Sensible Values : 1.7
     optional: true
     syntax:
       content: 'auxiliaryPowerInkW?: string'
@@ -139,7 +168,19 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >
+      Specifies the amount of fuel consumed for sustaining auxiliary systems of
+      the vehicle, in
+
+      liters per hour.
+
+      It can be used to specify consumption due to devices and systems such as
+      AC systems, radio,
+
+      heating, etc.
+
+
+      Sensible Values : 0.2
     optional: true
     syntax:
       content: 'auxiliaryPowerInLitersPerHour?: number'
@@ -155,7 +196,29 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Specifies something that the route calculation should try to avoid when
+      determining the route.
+
+      Can be specified multiple times. Possible values: (tollRoads avoids toll
+      roads), (motorways
+
+      avoids motorways), (ferries avoids ferries), (unpavedRoads avoids unpaved
+      roads), (carpools
+
+      avoids routes that require use of carpool (HOV/ High Occupancy Vehicle)
+      lanes),
+
+      (alreadyUsedRoads avoids using the same road multiple times. Most useful
+      in conjunction with
+
+      routeType=thrilling). In calculateReachableRange requests, the value
+      alreadyUsedRoads must not
+
+      be used. Possible values include: 'tollRoads', 'motorways', 'ferries',
+      'unpavedRoads',
+
+      'carpools', 'alreadyUsedRoads'
     optional: true
     syntax:
       content: 'avoid?: Avoid'
@@ -171,7 +234,60 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >
+      Specifies the speed-dependent component of consumption.
+
+      Provided as an unordered list of speed/consumption-rate pairs. The list
+      defines points on a
+
+      consumption curve. Consumption rates for speeds not in the list are found
+      as follows:
+
+
+      * by linear interpolation, if the given speed lies in between two speeds
+      in the list
+
+
+      * by linear extrapolation otherwise, assuming a constant
+      (ΔConsumption/ΔSpeed) determined by
+
+      the nearest two points in the list
+
+
+      The list must contain between 1 and 25 points (inclusive), and may not
+      contain duplicate
+
+      points for the same speed. If it only contains a single point, then the
+      consumption rate of
+
+      that point is used without further processing.
+
+
+      Consumption specified for the largest speed must be greater than or equal
+      to that of the
+
+      penultimate largest speed. This ensures that extrapolation does not lead
+      to negative
+
+      consumption rates.
+
+
+      Similarly, consumption values specified for the two smallest speeds in the
+      list cannot lead to
+
+      a negative consumption rate for any smaller  speed.
+
+
+      The valid range for the consumption values(expressed in kWh/100km) is
+      between 0.01 and
+
+      100000.0.
+
+
+      Sensible Values : 50,8.2:130,21.3
+
+
+      This parameter is required for **Electric consumption model**.
     optional: true
     syntax:
       content: 'constantSpeedConsumptionInkWhPerHundredkm?: string'
@@ -187,7 +303,61 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >
+      Specifies the speed-dependent component of consumption.
+
+      Provided as an unordered list of colon-delimited speed & consumption-rate
+      pairs. The list
+
+      defines points on a consumption curve. Consumption rates for speeds not in
+      the list are found
+
+      as follows:
+
+
+      * by linear interpolation, if the given speed lies in between two speeds
+      in the list
+
+
+      * by linear extrapolation otherwise, assuming a constant
+      (ΔConsumption/ΔSpeed) determined by
+
+      the nearest two points in the list
+
+
+      The list must contain between 1 and 25 points (inclusive), and may not
+      contain duplicate
+
+      points for the same speed. If it only contains a single point, then the
+      consumption rate of
+
+      that point is used without further processing.
+
+
+      Consumption specified for the largest speed must be greater than or equal
+      to that of the
+
+      penultimate largest speed. This ensures that extrapolation does not lead
+      to negative
+
+      consumption rates.
+
+
+      Similarly, consumption values specified for the two smallest speeds in the
+      list cannot lead to
+
+      a negative consumption rate for any smaller speed.
+
+
+      The valid range for the consumption values(expressed in l/100km) is
+      between 0.01 and 100000.0.
+
+
+      Sensible Values : 50,6.3:130,11.5
+
+
+      **Note** : This parameter is required for **The Combustion Consumption
+      Model**.
     optional: true
     syntax:
       content: 'constantSpeedConsumptionInLitersPerHundredkm?: number'
@@ -203,7 +373,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      Specifies the current electric energy supply in kilowatt hours (kWh).
+      This parameter co-exists with **maxChargeInkWh** parameter.
+
+      The range of values allowed are 0.0 to **maxChargeInkWh**.
+
+      Sensible Values : 43
     optional: true
     syntax:
       content: 'currentChargeInkWh?: string'
@@ -219,7 +395,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      Specifies the current supply of fuel in liters.
+      Sensible Values : 55
     optional: true
     syntax:
       content: 'currentFuelInLiters?: number'
@@ -253,7 +431,25 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >
+      Specifies the efficiency of converting kinetic energy to saved (not
+      consumed) fuel when the
+
+      vehicle decelerates _(i.e. ChemicalEnergySaved/KineticEnergyLost).
+      ChemicalEnergySaved_ is
+
+      obtained by converting saved (not consumed) fuel to energy using
+
+      **fuelEnergyDensityInMJoulesPerLiter**.
+
+      Must be paired with **accelerationEfficiency**.
+
+
+      The range of values allowed are 0.0 to 1/**accelerationEfficiency**.
+
+
+      Sensible Values : for **Combustion Model** : 0.83, for **Electric Model**
+      : 0.91
     optional: true
     syntax:
       content: 'decelerationEfficiency?: number'
@@ -269,7 +465,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The date and time of departure from the origin point. Departure times
+      apart from now must be
+
+      specified as a dateTime. When a time zone offset is not specified, it will
+      be assumed to be
+
+      that of the origin point. The departAt value must be in the future in the
+      date-time format
+
+      (1996-12-19T16:39:57-08:00).
     optional: true
     syntax:
       content: 'departAt?: Date'
@@ -285,7 +491,25 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >
+      Specifies the efficiency of converting potential energy to saved (not
+      consumed) fuel when the
+
+      vehicle loses elevation _(i.e. ChemicalEnergySaved/PotentialEnergyLost).
+      ChemicalEnergySaved_
+
+      is obtained by converting saved (not consumed) fuel to energy using
+
+      **fuelEnergyDensityInMJoulesPerLiter**.
+
+      Must be paired with **uphillEfficiency**.
+
+
+      The range of values allowed are 0.0 to 1/**uphillEfficiency**.
+
+
+      Sensible Values : for **Combustion Model** : 0.51, for **Electric Model**
+      : 0.73
     optional: true
     syntax:
       content: 'downhillEfficiency?: number'
@@ -301,7 +525,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Electric energy budget in kilowatt hours (kWh) that determines maximal
+      range which can be
+
+      travelled using the specified Electric Consumption Model. This parameter
+      is required if
+
+      vehicleEngineType is Electric and timeBudgetInSec is not used. Either
+      fuelBudgetInLiters,
+
+      energyBudgetInkWh or timeBudgetInSec must be provided.
     optional: true
     syntax:
       content: 'energyBudgetInkWh?: number'
@@ -317,7 +551,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Fuel budget in liters that determines maximal range which can be travelled
+      using the specified
+
+      Combustion Consumption Model. This parameter is required if
+      vehicleEngineType is Combustion
+
+      and timeBudgetInSec is not used. Either fuelBudgetInLiters,
+      energyBudgetInkWh or
+
+      timeBudgetInSec must be provided.
     optional: true
     syntax:
       content: 'fuelBudgetInLiters?: number'
@@ -333,7 +577,22 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >
+      Specifies the amount of chemical energy stored in one liter of fuel in
+      megajoules (MJ). It is
+
+      used in conjunction with the ***Efficiency** parameters for conversions
+      between saved or
+
+      consumed energy and fuel. For example, energy density is 34.2 MJ/l for
+      gasoline, and 35.8 MJ/l
+
+      for Diesel fuel.
+
+      This parameter is required if any ***Efficiency** parameter is set.
+
+
+      Sensible Values : 34.2
     optional: true
     syntax:
       content: 'fuelEnergyDensityInMJoulesPerLiter?: number'
@@ -349,7 +608,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Degree of hilliness for thrilling route. This parameter can only be used
+      in conjunction with
+
+      `routeType`=thrilling. Possible values include: 'low', 'normal', 'high'
     optional: true
     syntax:
       content: 'hilliness?: Hilliness'
@@ -365,7 +628,19 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >
+      Specifies the maximum electric energy supply in kilowatt hours (kWh) that
+      may be stored in the
+
+      vehicle's battery.
+
+      This parameter co-exists with **currentChargeInkWh** parameter.
+
+
+      Minimum value has to be greater than or equal to **currentChargeInkWh**.
+
+
+      Sensible Values : 85
     optional: true
     syntax:
       content: 'maxChargeInkWh?: string'
@@ -413,7 +688,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The type of route requested. Possible values include: 'fastest',
+      'shortest', 'eco',
+
+      'thrilling'
     optional: true
     syntax:
       content: 'routeType?: RouteType'
@@ -429,7 +708,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Time budget in seconds that determines maximal range which can be
+      travelled using driving
+
+      time. The consumption parameters will only affect eco-routes and thereby
+      indirectly the
+
+      driving time. This parameter is required if fuelBudgetInLiters or
+      energyBudgetInkWh are not
+
+      used. Either fuelBudgetInLiters, energyBudgetInkWh or timeBudgetInSec must
+      be provided.
     optional: true
     syntax:
       content: 'timeBudgetInSec?: number'
@@ -463,7 +753,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Possible values:
+
+      * true - Do consider all available traffic information during routing
+
+      * false - Ignore current traffic data during routing. Note that although
+      the current traffic
+
+      data is ignored
+
+      during routing, the effect of historic traffic on effective road speeds is
+      still incorporated.
     optional: true
     syntax:
       content: 'traffic?: boolean'
@@ -479,7 +780,26 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The mode of travel for the requested route. Note that the requested
+      travelMode may not be
+
+      available for the entire route. Where the requested travelMode is not
+      available for a
+
+      particular section, the travelMode element of the response for that
+      section will be other.
+
+      Note that travel modes bus, motorcycle, taxi and van are BETA
+      functionality. Full restriction
+
+      data is not available in all areas. In **calculateReachableRange**
+      requests, the values
+
+      bicycle and pedestrian must not be used. Possible values include: 'car',
+      'truck', 'taxi',
+
+      'bus', 'van', 'motorcycle', 'bicycle', 'pedestrian'
     optional: true
     syntax:
       content: 'travelMode?: TravelMode'
@@ -495,7 +815,26 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >
+      Specifies the efficiency of converting chemical energy stored in fuel to
+      potential energy when
+
+      the vehicle gains elevation _(i.e.
+      PotentialEnergyGained/ChemicalEnergyConsumed).
+
+      ChemicalEnergyConsumed_ is obtained by converting consumed fuel to
+      chemical energy using
+
+      **fuelEnergyDensityInMJoulesPerLiter**.
+
+      Must be paired with **downhillEfficiency**.
+
+
+      The range of values allowed are 0.0 to 1/**downhillEfficiency**.
+
+
+      Sensible Values : for **Combustion Model** : 0.27, for **Electric Model**
+      : 0.74
     optional: true
     syntax:
       content: 'uphillEfficiency?: number'
@@ -511,7 +850,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Weight per axle of the vehicle in kg. A value of 0 means that weight
+      restrictions per axle are
+
+      not considered.
     optional: true
     syntax:
       content: 'vehicleAxleWeight?: number'
@@ -527,7 +870,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Vehicle is used for commercial purposes and thus may not be allowed to
+      drive  on some roads.
     optional: true
     syntax:
       content: 'vehicleCommercial?: boolean'
@@ -543,7 +888,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Engine type of the vehicle. When a detailed Consumption Model is
+      specified, it must be
+
+      consistent with the value of **vehicleEngineType**. Possible values
+      include: 'combustion',
+
+      'electric'
     optional: true
     syntax:
       content: 'vehicleEngineType?: VehicleEngineType'
@@ -559,7 +911,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Height of the vehicle in meters. A value of 0 means that height
+      restrictions are not
+
+      considered.
     optional: true
     syntax:
       content: 'vehicleHeight?: number'
@@ -575,7 +931,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Length of the vehicle in meters. A value of 0 means that length
+      restrictions are not
+
+      considered.
     optional: true
     syntax:
       content: 'vehicleLength?: number'
@@ -591,7 +951,29 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Types of cargo that may be classified as hazardous materials and
+      restricted from some roads.
+
+      Available vehicleLoadType values are US Hazmat classes 1 through 9, plus
+      generic
+
+      classifications for use in other countries. Values beginning with USHazmat
+      are for US routing
+
+      while otherHazmat should be used for all other countries. vehicleLoadType
+      can be specified
+
+      multiple times. This parameter is currently only considered for
+      travelMode=truck. Possible
+
+      values include: 'USHazmatClass1', 'USHazmatClass2', 'USHazmatClass3',
+      'USHazmatClass4',
+
+      'USHazmatClass5', 'USHazmatClass6', 'USHazmatClass7', 'USHazmatClass8',
+      'USHazmatClass9',
+
+      'otherHazmatExplosive', 'otherHazmatGeneral', 'otherHazmatHarmfulToWater'
     optional: true
     syntax:
       content: 'vehicleLoadType?: VehicleLoadType'
@@ -607,7 +989,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Maximum speed of the vehicle in km/hour. A value of 0 means that an
+      appropriate value for the
+
+      vehicle will be determined and applied during route planning. A non-zero
+      value may be
+
+      overridden during route planning.
     optional: true
     syntax:
       content: 'vehicleMaxSpeed?: number'
@@ -623,7 +1012,29 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >
+      Weight of the vehicle in kilograms.
+
+      * It is mandatory if any of the *Efficiency parameters are set.
+
+
+      * It must be strictly positive when used in the context of the Consumption
+      Model. Weight
+
+      restrictions are considered.
+
+
+      * If no detailed **Consumption Model** is specified and the value of
+      **vehicleWeight** is
+
+      non-zero, then weight restrictions are considered.
+
+
+      * In all other cases, this parameter is ignored.
+
+
+      Sensible Values : for **Combustion Model** : 1600, for **Electric Model**
+      : 1900
     optional: true
     syntax:
       content: 'vehicleWeight?: number'
@@ -639,7 +1050,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Width of the vehicle in meters. A value of 0 means that width restrictions
+      are not considered.
     optional: true
     syntax:
       content: 'vehicleWidth?: number'
@@ -655,7 +1068,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Level of turns for thrilling route. This parameter can only be used in
+      conjunction with
+
+      routeType=thrilling. Possible values include: 'low', 'normal', 'high'
     optional: true
     syntax:
       content: 'windingness?: Windingness'
@@ -664,6 +1081,14 @@ items:
           - azure-maps-rest.atlas.service.Models.Windingness
     package: azure-maps-rest
 references:
+  - uid: 'azure-maps-rest.atlas.service.Models.BatchRequestBodyBatchItemsItem[]'
+    name: 'BatchRequestBodyBatchItemsItem[]'
+    spec.typeScript:
+      - name: BatchRequestBodyBatchItemsItem
+        fullName: BatchRequestBodyBatchItemsItem
+        uid: azure-maps-rest.atlas.service.Models.BatchRequestBodyBatchItemsItem
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary
     name: BatchResponseSummary
     spec.typeScript:
@@ -682,14 +1107,22 @@ references:
       - name: ErrorModel
         fullName: ErrorModel
         uid: azure-maps-rest.atlas.service.Models.ErrorModel
-  - uid: 'azure-maps-rest.atlas.service.RequestPolicyFactory[]'
-    name: 'RequestPolicyFactory[]'
+  - uid: >-
+      azure-maps-rest.atlas.service.RequestPolicyFactory[] |
+      (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void | Object[]
+    name: >-
+      RequestPolicyFactory[] | (defaultRequestPolicyFactories:
+      RequestPolicyFactory[]) => void | Object[]
     spec.typeScript:
       - name: RequestPolicyFactory
         fullName: RequestPolicyFactory
         uid: azure-maps-rest.atlas.service.RequestPolicyFactory
-      - name: '[]'
-        fullName: '[]'
+      - name: >-
+          [] | (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void |
+          Object[]
+        fullName: >-
+          [] | (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void |
+          Object[]
   - uid: 'azure-maps-rest.atlas.service.Models.GeoJSONPoint[]'
     name: 'GeoJSONPoint[]'
     spec.typeScript:
@@ -1059,6 +1492,12 @@ references:
       - name: SearchAlongRouteSummary
         fullName: SearchAlongRouteSummary
         uid: azure-maps-rest.atlas.service.Models.SearchAlongRouteSummary
+  - uid: azure-maps-rest.atlas.service.Models.EntityType
+    name: EntityType
+    spec.typeScript:
+      - name: EntityType
+        fullName: EntityType
+        uid: azure-maps-rest.atlas.service.Models.EntityType
   - uid: azure-maps-rest.atlas.service.Models.SearchResultPoi
     name: SearchResultPoi
     spec.typeScript:
@@ -1221,6 +1660,14 @@ references:
       - name: Pipeline
         fullName: Pipeline
         uid: azure-maps-rest.atlas.service.Pipeline
+  - uid: 'azure-maps-rest.atlas.service.RequestPolicyFactory[]'
+    name: 'RequestPolicyFactory[]'
+    spec.typeScript:
+      - name: RequestPolicyFactory
+        fullName: RequestPolicyFactory
+        uid: azure-maps-rest.atlas.service.RequestPolicyFactory
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-rest.atlas.service.IPipelineOptions
     name: IPipelineOptions
     spec.typeScript:

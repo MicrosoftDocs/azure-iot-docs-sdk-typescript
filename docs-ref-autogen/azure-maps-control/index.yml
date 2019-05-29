@@ -17,6 +17,7 @@ items:
       - azure-maps-control.atlas.Control
       - azure-maps-control.atlas.control
       - azure-maps-control.atlas.control.CompassControl
+      - azure-maps-control.atlas.control.FloorPickerControl
       - azure-maps-control.atlas.control.PitchControl
       - azure-maps-control.atlas.control.StyleControl
       - azure-maps-control.atlas.control.ZoomControl
@@ -40,6 +41,8 @@ items:
       - azure-maps-control.atlas.DataSourceOptions
       - azure-maps-control.atlas.EventManager
       - azure-maps-control.atlas.Expression
+      - azure-maps-control.atlas.FloorChangeEvent
+      - azure-maps-control.atlas.FloorPickerControlOptions
       - azure-maps-control.atlas.getAuthTokenCallback
       - azure-maps-control.atlas.HeatMapLayerOptions
       - azure-maps-control.atlas.HtmlMarker
@@ -131,6 +134,8 @@ references:
     name: control
   - uid: azure-maps-control.atlas.control.CompassControl
     name: CompassControl
+  - uid: azure-maps-control.atlas.control.FloorPickerControl
+    name: FloorPickerControl
   - uid: azure-maps-control.atlas.control.PitchControl
     name: PitchControl
   - uid: azure-maps-control.atlas.control.StyleControl
@@ -177,6 +182,10 @@ references:
     name: EventManager
   - uid: azure-maps-control.atlas.Expression
     name: Expression
+  - uid: azure-maps-control.atlas.FloorChangeEvent
+    name: FloorChangeEvent
+  - uid: azure-maps-control.atlas.FloorPickerControlOptions
+    name: FloorPickerControlOptions
   - uid: azure-maps-control.atlas.getAuthTokenCallback
     name: getAuthTokenCallback
   - uid: azure-maps-control.atlas.HeatMapLayerOptions

@@ -8,20 +8,26 @@ items:
       - >-
         azure-maps-rest.atlas.service.Models.MapsClientOptions.clientRequestIdHeaderName
       - >-
+        azure-maps-rest.atlas.service.Models.MapsClientOptions.deserializationContentTypes
+      - >-
         azure-maps-rest.atlas.service.Models.MapsClientOptions.generateClientRequestIdHeader
       - azure-maps-rest.atlas.service.Models.MapsClientOptions.httpClient
       - >-
         azure-maps-rest.atlas.service.Models.MapsClientOptions.httpPipelineLogger
       - azure-maps-rest.atlas.service.Models.MapsClientOptions.noRetryPolicy
+      - azure-maps-rest.atlas.service.Models.MapsClientOptions.proxySettings
       - >-
         azure-maps-rest.atlas.service.Models.MapsClientOptions.requestPolicyFactories
       - >-
         azure-maps-rest.atlas.service.Models.MapsClientOptions.rpRegistrationRetryTimeout
+      - azure-maps-rest.atlas.service.Models.MapsClientOptions.userAgent
+      - >-
+        azure-maps-rest.atlas.service.Models.MapsClientOptions.userAgentHeaderName
       - azure-maps-rest.atlas.service.Models.MapsClientOptions.withCredentials
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: An interface representing MapsClientOptions.
     extends:
       name: ServiceClientOptions
     package: azure-maps-rest
@@ -60,6 +66,22 @@ items:
       return:
         type:
           - string
+    package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.MapsClientOptions.deserializationContentTypes
+    name: deserializationContentTypes
+    fullName: deserializationContentTypes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The content-types that will be associated with JSON or XML serialization.
+    optional: true
+    syntax:
+      content: 'deserializationContentTypes?: DeserializationContentTypes'
+      return:
+        type:
+          - DeserializationContentTypes
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.atlas.service.Models.MapsClientOptions.generateClientRequestIdHeader
@@ -126,6 +148,21 @@ items:
         type:
           - boolean
     package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.MapsClientOptions.proxySettings
+    name: proxySettings
+    fullName: proxySettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Proxy settings which will be used for every HTTP request (Node.js only).
+    optional: true
+    syntax:
+      content: 'proxySettings?: ProxySettings'
+      return:
+        type:
+          - ProxySettings
+    package: azure-maps-rest
   - uid: >-
       azure-maps-rest.atlas.service.Models.MapsClientOptions.requestPolicyFactories
     name: requestPolicyFactories
@@ -136,15 +173,24 @@ items:
     type: property
     summary: >-
       An array of factories which get called to create the RequestPolicy
-      pipeline
+      pipeline used to send a HTTP
 
-      used to send a HTTP request on the wire.
+      request on the wire, or a function that takes in the
+      defaultRequestPolicyFactories and returns
+
+      the requestPolicyFactories that will be used.
     optional: true
     syntax:
-      content: 'requestPolicyFactories?: RequestPolicyFactory[]'
+      content: >-
+        requestPolicyFactories?: RequestPolicyFactory[] |
+        (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void |
+        Object[]
       return:
         type:
-          - 'azure-maps-rest.atlas.service.RequestPolicyFactory[]'
+          - >-
+            azure-maps-rest.atlas.service.RequestPolicyFactory[] |
+            (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void |
+            Object[]
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.atlas.service.Models.MapsClientOptions.rpRegistrationRetryTimeout
@@ -163,6 +209,50 @@ items:
       return:
         type:
           - number
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.MapsClientOptions.userAgent
+    name: userAgent
+    fullName: userAgent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The string to be set to the telemetry header while sending the request, or
+      a function that
+
+      takes in the default user-agent string and returns the user-agent string
+      that will be used.
+    optional: true
+    syntax:
+      content: 'userAgent?: string | (defaultUserAgent: string) => string'
+      return:
+        type:
+          - 'string | (defaultUserAgent: string) => string'
+    package: azure-maps-rest
+  - uid: azure-maps-rest.atlas.service.Models.MapsClientOptions.userAgentHeaderName
+    name: userAgentHeaderName
+    fullName: userAgentHeaderName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The header name to use for the telemetry header while sending the request.
+      If this is not
+
+      specified, then "User-Agent" will be used when running on Node.js and
+      "x-ms-command-name" will
+
+      be used when running in a browser.
+    optional: true
+    syntax:
+      content: >-
+        userAgentHeaderName?: string | (defaultUserAgentHeaderName: string) =>
+        string
+      return:
+        type:
+          - 'string | (defaultUserAgentHeaderName: string) => string'
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.Models.MapsClientOptions.withCredentials
     name: withCredentials
@@ -185,6 +275,14 @@ items:
           - boolean
     package: azure-maps-rest
 references:
+  - uid: 'azure-maps-rest.atlas.service.Models.BatchRequestBodyBatchItemsItem[]'
+    name: 'BatchRequestBodyBatchItemsItem[]'
+    spec.typeScript:
+      - name: BatchRequestBodyBatchItemsItem
+        fullName: BatchRequestBodyBatchItemsItem
+        uid: azure-maps-rest.atlas.service.Models.BatchRequestBodyBatchItemsItem
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary
     name: BatchResponseSummary
     spec.typeScript:
@@ -203,14 +301,22 @@ references:
       - name: ErrorModel
         fullName: ErrorModel
         uid: azure-maps-rest.atlas.service.Models.ErrorModel
-  - uid: 'azure-maps-rest.atlas.service.RequestPolicyFactory[]'
-    name: 'RequestPolicyFactory[]'
+  - uid: >-
+      azure-maps-rest.atlas.service.RequestPolicyFactory[] |
+      (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void | Object[]
+    name: >-
+      RequestPolicyFactory[] | (defaultRequestPolicyFactories:
+      RequestPolicyFactory[]) => void | Object[]
     spec.typeScript:
       - name: RequestPolicyFactory
         fullName: RequestPolicyFactory
         uid: azure-maps-rest.atlas.service.RequestPolicyFactory
-      - name: '[]'
-        fullName: '[]'
+      - name: >-
+          [] | (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void |
+          Object[]
+        fullName: >-
+          [] | (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void |
+          Object[]
   - uid: 'azure-maps-rest.atlas.service.Models.GeoJSONPoint[]'
     name: 'GeoJSONPoint[]'
     spec.typeScript:
@@ -580,6 +686,12 @@ references:
       - name: SearchAlongRouteSummary
         fullName: SearchAlongRouteSummary
         uid: azure-maps-rest.atlas.service.Models.SearchAlongRouteSummary
+  - uid: azure-maps-rest.atlas.service.Models.EntityType
+    name: EntityType
+    spec.typeScript:
+      - name: EntityType
+        fullName: EntityType
+        uid: azure-maps-rest.atlas.service.Models.EntityType
   - uid: azure-maps-rest.atlas.service.Models.SearchResultPoi
     name: SearchResultPoi
     spec.typeScript:
@@ -742,6 +854,14 @@ references:
       - name: Pipeline
         fullName: Pipeline
         uid: azure-maps-rest.atlas.service.Pipeline
+  - uid: 'azure-maps-rest.atlas.service.RequestPolicyFactory[]'
+    name: 'RequestPolicyFactory[]'
+    spec.typeScript:
+      - name: RequestPolicyFactory
+        fullName: RequestPolicyFactory
+        uid: azure-maps-rest.atlas.service.RequestPolicyFactory
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-rest.atlas.service.IPipelineOptions
     name: IPipelineOptions
     spec.typeScript:

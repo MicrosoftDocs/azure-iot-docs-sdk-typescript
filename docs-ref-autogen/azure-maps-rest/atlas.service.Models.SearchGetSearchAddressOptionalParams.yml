@@ -36,10 +36,12 @@ items:
         azure-maps-rest.atlas.service.Models.SearchGetSearchAddressOptionalParams.topLeft
       - >-
         azure-maps-rest.atlas.service.Models.SearchGetSearchAddressOptionalParams.typeahead
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchGetSearchAddressOptionalParams.view
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Optional Parameters.
     extends:
       name: RequestOptionsBase
     package: azure-maps-rest
@@ -67,7 +69,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Bottom right position of the bounding box. E.g. 37.553,-122.453'
     optional: true
     syntax:
       content: 'btmRight?: string'
@@ -83,7 +85,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Comma separated string of country codes, e.g. FR, ES. This will limit the
+      search to the
+
+      specified countries
     optional: true
     syntax:
       content: 'countrySet?: string[]'
@@ -117,7 +123,59 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >
+      Indexes for which extended postal codes should be included in the results.
+
+      Available indexes are:
+
+
+      **Addr** = Address ranges
+
+
+      **Geo** = Geographies
+
+
+      **PAD** = Point Addresses
+
+
+      **POI** = Points of Interest
+
+
+      **Str** = Streets
+
+
+      **XStr** = Cross Streets (intersections)
+
+
+      Value should be a comma separated list of index types (in any order) or
+      **None** for no
+
+      indexes.
+
+
+      By default extended postal codes are included for all indexes except Geo.
+      Extended postal code
+
+      lists for geographies can be quite long so they have to be explicitly
+      requested when needed.
+
+
+      Usage examples:
+
+
+      extendedPostalCodesFor=POI
+
+
+      extendedPostalCodesFor=PAD,Addr,POI
+
+
+      extendedPostalCodesFor=None
+
+
+      Extended postal code is returned as an **extendedPostalCode** property of
+      an address.
+
+      Availability is region-dependent.
     optional: true
     syntax:
       content: 'extendedPostalCodesFor?: string'
@@ -133,7 +191,19 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >
+      Language in which search results should be returned. Should be one of
+      supported IETF language
+
+      tags, case insensitive. When data in specified language is not available
+      for a specific field,
+
+      default language is used.
+
+      Please refer to [Supported
+
+      Languages](https://docs.microsoft.com/en-us/azure/azure-maps/supported-languages)
+      for details.
     optional: true
     syntax:
       content: 'language?: string'
@@ -149,7 +219,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Latitude where results should be biased. E.g. 37.337
     optional: true
     syntax:
       content: 'lat?: number'
@@ -165,7 +235,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Maximum number of responses that will be returned. Default: 10, minimum: 1
+      and maximum: 100
     optional: true
     syntax:
       content: 'limit?: number'
@@ -181,7 +253,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Longitude where results should be biased. E.g. -121.89
     optional: true
     syntax:
       content: 'lon?: number'
@@ -197,7 +269,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Starting offset of the returned results within the full result set.
     optional: true
     syntax:
       content: 'ofs?: number'
@@ -245,7 +317,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The radius in meters to for the results to be constrained to the defined
+      area
     optional: true
     syntax:
       content: 'radius?: number'
@@ -279,7 +353,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Top left position of the bounding box. E.g. 37.553,-122.453'
     optional: true
     syntax:
       content: 'topLeft?: string'
@@ -295,7 +369,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Boolean. If the typeahead flag is set, the query will be interpreted as a
+      partial input and
+
+      the search will enter predictive mode
     optional: true
     syntax:
       content: 'typeahead?: boolean'
@@ -303,7 +381,31 @@ items:
         type:
           - boolean
     package: azure-maps-rest
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchGetSearchAddressOptionalParams.view
+    name: view
+    fullName: view
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Specifies which set of geopolitically disputed borders and labels are displayed on the map.\nThe View parameter  (also referred to as “user region parameter”) is a 2-letter ISO-3166\nCountry Code that will show the correct  maps for that country/region.\_By default, the View\nparameter is set to “Unified”. Country/Regions that are not on  the View list will default to\nthe “Unified” View. It is your responsibility to determine the location of your  users, and\nthen set the View parameter correctly for that location. The View parameter in Azure Maps must\nbe  used in compliance with applicable laws, including those regarding mapping, of the country\nwhere maps, images  and other data and third party content that You are authorized to access\nvia Azure Maps is made available.\_Example:  view=IN.\nPlease refer to [Supported Views](https://aka.ms/AzureMapsLocalizationViews) for details.\n"
+    optional: true
+    syntax:
+      content: 'view?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-rest
 references:
+  - uid: 'azure-maps-rest.atlas.service.Models.BatchRequestBodyBatchItemsItem[]'
+    name: 'BatchRequestBodyBatchItemsItem[]'
+    spec.typeScript:
+      - name: BatchRequestBodyBatchItemsItem
+        fullName: BatchRequestBodyBatchItemsItem
+        uid: azure-maps-rest.atlas.service.Models.BatchRequestBodyBatchItemsItem
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary
     name: BatchResponseSummary
     spec.typeScript:
@@ -322,14 +424,22 @@ references:
       - name: ErrorModel
         fullName: ErrorModel
         uid: azure-maps-rest.atlas.service.Models.ErrorModel
-  - uid: 'azure-maps-rest.atlas.service.RequestPolicyFactory[]'
-    name: 'RequestPolicyFactory[]'
+  - uid: >-
+      azure-maps-rest.atlas.service.RequestPolicyFactory[] |
+      (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void | Object[]
+    name: >-
+      RequestPolicyFactory[] | (defaultRequestPolicyFactories:
+      RequestPolicyFactory[]) => void | Object[]
     spec.typeScript:
       - name: RequestPolicyFactory
         fullName: RequestPolicyFactory
         uid: azure-maps-rest.atlas.service.RequestPolicyFactory
-      - name: '[]'
-        fullName: '[]'
+      - name: >-
+          [] | (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void |
+          Object[]
+        fullName: >-
+          [] | (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void |
+          Object[]
   - uid: 'azure-maps-rest.atlas.service.Models.GeoJSONPoint[]'
     name: 'GeoJSONPoint[]'
     spec.typeScript:
@@ -699,6 +809,12 @@ references:
       - name: SearchAlongRouteSummary
         fullName: SearchAlongRouteSummary
         uid: azure-maps-rest.atlas.service.Models.SearchAlongRouteSummary
+  - uid: azure-maps-rest.atlas.service.Models.EntityType
+    name: EntityType
+    spec.typeScript:
+      - name: EntityType
+        fullName: EntityType
+        uid: azure-maps-rest.atlas.service.Models.EntityType
   - uid: azure-maps-rest.atlas.service.Models.SearchResultPoi
     name: SearchResultPoi
     spec.typeScript:
@@ -861,6 +977,14 @@ references:
       - name: Pipeline
         fullName: Pipeline
         uid: azure-maps-rest.atlas.service.Pipeline
+  - uid: 'azure-maps-rest.atlas.service.RequestPolicyFactory[]'
+    name: 'RequestPolicyFactory[]'
+    spec.typeScript:
+      - name: RequestPolicyFactory
+        fullName: RequestPolicyFactory
+        uid: azure-maps-rest.atlas.service.RequestPolicyFactory
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-rest.atlas.service.IPipelineOptions
     name: IPipelineOptions
     spec.typeScript:

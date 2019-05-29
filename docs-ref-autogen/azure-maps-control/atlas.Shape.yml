@@ -4,8 +4,6 @@ items:
     name: Shape
     fullName: Shape
     children:
-      - azure-maps-control.atlas.Shape.constructor
-      - azure-maps-control.atlas.Shape.constructor_1
       - azure-maps-control.atlas.Shape.addProperty
       - azure-maps-control.atlas.Shape.getBounds
       - azure-maps-control.atlas.Shape.getCoordinates
@@ -16,6 +14,8 @@ items:
       - azure-maps-control.atlas.Shape.isRectangle
       - azure-maps-control.atlas.Shape.setCoordinates
       - azure-maps-control.atlas.Shape.setProperties
+      - azure-maps-control.atlas.Shape.constructor_1
+      - azure-maps-control.atlas.Shape.constructor
       - azure-maps-control.atlas.Shape.toJson
     langs:
       - typeScript
@@ -23,53 +23,6 @@ items:
     summary: >-
       A helper class that wraps a Geometry or Feature and makes it easy to
       update and maintain.
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Shape.constructor
-    name: 'Shape(Feature<data.Geometry, any>)'
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: Constructs a Shape object and initializes it with the specified Feature.
-    syntax:
-      content: 'new Shape(data: Feature<data.Geometry, any>)'
-      parameters:
-        - id: data
-          type:
-            - >-
-              azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
-              any>
-          description: a Geometry object
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Shape.constructor_1
-    name: 'Shape(data.Geometry, string, any)'
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: >-
-      Constructs a Shape object and initializes it with the specified Geometry,
-      ID, and properties.
-    syntax:
-      content: 'new Shape(data: data.Geometry, id?: string, properties?: any)'
-      parameters:
-        - id: data
-          type:
-            - azure-maps-control.atlas.data.Geometry
-          description: a Geometry object
-        - id: id
-          type:
-            - string
-          description: >-
-            a unique id that the user assigns to the shape. If not provided, a
-            unique id value will be assigned to it.
-          optional: true
-        - id: properties
-          type:
-            - any
-          description: |
-            User defined properties for the shape.
-          optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Shape.addProperty
     name: 'addProperty(string, any)'
@@ -243,6 +196,53 @@ items:
           description: |+
 
     package: azure-maps-control
+  - uid: azure-maps-control.atlas.Shape.constructor_1
+    name: 'Shape(data.Geometry, string, any)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: >-
+      Constructs a Shape object and initializes it with the specified Geometry,
+      ID, and properties.
+    syntax:
+      content: 'new Shape(data: data.Geometry, id?: string, properties?: any)'
+      parameters:
+        - id: data
+          type:
+            - azure-maps-control.atlas.data.Geometry
+          description: a Geometry object
+        - id: id
+          type:
+            - string
+          description: >-
+            a unique id that the user assigns to the shape. If not provided, a
+            unique id value will be assigned to it.
+          optional: true
+        - id: properties
+          type:
+            - any
+          description: |
+            User defined properties for the shape.
+          optional: true
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Shape.constructor
+    name: 'Shape(Feature<data.Geometry, any>)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a Shape object and initializes it with the specified Feature.
+    syntax:
+      content: 'new Shape(data: Feature<data.Geometry, any>)'
+      parameters:
+        - id: data
+          type:
+            - >-
+              azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+              any>
+          description: a Geometry object
+    package: azure-maps-control
   - uid: azure-maps-control.atlas.Shape.toJson
     name: toJson()
     children: []
@@ -278,6 +278,12 @@ references:
       - name: ControlOptions
         fullName: ControlOptions
         uid: azure-maps-control.atlas.ControlOptions
+  - uid: azure-maps-control.atlas.FloorPickerControlOptions
+    name: FloorPickerControlOptions
+    spec.typeScript:
+      - name: FloorPickerControlOptions
+        fullName: FloorPickerControlOptions
+        uid: azure-maps-control.atlas.FloorPickerControlOptions
   - uid: azure-maps-control.atlas.PitchControlOptions
     name: PitchControlOptions
     spec.typeScript:
@@ -467,6 +473,24 @@ references:
       - name: ImageLayerOptions
         fullName: ImageLayerOptions
         uid: azure-maps-control.atlas.ImageLayerOptions
+  - uid: 'Promise<azure-maps-control.atlas.Pixel[]>'
+    name: 'Pixel[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: 'azure-maps-control.atlas.Pixel[]'
+    name: 'Pixel[]'
+    spec.typeScript:
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-control.atlas.LineLayerOptions
     name: LineLayerOptions
     spec.typeScript:
@@ -699,14 +723,6 @@ references:
       - name: TimeUnits
         fullName: TimeUnits
         uid: azure-maps-control.atlas.math.TimeUnits
-  - uid: 'azure-maps-control.atlas.Pixel[]'
-    name: 'Pixel[]'
-    spec.typeScript:
-      - name: Pixel
-        fullName: Pixel
-        uid: azure-maps-control.atlas.Pixel
-      - name: '[]'
-        fullName: '[]'
   - uid: azure-maps-control.atlas.source.Source
     name: Source
     spec.typeScript:
@@ -836,12 +852,6 @@ references:
       - name: Shape
         fullName: Shape
         uid: azure-maps-control.atlas.Shape
-  - uid: azure-maps-control.atlas.Expression
-    name: Expression
-    spec.typeScript:
-      - name: Expression
-        fullName: Expression
-        uid: azure-maps-control.atlas.Expression
   - uid: 'azure-maps-control.atlas.Shape[]'
     name: 'Shape[]'
     spec.typeScript:
@@ -917,6 +927,12 @@ references:
       - name: VectorTileSourceOptions
         fullName: VectorTileSourceOptions
         uid: azure-maps-control.atlas.VectorTileSourceOptions
+  - uid: azure-maps-control.atlas.Expression
+    name: Expression
+    spec.typeScript:
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.atlas.Expression
   - uid: azure-maps-control.atlas.HtmlMarkerOptions
     name: HtmlMarkerOptions
     spec.typeScript:
@@ -1246,6 +1262,20 @@ references:
       - name: Popup
         fullName: Popup
         uid: azure-maps-control.atlas.Popup
+  - uid: azure-maps-control.atlas.MapEvent
+    name: MapEvent
+    spec.typeScript:
+      - name: MapEvent
+        fullName: MapEvent
+        uid: azure-maps-control.atlas.MapEvent
+  - uid: 'azure-maps-control.atlas.HtmlMarker[]'
+    name: 'HtmlMarker[]'
+    spec.typeScript:
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+      - name: '[]'
+        fullName: '[]'
   - uid: >-
       string | azure-maps-control.atlas.HtmlMarker | Array<string |
       azure-maps-control.atlas.HtmlMarker>
@@ -1365,12 +1395,6 @@ references:
         uid: azure-maps-control.atlas.layer.Layer
       - name: '>'
         fullName: '>'
-  - uid: azure-maps-control.atlas.MapEvent
-    name: MapEvent
-    spec.typeScript:
-      - name: MapEvent
-        fullName: MapEvent
-        uid: azure-maps-control.atlas.MapEvent
   - uid: azure-maps-control.atlas.MapMouseWheelEvent
     name: MapMouseWheelEvent
     spec.typeScript:

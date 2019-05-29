@@ -4,11 +4,11 @@ items:
     name: HeatMapLayer
     fullName: HeatMapLayer
     children:
-      - azure-maps-control.atlas.layer.HeatMapLayer.constructor
-      - azure-maps-control.atlas.layer.HeatMapLayer.metadata
       - azure-maps-control.atlas.layer.HeatMapLayer.getId
       - azure-maps-control.atlas.layer.HeatMapLayer.getOptions
       - azure-maps-control.atlas.layer.HeatMapLayer.getSource
+      - azure-maps-control.atlas.layer.HeatMapLayer.constructor
+      - azure-maps-control.atlas.layer.HeatMapLayer.metadata
       - azure-maps-control.atlas.layer.HeatMapLayer.setOptions
     langs:
       - typeScript
@@ -16,6 +16,48 @@ items:
     summary: Represent the density of data using different colors (HeatMap).
     extends:
       name: azure-maps-control.atlas.layer.Layer
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.HeatMapLayer.getId
+    name: getId()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the id of the layer
+    syntax:
+      content: function getId()
+      parameters: []
+      return:
+        type:
+          - string
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.HeatMapLayer.getOptions
+    name: getOptions()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the options of the heat map layer.
+    syntax:
+      content: function getOptions()
+      parameters: []
+      return:
+        type:
+          - azure-maps-control.atlas.HeatMapLayerOptions
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.HeatMapLayer.getSource
+    name: getSource()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the source provided when creating the layer.
+    syntax:
+      content: function getSource()
+      parameters: []
+      return:
+        type:
+          - string | azure-maps-control.atlas.source.Source
     package: azure-maps-control
   - uid: azure-maps-control.atlas.layer.HeatMapLayer.constructor
     name: 'HeatMapLayer(string | Source, string, HeatMapLayerOptions)'
@@ -62,48 +104,6 @@ items:
         type:
           - any
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.HeatMapLayer.getId
-    name: getId()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Gets the id of the layer
-    syntax:
-      content: function getId()
-      parameters: []
-      return:
-        type:
-          - string
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.HeatMapLayer.getOptions
-    name: getOptions()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Gets the options of the heat map layer.
-    syntax:
-      content: function getOptions()
-      parameters: []
-      return:
-        type:
-          - azure-maps-control.atlas.HeatMapLayerOptions
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.HeatMapLayer.getSource
-    name: getSource()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Gets the source provided when creating the layer.
-    syntax:
-      content: function getSource()
-      parameters: []
-      return:
-        type:
-          - string | azure-maps-control.atlas.source.Source
-    package: azure-maps-control
   - uid: azure-maps-control.atlas.layer.HeatMapLayer.setOptions
     name: setOptions(HeatMapLayerOptions)
     children: []
@@ -138,6 +138,12 @@ references:
       - name: ControlOptions
         fullName: ControlOptions
         uid: azure-maps-control.atlas.ControlOptions
+  - uid: azure-maps-control.atlas.FloorPickerControlOptions
+    name: FloorPickerControlOptions
+    spec.typeScript:
+      - name: FloorPickerControlOptions
+        fullName: FloorPickerControlOptions
+        uid: azure-maps-control.atlas.FloorPickerControlOptions
   - uid: azure-maps-control.atlas.PitchControlOptions
     name: PitchControlOptions
     spec.typeScript:
@@ -327,6 +333,24 @@ references:
       - name: ImageLayerOptions
         fullName: ImageLayerOptions
         uid: azure-maps-control.atlas.ImageLayerOptions
+  - uid: 'Promise<azure-maps-control.atlas.Pixel[]>'
+    name: 'Pixel[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: 'azure-maps-control.atlas.Pixel[]'
+    name: 'Pixel[]'
+    spec.typeScript:
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-control.atlas.LineLayerOptions
     name: LineLayerOptions
     spec.typeScript:
@@ -559,14 +583,6 @@ references:
       - name: TimeUnits
         fullName: TimeUnits
         uid: azure-maps-control.atlas.math.TimeUnits
-  - uid: 'azure-maps-control.atlas.Pixel[]'
-    name: 'Pixel[]'
-    spec.typeScript:
-      - name: Pixel
-        fullName: Pixel
-        uid: azure-maps-control.atlas.Pixel
-      - name: '[]'
-        fullName: '[]'
   - uid: azure-maps-control.atlas.source.Source
     name: Source
     spec.typeScript:
@@ -696,12 +712,6 @@ references:
       - name: Shape
         fullName: Shape
         uid: azure-maps-control.atlas.Shape
-  - uid: azure-maps-control.atlas.Expression
-    name: Expression
-    spec.typeScript:
-      - name: Expression
-        fullName: Expression
-        uid: azure-maps-control.atlas.Expression
   - uid: 'azure-maps-control.atlas.Shape[]'
     name: 'Shape[]'
     spec.typeScript:
@@ -777,6 +787,12 @@ references:
       - name: VectorTileSourceOptions
         fullName: VectorTileSourceOptions
         uid: azure-maps-control.atlas.VectorTileSourceOptions
+  - uid: azure-maps-control.atlas.Expression
+    name: Expression
+    spec.typeScript:
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.atlas.Expression
   - uid: azure-maps-control.atlas.HtmlMarkerOptions
     name: HtmlMarkerOptions
     spec.typeScript:
@@ -1106,6 +1122,20 @@ references:
       - name: Popup
         fullName: Popup
         uid: azure-maps-control.atlas.Popup
+  - uid: azure-maps-control.atlas.MapEvent
+    name: MapEvent
+    spec.typeScript:
+      - name: MapEvent
+        fullName: MapEvent
+        uid: azure-maps-control.atlas.MapEvent
+  - uid: 'azure-maps-control.atlas.HtmlMarker[]'
+    name: 'HtmlMarker[]'
+    spec.typeScript:
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+      - name: '[]'
+        fullName: '[]'
   - uid: >-
       string | azure-maps-control.atlas.HtmlMarker | Array<string |
       azure-maps-control.atlas.HtmlMarker>
@@ -1225,12 +1255,6 @@ references:
         uid: azure-maps-control.atlas.layer.Layer
       - name: '>'
         fullName: '>'
-  - uid: azure-maps-control.atlas.MapEvent
-    name: MapEvent
-    spec.typeScript:
-      - name: MapEvent
-        fullName: MapEvent
-        uid: azure-maps-control.atlas.MapEvent
   - uid: azure-maps-control.atlas.MapMouseWheelEvent
     name: MapMouseWheelEvent
     spec.typeScript:

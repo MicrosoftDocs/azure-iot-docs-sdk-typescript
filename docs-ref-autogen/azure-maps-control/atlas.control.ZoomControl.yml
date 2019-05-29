@@ -4,30 +4,13 @@ items:
     name: ZoomControl
     fullName: ZoomControl
     children:
-      - azure-maps-control.atlas.control.ZoomControl.constructor
       - azure-maps-control.atlas.control.ZoomControl.onAdd
       - azure-maps-control.atlas.control.ZoomControl.onRemove
+      - azure-maps-control.atlas.control.ZoomControl.constructor
     langs:
       - typeScript
     type: class
     summary: A control for changing the zoom of the map.
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.control.ZoomControl.constructor
-    name: ZoomControl(ZoomControlOptions)
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: Constructs a ZoomControl.
-    syntax:
-      content: 'new ZoomControl(options?: ZoomControlOptions)'
-      parameters:
-        - id: options
-          type:
-            - azure-maps-control.atlas.ZoomControlOptions
-          description: |
-            The options for the control.
-          optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.control.ZoomControl.onAdd
     name: onAdd(Map)
@@ -64,6 +47,23 @@ items:
       content: function onRemove()
       parameters: []
     package: azure-maps-control
+  - uid: azure-maps-control.atlas.control.ZoomControl.constructor
+    name: ZoomControl(ZoomControlOptions)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a ZoomControl.
+    syntax:
+      content: 'new ZoomControl(options?: ZoomControlOptions)'
+      parameters:
+        - id: options
+          type:
+            - azure-maps-control.atlas.ZoomControlOptions
+          description: |
+            The options for the control.
+          optional: true
+    package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions
     name: CompassControlOptions
@@ -83,6 +83,12 @@ references:
       - name: ControlOptions
         fullName: ControlOptions
         uid: azure-maps-control.atlas.ControlOptions
+  - uid: azure-maps-control.atlas.FloorPickerControlOptions
+    name: FloorPickerControlOptions
+    spec.typeScript:
+      - name: FloorPickerControlOptions
+        fullName: FloorPickerControlOptions
+        uid: azure-maps-control.atlas.FloorPickerControlOptions
   - uid: azure-maps-control.atlas.PitchControlOptions
     name: PitchControlOptions
     spec.typeScript:
@@ -272,6 +278,24 @@ references:
       - name: ImageLayerOptions
         fullName: ImageLayerOptions
         uid: azure-maps-control.atlas.ImageLayerOptions
+  - uid: 'Promise<azure-maps-control.atlas.Pixel[]>'
+    name: 'Pixel[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: 'azure-maps-control.atlas.Pixel[]'
+    name: 'Pixel[]'
+    spec.typeScript:
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-control.atlas.LineLayerOptions
     name: LineLayerOptions
     spec.typeScript:
@@ -504,14 +528,6 @@ references:
       - name: TimeUnits
         fullName: TimeUnits
         uid: azure-maps-control.atlas.math.TimeUnits
-  - uid: 'azure-maps-control.atlas.Pixel[]'
-    name: 'Pixel[]'
-    spec.typeScript:
-      - name: Pixel
-        fullName: Pixel
-        uid: azure-maps-control.atlas.Pixel
-      - name: '[]'
-        fullName: '[]'
   - uid: azure-maps-control.atlas.source.Source
     name: Source
     spec.typeScript:
@@ -641,12 +657,6 @@ references:
       - name: Shape
         fullName: Shape
         uid: azure-maps-control.atlas.Shape
-  - uid: azure-maps-control.atlas.Expression
-    name: Expression
-    spec.typeScript:
-      - name: Expression
-        fullName: Expression
-        uid: azure-maps-control.atlas.Expression
   - uid: 'azure-maps-control.atlas.Shape[]'
     name: 'Shape[]'
     spec.typeScript:
@@ -722,6 +732,12 @@ references:
       - name: VectorTileSourceOptions
         fullName: VectorTileSourceOptions
         uid: azure-maps-control.atlas.VectorTileSourceOptions
+  - uid: azure-maps-control.atlas.Expression
+    name: Expression
+    spec.typeScript:
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.atlas.Expression
   - uid: azure-maps-control.atlas.HtmlMarkerOptions
     name: HtmlMarkerOptions
     spec.typeScript:
@@ -1051,6 +1067,20 @@ references:
       - name: Popup
         fullName: Popup
         uid: azure-maps-control.atlas.Popup
+  - uid: azure-maps-control.atlas.MapEvent
+    name: MapEvent
+    spec.typeScript:
+      - name: MapEvent
+        fullName: MapEvent
+        uid: azure-maps-control.atlas.MapEvent
+  - uid: 'azure-maps-control.atlas.HtmlMarker[]'
+    name: 'HtmlMarker[]'
+    spec.typeScript:
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+      - name: '[]'
+        fullName: '[]'
   - uid: >-
       string | azure-maps-control.atlas.HtmlMarker | Array<string |
       azure-maps-control.atlas.HtmlMarker>
@@ -1170,12 +1200,6 @@ references:
         uid: azure-maps-control.atlas.layer.Layer
       - name: '>'
         fullName: '>'
-  - uid: azure-maps-control.atlas.MapEvent
-    name: MapEvent
-    spec.typeScript:
-      - name: MapEvent
-        fullName: MapEvent
-        uid: azure-maps-control.atlas.MapEvent
   - uid: azure-maps-control.atlas.MapMouseWheelEvent
     name: MapMouseWheelEvent
     spec.typeScript:

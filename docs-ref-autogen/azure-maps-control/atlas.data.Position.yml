@@ -4,28 +4,26 @@ items:
     name: Position
     fullName: Position
     children:
-      - azure-maps-control.atlas.data.Position.constructor
-      - azure-maps-control.atlas.data.Position.length
+      - azure-maps-control.atlas.data.Position.areEqual
       - azure-maps-control.atlas.data.Position.Array
       - azure-maps-control.atlas.data.Position.concat
       - azure-maps-control.atlas.data.Position.concat_1
-      - azure-maps-control.atlas.data.Position.copyWithin
-      - azure-maps-control.atlas.data.Position.entries
       - azure-maps-control.atlas.data.Position.every
-      - azure-maps-control.atlas.data.Position.fill
-      - azure-maps-control.atlas.data.Position.filter
       - azure-maps-control.atlas.data.Position.filter_1
-      - azure-maps-control.atlas.data.Position.find
-      - azure-maps-control.atlas.data.Position.find_1
-      - azure-maps-control.atlas.data.Position.findIndex
+      - azure-maps-control.atlas.data.Position.filter
       - azure-maps-control.atlas.data.Position.forEach
-      - azure-maps-control.atlas.data.Position.includes
+      - azure-maps-control.atlas.data.Position.fromLatLng_1
+      - azure-maps-control.atlas.data.Position.fromLatLng_2
+      - azure-maps-control.atlas.data.Position.fromLatLng
+      - azure-maps-control.atlas.data.Position.fromLatLngs
+      - azure-maps-control.atlas.data.Position.fromPosition
       - azure-maps-control.atlas.data.Position.indexOf
       - azure-maps-control.atlas.data.Position.join
-      - azure-maps-control.atlas.data.Position.keys
       - azure-maps-control.atlas.data.Position.lastIndexOf
+      - azure-maps-control.atlas.data.Position.length
       - azure-maps-control.atlas.data.Position.map
       - azure-maps-control.atlas.data.Position.pop
+      - azure-maps-control.atlas.data.Position.constructor
       - azure-maps-control.atlas.data.Position.push
       - azure-maps-control.atlas.data.Position.reduce
       - azure-maps-control.atlas.data.Position.reduce_1
@@ -43,13 +41,6 @@ items:
       - azure-maps-control.atlas.data.Position.toLocaleString
       - azure-maps-control.atlas.data.Position.toString
       - azure-maps-control.atlas.data.Position.unshift
-      - azure-maps-control.atlas.data.Position.values
-      - azure-maps-control.atlas.data.Position.areEqual
-      - azure-maps-control.atlas.data.Position.fromLatLng
-      - azure-maps-control.atlas.data.Position.fromLatLng_1
-      - azure-maps-control.atlas.data.Position.fromLatLng_2
-      - azure-maps-control.atlas.data.Position.fromLatLngs
-      - azure-maps-control.atlas.data.Position.fromPosition
     langs:
       - typeScript
     type: class
@@ -62,46 +53,36 @@ items:
     extends:
       name: Array<number>
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.Position.constructor
-    name: 'Position(number, number, number)'
+  - uid: azure-maps-control.atlas.data.Position.areEqual
+    name: 'areEqual(Position, Position, number)'
     children: []
-    type: constructor
+    type: method
     langs:
       - typeScript
-    summary: Constructs a Position.
-    syntax:
-      content: 'new Position(longitude: number, latitude: number, elevation?: number)'
-      parameters:
-        - id: longitude
-          type:
-            - number
-          description: The position's longitude.
-        - id: latitude
-          type:
-            - number
-          description: The position's latitude.
-        - id: elevation
-          type:
-            - number
-          description: |
-            The position's elevation.
-          optional: true
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.Position.length
-    name: length
-    fullName: length
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
-      Gets or sets the length of the array. This is a number one higher than the
-      highest element defined in an array.
+      Compares the longitude and latitude values of two positions to see if they
+      are equal at an accuracy of 6 decimal places.
     syntax:
-      content: 'length: number'
+      content: >-
+        static function areEqual(pos1: Position, pos2: Position, precision?:
+        number)
+      parameters:
+        - id: pos1
+          type:
+            - azure-maps-control.atlas.data.Position
+          description: First position to compare.
+        - id: pos2
+          type:
+            - azure-maps-control.atlas.data.Position
+          description: Second position to compare.
+        - id: precision
+          type:
+            - number
+          description: 'The number of decimal places to compare to. Default: 6.'
+          optional: true
       return:
         type:
-          - number
+          - boolean
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.Position.Array
     name: Array
@@ -155,61 +136,6 @@ items:
         type:
           - 'number[]'
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.Position.copyWithin
-    name: 'copyWithin(number, number, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the this object after copying a section of the array identified by
-      start and end
-
-      to the same array starting at position target
-    syntax:
-      content: 'function copyWithin(target: number, start: number, end?: number)'
-      parameters:
-        - id: target
-          type:
-            - number
-          description: >-
-            If target is negative, it is treated as length+target where length
-            is the
-
-            length of the array.
-        - id: start
-          type:
-            - number
-          description: >-
-            If start is negative, it is treated as length+start. If end is
-            negative, it
-
-            is treated as length+end.
-        - id: end
-          type:
-            - number
-          description: >
-            If not specified, length of the this object is used as its default
-            value.
-          optional: true
-      return:
-        type:
-          - this
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.Position.entries
-    name: entries()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: 'Returns an iterable of key, value pairs for every entry in the array'
-    syntax:
-      content: function entries()
-      parameters: []
-      return:
-        type:
-          - IterableIterator<Object>
-    package: azure-maps-control
   - uid: azure-maps-control.atlas.data.Position.every
     name: 'every((value: number, index: number, array: number[]) => boolean, any)'
     children: []
@@ -240,77 +166,6 @@ items:
       return:
         type:
           - boolean
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.Position.fill
-    name: 'fill(number, number, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the this object after filling the section identified by start and
-      end with value
-    syntax:
-      content: 'function fill(value: number, start?: number, end?: number)'
-      parameters:
-        - id: value
-          type:
-            - number
-          description: value to fill array section with
-        - id: start
-          type:
-            - number
-          description: >-
-            index to start filling the array at. If start is negative, it is
-            treated as
-
-            length+start where length is the length of the array.
-          optional: true
-        - id: end
-          type:
-            - number
-          description: >
-            index to stop filling the array at. If end is negative, it is
-            treated as
-
-            length+end.
-          optional: true
-      return:
-        type:
-          - this
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.Position.filter
-    name: 'filter((value: number, index: number, array: number[]) => boolean, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter<S>(callbackfn: (value: number, index: number, array:
-        number[]) => boolean, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: number, index: number, array: number[]) => boolean'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - 'S[]'
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.Position.filter_1
     name: 'filter((value: number, index: number, array: number[]) => any, any)'
@@ -345,120 +200,38 @@ items:
         type:
           - 'number[]'
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.Position.find
-    name: >-
-      find((this: void, value: number, index: number, obj: number[]) => boolean,
-      any)
+  - uid: azure-maps-control.atlas.data.Position.filter
+    name: 'filter((value: number, index: number, array: number[]) => boolean, any)'
     children: []
     type: method
     langs:
       - typeScript
     summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
     syntax:
       content: >-
-        function find<S>(predicate: (this: void, value: number, index: number,
-        obj: number[]) => boolean, thisArg?: any)
-      parameters:
-        - id: predicate
-          type:
-            - >-
-              (this: void, value: number, index: number, obj: number[]) =>
-              boolean
-          description: >-
-            find calls predicate once for each element of the array, in
-            ascending
-
-            order, until it finds one where predicate returns true. If such an
-            element is found, find
-
-            immediately returns that element value. Otherwise, find returns
-            undefined.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            If provided, it will be used as the this value for each invocation
-            of
-
-            predicate. If it is not provided, undefined is used instead.
-          optional: true
-      return:
-        type:
-          - S | undefined
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.Position.find_1
-    name: 'find((value: number, index: number, obj: number[]) => boolean, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
-    syntax:
-      content: >-
-        function find(predicate: (value: number, index: number, obj: number[])
-        => boolean, thisArg?: any)
-      parameters:
-        - id: predicate
-          type:
-            - '(value: number, index: number, obj: number[]) => boolean'
-          description: ''
-        - id: thisArg
-          type:
-            - any
-          description: ''
-          optional: true
-      return:
-        type:
-          - number | undefined
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.Position.findIndex
-    name: 'findIndex((value: number, index: number, obj: number[]) => boolean, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the index of the first element in the array where predicate is
-      true, and -1
-
-      otherwise.
-    syntax:
-      content: >-
-        function findIndex(predicate: (value: number, index: number, obj:
+        function filter<S>(callbackfn: (value: number, index: number, array:
         number[]) => boolean, thisArg?: any)
       parameters:
-        - id: predicate
+        - id: callbackfn
           type:
-            - '(value: number, index: number, obj: number[]) => boolean'
+            - '(value: number, index: number, array: number[]) => boolean'
           description: >-
-            find calls predicate once for each element of the array, in
-            ascending
-
-            order, until it finds one where predicate returns true. If such an
-            element is found,
-
-            findIndex immediately returns that element index. Otherwise,
-            findIndex returns -1.
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
         - id: thisArg
           type:
             - any
           description: >
-            If provided, it will be used as the this value for each invocation
-            of
-
-            predicate. If it is not provided, undefined is used instead.
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
           optional: true
       return:
         type:
-          - number
+          - 'S[]'
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.Position.forEach
     name: 'forEach((value: number, index: number, array: number[]) => void, any)'
@@ -487,32 +260,131 @@ items:
             value.
           optional: true
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.Position.includes
-    name: 'includes(number, number)'
+  - uid: azure-maps-control.atlas.data.Position.fromLatLng_1
+    name: 'fromLatLng(number, number, number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Generates a Position object from latitude and longitude values.
+    syntax:
+      content: 'static function fromLatLng(lat: number, lng: number, elv?: number)'
+      parameters:
+        - id: lat
+          type:
+            - number
+          description: The latitude value.
+        - id: lng
+          type:
+            - number
+          description: A longitude value.
+        - id: elv
+          type:
+            - number
+          description: An elevation value in meters.
+          optional: true
+      return:
+        type:
+          - azure-maps-control.atlas.data.Position
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.Position.fromLatLng_2
+    name: 'fromLatLng(number[])'
     children: []
     type: method
     langs:
       - typeScript
     summary: >-
-      Determines whether an array includes a certain element, returning true or
-      false as appropriate.
+      Generates a Position object from an array that has the format; [lat, lng]
+      or [lat, lng, elv]
     syntax:
-      content: 'function includes(searchElement: number, fromIndex?: number)'
+      content: 'static function fromLatLng(latLng: number[])'
       parameters:
-        - id: searchElement
+        - id: latLng
           type:
-            - number
-          description: The element to search for.
-        - id: fromIndex
-          type:
-            - number
-          description: >
-            The position in this array at which to begin searching for
-            searchElement.
-          optional: true
+            - 'number[]'
+          description: >-
+            An array that contains latitude/longitude information in the format;
+            [lat, lng] or [lat, lng, elv]
       return:
         type:
-          - boolean
+          - azure-maps-control.atlas.data.Position
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.Position.fromLatLng
+    name: fromLatLng(object)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Generates a Position object from an object that contains coordinate
+      information.
+
+      The object is scanned for the following properties using a case
+      insensitive test.
+
+      Longitude: lng, longitude, lon, x
+
+      Latitude: lat, latitude, y
+
+      Elevation: elv, elevation, alt, altitude, z
+    syntax:
+      content: 'static function fromLatLng(latLng: object)'
+      parameters:
+        - id: latLng
+          type:
+            - object
+          description: The object to extract coordinate information from.
+      return:
+        type:
+          - azure-maps-control.atlas.data.Position
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.Position.fromLatLngs
+    name: 'fromLatLngs(Array<any | number[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Converts an array of objects that contain coordinate information into an
+      array of Positions. Objects that can't be converted are discarded.
+
+      Each object is either an array in the format; [lat, lng] or [lat, lng,
+      elv], or an object with the any combination of the following properties:
+
+      Longitude: lng, longitude, lon, x
+
+      Latitude: lat, latitude, y
+
+      Elevation: elv, elevation, alt, altitude, z
+    syntax:
+      content: 'static function fromLatLngs(latLngs: Array<any | number[]>)'
+      parameters:
+        - id: latLngs
+          type:
+            - 'Array<any | number[]>'
+          description: The objects that contain coordinate information.
+      return:
+        type:
+          - 'azure-maps-control.atlas.data.Position[]'
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.Position.fromPosition
+    name: fromPosition(Position)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Clones a position.
+    syntax:
+      content: 'static function fromPosition(position: Position)'
+      parameters:
+        - id: position
+          type:
+            - azure-maps-control.atlas.data.Position
+          description: |
+            The position to clone.
+      return:
+        type:
+          - azure-maps-control.atlas.data.Position
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.Position.indexOf
     name: 'indexOf(number, number)'
@@ -563,20 +435,6 @@ items:
         type:
           - string
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.Position.keys
-    name: keys()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Returns an iterable of keys in the array
-    syntax:
-      content: function keys()
-      parameters: []
-      return:
-        type:
-          - IterableIterator<number>
-    package: azure-maps-control
   - uid: azure-maps-control.atlas.data.Position.lastIndexOf
     name: 'lastIndexOf(number, number)'
     children: []
@@ -598,6 +456,22 @@ items:
             The array index at which to begin the search. If fromIndex is
             omitted, the search starts at the last index in the array.
           optional: true
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.Position.length
+    name: length
+    fullName: length
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Gets or sets the length of the array. This is a number one higher than the
+      highest element defined in an array.
+    syntax:
+      content: 'length: number'
       return:
         type:
           - number
@@ -647,6 +521,31 @@ items:
       return:
         type:
           - number | undefined
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.Position.constructor
+    name: 'Position(number, number, number)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a Position.
+    syntax:
+      content: 'new Position(longitude: number, latitude: number, elevation?: number)'
+      parameters:
+        - id: longitude
+          type:
+            - number
+          description: The position's longitude.
+        - id: latitude
+          type:
+            - number
+          description: The position's latitude.
+        - id: elevation
+          type:
+            - number
+          description: |
+            The position's elevation.
+          optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.Position.push
     name: 'push(number[])'
@@ -1084,177 +983,6 @@ items:
         type:
           - number
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.Position.values
-    name: values()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Returns an iterable of values in the array
-    syntax:
-      content: function values()
-      parameters: []
-      return:
-        type:
-          - IterableIterator<number>
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.Position.areEqual
-    name: 'areEqual(Position, Position, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Compares the longitude and latitude values of two positions to see if they
-      are equal at an accuracy of 6 decimal places.
-    syntax:
-      content: >-
-        static function areEqual(pos1: Position, pos2: Position, precision?:
-        number)
-      parameters:
-        - id: pos1
-          type:
-            - azure-maps-control.atlas.data.Position
-          description: First position to compare.
-        - id: pos2
-          type:
-            - azure-maps-control.atlas.data.Position
-          description: Second position to compare.
-        - id: precision
-          type:
-            - number
-          description: 'The number of decimal places to compare to. Default: 6.'
-          optional: true
-      return:
-        type:
-          - boolean
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.Position.fromLatLng
-    name: fromLatLng(object)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Generates a Position object from an object that contains coordinate
-      information.
-
-      The object is scanned for the following properties using a case
-      insensitive test.
-
-      Longitude: lng, longitude, lon, x
-
-      Latitude: lat, latitude, y
-
-      Elevation: elv, elevation, alt, altitude, z
-    syntax:
-      content: 'static function fromLatLng(latLng: object)'
-      parameters:
-        - id: latLng
-          type:
-            - object
-          description: The object to extract coordinate information from.
-      return:
-        type:
-          - azure-maps-control.atlas.data.Position
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.Position.fromLatLng_1
-    name: 'fromLatLng(number, number, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Generates a Position object from latitude and longitude values.
-    syntax:
-      content: 'static function fromLatLng(lat: number, lng: number, elv?: number)'
-      parameters:
-        - id: lat
-          type:
-            - number
-          description: The latitude value.
-        - id: lng
-          type:
-            - number
-          description: A longitude value.
-        - id: elv
-          type:
-            - number
-          description: An elevation value in meters.
-          optional: true
-      return:
-        type:
-          - azure-maps-control.atlas.data.Position
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.Position.fromLatLng_2
-    name: 'fromLatLng(number[])'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Generates a Position object from an array that has the format; [lat, lng]
-      or [lat, lng, elv]
-    syntax:
-      content: 'static function fromLatLng(latLng: number[])'
-      parameters:
-        - id: latLng
-          type:
-            - 'number[]'
-          description: >-
-            An array that contains latitude/longitude information in the format;
-            [lat, lng] or [lat, lng, elv]
-      return:
-        type:
-          - azure-maps-control.atlas.data.Position
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.Position.fromLatLngs
-    name: 'fromLatLngs(Array<object | number[]>)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Converts an array of objects that contain coordinate information into an
-      array of Positions. Objects that can't be converted are discarded.
-
-      Each object is either an array in the format; [lat, lng] or [lat, lng,
-      elv], or an object with the any combination of the following properties:
-
-      Longitude: lng, longitude, lon, x
-
-      Latitude: lat, latitude, y
-
-      Elevation: elv, elevation, alt, altitude, z
-    syntax:
-      content: 'static function fromLatLngs(latLngs: Array<object | number[]>)'
-      parameters:
-        - id: latLngs
-          type:
-            - 'Array<object | number[]>'
-          description: The objects that contain coordinate information.
-      return:
-        type:
-          - 'azure-maps-control.atlas.data.Position[]'
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.Position.fromPosition
-    name: fromPosition(Position)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Clones a position.
-    syntax:
-      content: 'static function fromPosition(position: Position)'
-      parameters:
-        - id: position
-          type:
-            - azure-maps-control.atlas.data.Position
-          description: |
-            The position to clone.
-      return:
-        type:
-          - azure-maps-control.atlas.data.Position
-    package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions
     name: CompassControlOptions
@@ -1274,6 +1002,12 @@ references:
       - name: ControlOptions
         fullName: ControlOptions
         uid: azure-maps-control.atlas.ControlOptions
+  - uid: azure-maps-control.atlas.FloorPickerControlOptions
+    name: FloorPickerControlOptions
+    spec.typeScript:
+      - name: FloorPickerControlOptions
+        fullName: FloorPickerControlOptions
+        uid: azure-maps-control.atlas.FloorPickerControlOptions
   - uid: azure-maps-control.atlas.PitchControlOptions
     name: PitchControlOptions
     spec.typeScript:
@@ -1463,6 +1197,24 @@ references:
       - name: ImageLayerOptions
         fullName: ImageLayerOptions
         uid: azure-maps-control.atlas.ImageLayerOptions
+  - uid: 'Promise<azure-maps-control.atlas.Pixel[]>'
+    name: 'Pixel[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: 'azure-maps-control.atlas.Pixel[]'
+    name: 'Pixel[]'
+    spec.typeScript:
+      - name: Pixel
+        fullName: Pixel
+        uid: azure-maps-control.atlas.Pixel
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-control.atlas.LineLayerOptions
     name: LineLayerOptions
     spec.typeScript:
@@ -1695,14 +1447,6 @@ references:
       - name: TimeUnits
         fullName: TimeUnits
         uid: azure-maps-control.atlas.math.TimeUnits
-  - uid: 'azure-maps-control.atlas.Pixel[]'
-    name: 'Pixel[]'
-    spec.typeScript:
-      - name: Pixel
-        fullName: Pixel
-        uid: azure-maps-control.atlas.Pixel
-      - name: '[]'
-        fullName: '[]'
   - uid: azure-maps-control.atlas.source.Source
     name: Source
     spec.typeScript:
@@ -1832,12 +1576,6 @@ references:
       - name: Shape
         fullName: Shape
         uid: azure-maps-control.atlas.Shape
-  - uid: azure-maps-control.atlas.Expression
-    name: Expression
-    spec.typeScript:
-      - name: Expression
-        fullName: Expression
-        uid: azure-maps-control.atlas.Expression
   - uid: 'azure-maps-control.atlas.Shape[]'
     name: 'Shape[]'
     spec.typeScript:
@@ -1913,6 +1651,12 @@ references:
       - name: VectorTileSourceOptions
         fullName: VectorTileSourceOptions
         uid: azure-maps-control.atlas.VectorTileSourceOptions
+  - uid: azure-maps-control.atlas.Expression
+    name: Expression
+    spec.typeScript:
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.atlas.Expression
   - uid: azure-maps-control.atlas.HtmlMarkerOptions
     name: HtmlMarkerOptions
     spec.typeScript:
@@ -2242,6 +1986,20 @@ references:
       - name: Popup
         fullName: Popup
         uid: azure-maps-control.atlas.Popup
+  - uid: azure-maps-control.atlas.MapEvent
+    name: MapEvent
+    spec.typeScript:
+      - name: MapEvent
+        fullName: MapEvent
+        uid: azure-maps-control.atlas.MapEvent
+  - uid: 'azure-maps-control.atlas.HtmlMarker[]'
+    name: 'HtmlMarker[]'
+    spec.typeScript:
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+      - name: '[]'
+        fullName: '[]'
   - uid: >-
       string | azure-maps-control.atlas.HtmlMarker | Array<string |
       azure-maps-control.atlas.HtmlMarker>
@@ -2361,12 +2119,6 @@ references:
         uid: azure-maps-control.atlas.layer.Layer
       - name: '>'
         fullName: '>'
-  - uid: azure-maps-control.atlas.MapEvent
-    name: MapEvent
-    spec.typeScript:
-      - name: MapEvent
-        fullName: MapEvent
-        uid: azure-maps-control.atlas.MapEvent
   - uid: azure-maps-control.atlas.MapMouseWheelEvent
     name: MapMouseWheelEvent
     spec.typeScript:

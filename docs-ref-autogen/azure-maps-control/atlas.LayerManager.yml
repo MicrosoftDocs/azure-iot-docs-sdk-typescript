@@ -11,7 +11,7 @@ items:
       - azure-maps-control.atlas.LayerManager.getRenderedShapes
       - azure-maps-control.atlas.LayerManager.move
       - azure-maps-control.atlas.LayerManager.remove
-      - azure-maps-control.atlas.LayerManager.setFloorNumber
+      - azure-maps-control.atlas.LayerManager.setFloorOrdinalNumber
     langs:
       - typeScript
     type: interface
@@ -207,22 +207,24 @@ items:
           description: |
             One or more layers or their ids for removal.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.LayerManager.setFloorNumber
-    name: setFloorNumber(number)
+  - uid: azure-maps-control.atlas.LayerManager.setFloorOrdinalNumber
+    name: setFloorOrdinalNumber(number)
     children: []
     type: method
     langs:
       - typeScript
     summary: |-
-      Set the floor number for indoor map.
+      For internal use only.
+      Set the ordinal floor number for indoor map.
       This is used only in 'indoor' style.
     syntax:
-      content: 'function setFloorNumber(floornum: number)'
+      content: 'function setFloorOrdinalNumber(ordinalFloorNumber: number)'
       parameters:
-        - id: floornum
+        - id: ordinalFloorNumber
           type:
             - number
-          description: ''
+          description: |
+            The ordinal floor number.
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions
@@ -243,6 +245,12 @@ references:
       - name: ControlOptions
         fullName: ControlOptions
         uid: azure-maps-control.atlas.ControlOptions
+  - uid: azure-maps-control.atlas.FloorPickerControlOptions
+    name: FloorPickerControlOptions
+    spec.typeScript:
+      - name: FloorPickerControlOptions
+        fullName: FloorPickerControlOptions
+        uid: azure-maps-control.atlas.FloorPickerControlOptions
   - uid: azure-maps-control.atlas.PitchControlOptions
     name: PitchControlOptions
     spec.typeScript:
@@ -1221,6 +1229,12 @@ references:
       - name: Popup
         fullName: Popup
         uid: azure-maps-control.atlas.Popup
+  - uid: azure-maps-control.atlas.MapEvent
+    name: MapEvent
+    spec.typeScript:
+      - name: MapEvent
+        fullName: MapEvent
+        uid: azure-maps-control.atlas.MapEvent
   - uid: 'azure-maps-control.atlas.HtmlMarker[]'
     name: 'HtmlMarker[]'
     spec.typeScript:
@@ -1348,12 +1362,6 @@ references:
         uid: azure-maps-control.atlas.layer.Layer
       - name: '>'
         fullName: '>'
-  - uid: azure-maps-control.atlas.MapEvent
-    name: MapEvent
-    spec.typeScript:
-      - name: MapEvent
-        fullName: MapEvent
-        uid: azure-maps-control.atlas.MapEvent
   - uid: azure-maps-control.atlas.MapMouseWheelEvent
     name: MapMouseWheelEvent
     spec.typeScript:

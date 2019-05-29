@@ -4,13 +4,27 @@ items:
     name: Layer
     fullName: Layer
     children:
+      - azure-maps-control.atlas.layer.Layer.getId
       - azure-maps-control.atlas.layer.Layer.constructor
       - azure-maps-control.atlas.layer.Layer.metadata
-      - azure-maps-control.atlas.layer.Layer.getId
     langs:
       - typeScript
     type: class
     summary: Abstract class for other layer classes to extend.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.Layer.getId
+    name: getId()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the id of the layer
+    syntax:
+      content: function getId()
+      parameters: []
+      return:
+        type:
+          - string
     package: azure-maps-control
   - uid: azure-maps-control.atlas.layer.Layer.constructor
     name: Layer(string)
@@ -43,20 +57,6 @@ items:
         type:
           - any
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.Layer.getId
-    name: getId()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Gets the id of the layer
-    syntax:
-      content: function getId()
-      parameters: []
-      return:
-        type:
-          - string
-    package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions
     name: CompassControlOptions
@@ -76,6 +76,12 @@ references:
       - name: ControlOptions
         fullName: ControlOptions
         uid: azure-maps-control.atlas.ControlOptions
+  - uid: azure-maps-control.atlas.FloorPickerControlOptions
+    name: FloorPickerControlOptions
+    spec.typeScript:
+      - name: FloorPickerControlOptions
+        fullName: FloorPickerControlOptions
+        uid: azure-maps-control.atlas.FloorPickerControlOptions
   - uid: azure-maps-control.atlas.PitchControlOptions
     name: PitchControlOptions
     spec.typeScript:
@@ -1054,6 +1060,12 @@ references:
       - name: Popup
         fullName: Popup
         uid: azure-maps-control.atlas.Popup
+  - uid: azure-maps-control.atlas.MapEvent
+    name: MapEvent
+    spec.typeScript:
+      - name: MapEvent
+        fullName: MapEvent
+        uid: azure-maps-control.atlas.MapEvent
   - uid: 'azure-maps-control.atlas.HtmlMarker[]'
     name: 'HtmlMarker[]'
     spec.typeScript:
@@ -1181,12 +1193,6 @@ references:
         uid: azure-maps-control.atlas.layer.Layer
       - name: '>'
         fullName: '>'
-  - uid: azure-maps-control.atlas.MapEvent
-    name: MapEvent
-    spec.typeScript:
-      - name: MapEvent
-        fullName: MapEvent
-        uid: azure-maps-control.atlas.MapEvent
   - uid: azure-maps-control.atlas.MapMouseWheelEvent
     name: MapMouseWheelEvent
     spec.typeScript:

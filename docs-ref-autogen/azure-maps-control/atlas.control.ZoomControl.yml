@@ -4,30 +4,13 @@ items:
     name: ZoomControl
     fullName: ZoomControl
     children:
-      - azure-maps-control.atlas.control.ZoomControl.constructor
       - azure-maps-control.atlas.control.ZoomControl.onAdd
       - azure-maps-control.atlas.control.ZoomControl.onRemove
+      - azure-maps-control.atlas.control.ZoomControl.constructor
     langs:
       - typeScript
     type: class
     summary: A control for changing the zoom of the map.
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.control.ZoomControl.constructor
-    name: ZoomControl(ZoomControlOptions)
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: Constructs a ZoomControl.
-    syntax:
-      content: 'new ZoomControl(options?: ZoomControlOptions)'
-      parameters:
-        - id: options
-          type:
-            - azure-maps-control.atlas.ZoomControlOptions
-          description: |
-            The options for the control.
-          optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.control.ZoomControl.onAdd
     name: onAdd(Map)
@@ -64,6 +47,23 @@ items:
       content: function onRemove()
       parameters: []
     package: azure-maps-control
+  - uid: azure-maps-control.atlas.control.ZoomControl.constructor
+    name: ZoomControl(ZoomControlOptions)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a ZoomControl.
+    syntax:
+      content: 'new ZoomControl(options?: ZoomControlOptions)'
+      parameters:
+        - id: options
+          type:
+            - azure-maps-control.atlas.ZoomControlOptions
+          description: |
+            The options for the control.
+          optional: true
+    package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions
     name: CompassControlOptions
@@ -83,6 +83,12 @@ references:
       - name: ControlOptions
         fullName: ControlOptions
         uid: azure-maps-control.atlas.ControlOptions
+  - uid: azure-maps-control.atlas.FloorPickerControlOptions
+    name: FloorPickerControlOptions
+    spec.typeScript:
+      - name: FloorPickerControlOptions
+        fullName: FloorPickerControlOptions
+        uid: azure-maps-control.atlas.FloorPickerControlOptions
   - uid: azure-maps-control.atlas.PitchControlOptions
     name: PitchControlOptions
     spec.typeScript:
@@ -1061,6 +1067,12 @@ references:
       - name: Popup
         fullName: Popup
         uid: azure-maps-control.atlas.Popup
+  - uid: azure-maps-control.atlas.MapEvent
+    name: MapEvent
+    spec.typeScript:
+      - name: MapEvent
+        fullName: MapEvent
+        uid: azure-maps-control.atlas.MapEvent
   - uid: 'azure-maps-control.atlas.HtmlMarker[]'
     name: 'HtmlMarker[]'
     spec.typeScript:
@@ -1188,12 +1200,6 @@ references:
         uid: azure-maps-control.atlas.layer.Layer
       - name: '>'
         fullName: '>'
-  - uid: azure-maps-control.atlas.MapEvent
-    name: MapEvent
-    spec.typeScript:
-      - name: MapEvent
-        fullName: MapEvent
-        uid: azure-maps-control.atlas.MapEvent
   - uid: azure-maps-control.atlas.MapMouseWheelEvent
     name: MapMouseWheelEvent
     spec.typeScript:

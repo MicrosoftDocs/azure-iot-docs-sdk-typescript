@@ -4,17 +4,10 @@ items:
     name: atlas
     fullName: atlas
     children:
-      - azure-maps-control.atlas.AuthenticationType
-      - azure-maps-control.atlas.ControlPosition
-      - azure-maps-control.atlas.ControlStyle
-      - azure-maps-control.atlas.HtmlMarker
-      - azure-maps-control.atlas.Map
-      - azure-maps-control.atlas.Pixel
-      - azure-maps-control.atlas.Popup
-      - azure-maps-control.atlas.Shape
       - azure-maps-control.atlas.AnimationOptions
       - azure-maps-control.atlas.AuthenticationManager
       - azure-maps-control.atlas.AuthenticationOptions
+      - azure-maps-control.atlas.AuthenticationType
       - azure-maps-control.atlas.BubbleLayerOptions
       - azure-maps-control.atlas.CameraBoundsOptions
       - azure-maps-control.atlas.CameraOptions
@@ -23,18 +16,34 @@ items:
       - azure-maps-control.atlas.Control
       - azure-maps-control.atlas.ControlManager
       - azure-maps-control.atlas.ControlOptions
+      - azure-maps-control.atlas.ControlPosition
+      - azure-maps-control.atlas.ControlStyle
       - azure-maps-control.atlas.DataSourceOptions
       - azure-maps-control.atlas.EventManager
       - azure-maps-control.atlas.Expression
+      - azure-maps-control.atlas.FloorChangeEvent
+      - azure-maps-control.atlas.FloorPickerControlOptions
+      - azure-maps-control.atlas.getAuthenticationOptions
+      - azure-maps-control.atlas.getAuthTokenCallback
+      - azure-maps-control.atlas.getLanguage
+      - azure-maps-control.atlas.getSessionId
+      - azure-maps-control.atlas.getSubscriptionKey
+      - azure-maps-control.atlas.getTilesetId
+      - azure-maps-control.atlas.getUserRegion
+      - azure-maps-control.atlas.getVersion
+      - azure-maps-control.atlas.getView
       - azure-maps-control.atlas.HeatMapLayerOptions
+      - azure-maps-control.atlas.HtmlMarker
       - azure-maps-control.atlas.HtmlMarkerManager
       - azure-maps-control.atlas.HtmlMarkerOptions
       - azure-maps-control.atlas.IconOptions
       - azure-maps-control.atlas.ImageLayerOptions
       - azure-maps-control.atlas.ImageSpriteManager
+      - azure-maps-control.atlas.isSupported
       - azure-maps-control.atlas.LayerManager
       - azure-maps-control.atlas.LayerOptions
       - azure-maps-control.atlas.LineLayerOptions
+      - azure-maps-control.atlas.Map
       - azure-maps-control.atlas.MapErrorEvent
       - azure-maps-control.atlas.MapEvent
       - azure-maps-control.atlas.MapMouseEvent
@@ -44,10 +53,20 @@ items:
       - azure-maps-control.atlas.Options
       - azure-maps-control.atlas.Padding
       - azure-maps-control.atlas.PitchControlOptions
+      - azure-maps-control.atlas.Pixel
       - azure-maps-control.atlas.PolygonLayerOptions
+      - azure-maps-control.atlas.Popup
       - azure-maps-control.atlas.PopupOptions
       - azure-maps-control.atlas.RequestParameters
       - azure-maps-control.atlas.ServiceOptions
+      - azure-maps-control.atlas.setAuthenticationOptions
+      - azure-maps-control.atlas.setLanguage
+      - azure-maps-control.atlas.setSessionId
+      - azure-maps-control.atlas.setSubscriptionKey
+      - azure-maps-control.atlas.setTilesetId
+      - azure-maps-control.atlas.setUserRegion
+      - azure-maps-control.atlas.setView
+      - azure-maps-control.atlas.Shape
       - azure-maps-control.atlas.SourceManager
       - azure-maps-control.atlas.StyleControlOptions
       - azure-maps-control.atlas.StyleOptions
@@ -59,23 +78,6 @@ items:
       - azure-maps-control.atlas.UserInteractionOptions
       - azure-maps-control.atlas.VectorTileSourceOptions
       - azure-maps-control.atlas.ZoomControlOptions
-      - azure-maps-control.atlas.getAuthTokenCallback
-      - azure-maps-control.atlas.getAuthenticationOptions
-      - azure-maps-control.atlas.getLanguage
-      - azure-maps-control.atlas.getSessionId
-      - azure-maps-control.atlas.getSubscriptionKey
-      - azure-maps-control.atlas.getTilesetId
-      - azure-maps-control.atlas.getUserRegion
-      - azure-maps-control.atlas.getVersion
-      - azure-maps-control.atlas.getView
-      - azure-maps-control.atlas.isSupported
-      - azure-maps-control.atlas.setAuthenticationOptions
-      - azure-maps-control.atlas.setLanguage
-      - azure-maps-control.atlas.setSessionId
-      - azure-maps-control.atlas.setSubscriptionKey
-      - azure-maps-control.atlas.setTilesetId
-      - azure-maps-control.atlas.setUserRegion
-      - azure-maps-control.atlas.setView
     langs:
       - typeScript
     type: module
@@ -420,6 +422,12 @@ references:
       - name: ControlOptions
         fullName: ControlOptions
         uid: azure-maps-control.atlas.ControlOptions
+  - uid: azure-maps-control.atlas.FloorPickerControlOptions
+    name: FloorPickerControlOptions
+    spec.typeScript:
+      - name: FloorPickerControlOptions
+        fullName: FloorPickerControlOptions
+        uid: azure-maps-control.atlas.FloorPickerControlOptions
   - uid: azure-maps-control.atlas.PitchControlOptions
     name: PitchControlOptions
     spec.typeScript:
@@ -1398,6 +1406,12 @@ references:
       - name: Popup
         fullName: Popup
         uid: azure-maps-control.atlas.Popup
+  - uid: azure-maps-control.atlas.MapEvent
+    name: MapEvent
+    spec.typeScript:
+      - name: MapEvent
+        fullName: MapEvent
+        uid: azure-maps-control.atlas.MapEvent
   - uid: 'azure-maps-control.atlas.HtmlMarker[]'
     name: 'HtmlMarker[]'
     spec.typeScript:
@@ -1525,12 +1539,6 @@ references:
         uid: azure-maps-control.atlas.layer.Layer
       - name: '>'
         fullName: '>'
-  - uid: azure-maps-control.atlas.MapEvent
-    name: MapEvent
-    spec.typeScript:
-      - name: MapEvent
-        fullName: MapEvent
-        uid: azure-maps-control.atlas.MapEvent
   - uid: azure-maps-control.atlas.MapMouseWheelEvent
     name: MapMouseWheelEvent
     spec.typeScript:
@@ -1638,16 +1646,8 @@ references:
     name: ClusteredProperties
   - uid: azure-maps-control.atlas.Control
     name: Control
-  - uid: azure-maps-control.atlas.MapErrorEvent
-    name: MapErrorEvent
-  - uid: azure-maps-control.atlas.MapMouseEvent
-    name: MapMouseEvent
-  - uid: azure-maps-control.atlas.MapTouchEvent
-    name: MapTouchEvent
-  - uid: azure-maps-control.atlas.Padding
-    name: Padding
-  - uid: azure-maps-control.atlas.TargetedEvent
-    name: TargetedEvent
+  - uid: azure-maps-control.atlas.FloorChangeEvent
+    name: FloorChangeEvent
   - uid: azure-maps-control.atlas.getAuthenticationOptions
     name: getAuthenticationOptions
   - uid: azure-maps-control.atlas.getLanguage
@@ -1666,6 +1666,14 @@ references:
     name: getView
   - uid: azure-maps-control.atlas.isSupported
     name: isSupported
+  - uid: azure-maps-control.atlas.MapErrorEvent
+    name: MapErrorEvent
+  - uid: azure-maps-control.atlas.MapMouseEvent
+    name: MapMouseEvent
+  - uid: azure-maps-control.atlas.MapTouchEvent
+    name: MapTouchEvent
+  - uid: azure-maps-control.atlas.Padding
+    name: Padding
   - uid: azure-maps-control.atlas.setAuthenticationOptions
     name: setAuthenticationOptions
   - uid: azure-maps-control.atlas.setLanguage
@@ -1680,3 +1688,5 @@ references:
     name: setUserRegion
   - uid: azure-maps-control.atlas.setView
     name: setView
+  - uid: azure-maps-control.atlas.TargetedEvent
+    name: TargetedEvent

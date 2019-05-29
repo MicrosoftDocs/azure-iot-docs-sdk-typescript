@@ -4,8 +4,8 @@ items:
     name: HtmlMarkerManager
     fullName: HtmlMarkerManager
     children:
-      - azure-maps-control.atlas.HtmlMarkerManager.add
       - azure-maps-control.atlas.HtmlMarkerManager.add_1
+      - azure-maps-control.atlas.HtmlMarkerManager.add
       - azure-maps-control.atlas.HtmlMarkerManager.clear
       - azure-maps-control.atlas.HtmlMarkerManager.getMarkers
       - azure-maps-control.atlas.HtmlMarkerManager.remove
@@ -16,25 +16,6 @@ items:
       A manager for the map control's HTML markers.
       Exposed through the markers property of the atlas.Map class.
       Cannot be instantiated by the user.
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.HtmlMarkerManager.add
-    name: 'add(HtmlMarker[])'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Adds HTML based markers to the map.
-    syntax:
-      content: 'function add(elements: HtmlMarker[])'
-      parameters:
-        - id: elements
-          type:
-            - 'azure-maps-control.atlas.HtmlMarker[]'
-          description: |
-            The markers to add.
-      return:
-        type:
-          - any
     package: azure-maps-control
   - uid: azure-maps-control.atlas.HtmlMarkerManager.add_1
     name: 'add(HtmlMarker, Position)'
@@ -56,6 +37,25 @@ items:
           description: |
             Optionally specify the position of the marker on the map.
           optional: true
+      return:
+        type:
+          - any
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.HtmlMarkerManager.add
+    name: 'add(HtmlMarker[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds HTML based markers to the map.
+    syntax:
+      content: 'function add(elements: HtmlMarker[])'
+      parameters:
+        - id: elements
+          type:
+            - 'azure-maps-control.atlas.HtmlMarker[]'
+          description: |
+            The markers to add.
       return:
         type:
           - any
@@ -125,6 +125,12 @@ references:
       - name: ControlOptions
         fullName: ControlOptions
         uid: azure-maps-control.atlas.ControlOptions
+  - uid: azure-maps-control.atlas.FloorPickerControlOptions
+    name: FloorPickerControlOptions
+    spec.typeScript:
+      - name: FloorPickerControlOptions
+        fullName: FloorPickerControlOptions
+        uid: azure-maps-control.atlas.FloorPickerControlOptions
   - uid: azure-maps-control.atlas.PitchControlOptions
     name: PitchControlOptions
     spec.typeScript:
@@ -1103,6 +1109,12 @@ references:
       - name: Popup
         fullName: Popup
         uid: azure-maps-control.atlas.Popup
+  - uid: azure-maps-control.atlas.MapEvent
+    name: MapEvent
+    spec.typeScript:
+      - name: MapEvent
+        fullName: MapEvent
+        uid: azure-maps-control.atlas.MapEvent
   - uid: 'azure-maps-control.atlas.HtmlMarker[]'
     name: 'HtmlMarker[]'
     spec.typeScript:
@@ -1230,12 +1242,6 @@ references:
         uid: azure-maps-control.atlas.layer.Layer
       - name: '>'
         fullName: '>'
-  - uid: azure-maps-control.atlas.MapEvent
-    name: MapEvent
-    spec.typeScript:
-      - name: MapEvent
-        fullName: MapEvent
-        uid: azure-maps-control.atlas.MapEvent
   - uid: azure-maps-control.atlas.MapMouseWheelEvent
     name: MapMouseWheelEvent
     spec.typeScript:

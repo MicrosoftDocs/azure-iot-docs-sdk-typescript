@@ -1,55 +1,18 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-control.atlas.Control
-    name: Control
-    fullName: Control
+  - uid: azure-maps-control.atlas.control
+    name: control
+    fullName: control
     children:
-      - azure-maps-control.atlas.Control.onAdd
-      - azure-maps-control.atlas.Control.onRemove
+      - azure-maps-control.atlas.control.CompassControl
+      - azure-maps-control.atlas.control.FloorPickerControl
+      - azure-maps-control.atlas.control.PitchControl
+      - azure-maps-control.atlas.control.StyleControl
+      - azure-maps-control.atlas.control.ZoomControl
     langs:
       - typeScript
-    type: interface
-    summary: An interface for defining a control of the map.
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Control.onAdd
-    name: 'onAdd(Map, ControlOptions)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Initialization method for the control which is called when added to the
-      map.
-    syntax:
-      content: 'function onAdd(map: Map, options?: ControlOptions)'
-      parameters:
-        - id: map
-          type:
-            - azure-maps-control.atlas.Map
-          description: The map that the control will be added to.
-        - id: options
-          type:
-            - azure-maps-control.atlas.ControlOptions
-          description: The ControlOptions for this control.
-          optional: true
-      return:
-        type:
-          - HTMLElement
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Control.onRemove
-    name: onRemove()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Method that is called when the control is removed from the map. Should
-      perform any necessary cleanup for the
-
-      control.
-    syntax:
-      content: function onRemove()
-      parameters: []
+    type: module
+    summary: ''
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions
@@ -70,6 +33,12 @@ references:
       - name: ControlOptions
         fullName: ControlOptions
         uid: azure-maps-control.atlas.ControlOptions
+  - uid: azure-maps-control.atlas.FloorPickerControlOptions
+    name: FloorPickerControlOptions
+    spec.typeScript:
+      - name: FloorPickerControlOptions
+        fullName: FloorPickerControlOptions
+        uid: azure-maps-control.atlas.FloorPickerControlOptions
   - uid: azure-maps-control.atlas.PitchControlOptions
     name: PitchControlOptions
     spec.typeScript:
@@ -1048,6 +1017,12 @@ references:
       - name: Popup
         fullName: Popup
         uid: azure-maps-control.atlas.Popup
+  - uid: azure-maps-control.atlas.MapEvent
+    name: MapEvent
+    spec.typeScript:
+      - name: MapEvent
+        fullName: MapEvent
+        uid: azure-maps-control.atlas.MapEvent
   - uid: 'azure-maps-control.atlas.HtmlMarker[]'
     name: 'HtmlMarker[]'
     spec.typeScript:
@@ -1175,12 +1150,6 @@ references:
         uid: azure-maps-control.atlas.layer.Layer
       - name: '>'
         fullName: '>'
-  - uid: azure-maps-control.atlas.MapEvent
-    name: MapEvent
-    spec.typeScript:
-      - name: MapEvent
-        fullName: MapEvent
-        uid: azure-maps-control.atlas.MapEvent
   - uid: azure-maps-control.atlas.MapMouseWheelEvent
     name: MapMouseWheelEvent
     spec.typeScript:
@@ -1278,3 +1247,13 @@ references:
       - name: Expression
         fullName: Expression
         uid: azure-maps-control.atlas.Expression
+  - uid: azure-maps-control.atlas.control.CompassControl
+    name: CompassControl
+  - uid: azure-maps-control.atlas.control.FloorPickerControl
+    name: FloorPickerControl
+  - uid: azure-maps-control.atlas.control.PitchControl
+    name: PitchControl
+  - uid: azure-maps-control.atlas.control.StyleControl
+    name: StyleControl
+  - uid: azure-maps-control.atlas.control.ZoomControl
+    name: ZoomControl

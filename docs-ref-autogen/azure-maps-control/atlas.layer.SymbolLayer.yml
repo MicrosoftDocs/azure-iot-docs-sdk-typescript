@@ -4,12 +4,12 @@ items:
     name: SymbolLayer
     fullName: SymbolLayer
     children:
-      - azure-maps-control.atlas.layer.SymbolLayer.constructor
-      - azure-maps-control.atlas.layer.SymbolLayer.metadata
       - azure-maps-control.atlas.layer.SymbolLayer.getId
       - azure-maps-control.atlas.layer.SymbolLayer.getOptions
       - azure-maps-control.atlas.layer.SymbolLayer.getSource
+      - azure-maps-control.atlas.layer.SymbolLayer.metadata
       - azure-maps-control.atlas.layer.SymbolLayer.setOptions
+      - azure-maps-control.atlas.layer.SymbolLayer.constructor
     langs:
       - typeScript
     type: class
@@ -18,51 +18,6 @@ items:
       Symbols can also be created for line and polygon data as well.
     extends:
       name: azure-maps-control.atlas.layer.Layer
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.SymbolLayer.constructor
-    name: 'SymbolLayer(string | Source, string, SymbolLayerOptions)'
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: Constructs a new SymbolLayer.
-    syntax:
-      content: >-
-        new SymbolLayer(source: string | Source, id?: string, options?:
-        SymbolLayerOptions)
-      parameters:
-        - id: source
-          type:
-            - string | azure-maps-control.atlas.source.Source
-          description: The id or instance of a data source which the layer will render.
-        - id: id
-          type:
-            - string
-          description: >-
-            The id of the layer. If not specified a random one will be
-            generated.
-          optional: true
-        - id: options
-          type:
-            - azure-maps-control.atlas.SymbolLayerOptions
-          description: |
-            The options of the polygon layer.
-          optional: true
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.SymbolLayer.metadata
-    name: metadata
-    fullName: metadata
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: A property for associating custom data with the layer.
-    optional: true
-    syntax:
-      content: 'metadata?: any'
-      return:
-        type:
-          - any
     package: azure-maps-control
   - uid: azure-maps-control.atlas.layer.SymbolLayer.getId
     name: getId()
@@ -106,6 +61,21 @@ items:
         type:
           - string | azure-maps-control.atlas.source.Source
     package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.SymbolLayer.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A property for associating custom data with the layer.
+    optional: true
+    syntax:
+      content: 'metadata?: any'
+      return:
+        type:
+          - any
+    package: azure-maps-control
   - uid: azure-maps-control.atlas.layer.SymbolLayer.setOptions
     name: setOptions(SymbolLayerOptions)
     children: []
@@ -120,6 +90,36 @@ items:
           type:
             - azure-maps-control.atlas.SymbolLayerOptions
           description: ''
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.SymbolLayer.constructor
+    name: 'SymbolLayer(string | Source, string, SymbolLayerOptions)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a new SymbolLayer.
+    syntax:
+      content: >-
+        new SymbolLayer(source: string | Source, id?: string, options?:
+        SymbolLayerOptions)
+      parameters:
+        - id: source
+          type:
+            - string | azure-maps-control.atlas.source.Source
+          description: The id or instance of a data source which the layer will render.
+        - id: id
+          type:
+            - string
+          description: >-
+            The id of the layer. If not specified a random one will be
+            generated.
+          optional: true
+        - id: options
+          type:
+            - azure-maps-control.atlas.SymbolLayerOptions
+          description: |
+            The options of the polygon layer.
+          optional: true
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions
@@ -140,6 +140,12 @@ references:
       - name: ControlOptions
         fullName: ControlOptions
         uid: azure-maps-control.atlas.ControlOptions
+  - uid: azure-maps-control.atlas.FloorPickerControlOptions
+    name: FloorPickerControlOptions
+    spec.typeScript:
+      - name: FloorPickerControlOptions
+        fullName: FloorPickerControlOptions
+        uid: azure-maps-control.atlas.FloorPickerControlOptions
   - uid: azure-maps-control.atlas.PitchControlOptions
     name: PitchControlOptions
     spec.typeScript:
@@ -1118,6 +1124,12 @@ references:
       - name: Popup
         fullName: Popup
         uid: azure-maps-control.atlas.Popup
+  - uid: azure-maps-control.atlas.MapEvent
+    name: MapEvent
+    spec.typeScript:
+      - name: MapEvent
+        fullName: MapEvent
+        uid: azure-maps-control.atlas.MapEvent
   - uid: 'azure-maps-control.atlas.HtmlMarker[]'
     name: 'HtmlMarker[]'
     spec.typeScript:
@@ -1245,12 +1257,6 @@ references:
         uid: azure-maps-control.atlas.layer.Layer
       - name: '>'
         fullName: '>'
-  - uid: azure-maps-control.atlas.MapEvent
-    name: MapEvent
-    spec.typeScript:
-      - name: MapEvent
-        fullName: MapEvent
-        uid: azure-maps-control.atlas.MapEvent
   - uid: azure-maps-control.atlas.MapMouseWheelEvent
     name: MapMouseWheelEvent
     spec.typeScript:

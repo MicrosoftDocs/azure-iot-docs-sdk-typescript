@@ -4,13 +4,30 @@ items:
     name: PitchControl
     fullName: PitchControl
     children:
+      - azure-maps-control.atlas.control.PitchControl.constructor
       - azure-maps-control.atlas.control.PitchControl.onAdd
       - azure-maps-control.atlas.control.PitchControl.onRemove
-      - azure-maps-control.atlas.control.PitchControl.constructor
     langs:
       - typeScript
     type: class
     summary: A control for changing the pitch of the map.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.control.PitchControl.constructor
+    name: PitchControl(PitchControlOptions)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a PitchControl.
+    syntax:
+      content: 'new PitchControl(options?: PitchControlOptions)'
+      parameters:
+        - id: options
+          type:
+            - azure-maps-control.atlas.PitchControlOptions
+          description: |
+            The options for the control.
+          optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.control.PitchControl.onAdd
     name: 'onAdd(Map, ControlOptions)'
@@ -50,23 +67,6 @@ items:
     syntax:
       content: function onRemove()
       parameters: []
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.control.PitchControl.constructor
-    name: PitchControl(PitchControlOptions)
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: Constructs a PitchControl.
-    syntax:
-      content: 'new PitchControl(options?: PitchControlOptions)'
-      parameters:
-        - id: options
-          type:
-            - azure-maps-control.atlas.PitchControlOptions
-          description: |
-            The options for the control.
-          optional: true
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions

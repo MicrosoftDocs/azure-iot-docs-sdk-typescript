@@ -4,9 +4,9 @@ items:
     name: MultiPoint
     fullName: MultiPoint
     children:
+      - azure-maps-control.atlas.data.MultiPoint.constructor
       - azure-maps-control.atlas.data.MultiPoint.bbox
       - azure-maps-control.atlas.data.MultiPoint.coordinates
-      - azure-maps-control.atlas.data.MultiPoint.constructor
       - azure-maps-control.atlas.data.MultiPoint.type
       - azure-maps-control.atlas.data.MultiPoint.TYPE
     langs:
@@ -18,6 +18,27 @@ items:
 
       is detailed in [RFC
       7946](https://tools.ietf.org/html/rfc7946#section-3.1.3).
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.MultiPoint.constructor
+    name: 'MultiPoint(Position[], BoundingBox)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a MultiPoint.
+    syntax:
+      content: 'new MultiPoint(coordinates: Position[], bbox?: BoundingBox)'
+      parameters:
+        - id: coordinates
+          type:
+            - 'azure-maps-control.atlas.data.Position[]'
+          description: The array of multiple positions defining the multipoint.
+        - id: bbox
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: |
+            The bounding box of the multipoint.
+          optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.MultiPoint.bbox
     name: bbox
@@ -47,27 +68,6 @@ items:
       return:
         type:
           - 'azure-maps-control.atlas.data.Position[]'
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.MultiPoint.constructor
-    name: 'MultiPoint(Position[], BoundingBox)'
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: Constructs a MultiPoint.
-    syntax:
-      content: 'new MultiPoint(coordinates: Position[], bbox?: BoundingBox)'
-      parameters:
-        - id: coordinates
-          type:
-            - 'azure-maps-control.atlas.data.Position[]'
-          description: The array of multiple positions defining the multipoint.
-        - id: bbox
-          type:
-            - azure-maps-control.atlas.data.BoundingBox
-          description: |
-            The bounding box of the multipoint.
-          optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.MultiPoint.type
     name: type

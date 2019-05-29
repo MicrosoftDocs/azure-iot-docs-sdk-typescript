@@ -4,9 +4,9 @@ items:
     name: LineString
     fullName: LineString
     children:
+      - azure-maps-control.atlas.data.LineString.constructor
       - azure-maps-control.atlas.data.LineString.bbox
       - azure-maps-control.atlas.data.LineString.coordinates
-      - azure-maps-control.atlas.data.LineString.constructor
       - azure-maps-control.atlas.data.LineString.type
       - azure-maps-control.atlas.data.LineString.TYPE
     langs:
@@ -17,6 +17,27 @@ items:
       curve. The full description is detailed
 
       in [RFC 7946](https://tools.ietf.org/html/rfc7946#section-3.1.4).
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.LineString.constructor
+    name: 'LineString(Position[], BoundingBox)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a LineString.
+    syntax:
+      content: 'new LineString(coordinates: Position[], bbox?: BoundingBox)'
+      parameters:
+        - id: coordinates
+          type:
+            - 'azure-maps-control.atlas.data.Position[]'
+          description: The ordered list of positions defining the linestring.
+        - id: bbox
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: |
+            The bounding box of the linestring.
+          optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.LineString.bbox
     name: bbox
@@ -46,27 +67,6 @@ items:
       return:
         type:
           - 'azure-maps-control.atlas.data.Position[]'
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.LineString.constructor
-    name: 'LineString(Position[], BoundingBox)'
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: Constructs a LineString.
-    syntax:
-      content: 'new LineString(coordinates: Position[], bbox?: BoundingBox)'
-      parameters:
-        - id: coordinates
-          type:
-            - 'azure-maps-control.atlas.data.Position[]'
-          description: The ordered list of positions defining the linestring.
-        - id: bbox
-          type:
-            - azure-maps-control.atlas.data.BoundingBox
-          description: |
-            The bounding box of the linestring.
-          optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.LineString.type
     name: type

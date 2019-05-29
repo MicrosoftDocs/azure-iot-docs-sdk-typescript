@@ -4,12 +4,17 @@ items:
     name: Map
     fullName: Map
     children:
-      - azure-maps-control.atlas.Map.areTilesLoaded
+      - azure-maps-control.atlas.Map.constructor
       - azure-maps-control.atlas.Map.authentication
-      - azure-maps-control.atlas.Map.clear
       - azure-maps-control.atlas.Map.controls
-      - azure-maps-control.atlas.Map.dispose
       - azure-maps-control.atlas.Map.events
+      - azure-maps-control.atlas.Map.imageSprite
+      - azure-maps-control.atlas.Map.layers
+      - azure-maps-control.atlas.Map.markers
+      - azure-maps-control.atlas.Map.sources
+      - azure-maps-control.atlas.Map.areTilesLoaded
+      - azure-maps-control.atlas.Map.clear
+      - azure-maps-control.atlas.Map.dispose
       - azure-maps-control.atlas.Map.getCamera
       - azure-maps-control.atlas.Map.getCanvas
       - azure-maps-control.atlas.Map.getCanvasContainer
@@ -18,10 +23,6 @@ items:
       - azure-maps-control.atlas.Map.getStyle
       - azure-maps-control.atlas.Map.getTraffic
       - azure-maps-control.atlas.Map.getUserInteraction
-      - azure-maps-control.atlas.Map.imageSprite
-      - azure-maps-control.atlas.Map.layers
-      - azure-maps-control.atlas.Map.constructor
-      - azure-maps-control.atlas.Map.markers
       - azure-maps-control.atlas.Map.pixelsToPositions
       - azure-maps-control.atlas.Map.positionsToPixels
       - azure-maps-control.atlas.Map.resize
@@ -31,12 +32,138 @@ items:
       - azure-maps-control.atlas.Map.setStyle
       - azure-maps-control.atlas.Map.setTraffic
       - azure-maps-control.atlas.Map.setUserInteraction
-      - azure-maps-control.atlas.Map.sources
       - azure-maps-control.atlas.Map.stop
     langs:
       - typeScript
     type: class
     summary: The control for a visual and interactive web map.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Map.constructor
+    name: >-
+      Map(string, ServiceOptions & StyleOptions & UserInteractionOptions &
+      CameraOptions | CameraBoundsOptions)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Displays a map in the specified container.
+    syntax:
+      content: >-
+        new Map(container: string, options: ServiceOptions & StyleOptions &
+        UserInteractionOptions & CameraOptions | CameraBoundsOptions)
+      parameters:
+        - id: container
+          type:
+            - string
+          description: The id of the element where the map should be displayed.
+        - id: options
+          type:
+            - >-
+              azure-maps-control.atlas.ServiceOptions &
+              azure-maps-control.atlas.StyleOptions &
+              azure-maps-control.atlas.UserInteractionOptions &
+              azure-maps-control.atlas.CameraOptions |
+              azure-maps-control.atlas.CameraBoundsOptions
+          description: |
+            Options for the initial display and interactability with the map.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Map.authentication
+    name: authentication
+    fullName: authentication
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'authentication: AuthenticationManager'
+      return:
+        type:
+          - azure-maps-control.atlas.AuthenticationManager
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Map.controls
+    name: controls
+    fullName: controls
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'controls: ControlManager'
+      return:
+        type:
+          - azure-maps-control.atlas.ControlManager
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Map.events
+    name: events
+    fullName: events
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'events: EventManager'
+      return:
+        type:
+          - azure-maps-control.atlas.EventManager
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Map.imageSprite
+    name: imageSprite
+    fullName: imageSprite
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'imageSprite: ImageSpriteManager'
+      return:
+        type:
+          - azure-maps-control.atlas.ImageSpriteManager
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Map.layers
+    name: layers
+    fullName: layers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'layers: LayerManager'
+      return:
+        type:
+          - azure-maps-control.atlas.LayerManager
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Map.markers
+    name: markers
+    fullName: markers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'markers: HtmlMarkerManager'
+      return:
+        type:
+          - azure-maps-control.atlas.HtmlMarkerManager
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Map.sources
+    name: sources
+    fullName: sources
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'sources: SourceManager'
+      return:
+        type:
+          - azure-maps-control.atlas.SourceManager
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.areTilesLoaded
     name: areTilesLoaded()
@@ -54,20 +181,6 @@ items:
         type:
           - boolean
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.Map.authentication
-    name: authentication
-    fullName: authentication
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      content: 'authentication: AuthenticationManager'
-      return:
-        type:
-          - azure-maps-control.atlas.AuthenticationManager
-    package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.clear
     name: clear()
     children: []
@@ -81,20 +194,6 @@ items:
       content: function clear()
       parameters: []
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.Map.controls
-    name: controls
-    fullName: controls
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      content: 'controls: ControlManager'
-      return:
-        type:
-          - azure-maps-control.atlas.ControlManager
-    package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.dispose
     name: dispose()
     children: []
@@ -107,20 +206,6 @@ items:
     syntax:
       content: function dispose()
       parameters: []
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Map.events
-    name: events
-    fullName: events
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      content: 'events: EventManager'
-      return:
-        type:
-          - azure-maps-control.atlas.EventManager
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.getCamera
     name: getCamera()
@@ -239,77 +324,6 @@ items:
       return:
         type:
           - azure-maps-control.atlas.UserInteractionOptions
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Map.imageSprite
-    name: imageSprite
-    fullName: imageSprite
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      content: 'imageSprite: ImageSpriteManager'
-      return:
-        type:
-          - azure-maps-control.atlas.ImageSpriteManager
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Map.layers
-    name: layers
-    fullName: layers
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      content: 'layers: LayerManager'
-      return:
-        type:
-          - azure-maps-control.atlas.LayerManager
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Map.constructor
-    name: >-
-      Map(string, ServiceOptions & StyleOptions & UserInteractionOptions &
-      CameraOptions | CameraBoundsOptions)
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: Displays a map in the specified container.
-    syntax:
-      content: >-
-        new Map(container: string, options: ServiceOptions & StyleOptions &
-        UserInteractionOptions & CameraOptions | CameraBoundsOptions)
-      parameters:
-        - id: container
-          type:
-            - string
-          description: The id of the element where the map should be displayed.
-        - id: options
-          type:
-            - >-
-              azure-maps-control.atlas.ServiceOptions &
-              azure-maps-control.atlas.StyleOptions &
-              azure-maps-control.atlas.UserInteractionOptions &
-              azure-maps-control.atlas.CameraOptions |
-              azure-maps-control.atlas.CameraBoundsOptions
-          description: |
-            Options for the initial display and interactability with the map.
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Map.markers
-    name: markers
-    fullName: markers
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      content: 'markers: HtmlMarkerManager'
-      return:
-        type:
-          - azure-maps-control.atlas.HtmlMarkerManager
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.pixelsToPositions
     name: 'pixelsToPositions(Pixel[])'
@@ -501,20 +515,6 @@ items:
           description: |
             The options for enabling/disabling the user interaction handlers.
           optional: true
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Map.sources
-    name: sources
-    fullName: sources
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      content: 'sources: SourceManager'
-      return:
-        type:
-          - azure-maps-control.atlas.SourceManager
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Map.stop
     name: stop()

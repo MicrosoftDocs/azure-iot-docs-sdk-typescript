@@ -4,14 +4,28 @@ items:
     name: Source
     fullName: Source
     children:
-      - azure-maps-control.atlas.source.Source.constructor
       - azure-maps-control.atlas.source.Source.getId
+      - azure-maps-control.atlas.source.Source.constructor
     langs:
       - typeScript
     type: class
     summary: |-
       A base abstract class in which all other source objects extend.
       A source must be added to a layer before it is visible on the map.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.source.Source.getId
+    name: getId()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the id of the data source
+    syntax:
+      content: function getId()
+      parameters: []
+      return:
+        type:
+          - string
     package: azure-maps-control
   - uid: azure-maps-control.atlas.source.Source.constructor
     name: Source(string)
@@ -28,20 +42,6 @@ items:
             - string
           description: ''
           optional: true
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.source.Source.getId
-    name: getId()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Gets the id of the data source
-    syntax:
-      content: function getId()
-      parameters: []
-      return:
-        type:
-          - string
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions

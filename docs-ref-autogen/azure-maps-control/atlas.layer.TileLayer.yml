@@ -4,54 +4,17 @@ items:
     name: TileLayer
     fullName: TileLayer
     children:
-      - azure-maps-control.atlas.layer.TileLayer.constructor
-      - azure-maps-control.atlas.layer.TileLayer.metadata
       - azure-maps-control.atlas.layer.TileLayer.getId
       - azure-maps-control.atlas.layer.TileLayer.getOptions
+      - azure-maps-control.atlas.layer.TileLayer.metadata
       - azure-maps-control.atlas.layer.TileLayer.setOptions
+      - azure-maps-control.atlas.layer.TileLayer.constructor
     langs:
       - typeScript
     type: class
     summary: Renders raster tiled images on top of the map tiles.
     extends:
       name: azure-maps-control.atlas.layer.Layer
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.TileLayer.constructor
-    name: 'TileLayer(TileLayerOptions, string)'
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: Constructs a new TileLayer.
-    syntax:
-      content: 'new TileLayer(options: TileLayerOptions, id?: string)'
-      parameters:
-        - id: options
-          type:
-            - azure-maps-control.atlas.TileLayerOptions
-          description: The options for the tile layer.
-        - id: id
-          type:
-            - string
-          description: >
-            The id of the layer. If not specified a random one will be
-            generated.
-          optional: true
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.TileLayer.metadata
-    name: metadata
-    fullName: metadata
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: A property for associating custom data with the layer.
-    optional: true
-    syntax:
-      content: 'metadata?: any'
-      return:
-        type:
-          - any
     package: azure-maps-control
   - uid: azure-maps-control.atlas.layer.TileLayer.getId
     name: getId()
@@ -81,6 +44,21 @@ items:
         type:
           - azure-maps-control.atlas.TileLayerOptions
     package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.TileLayer.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A property for associating custom data with the layer.
+    optional: true
+    syntax:
+      content: 'metadata?: any'
+      return:
+        type:
+          - any
+    package: azure-maps-control
   - uid: azure-maps-control.atlas.layer.TileLayer.setOptions
     name: setOptions(TileLayerOptions)
     children: []
@@ -95,6 +73,28 @@ items:
           type:
             - azure-maps-control.atlas.TileLayerOptions
           description: ''
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.TileLayer.constructor
+    name: 'TileLayer(TileLayerOptions, string)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a new TileLayer.
+    syntax:
+      content: 'new TileLayer(options: TileLayerOptions, id?: string)'
+      parameters:
+        - id: options
+          type:
+            - azure-maps-control.atlas.TileLayerOptions
+          description: The options for the tile layer.
+        - id: id
+          type:
+            - string
+          description: >
+            The id of the layer. If not specified a random one will be
+            generated.
+          optional: true
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions

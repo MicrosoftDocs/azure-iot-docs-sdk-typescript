@@ -5,24 +5,16 @@ items:
     fullName: Expression
     children:
       - azure-maps-control.atlas.Expression.Array
-      - azure-maps-control.atlas.Expression.length
       - azure-maps-control.atlas.Expression.concat
       - azure-maps-control.atlas.Expression.concat_1
-      - azure-maps-control.atlas.Expression.copyWithin
-      - azure-maps-control.atlas.Expression.entries
       - azure-maps-control.atlas.Expression.every
-      - azure-maps-control.atlas.Expression.fill
-      - azure-maps-control.atlas.Expression.filter
       - azure-maps-control.atlas.Expression.filter_1
-      - azure-maps-control.atlas.Expression.find
-      - azure-maps-control.atlas.Expression.find_1
-      - azure-maps-control.atlas.Expression.findIndex
+      - azure-maps-control.atlas.Expression.filter
       - azure-maps-control.atlas.Expression.forEach
-      - azure-maps-control.atlas.Expression.includes
       - azure-maps-control.atlas.Expression.indexOf
       - azure-maps-control.atlas.Expression.join
-      - azure-maps-control.atlas.Expression.keys
       - azure-maps-control.atlas.Expression.lastIndexOf
+      - azure-maps-control.atlas.Expression.length
       - azure-maps-control.atlas.Expression.map
       - azure-maps-control.atlas.Expression.pop
       - azure-maps-control.atlas.Expression.push
@@ -42,7 +34,6 @@ items:
       - azure-maps-control.atlas.Expression.toLocaleString
       - azure-maps-control.atlas.Expression.toString
       - azure-maps-control.atlas.Expression.unshift
-      - azure-maps-control.atlas.Expression.values
     langs:
       - typeScript
     type: interface
@@ -71,22 +62,6 @@ items:
       return:
         type:
           - ArrayConstructor
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Expression.length
-    name: length
-    fullName: length
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      Gets or sets the length of the array. This is a number one higher than the
-      highest element defined in an array.
-    syntax:
-      content: 'length: number'
-      return:
-        type:
-          - number
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Expression.concat
     name: 'concat(ConcatArray<any>[])'
@@ -126,61 +101,6 @@ items:
         type:
           - 'any[]'
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.Expression.copyWithin
-    name: 'copyWithin(number, number, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the this object after copying a section of the array identified by
-      start and end
-
-      to the same array starting at position target
-    syntax:
-      content: 'function copyWithin(target: number, start: number, end?: number)'
-      parameters:
-        - id: target
-          type:
-            - number
-          description: >-
-            If target is negative, it is treated as length+target where length
-            is the
-
-            length of the array.
-        - id: start
-          type:
-            - number
-          description: >-
-            If start is negative, it is treated as length+start. If end is
-            negative, it
-
-            is treated as length+end.
-        - id: end
-          type:
-            - number
-          description: >
-            If not specified, length of the this object is used as its default
-            value.
-          optional: true
-      return:
-        type:
-          - this
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Expression.entries
-    name: entries()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: 'Returns an iterable of key, value pairs for every entry in the array'
-    syntax:
-      content: function entries()
-      parameters: []
-      return:
-        type:
-          - IterableIterator<Object>
-    package: azure-maps-control
   - uid: azure-maps-control.atlas.Expression.every
     name: 'every((value: any, index: number, array: any[]) => boolean, any)'
     children: []
@@ -211,77 +131,6 @@ items:
       return:
         type:
           - boolean
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Expression.fill
-    name: 'fill(any, number, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the this object after filling the section identified by start and
-      end with value
-    syntax:
-      content: 'function fill(value: any, start?: number, end?: number)'
-      parameters:
-        - id: value
-          type:
-            - any
-          description: value to fill array section with
-        - id: start
-          type:
-            - number
-          description: >-
-            index to start filling the array at. If start is negative, it is
-            treated as
-
-            length+start where length is the length of the array.
-          optional: true
-        - id: end
-          type:
-            - number
-          description: >
-            index to stop filling the array at. If end is negative, it is
-            treated as
-
-            length+end.
-          optional: true
-      return:
-        type:
-          - this
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Expression.filter
-    name: 'filter((value: any, index: number, array: any[]) => boolean, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the elements of an array that meet the condition specified in a
-      callback function.
-    syntax:
-      content: >-
-        function filter<S>(callbackfn: (value: any, index: number, array: any[])
-        => boolean, thisArg?: any)
-      parameters:
-        - id: callbackfn
-          type:
-            - '(value: any, index: number, array: any[]) => boolean'
-          description: >-
-            A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
-          optional: true
-      return:
-        type:
-          - 'S[]'
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Expression.filter_1
     name: 'filter((value: any, index: number, array: any[]) => any, any)'
@@ -316,116 +165,38 @@ items:
         type:
           - 'any[]'
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.Expression.find
-    name: 'find((this: void, value: any, index: number, obj: any[]) => boolean, any)'
+  - uid: azure-maps-control.atlas.Expression.filter
+    name: 'filter((value: any, index: number, array: any[]) => boolean, any)'
     children: []
     type: method
     langs:
       - typeScript
     summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
     syntax:
       content: >-
-        function find<S>(predicate: (this: void, value: any, index: number, obj:
-        any[]) => boolean, thisArg?: any)
+        function filter<S>(callbackfn: (value: any, index: number, array: any[])
+        => boolean, thisArg?: any)
       parameters:
-        - id: predicate
+        - id: callbackfn
           type:
-            - '(this: void, value: any, index: number, obj: any[]) => boolean'
+            - '(value: any, index: number, array: any[]) => boolean'
           description: >-
-            find calls predicate once for each element of the array, in
-            ascending
-
-            order, until it finds one where predicate returns true. If such an
-            element is found, find
-
-            immediately returns that element value. Otherwise, find returns
-            undefined.
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
         - id: thisArg
           type:
             - any
           description: >
-            If provided, it will be used as the this value for each invocation
-            of
-
-            predicate. If it is not provided, undefined is used instead.
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
           optional: true
       return:
         type:
-          - S | undefined
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Expression.find_1
-    name: 'find((value: any, index: number, obj: any[]) => boolean, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
-    syntax:
-      content: >-
-        function find(predicate: (value: any, index: number, obj: any[]) =>
-        boolean, thisArg?: any)
-      parameters:
-        - id: predicate
-          type:
-            - '(value: any, index: number, obj: any[]) => boolean'
-          description: ''
-        - id: thisArg
-          type:
-            - any
-          description: ''
-          optional: true
-      return:
-        type:
-          - any | undefined
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Expression.findIndex
-    name: 'findIndex((value: any, index: number, obj: any[]) => boolean, any)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Returns the index of the first element in the array where predicate is
-      true, and -1
-
-      otherwise.
-    syntax:
-      content: >-
-        function findIndex(predicate: (value: any, index: number, obj: any[]) =>
-        boolean, thisArg?: any)
-      parameters:
-        - id: predicate
-          type:
-            - '(value: any, index: number, obj: any[]) => boolean'
-          description: >-
-            find calls predicate once for each element of the array, in
-            ascending
-
-            order, until it finds one where predicate returns true. If such an
-            element is found,
-
-            findIndex immediately returns that element index. Otherwise,
-            findIndex returns -1.
-        - id: thisArg
-          type:
-            - any
-          description: >
-            If provided, it will be used as the this value for each invocation
-            of
-
-            predicate. If it is not provided, undefined is used instead.
-          optional: true
-      return:
-        type:
-          - number
+          - 'S[]'
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Expression.forEach
     name: 'forEach((value: any, index: number, array: any[]) => void, any)'
@@ -453,33 +224,6 @@ items:
             function. If thisArg is omitted, undefined is used as the this
             value.
           optional: true
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Expression.includes
-    name: 'includes(any, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Determines whether an array includes a certain element, returning true or
-      false as appropriate.
-    syntax:
-      content: 'function includes(searchElement: any, fromIndex?: number)'
-      parameters:
-        - id: searchElement
-          type:
-            - any
-          description: The element to search for.
-        - id: fromIndex
-          type:
-            - number
-          description: >
-            The position in this array at which to begin searching for
-            searchElement.
-          optional: true
-      return:
-        type:
-          - boolean
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Expression.indexOf
     name: 'indexOf(any, number)'
@@ -530,20 +274,6 @@ items:
         type:
           - string
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.Expression.keys
-    name: keys()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Returns an iterable of keys in the array
-    syntax:
-      content: function keys()
-      parameters: []
-      return:
-        type:
-          - IterableIterator<number>
-    package: azure-maps-control
   - uid: azure-maps-control.atlas.Expression.lastIndexOf
     name: 'lastIndexOf(any, number)'
     children: []
@@ -565,6 +295,22 @@ items:
             The array index at which to begin the search. If fromIndex is
             omitted, the search starts at the last index in the array.
           optional: true
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Expression.length
+    name: length
+    fullName: length
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Gets or sets the length of the array. This is a number one higher than the
+      highest element defined in an array.
+    syntax:
+      content: 'length: number'
       return:
         type:
           - number
@@ -1048,20 +794,6 @@ items:
       return:
         type:
           - number
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.Expression.values
-    name: values()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Returns an iterable of values in the array
-    syntax:
-      content: function values()
-      parameters: []
-      return:
-        type:
-          - IterableIterator<any>
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions

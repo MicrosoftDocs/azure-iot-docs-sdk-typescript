@@ -4,9 +4,9 @@ items:
     name: MultiPolygon
     fullName: MultiPolygon
     children:
+      - azure-maps-control.atlas.data.MultiPolygon.constructor
       - azure-maps-control.atlas.data.MultiPolygon.bbox
       - azure-maps-control.atlas.data.MultiPolygon.coordinates
-      - azure-maps-control.atlas.data.MultiPolygon.constructor
       - azure-maps-control.atlas.data.MultiPolygon.type
       - azure-maps-control.atlas.data.MultiPolygon.TYPE
     langs:
@@ -17,6 +17,27 @@ items:
       geographic polygons. The full description is
 
       detailed in [RFC 7946](https://tools.ietf.org/html/rfc7946#section-3.1.7).
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.MultiPolygon.constructor
+    name: 'MultiPolygon(Position[][][], BoundingBox)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a MultiPolygon.
+    syntax:
+      content: 'new MultiPolygon(coordinates: Position[][][], bbox?: BoundingBox)'
+      parameters:
+        - id: coordinates
+          type:
+            - 'azure-maps-control.atlas.data.Position[][][]'
+          description: The array of polygon coordinate arrays defining the multipolygon.
+        - id: bbox
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
+          description: |
+            The bounding box of the multipolygon.
+          optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.MultiPolygon.bbox
     name: bbox
@@ -46,27 +67,6 @@ items:
       return:
         type:
           - 'azure-maps-control.atlas.data.Position[][][]'
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.data.MultiPolygon.constructor
-    name: 'MultiPolygon(Position[][][], BoundingBox)'
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: Constructs a MultiPolygon.
-    syntax:
-      content: 'new MultiPolygon(coordinates: Position[][][], bbox?: BoundingBox)'
-      parameters:
-        - id: coordinates
-          type:
-            - 'azure-maps-control.atlas.data.Position[][][]'
-          description: The array of polygon coordinate arrays defining the multipolygon.
-        - id: bbox
-          type:
-            - azure-maps-control.atlas.data.BoundingBox
-          description: |
-            The bounding box of the multipolygon.
-          optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.MultiPolygon.type
     name: type

@@ -11,10 +11,10 @@ items:
       - azure-maps-control.atlas.AuthenticationOptions.authType
       - azure-maps-control.atlas.AuthenticationOptions.clientId
       - azure-maps-control.atlas.AuthenticationOptions.getToken
+      - azure-maps-control.atlas.AuthenticationOptions.subscriptionKey
       - azure-maps-control.atlas.AuthenticationOptions.setAadProperties
       - azure-maps-control.atlas.AuthenticationOptions.setSubscriptionKey
       - azure-maps-control.atlas.AuthenticationOptions.setTokenCallbackFunction
-      - azure-maps-control.atlas.AuthenticationOptions.subscriptionKey
     langs:
       - typeScript
     type: interface
@@ -158,6 +158,23 @@ items:
         type:
           - azure-maps-control.atlas.getAuthTokenCallback
     package: azure-maps-control
+  - uid: azure-maps-control.atlas.AuthenticationOptions.subscriptionKey
+    name: subscriptionKey
+    fullName: subscriptionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Subscription key from your Azure Maps account.
+      Must be specified for subscription key authentication type.
+    optional: true
+    syntax:
+      content: 'subscriptionKey?: string'
+      return:
+        type:
+          - string
+    package: azure-maps-control
   - uid: azure-maps-control.atlas.AuthenticationOptions.setAadProperties
     name: 'setAadProperties(string, string, string, string, AuthenticationContext)'
     children: []
@@ -233,23 +250,6 @@ items:
           description: >
             Callback function responsible for resolving to an authentication
             token.
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.AuthenticationOptions.subscriptionKey
-    name: subscriptionKey
-    fullName: subscriptionKey
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: |-
-      Subscription key from your Azure Maps account.
-      Must be specified for subscription key authentication type.
-    optional: true
-    syntax:
-      content: 'subscriptionKey?: string'
-      return:
-        type:
-          - string
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions

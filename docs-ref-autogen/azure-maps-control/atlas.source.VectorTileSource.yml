@@ -4,10 +4,10 @@ items:
     name: VectorTileSource
     fullName: VectorTileSource
     children:
+      - azure-maps-control.atlas.source.VectorTileSource.constructor
       - azure-maps-control.atlas.source.VectorTileSource.getId
       - azure-maps-control.atlas.source.VectorTileSource.getOptions
       - azure-maps-control.atlas.source.VectorTileSource.getShape
-      - azure-maps-control.atlas.source.VectorTileSource.constructor
     langs:
       - typeScript
     type: class
@@ -18,6 +18,27 @@ items:
       PolygonLayer, BubbleLayer, HeatmapLayer and VectorTileLayer.
     extends:
       name: azure-maps-control.atlas.source.Source
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.source.VectorTileSource.constructor
+    name: 'VectorTileSource(string, VectorTileSourceOptions)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new VectorTileSource(id?: string, options?: VectorTileSourceOptions)'
+      parameters:
+        - id: id
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: options
+          type:
+            - azure-maps-control.atlas.VectorTileSourceOptions
+          description: ''
+          optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.source.VectorTileSource.getId
     name: getId()
@@ -76,27 +97,6 @@ items:
           - >-
             Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
             any>>
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.source.VectorTileSource.constructor
-    name: 'VectorTileSource(string, VectorTileSourceOptions)'
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'new VectorTileSource(id?: string, options?: VectorTileSourceOptions)'
-      parameters:
-        - id: id
-          type:
-            - string
-          description: ''
-          optional: true
-        - id: options
-          type:
-            - azure-maps-control.atlas.VectorTileSourceOptions
-          description: ''
-          optional: true
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions

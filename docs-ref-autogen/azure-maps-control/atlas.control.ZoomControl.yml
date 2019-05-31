@@ -4,30 +4,13 @@ items:
     name: ZoomControl
     fullName: ZoomControl
     children:
-      - azure-maps-control.atlas.control.ZoomControl.constructor
       - azure-maps-control.atlas.control.ZoomControl.onAdd
       - azure-maps-control.atlas.control.ZoomControl.onRemove
+      - azure-maps-control.atlas.control.ZoomControl.constructor
     langs:
       - typeScript
     type: class
     summary: A control for changing the zoom of the map.
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.control.ZoomControl.constructor
-    name: ZoomControl(ZoomControlOptions)
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: Constructs a ZoomControl.
-    syntax:
-      content: 'new ZoomControl(options?: ZoomControlOptions)'
-      parameters:
-        - id: options
-          type:
-            - azure-maps-control.atlas.ZoomControlOptions
-          description: |
-            The options for the control.
-          optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.control.ZoomControl.onAdd
     name: onAdd(Map)
@@ -63,6 +46,23 @@ items:
     syntax:
       content: function onRemove()
       parameters: []
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.control.ZoomControl.constructor
+    name: ZoomControl(ZoomControlOptions)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a ZoomControl.
+    syntax:
+      content: 'new ZoomControl(options?: ZoomControlOptions)'
+      parameters:
+        - id: options
+          type:
+            - azure-maps-control.atlas.ZoomControlOptions
+          description: |
+            The options for the control.
+          optional: true
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions

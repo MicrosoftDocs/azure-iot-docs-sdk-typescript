@@ -8,8 +8,8 @@ items:
       - azure-maps-control.atlas.VectorTileSourceOptions.isTMS
       - azure-maps-control.atlas.VectorTileSourceOptions.maxZoom
       - azure-maps-control.atlas.VectorTileSourceOptions.minZoom
-      - azure-maps-control.atlas.VectorTileSourceOptions.tileSize
       - azure-maps-control.atlas.VectorTileSourceOptions.tiles
+      - azure-maps-control.atlas.VectorTileSourceOptions.tileSize
       - azure-maps-control.atlas.VectorTileSourceOptions.url
     langs:
       - typeScript
@@ -92,28 +92,6 @@ items:
         type:
           - number
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.VectorTileSourceOptions.tileSize
-    name: tileSize
-    fullName: tileSize
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      An integer value that specifies the width and height dimensions of the map
-      tiles.
-
-      For a seamless experience, the tile size must by a multiplier of 2. (i.e.
-      256, 512, 1024…).
-
-      default `512`
-    optional: true
-    syntax:
-      content: 'tileSize?: number'
-      return:
-        type:
-          - number
-    package: azure-maps-control
   - uid: azure-maps-control.atlas.VectorTileSourceOptions.tiles
     name: tiles
     fullName: tiles
@@ -136,6 +114,28 @@ items:
       return:
         type:
           - 'string[]'
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.VectorTileSourceOptions.tileSize
+    name: tileSize
+    fullName: tileSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      An integer value that specifies the width and height dimensions of the map
+      tiles.
+
+      For a seamless experience, the tile size must by a multiplier of 2. (i.e.
+      256, 512, 1024…).
+
+      default `512`
+    optional: true
+    syntax:
+      content: 'tileSize?: number'
+      return:
+        type:
+          - number
     package: azure-maps-control
   - uid: azure-maps-control.atlas.VectorTileSourceOptions.url
     name: url

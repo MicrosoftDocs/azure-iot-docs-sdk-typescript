@@ -4,11 +4,11 @@ items:
     name: LineLayer
     fullName: LineLayer
     children:
-      - azure-maps-control.atlas.layer.LineLayer.constructor
-      - azure-maps-control.atlas.layer.LineLayer.metadata
       - azure-maps-control.atlas.layer.LineLayer.getId
       - azure-maps-control.atlas.layer.LineLayer.getOptions
       - azure-maps-control.atlas.layer.LineLayer.getSource
+      - azure-maps-control.atlas.layer.LineLayer.constructor
+      - azure-maps-control.atlas.layer.LineLayer.metadata
       - azure-maps-control.atlas.layer.LineLayer.setOptions
     langs:
       - typeScript
@@ -20,6 +20,48 @@ items:
       objects.
     extends:
       name: azure-maps-control.atlas.layer.Layer
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.LineLayer.getId
+    name: getId()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the id of the layer
+    syntax:
+      content: function getId()
+      parameters: []
+      return:
+        type:
+          - string
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.LineLayer.getOptions
+    name: getOptions()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the options of the line layer.
+    syntax:
+      content: function getOptions()
+      parameters: []
+      return:
+        type:
+          - azure-maps-control.atlas.LineLayerOptions
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.LineLayer.getSource
+    name: getSource()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the source provided when creating the layer.
+    syntax:
+      content: function getSource()
+      parameters: []
+      return:
+        type:
+          - string | azure-maps-control.atlas.source.Source
     package: azure-maps-control
   - uid: azure-maps-control.atlas.layer.LineLayer.constructor
     name: 'LineLayer(string | Source, string, LineLayerOptions)'
@@ -65,48 +107,6 @@ items:
       return:
         type:
           - any
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.LineLayer.getId
-    name: getId()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Gets the id of the layer
-    syntax:
-      content: function getId()
-      parameters: []
-      return:
-        type:
-          - string
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.LineLayer.getOptions
-    name: getOptions()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Gets the options of the line layer.
-    syntax:
-      content: function getOptions()
-      parameters: []
-      return:
-        type:
-          - azure-maps-control.atlas.LineLayerOptions
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.LineLayer.getSource
-    name: getSource()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Gets the source provided when creating the layer.
-    syntax:
-      content: function getSource()
-      parameters: []
-      return:
-        type:
-          - string | azure-maps-control.atlas.source.Source
     package: azure-maps-control
   - uid: azure-maps-control.atlas.layer.LineLayer.setOptions
     name: setOptions(LineLayerOptions)

@@ -4,13 +4,27 @@ items:
     name: Layer
     fullName: Layer
     children:
+      - azure-maps-control.atlas.layer.Layer.getId
       - azure-maps-control.atlas.layer.Layer.constructor
       - azure-maps-control.atlas.layer.Layer.metadata
-      - azure-maps-control.atlas.layer.Layer.getId
     langs:
       - typeScript
     type: class
     summary: Abstract class for other layer classes to extend.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.Layer.getId
+    name: getId()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the id of the layer
+    syntax:
+      content: function getId()
+      parameters: []
+      return:
+        type:
+          - string
     package: azure-maps-control
   - uid: azure-maps-control.atlas.layer.Layer.constructor
     name: Layer(string)
@@ -42,20 +56,6 @@ items:
       return:
         type:
           - any
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.Layer.getId
-    name: getId()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Gets the id of the layer
-    syntax:
-      content: function getId()
-      parameters: []
-      return:
-        type:
-          - string
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.CompassControlOptions

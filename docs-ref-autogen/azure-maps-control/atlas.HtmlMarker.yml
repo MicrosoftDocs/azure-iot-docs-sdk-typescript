@@ -4,14 +4,28 @@ items:
     name: HtmlMarker
     fullName: HtmlMarker
     children:
-      - azure-maps-control.atlas.HtmlMarker.constructor
       - azure-maps-control.atlas.HtmlMarker.getOptions
+      - azure-maps-control.atlas.HtmlMarker.constructor
       - azure-maps-control.atlas.HtmlMarker.setOptions
       - azure-maps-control.atlas.HtmlMarker.togglePopup
     langs:
       - typeScript
     type: class
     summary: This class wraps an HTML element that can be displayed on the map.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.HtmlMarker.getOptions
+    name: getOptions()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the HTML marker options.
+    syntax:
+      content: function getOptions()
+      parameters: []
+      return:
+        type:
+          - azure-maps-control.atlas.HtmlMarkerOptions
     package: azure-maps-control
   - uid: azure-maps-control.atlas.HtmlMarker.constructor
     name: HtmlMarker(HtmlMarkerOptions)
@@ -29,20 +43,6 @@ items:
           description: |
             The options for the HtmlMarker.
           optional: true
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.HtmlMarker.getOptions
-    name: getOptions()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Gets the HTML marker options.
-    syntax:
-      content: function getOptions()
-      parameters: []
-      return:
-        type:
-          - azure-maps-control.atlas.HtmlMarkerOptions
     package: azure-maps-control
   - uid: azure-maps-control.atlas.HtmlMarker.setOptions
     name: setOptions(HtmlMarkerOptions)

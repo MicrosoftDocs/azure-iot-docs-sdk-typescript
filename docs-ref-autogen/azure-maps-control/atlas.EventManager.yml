@@ -5,35 +5,52 @@ items:
     fullName: EventManager
     children:
       - azure-maps-control.atlas.EventManager.add_4
-      - azure-maps-control.atlas.EventManager.add_8
-      - azure-maps-control.atlas.EventManager.add_3
-      - azure-maps-control.atlas.EventManager.add_9
-      - azure-maps-control.atlas.EventManager.add_1
-      - azure-maps-control.atlas.EventManager.add_6
       - azure-maps-control.atlas.EventManager.add_10
-      - azure-maps-control.atlas.EventManager.add
-      - azure-maps-control.atlas.EventManager.add_5
-      - azure-maps-control.atlas.EventManager.add_2
+      - azure-maps-control.atlas.EventManager.add_9
+      - azure-maps-control.atlas.EventManager.add_8
+      - azure-maps-control.atlas.EventManager.add_15
+      - azure-maps-control.atlas.EventManager.add_3
       - azure-maps-control.atlas.EventManager.add_7
-      - azure-maps-control.atlas.EventManager.addOnce_4
-      - azure-maps-control.atlas.EventManager.addOnce_8
-      - azure-maps-control.atlas.EventManager.addOnce_3
-      - azure-maps-control.atlas.EventManager.addOnce_1
+      - azure-maps-control.atlas.EventManager.add_5
+      - azure-maps-control.atlas.EventManager.add_12
+      - azure-maps-control.atlas.EventManager.add_1
+      - azure-maps-control.atlas.EventManager.add_13
+      - azure-maps-control.atlas.EventManager.add_16
+      - azure-maps-control.atlas.EventManager.add_6
+      - azure-maps-control.atlas.EventManager.add_17
+      - azure-maps-control.atlas.EventManager.add
+      - azure-maps-control.atlas.EventManager.add_11
+      - azure-maps-control.atlas.EventManager.add_2
+      - azure-maps-control.atlas.EventManager.add_14
       - azure-maps-control.atlas.EventManager.addOnce_6
       - azure-maps-control.atlas.EventManager.addOnce_9
-      - azure-maps-control.atlas.EventManager.addOnce
-      - azure-maps-control.atlas.EventManager.addOnce_5
-      - azure-maps-control.atlas.EventManager.addOnce_2
+      - azure-maps-control.atlas.EventManager.addOnce_8
       - azure-maps-control.atlas.EventManager.addOnce_7
+      - azure-maps-control.atlas.EventManager.addOnce_14
+      - azure-maps-control.atlas.EventManager.addOnce_5
+      - azure-maps-control.atlas.EventManager.addOnce_1
+      - azure-maps-control.atlas.EventManager.addOnce_11
+      - azure-maps-control.atlas.EventManager.addOnce_2
+      - azure-maps-control.atlas.EventManager.addOnce_12
+      - azure-maps-control.atlas.EventManager.addOnce_15
+      - azure-maps-control.atlas.EventManager.addOnce_3
+      - azure-maps-control.atlas.EventManager.addOnce_16
+      - azure-maps-control.atlas.EventManager.addOnce
+      - azure-maps-control.atlas.EventManager.addOnce_10
+      - azure-maps-control.atlas.EventManager.addOnce_4
+      - azure-maps-control.atlas.EventManager.addOnce_13
       - azure-maps-control.atlas.EventManager.invoke
       - azure-maps-control.atlas.EventManager.invoke_1
       - azure-maps-control.atlas.EventManager.remove
-      - azure-maps-control.atlas.EventManager.remove_2
       - azure-maps-control.atlas.EventManager.remove_1
+      - azure-maps-control.atlas.EventManager.remove_2
       - azure-maps-control.atlas.EventManager.remove_3
+      - azure-maps-control.atlas.EventManager.remove_4
+      - azure-maps-control.atlas.EventManager.remove_5
+      - azure-maps-control.atlas.EventManager.remove_6
     langs:
       - typeScript
-    type: interface
+    type: class
     summary: |-
       A manager for the map control's events.
       Exposed through the events property of the atlas.Map class.
@@ -74,7 +91,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add_8
+  - uid: azure-maps-control.atlas.EventManager.add_10
     name: >-
       add("click" | "contextmenu" | "dblclick" | "drag" | "dragstart" |
       "dragend" | "keydown" | "keypress" | "keyup" | "mousedown" | "mousemove" |
@@ -84,7 +101,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Adds a drag event to the HtmlMarker(s).
+    summary: Adds an event to the HtmlMarker(s).
     syntax:
       content: >-
         function add(eventType: "click" | "contextmenu" | "dblclick" | "drag" |
@@ -98,13 +115,101 @@ items:
               "click" | "contextmenu" | "dblclick" | "drag" | "dragstart" |
               "dragend" | "keydown" | "keypress" | "keyup" | "mousedown" |
               "mousemove" | "mouseout" | "mouseover" | "mouseup"
-          description: The drag event name.
+          description: The event name.
         - id: target
           type:
             - >-
               azure-maps-control.atlas.HtmlMarker |
               azure-maps-control.atlas.HtmlMarker[]
           description: The HtmlMarker(s) to add the event for.
+        - id: callback
+          type:
+            - '(e: TargetedEvent) => void'
+          description: |
+            The event handler callback.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.add_9
+    name: >-
+      add("dataadded" | "dataremoved", DataSource | DataSource[], (e: Shape[])
+      => void)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds an event to the DataSource(s).
+    syntax:
+      content: >-
+        function add(eventType: "dataadded" | "dataremoved", target: DataSource
+        | DataSource[], callback: (e: Shape[]) => void)
+      parameters:
+        - id: eventType
+          type:
+            - '"dataadded" | "dataremoved"'
+          description: The event name.
+        - id: target
+          type:
+            - >-
+              azure-maps-control.atlas.source.DataSource |
+              azure-maps-control.atlas.source.DataSource[]
+          description: The DataSource(s) to add the event for.
+        - id: callback
+          type:
+            - '(e: Shape[]) => void'
+          description: |
+            The event handler callback.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.add_8
+    name: >-
+      add("datasourceupdated", DataSource | DataSource[], (e: DataSource) =>
+      void)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds an event to the DataSource(s).
+    syntax:
+      content: >-
+        function add(eventType: "datasourceupdated", target: DataSource |
+        DataSource[], callback: (e: DataSource) => void)
+      parameters:
+        - id: eventType
+          type:
+            - '"datasourceupdated"'
+          description: The event name.
+        - id: target
+          type:
+            - >-
+              azure-maps-control.atlas.source.DataSource |
+              azure-maps-control.atlas.source.DataSource[]
+          description: The DataSource(s) to add the event for.
+        - id: callback
+          type:
+            - '(e: DataSource) => void'
+          description: |
+            The event handler callback.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.add_15
+    name: >-
+      add("drag" | "dragend" | "dragstart" | "open" | "close", Popup | Popup[],
+      (e: TargetedEvent) => void)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds an event to the Popup(s).
+    syntax:
+      content: >-
+        function add(eventType: "drag" | "dragend" | "dragstart" | "open" |
+        "close", target: Popup | Popup[], callback: (e: TargetedEvent) => void)
+      parameters:
+        - id: eventType
+          type:
+            - '"drag" | "dragend" | "dragstart" | "open" | "close"'
+          description: The event name.
+        - id: target
+          type:
+            - 'azure-maps-control.atlas.Popup | azure-maps-control.atlas.Popup[]'
+          description: The Popup(s) to add the event for.
         - id: callback
           type:
             - '(e: TargetedEvent) => void'
@@ -131,7 +236,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add_9
+  - uid: azure-maps-control.atlas.EventManager.add_7
     name: 'add("floorchange", (e: FloorChangeEvent) => void)'
     children: []
     type: method
@@ -139,7 +244,7 @@ items:
       - typeScript
     summary: |-
       For internal use only.
-      Adds a floor change event to the HtmlMarker(s).
+      Adds a floor change event to the map.
     syntax:
       content: >-
         function add(eventType: "floorchange", callback: (e: FloorChangeEvent)
@@ -148,10 +253,60 @@ items:
         - id: eventType
           type:
             - '"floorchange"'
-          description: The drag event name.
+          description: The event name.
         - id: callback
           type:
             - '(e: FloorChangeEvent) => void'
+          description: |
+            The event handler callback.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.add_5
+    name: 'add("layeradded" | "layerremoved", (e: Layer) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds an event to the map.
+    syntax:
+      content: >-
+        function add(eventType: "layeradded" | "layerremoved", callback: (e:
+        Layer) => void)
+      parameters:
+        - id: eventType
+          type:
+            - '"layeradded" | "layerremoved"'
+          description: The event name.
+        - id: callback
+          type:
+            - '(e: Layer) => void'
+          description: |
+            The event handler callback.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.add_12
+    name: 'add("layeradded" | "layerremoved", Layer | Layer[], (e: Layer) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds an event to the Layer(s).
+    syntax:
+      content: >-
+        function add(eventType: "layeradded" | "layerremoved", target: Layer |
+        Layer[], callback: (e: Layer) => void)
+      parameters:
+        - id: eventType
+          type:
+            - '"layeradded" | "layerremoved"'
+          description: The event name.
+        - id: target
+          type:
+            - >-
+              azure-maps-control.atlas.layer.Layer |
+              azure-maps-control.atlas.layer.Layer[]
+          description: The Layer(s) to add the event for.
+        - id: callback
+          type:
+            - '(e: Layer) => void'
           description: |
             The event handler callback.
     package: azure-maps-control
@@ -182,7 +337,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add_6
+  - uid: azure-maps-control.atlas.EventManager.add_13
     name: >-
       add("mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
       "dblclick" | "mouseout" | "mouseenter" | "mouseleave" | "contextmenu",
@@ -191,7 +346,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Adds a mouse event to the map.
+    summary: Adds a mouse event to the Layer(s).
     syntax:
       content: >-
         function add(eventType: "mousedown" | "mouseup" | "mouseover" |
@@ -205,42 +360,94 @@ items:
               "mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
               "dblclick" | "mouseout" | "mouseenter" | "mouseleave" |
               "contextmenu"
-          description: The mouse event name.
+          description: The event name.
         - id: target
           type:
             - >-
               azure-maps-control.atlas.layer.Layer |
               azure-maps-control.atlas.layer.Layer[]
-          description: The layer(s) to add the event for.
+          description: The Layer(s) to add the event for.
         - id: callback
           type:
             - '(e: MapMouseEvent) => void'
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add_10
-    name: 'add("open" | "close", Popup | Popup[], (e: TargetedEvent) => void)'
+  - uid: azure-maps-control.atlas.EventManager.add_16
+    name: 'add("shapechanged", Shape | Shape[], (e: Shape) => void)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: Adds an event to the Popup(s).
+    summary: Adds an event to the Shape(s).
     syntax:
       content: >-
-        function add(eventType: "open" | "close", target: Popup | Popup[],
-        callback: (e: TargetedEvent) => void)
+        function add(eventType: "shapechanged", target: Shape | Shape[],
+        callback: (e: Shape) => void)
       parameters:
         - id: eventType
           type:
-            - '"open" | "close"'
-          description: The drag event name.
+            - '"shapechanged"'
+          description: The event name.
         - id: target
           type:
-            - 'azure-maps-control.atlas.Popup | azure-maps-control.atlas.Popup[]'
-          description: The HtmlMarker(s) to add the event for.
+            - 'azure-maps-control.atlas.Shape | azure-maps-control.atlas.Shape[]'
+          description: The Shape(s) to add the event for.
         - id: callback
           type:
-            - '(e: TargetedEvent) => void'
+            - '(e: Shape) => void'
+          description: |
+            The event handler callback.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.add_6
+    name: 'add("sourceadded" | "sourceremoved", (e: Source) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds an event to the map.
+    syntax:
+      content: >-
+        function add(eventType: "sourceadded" | "sourceremoved", callback: (e:
+        Source) => void)
+      parameters:
+        - id: eventType
+          type:
+            - '"sourceadded" | "sourceremoved"'
+          description: The event name.
+        - id: callback
+          type:
+            - '(e: Source) => void'
+          description: |
+            The event handler callback.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.add_17
+    name: >-
+      add("sourceadded" | "sourceremoved", Source | Source[], (e: Source) =>
+      void)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds an event to the Source(s).
+    syntax:
+      content: >-
+        function add(eventType: "sourceadded" | "sourceremoved", target: Source
+        | Source[], callback: (e: Source) => void)
+      parameters:
+        - id: eventType
+          type:
+            - '"sourceadded" | "sourceremoved"'
+          description: The event name.
+        - id: target
+          type:
+            - >-
+              azure-maps-control.atlas.source.Source |
+              azure-maps-control.atlas.source.Source[]
+          description: The Source(s) to add the event for.
+        - id: callback
+          type:
+            - '(e: Source) => void'
           description: |
             The event handler callback.
     package: azure-maps-control
@@ -268,7 +475,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add_5
+  - uid: azure-maps-control.atlas.EventManager.add_11
     name: >-
       add("touchstart" | "touchend" | "touchmove" | "touchcancel", Layer |
       Layer[], (e: MapTouchEvent) => void)
@@ -276,7 +483,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Adds a touch event to the map.
+    summary: Adds a touch event to the Layer(s).
     syntax:
       content: >-
         function add(eventType: "touchstart" | "touchend" | "touchmove" |
@@ -286,13 +493,13 @@ items:
         - id: eventType
           type:
             - '"touchstart" | "touchend" | "touchmove" | "touchcancel"'
-          description: The touch event name.
+          description: The event name.
         - id: target
           type:
             - >-
               azure-maps-control.atlas.layer.Layer |
               azure-maps-control.atlas.layer.Layer[]
-          description: The layer(s) to add the event for.
+          description: The Layer(s) to add the event for.
         - id: callback
           type:
             - '(e: MapTouchEvent) => void'
@@ -321,13 +528,13 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add_7
+  - uid: azure-maps-control.atlas.EventManager.add_14
     name: 'add("wheel", Layer | Layer[], (e: MapMouseWheelEvent) => void)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: Adds a wheel event to the map.
+    summary: Adds a wheel event to the Layer(s).
     syntax:
       content: >-
         function add(eventType: "wheel", target: Layer | Layer[], callback: (e:
@@ -336,20 +543,20 @@ items:
         - id: eventType
           type:
             - '"wheel"'
-          description: The wheel event name.
+          description: The event name.
         - id: target
           type:
             - >-
               azure-maps-control.atlas.layer.Layer |
               azure-maps-control.atlas.layer.Layer[]
-          description: The layer(s) to add the event for.
+          description: The Layer(s) to add the event for.
         - id: callback
           type:
             - '(e: MapMouseWheelEvent) => void'
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_4
+  - uid: azure-maps-control.atlas.EventManager.addOnce_6
     name: >-
       addOnce("boxzoomstart" | "boxzoomend" | "dragstart" | "drag" | "dragend" |
       "load" | "movestart" | "move" | "moveend" | "pitchstart" | "pitch" |
@@ -383,11 +590,8 @@ items:
             - '(e: MapEvent) => void'
           description: |
             The event handler callback.
-      return:
-        type:
-          - any
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_8
+  - uid: azure-maps-control.atlas.EventManager.addOnce_9
     name: >-
       addOnce("click" | "contextmenu" | "dblclick" | "drag" | "dragstart" |
       "dragend" | "keydown" | "keypress" | "keyup" | "mousedown" | "mousemove" |
@@ -397,7 +601,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Adds a drag event to the HtmlMarker(s).
+    summary: Adds an event to the HtmlMarker.
     syntax:
       content: >-
         function addOnce(eventType: "click" | "contextmenu" | "dblclick" |
@@ -411,21 +615,98 @@ items:
               "click" | "contextmenu" | "dblclick" | "drag" | "dragstart" |
               "dragend" | "keydown" | "keypress" | "keyup" | "mousedown" |
               "mousemove" | "mouseout" | "mouseover" | "mouseup"
-          description: The drag event name.
+          description: The event name.
         - id: target
           type:
             - azure-maps-control.atlas.HtmlMarker
-          description: The HtmlMarker(s) to add the event for.
+          description: The HtmlMarker to add the event for.
         - id: callback
           type:
             - '(e: TargetedEvent) => void'
           description: |
             The event handler callback.
-      return:
-        type:
-          - any
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_3
+  - uid: azure-maps-control.atlas.EventManager.addOnce_8
+    name: 'addOnce("dataadded" | "dataremoved", DataSource, (e: Shape[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds an event to the DataSource.
+    syntax:
+      content: >-
+        function addOnce(eventType: "dataadded" | "dataremoved", target:
+        DataSource, callback: (e: Shape[]) => void)
+      parameters:
+        - id: eventType
+          type:
+            - '"dataadded" | "dataremoved"'
+          description: The event name.
+        - id: target
+          type:
+            - azure-maps-control.atlas.source.DataSource
+          description: The DataSource to add the event for.
+        - id: callback
+          type:
+            - '(e: Shape[]) => void'
+          description: |
+            The event handler callback.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.addOnce_7
+    name: 'addOnce("datasourceupdated", DataSource, (e: DataSource) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds an event to the DataSource.
+    syntax:
+      content: >-
+        function addOnce(eventType: "datasourceupdated", target: DataSource,
+        callback: (e: DataSource) => void)
+      parameters:
+        - id: eventType
+          type:
+            - '"datasourceupdated"'
+          description: The event name.
+        - id: target
+          type:
+            - azure-maps-control.atlas.source.DataSource
+          description: The DataSource to add the event for.
+        - id: callback
+          type:
+            - '(e: DataSource) => void'
+          description: |
+            The event handler callback.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.addOnce_14
+    name: >-
+      addOnce("drag" | "dragend" | "dragstart" | "open" | "close", Popup, (e:
+      TargetedEvent) => void)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds an event to the Popup.
+    syntax:
+      content: >-
+        function addOnce(eventType: "drag" | "dragend" | "dragstart" | "open" |
+        "close", target: Popup, callback: (e: TargetedEvent) => void)
+      parameters:
+        - id: eventType
+          type:
+            - '"drag" | "dragend" | "dragstart" | "open" | "close"'
+          description: The event name.
+        - id: target
+          type:
+            - azure-maps-control.atlas.Popup
+          description: The Popup to add the event for.
+        - id: callback
+          type:
+            - '(e: TargetedEvent) => void'
+          description: |
+            The event handler callback.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.addOnce_5
     name: 'addOnce("error", (e: MapErrorEvent) => void)'
     children: []
     type: method
@@ -446,11 +727,56 @@ items:
             - '(e: MapErrorEvent) => void'
           description: |
             The event handler callback.
-      return:
-        type:
-          - any
     package: azure-maps-control
   - uid: azure-maps-control.atlas.EventManager.addOnce_1
+    name: 'addOnce("layeradded" | "layerremoved", (e: Layer) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds an event to the map.
+    syntax:
+      content: >-
+        function addOnce(eventType: "layeradded" | "layerremoved", callback: (e:
+        Layer) => void)
+      parameters:
+        - id: eventType
+          type:
+            - '"layeradded" | "layerremoved"'
+          description: The event name.
+        - id: callback
+          type:
+            - '(e: Layer) => void'
+          description: |
+            The event handler callback.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.addOnce_11
+    name: 'addOnce("layeradded" | "layerremoved", Layer, (e: Layer) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds a touch event to the Layer.
+    syntax:
+      content: >-
+        function addOnce(eventType: "layeradded" | "layerremoved", target:
+        Layer, callback: (e: Layer) => void)
+      parameters:
+        - id: eventType
+          type:
+            - '"layeradded" | "layerremoved"'
+          description: The touch event name.
+        - id: target
+          type:
+            - azure-maps-control.atlas.layer.Layer
+          description: The Layer to add the event for.
+        - id: callback
+          type:
+            - '(e: Layer) => void'
+          description: |
+            The event handler callback.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.addOnce_2
     name: >-
       addOnce("mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
       "dblclick" | "mouseout" | "contextmenu", (e: MapMouseEvent) => void)
@@ -476,11 +802,8 @@ items:
             - '(e: MapMouseEvent) => void'
           description: |
             The event handler callback.
-      return:
-        type:
-          - any
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_6
+  - uid: azure-maps-control.atlas.EventManager.addOnce_12
     name: >-
       addOnce("mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
       "dblclick" | "mouseout" | "mouseenter" | "mouseleave" | "contextmenu",
@@ -489,7 +812,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Adds a mouse event to the map.
+    summary: Adds a mouse event to the Layer.
     syntax:
       content: >-
         function addOnce(eventType: "mousedown" | "mouseup" | "mouseover" |
@@ -507,44 +830,86 @@ items:
         - id: target
           type:
             - azure-maps-control.atlas.layer.Layer
-          description: The layer(s) to add the event for.
+          description: The Layer to add the event for.
         - id: callback
           type:
             - '(e: MapMouseEvent) => void'
           description: |
             The event handler callback.
-      return:
-        type:
-          - any
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_9
-    name: 'addOnce("open" | "close", Popup, (e: TargetedEvent) => void)'
+  - uid: azure-maps-control.atlas.EventManager.addOnce_15
+    name: 'addOnce("shapechanged", Shape, (e: Shape) => void)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: Adds an event to the Popup(s).
+    summary: Adds an event to the Shape.
     syntax:
       content: >-
-        function addOnce(eventType: "open" | "close", target: Popup, callback:
-        (e: TargetedEvent) => void)
+        function addOnce(eventType: "shapechanged", target: Shape, callback: (e:
+        Shape) => void)
       parameters:
         - id: eventType
           type:
-            - '"open" | "close"'
-          description: The drag event name.
+            - '"shapechanged"'
+          description: The event name.
         - id: target
           type:
-            - azure-maps-control.atlas.Popup
-          description: The HtmlMarker(s) to add the event for.
+            - azure-maps-control.atlas.Shape
+          description: The Shape to add the event for.
         - id: callback
           type:
-            - '(e: TargetedEvent) => void'
+            - '(e: Shape) => void'
           description: |
             The event handler callback.
-      return:
-        type:
-          - any
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.addOnce_3
+    name: 'addOnce("sourceadded" | "sourceremoved", (e: Source) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds an event to the map.
+    syntax:
+      content: >-
+        function addOnce(eventType: "sourceadded" | "sourceremoved", callback:
+        (e: Source) => void)
+      parameters:
+        - id: eventType
+          type:
+            - '"sourceadded" | "sourceremoved"'
+          description: The event name.
+        - id: callback
+          type:
+            - '(e: Source) => void'
+          description: |
+            The event handler callback.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.addOnce_16
+    name: 'addOnce("sourceadded" | "sourceremoved", Source, (e: Source) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds an event to the Source.
+    syntax:
+      content: >-
+        function addOnce(eventType: "sourceadded" | "sourceremoved", target:
+        Source, callback: (e: Source) => void)
+      parameters:
+        - id: eventType
+          type:
+            - '"sourceadded" | "sourceremoved"'
+          description: The event name.
+        - id: target
+          type:
+            - azure-maps-control.atlas.source.Source
+          description: The Source to add the event for.
+        - id: callback
+          type:
+            - '(e: Source) => void'
+          description: |
+            The event handler callback.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.EventManager.addOnce
     name: >-
@@ -569,11 +934,8 @@ items:
             - '(e: MapTouchEvent) => void'
           description: |
             The event handler callback.
-      return:
-        type:
-          - any
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_5
+  - uid: azure-maps-control.atlas.EventManager.addOnce_10
     name: >-
       addOnce("touchstart" | "touchend" | "touchmove" | "touchcancel", Layer,
       (e: MapTouchEvent) => void)
@@ -581,7 +943,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Adds a touch event to the map.
+    summary: Adds a touch event to the Layer.
     syntax:
       content: >-
         function addOnce(eventType: "touchstart" | "touchend" | "touchmove" |
@@ -594,17 +956,14 @@ items:
         - id: target
           type:
             - azure-maps-control.atlas.layer.Layer
-          description: The layer(s) to add the event for.
+          description: The Layer to add the event for.
         - id: callback
           type:
             - '(e: MapTouchEvent) => void'
           description: |
             The event handler callback.
-      return:
-        type:
-          - any
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_2
+  - uid: azure-maps-control.atlas.EventManager.addOnce_4
     name: 'addOnce("wheel", (e: MapMouseWheelEvent) => void)'
     children: []
     type: method
@@ -625,17 +984,14 @@ items:
             - '(e: MapMouseWheelEvent) => void'
           description: |
             The event handler callback.
-      return:
-        type:
-          - any
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_7
+  - uid: azure-maps-control.atlas.EventManager.addOnce_13
     name: 'addOnce("wheel", Layer, (e: MapMouseWheelEvent) => void)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: Adds a wheel event to the map.
+    summary: Adds a wheel event to the Layer.
     syntax:
       content: >-
         function addOnce(eventType: "wheel", target: Layer, callback: (e:
@@ -648,15 +1004,12 @@ items:
         - id: target
           type:
             - azure-maps-control.atlas.layer.Layer
-          description: The layer(s) to add the event for.
+          description: The Layer to add the event for.
         - id: callback
           type:
             - '(e: MapMouseWheelEvent) => void'
           description: |
             The event handler callback.
-      return:
-        type:
-          - any
     package: azure-maps-control
   - uid: azure-maps-control.atlas.EventManager.invoke
     name: 'invoke(string, any)'
@@ -721,8 +1074,8 @@ items:
     package: azure-maps-control
   - uid: azure-maps-control.atlas.EventManager.remove
     name: >-
-      remove(string, (e: void | MapMouseEvent | MapTouchEvent |
-      MapMouseWheelEvent) => void)
+      remove(string, (e: void | Layer | MapMouseEvent | MapTouchEvent |
+      MapMouseWheelEvent | Source) => void)
     children: []
     type: method
     langs:
@@ -730,8 +1083,8 @@ items:
     summary: Removes an event listener from the map.
     syntax:
       content: >-
-        function remove(eventType: string, callback: (e: void | MapMouseEvent |
-        MapTouchEvent | MapMouseWheelEvent) => void)
+        function remove(eventType: string, callback: (e: void | Layer |
+        MapMouseEvent | MapTouchEvent | MapMouseWheelEvent | Source) => void)
       parameters:
         - id: eventType
           type:
@@ -740,8 +1093,38 @@ items:
         - id: callback
           type:
             - >-
-              (e: void | MapMouseEvent | MapTouchEvent | MapMouseWheelEvent) =>
-              void
+              (e: void | Layer | MapMouseEvent | MapTouchEvent |
+              MapMouseWheelEvent | Source) => void
+          description: |
+            The event handler callback.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.remove_1
+    name: >-
+      remove(string, DataSource | DataSource[], (e: DataSource | Shape[]) =>
+      void)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Removes an event listener from the DataSource(s).
+    syntax:
+      content: >-
+        function remove(eventType: string, target: DataSource | DataSource[],
+        callback: (e: DataSource | Shape[]) => void)
+      parameters:
+        - id: eventType
+          type:
+            - string
+          description: The event name.
+        - id: target
+          type:
+            - >-
+              azure-maps-control.atlas.source.DataSource |
+              azure-maps-control.atlas.source.DataSource[]
+          description: The DataSource(s) to remove the event for.
+        - id: callback
+          type:
+            - '(e: DataSource | Shape[]) => void'
           description: |
             The event handler callback.
     package: azure-maps-control
@@ -773,19 +1156,20 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.remove_1
+  - uid: azure-maps-control.atlas.EventManager.remove_3
     name: >-
       remove(string, Layer | Layer[], (e: void | MapMouseEvent | MapTouchEvent |
-      MapMouseWheelEvent) => void)
+      MapMouseWheelEvent | Layer) => void)
     children: []
     type: method
     langs:
       - typeScript
-    summary: Removes an event listener from the map.
+    summary: Removes an event listener from the Layer(s).
     syntax:
       content: >-
         function remove(eventType: string, target: Layer | Layer[], callback:
-        (e: void | MapMouseEvent | MapTouchEvent | MapMouseWheelEvent) => void)
+        (e: void | MapMouseEvent | MapTouchEvent | MapMouseWheelEvent | Layer)
+        => void)
       parameters:
         - id: eventType
           type:
@@ -796,16 +1180,16 @@ items:
             - >-
               azure-maps-control.atlas.layer.Layer |
               azure-maps-control.atlas.layer.Layer[]
-          description: The layer(s) to remove the event for.
+          description: The Layer(s) to remove the event for.
         - id: callback
           type:
             - >-
-              (e: void | MapMouseEvent | MapTouchEvent | MapMouseWheelEvent) =>
-              void
+              (e: void | MapMouseEvent | MapTouchEvent | MapMouseWheelEvent |
+              Layer) => void
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.remove_3
+  - uid: azure-maps-control.atlas.EventManager.remove_4
     name: 'remove(string, Popup | Popup[], (e: TargetedEvent) => void)'
     children: []
     type: method
@@ -828,6 +1212,60 @@ items:
         - id: callback
           type:
             - '(e: TargetedEvent) => void'
+          description: |
+            The event handler callback.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.remove_5
+    name: 'remove(string, Shape | Shape[], (e: Shape) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Removes an event listener from the Shape(s).
+    syntax:
+      content: >-
+        function remove(eventType: string, target: Shape | Shape[], callback:
+        (e: Shape) => void)
+      parameters:
+        - id: eventType
+          type:
+            - string
+          description: The event name.
+        - id: target
+          type:
+            - 'azure-maps-control.atlas.Shape | azure-maps-control.atlas.Shape[]'
+          description: The Shapes(s) to remove the event for.
+        - id: callback
+          type:
+            - '(e: Shape) => void'
+          description: |
+            The event handler callback.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.remove_6
+    name: 'remove(string, Source | Source[], (e: Source) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Removes an event listener from the Source(s).
+    syntax:
+      content: >-
+        function remove(eventType: string, target: Source | Source[], callback:
+        (e: Source) => void)
+      parameters:
+        - id: eventType
+          type:
+            - string
+          description: The event name.
+        - id: target
+          type:
+            - >-
+              azure-maps-control.atlas.source.Source |
+              azure-maps-control.atlas.source.Source[]
+          description: The Source(s) to remove the event for.
+        - id: callback
+          type:
+            - '(e: Source) => void'
           description: |
             The event handler callback.
     package: azure-maps-control
@@ -1063,6 +1501,24 @@ references:
         uid: azure-maps-control.atlas.Pixel
       - name: '[]'
         fullName: '[]'
+  - uid: 'Promise<azure-maps-control.atlas.data.Position[]>'
+    name: 'Position[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: azure-maps-control.atlas.internal.EventEmitter<T>
+    name: EventEmitter<T>
+    spec.typeScript:
+      - name: EventEmitter
+        fullName: EventEmitter
+        uid: azure-maps-control.atlas.internal.EventEmitter
+      - name: <T>
+        fullName: <T>
   - uid: azure-maps-control.atlas.LineLayerOptions
     name: LineLayerOptions
     spec.typeScript:
@@ -1295,12 +1751,20 @@ references:
       - name: TimeUnits
         fullName: TimeUnits
         uid: azure-maps-control.atlas.math.TimeUnits
-  - uid: azure-maps-control.atlas.source.Source
-    name: Source
+  - uid: >-
+      azure-maps-control.atlas.source.Source<azure-maps-control.atlas.source.DataSourceEvents>
+    name: DataSourceEvents>
     spec.typeScript:
       - name: Source
         fullName: Source
         uid: azure-maps-control.atlas.source.Source
+      - name: <
+        fullName: <
+      - name: DataSourceEvents
+        fullName: DataSourceEvents
+        uid: azure-maps-control.atlas.source.DataSourceEvents
+      - name: '>'
+        fullName: '>'
   - uid: azure-maps-control.atlas.DataSourceOptions
     name: DataSourceOptions
     spec.typeScript:
@@ -1493,6 +1957,12 @@ references:
       - name: FeatureCollection
         fullName: FeatureCollection
         uid: azure-maps-control.atlas.data.FeatureCollection
+  - uid: azure-maps-control.atlas.source.Source
+    name: Source
+    spec.typeScript:
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
   - uid: azure-maps-control.atlas.VectorTileSourceOptions
     name: VectorTileSourceOptions
     spec.typeScript:
@@ -1505,6 +1975,130 @@ references:
       - name: Expression
         fullName: Expression
         uid: azure-maps-control.atlas.Expression
+  - uid: azure-maps-control.atlas.source.SourceEvents
+    name: SourceEvents
+    spec.typeScript:
+      - name: SourceEvents
+        fullName: SourceEvents
+        uid: azure-maps-control.atlas.source.SourceEvents
+  - uid: azure-maps-control.atlas.source.DataSource
+    name: DataSource
+    spec.typeScript:
+      - name: DataSource
+        fullName: DataSource
+        uid: azure-maps-control.atlas.source.DataSource
+  - uid: >-
+      azure-maps-control.atlas.source.DataSource |
+      azure-maps-control.atlas.source.DataSource[]
+    name: 'DataSource[]'
+    spec.typeScript:
+      - name: DataSource
+        fullName: DataSource
+        uid: azure-maps-control.atlas.source.DataSource
+      - name: ' | '
+        fullName: ' | '
+      - name: DataSource
+        fullName: DataSource
+        uid: azure-maps-control.atlas.source.DataSource
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      azure-maps-control.atlas.HtmlMarker |
+      azure-maps-control.atlas.HtmlMarker[]
+    name: 'HtmlMarker[]'
+    spec.typeScript:
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+      - name: ' | '
+        fullName: ' | '
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      azure-maps-control.atlas.layer.Layer |
+      azure-maps-control.atlas.layer.Layer[]
+    name: 'Layer[]'
+    spec.typeScript:
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: ' | '
+        fullName: ' | '
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-control.atlas.Popup | azure-maps-control.atlas.Popup[]'
+    name: 'Popup[]'
+    spec.typeScript:
+      - name: Popup
+        fullName: Popup
+        uid: azure-maps-control.atlas.Popup
+      - name: ' | '
+        fullName: ' | '
+      - name: Popup
+        fullName: Popup
+        uid: azure-maps-control.atlas.Popup
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-control.atlas.Shape | azure-maps-control.atlas.Shape[]'
+    name: 'Shape[]'
+    spec.typeScript:
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: ' | '
+        fullName: ' | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      azure-maps-control.atlas.source.Source |
+      azure-maps-control.atlas.source.Source[]
+    name: 'Source[]'
+    spec.typeScript:
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+      - name: ' | '
+        fullName: ' | '
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-control.atlas.HtmlMarker
+    name: HtmlMarker
+    spec.typeScript:
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+  - uid: azure-maps-control.atlas.Popup
+    name: Popup
+    spec.typeScript:
+      - name: Popup
+        fullName: Popup
+        uid: azure-maps-control.atlas.Popup
+  - uid: >-
+      azure-maps-control.atlas.internal.EventEmitter<azure-maps-control.atlas.HtmlMarkerEvents>
+    name: HtmlMarkerEvents>
+    spec.typeScript:
+      - name: EventEmitter
+        fullName: EventEmitter
+        uid: azure-maps-control.atlas.internal.EventEmitter
+      - name: <
+        fullName: <
+      - name: HtmlMarkerEvents
+        fullName: HtmlMarkerEvents
+        uid: azure-maps-control.atlas.HtmlMarkerEvents
+      - name: '>'
+        fullName: '>'
   - uid: azure-maps-control.atlas.HtmlMarkerOptions
     name: HtmlMarkerOptions
     spec.typeScript:
@@ -1646,12 +2240,40 @@ references:
       - name: Pixel
         fullName: Pixel
         uid: azure-maps-control.atlas.Pixel
+  - uid: >-
+      azure-maps-control.atlas.internal.EventEmitter<azure-maps-control.atlas.PopupEvents>
+    name: PopupEvents>
+    spec.typeScript:
+      - name: EventEmitter
+        fullName: EventEmitter
+        uid: azure-maps-control.atlas.internal.EventEmitter
+      - name: <
+        fullName: <
+      - name: PopupEvents
+        fullName: PopupEvents
+        uid: azure-maps-control.atlas.PopupEvents
+      - name: '>'
+        fullName: '>'
   - uid: azure-maps-control.atlas.PopupOptions
     name: PopupOptions
     spec.typeScript:
       - name: PopupOptions
         fullName: PopupOptions
         uid: azure-maps-control.atlas.PopupOptions
+  - uid: >-
+      azure-maps-control.atlas.internal.EventEmitter<azure-maps-control.atlas.ShapeEvents>
+    name: ShapeEvents>
+    spec.typeScript:
+      - name: EventEmitter
+        fullName: EventEmitter
+        uid: azure-maps-control.atlas.internal.EventEmitter
+      - name: <
+        fullName: <
+      - name: ShapeEvents
+        fullName: ShapeEvents
+        uid: azure-maps-control.atlas.ShapeEvents
+      - name: '>'
+        fullName: '>'
   - uid: >-
       azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
       any>
@@ -1773,6 +2395,14 @@ references:
         uid: azure-maps-control.atlas.Control
       - name: '[]'
         fullName: '[]'
+  - uid: 'azure-maps-control.atlas.Control[]'
+    name: 'Control[]'
+    spec.typeScript:
+      - name: Control
+        fullName: Control
+        uid: azure-maps-control.atlas.Control
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-control.atlas.ControlPosition
     name: ControlPosition
     spec.typeScript:
@@ -1780,66 +2410,32 @@ references:
         fullName: ControlPosition
         uid: azure-maps-control.atlas.ControlPosition
   - uid: >-
-      azure-maps-control.atlas.layer.Layer |
-      azure-maps-control.atlas.layer.Layer[]
-    name: 'Layer[]'
+      azure-maps-control.Dictionary<string,
+      azure-maps-control.atlas.AggregateExpression>
+    name: AggregateExpression>
     spec.typeScript:
-      - name: Layer
-        fullName: Layer
-        uid: azure-maps-control.atlas.layer.Layer
-      - name: ' | '
-        fullName: ' | '
-      - name: Layer
-        fullName: Layer
-        uid: azure-maps-control.atlas.layer.Layer
-      - name: '[]'
-        fullName: '[]'
-  - uid: >-
-      azure-maps-control.atlas.HtmlMarker |
-      azure-maps-control.atlas.HtmlMarker[]
-    name: 'HtmlMarker[]'
-    spec.typeScript:
-      - name: HtmlMarker
-        fullName: HtmlMarker
-        uid: azure-maps-control.atlas.HtmlMarker
-      - name: ' | '
-        fullName: ' | '
-      - name: HtmlMarker
-        fullName: HtmlMarker
-        uid: azure-maps-control.atlas.HtmlMarker
-      - name: '[]'
-        fullName: '[]'
-  - uid: 'azure-maps-control.atlas.Popup | azure-maps-control.atlas.Popup[]'
-    name: 'Popup[]'
-    spec.typeScript:
-      - name: Popup
-        fullName: Popup
-        uid: azure-maps-control.atlas.Popup
-      - name: ' | '
-        fullName: ' | '
-      - name: Popup
-        fullName: Popup
-        uid: azure-maps-control.atlas.Popup
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-maps-control.atlas.HtmlMarker
-    name: HtmlMarker
-    spec.typeScript:
-      - name: HtmlMarker
-        fullName: HtmlMarker
-        uid: azure-maps-control.atlas.HtmlMarker
-  - uid: azure-maps-control.atlas.Popup
-    name: Popup
-    spec.typeScript:
-      - name: Popup
-        fullName: Popup
-        uid: azure-maps-control.atlas.Popup
+      - name: Dictionary
+        fullName: Dictionary
+        uid: azure-maps-control.Dictionary
+      - name: '<string, '
+        fullName: '<string, '
+      - name: AggregateExpression
+        fullName: AggregateExpression
+        uid: azure-maps-control.atlas.AggregateExpression
+      - name: '>'
+        fullName: '>'
   - uid: azure-maps-control.atlas.MapEvent
     name: MapEvent
     spec.typeScript:
       - name: MapEvent
         fullName: MapEvent
         uid: azure-maps-control.atlas.MapEvent
+  - uid: azure-maps-control.atlas.TargetedEvent
+    name: TargetedEvent
+    spec.typeScript:
+      - name: TargetedEvent
+        fullName: TargetedEvent
+        uid: azure-maps-control.atlas.TargetedEvent
   - uid: 'azure-maps-control.atlas.HtmlMarker[]'
     name: 'HtmlMarker[]'
     spec.typeScript:
@@ -1917,11 +2513,18 @@ references:
       - name: BoundingBox
         fullName: BoundingBox
         uid: azure-maps-control.atlas.data.BoundingBox
-  - uid: Array<string | azure-maps-control.atlas.layer.Layer>
+  - uid: >-
+      string | azure-maps-control.atlas.layer.Layer | Array<string |
+      azure-maps-control.atlas.layer.Layer>
     name: Layer>
     spec.typeScript:
-      - name: 'Array<string | '
-        fullName: 'Array<string | '
+      - name: 'string | '
+        fullName: 'string | '
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: ' | Array<string | '
+        fullName: ' | Array<string | '
       - name: Layer
         fullName: Layer
         uid: azure-maps-control.atlas.layer.Layer
@@ -1950,23 +2553,6 @@ references:
         uid: azure-maps-control.atlas.data.Geometry
       - name: ', any>>'
         fullName: ', any>>'
-  - uid: >-
-      string | azure-maps-control.atlas.layer.Layer | Array<string |
-      azure-maps-control.atlas.layer.Layer>
-    name: Layer>
-    spec.typeScript:
-      - name: 'string | '
-        fullName: 'string | '
-      - name: Layer
-        fullName: Layer
-        uid: azure-maps-control.atlas.layer.Layer
-      - name: ' | Array<string | '
-        fullName: ' | Array<string | '
-      - name: Layer
-        fullName: Layer
-        uid: azure-maps-control.atlas.layer.Layer
-      - name: '>'
-        fullName: '>'
   - uid: azure-maps-control.atlas.MapMouseWheelEvent
     name: MapMouseWheelEvent
     spec.typeScript:
@@ -2001,21 +2587,6 @@ references:
       - name: AuthenticationOptions
         fullName: AuthenticationOptions
         uid: azure-maps-control.atlas.AuthenticationOptions
-  - uid: >-
-      azure-maps-control.atlas.source.Source |
-      azure-maps-control.atlas.source.Source[]
-    name: 'Source[]'
-    spec.typeScript:
-      - name: Source
-        fullName: Source
-        uid: azure-maps-control.atlas.source.Source
-      - name: ' | '
-        fullName: ' | '
-      - name: Source
-        fullName: Source
-        uid: azure-maps-control.atlas.source.Source
-      - name: '[]'
-        fullName: '[]'
   - uid: >-
       string | azure-maps-control.atlas.source.Source | Array<string |
       azure-maps-control.atlas.source.Source>

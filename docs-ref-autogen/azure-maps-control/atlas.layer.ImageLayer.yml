@@ -2,16 +2,19 @@
 items:
   - uid: azure-maps-control.atlas.layer.ImageLayer
     name: ImageLayer
-    fullName: ImageLayer
+    fullName: ImageLayer<T>
     children:
-      - azure-maps-control.atlas.layer.ImageLayer.getCoordinatesFromEdges
       - azure-maps-control.atlas.layer.ImageLayer.getCoordinatesFromEdges_1
+      - azure-maps-control.atlas.layer.ImageLayer.getCoordinatesFromEdges
       - azure-maps-control.atlas.layer.ImageLayer.getId
+      - azure-maps-control.atlas.layer.ImageLayer.getMap
       - azure-maps-control.atlas.layer.ImageLayer.getOptions
       - azure-maps-control.atlas.layer.ImageLayer.getPixels
       - azure-maps-control.atlas.layer.ImageLayer.getPositions
       - azure-maps-control.atlas.layer.ImageLayer.constructor
       - azure-maps-control.atlas.layer.ImageLayer.metadata
+      - azure-maps-control.atlas.layer.ImageLayer.onAdd
+      - azure-maps-control.atlas.layer.ImageLayer.onRemove
       - azure-maps-control.atlas.layer.ImageLayer.setOptions
     langs:
       - typeScript
@@ -21,6 +24,50 @@ items:
       the map. Also known as a ground or image overlay.
     extends:
       name: azure-maps-control.atlas.layer.Layer
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.ImageLayer.getCoordinatesFromEdges_1
+    name: 'getCoordinatesFromEdges(number, number, number, number, number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Calculates coordinates for a rotated image layer when provided with the
+      bounding box edges and rotation value.
+
+      Note: If your rotation value is from a KML Ground Overlay it will need to
+      be converted to a clockwise rotation using the following formula:
+      `rotation = 360 – KmlRotation`
+    syntax:
+      content: >-
+        static function getCoordinatesFromEdges(north: number, south: number,
+        east: number, west: number, rotation?: number)
+      parameters:
+        - id: north
+          type:
+            - number
+          description: The north edge of the bounding box.
+        - id: south
+          type:
+            - number
+          description: The south edge of the bounding box.
+        - id: east
+          type:
+            - number
+          description: The east edge of the bounding box.
+        - id: west
+          type:
+            - number
+          description: The west edge of the bounding box.
+        - id: rotation
+          type:
+            - number
+          description: |
+            Clockwise rotation in degrees
+          optional: true
+      return:
+        type:
+          - 'azure-maps-control.atlas.data.Position[]'
     package: azure-maps-control
   - uid: azure-maps-control.atlas.layer.ImageLayer.getCoordinatesFromEdges
     name: 'getCoordinatesFromEdges(number, number, number, number, number)'
@@ -66,50 +113,6 @@ items:
         type:
           - 'azure-maps-control.atlas.data.Position[]'
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.getCoordinatesFromEdges_1
-    name: 'getCoordinatesFromEdges(number, number, number, number, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Calculates coordinates for a rotated image layer when provided with the
-      bounding box edges and rotation value.
-
-      Note: If your rotation value is from a KML Ground Overlay it will need to
-      be converted to a clockwise rotation using the following formula:
-      `rotation = 360 – KmlRotation`
-    syntax:
-      content: >-
-        static function getCoordinatesFromEdges(north: number, south: number,
-        east: number, west: number, rotation?: number)
-      parameters:
-        - id: north
-          type:
-            - number
-          description: The north edge of the bounding box.
-        - id: south
-          type:
-            - number
-          description: The south edge of the bounding box.
-        - id: east
-          type:
-            - number
-          description: The east edge of the bounding box.
-        - id: west
-          type:
-            - number
-          description: The west edge of the bounding box.
-        - id: rotation
-          type:
-            - number
-          description: |
-            Clockwise rotation in degrees
-          optional: true
-      return:
-        type:
-          - 'Position[]'
-    package: azure-maps-control
   - uid: azure-maps-control.atlas.layer.ImageLayer.getId
     name: getId()
     children: []
@@ -123,6 +126,20 @@ items:
       return:
         type:
           - string
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.ImageLayer.getMap
+    name: getMap()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Gets the map that the layer is currently added to, or null.'
+    syntax:
+      content: function getMap()
+      parameters: []
+      return:
+        type:
+          - azure-maps-control.atlas.Map
     package: azure-maps-control
   - uid: azure-maps-control.atlas.layer.ImageLayer.getOptions
     name: getOptions()
@@ -152,7 +169,7 @@ items:
       parameters:
         - id: positions
           type:
-            - 'Position[]'
+            - 'azure-maps-control.atlas.data.Position[]'
           description: >
             the provided positions from the source image used to calculate the
             pixels
@@ -180,7 +197,7 @@ items:
             positions
       return:
         type:
-          - 'Promise<Position[]>'
+          - 'Promise<azure-maps-control.atlas.data.Position[]>'
     package: azure-maps-control
   - uid: azure-maps-control.atlas.layer.ImageLayer.constructor
     name: 'ImageLayer(ImageLayerOptions, string)'
@@ -218,6 +235,35 @@ items:
       return:
         type:
           - any
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.ImageLayer.onAdd
+    name: onAdd(Map)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Initialization method for the layer which is called when added to the map.
+    syntax:
+      content: 'function onAdd(map: Map)'
+      parameters:
+        - id: map
+          type:
+            - azure-maps-control.atlas.Map
+          description: |
+            The map the layer has been added to.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.ImageLayer.onRemove
+    name: onRemove()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Method that is called when the layer is removed from the map.
+      Should perform any necessary cleanup for the layer.
+    syntax:
+      content: function onRemove()
+      parameters: []
     package: azure-maps-control
   - uid: azure-maps-control.atlas.layer.ImageLayer.setOptions
     name: setOptions(ImageLayerOptions)
@@ -466,6 +512,24 @@ references:
         uid: azure-maps-control.atlas.Pixel
       - name: '[]'
         fullName: '[]'
+  - uid: 'Promise<azure-maps-control.atlas.data.Position[]>'
+    name: 'Position[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: azure-maps-control.atlas.internal.EventEmitter<T>
+    name: EventEmitter<T>
+    spec.typeScript:
+      - name: EventEmitter
+        fullName: EventEmitter
+        uid: azure-maps-control.atlas.internal.EventEmitter
+      - name: <T>
+        fullName: <T>
   - uid: azure-maps-control.atlas.LineLayerOptions
     name: LineLayerOptions
     spec.typeScript:
@@ -698,12 +762,20 @@ references:
       - name: TimeUnits
         fullName: TimeUnits
         uid: azure-maps-control.atlas.math.TimeUnits
-  - uid: azure-maps-control.atlas.source.Source
-    name: Source
+  - uid: >-
+      azure-maps-control.atlas.source.Source<azure-maps-control.atlas.source.DataSourceEvents>
+    name: DataSourceEvents>
     spec.typeScript:
       - name: Source
         fullName: Source
         uid: azure-maps-control.atlas.source.Source
+      - name: <
+        fullName: <
+      - name: DataSourceEvents
+        fullName: DataSourceEvents
+        uid: azure-maps-control.atlas.source.DataSourceEvents
+      - name: '>'
+        fullName: '>'
   - uid: azure-maps-control.atlas.DataSourceOptions
     name: DataSourceOptions
     spec.typeScript:
@@ -896,6 +968,12 @@ references:
       - name: FeatureCollection
         fullName: FeatureCollection
         uid: azure-maps-control.atlas.data.FeatureCollection
+  - uid: azure-maps-control.atlas.source.Source
+    name: Source
+    spec.typeScript:
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
   - uid: azure-maps-control.atlas.VectorTileSourceOptions
     name: VectorTileSourceOptions
     spec.typeScript:
@@ -908,6 +986,130 @@ references:
       - name: Expression
         fullName: Expression
         uid: azure-maps-control.atlas.Expression
+  - uid: azure-maps-control.atlas.source.SourceEvents
+    name: SourceEvents
+    spec.typeScript:
+      - name: SourceEvents
+        fullName: SourceEvents
+        uid: azure-maps-control.atlas.source.SourceEvents
+  - uid: azure-maps-control.atlas.source.DataSource
+    name: DataSource
+    spec.typeScript:
+      - name: DataSource
+        fullName: DataSource
+        uid: azure-maps-control.atlas.source.DataSource
+  - uid: >-
+      azure-maps-control.atlas.source.DataSource |
+      azure-maps-control.atlas.source.DataSource[]
+    name: 'DataSource[]'
+    spec.typeScript:
+      - name: DataSource
+        fullName: DataSource
+        uid: azure-maps-control.atlas.source.DataSource
+      - name: ' | '
+        fullName: ' | '
+      - name: DataSource
+        fullName: DataSource
+        uid: azure-maps-control.atlas.source.DataSource
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      azure-maps-control.atlas.HtmlMarker |
+      azure-maps-control.atlas.HtmlMarker[]
+    name: 'HtmlMarker[]'
+    spec.typeScript:
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+      - name: ' | '
+        fullName: ' | '
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      azure-maps-control.atlas.layer.Layer |
+      azure-maps-control.atlas.layer.Layer[]
+    name: 'Layer[]'
+    spec.typeScript:
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: ' | '
+        fullName: ' | '
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-control.atlas.Popup | azure-maps-control.atlas.Popup[]'
+    name: 'Popup[]'
+    spec.typeScript:
+      - name: Popup
+        fullName: Popup
+        uid: azure-maps-control.atlas.Popup
+      - name: ' | '
+        fullName: ' | '
+      - name: Popup
+        fullName: Popup
+        uid: azure-maps-control.atlas.Popup
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-control.atlas.Shape | azure-maps-control.atlas.Shape[]'
+    name: 'Shape[]'
+    spec.typeScript:
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: ' | '
+        fullName: ' | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      azure-maps-control.atlas.source.Source |
+      azure-maps-control.atlas.source.Source[]
+    name: 'Source[]'
+    spec.typeScript:
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+      - name: ' | '
+        fullName: ' | '
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-control.atlas.HtmlMarker
+    name: HtmlMarker
+    spec.typeScript:
+      - name: HtmlMarker
+        fullName: HtmlMarker
+        uid: azure-maps-control.atlas.HtmlMarker
+  - uid: azure-maps-control.atlas.Popup
+    name: Popup
+    spec.typeScript:
+      - name: Popup
+        fullName: Popup
+        uid: azure-maps-control.atlas.Popup
+  - uid: >-
+      azure-maps-control.atlas.internal.EventEmitter<azure-maps-control.atlas.HtmlMarkerEvents>
+    name: HtmlMarkerEvents>
+    spec.typeScript:
+      - name: EventEmitter
+        fullName: EventEmitter
+        uid: azure-maps-control.atlas.internal.EventEmitter
+      - name: <
+        fullName: <
+      - name: HtmlMarkerEvents
+        fullName: HtmlMarkerEvents
+        uid: azure-maps-control.atlas.HtmlMarkerEvents
+      - name: '>'
+        fullName: '>'
   - uid: azure-maps-control.atlas.HtmlMarkerOptions
     name: HtmlMarkerOptions
     spec.typeScript:
@@ -1049,12 +1251,40 @@ references:
       - name: Pixel
         fullName: Pixel
         uid: azure-maps-control.atlas.Pixel
+  - uid: >-
+      azure-maps-control.atlas.internal.EventEmitter<azure-maps-control.atlas.PopupEvents>
+    name: PopupEvents>
+    spec.typeScript:
+      - name: EventEmitter
+        fullName: EventEmitter
+        uid: azure-maps-control.atlas.internal.EventEmitter
+      - name: <
+        fullName: <
+      - name: PopupEvents
+        fullName: PopupEvents
+        uid: azure-maps-control.atlas.PopupEvents
+      - name: '>'
+        fullName: '>'
   - uid: azure-maps-control.atlas.PopupOptions
     name: PopupOptions
     spec.typeScript:
       - name: PopupOptions
         fullName: PopupOptions
         uid: azure-maps-control.atlas.PopupOptions
+  - uid: >-
+      azure-maps-control.atlas.internal.EventEmitter<azure-maps-control.atlas.ShapeEvents>
+    name: ShapeEvents>
+    spec.typeScript:
+      - name: EventEmitter
+        fullName: EventEmitter
+        uid: azure-maps-control.atlas.internal.EventEmitter
+      - name: <
+        fullName: <
+      - name: ShapeEvents
+        fullName: ShapeEvents
+        uid: azure-maps-control.atlas.ShapeEvents
+      - name: '>'
+        fullName: '>'
   - uid: >-
       azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
       any>
@@ -1176,6 +1406,14 @@ references:
         uid: azure-maps-control.atlas.Control
       - name: '[]'
         fullName: '[]'
+  - uid: 'azure-maps-control.atlas.Control[]'
+    name: 'Control[]'
+    spec.typeScript:
+      - name: Control
+        fullName: Control
+        uid: azure-maps-control.atlas.Control
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-control.atlas.ControlPosition
     name: ControlPosition
     spec.typeScript:
@@ -1183,66 +1421,32 @@ references:
         fullName: ControlPosition
         uid: azure-maps-control.atlas.ControlPosition
   - uid: >-
-      azure-maps-control.atlas.layer.Layer |
-      azure-maps-control.atlas.layer.Layer[]
-    name: 'Layer[]'
+      azure-maps-control.Dictionary<string,
+      azure-maps-control.atlas.AggregateExpression>
+    name: AggregateExpression>
     spec.typeScript:
-      - name: Layer
-        fullName: Layer
-        uid: azure-maps-control.atlas.layer.Layer
-      - name: ' | '
-        fullName: ' | '
-      - name: Layer
-        fullName: Layer
-        uid: azure-maps-control.atlas.layer.Layer
-      - name: '[]'
-        fullName: '[]'
-  - uid: >-
-      azure-maps-control.atlas.HtmlMarker |
-      azure-maps-control.atlas.HtmlMarker[]
-    name: 'HtmlMarker[]'
-    spec.typeScript:
-      - name: HtmlMarker
-        fullName: HtmlMarker
-        uid: azure-maps-control.atlas.HtmlMarker
-      - name: ' | '
-        fullName: ' | '
-      - name: HtmlMarker
-        fullName: HtmlMarker
-        uid: azure-maps-control.atlas.HtmlMarker
-      - name: '[]'
-        fullName: '[]'
-  - uid: 'azure-maps-control.atlas.Popup | azure-maps-control.atlas.Popup[]'
-    name: 'Popup[]'
-    spec.typeScript:
-      - name: Popup
-        fullName: Popup
-        uid: azure-maps-control.atlas.Popup
-      - name: ' | '
-        fullName: ' | '
-      - name: Popup
-        fullName: Popup
-        uid: azure-maps-control.atlas.Popup
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-maps-control.atlas.HtmlMarker
-    name: HtmlMarker
-    spec.typeScript:
-      - name: HtmlMarker
-        fullName: HtmlMarker
-        uid: azure-maps-control.atlas.HtmlMarker
-  - uid: azure-maps-control.atlas.Popup
-    name: Popup
-    spec.typeScript:
-      - name: Popup
-        fullName: Popup
-        uid: azure-maps-control.atlas.Popup
+      - name: Dictionary
+        fullName: Dictionary
+        uid: azure-maps-control.Dictionary
+      - name: '<string, '
+        fullName: '<string, '
+      - name: AggregateExpression
+        fullName: AggregateExpression
+        uid: azure-maps-control.atlas.AggregateExpression
+      - name: '>'
+        fullName: '>'
   - uid: azure-maps-control.atlas.MapEvent
     name: MapEvent
     spec.typeScript:
       - name: MapEvent
         fullName: MapEvent
         uid: azure-maps-control.atlas.MapEvent
+  - uid: azure-maps-control.atlas.TargetedEvent
+    name: TargetedEvent
+    spec.typeScript:
+      - name: TargetedEvent
+        fullName: TargetedEvent
+        uid: azure-maps-control.atlas.TargetedEvent
   - uid: 'azure-maps-control.atlas.HtmlMarker[]'
     name: 'HtmlMarker[]'
     spec.typeScript:
@@ -1320,11 +1524,18 @@ references:
       - name: BoundingBox
         fullName: BoundingBox
         uid: azure-maps-control.atlas.data.BoundingBox
-  - uid: Array<string | azure-maps-control.atlas.layer.Layer>
+  - uid: >-
+      string | azure-maps-control.atlas.layer.Layer | Array<string |
+      azure-maps-control.atlas.layer.Layer>
     name: Layer>
     spec.typeScript:
-      - name: 'Array<string | '
-        fullName: 'Array<string | '
+      - name: 'string | '
+        fullName: 'string | '
+      - name: Layer
+        fullName: Layer
+        uid: azure-maps-control.atlas.layer.Layer
+      - name: ' | Array<string | '
+        fullName: ' | Array<string | '
       - name: Layer
         fullName: Layer
         uid: azure-maps-control.atlas.layer.Layer
@@ -1353,23 +1564,6 @@ references:
         uid: azure-maps-control.atlas.data.Geometry
       - name: ', any>>'
         fullName: ', any>>'
-  - uid: >-
-      string | azure-maps-control.atlas.layer.Layer | Array<string |
-      azure-maps-control.atlas.layer.Layer>
-    name: Layer>
-    spec.typeScript:
-      - name: 'string | '
-        fullName: 'string | '
-      - name: Layer
-        fullName: Layer
-        uid: azure-maps-control.atlas.layer.Layer
-      - name: ' | Array<string | '
-        fullName: ' | Array<string | '
-      - name: Layer
-        fullName: Layer
-        uid: azure-maps-control.atlas.layer.Layer
-      - name: '>'
-        fullName: '>'
   - uid: azure-maps-control.atlas.MapMouseWheelEvent
     name: MapMouseWheelEvent
     spec.typeScript:
@@ -1404,21 +1598,6 @@ references:
       - name: AuthenticationOptions
         fullName: AuthenticationOptions
         uid: azure-maps-control.atlas.AuthenticationOptions
-  - uid: >-
-      azure-maps-control.atlas.source.Source |
-      azure-maps-control.atlas.source.Source[]
-    name: 'Source[]'
-    spec.typeScript:
-      - name: Source
-        fullName: Source
-        uid: azure-maps-control.atlas.source.Source
-      - name: ' | '
-        fullName: ' | '
-      - name: Source
-        fullName: Source
-        uid: azure-maps-control.atlas.source.Source
-      - name: '[]'
-        fullName: '[]'
   - uid: >-
       string | azure-maps-control.atlas.source.Source | Array<string |
       azure-maps-control.atlas.source.Source>

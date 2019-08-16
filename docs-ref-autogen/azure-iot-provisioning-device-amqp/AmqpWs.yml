@@ -1,0 +1,355 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-device-amqp.AmqpWs
+    name: AmqpWs
+    fullName: AmqpWs
+    children:
+      - azure-iot-provisioning-device-amqp.AmqpWs.defaultMaxListeners
+      - azure-iot-provisioning-device-amqp.AmqpWs.addListener
+      - azure-iot-provisioning-device-amqp.AmqpWs.emit
+      - azure-iot-provisioning-device-amqp.AmqpWs.eventNames
+      - azure-iot-provisioning-device-amqp.AmqpWs.getMaxListeners
+      - azure-iot-provisioning-device-amqp.AmqpWs.listenerCount
+      - azure-iot-provisioning-device-amqp.AmqpWs.listeners
+      - azure-iot-provisioning-device-amqp.AmqpWs.on
+      - azure-iot-provisioning-device-amqp.AmqpWs.once
+      - azure-iot-provisioning-device-amqp.AmqpWs.prependListener
+      - azure-iot-provisioning-device-amqp.AmqpWs.prependOnceListener
+      - azure-iot-provisioning-device-amqp.AmqpWs.rawListeners
+      - azure-iot-provisioning-device-amqp.AmqpWs.removeAllListeners
+      - azure-iot-provisioning-device-amqp.AmqpWs.removeListener
+      - azure-iot-provisioning-device-amqp.AmqpWs.setMaxListeners
+      - azure-iot-provisioning-device-amqp.AmqpWs.listenerCount
+    langs:
+      - typeScript
+    type: class
+    summary: Transport used to provision a device over AMQP over Websockets.
+    extends:
+      name: azure-iot-provisioning-device-amqp.Amqp
+    package: azure-iot-provisioning-device-amqp
+  - uid: azure-iot-provisioning-device-amqp.AmqpWs.defaultMaxListeners
+    name: defaultMaxListeners
+    fullName: defaultMaxListeners
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'static defaultMaxListeners: number'
+      return:
+        type:
+          - number
+    package: azure-iot-provisioning-device-amqp
+  - uid: azure-iot-provisioning-device-amqp.AmqpWs.addListener
+    name: 'addListener(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function addListener(event: string | symbol, listener: (args: any[]) =>
+        void)
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
+    package: azure-iot-provisioning-device-amqp
+  - uid: azure-iot-provisioning-device-amqp.AmqpWs.emit
+    name: 'emit(string | symbol, any[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function emit(event: string | symbol, args: any[])'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: args
+          type:
+            - 'any[]'
+          description: ''
+      return:
+        type:
+          - boolean
+    package: azure-iot-provisioning-device-amqp
+  - uid: azure-iot-provisioning-device-amqp.AmqpWs.eventNames
+    name: eventNames()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function eventNames()
+      parameters: []
+      return:
+        type:
+          - Array<string | symbol>
+    package: azure-iot-provisioning-device-amqp
+  - uid: azure-iot-provisioning-device-amqp.AmqpWs.getMaxListeners
+    name: getMaxListeners()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function getMaxListeners()
+      parameters: []
+      return:
+        type:
+          - number
+    package: azure-iot-provisioning-device-amqp
+  - uid: azure-iot-provisioning-device-amqp.AmqpWs.listenerCount
+    name: listenerCount(string | symbol)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listenerCount(type: string | symbol)'
+      parameters:
+        - id: type
+          type:
+            - string | symbol
+          description: ''
+      return:
+        type:
+          - number
+    package: azure-iot-provisioning-device-amqp
+  - uid: azure-iot-provisioning-device-amqp.AmqpWs.listeners
+    name: listeners(string | symbol)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listeners(event: string | symbol)'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+      return:
+        type:
+          - 'Function[]'
+    package: azure-iot-provisioning-device-amqp
+  - uid: azure-iot-provisioning-device-amqp.AmqpWs.on
+    name: 'on(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function on(event: string | symbol, listener: (args: any[]) => void)'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
+    package: azure-iot-provisioning-device-amqp
+  - uid: azure-iot-provisioning-device-amqp.AmqpWs.once
+    name: 'once(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function once(event: string | symbol, listener: (args: any[]) => void)'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
+    package: azure-iot-provisioning-device-amqp
+  - uid: azure-iot-provisioning-device-amqp.AmqpWs.prependListener
+    name: 'prependListener(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function prependListener(event: string | symbol, listener: (args: any[])
+        => void)
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
+    package: azure-iot-provisioning-device-amqp
+  - uid: azure-iot-provisioning-device-amqp.AmqpWs.prependOnceListener
+    name: 'prependOnceListener(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function prependOnceListener(event: string | symbol, listener: (args:
+        any[]) => void)
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
+    package: azure-iot-provisioning-device-amqp
+  - uid: azure-iot-provisioning-device-amqp.AmqpWs.rawListeners
+    name: rawListeners(string | symbol)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function rawListeners(event: string | symbol)'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+      return:
+        type:
+          - 'Function[]'
+    package: azure-iot-provisioning-device-amqp
+  - uid: azure-iot-provisioning-device-amqp.AmqpWs.removeAllListeners
+    name: removeAllListeners(string | symbol)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function removeAllListeners(event?: string | symbol)'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+          optional: true
+      return:
+        type:
+          - this
+    package: azure-iot-provisioning-device-amqp
+  - uid: azure-iot-provisioning-device-amqp.AmqpWs.removeListener
+    name: 'removeListener(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function removeListener(event: string | symbol, listener: (args: any[])
+        => void)
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
+    package: azure-iot-provisioning-device-amqp
+  - uid: azure-iot-provisioning-device-amqp.AmqpWs.setMaxListeners
+    name: setMaxListeners(number)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setMaxListeners(n: number)'
+      parameters:
+        - id: 'n'
+          type:
+            - number
+          description: ''
+      return:
+        type:
+          - this
+    package: azure-iot-provisioning-device-amqp
+  - uid: azure-iot-provisioning-device-amqp.AmqpWs.listenerCount
+    name: 'listenerCount(EventEmitter, string | symbol)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        static function listenerCount(emitter: EventEmitter, event: string |
+        symbol)
+      parameters:
+        - id: emitter
+          type:
+            - EventEmitter
+          description: ''
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+      return:
+        type:
+          - number
+    package: azure-iot-provisioning-device-amqp
+references:
+  - uid: azure-iot-provisioning-device-amqp.Amqp
+    name: Amqp
+    spec.typeScript:
+      - name: Amqp
+        fullName: Amqp
+        uid: azure-iot-provisioning-device-amqp.Amqp

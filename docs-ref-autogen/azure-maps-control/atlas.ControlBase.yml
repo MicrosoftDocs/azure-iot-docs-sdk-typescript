@@ -1,284 +1,96 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-control.atlas.layer.ImageLayer
-    name: ImageLayer
-    fullName: ImageLayer<T>
+  - uid: azure-maps-control.atlas.ControlBase
+    name: ControlBase
+    fullName: ControlBase
     children:
-      - azure-maps-control.atlas.layer.ImageLayer.getCoordinatesFromEdges_1
-      - azure-maps-control.atlas.layer.ImageLayer.getCoordinatesFromEdges
-      - azure-maps-control.atlas.layer.ImageLayer.getId
-      - azure-maps-control.atlas.layer.ImageLayer.getMap
-      - azure-maps-control.atlas.layer.ImageLayer.getOptions
-      - azure-maps-control.atlas.layer.ImageLayer.getPixels
-      - azure-maps-control.atlas.layer.ImageLayer.getPositions
-      - azure-maps-control.atlas.layer.ImageLayer.constructor
-      - azure-maps-control.atlas.layer.ImageLayer.metadata
-      - azure-maps-control.atlas.layer.ImageLayer.onAdd
-      - azure-maps-control.atlas.layer.ImageLayer.onRemove
-      - azure-maps-control.atlas.layer.ImageLayer.setOptions
+      - azure-maps-control.atlas.ControlBase.buildContainer
+      - azure-maps-control.atlas.ControlBase.onAdd
+      - azure-maps-control.atlas.ControlBase.onRemove
     langs:
       - typeScript
     type: class
     summary: >-
-      Overlays an image on the map with each corner anchored to a coordinate on
-      the map. Also known as a ground or image overlay.
-    extends:
-      name: azure-maps-control.atlas.layer.Layer
+      For internal use only.
+
+      Implements control interface and provides support for automatic styling
+      based on the map style.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.getCoordinatesFromEdges_1
-    name: 'getCoordinatesFromEdges(number, number, number, number, number)'
+  - uid: azure-maps-control.atlas.ControlBase.buildContainer
+    name: 'buildContainer(Map, ControlStyle, string, K)'
     children: []
     type: method
     langs:
       - typeScript
     summary: >-
-      Calculates coordinates for a rotated image layer when provided with the
-      bounding box edges and rotation value.
-
-      Note: If your rotation value is from a KML Ground Overlay it will need to
-      be converted to a clockwise rotation using the following formula:
-      `rotation = 360 – KmlRotation`
+      Build the outermost container for the control, applies styling including
+      any listeners for auto styling.
     syntax:
       content: >-
-        static function getCoordinatesFromEdges(north: number, south: number,
-        east: number, west: number, rotation?: number)
-      parameters:
-        - id: north
-          type:
-            - number
-          description: The north edge of the bounding box.
-        - id: south
-          type:
-            - number
-          description: The south edge of the bounding box.
-        - id: east
-          type:
-            - number
-          description: The east edge of the bounding box.
-        - id: west
-          type:
-            - number
-          description: The west edge of the bounding box.
-        - id: rotation
-          type:
-            - number
-          description: |
-            Clockwise rotation in degrees
-          optional: true
-      return:
-        type:
-          - 'azure-maps-control.atlas.data.Position[]'
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.getCoordinatesFromEdges
-    name: 'getCoordinatesFromEdges(number, number, number, number, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Calculates coordinates for a rotated image layer when provided with the
-      bounding box edges and rotation value.
-
-      Note: If your rotation value is from a KML Ground Overlay it will need to
-      be converted to a clockwise rotation using the following formula:
-      `rotation = 360 – KmlRotation`
-    syntax:
-      content: >-
-        static function getCoordinatesFromEdges(north: number, south: number,
-        east: number, west: number, rotation?: number)
-      parameters:
-        - id: north
-          type:
-            - number
-          description: The north edge of the bounding box.
-        - id: south
-          type:
-            - number
-          description: The south edge of the bounding box.
-        - id: east
-          type:
-            - number
-          description: The east edge of the bounding box.
-        - id: west
-          type:
-            - number
-          description: The west edge of the bounding box.
-        - id: rotation
-          type:
-            - number
-          description: |
-            Clockwise rotation in degrees
-          optional: true
-      return:
-        type:
-          - 'azure-maps-control.atlas.data.Position[]'
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.getId
-    name: getId()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Gets the id of the layer
-    syntax:
-      content: function getId()
-      parameters: []
-      return:
-        type:
-          - string
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.getMap
-    name: getMap()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: 'Gets the map that the layer is currently added to, or null.'
-    syntax:
-      content: function getMap()
-      parameters: []
-      return:
-        type:
-          - azure-maps-control.atlas.Map
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.getOptions
-    name: getOptions()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Gets the options of the tile layer.
-    syntax:
-      content: function getOptions()
-      parameters: []
-      return:
-        type:
-          - azure-maps-control.atlas.ImageLayerOptions
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.getPixels
-    name: 'getPixels(Position[])'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Calculates the approximate pixels on the source image that align with the
-      provided positions.
-    syntax:
-      content: 'function getPixels(positions: Position[])'
-      parameters:
-        - id: positions
-          type:
-            - 'azure-maps-control.atlas.data.Position[]'
-          description: >
-            the provided positions from the source image used to calculate the
-            pixels
-      return:
-        type:
-          - 'Promise<azure-maps-control.atlas.Pixel[]>'
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.getPositions
-    name: 'getPositions(Pixel[])'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Calculates the approximate positions that align with the provided pixels
-      from the source image.
-    syntax:
-      content: 'function getPositions(pixels: Pixel[])'
-      parameters:
-        - id: pixels
-          type:
-            - 'azure-maps-control.atlas.Pixel[]'
-          description: >
-            the provided pixels from the source image used to calculate the
-            positions
-      return:
-        type:
-          - 'Promise<azure-maps-control.atlas.data.Position[]>'
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.constructor
-    name: 'ImageLayer(ImageLayerOptions, string)'
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: Constructs a new ImageLayer.
-    syntax:
-      content: 'new ImageLayer(options: ImageLayerOptions, id?: string)'
-      parameters:
-        - id: options
-          type:
-            - azure-maps-control.atlas.ImageLayerOptions
-          description: The options for the tile layer.
-        - id: id
-          type:
-            - string
-          description: >
-            The id of the layer. If not specified a random one will be
-            generated.
-          optional: true
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.metadata
-    name: metadata
-    fullName: metadata
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: A property for associating custom data with the layer.
-    optional: true
-    syntax:
-      content: 'metadata?: any'
-      return:
-        type:
-          - any
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.onAdd
-    name: onAdd(Map)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Initialization method for the layer which is called when added to the map.
-    syntax:
-      content: 'function onAdd(map: Map)'
+        function buildContainer<K>(map: Map, style: ControlStyle, ariaLabel?:
+        string, tagName?: K)
       parameters:
         - id: map
           type:
             - azure-maps-control.atlas.Map
-          description: |
-            The map the layer has been added to.
+          description: ''
+        - id: style
+          type:
+            - azure-maps-control.atlas.ControlStyle
+          description: ''
+        - id: ariaLabel
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: tagName
+          type:
+            - K
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'HTMLElementTagNameMap[K]'
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.onRemove
+  - uid: azure-maps-control.atlas.ControlBase.onAdd
+    name: 'onAdd(Map, ControlOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Initialization method for the control which is called when added to the
+      map.
+    syntax:
+      content: 'function onAdd(map: Map, options?: ControlOptions)'
+      parameters:
+        - id: map
+          type:
+            - azure-maps-control.atlas.Map
+          description: The map that the control will be added to.
+        - id: options
+          type:
+            - azure-maps-control.atlas.ControlOptions
+          description: The ControlOptions for this control.
+          optional: true
+      return:
+        type:
+          - HTMLElement
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.ControlBase.onRemove
     name: onRemove()
     children: []
     type: method
     langs:
       - typeScript
-    summary: |-
-      Method that is called when the layer is removed from the map.
-      Should perform any necessary cleanup for the layer.
+    summary: >-
+      Method that is called when the control is removed from the map. Should
+      perform any necessary cleanup for the
+
+      control.
     syntax:
       content: function onRemove()
       parameters: []
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.setOptions
-    name: setOptions(ImageLayerOptions)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Sets the options of the tile layer.
-    syntax:
-      content: 'function setOptions(options: ImageLayerOptions)'
-      parameters:
-        - id: options
-          type:
-            - azure-maps-control.atlas.ImageLayerOptions
-          description: ''
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.ControlBase

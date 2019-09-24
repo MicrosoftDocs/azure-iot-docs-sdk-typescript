@@ -16,6 +16,7 @@ items:
       - azure-maps-control.atlas.ClusteredProperties
       - azure-maps-control.atlas.CompassControlOptions
       - azure-maps-control.atlas.Control
+      - azure-maps-control.atlas.ControlBase
       - azure-maps-control.atlas.ControlManager
       - azure-maps-control.atlas.ControlOptions
       - azure-maps-control.atlas.ControlPosition
@@ -23,8 +24,7 @@ items:
       - azure-maps-control.atlas.DataSourceOptions
       - azure-maps-control.atlas.EventManager
       - azure-maps-control.atlas.Expression
-      - azure-maps-control.atlas.FloorChangeEvent
-      - azure-maps-control.atlas.FloorPickerControlOptions
+      - azure-maps-control.atlas.ExpressionName
       - azure-maps-control.atlas.getAllImageTemplateNames
       - azure-maps-control.atlas.getAuthenticationOptions
       - azure-maps-control.atlas.getAuthTokenCallback
@@ -32,7 +32,6 @@ items:
       - azure-maps-control.atlas.getLanguage
       - azure-maps-control.atlas.getSessionId
       - azure-maps-control.atlas.getSubscriptionKey
-      - azure-maps-control.atlas.getTilesetId
       - azure-maps-control.atlas.getUserRegion
       - azure-maps-control.atlas.getVersion
       - azure-maps-control.atlas.getView
@@ -59,6 +58,7 @@ items:
       - azure-maps-control.atlas.Padding
       - azure-maps-control.atlas.PitchControlOptions
       - azure-maps-control.atlas.Pixel
+      - azure-maps-control.atlas.PolygonExtrusionLayerOptions
       - azure-maps-control.atlas.PolygonLayerOptions
       - azure-maps-control.atlas.Popup
       - azure-maps-control.atlas.PopupEvents
@@ -69,7 +69,6 @@ items:
       - azure-maps-control.atlas.setLanguage
       - azure-maps-control.atlas.setSessionId
       - azure-maps-control.atlas.setSubscriptionKey
-      - azure-maps-control.atlas.setTilesetId
       - azure-maps-control.atlas.setUserRegion
       - azure-maps-control.atlas.setView
       - azure-maps-control.atlas.Shape
@@ -219,20 +218,6 @@ items:
     summary: Gets the default Azure Maps subscription key that was provided.
     syntax:
       content: function getSubscriptionKey()
-      parameters: []
-      return:
-        type:
-          - string
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.getTilesetId
-    name: getTilesetId()
-    children: []
-    type: function
-    langs:
-      - typeScript
-    summary: Gets the default tileset id that was provided.
-    syntax:
-      content: function getTilesetId()
       parameters: []
       return:
         type:
@@ -410,30 +395,6 @@ items:
           description: |
             The new default subscription key.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.setTilesetId
-    name: setTilesetId(string)
-    children: []
-    type: function
-    langs:
-      - typeScript
-    summary: >-
-      Sets the default tileset id used by the map and service modules unless the
-
-      tileset id is explicitly specified when using those parts of the API.
-
-      If a Map is initialized with the tileset ID explicitly defined and
-
-      setTilesetId hasn't previously been called it will automatically be called
-      by the Map constructor.
-    syntax:
-      content: 'function setTilesetId(id: string)'
-      parameters:
-        - id: id
-          type:
-            - string
-          description: |
-            The new default tileset id.
-    package: azure-maps-control
   - uid: azure-maps-control.atlas.setUserRegion
     name: setUserRegion(string)
     children: []
@@ -483,6 +444,12 @@ items:
             The new default view
     package: azure-maps-control
 references:
+  - uid: azure-maps-control.atlas.ControlBase
+    name: ControlBase
+    spec.typeScript:
+      - name: ControlBase
+        fullName: ControlBase
+        uid: azure-maps-control.atlas.ControlBase
   - uid: azure-maps-control.atlas.CompassControlOptions
     name: CompassControlOptions
     spec.typeScript:
@@ -495,18 +462,18 @@ references:
       - name: Map
         fullName: Map
         uid: azure-maps-control.atlas.Map
+  - uid: azure-maps-control.atlas.ControlStyle
+    name: ControlStyle
+    spec.typeScript:
+      - name: ControlStyle
+        fullName: ControlStyle
+        uid: azure-maps-control.atlas.ControlStyle
   - uid: azure-maps-control.atlas.ControlOptions
     name: ControlOptions
     spec.typeScript:
       - name: ControlOptions
         fullName: ControlOptions
         uid: azure-maps-control.atlas.ControlOptions
-  - uid: azure-maps-control.atlas.FloorPickerControlOptions
-    name: FloorPickerControlOptions
-    spec.typeScript:
-      - name: FloorPickerControlOptions
-        fullName: FloorPickerControlOptions
-        uid: azure-maps-control.atlas.FloorPickerControlOptions
   - uid: azure-maps-control.atlas.PitchControlOptions
     name: PitchControlOptions
     spec.typeScript:
@@ -738,6 +705,12 @@ references:
       - name: LineLayerOptions
         fullName: LineLayerOptions
         uid: azure-maps-control.atlas.LineLayerOptions
+  - uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions
+    name: PolygonExtrusionLayerOptions
+    spec.typeScript:
+      - name: PolygonExtrusionLayerOptions
+        fullName: PolygonExtrusionLayerOptions
+        uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions
   - uid: azure-maps-control.atlas.PolygonLayerOptions
     name: PolygonLayerOptions
     spec.typeScript:
@@ -958,6 +931,100 @@ references:
         uid: azure-maps-control.atlas.data.Point
       - name: ', Object>>'
         fullName: ', Object>>'
+  - uid: >-
+      azure-maps-control.atlas.data.Position |
+      azure-maps-control.atlas.data.Point |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+      any> | azure-maps-control.atlas.Shape
+    name: Shape
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: ' | '
+        fullName: ' | '
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+  - uid: >-
+      azure-maps-control.atlas.data.Position[] |
+      azure-maps-control.atlas.data.Geometry |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.data.FeatureCollection |
+      azure-maps-control.atlas.data.GeometryCollection |
+      azure-maps-control.atlas.data.Geometry[] |
+      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any> | azure-maps-control.atlas.Shape> | azure-maps-control.atlas.Shape
+    name: Shape
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[] | '
+        fullName: '[] | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: FeatureCollection
+        fullName: FeatureCollection
+        uid: azure-maps-control.atlas.data.FeatureCollection
+      - name: ' | '
+        fullName: ' | '
+      - name: GeometryCollection
+        fullName: GeometryCollection
+        uid: azure-maps-control.atlas.data.GeometryCollection
+      - name: ' | '
+        fullName: ' | '
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: '[] | Array<'
+        fullName: '[] | Array<'
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any> | '
+        fullName: ', any> | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: '> | '
+        fullName: '> | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
   - uid: azure-maps-control.atlas.math.TimeUnits
     name: TimeUnits
     spec.typeScript:
@@ -1589,12 +1656,6 @@ references:
         uid: azure-maps-control.atlas.Padding
       - name: ' | number'
         fullName: ' | number'
-  - uid: azure-maps-control.atlas.ControlStyle
-    name: ControlStyle
-    spec.typeScript:
-      - name: ControlStyle
-        fullName: ControlStyle
-        uid: azure-maps-control.atlas.ControlStyle
   - uid: 'azure-maps-control.atlas.Control | azure-maps-control.atlas.Control[]'
     name: 'Control[]'
     spec.typeScript:
@@ -1637,12 +1698,6 @@ references:
         uid: azure-maps-control.atlas.AggregateExpression
       - name: '>'
         fullName: '>'
-  - uid: azure-maps-control.atlas.MapEvent
-    name: MapEvent
-    spec.typeScript:
-      - name: MapEvent
-        fullName: MapEvent
-        uid: azure-maps-control.atlas.MapEvent
   - uid: azure-maps-control.atlas.TargetedEvent
     name: TargetedEvent
     spec.typeScript:
@@ -1674,6 +1729,20 @@ references:
         uid: azure-maps-control.atlas.HtmlMarker
       - name: '>'
         fullName: '>'
+  - uid: >-
+      "center" | "left" | "right" | "top" | "bottom" | "top-left" | "top-right"
+      | "bottom-left" | "bottom-right" | azure-maps-control.atlas.Expression
+    name: Expression
+    spec.typeScript:
+      - name: >-
+          "center" | "left" | "right" | "top" | "bottom" | "top-left" |
+          "top-right" | "bottom-left" | "bottom-right" | 
+        fullName: >-
+          "center" | "left" | "right" | "top" | "bottom" | "top-left" |
+          "top-right" | "bottom-left" | "bottom-right" | 
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.atlas.Expression
   - uid: azure-maps-control.atlas.Pixel | azure-maps-control.atlas.Expression
     name: Expression
     spec.typeScript:
@@ -1766,6 +1835,12 @@ references:
         uid: azure-maps-control.atlas.data.Geometry
       - name: ', any>>'
         fullName: ', any>>'
+  - uid: azure-maps-control.atlas.MapEvent
+    name: MapEvent
+    spec.typeScript:
+      - name: MapEvent
+        fullName: MapEvent
+        uid: azure-maps-control.atlas.MapEvent
   - uid: azure-maps-control.atlas.MapMouseWheelEvent
     name: MapMouseWheelEvent
     spec.typeScript:
@@ -1862,8 +1937,8 @@ references:
     name: ClusteredProperties
   - uid: azure-maps-control.atlas.Control
     name: Control
-  - uid: azure-maps-control.atlas.FloorChangeEvent
-    name: FloorChangeEvent
+  - uid: azure-maps-control.atlas.ExpressionName
+    name: ExpressionName
   - uid: azure-maps-control.atlas.getAllImageTemplateNames
     name: getAllImageTemplateNames
   - uid: azure-maps-control.atlas.getAuthenticationOptions
@@ -1876,8 +1951,6 @@ references:
     name: getSessionId
   - uid: azure-maps-control.atlas.getSubscriptionKey
     name: getSubscriptionKey
-  - uid: azure-maps-control.atlas.getTilesetId
-    name: getTilesetId
   - uid: azure-maps-control.atlas.getUserRegion
     name: getUserRegion
   - uid: azure-maps-control.atlas.getVersion
@@ -1906,8 +1979,6 @@ references:
     name: setSessionId
   - uid: azure-maps-control.atlas.setSubscriptionKey
     name: setSubscriptionKey
-  - uid: azure-maps-control.atlas.setTilesetId
-    name: setTilesetId
   - uid: azure-maps-control.atlas.setUserRegion
     name: setUserRegion
   - uid: azure-maps-control.atlas.setView

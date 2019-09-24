@@ -1,119 +1,26 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-control.atlas.layer.ImageLayer
-    name: ImageLayer
-    fullName: ImageLayer<T>
+  - uid: azure-maps-control.atlas.layer.PolygonExtrusionLayer
+    name: PolygonExtrusionLayer
+    fullName: PolygonExtrusionLayer<T>
     children:
-      - azure-maps-control.atlas.layer.ImageLayer.getCoordinatesFromEdges_1
-      - azure-maps-control.atlas.layer.ImageLayer.getCoordinatesFromEdges
-      - azure-maps-control.atlas.layer.ImageLayer.getId
-      - azure-maps-control.atlas.layer.ImageLayer.getMap
-      - azure-maps-control.atlas.layer.ImageLayer.getOptions
-      - azure-maps-control.atlas.layer.ImageLayer.getPixels
-      - azure-maps-control.atlas.layer.ImageLayer.getPositions
-      - azure-maps-control.atlas.layer.ImageLayer.constructor
-      - azure-maps-control.atlas.layer.ImageLayer.metadata
-      - azure-maps-control.atlas.layer.ImageLayer.onAdd
-      - azure-maps-control.atlas.layer.ImageLayer.onRemove
-      - azure-maps-control.atlas.layer.ImageLayer.setOptions
+      - azure-maps-control.atlas.layer.PolygonExtrusionLayer.getId
+      - azure-maps-control.atlas.layer.PolygonExtrusionLayer.getMap
+      - azure-maps-control.atlas.layer.PolygonExtrusionLayer.getOptions
+      - azure-maps-control.atlas.layer.PolygonExtrusionLayer.getSource
+      - azure-maps-control.atlas.layer.PolygonExtrusionLayer.metadata
+      - azure-maps-control.atlas.layer.PolygonExtrusionLayer.onAdd
+      - azure-maps-control.atlas.layer.PolygonExtrusionLayer.onRemove
+      - azure-maps-control.atlas.layer.PolygonExtrusionLayer.constructor
+      - azure-maps-control.atlas.layer.PolygonExtrusionLayer.setOptions
     langs:
       - typeScript
     type: class
-    summary: >-
-      Overlays an image on the map with each corner anchored to a coordinate on
-      the map. Also known as a ground or image overlay.
+    summary: Renders extruded filled `Polygon` and `MultiPolygon` objects on the map.
     extends:
       name: azure-maps-control.atlas.layer.Layer
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.getCoordinatesFromEdges_1
-    name: 'getCoordinatesFromEdges(number, number, number, number, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Calculates coordinates for a rotated image layer when provided with the
-      bounding box edges and rotation value.
-
-      Note: If your rotation value is from a KML Ground Overlay it will need to
-      be converted to a clockwise rotation using the following formula:
-      `rotation = 360 – KmlRotation`
-    syntax:
-      content: >-
-        static function getCoordinatesFromEdges(north: number, south: number,
-        east: number, west: number, rotation?: number)
-      parameters:
-        - id: north
-          type:
-            - number
-          description: The north edge of the bounding box.
-        - id: south
-          type:
-            - number
-          description: The south edge of the bounding box.
-        - id: east
-          type:
-            - number
-          description: The east edge of the bounding box.
-        - id: west
-          type:
-            - number
-          description: The west edge of the bounding box.
-        - id: rotation
-          type:
-            - number
-          description: |
-            Clockwise rotation in degrees
-          optional: true
-      return:
-        type:
-          - 'azure-maps-control.atlas.data.Position[]'
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.getCoordinatesFromEdges
-    name: 'getCoordinatesFromEdges(number, number, number, number, number)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Calculates coordinates for a rotated image layer when provided with the
-      bounding box edges and rotation value.
-
-      Note: If your rotation value is from a KML Ground Overlay it will need to
-      be converted to a clockwise rotation using the following formula:
-      `rotation = 360 – KmlRotation`
-    syntax:
-      content: >-
-        static function getCoordinatesFromEdges(north: number, south: number,
-        east: number, west: number, rotation?: number)
-      parameters:
-        - id: north
-          type:
-            - number
-          description: The north edge of the bounding box.
-        - id: south
-          type:
-            - number
-          description: The south edge of the bounding box.
-        - id: east
-          type:
-            - number
-          description: The east edge of the bounding box.
-        - id: west
-          type:
-            - number
-          description: The west edge of the bounding box.
-        - id: rotation
-          type:
-            - number
-          description: |
-            Clockwise rotation in degrees
-          optional: true
-      return:
-        type:
-          - 'azure-maps-control.atlas.data.Position[]'
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.getId
+  - uid: azure-maps-control.atlas.layer.PolygonExtrusionLayer.getId
     name: getId()
     children: []
     type: method
@@ -127,7 +34,7 @@ items:
         type:
           - string
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.getMap
+  - uid: azure-maps-control.atlas.layer.PolygonExtrusionLayer.getMap
     name: getMap()
     children: []
     type: method
@@ -141,87 +48,35 @@ items:
         type:
           - azure-maps-control.atlas.Map
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.getOptions
+  - uid: azure-maps-control.atlas.layer.PolygonExtrusionLayer.getOptions
     name: getOptions()
     children: []
     type: method
     langs:
       - typeScript
-    summary: Gets the options of the tile layer.
+    summary: Gets the options of the polygon layer.
     syntax:
       content: function getOptions()
       parameters: []
       return:
         type:
-          - azure-maps-control.atlas.ImageLayerOptions
+          - azure-maps-control.atlas.PolygonExtrusionLayerOptions
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.getPixels
-    name: 'getPixels(Position[])'
+  - uid: azure-maps-control.atlas.layer.PolygonExtrusionLayer.getSource
+    name: getSource()
     children: []
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calculates the approximate pixels on the source image that align with the
-      provided positions.
+    summary: Gets the source provided when creating the layer.
     syntax:
-      content: 'function getPixels(positions: Position[])'
-      parameters:
-        - id: positions
-          type:
-            - 'azure-maps-control.atlas.data.Position[]'
-          description: >
-            the provided positions from the source image used to calculate the
-            pixels
+      content: function getSource()
+      parameters: []
       return:
         type:
-          - 'Promise<azure-maps-control.atlas.Pixel[]>'
+          - string | azure-maps-control.atlas.source.Source
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.getPositions
-    name: 'getPositions(Pixel[])'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: >-
-      Calculates the approximate positions that align with the provided pixels
-      from the source image.
-    syntax:
-      content: 'function getPositions(pixels: Pixel[])'
-      parameters:
-        - id: pixels
-          type:
-            - 'azure-maps-control.atlas.Pixel[]'
-          description: >
-            the provided pixels from the source image used to calculate the
-            positions
-      return:
-        type:
-          - 'Promise<azure-maps-control.atlas.data.Position[]>'
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.constructor
-    name: 'ImageLayer(ImageLayerOptions, string)'
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: Constructs a new ImageLayer.
-    syntax:
-      content: 'new ImageLayer(options: ImageLayerOptions, id?: string)'
-      parameters:
-        - id: options
-          type:
-            - azure-maps-control.atlas.ImageLayerOptions
-          description: The options for the tile layer.
-        - id: id
-          type:
-            - string
-          description: >
-            The id of the layer. If not specified a random one will be
-            generated.
-          optional: true
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.metadata
+  - uid: azure-maps-control.atlas.layer.PolygonExtrusionLayer.metadata
     name: metadata
     fullName: metadata
     children: []
@@ -236,7 +91,7 @@ items:
         type:
           - any
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.onAdd
+  - uid: azure-maps-control.atlas.layer.PolygonExtrusionLayer.onAdd
     name: onAdd(Map)
     children: []
     type: method
@@ -252,7 +107,7 @@ items:
           description: |
             The map the layer has been added to.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.onRemove
+  - uid: azure-maps-control.atlas.layer.PolygonExtrusionLayer.onRemove
     name: onRemove()
     children: []
     type: method
@@ -265,19 +120,51 @@ items:
       content: function onRemove()
       parameters: []
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.layer.ImageLayer.setOptions
-    name: setOptions(ImageLayerOptions)
+  - uid: azure-maps-control.atlas.layer.PolygonExtrusionLayer.constructor
+    name: >-
+      PolygonExtrusionLayer(string | Source, string,
+      PolygonExtrusionLayerOptions)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Constructs a new PolygonExtrusionLayer.
+    syntax:
+      content: >-
+        new PolygonExtrusionLayer(source: string | Source, id?: string,
+        options?: PolygonExtrusionLayerOptions)
+      parameters:
+        - id: source
+          type:
+            - string | azure-maps-control.atlas.source.Source
+          description: The id or instance of a data source which the layer will render.
+        - id: id
+          type:
+            - string
+          description: >-
+            The id of the layer. If not specified a random one will be
+            generated.
+          optional: true
+        - id: options
+          type:
+            - azure-maps-control.atlas.PolygonExtrusionLayerOptions
+          description: |
+            The options of the polygon extrusion layer.
+          optional: true
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.layer.PolygonExtrusionLayer.setOptions
+    name: setOptions(PolygonExtrusionLayerOptions)
     children: []
     type: method
     langs:
       - typeScript
-    summary: Sets the options of the tile layer.
+    summary: Sets the options of the polygon layer.
     syntax:
-      content: 'function setOptions(options: ImageLayerOptions)'
+      content: 'function setOptions(options: PolygonExtrusionLayerOptions)'
       parameters:
         - id: options
           type:
-            - azure-maps-control.atlas.ImageLayerOptions
+            - azure-maps-control.atlas.PolygonExtrusionLayerOptions
           description: ''
     package: azure-maps-control
 references:

@@ -43,9 +43,6 @@
             - uid: azure-maps-control.atlas.control.CompassControl
               name: CompassControl
               items: []
-            - uid: azure-maps-control.atlas.control.FloorPickerControl
-              name: FloorPickerControl
-              items: []
             - uid: azure-maps-control.atlas.control.PitchControl
               name: PitchControl
               items: []
@@ -55,6 +52,9 @@
             - uid: azure-maps-control.atlas.control.ZoomControl
               name: ZoomControl
               items: []
+        - uid: azure-maps-control.atlas.ControlBase
+          name: ControlBase
+          items: []
         - uid: azure-maps-control.atlas.ControlManager
           name: ControlManager
           items: []
@@ -115,11 +115,8 @@
         - uid: azure-maps-control.atlas.Expression
           name: Expression
           items: []
-        - uid: azure-maps-control.atlas.FloorChangeEvent
-          name: FloorChangeEvent
-          items: []
-        - uid: azure-maps-control.atlas.FloorPickerControlOptions
-          name: FloorPickerControlOptions
+        - uid: azure-maps-control.atlas.ExpressionName
+          name: ExpressionName
           items: []
         - uid: azure-maps-control.atlas.getAuthTokenCallback
           name: getAuthTokenCallback
@@ -175,8 +172,17 @@
             - uid: azure-maps-control.atlas.layer.LayerEvents
               name: LayerEvents
               items: []
+            - uid: azure-maps-control.atlas.layer.LayoutTypes
+              name: LayoutTypes
+              items: []
             - uid: azure-maps-control.atlas.layer.LineLayer
               name: LineLayer
+              items: []
+            - uid: azure-maps-control.atlas.layer.PaintTypes
+              name: PaintTypes
+              items: []
+            - uid: azure-maps-control.atlas.layer.PolygonExtrusionLayer
+              name: PolygonExtrusionLayer
               items: []
             - uid: azure-maps-control.atlas.layer.PolygonLayer
               name: PolygonLayer
@@ -186,6 +192,9 @@
               items: []
             - uid: azure-maps-control.atlas.layer.TileLayer
               name: TileLayer
+              items: []
+            - uid: azure-maps-control.atlas.layer.UnionToIntersection
+              name: UnionToIntersection
               items: []
         - uid: azure-maps-control.atlas.LayerManager
           name: LayerManager
@@ -249,6 +258,9 @@
           items: []
         - uid: azure-maps-control.atlas.Pixel
           name: Pixel
+          items: []
+        - uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions
+          name: PolygonExtrusionLayerOptions
           items: []
         - uid: azure-maps-control.atlas.PolygonLayerOptions
           name: PolygonLayerOptions

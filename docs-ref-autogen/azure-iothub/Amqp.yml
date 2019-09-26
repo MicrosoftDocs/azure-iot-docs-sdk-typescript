@@ -11,6 +11,7 @@ items:
       - azure-iothub.Amqp.getMaxListeners
       - azure-iothub.Amqp.listenerCount
       - azure-iothub.Amqp.listeners
+      - azure-iothub.Amqp.off
       - azure-iothub.Amqp.on
       - azure-iothub.Amqp.once
       - azure-iothub.Amqp.prependListener
@@ -158,6 +159,28 @@ items:
       return:
         type:
           - 'Function[]'
+    package: azure-iothub
+  - uid: azure-iothub.Amqp.off
+    name: 'off(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function off(event: string | symbol, listener: (args: any[]) => void)'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
     package: azure-iothub
   - uid: azure-iothub.Amqp.on
     name: 'on(string | symbol, (args: any[]) => void)'
@@ -354,3 +377,5 @@ items:
         type:
           - number
     package: azure-iothub
+    deprecated:
+      content: since v4.0.0

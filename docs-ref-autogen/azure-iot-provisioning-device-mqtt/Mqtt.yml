@@ -11,6 +11,7 @@ items:
       - azure-iot-provisioning-device-mqtt.Mqtt.getMaxListeners
       - azure-iot-provisioning-device-mqtt.Mqtt.listenerCount
       - azure-iot-provisioning-device-mqtt.Mqtt.listeners
+      - azure-iot-provisioning-device-mqtt.Mqtt.off
       - azure-iot-provisioning-device-mqtt.Mqtt.on
       - azure-iot-provisioning-device-mqtt.Mqtt.once
       - azure-iot-provisioning-device-mqtt.Mqtt.prependListener
@@ -150,6 +151,28 @@ items:
       return:
         type:
           - 'Function[]'
+    package: azure-iot-provisioning-device-mqtt
+  - uid: azure-iot-provisioning-device-mqtt.Mqtt.off
+    name: 'off(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function off(event: string | symbol, listener: (args: any[]) => void)'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
     package: azure-iot-provisioning-device-mqtt
   - uid: azure-iot-provisioning-device-mqtt.Mqtt.on
     name: 'on(string | symbol, (args: any[]) => void)'
@@ -346,3 +369,5 @@ items:
         type:
           - number
     package: azure-iot-provisioning-device-mqtt
+    deprecated:
+      content: since v4.0.0

@@ -15,6 +15,7 @@ items:
       - azure-iothub.Client.Transport.getMaxListeners
       - azure-iothub.Client.Transport.listenerCount
       - azure-iothub.Client.Transport.listeners
+      - azure-iothub.Client.Transport.off
       - azure-iothub.Client.Transport.on
       - azure-iothub.Client.Transport.once
       - azure-iothub.Client.Transport.prependListener
@@ -216,6 +217,28 @@ items:
       return:
         type:
           - 'Function[]'
+    package: azure-iothub
+  - uid: azure-iothub.Client.Transport.off
+    name: 'off(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function off(event: string | symbol, listener: (args: any[]) => void)'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
     package: azure-iothub
   - uid: azure-iothub.Client.Transport.on
     name: 'on(string | symbol, (args: any[]) => void)'
@@ -438,6 +461,8 @@ items:
         type:
           - number
     package: azure-iothub
+    deprecated:
+      content: since v4.0.0
 references:
   - uid: Callback<azure-iothub.Client.ServiceReceiver>
     name: ServiceReceiver>

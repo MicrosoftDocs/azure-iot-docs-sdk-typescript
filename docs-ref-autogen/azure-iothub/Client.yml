@@ -25,6 +25,7 @@ items:
       - azure-iothub.Client.invokeDeviceMethod_3
       - azure-iothub.Client.listenerCount
       - azure-iothub.Client.listeners
+      - azure-iothub.Client.off
       - azure-iothub.Client.on
       - azure-iothub.Client.once
       - azure-iothub.Client.open
@@ -401,6 +402,28 @@ items:
         type:
           - 'Function[]'
     package: azure-iothub
+  - uid: azure-iothub.Client.off
+    name: 'off(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function off(event: string | symbol, listener: (args: any[]) => void)'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
+    package: azure-iothub
   - uid: azure-iothub.Client.on
     name: 'on(string | symbol, (args: any[]) => void)'
     children: []
@@ -763,6 +786,8 @@ items:
         type:
           - number
     package: azure-iothub
+    deprecated:
+      content: since v4.0.0
 references:
   - uid: Callback<azure-iothub.Client.ServiceReceiver>
     name: ServiceReceiver>

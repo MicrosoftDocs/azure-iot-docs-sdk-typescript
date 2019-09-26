@@ -11,6 +11,7 @@ items:
       - azure-iot-provisioning-device-amqp.Amqp.getMaxListeners
       - azure-iot-provisioning-device-amqp.Amqp.listenerCount
       - azure-iot-provisioning-device-amqp.Amqp.listeners
+      - azure-iot-provisioning-device-amqp.Amqp.off
       - azure-iot-provisioning-device-amqp.Amqp.on
       - azure-iot-provisioning-device-amqp.Amqp.once
       - azure-iot-provisioning-device-amqp.Amqp.prependListener
@@ -150,6 +151,28 @@ items:
       return:
         type:
           - 'Function[]'
+    package: azure-iot-provisioning-device-amqp
+  - uid: azure-iot-provisioning-device-amqp.Amqp.off
+    name: 'off(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function off(event: string | symbol, listener: (args: any[]) => void)'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
     package: azure-iot-provisioning-device-amqp
   - uid: azure-iot-provisioning-device-amqp.Amqp.on
     name: 'on(string | symbol, (args: any[]) => void)'
@@ -346,3 +369,5 @@ items:
         type:
           - number
     package: azure-iot-provisioning-device-amqp
+    deprecated:
+      content: since v4.0.0

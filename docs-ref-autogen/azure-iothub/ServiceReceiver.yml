@@ -19,6 +19,7 @@ items:
       - azure-iothub.ServiceReceiver.getMaxListeners
       - azure-iothub.ServiceReceiver.listenerCount
       - azure-iothub.ServiceReceiver.listeners
+      - azure-iothub.ServiceReceiver.off
       - azure-iothub.ServiceReceiver.on
       - azure-iothub.ServiceReceiver.once
       - azure-iothub.ServiceReceiver.prependListener
@@ -295,6 +296,28 @@ items:
         type:
           - 'Function[]'
     package: azure-iothub
+  - uid: azure-iothub.ServiceReceiver.off
+    name: 'off(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function off(event: string | symbol, listener: (args: any[]) => void)'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
+    package: azure-iothub
   - uid: azure-iothub.ServiceReceiver.on
     name: 'on(string | symbol, (args: any[]) => void)'
     children: []
@@ -527,3 +550,5 @@ items:
         type:
           - number
     package: azure-iothub
+    deprecated:
+      content: since v4.0.0

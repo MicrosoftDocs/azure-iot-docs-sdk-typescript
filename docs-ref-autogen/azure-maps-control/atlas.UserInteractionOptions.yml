@@ -12,6 +12,7 @@ items:
       - azure-maps-control.atlas.UserInteractionOptions.keyboardInteraction
       - azure-maps-control.atlas.UserInteractionOptions.scrollZoomInteraction
       - azure-maps-control.atlas.UserInteractionOptions.touchInteraction
+      - azure-maps-control.atlas.UserInteractionOptions.wheelZoomRate
     langs:
       - typeScript
     type: interface
@@ -196,6 +197,23 @@ items:
       return:
         type:
           - boolean
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.UserInteractionOptions.wheelZoomRate
+    name: wheelZoomRate
+    fullName: wheelZoomRate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Sets the zoom rate of the mouse wheel
+      default `1/450`
+    optional: true
+    syntax:
+      content: 'wheelZoomRate?: number'
+      return:
+        type:
+          - number
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.ControlBase
@@ -1437,16 +1455,11 @@ references:
       - name: ControlPosition
         fullName: ControlPosition
         uid: azure-maps-control.atlas.ControlPosition
-  - uid: >-
-      azure-maps-control.Dictionary<string,
-      azure-maps-control.atlas.AggregateExpression>
+  - uid: 'Record<string, azure-maps-control.atlas.AggregateExpression>'
     name: AggregateExpression>
     spec.typeScript:
-      - name: Dictionary
-        fullName: Dictionary
-        uid: azure-maps-control.Dictionary
-      - name: '<string, '
-        fullName: '<string, '
+      - name: 'Record<string, '
+        fullName: 'Record<string, '
       - name: AggregateExpression
         fullName: AggregateExpression
         uid: azure-maps-control.atlas.AggregateExpression

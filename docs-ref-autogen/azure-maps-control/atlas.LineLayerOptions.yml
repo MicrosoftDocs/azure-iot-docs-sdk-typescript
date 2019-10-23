@@ -18,6 +18,8 @@ items:
       - azure-maps-control.atlas.LineLayerOptions.strokeGradient
       - azure-maps-control.atlas.LineLayerOptions.strokeOpacity
       - azure-maps-control.atlas.LineLayerOptions.strokeWidth
+      - azure-maps-control.atlas.LineLayerOptions.translate
+      - azure-maps-control.atlas.LineLayerOptions.translateAnchor
       - azure-maps-control.atlas.LineLayerOptions.visible
     langs:
       - typeScript
@@ -324,6 +326,46 @@ items:
       return:
         type:
           - number | azure-maps-control.atlas.Expression
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.LineLayerOptions.translate
+    name: translate
+    fullName: translate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The amount of offset in pixels to render the line relative to where it
+      would render normally.
+
+      Negative values indicate left and up.
+
+      Default: `[0,0]`
+    optional: true
+    syntax:
+      content: 'translate?: Pixel'
+      return:
+        type:
+          - azure-maps-control.atlas.Pixel
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.LineLayerOptions.translateAnchor
+    name: translateAnchor
+    fullName: translateAnchor
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Specifies the frame of reference for `translate`.
+      <p>`"map"`: Lines are translated relative to the map.</p>
+      <p>`"viewport"`: Lines are translated relative to the viewport</p>
+      Default: `"map"`
+    optional: true
+    syntax:
+      content: 'translateAnchor?: "map" | "viewport"'
+      return:
+        type:
+          - '"map" | "viewport"'
     package: azure-maps-control
   - uid: azure-maps-control.atlas.LineLayerOptions.visible
     name: visible
@@ -1582,16 +1624,11 @@ references:
       - name: ControlPosition
         fullName: ControlPosition
         uid: azure-maps-control.atlas.ControlPosition
-  - uid: >-
-      azure-maps-control.Dictionary<string,
-      azure-maps-control.atlas.AggregateExpression>
+  - uid: 'Record<string, azure-maps-control.atlas.AggregateExpression>'
     name: AggregateExpression>
     spec.typeScript:
-      - name: Dictionary
-        fullName: Dictionary
-        uid: azure-maps-control.Dictionary
-      - name: '<string, '
-        fullName: '<string, '
+      - name: 'Record<string, '
+        fullName: 'Record<string, '
       - name: AggregateExpression
         fullName: AggregateExpression
         uid: azure-maps-control.atlas.AggregateExpression

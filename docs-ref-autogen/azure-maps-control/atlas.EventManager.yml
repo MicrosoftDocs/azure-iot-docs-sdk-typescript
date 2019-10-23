@@ -93,9 +93,9 @@ items:
   - uid: azure-maps-control.atlas.EventManager.add_9
     name: >-
       add("click" | "contextmenu" | "dblclick" | "drag" | "dragstart" |
-      "dragend" | "keydown" | "keypress" | "keyup" | "mousedown" | "mousemove" |
-      "mouseout" | "mouseover" | "mouseup", HtmlMarker | HtmlMarker[], (e:
-      TargetedEvent) => void)
+      "dragend" | "keydown" | "keypress" | "keyup" | "mousedown" | "mouseenter"
+      | "mouseleave" | "mousemove" | "mouseout" | "mouseover" | "mouseup",
+      HtmlMarker | HtmlMarker[], (e: TargetedEvent) => void)
     children: []
     type: method
     langs:
@@ -105,15 +105,17 @@ items:
       content: >-
         function add(eventType: "click" | "contextmenu" | "dblclick" | "drag" |
         "dragstart" | "dragend" | "keydown" | "keypress" | "keyup" | "mousedown"
-        | "mousemove" | "mouseout" | "mouseover" | "mouseup", target: HtmlMarker
-        | HtmlMarker[], callback: (e: TargetedEvent) => void)
+        | "mouseenter" | "mouseleave" | "mousemove" | "mouseout" | "mouseover" |
+        "mouseup", target: HtmlMarker | HtmlMarker[], callback: (e:
+        TargetedEvent) => void)
       parameters:
         - id: eventType
           type:
             - >-
               "click" | "contextmenu" | "dblclick" | "drag" | "dragstart" |
               "dragend" | "keydown" | "keypress" | "keyup" | "mousedown" |
-              "mousemove" | "mouseout" | "mouseover" | "mouseup"
+              "mouseenter" | "mouseleave" | "mousemove" | "mouseout" |
+              "mouseover" | "mouseup"
           description: The event name.
         - id: target
           type:
@@ -569,9 +571,9 @@ items:
   - uid: azure-maps-control.atlas.EventManager.addOnce_9
     name: >-
       addOnce("click" | "contextmenu" | "dblclick" | "drag" | "dragstart" |
-      "dragend" | "keydown" | "keypress" | "keyup" | "mousedown" | "mousemove" |
-      "mouseout" | "mouseover" | "mouseup", HtmlMarker, (e: TargetedEvent) =>
-      void)
+      "dragend" | "keydown" | "keypress" | "keyup" | "mousedown" | "mouseenter"
+      | "mouseleave" | "mousemove" | "mouseout" | "mouseover" | "mouseup",
+      HtmlMarker, (e: TargetedEvent) => void)
     children: []
     type: method
     langs:
@@ -581,15 +583,17 @@ items:
       content: >-
         function addOnce(eventType: "click" | "contextmenu" | "dblclick" |
         "drag" | "dragstart" | "dragend" | "keydown" | "keypress" | "keyup" |
-        "mousedown" | "mousemove" | "mouseout" | "mouseover" | "mouseup",
-        target: HtmlMarker, callback: (e: TargetedEvent) => void)
+        "mousedown" | "mouseenter" | "mouseleave" | "mousemove" | "mouseout" |
+        "mouseover" | "mouseup", target: HtmlMarker, callback: (e:
+        TargetedEvent) => void)
       parameters:
         - id: eventType
           type:
             - >-
               "click" | "contextmenu" | "dblclick" | "drag" | "dragstart" |
               "dragend" | "keydown" | "keypress" | "keyup" | "mousedown" |
-              "mousemove" | "mouseout" | "mouseover" | "mouseup"
+              "mouseenter" | "mouseleave" | "mousemove" | "mouseout" |
+              "mouseover" | "mouseup"
           description: The event name.
         - id: target
           type:
@@ -2484,16 +2488,11 @@ references:
       - name: ControlPosition
         fullName: ControlPosition
         uid: azure-maps-control.atlas.ControlPosition
-  - uid: >-
-      azure-maps-control.Dictionary<string,
-      azure-maps-control.atlas.AggregateExpression>
+  - uid: 'Record<string, azure-maps-control.atlas.AggregateExpression>'
     name: AggregateExpression>
     spec.typeScript:
-      - name: Dictionary
-        fullName: Dictionary
-        uid: azure-maps-control.Dictionary
-      - name: '<string, '
-        fullName: '<string, '
+      - name: 'Record<string, '
+        fullName: 'Record<string, '
       - name: AggregateExpression
         fullName: AggregateExpression
         uid: azure-maps-control.atlas.AggregateExpression

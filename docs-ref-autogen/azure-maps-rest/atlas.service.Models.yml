@@ -4,30 +4,167 @@ items:
     name: Models
     fullName: Models
     children:
+      - azure-maps-rest.atlas.service.Models.AbsoluteDirection
+      - azure-maps-rest.atlas.service.Models.Agency
+      - azure-maps-rest.atlas.service.Models.AgencyType
+      - azure-maps-rest.atlas.service.Models.Alert
+      - azure-maps-rest.atlas.service.Models.AlertDescription
+      - azure-maps-rest.atlas.service.Models.AlertDetail
       - azure-maps-rest.atlas.service.Models.AlternativeRouteType
       - azure-maps-rest.atlas.service.Models.Avoid
       - azure-maps-rest.atlas.service.Models.BatchRequestBody
       - azure-maps-rest.atlas.service.Models.BatchRequestBodyBatchItemsItem
       - azure-maps-rest.atlas.service.Models.BatchResponse
       - azure-maps-rest.atlas.service.Models.BatchResponseSummary
+      - azure-maps-rest.atlas.service.Models.BikeType
+      - azure-maps-rest.atlas.service.Models.BufferRequestBody
+      - azure-maps-rest.atlas.service.Models.BufferResponse
+      - azure-maps-rest.atlas.service.Models.BufferResponseSummary
+      - azure-maps-rest.atlas.service.Models.CarShareResponse
+      - azure-maps-rest.atlas.service.Models.ClosestPointResultEntry
       - azure-maps-rest.atlas.service.Models.ComputeTravelTimeFor
+      - azure-maps-rest.atlas.service.Models.ConnectorSet
       - azure-maps-rest.atlas.service.Models.Coordinate
       - azure-maps-rest.atlas.service.Models.CoordinateAbbreviated
+      - azure-maps-rest.atlas.service.Models.CopyrightBoundingResult
+      - azure-maps-rest.atlas.service.Models.CopyrightCaptionResult
+      - azure-maps-rest.atlas.service.Models.CopyrightTileResult
+      - azure-maps-rest.atlas.service.Models.CopyrightWorldResult
+      - azure-maps-rest.atlas.service.Models.Country
       - azure-maps-rest.atlas.service.Models.DataSources
       - azure-maps-rest.atlas.service.Models.DataSourcesGeometry
+      - azure-maps-rest.atlas.service.Models.DestinationType
+      - azure-maps-rest.atlas.service.Models.Direction
       - azure-maps-rest.atlas.service.Models.DrivingSide
       - azure-maps-rest.atlas.service.Models.EntityType
       - azure-maps-rest.atlas.service.Models.ErrorModel
       - azure-maps-rest.atlas.service.Models.ErrorResponse
-      - azure-maps-rest.atlas.service.Models.GeoJSONLineString
-      - azure-maps-rest.atlas.service.Models.GeoJSONMultiPoint
-      - azure-maps-rest.atlas.service.Models.GeoJSONPoint
+      - azure-maps-rest.atlas.service.Models.GeofenceGeometry
+      - azure-maps-rest.atlas.service.Models.GeofenceMode
+      - azure-maps-rest.atlas.service.Models.GeofenceResponse
+      - azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollection
+      - >-
+        azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItem
+      - azure-maps-rest.atlas.service.Models.GeoJSONGeometry
+      - azure-maps-rest.atlas.service.Models.GeoJSONGeometryCollection
+      - azure-maps-rest.atlas.service.Models.GeoJSONGeometryUnion
+      - azure-maps-rest.atlas.service.Models.GetClosestPointResponse
+      - azure-maps-rest.atlas.service.Models.GetClosestPointSummary
+      - azure-maps-rest.atlas.service.Models.GetPointInPolygonResponse
+      - azure-maps-rest.atlas.service.Models.GetPointInPolygonSummary
+      - azure-maps-rest.atlas.service.Models.GreatCircleDistanceResponse
+      - azure-maps-rest.atlas.service.Models.GreatCircleDistanceResponseResult
+      - azure-maps-rest.atlas.service.Models.GreatCircleDistanceResponseSummary
       - azure-maps-rest.atlas.service.Models.GuidanceInstructionType
       - azure-maps-rest.atlas.service.Models.GuidanceManeuver
       - azure-maps-rest.atlas.service.Models.Hilliness
+      - azure-maps-rest.atlas.service.Models.IanaId
+      - azure-maps-rest.atlas.service.Models.ItineraryResult
+      - azure-maps-rest.atlas.service.Models.Leg
+      - azure-maps-rest.atlas.service.Models.LegPoint
+      - azure-maps-rest.atlas.service.Models.LegType
+      - azure-maps-rest.atlas.service.Models.Line
+      - azure-maps-rest.atlas.service.Models.LineArrival
+      - azure-maps-rest.atlas.service.Models.LineGroup
+      - azure-maps-rest.atlas.service.Models.LineString
       - azure-maps-rest.atlas.service.Models.MagnitudeOfDelay
       - azure-maps-rest.atlas.service.Models.MapsClientOptions
+      - azure-maps-rest.atlas.service.Models.MapTileLayer
+      - azure-maps-rest.atlas.service.Models.MapTileStyle
+      - azure-maps-rest.atlas.service.Models.MetroAreaDetailType
+      - azure-maps-rest.atlas.service.Models.MetroAreaInfoResponse
+      - azure-maps-rest.atlas.service.Models.MetroAreaQueryType
+      - azure-maps-rest.atlas.service.Models.MetroAreaResponse
+      - azure-maps-rest.atlas.service.Models.MetroAreaResult
+      - >-
+        azure-maps-rest.atlas.service.Models.MobilityGetCarShareInfoPreviewOptionalParams
+      - >-
+        azure-maps-rest.atlas.service.Models.MobilityGetCarShareInfoPreviewResponse
+      - >-
+        azure-maps-rest.atlas.service.Models.MobilityGetMetroAreaInfoPreviewOptionalParams
+      - >-
+        azure-maps-rest.atlas.service.Models.MobilityGetMetroAreaInfoPreviewResponse
+      - >-
+        azure-maps-rest.atlas.service.Models.MobilityGetMetroAreaPreviewOptionalParams
+      - azure-maps-rest.atlas.service.Models.MobilityGetMetroAreaPreviewResponse
+      - >-
+        azure-maps-rest.atlas.service.Models.MobilityGetNearbyTransitPreviewOptionalParams
+      - >-
+        azure-maps-rest.atlas.service.Models.MobilityGetNearbyTransitPreviewResponse
+      - >-
+        azure-maps-rest.atlas.service.Models.MobilityGetRealTimeArrivalsPreviewOptionalParams
+      - >-
+        azure-maps-rest.atlas.service.Models.MobilityGetRealTimeArrivalsPreviewResponse
+      - >-
+        azure-maps-rest.atlas.service.Models.MobilityGetTransitDockInfoPreviewOptionalParams
+      - >-
+        azure-maps-rest.atlas.service.Models.MobilityGetTransitDockInfoPreviewResponse
+      - >-
+        azure-maps-rest.atlas.service.Models.MobilityGetTransitItineraryPreviewOptionalParams
+      - >-
+        azure-maps-rest.atlas.service.Models.MobilityGetTransitItineraryPreviewResponse
+      - >-
+        azure-maps-rest.atlas.service.Models.MobilityGetTransitLineInfoPreviewOptionalParams
+      - >-
+        azure-maps-rest.atlas.service.Models.MobilityGetTransitLineInfoPreviewResponse
+      - >-
+        azure-maps-rest.atlas.service.Models.MobilityGetTransitRoutePreviewOptionalParams
+      - >-
+        azure-maps-rest.atlas.service.Models.MobilityGetTransitRoutePreviewResponse
+      - >-
+        azure-maps-rest.atlas.service.Models.MobilityGetTransitStopInfoPreviewOptionalParams
+      - >-
+        azure-maps-rest.atlas.service.Models.MobilityGetTransitStopInfoPreviewResponse
+      - azure-maps-rest.atlas.service.Models.ModeType
+      - azure-maps-rest.atlas.service.Models.MultiLineString
+      - azure-maps-rest.atlas.service.Models.MultiPoint
+      - azure-maps-rest.atlas.service.Models.MultiPolygon
+      - azure-maps-rest.atlas.service.Models.Names
+      - azure-maps-rest.atlas.service.Models.NearbyTransitResponse
+      - azure-maps-rest.atlas.service.Models.ObjectType
+      - azure-maps-rest.atlas.service.Models.OpeningHours
+      - azure-maps-rest.atlas.service.Models.OperatorInfo
+      - azure-maps-rest.atlas.service.Models.OriginType
+      - azure-maps-rest.atlas.service.Models.Pattern
+      - azure-maps-rest.atlas.service.Models.Point
+      - azure-maps-rest.atlas.service.Models.PointInPolygonResult
+      - azure-maps-rest.atlas.service.Models.Polygon
+      - azure-maps-rest.atlas.service.Models.PostClosestPointResponse
+      - azure-maps-rest.atlas.service.Models.PostClosestPointSummary
+      - azure-maps-rest.atlas.service.Models.PostPointInPolygonResponse
+      - azure-maps-rest.atlas.service.Models.PostPointInPolygonSummary
+      - azure-maps-rest.atlas.service.Models.Pricing
+      - azure-maps-rest.atlas.service.Models.RealTimeArrivalResult
+      - azure-maps-rest.atlas.service.Models.RealTimeArrivalsQueryType
+      - azure-maps-rest.atlas.service.Models.RealTimeArrivalsResponse
+      - azure-maps-rest.atlas.service.Models.ReferenceTimeByCoordinates
+      - azure-maps-rest.atlas.service.Models.ReferenceTimeById
+      - azure-maps-rest.atlas.service.Models.Region
+      - azure-maps-rest.atlas.service.Models.RegionCountry
+      - azure-maps-rest.atlas.service.Models.RelativeDirection
+      - azure-maps-rest.atlas.service.Models.RenderGetCopyrightCaptionResponse
+      - >-
+        azure-maps-rest.atlas.service.Models.RenderGetCopyrightForTileOptionalParams
+      - azure-maps-rest.atlas.service.Models.RenderGetCopyrightForTileResponse
+      - >-
+        azure-maps-rest.atlas.service.Models.RenderGetCopyrightForWorldOptionalParams
+      - azure-maps-rest.atlas.service.Models.RenderGetCopyrightForWorldResponse
+      - >-
+        azure-maps-rest.atlas.service.Models.RenderGetCopyrightFromBoundingBoxOptionalParams
+      - >-
+        azure-maps-rest.atlas.service.Models.RenderGetCopyrightFromBoundingBoxResponse
+      - azure-maps-rest.atlas.service.Models.RenderGetMapImageOptionalParams
+      - azure-maps-rest.atlas.service.Models.RenderGetMapImageResponse
+      - azure-maps-rest.atlas.service.Models.RenderGetMapImageryTileResponse
+      - azure-maps-rest.atlas.service.Models.RenderGetMapTileOptionalParams
+      - azure-maps-rest.atlas.service.Models.RenderGetMapTileResponse
+      - azure-maps-rest.atlas.service.Models.RepresentativePoint
+      - azure-maps-rest.atlas.service.Models.ResultViewport
+      - >-
+        azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams
       - azure-maps-rest.atlas.service.Models.RouteDirectionsRequestBody
+      - >-
+        azure-maps-rest.atlas.service.Models.RouteDirectionsRequestBodySupportingPoints
       - azure-maps-rest.atlas.service.Models.RouteDirectionsResponse
       - azure-maps-rest.atlas.service.Models.RouteDirectionsResult
       - azure-maps-rest.atlas.service.Models.RouteDirectionsSummary
@@ -37,6 +174,7 @@ items:
       - azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams
       - azure-maps-rest.atlas.service.Models.RouteGetRouteRangeResponse
       - azure-maps-rest.atlas.service.Models.RouteInstructionsType
+      - azure-maps-rest.atlas.service.Models.RouteItineraryLeg
       - azure-maps-rest.atlas.service.Models.RouteMatrixRequestBody
       - azure-maps-rest.atlas.service.Models.RouteMatrixResponse
       - azure-maps-rest.atlas.service.Models.RouteMatrixResult
@@ -44,8 +182,16 @@ items:
       - azure-maps-rest.atlas.service.Models.RouteMatrixSummary
       - azure-maps-rest.atlas.service.Models.RouteOptimizedWaypoint
       - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsBatchPreviewHeaders
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsBatchPreviewResponse
+      - >-
         azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams
       - azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsResponse
+      - azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewHeaders
+      - >-
+        azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewOptionalParams
+      - azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewResponse
       - azure-maps-rest.atlas.service.Models.RouteRange
       - azure-maps-rest.atlas.service.Models.RouteRangeResponse
       - azure-maps-rest.atlas.service.Models.RouteRepresentation
@@ -60,6 +206,7 @@ items:
       - azure-maps-rest.atlas.service.Models.RouteResultSectionTec
       - azure-maps-rest.atlas.service.Models.RouteResultSectionTecCause
       - azure-maps-rest.atlas.service.Models.RouteType
+      - azure-maps-rest.atlas.service.Models.ScheduleType
       - azure-maps-rest.atlas.service.Models.SearchAddressResponse
       - azure-maps-rest.atlas.service.Models.SearchAddressResult
       - >-
@@ -124,8 +271,20 @@ items:
       - azure-maps-rest.atlas.service.Models.SearchPolygonResponse
       - azure-maps-rest.atlas.service.Models.SearchPolygonResult
       - >-
+        azure-maps-rest.atlas.service.Models.SearchPostSearchAddressBatchPreviewHeaders
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchPostSearchAddressBatchPreviewResponse
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchPostSearchAddressReverseBatchPreviewHeaders
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchPostSearchAddressReverseBatchPreviewResponse
+      - >-
         azure-maps-rest.atlas.service.Models.SearchPostSearchAlongRouteOptionalParams
       - azure-maps-rest.atlas.service.Models.SearchPostSearchAlongRouteResponse
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchPostSearchFuzzyBatchPreviewHeaders
+      - >-
+        azure-maps-rest.atlas.service.Models.SearchPostSearchFuzzyBatchPreviewResponse
       - >-
         azure-maps-rest.atlas.service.Models.SearchPostSearchInsideGeometryOptionalParams
       - >-
@@ -134,13 +293,83 @@ items:
       - azure-maps-rest.atlas.service.Models.SearchResultAddressRanges
       - azure-maps-rest.atlas.service.Models.SearchResultEntryPoint
       - azure-maps-rest.atlas.service.Models.SearchResultPoi
+      - azure-maps-rest.atlas.service.Models.SearchResultPoiBrand
       - azure-maps-rest.atlas.service.Models.SearchResultPoiClassification
       - azure-maps-rest.atlas.service.Models.SearchResultPoiClassificationName
       - azure-maps-rest.atlas.service.Models.SearchResultViewport
       - azure-maps-rest.atlas.service.Models.SearchSummaryGeoBias
       - azure-maps-rest.atlas.service.Models.SectionType
+      - azure-maps-rest.atlas.service.Models.SpatialCoordinate
+      - azure-maps-rest.atlas.service.Models.SpatialGetBufferResponse
+      - >-
+        azure-maps-rest.atlas.service.Models.SpatialGetClosestPointOptionalParams
+      - azure-maps-rest.atlas.service.Models.SpatialGetClosestPointResponse
+      - azure-maps-rest.atlas.service.Models.SpatialGetGeofenceHeaders
+      - azure-maps-rest.atlas.service.Models.SpatialGetGeofenceOptionalParams
+      - azure-maps-rest.atlas.service.Models.SpatialGetGeofenceResponse
+      - >-
+        azure-maps-rest.atlas.service.Models.SpatialGetGreatCircleDistanceResponse
+      - azure-maps-rest.atlas.service.Models.SpatialGetPointInPolygonResponse
+      - azure-maps-rest.atlas.service.Models.SpatialPostBufferResponse
+      - >-
+        azure-maps-rest.atlas.service.Models.SpatialPostClosestPointOptionalParams
+      - azure-maps-rest.atlas.service.Models.SpatialPostClosestPointResponse
+      - azure-maps-rest.atlas.service.Models.SpatialPostGeofenceHeaders
+      - azure-maps-rest.atlas.service.Models.SpatialPostGeofenceOptionalParams
+      - azure-maps-rest.atlas.service.Models.SpatialPostGeofenceResponse
+      - azure-maps-rest.atlas.service.Models.SpatialPostPointInPolygonResponse
+      - azure-maps-rest.atlas.service.Models.StaticMapLayer
+      - azure-maps-rest.atlas.service.Models.Step
+      - azure-maps-rest.atlas.service.Models.Stop
+      - azure-maps-rest.atlas.service.Models.StopQueryType
+      - azure-maps-rest.atlas.service.Models.Style
+      - azure-maps-rest.atlas.service.Models.Text
+      - azure-maps-rest.atlas.service.Models.Text1
+      - azure-maps-rest.atlas.service.Models.Text2
+      - azure-maps-rest.atlas.service.Models.TileFormat
+      - azure-maps-rest.atlas.service.Models.TimeTransition
+      - azure-maps-rest.atlas.service.Models.TimeType
+      - azure-maps-rest.atlas.service.Models.TimeZoneByCoordinates
+      - azure-maps-rest.atlas.service.Models.TimezoneByCoordinatesResult
+      - azure-maps-rest.atlas.service.Models.TimezoneById
+      - azure-maps-rest.atlas.service.Models.TimezoneByIdResult
+      - azure-maps-rest.atlas.service.Models.TimezoneEnumWindow
+      - >-
+        azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneByCoordinatesOptionalParams
+      - >-
+        azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneByCoordinatesResponse
+      - >-
+        azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneByIDOptionalParams
+      - azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneByIDResponse
+      - azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneEnumIANAResponse
+      - >-
+        azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneEnumWindowsResponse
+      - >-
+        azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneIANAVersionResponse
+      - >-
+        azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneWindowsToIANAOptionalParams
+      - >-
+        azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneWindowsToIANAResponse
+      - azure-maps-rest.atlas.service.Models.TimezoneIanaVersionResult
+      - azure-maps-rest.atlas.service.Models.TimezoneOptions
+      - azure-maps-rest.atlas.service.Models.TransitDockInfoResponse
+      - azure-maps-rest.atlas.service.Models.TransitItineraryDetailType
+      - azure-maps-rest.atlas.service.Models.TransitItineraryResponse
+      - azure-maps-rest.atlas.service.Models.TransitLineDetailType
+      - azure-maps-rest.atlas.service.Models.TransitLineInfoResponse
+      - azure-maps-rest.atlas.service.Models.TransitObjectResult
+      - azure-maps-rest.atlas.service.Models.TransitRouteResponse
+      - azure-maps-rest.atlas.service.Models.TransitRouteType
+      - azure-maps-rest.atlas.service.Models.TransitStopDetailType
+      - azure-maps-rest.atlas.service.Models.TransitStopInfoResponse
+      - azure-maps-rest.atlas.service.Models.TransitStopQueryType
+      - azure-maps-rest.atlas.service.Models.TransitType
+      - azure-maps-rest.atlas.service.Models.TransitTypeFilter
+      - azure-maps-rest.atlas.service.Models.TransitTypeResult
       - azure-maps-rest.atlas.service.Models.TravelMode
       - azure-maps-rest.atlas.service.Models.Type
+      - azure-maps-rest.atlas.service.Models.UploadDataAcceptedResponse
+      - azure-maps-rest.atlas.service.Models.UploadDataResponse
       - azure-maps-rest.atlas.service.Models.VehicleEngineType
       - azure-maps-rest.atlas.service.Models.VehicleLoadType
       - azure-maps-rest.atlas.service.Models.Windingness
@@ -150,6 +379,24 @@ items:
     summary: ''
     package: azure-maps-rest
 references:
+  - uid: azure-maps-rest.atlas.service.Models.TransitTypeResult
+    name: TransitTypeResult
+    spec.typeScript:
+      - name: TransitTypeResult
+        fullName: TransitTypeResult
+        uid: azure-maps-rest.atlas.service.Models.TransitTypeResult
+  - uid: azure-maps-rest.atlas.service.Models.AlertDetail
+    name: AlertDetail
+    spec.typeScript:
+      - name: AlertDetail
+        fullName: AlertDetail
+        uid: azure-maps-rest.atlas.service.Models.AlertDetail
+  - uid: azure-maps-rest.atlas.service.Models.AlertDescription
+    name: AlertDescription
+    spec.typeScript:
+      - name: AlertDescription
+        fullName: AlertDescription
+        uid: azure-maps-rest.atlas.service.Models.AlertDescription
   - uid: 'azure-maps-rest.atlas.service.Models.BatchRequestBodyBatchItemsItem[]'
     name: 'BatchRequestBodyBatchItemsItem[]'
     spec.typeScript:
@@ -164,18 +411,219 @@ references:
       - name: BatchResponseSummary
         fullName: BatchResponseSummary
         uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary
+  - uid: azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollection
+    name: GeoJSONFeatureCollection
+    spec.typeScript:
+      - name: GeoJSONFeatureCollection
+        fullName: GeoJSONFeatureCollection
+        uid: azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollection
+  - uid: azure-maps-rest.atlas.service.Models.BufferResponseSummary
+    name: BufferResponseSummary
+    spec.typeScript:
+      - name: BufferResponseSummary
+        fullName: BufferResponseSummary
+        uid: azure-maps-rest.atlas.service.Models.BufferResponseSummary
+  - uid: azure-maps-rest.atlas.service.Models.OperatorInfo
+    name: OperatorInfo
+    spec.typeScript:
+      - name: OperatorInfo
+        fullName: OperatorInfo
+        uid: azure-maps-rest.atlas.service.Models.OperatorInfo
+  - uid: azure-maps-rest.atlas.service.Models.Coordinate
+    name: Coordinate
+    spec.typeScript:
+      - name: Coordinate
+        fullName: Coordinate
+        uid: azure-maps-rest.atlas.service.Models.Coordinate
+  - uid: azure-maps-rest.atlas.service.Models.Pricing
+    name: Pricing
+    spec.typeScript:
+      - name: Pricing
+        fullName: Pricing
+        uid: azure-maps-rest.atlas.service.Models.Pricing
+  - uid: azure-maps-rest.atlas.service.Models.SpatialCoordinate
+    name: SpatialCoordinate
+    spec.typeScript:
+      - name: SpatialCoordinate
+        fullName: SpatialCoordinate
+        uid: azure-maps-rest.atlas.service.Models.SpatialCoordinate
+  - uid: 'azure-maps-rest.atlas.service.Models.Region[]'
+    name: 'Region[]'
+    spec.typeScript:
+      - name: Region
+        fullName: Region
+        uid: azure-maps-rest.atlas.service.Models.Region
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-rest.atlas.service.Models.DataSourcesGeometry
     name: DataSourcesGeometry
     spec.typeScript:
       - name: DataSourcesGeometry
         fullName: DataSourcesGeometry
         uid: azure-maps-rest.atlas.service.Models.DataSourcesGeometry
+  - uid: azure-maps-rest.atlas.service.Models.AbsoluteDirection
+    name: AbsoluteDirection
+    spec.typeScript:
+      - name: AbsoluteDirection
+        fullName: AbsoluteDirection
+        uid: azure-maps-rest.atlas.service.Models.AbsoluteDirection
+  - uid: azure-maps-rest.atlas.service.Models.RelativeDirection
+    name: RelativeDirection
+    spec.typeScript:
+      - name: RelativeDirection
+        fullName: RelativeDirection
+        uid: azure-maps-rest.atlas.service.Models.RelativeDirection
   - uid: azure-maps-rest.atlas.service.Models.ErrorModel
     name: ErrorModel
     spec.typeScript:
       - name: ErrorModel
         fullName: ErrorModel
         uid: azure-maps-rest.atlas.service.Models.ErrorModel
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItem[]
+    name: 'GeoJSONFeatureCollectionFeaturesItem[]'
+    spec.typeScript:
+      - name: GeoJSONFeatureCollectionFeaturesItem
+        fullName: GeoJSONFeatureCollectionFeaturesItem
+        uid: >-
+          azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItem
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometryUnion
+    name: GeoJSONGeometryUnion
+    spec.typeScript:
+      - name: GeoJSONGeometryUnion
+        fullName: GeoJSONGeometryUnion
+        uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometryUnion
+  - uid: 'azure-maps-rest.atlas.service.Models.GeoJSONGeometryUnion[]'
+    name: 'GeoJSONGeometryUnion[]'
+    spec.typeScript:
+      - name: GeoJSONGeometryUnion
+        fullName: GeoJSONGeometryUnion
+        uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometryUnion
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-rest.atlas.service.Models.GeofenceGeometry[]'
+    name: 'GeofenceGeometry[]'
+    spec.typeScript:
+      - name: GeofenceGeometry
+        fullName: GeofenceGeometry
+        uid: azure-maps-rest.atlas.service.Models.GeofenceGeometry
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-rest.atlas.service.Models.ClosestPointResultEntry[]'
+    name: 'ClosestPointResultEntry[]'
+    spec.typeScript:
+      - name: ClosestPointResultEntry
+        fullName: ClosestPointResultEntry
+        uid: azure-maps-rest.atlas.service.Models.ClosestPointResultEntry
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.GetClosestPointSummary
+    name: GetClosestPointSummary
+    spec.typeScript:
+      - name: GetClosestPointSummary
+        fullName: GetClosestPointSummary
+        uid: azure-maps-rest.atlas.service.Models.GetClosestPointSummary
+  - uid: azure-maps-rest.atlas.service.Models.PointInPolygonResult
+    name: PointInPolygonResult
+    spec.typeScript:
+      - name: PointInPolygonResult
+        fullName: PointInPolygonResult
+        uid: azure-maps-rest.atlas.service.Models.PointInPolygonResult
+  - uid: azure-maps-rest.atlas.service.Models.GetPointInPolygonSummary
+    name: GetPointInPolygonSummary
+    spec.typeScript:
+      - name: GetPointInPolygonSummary
+        fullName: GetPointInPolygonSummary
+        uid: azure-maps-rest.atlas.service.Models.GetPointInPolygonSummary
+  - uid: azure-maps-rest.atlas.service.Models.GreatCircleDistanceResponseResult
+    name: GreatCircleDistanceResponseResult
+    spec.typeScript:
+      - name: GreatCircleDistanceResponseResult
+        fullName: GreatCircleDistanceResponseResult
+        uid: azure-maps-rest.atlas.service.Models.GreatCircleDistanceResponseResult
+  - uid: azure-maps-rest.atlas.service.Models.GreatCircleDistanceResponseSummary
+    name: GreatCircleDistanceResponseSummary
+    spec.typeScript:
+      - name: GreatCircleDistanceResponseSummary
+        fullName: GreatCircleDistanceResponseSummary
+        uid: >-
+          azure-maps-rest.atlas.service.Models.GreatCircleDistanceResponseSummary
+  - uid: 'azure-maps-rest.atlas.service.Models.RouteItineraryLeg[]'
+    name: 'RouteItineraryLeg[]'
+    spec.typeScript:
+      - name: RouteItineraryLeg
+        fullName: RouteItineraryLeg
+        uid: azure-maps-rest.atlas.service.Models.RouteItineraryLeg
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-rest.atlas.service.Models.LineArrival[]'
+    name: 'LineArrival[]'
+    spec.typeScript:
+      - name: LineArrival
+        fullName: LineArrival
+        uid: azure-maps-rest.atlas.service.Models.LineArrival
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.LegPoint
+    name: LegPoint
+    spec.typeScript:
+      - name: LegPoint
+        fullName: LegPoint
+        uid: azure-maps-rest.atlas.service.Models.LegPoint
+  - uid: azure-maps-rest.atlas.service.Models.LineString
+    name: LineString
+    spec.typeScript:
+      - name: LineString
+        fullName: LineString
+        uid: azure-maps-rest.atlas.service.Models.LineString
+  - uid: azure-maps-rest.atlas.service.Models.LegType
+    name: LegType
+    spec.typeScript:
+      - name: LegType
+        fullName: LegType
+        uid: azure-maps-rest.atlas.service.Models.LegType
+  - uid: azure-maps-rest.atlas.service.Models.Line
+    name: Line
+    spec.typeScript:
+      - name: Line
+        fullName: Line
+        uid: azure-maps-rest.atlas.service.Models.Line
+  - uid: azure-maps-rest.atlas.service.Models.LineGroup
+    name: LineGroup
+    spec.typeScript:
+      - name: LineGroup
+        fullName: LineGroup
+        uid: azure-maps-rest.atlas.service.Models.LineGroup
+  - uid: 'azure-maps-rest.atlas.service.Models.Step[]'
+    name: 'Step[]'
+    spec.typeScript:
+      - name: Step
+        fullName: Step
+        uid: azure-maps-rest.atlas.service.Models.Step
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-rest.atlas.service.Models.Stop[]'
+    name: 'Stop[]'
+    spec.typeScript:
+      - name: Stop
+        fullName: Stop
+        uid: azure-maps-rest.atlas.service.Models.Stop
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.TransitType
+    name: TransitType
+    spec.typeScript:
+      - name: TransitType
+        fullName: TransitType
+        uid: azure-maps-rest.atlas.service.Models.TransitType
+  - uid: azure-maps-rest.atlas.service.Models.ScheduleType
+    name: ScheduleType
+    spec.typeScript:
+      - name: ScheduleType
+        fullName: ScheduleType
+        uid: azure-maps-rest.atlas.service.Models.ScheduleType
   - uid: >-
       azure-maps-rest.atlas.service.RequestPolicyFactory[] |
       (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void | Object[]
@@ -192,14 +640,296 @@ references:
         fullName: >-
           [] | (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void |
           Object[]
-  - uid: 'azure-maps-rest.atlas.service.Models.GeoJSONPoint[]'
-    name: 'GeoJSONPoint[]'
+  - uid: 'azure-maps-rest.atlas.service.Models.Agency[]'
+    name: 'Agency[]'
     spec.typeScript:
-      - name: GeoJSONPoint
-        fullName: GeoJSONPoint
-        uid: azure-maps-rest.atlas.service.Models.GeoJSONPoint
+      - name: Agency
+        fullName: Agency
+        uid: azure-maps-rest.atlas.service.Models.Agency
       - name: '[]'
         fullName: '[]'
+  - uid: 'azure-maps-rest.atlas.service.Models.Alert[]'
+    name: 'Alert[]'
+    spec.typeScript:
+      - name: Alert
+        fullName: Alert
+        uid: azure-maps-rest.atlas.service.Models.Alert
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-rest.atlas.service.Models.TransitTypeResult[]'
+    name: 'TransitTypeResult[]'
+    spec.typeScript:
+      - name: TransitTypeResult
+        fullName: TransitTypeResult
+        uid: azure-maps-rest.atlas.service.Models.TransitTypeResult
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-rest.atlas.service.Models.MetroAreaResult[]'
+    name: 'MetroAreaResult[]'
+    spec.typeScript:
+      - name: MetroAreaResult
+        fullName: MetroAreaResult
+        uid: azure-maps-rest.atlas.service.Models.MetroAreaResult
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.Polygon
+    name: Polygon
+    spec.typeScript:
+      - name: Polygon
+        fullName: Polygon
+        uid: azure-maps-rest.atlas.service.Models.Polygon
+  - uid: azure-maps-rest.atlas.service.Models.ResultViewport
+    name: ResultViewport
+    spec.typeScript:
+      - name: ResultViewport
+        fullName: ResultViewport
+        uid: azure-maps-rest.atlas.service.Models.ResultViewport
+  - uid: azure-maps-rest.atlas.service.Models.MetroAreaQueryType
+    name: MetroAreaQueryType
+    spec.typeScript:
+      - name: MetroAreaQueryType
+        fullName: MetroAreaQueryType
+        uid: azure-maps-rest.atlas.service.Models.MetroAreaQueryType
+  - uid: 'azure-maps-rest.atlas.service.Models.ObjectType[]'
+    name: 'ObjectType[]'
+    spec.typeScript:
+      - name: ObjectType
+        fullName: ObjectType
+        uid: azure-maps-rest.atlas.service.Models.ObjectType
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.AgencyType
+    name: AgencyType
+    spec.typeScript:
+      - name: AgencyType
+        fullName: AgencyType
+        uid: azure-maps-rest.atlas.service.Models.AgencyType
+  - uid: azure-maps-rest.atlas.service.Models.RealTimeArrivalsQueryType
+    name: RealTimeArrivalsQueryType
+    spec.typeScript:
+      - name: RealTimeArrivalsQueryType
+        fullName: RealTimeArrivalsQueryType
+        uid: azure-maps-rest.atlas.service.Models.RealTimeArrivalsQueryType
+  - uid: azure-maps-rest.atlas.service.Models.StopQueryType
+    name: StopQueryType
+    spec.typeScript:
+      - name: StopQueryType
+        fullName: StopQueryType
+        uid: azure-maps-rest.atlas.service.Models.StopQueryType
+  - uid: 'azure-maps-rest.atlas.service.Models.TransitTypeFilter[]'
+    name: 'TransitTypeFilter[]'
+    spec.typeScript:
+      - name: TransitTypeFilter
+        fullName: TransitTypeFilter
+        uid: azure-maps-rest.atlas.service.Models.TransitTypeFilter
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-rest.atlas.service.Models.TransitItineraryDetailType[]'
+    name: 'TransitItineraryDetailType[]'
+    spec.typeScript:
+      - name: TransitItineraryDetailType
+        fullName: TransitItineraryDetailType
+        uid: azure-maps-rest.atlas.service.Models.TransitItineraryDetailType
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-rest.atlas.service.Models.TransitLineDetailType[]'
+    name: 'TransitLineDetailType[]'
+    spec.typeScript:
+      - name: TransitLineDetailType
+        fullName: TransitLineDetailType
+        uid: azure-maps-rest.atlas.service.Models.TransitLineDetailType
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.BikeType
+    name: BikeType
+    spec.typeScript:
+      - name: BikeType
+        fullName: BikeType
+        uid: azure-maps-rest.atlas.service.Models.BikeType
+  - uid: azure-maps-rest.atlas.service.Models.DestinationType
+    name: DestinationType
+    spec.typeScript:
+      - name: DestinationType
+        fullName: DestinationType
+        uid: azure-maps-rest.atlas.service.Models.DestinationType
+  - uid: 'azure-maps-rest.atlas.service.Models.ModeType[]'
+    name: 'ModeType[]'
+    spec.typeScript:
+      - name: ModeType
+        fullName: ModeType
+        uid: azure-maps-rest.atlas.service.Models.ModeType
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.OriginType
+    name: OriginType
+    spec.typeScript:
+      - name: OriginType
+        fullName: OriginType
+        uid: azure-maps-rest.atlas.service.Models.OriginType
+  - uid: azure-maps-rest.atlas.service.Models.TransitRouteType
+    name: TransitRouteType
+    spec.typeScript:
+      - name: TransitRouteType
+        fullName: TransitRouteType
+        uid: azure-maps-rest.atlas.service.Models.TransitRouteType
+  - uid: azure-maps-rest.atlas.service.Models.TimeType
+    name: TimeType
+    spec.typeScript:
+      - name: TimeType
+        fullName: TimeType
+        uid: azure-maps-rest.atlas.service.Models.TimeType
+  - uid: 'azure-maps-rest.atlas.service.Models.TransitStopDetailType[]'
+    name: 'TransitStopDetailType[]'
+    spec.typeScript:
+      - name: TransitStopDetailType
+        fullName: TransitStopDetailType
+        uid: azure-maps-rest.atlas.service.Models.TransitStopDetailType
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.TransitStopQueryType
+    name: TransitStopQueryType
+    spec.typeScript:
+      - name: TransitStopQueryType
+        fullName: TransitStopQueryType
+        uid: azure-maps-rest.atlas.service.Models.TransitStopQueryType
+  - uid: 'azure-maps-rest.atlas.service.Models.TransitObjectResult[]'
+    name: 'TransitObjectResult[]'
+    spec.typeScript:
+      - name: TransitObjectResult
+        fullName: TransitObjectResult
+        uid: azure-maps-rest.atlas.service.Models.TransitObjectResult
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.PostClosestPointSummary
+    name: PostClosestPointSummary
+    spec.typeScript:
+      - name: PostClosestPointSummary
+        fullName: PostClosestPointSummary
+        uid: azure-maps-rest.atlas.service.Models.PostClosestPointSummary
+  - uid: azure-maps-rest.atlas.service.Models.PostPointInPolygonSummary
+    name: PostPointInPolygonSummary
+    spec.typeScript:
+      - name: PostPointInPolygonSummary
+        fullName: PostPointInPolygonSummary
+        uid: azure-maps-rest.atlas.service.Models.PostPointInPolygonSummary
+  - uid: azure-maps-rest.atlas.service.Models.Stop
+    name: Stop
+    spec.typeScript:
+      - name: Stop
+        fullName: Stop
+        uid: azure-maps-rest.atlas.service.Models.Stop
+  - uid: 'azure-maps-rest.atlas.service.Models.RealTimeArrivalResult[]'
+    name: 'RealTimeArrivalResult[]'
+    spec.typeScript:
+      - name: RealTimeArrivalResult
+        fullName: RealTimeArrivalResult
+        uid: azure-maps-rest.atlas.service.Models.RealTimeArrivalResult
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.RegionCountry
+    name: RegionCountry
+    spec.typeScript:
+      - name: RegionCountry
+        fullName: RegionCountry
+        uid: azure-maps-rest.atlas.service.Models.RegionCountry
+  - uid: azure-maps-rest.atlas.service.Models.Text1
+    name: Text1
+    spec.typeScript:
+      - name: Text1
+        fullName: Text1
+        uid: azure-maps-rest.atlas.service.Models.Text1
+  - uid: azure-maps-rest.atlas.service.Models.Text2
+    name: Text2
+    spec.typeScript:
+      - name: Text2
+        fullName: Text2
+        uid: azure-maps-rest.atlas.service.Models.Text2
+  - uid: azure-maps-rest.atlas.service.Models.Text
+    name: Text
+    spec.typeScript:
+      - name: Text
+        fullName: Text
+        uid: azure-maps-rest.atlas.service.Models.Text
+  - uid: azure-maps-rest.atlas.service.Models.StaticMapLayer
+    name: StaticMapLayer
+    spec.typeScript:
+      - name: StaticMapLayer
+        fullName: StaticMapLayer
+        uid: azure-maps-rest.atlas.service.Models.StaticMapLayer
+  - uid: azure-maps-rest.atlas.service.Models.Style
+    name: Style
+    spec.typeScript:
+      - name: Style
+        fullName: Style
+        uid: azure-maps-rest.atlas.service.Models.Style
+  - uid: azure-maps-rest.atlas.service.Models.Avoid
+    name: Avoid
+    spec.typeScript:
+      - name: Avoid
+        fullName: Avoid
+        uid: azure-maps-rest.atlas.service.Models.Avoid
+  - uid: azure-maps-rest.atlas.service.Models.ComputeTravelTimeFor
+    name: ComputeTravelTimeFor
+    spec.typeScript:
+      - name: ComputeTravelTimeFor
+        fullName: ComputeTravelTimeFor
+        uid: azure-maps-rest.atlas.service.Models.ComputeTravelTimeFor
+  - uid: azure-maps-rest.atlas.service.Models.Hilliness
+    name: Hilliness
+    spec.typeScript:
+      - name: Hilliness
+        fullName: Hilliness
+        uid: azure-maps-rest.atlas.service.Models.Hilliness
+  - uid: azure-maps-rest.atlas.service.Models.RouteType
+    name: RouteType
+    spec.typeScript:
+      - name: RouteType
+        fullName: RouteType
+        uid: azure-maps-rest.atlas.service.Models.RouteType
+  - uid: azure-maps-rest.atlas.service.Models.SectionType
+    name: SectionType
+    spec.typeScript:
+      - name: SectionType
+        fullName: SectionType
+        uid: azure-maps-rest.atlas.service.Models.SectionType
+  - uid: azure-maps-rest.atlas.service.Models.TravelMode
+    name: TravelMode
+    spec.typeScript:
+      - name: TravelMode
+        fullName: TravelMode
+        uid: azure-maps-rest.atlas.service.Models.TravelMode
+  - uid: azure-maps-rest.atlas.service.Models.VehicleLoadType
+    name: VehicleLoadType
+    spec.typeScript:
+      - name: VehicleLoadType
+        fullName: VehicleLoadType
+        uid: azure-maps-rest.atlas.service.Models.VehicleLoadType
+  - uid: azure-maps-rest.atlas.service.Models.Windingness
+    name: Windingness
+    spec.typeScript:
+      - name: Windingness
+        fullName: Windingness
+        uid: azure-maps-rest.atlas.service.Models.Windingness
+  - uid: azure-maps-rest.atlas.service.Models.MultiPolygon
+    name: MultiPolygon
+    spec.typeScript:
+      - name: MultiPolygon
+        fullName: MultiPolygon
+        uid: azure-maps-rest.atlas.service.Models.MultiPolygon
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RouteDirectionsRequestBodySupportingPoints
+    name: RouteDirectionsRequestBodySupportingPoints
+    spec.typeScript:
+      - name: RouteDirectionsRequestBodySupportingPoints
+        fullName: RouteDirectionsRequestBodySupportingPoints
+        uid: >-
+          azure-maps-rest.atlas.service.Models.RouteDirectionsRequestBodySupportingPoints
+  - uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometryCollection
+    name: GeoJSONGeometryCollection
+    spec.typeScript:
+      - name: GeoJSONGeometryCollection
+        fullName: GeoJSONGeometryCollection
+        uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometryCollection
   - uid: 'azure-maps-rest.atlas.service.Models.RouteOptimizedWaypoint[]'
     name: 'RouteOptimizedWaypoint[]'
     spec.typeScript:
@@ -256,24 +986,6 @@ references:
       - name: AlternativeRouteType
         fullName: AlternativeRouteType
         uid: azure-maps-rest.atlas.service.Models.AlternativeRouteType
-  - uid: azure-maps-rest.atlas.service.Models.Avoid
-    name: Avoid
-    spec.typeScript:
-      - name: Avoid
-        fullName: Avoid
-        uid: azure-maps-rest.atlas.service.Models.Avoid
-  - uid: azure-maps-rest.atlas.service.Models.ComputeTravelTimeFor
-    name: ComputeTravelTimeFor
-    spec.typeScript:
-      - name: ComputeTravelTimeFor
-        fullName: ComputeTravelTimeFor
-        uid: azure-maps-rest.atlas.service.Models.ComputeTravelTimeFor
-  - uid: azure-maps-rest.atlas.service.Models.Hilliness
-    name: Hilliness
-    spec.typeScript:
-      - name: Hilliness
-        fullName: Hilliness
-        uid: azure-maps-rest.atlas.service.Models.Hilliness
   - uid: azure-maps-rest.atlas.service.Models.RouteInstructionsType
     name: RouteInstructionsType
     spec.typeScript:
@@ -286,48 +998,18 @@ references:
       - name: RouteRepresentation
         fullName: RouteRepresentation
         uid: azure-maps-rest.atlas.service.Models.RouteRepresentation
-  - uid: azure-maps-rest.atlas.service.Models.RouteType
-    name: RouteType
-    spec.typeScript:
-      - name: RouteType
-        fullName: RouteType
-        uid: azure-maps-rest.atlas.service.Models.RouteType
-  - uid: azure-maps-rest.atlas.service.Models.SectionType
-    name: SectionType
-    spec.typeScript:
-      - name: SectionType
-        fullName: SectionType
-        uid: azure-maps-rest.atlas.service.Models.SectionType
-  - uid: azure-maps-rest.atlas.service.Models.TravelMode
-    name: TravelMode
-    spec.typeScript:
-      - name: TravelMode
-        fullName: TravelMode
-        uid: azure-maps-rest.atlas.service.Models.TravelMode
   - uid: azure-maps-rest.atlas.service.Models.VehicleEngineType
     name: VehicleEngineType
     spec.typeScript:
       - name: VehicleEngineType
         fullName: VehicleEngineType
         uid: azure-maps-rest.atlas.service.Models.VehicleEngineType
-  - uid: azure-maps-rest.atlas.service.Models.VehicleLoadType
-    name: VehicleLoadType
+  - uid: azure-maps-rest.atlas.service.Models.MultiPoint
+    name: MultiPoint
     spec.typeScript:
-      - name: VehicleLoadType
-        fullName: VehicleLoadType
-        uid: azure-maps-rest.atlas.service.Models.VehicleLoadType
-  - uid: azure-maps-rest.atlas.service.Models.Windingness
-    name: Windingness
-    spec.typeScript:
-      - name: Windingness
-        fullName: Windingness
-        uid: azure-maps-rest.atlas.service.Models.Windingness
-  - uid: azure-maps-rest.atlas.service.Models.GeoJSONMultiPoint
-    name: GeoJSONMultiPoint
-    spec.typeScript:
-      - name: GeoJSONMultiPoint
-        fullName: GeoJSONMultiPoint
-        uid: azure-maps-rest.atlas.service.Models.GeoJSONMultiPoint
+      - name: MultiPoint
+        fullName: MultiPoint
+        uid: azure-maps-rest.atlas.service.Models.MultiPoint
   - uid: 'azure-maps-rest.atlas.service.Models.RouteMatrixResult[][]'
     name: 'RouteMatrixResult[][]'
     spec.typeScript:
@@ -362,12 +1044,6 @@ references:
         uid: azure-maps-rest.atlas.service.Models.Coordinate
       - name: '[]'
         fullName: '[]'
-  - uid: azure-maps-rest.atlas.service.Models.Coordinate
-    name: Coordinate
-    spec.typeScript:
-      - name: Coordinate
-        fullName: Coordinate
-        uid: azure-maps-rest.atlas.service.Models.Coordinate
   - uid: azure-maps-rest.atlas.service.Models.RouteRange
     name: RouteRange
     spec.typeScript:
@@ -541,12 +1217,6 @@ references:
       - name: SearchSummaryGeoBias
         fullName: SearchSummaryGeoBias
         uid: azure-maps-rest.atlas.service.Models.SearchSummaryGeoBias
-  - uid: azure-maps-rest.atlas.service.Models.GeoJSONLineString
-    name: GeoJSONLineString
-    spec.typeScript:
-      - name: GeoJSONLineString
-        fullName: GeoJSONLineString
-        uid: azure-maps-rest.atlas.service.Models.GeoJSONLineString
   - uid: 'azure-maps-rest.atlas.service.Models.SearchAlongRouteResult[]'
     name: 'SearchAlongRouteResult[]'
     spec.typeScript:
@@ -601,6 +1271,14 @@ references:
       - name: SearchGeometrySummary
         fullName: SearchGeometrySummary
         uid: azure-maps-rest.atlas.service.Models.SearchGeometrySummary
+  - uid: 'azure-maps-rest.atlas.service.Models.ConnectorSet[]'
+    name: 'ConnectorSet[]'
+    spec.typeScript:
+      - name: ConnectorSet
+        fullName: ConnectorSet
+        uid: azure-maps-rest.atlas.service.Models.ConnectorSet
+      - name: '[]'
+        fullName: '[]'
   - uid: 'azure-maps-rest.atlas.service.Models.SearchIndexSet[]'
     name: 'SearchIndexSet[]'
     spec.typeScript:
@@ -609,6 +1287,12 @@ references:
         uid: azure-maps-rest.atlas.service.Models.SearchIndexSet
       - name: '[]'
         fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.OpeningHours
+    name: OpeningHours
+    spec.typeScript:
+      - name: OpeningHours
+        fullName: OpeningHours
+        uid: azure-maps-rest.atlas.service.Models.OpeningHours
   - uid: 'azure-maps-rest.atlas.service.Models.SearchNearbyResult[]'
     name: 'SearchNearbyResult[]'
     spec.typeScript:
@@ -665,6 +1349,14 @@ references:
       - name: Type
         fullName: Type
         uid: azure-maps-rest.atlas.service.Models.Type
+  - uid: 'azure-maps-rest.atlas.service.Models.SearchResultPoiBrand[]'
+    name: 'SearchResultPoiBrand[]'
+    spec.typeScript:
+      - name: SearchResultPoiBrand
+        fullName: SearchResultPoiBrand
+        uid: azure-maps-rest.atlas.service.Models.SearchResultPoiBrand
+      - name: '[]'
+        fullName: '[]'
   - uid: 'azure-maps-rest.atlas.service.Models.SearchResultPoiClassification[]'
     name: 'SearchResultPoiClassification[]'
     spec.typeScript:
@@ -679,6 +1371,126 @@ references:
       - name: SearchResultPoiClassificationName
         fullName: SearchResultPoiClassificationName
         uid: azure-maps-rest.atlas.service.Models.SearchResultPoiClassificationName
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.GeofenceMode
+    name: GeofenceMode
+    spec.typeScript:
+      - name: GeofenceMode
+        fullName: GeofenceMode
+        uid: azure-maps-rest.atlas.service.Models.GeofenceMode
+  - uid: azure-maps-rest.atlas.service.Models.Direction
+    name: Direction
+    spec.typeScript:
+      - name: Direction
+        fullName: Direction
+        uid: azure-maps-rest.atlas.service.Models.Direction
+  - uid: 'azure-maps-rest.atlas.service.Models.Country[]'
+    name: 'Country[]'
+    spec.typeScript:
+      - name: Country
+        fullName: Country
+        uid: azure-maps-rest.atlas.service.Models.Country
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.Names
+    name: Names
+    spec.typeScript:
+      - name: Names
+        fullName: Names
+        uid: azure-maps-rest.atlas.service.Models.Names
+  - uid: azure-maps-rest.atlas.service.Models.ReferenceTimeByCoordinates
+    name: ReferenceTimeByCoordinates
+    spec.typeScript:
+      - name: ReferenceTimeByCoordinates
+        fullName: ReferenceTimeByCoordinates
+        uid: azure-maps-rest.atlas.service.Models.ReferenceTimeByCoordinates
+  - uid: azure-maps-rest.atlas.service.Models.RepresentativePoint
+    name: RepresentativePoint
+    spec.typeScript:
+      - name: RepresentativePoint
+        fullName: RepresentativePoint
+        uid: azure-maps-rest.atlas.service.Models.RepresentativePoint
+  - uid: 'azure-maps-rest.atlas.service.Models.TimeTransition[]'
+    name: 'TimeTransition[]'
+    spec.typeScript:
+      - name: TimeTransition
+        fullName: TimeTransition
+        uid: azure-maps-rest.atlas.service.Models.TimeTransition
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-rest.atlas.service.Models.TimeZoneByCoordinates[]'
+    name: 'TimeZoneByCoordinates[]'
+    spec.typeScript:
+      - name: TimeZoneByCoordinates
+        fullName: TimeZoneByCoordinates
+        uid: azure-maps-rest.atlas.service.Models.TimeZoneByCoordinates
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.ReferenceTimeById
+    name: ReferenceTimeById
+    spec.typeScript:
+      - name: ReferenceTimeById
+        fullName: ReferenceTimeById
+        uid: azure-maps-rest.atlas.service.Models.ReferenceTimeById
+  - uid: 'azure-maps-rest.atlas.service.Models.TimezoneById[]'
+    name: 'TimezoneById[]'
+    spec.typeScript:
+      - name: TimezoneById
+        fullName: TimezoneById
+        uid: azure-maps-rest.atlas.service.Models.TimezoneById
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.TimezoneOptions
+    name: TimezoneOptions
+    spec.typeScript:
+      - name: TimezoneOptions
+        fullName: TimezoneOptions
+        uid: azure-maps-rest.atlas.service.Models.TimezoneOptions
+  - uid: 'azure-maps-rest.atlas.service.Models.Leg[]'
+    name: 'Leg[]'
+    spec.typeScript:
+      - name: Leg
+        fullName: Leg
+        uid: azure-maps-rest.atlas.service.Models.Leg
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-rest.atlas.service.Models.Line[]'
+    name: 'Line[]'
+    spec.typeScript:
+      - name: Line
+        fullName: Line
+        uid: azure-maps-rest.atlas.service.Models.Line
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-rest.atlas.service.Models.Pattern[]'
+    name: 'Pattern[]'
+    spec.typeScript:
+      - name: Pattern
+        fullName: Pattern
+        uid: azure-maps-rest.atlas.service.Models.Pattern
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.Models.LineArrival
+    name: LineArrival
+    spec.typeScript:
+      - name: LineArrival
+        fullName: LineArrival
+        uid: azure-maps-rest.atlas.service.Models.LineArrival
+  - uid: 'azure-maps-rest.atlas.service.Models.ItineraryResult[]'
+    name: 'ItineraryResult[]'
+    spec.typeScript:
+      - name: ItineraryResult
+        fullName: ItineraryResult
+        uid: azure-maps-rest.atlas.service.Models.ItineraryResult
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-rest.atlas.service.Models.LineGroup[]'
+    name: 'LineGroup[]'
+    spec.typeScript:
+      - name: LineGroup
+        fullName: LineGroup
+        uid: azure-maps-rest.atlas.service.Models.LineGroup
       - name: '[]'
         fullName: '[]'
   - uid: azure-maps-rest.atlas.service.Aborter
@@ -729,6 +1541,180 @@ references:
       - name: Pipeline
         fullName: Pipeline
         uid: azure-maps-rest.atlas.service.Pipeline
+  - uid: azure-maps-rest.atlas.service.MapsURL
+    name: MapsURL
+    spec.typeScript:
+      - name: MapsURL
+        fullName: MapsURL
+        uid: azure-maps-rest.atlas.service.MapsURL
+  - uid: azure-maps-rest.atlas.service.GetCarShareInfoOptions
+    name: GetCarShareInfoOptions
+    spec.typeScript:
+      - name: GetCarShareInfoOptions
+        fullName: GetCarShareInfoOptions
+        uid: azure-maps-rest.atlas.service.GetCarShareInfoOptions
+  - uid: Promise<azure-maps-rest.atlas.service.GetCarShareInfoResponse>
+    name: GetCarShareInfoResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetCarShareInfoResponse
+        fullName: GetCarShareInfoResponse
+        uid: azure-maps-rest.atlas.service.GetCarShareInfoResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.atlas.service.GetMetroAreaOptions
+    name: GetMetroAreaOptions
+    spec.typeScript:
+      - name: GetMetroAreaOptions
+        fullName: GetMetroAreaOptions
+        uid: azure-maps-rest.atlas.service.GetMetroAreaOptions
+  - uid: Promise<azure-maps-rest.atlas.service.GetMetroAreaResponse>
+    name: GetMetroAreaResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetMetroAreaResponse
+        fullName: GetMetroAreaResponse
+        uid: azure-maps-rest.atlas.service.GetMetroAreaResponse
+      - name: '>'
+        fullName: '>'
+  - uid: 'azure-maps-rest.atlas.service.Models.MetroAreaDetailType[]'
+    name: 'MetroAreaDetailType[]'
+    spec.typeScript:
+      - name: MetroAreaDetailType
+        fullName: MetroAreaDetailType
+        uid: azure-maps-rest.atlas.service.Models.MetroAreaDetailType
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-rest.atlas.service.GetMetroAreaInfoOptions
+    name: GetMetroAreaInfoOptions
+    spec.typeScript:
+      - name: GetMetroAreaInfoOptions
+        fullName: GetMetroAreaInfoOptions
+        uid: azure-maps-rest.atlas.service.GetMetroAreaInfoOptions
+  - uid: Promise<azure-maps-rest.atlas.service.GetMetroAreaInfoResponse>
+    name: GetMetroAreaInfoResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetMetroAreaInfoResponse
+        fullName: GetMetroAreaInfoResponse
+        uid: azure-maps-rest.atlas.service.GetMetroAreaInfoResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.atlas.service.GetNearbyTransitOptions
+    name: GetNearbyTransitOptions
+    spec.typeScript:
+      - name: GetNearbyTransitOptions
+        fullName: GetNearbyTransitOptions
+        uid: azure-maps-rest.atlas.service.GetNearbyTransitOptions
+  - uid: Promise<azure-maps-rest.atlas.service.GetNearbyTransitResponse>
+    name: GetNearbyTransitResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetNearbyTransitResponse
+        fullName: GetNearbyTransitResponse
+        uid: azure-maps-rest.atlas.service.GetNearbyTransitResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.atlas.service.GetRealTimeArrivalsOptions
+    name: GetRealTimeArrivalsOptions
+    spec.typeScript:
+      - name: GetRealTimeArrivalsOptions
+        fullName: GetRealTimeArrivalsOptions
+        uid: azure-maps-rest.atlas.service.GetRealTimeArrivalsOptions
+  - uid: Promise<azure-maps-rest.atlas.service.GetRealTimeArrivalsResponse>
+    name: GetRealTimeArrivalsResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetRealTimeArrivalsResponse
+        fullName: GetRealTimeArrivalsResponse
+        uid: azure-maps-rest.atlas.service.GetRealTimeArrivalsResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.atlas.service.GetTransitDockInfoOptions
+    name: GetTransitDockInfoOptions
+    spec.typeScript:
+      - name: GetTransitDockInfoOptions
+        fullName: GetTransitDockInfoOptions
+        uid: azure-maps-rest.atlas.service.GetTransitDockInfoOptions
+  - uid: Promise<azure-maps-rest.atlas.service.GetTransitDockInfoResponse>
+    name: GetTransitDockInfoResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetTransitDockInfoResponse
+        fullName: GetTransitDockInfoResponse
+        uid: azure-maps-rest.atlas.service.GetTransitDockInfoResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.atlas.service.GetTransitItineraryOptions
+    name: GetTransitItineraryOptions
+    spec.typeScript:
+      - name: GetTransitItineraryOptions
+        fullName: GetTransitItineraryOptions
+        uid: azure-maps-rest.atlas.service.GetTransitItineraryOptions
+  - uid: Promise<azure-maps-rest.atlas.service.GetTransitItineraryResponse>
+    name: GetTransitItineraryResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetTransitItineraryResponse
+        fullName: GetTransitItineraryResponse
+        uid: azure-maps-rest.atlas.service.GetTransitItineraryResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.atlas.service.GetTransitLineInfoOptions
+    name: GetTransitLineInfoOptions
+    spec.typeScript:
+      - name: GetTransitLineInfoOptions
+        fullName: GetTransitLineInfoOptions
+        uid: azure-maps-rest.atlas.service.GetTransitLineInfoOptions
+  - uid: Promise<azure-maps-rest.atlas.service.GetTransitLineInfoResponse>
+    name: GetTransitLineInfoResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetTransitLineInfoResponse
+        fullName: GetTransitLineInfoResponse
+        uid: azure-maps-rest.atlas.service.GetTransitLineInfoResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.atlas.service.GetTransitRouteOptions
+    name: GetTransitRouteOptions
+    spec.typeScript:
+      - name: GetTransitRouteOptions
+        fullName: GetTransitRouteOptions
+        uid: azure-maps-rest.atlas.service.GetTransitRouteOptions
+  - uid: Promise<azure-maps-rest.atlas.service.GetTransitRouteResponse>
+    name: GetTransitRouteResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetTransitRouteResponse
+        fullName: GetTransitRouteResponse
+        uid: azure-maps-rest.atlas.service.GetTransitRouteResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.atlas.service.GetTransitStopInfoOptions
+    name: GetTransitStopInfoOptions
+    spec.typeScript:
+      - name: GetTransitStopInfoOptions
+        fullName: GetTransitStopInfoOptions
+        uid: azure-maps-rest.atlas.service.GetTransitStopInfoOptions
+  - uid: Promise<azure-maps-rest.atlas.service.GetTransitStopInfoResponse>
+    name: GetTransitStopInfoResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetTransitStopInfoResponse
+        fullName: GetTransitStopInfoResponse
+        uid: azure-maps-rest.atlas.service.GetTransitStopInfoResponse
+      - name: '>'
+        fullName: '>'
   - uid: 'azure-maps-rest.atlas.service.RequestPolicyFactory[]'
     name: 'RequestPolicyFactory[]'
     spec.typeScript:
@@ -743,18 +1729,42 @@ references:
       - name: IPipelineOptions
         fullName: IPipelineOptions
         uid: azure-maps-rest.atlas.service.IPipelineOptions
+  - uid: azure-maps-rest.atlas.service.GetMapImageOptions
+    name: GetMapImageOptions
+    spec.typeScript:
+      - name: GetMapImageOptions
+        fullName: GetMapImageOptions
+        uid: azure-maps-rest.atlas.service.GetMapImageOptions
+  - uid: azure-maps-rest.atlas.service.Models.TileFormat
+    name: TileFormat
+    spec.typeScript:
+      - name: TileFormat
+        fullName: TileFormat
+        uid: azure-maps-rest.atlas.service.Models.TileFormat
+  - uid: azure-maps-rest.atlas.service.Models.MapTileLayer
+    name: MapTileLayer
+    spec.typeScript:
+      - name: MapTileLayer
+        fullName: MapTileLayer
+        uid: azure-maps-rest.atlas.service.Models.MapTileLayer
+  - uid: azure-maps-rest.atlas.service.Models.MapTileStyle
+    name: MapTileStyle
+    spec.typeScript:
+      - name: MapTileStyle
+        fullName: MapTileStyle
+        uid: azure-maps-rest.atlas.service.Models.MapTileStyle
+  - uid: azure-maps-rest.atlas.service.GetMapTileOptions
+    name: GetMapTileOptions
+    spec.typeScript:
+      - name: GetMapTileOptions
+        fullName: GetMapTileOptions
+        uid: azure-maps-rest.atlas.service.GetMapTileOptions
   - uid: azure-maps-rest.atlas.service.IRetryOptions
     name: IRetryOptions
     spec.typeScript:
       - name: IRetryOptions
         fullName: IRetryOptions
         uid: azure-maps-rest.atlas.service.IRetryOptions
-  - uid: azure-maps-rest.atlas.service.MapsURL
-    name: MapsURL
-    spec.typeScript:
-      - name: MapsURL
-        fullName: MapsURL
-        uid: azure-maps-rest.atlas.service.MapsURL
   - uid: azure-maps-rest.atlas.service.CalculateRouteDirectionsOptions
     name: CalculateRouteDirectionsOptions
     spec.typeScript:
@@ -769,6 +1779,44 @@ references:
       - name: CalculateRouteDirectionsResponse
         fullName: CalculateRouteDirectionsResponse
         uid: azure-maps-rest.atlas.service.CalculateRouteDirectionsResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.atlas.service.CalculateRouteMatrixRequestBody
+    name: CalculateRouteMatrixRequestBody
+    spec.typeScript:
+      - name: CalculateRouteMatrixRequestBody
+        fullName: CalculateRouteMatrixRequestBody
+        uid: azure-maps-rest.atlas.service.CalculateRouteMatrixRequestBody
+  - uid: azure-maps-rest.atlas.service.CalculateRouteMatrixOptions
+    name: CalculateRouteMatrixOptions
+    spec.typeScript:
+      - name: CalculateRouteMatrixOptions
+        fullName: CalculateRouteMatrixOptions
+        uid: azure-maps-rest.atlas.service.CalculateRouteMatrixOptions
+  - uid: Promise<azure-maps-rest.atlas.service.CalculateRouteMatrixResponse>
+    name: CalculateRouteMatrixResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: CalculateRouteMatrixResponse
+        fullName: CalculateRouteMatrixResponse
+        uid: azure-maps-rest.atlas.service.CalculateRouteMatrixResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.atlas.service.CalculateRouteRangeOptions
+    name: CalculateRouteRangeOptions
+    spec.typeScript:
+      - name: CalculateRouteRangeOptions
+        fullName: CalculateRouteRangeOptions
+        uid: azure-maps-rest.atlas.service.CalculateRouteRangeOptions
+  - uid: Promise<azure-maps-rest.atlas.service.CalculateRouteRangeResponse>
+    name: CalculateRouteRangeResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: CalculateRouteRangeResponse
+        fullName: CalculateRouteRangeResponse
+        uid: azure-maps-rest.atlas.service.CalculateRouteRangeResponse
       - name: '>'
         fullName: '>'
   - uid: azure-maps-rest.atlas.service.SearchAddressOptions
@@ -944,12 +1992,124 @@ references:
         uid: azure-maps-rest.atlas.service.SearchPOICategoryResponse
       - name: '>'
         fullName: '>'
+  - uid: Promise<azure-maps-rest.atlas.service.SearchPolygonResponse>
+    name: SearchPolygonResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SearchPolygonResponse
+        fullName: SearchPolygonResponse
+        uid: azure-maps-rest.atlas.service.SearchPolygonResponse
+      - name: '>'
+        fullName: '>'
+  - uid: string | azure-maps-rest.atlas.service.SpatialFeatureCollection
+    name: SpatialFeatureCollection
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: SpatialFeatureCollection
+        fullName: SpatialFeatureCollection
+        uid: azure-maps-rest.atlas.service.SpatialFeatureCollection
+  - uid: Promise<azure-maps-rest.atlas.service.GetBufferResponse>
+    name: GetBufferResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetBufferResponse
+        fullName: GetBufferResponse
+        uid: azure-maps-rest.atlas.service.GetBufferResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.atlas.service.GetClosestPointOptions
+    name: GetClosestPointOptions
+    spec.typeScript:
+      - name: GetClosestPointOptions
+        fullName: GetClosestPointOptions
+        uid: azure-maps-rest.atlas.service.GetClosestPointOptions
+  - uid: Promise<azure-maps-rest.atlas.service.GetClosesPointResponse>
+    name: GetClosesPointResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetClosesPointResponse
+        fullName: GetClosesPointResponse
+        uid: azure-maps-rest.atlas.service.GetClosesPointResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.atlas.service.GetGeofenceOptions
+    name: GetGeofenceOptions
+    spec.typeScript:
+      - name: GetGeofenceOptions
+        fullName: GetGeofenceOptions
+        uid: azure-maps-rest.atlas.service.GetGeofenceOptions
+  - uid: Promise<azure-maps-rest.atlas.service.GetGeofenceResponse>
+    name: GetGeofenceResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetGeofenceResponse
+        fullName: GetGeofenceResponse
+        uid: azure-maps-rest.atlas.service.GetGeofenceResponse
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<azure-maps-rest.atlas.service.GetGreatCircleDistance>
+    name: GetGreatCircleDistance>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetGreatCircleDistance
+        fullName: GetGreatCircleDistance
+        uid: azure-maps-rest.atlas.service.GetGreatCircleDistance
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<azure-maps-rest.atlas.service.GetPointInPolygonResponse>
+    name: GetPointInPolygonResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetPointInPolygonResponse
+        fullName: GetPointInPolygonResponse
+        uid: azure-maps-rest.atlas.service.GetPointInPolygonResponse
+      - name: '>'
+        fullName: '>'
   - uid: azure-maps-rest.atlas.service.SubscriptionKeyCredentialPolicy
     name: SubscriptionKeyCredentialPolicy
     spec.typeScript:
       - name: SubscriptionKeyCredentialPolicy
         fullName: SubscriptionKeyCredentialPolicy
         uid: azure-maps-rest.atlas.service.SubscriptionKeyCredentialPolicy
+  - uid: azure-maps-rest.atlas.service.GetTimezoneByCoordinatesOptions
+    name: GetTimezoneByCoordinatesOptions
+    spec.typeScript:
+      - name: GetTimezoneByCoordinatesOptions
+        fullName: GetTimezoneByCoordinatesOptions
+        uid: azure-maps-rest.atlas.service.GetTimezoneByCoordinatesOptions
+  - uid: Promise<azure-maps-rest.atlas.service.GetTimezoneByCoordinatesResponse>
+    name: GetTimezoneByCoordinatesResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetTimezoneByCoordinatesResponse
+        fullName: GetTimezoneByCoordinatesResponse
+        uid: azure-maps-rest.atlas.service.GetTimezoneByCoordinatesResponse
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-rest.atlas.service.GetTimezoneByIdOptions
+    name: GetTimezoneByIdOptions
+    spec.typeScript:
+      - name: GetTimezoneByIdOptions
+        fullName: GetTimezoneByIdOptions
+        uid: azure-maps-rest.atlas.service.GetTimezoneByIdOptions
+  - uid: Promise<azure-maps-rest.atlas.service.GetTimezoneByIdResponse>
+    name: GetTimezoneByIdResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetTimezoneByIdResponse
+        fullName: GetTimezoneByIdResponse
+        uid: azure-maps-rest.atlas.service.GetTimezoneByIdResponse
+      - name: '>'
+        fullName: '>'
   - uid: azure-maps-rest.atlas.service.TokenCredentialPolicy
     name: TokenCredentialPolicy
     spec.typeScript:
@@ -998,18 +2158,180 @@ references:
       - name: AuthenticationManager
         fullName: AuthenticationManager
         uid: azure-maps-rest.atlas.AuthenticationManager
+  - uid: azure-maps-rest.atlas.service.Models.Agency
+    name: Agency
+  - uid: azure-maps-rest.atlas.service.Models.Alert
+    name: Alert
   - uid: azure-maps-rest.atlas.service.Models.BatchRequestBody
     name: BatchRequestBody
   - uid: azure-maps-rest.atlas.service.Models.BatchRequestBodyBatchItemsItem
     name: BatchRequestBodyBatchItemsItem
   - uid: azure-maps-rest.atlas.service.Models.BatchResponse
     name: BatchResponse
+  - uid: azure-maps-rest.atlas.service.Models.BufferRequestBody
+    name: BufferRequestBody
+  - uid: azure-maps-rest.atlas.service.Models.BufferResponse
+    name: BufferResponse
+  - uid: azure-maps-rest.atlas.service.Models.CarShareResponse
+    name: CarShareResponse
+  - uid: azure-maps-rest.atlas.service.Models.ClosestPointResultEntry
+    name: ClosestPointResultEntry
+  - uid: azure-maps-rest.atlas.service.Models.ConnectorSet
+    name: ConnectorSet
+  - uid: azure-maps-rest.atlas.service.Models.CopyrightBoundingResult
+    name: CopyrightBoundingResult
+  - uid: azure-maps-rest.atlas.service.Models.CopyrightCaptionResult
+    name: CopyrightCaptionResult
+  - uid: azure-maps-rest.atlas.service.Models.CopyrightTileResult
+    name: CopyrightTileResult
+  - uid: azure-maps-rest.atlas.service.Models.CopyrightWorldResult
+    name: CopyrightWorldResult
+  - uid: azure-maps-rest.atlas.service.Models.Country
+    name: Country
   - uid: azure-maps-rest.atlas.service.Models.ErrorResponse
     name: ErrorResponse
-  - uid: azure-maps-rest.atlas.service.Models.GeoJSONPoint
-    name: GeoJSONPoint
+  - uid: azure-maps-rest.atlas.service.Models.GeofenceGeometry
+    name: GeofenceGeometry
+  - uid: azure-maps-rest.atlas.service.Models.GeofenceResponse
+    name: GeofenceResponse
+  - uid: azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollectionFeaturesItem
+    name: GeoJSONFeatureCollectionFeaturesItem
+  - uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometry
+    name: GeoJSONGeometry
+  - uid: azure-maps-rest.atlas.service.Models.GetClosestPointResponse
+    name: GetClosestPointResponse
+  - uid: azure-maps-rest.atlas.service.Models.GetPointInPolygonResponse
+    name: GetPointInPolygonResponse
+  - uid: azure-maps-rest.atlas.service.Models.GreatCircleDistanceResponse
+    name: GreatCircleDistanceResponse
+  - uid: azure-maps-rest.atlas.service.Models.IanaId
+    name: IanaId
+  - uid: azure-maps-rest.atlas.service.Models.ItineraryResult
+    name: ItineraryResult
+  - uid: azure-maps-rest.atlas.service.Models.Leg
+    name: Leg
   - uid: azure-maps-rest.atlas.service.Models.MapsClientOptions
     name: MapsClientOptions
+  - uid: azure-maps-rest.atlas.service.Models.MetroAreaDetailType
+    name: MetroAreaDetailType
+  - uid: azure-maps-rest.atlas.service.Models.MetroAreaInfoResponse
+    name: MetroAreaInfoResponse
+  - uid: azure-maps-rest.atlas.service.Models.MetroAreaResponse
+    name: MetroAreaResponse
+  - uid: azure-maps-rest.atlas.service.Models.MetroAreaResult
+    name: MetroAreaResult
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetCarShareInfoPreviewOptionalParams
+    name: MobilityGetCarShareInfoPreviewOptionalParams
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetCarShareInfoPreviewResponse
+    name: MobilityGetCarShareInfoPreviewResponse
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetMetroAreaInfoPreviewOptionalParams
+    name: MobilityGetMetroAreaInfoPreviewOptionalParams
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetMetroAreaInfoPreviewResponse
+    name: MobilityGetMetroAreaInfoPreviewResponse
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetMetroAreaPreviewOptionalParams
+    name: MobilityGetMetroAreaPreviewOptionalParams
+  - uid: azure-maps-rest.atlas.service.Models.MobilityGetMetroAreaPreviewResponse
+    name: MobilityGetMetroAreaPreviewResponse
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetNearbyTransitPreviewOptionalParams
+    name: MobilityGetNearbyTransitPreviewOptionalParams
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetNearbyTransitPreviewResponse
+    name: MobilityGetNearbyTransitPreviewResponse
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetRealTimeArrivalsPreviewOptionalParams
+    name: MobilityGetRealTimeArrivalsPreviewOptionalParams
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetRealTimeArrivalsPreviewResponse
+    name: MobilityGetRealTimeArrivalsPreviewResponse
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetTransitDockInfoPreviewOptionalParams
+    name: MobilityGetTransitDockInfoPreviewOptionalParams
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetTransitDockInfoPreviewResponse
+    name: MobilityGetTransitDockInfoPreviewResponse
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetTransitItineraryPreviewOptionalParams
+    name: MobilityGetTransitItineraryPreviewOptionalParams
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetTransitItineraryPreviewResponse
+    name: MobilityGetTransitItineraryPreviewResponse
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetTransitLineInfoPreviewOptionalParams
+    name: MobilityGetTransitLineInfoPreviewOptionalParams
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetTransitLineInfoPreviewResponse
+    name: MobilityGetTransitLineInfoPreviewResponse
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetTransitRoutePreviewOptionalParams
+    name: MobilityGetTransitRoutePreviewOptionalParams
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetTransitRoutePreviewResponse
+    name: MobilityGetTransitRoutePreviewResponse
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetTransitStopInfoPreviewOptionalParams
+    name: MobilityGetTransitStopInfoPreviewOptionalParams
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetTransitStopInfoPreviewResponse
+    name: MobilityGetTransitStopInfoPreviewResponse
+  - uid: azure-maps-rest.atlas.service.Models.ModeType
+    name: ModeType
+  - uid: azure-maps-rest.atlas.service.Models.MultiLineString
+    name: MultiLineString
+  - uid: azure-maps-rest.atlas.service.Models.NearbyTransitResponse
+    name: NearbyTransitResponse
+  - uid: azure-maps-rest.atlas.service.Models.ObjectType
+    name: ObjectType
+  - uid: azure-maps-rest.atlas.service.Models.Pattern
+    name: Pattern
+  - uid: azure-maps-rest.atlas.service.Models.Point
+    name: Point
+  - uid: azure-maps-rest.atlas.service.Models.PostClosestPointResponse
+    name: PostClosestPointResponse
+  - uid: azure-maps-rest.atlas.service.Models.PostPointInPolygonResponse
+    name: PostPointInPolygonResponse
+  - uid: azure-maps-rest.atlas.service.Models.RealTimeArrivalResult
+    name: RealTimeArrivalResult
+  - uid: azure-maps-rest.atlas.service.Models.RealTimeArrivalsResponse
+    name: RealTimeArrivalsResponse
+  - uid: azure-maps-rest.atlas.service.Models.Region
+    name: Region
+  - uid: azure-maps-rest.atlas.service.Models.RenderGetCopyrightCaptionResponse
+    name: RenderGetCopyrightCaptionResponse
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RenderGetCopyrightForTileOptionalParams
+    name: RenderGetCopyrightForTileOptionalParams
+  - uid: azure-maps-rest.atlas.service.Models.RenderGetCopyrightForTileResponse
+    name: RenderGetCopyrightForTileResponse
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RenderGetCopyrightForWorldOptionalParams
+    name: RenderGetCopyrightForWorldOptionalParams
+  - uid: azure-maps-rest.atlas.service.Models.RenderGetCopyrightForWorldResponse
+    name: RenderGetCopyrightForWorldResponse
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RenderGetCopyrightFromBoundingBoxOptionalParams
+    name: RenderGetCopyrightFromBoundingBoxOptionalParams
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RenderGetCopyrightFromBoundingBoxResponse
+    name: RenderGetCopyrightFromBoundingBoxResponse
+  - uid: azure-maps-rest.atlas.service.Models.RenderGetMapImageOptionalParams
+    name: RenderGetMapImageOptionalParams
+  - uid: azure-maps-rest.atlas.service.Models.RenderGetMapImageResponse
+    name: RenderGetMapImageResponse
+  - uid: azure-maps-rest.atlas.service.Models.RenderGetMapImageryTileResponse
+    name: RenderGetMapImageryTileResponse
+  - uid: azure-maps-rest.atlas.service.Models.RenderGetMapTileOptionalParams
+    name: RenderGetMapTileOptionalParams
+  - uid: azure-maps-rest.atlas.service.Models.RenderGetMapTileResponse
+    name: RenderGetMapTileResponse
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams
+    name: RouteBeginPostRouteMatrixPreviewOptionalParams
   - uid: azure-maps-rest.atlas.service.Models.RouteDirectionsRequestBody
     name: RouteDirectionsRequestBody
   - uid: azure-maps-rest.atlas.service.Models.RouteDirectionsResponse
@@ -1024,6 +2346,8 @@ references:
     name: RouteGetRouteRangeOptionalParams
   - uid: azure-maps-rest.atlas.service.Models.RouteGetRouteRangeResponse
     name: RouteGetRouteRangeResponse
+  - uid: azure-maps-rest.atlas.service.Models.RouteItineraryLeg
+    name: RouteItineraryLeg
   - uid: azure-maps-rest.atlas.service.Models.RouteMatrixRequestBody
     name: RouteMatrixRequestBody
   - uid: azure-maps-rest.atlas.service.Models.RouteMatrixResponse
@@ -1033,10 +2357,23 @@ references:
   - uid: azure-maps-rest.atlas.service.Models.RouteOptimizedWaypoint
     name: RouteOptimizedWaypoint
   - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsBatchPreviewHeaders
+    name: RoutePostRouteDirectionsBatchPreviewHeaders
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsBatchPreviewResponse
+    name: RoutePostRouteDirectionsBatchPreviewResponse
+  - uid: >-
       azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsOptionalParams
     name: RoutePostRouteDirectionsOptionalParams
   - uid: azure-maps-rest.atlas.service.Models.RoutePostRouteDirectionsResponse
     name: RoutePostRouteDirectionsResponse
+  - uid: azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewHeaders
+    name: RoutePostRouteMatrixPreviewHeaders
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewOptionalParams
+    name: RoutePostRouteMatrixPreviewOptionalParams
+  - uid: azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewResponse
+    name: RoutePostRouteMatrixPreviewResponse
   - uid: azure-maps-rest.atlas.service.Models.RouteRangeResponse
     name: RouteRangeResponse
   - uid: azure-maps-rest.atlas.service.Models.RouteResponseReportEffectiveSetting
@@ -1139,10 +2476,28 @@ references:
   - uid: azure-maps-rest.atlas.service.Models.SearchPolygonResult
     name: SearchPolygonResult
   - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchPostSearchAddressBatchPreviewHeaders
+    name: SearchPostSearchAddressBatchPreviewHeaders
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchPostSearchAddressBatchPreviewResponse
+    name: SearchPostSearchAddressBatchPreviewResponse
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchPostSearchAddressReverseBatchPreviewHeaders
+    name: SearchPostSearchAddressReverseBatchPreviewHeaders
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchPostSearchAddressReverseBatchPreviewResponse
+    name: SearchPostSearchAddressReverseBatchPreviewResponse
+  - uid: >-
       azure-maps-rest.atlas.service.Models.SearchPostSearchAlongRouteOptionalParams
     name: SearchPostSearchAlongRouteOptionalParams
   - uid: azure-maps-rest.atlas.service.Models.SearchPostSearchAlongRouteResponse
     name: SearchPostSearchAlongRouteResponse
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchPostSearchFuzzyBatchPreviewHeaders
+    name: SearchPostSearchFuzzyBatchPreviewHeaders
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.SearchPostSearchFuzzyBatchPreviewResponse
+    name: SearchPostSearchFuzzyBatchPreviewResponse
   - uid: >-
       azure-maps-rest.atlas.service.Models.SearchPostSearchInsideGeometryOptionalParams
     name: SearchPostSearchInsideGeometryOptionalParams
@@ -1151,7 +2506,103 @@ references:
     name: SearchPostSearchInsideGeometryResponse
   - uid: azure-maps-rest.atlas.service.Models.SearchResultEntryPoint
     name: SearchResultEntryPoint
+  - uid: azure-maps-rest.atlas.service.Models.SearchResultPoiBrand
+    name: SearchResultPoiBrand
   - uid: azure-maps-rest.atlas.service.Models.SearchResultPoiClassification
     name: SearchResultPoiClassification
   - uid: azure-maps-rest.atlas.service.Models.SearchResultPoiClassificationName
     name: SearchResultPoiClassificationName
+  - uid: azure-maps-rest.atlas.service.Models.SpatialGetBufferResponse
+    name: SpatialGetBufferResponse
+  - uid: azure-maps-rest.atlas.service.Models.SpatialGetClosestPointOptionalParams
+    name: SpatialGetClosestPointOptionalParams
+  - uid: azure-maps-rest.atlas.service.Models.SpatialGetClosestPointResponse
+    name: SpatialGetClosestPointResponse
+  - uid: azure-maps-rest.atlas.service.Models.SpatialGetGeofenceHeaders
+    name: SpatialGetGeofenceHeaders
+  - uid: azure-maps-rest.atlas.service.Models.SpatialGetGeofenceOptionalParams
+    name: SpatialGetGeofenceOptionalParams
+  - uid: azure-maps-rest.atlas.service.Models.SpatialGetGeofenceResponse
+    name: SpatialGetGeofenceResponse
+  - uid: azure-maps-rest.atlas.service.Models.SpatialGetGreatCircleDistanceResponse
+    name: SpatialGetGreatCircleDistanceResponse
+  - uid: azure-maps-rest.atlas.service.Models.SpatialGetPointInPolygonResponse
+    name: SpatialGetPointInPolygonResponse
+  - uid: azure-maps-rest.atlas.service.Models.SpatialPostBufferResponse
+    name: SpatialPostBufferResponse
+  - uid: azure-maps-rest.atlas.service.Models.SpatialPostClosestPointOptionalParams
+    name: SpatialPostClosestPointOptionalParams
+  - uid: azure-maps-rest.atlas.service.Models.SpatialPostClosestPointResponse
+    name: SpatialPostClosestPointResponse
+  - uid: azure-maps-rest.atlas.service.Models.SpatialPostGeofenceHeaders
+    name: SpatialPostGeofenceHeaders
+  - uid: azure-maps-rest.atlas.service.Models.SpatialPostGeofenceOptionalParams
+    name: SpatialPostGeofenceOptionalParams
+  - uid: azure-maps-rest.atlas.service.Models.SpatialPostGeofenceResponse
+    name: SpatialPostGeofenceResponse
+  - uid: azure-maps-rest.atlas.service.Models.SpatialPostPointInPolygonResponse
+    name: SpatialPostPointInPolygonResponse
+  - uid: azure-maps-rest.atlas.service.Models.Step
+    name: Step
+  - uid: azure-maps-rest.atlas.service.Models.TimeTransition
+    name: TimeTransition
+  - uid: azure-maps-rest.atlas.service.Models.TimeZoneByCoordinates
+    name: TimeZoneByCoordinates
+  - uid: azure-maps-rest.atlas.service.Models.TimezoneByCoordinatesResult
+    name: TimezoneByCoordinatesResult
+  - uid: azure-maps-rest.atlas.service.Models.TimezoneById
+    name: TimezoneById
+  - uid: azure-maps-rest.atlas.service.Models.TimezoneByIdResult
+    name: TimezoneByIdResult
+  - uid: azure-maps-rest.atlas.service.Models.TimezoneEnumWindow
+    name: TimezoneEnumWindow
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneByCoordinatesOptionalParams
+    name: TimezoneGetTimezoneByCoordinatesOptionalParams
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneByCoordinatesResponse
+    name: TimezoneGetTimezoneByCoordinatesResponse
+  - uid: azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneByIDOptionalParams
+    name: TimezoneGetTimezoneByIDOptionalParams
+  - uid: azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneByIDResponse
+    name: TimezoneGetTimezoneByIDResponse
+  - uid: azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneEnumIANAResponse
+    name: TimezoneGetTimezoneEnumIANAResponse
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneEnumWindowsResponse
+    name: TimezoneGetTimezoneEnumWindowsResponse
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneIANAVersionResponse
+    name: TimezoneGetTimezoneIANAVersionResponse
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneWindowsToIANAOptionalParams
+    name: TimezoneGetTimezoneWindowsToIANAOptionalParams
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneWindowsToIANAResponse
+    name: TimezoneGetTimezoneWindowsToIANAResponse
+  - uid: azure-maps-rest.atlas.service.Models.TimezoneIanaVersionResult
+    name: TimezoneIanaVersionResult
+  - uid: azure-maps-rest.atlas.service.Models.TransitDockInfoResponse
+    name: TransitDockInfoResponse
+  - uid: azure-maps-rest.atlas.service.Models.TransitItineraryDetailType
+    name: TransitItineraryDetailType
+  - uid: azure-maps-rest.atlas.service.Models.TransitItineraryResponse
+    name: TransitItineraryResponse
+  - uid: azure-maps-rest.atlas.service.Models.TransitLineDetailType
+    name: TransitLineDetailType
+  - uid: azure-maps-rest.atlas.service.Models.TransitLineInfoResponse
+    name: TransitLineInfoResponse
+  - uid: azure-maps-rest.atlas.service.Models.TransitObjectResult
+    name: TransitObjectResult
+  - uid: azure-maps-rest.atlas.service.Models.TransitRouteResponse
+    name: TransitRouteResponse
+  - uid: azure-maps-rest.atlas.service.Models.TransitStopDetailType
+    name: TransitStopDetailType
+  - uid: azure-maps-rest.atlas.service.Models.TransitStopInfoResponse
+    name: TransitStopInfoResponse
+  - uid: azure-maps-rest.atlas.service.Models.TransitTypeFilter
+    name: TransitTypeFilter
+  - uid: azure-maps-rest.atlas.service.Models.UploadDataAcceptedResponse
+    name: UploadDataAcceptedResponse
+  - uid: azure-maps-rest.atlas.service.Models.UploadDataResponse
+    name: UploadDataResponse

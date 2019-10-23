@@ -6,6 +6,7 @@ items:
     children:
       - azure-maps-control.atlas.Shape.addProperty
       - azure-maps-control.atlas.Shape.getBounds
+      - azure-maps-control.atlas.Shape.getCircleCoordinates
       - azure-maps-control.atlas.Shape.getCoordinates
       - azure-maps-control.atlas.Shape.getId
       - azure-maps-control.atlas.Shape.getProperties
@@ -60,6 +61,22 @@ items:
       return:
         type:
           - azure-maps-control.atlas.data.BoundingBox
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Shape.getCircleCoordinates
+    name: getCircleCoordinates()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      If the shape is a circle, this gets its coordinates. Otherwise returns
+      null.
+    syntax:
+      content: function getCircleCoordinates()
+      parameters: []
+      return:
+        type:
+          - 'azure-maps-control.atlas.data.Position[]'
     package: azure-maps-control
   - uid: azure-maps-control.atlas.Shape.getCoordinates
     name: getCoordinates()
@@ -1503,16 +1520,11 @@ references:
       - name: ControlPosition
         fullName: ControlPosition
         uid: azure-maps-control.atlas.ControlPosition
-  - uid: >-
-      azure-maps-control.Dictionary<string,
-      azure-maps-control.atlas.AggregateExpression>
+  - uid: 'Record<string, azure-maps-control.atlas.AggregateExpression>'
     name: AggregateExpression>
     spec.typeScript:
-      - name: Dictionary
-        fullName: Dictionary
-        uid: azure-maps-control.Dictionary
-      - name: '<string, '
-        fullName: '<string, '
+      - name: 'Record<string, '
+        fullName: 'Record<string, '
       - name: AggregateExpression
         fullName: AggregateExpression
         uid: azure-maps-control.atlas.AggregateExpression

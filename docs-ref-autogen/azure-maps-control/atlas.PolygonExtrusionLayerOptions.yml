@@ -16,6 +16,7 @@ items:
       - azure-maps-control.atlas.PolygonExtrusionLayerOptions.sourceLayer
       - azure-maps-control.atlas.PolygonExtrusionLayerOptions.translate
       - azure-maps-control.atlas.PolygonExtrusionLayerOptions.translateAnchor
+      - azure-maps-control.atlas.PolygonExtrusionLayerOptions.verticalGradient
       - azure-maps-control.atlas.PolygonExtrusionLayerOptions.visible
     langs:
       - typeScript
@@ -35,6 +36,7 @@ items:
     type: property
     summary: |-
       The height in meters to extrude the base of this layer.
+      This height is relative to the ground.
       Must be greater or equal to 0 and less than or equal to `height`.
       Default `0`.
     optional: true
@@ -126,6 +128,7 @@ items:
     type: property
     summary: |-
       The height in meters to extrude this layer.
+      This height is relative to the ground.
       Must be a number greater or equal to 0.
       Default `0`
     optional: true
@@ -249,6 +252,25 @@ items:
       return:
         type:
           - '"map" | "viewport"'
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.verticalGradient
+    name: verticalGradient
+    fullName: verticalGradient
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Specifies if the polygon should have a vertical gradient on the sides of
+      the extrusion.
+
+      Default: `true`
+    optional: true
+    syntax:
+      content: 'verticalGradient?: boolean'
+      return:
+        type:
+          - boolean
     package: azure-maps-control
   - uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.visible
     name: visible
@@ -1507,16 +1529,11 @@ references:
       - name: ControlPosition
         fullName: ControlPosition
         uid: azure-maps-control.atlas.ControlPosition
-  - uid: >-
-      azure-maps-control.Dictionary<string,
-      azure-maps-control.atlas.AggregateExpression>
+  - uid: 'Record<string, azure-maps-control.atlas.AggregateExpression>'
     name: AggregateExpression>
     spec.typeScript:
-      - name: Dictionary
-        fullName: Dictionary
-        uid: azure-maps-control.Dictionary
-      - name: '<string, '
-        fullName: '<string, '
+      - name: 'Record<string, '
+        fullName: 'Record<string, '
       - name: AggregateExpression
         fullName: AggregateExpression
         uid: azure-maps-control.atlas.AggregateExpression

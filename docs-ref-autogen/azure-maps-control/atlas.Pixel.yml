@@ -12,7 +12,9 @@ items:
       - azure-maps-control.atlas.Pixel.filter_1
       - azure-maps-control.atlas.Pixel.forEach
       - azure-maps-control.atlas.Pixel.fromData
+      - azure-maps-control.atlas.Pixel.getDestination
       - azure-maps-control.atlas.Pixel.getDistance
+      - azure-maps-control.atlas.Pixel.getHeading
       - azure-maps-control.atlas.Pixel.getX
       - azure-maps-control.atlas.Pixel.getY
       - azure-maps-control.atlas.Pixel.indexOf
@@ -245,6 +247,38 @@ items:
         type:
           - azure-maps-control.atlas.Pixel
     package: azure-maps-control
+  - uid: azure-maps-control.atlas.Pixel.getDestination
+    name: 'getDestination(Pixel, number, number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Calculates a destination pixel given an origin pixel,
+      a heading relative to the y-axis (0 = north),
+      and a distance in pixel units.
+    syntax:
+      content: >-
+        static function getDestination(origin: Pixel, heading: number, distance:
+        number)
+      parameters:
+        - id: origin
+          type:
+            - azure-maps-control.atlas.Pixel
+          description: The starting pixel.
+        - id: heading
+          type:
+            - number
+          description: The heading at which to move away from the origin pixel.
+        - id: distance
+          type:
+            - number
+          description: |
+            The distance to move from the origin pixel.
+      return:
+        type:
+          - azure-maps-control.atlas.Pixel
+    package: azure-maps-control
   - uid: azure-maps-control.atlas.Pixel.getDistance
     name: 'getDistance(Pixel, Pixel)'
     children: []
@@ -266,6 +300,29 @@ items:
             - azure-maps-control.atlas.Pixel
           description: |
             The second pixel.
+      return:
+        type:
+          - number
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Pixel.getHeading
+    name: 'getHeading(Pixel, Pixel)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Calculates the heading between two pixels.
+    syntax:
+      content: 'static function getHeading(origin: Pixel, destination: Pixel)'
+      parameters:
+        - id: origin
+          type:
+            - azure-maps-control.atlas.Pixel
+          description: The pixel the heading will point away from.
+        - id: destination
+          type:
+            - azure-maps-control.atlas.Pixel
+          description: |
+            The pixel the heading will point toward.
       return:
         type:
           - number
@@ -2142,16 +2199,11 @@ references:
       - name: ControlPosition
         fullName: ControlPosition
         uid: azure-maps-control.atlas.ControlPosition
-  - uid: >-
-      azure-maps-control.Dictionary<string,
-      azure-maps-control.atlas.AggregateExpression>
+  - uid: 'Record<string, azure-maps-control.atlas.AggregateExpression>'
     name: AggregateExpression>
     spec.typeScript:
-      - name: Dictionary
-        fullName: Dictionary
-        uid: azure-maps-control.Dictionary
-      - name: '<string, '
-        fullName: '<string, '
+      - name: 'Record<string, '
+        fullName: 'Record<string, '
       - name: AggregateExpression
         fullName: AggregateExpression
         uid: azure-maps-control.atlas.AggregateExpression

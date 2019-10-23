@@ -15,6 +15,9 @@ items:
       - azure-maps-control.atlas.TextOptions.offset
       - azure-maps-control.atlas.TextOptions.opacity
       - azure-maps-control.atlas.TextOptions.optional
+      - azure-maps-control.atlas.TextOptions.pitchAlignment
+      - azure-maps-control.atlas.TextOptions.rotation
+      - azure-maps-control.atlas.TextOptions.rotationAlignment
       - azure-maps-control.atlas.TextOptions.size
       - azure-maps-control.atlas.TextOptions.textField
     langs:
@@ -278,6 +281,79 @@ items:
       return:
         type:
           - boolean
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.TextOptions.pitchAlignment
+    name: pitchAlignment
+    fullName: pitchAlignment
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Specifies the orientation of the text when the map is pitched.
+      <p>`"auto"`: Automatically matches the value of `rotationAlignment`.</p>
+      <p>`"map"`: The text is aligned to the plane of the map.</p>
+      <p>`"viewport"`: The text is aligned to the plane of the viewport.</p>
+      Default: `"auto"`
+    optional: true
+    syntax:
+      content: 'pitchAlignment?: "auto" | "map" | "viewport"'
+      return:
+        type:
+          - '"auto" | "map" | "viewport"'
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.TextOptions.rotation
+    name: rotation
+    fullName: rotation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      The amount to rotate the text clockwise in degrees.
+      Default `0`
+    optional: true
+    syntax:
+      content: 'rotation?: number | Expression'
+      return:
+        type:
+          - number | azure-maps-control.atlas.Expression
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.TextOptions.rotationAlignment
+    name: rotationAlignment
+    fullName: rotationAlignment
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      In combination with the `placement` property of the `SymbolLayerOptions`,
+
+      specifies the rotation behavior of the individual glyphs forming the text.
+
+      <p>`"auto"`: When the `placement` is set to `"point"`, this is equivalent
+      to `"map"`.
+
+      When the `placement` is set to `"line"` this is equivalent to `"map"`.</p>
+
+      <p>`"map"`: When the `placement` is set to `"point"`, aligns text
+      east-west.
+
+      When the `placement` is set to `"line"`, aligns text x-axes with the
+      line.</p>
+
+      <p>`"viewport"`: Produces glyphs whose x-axes are aligned with the x-axis
+      of the viewport,
+
+      regardless of the value of `placement`.</p>
+
+      Default: `"auto"`
+    optional: true
+    syntax:
+      content: 'rotationAlignment?: "auto" | "map" | "viewport"'
+      return:
+        type:
+          - '"auto" | "map" | "viewport"'
     package: azure-maps-control
   - uid: azure-maps-control.atlas.TextOptions.size
     name: size
@@ -1552,16 +1628,11 @@ references:
       - name: ControlPosition
         fullName: ControlPosition
         uid: azure-maps-control.atlas.ControlPosition
-  - uid: >-
-      azure-maps-control.Dictionary<string,
-      azure-maps-control.atlas.AggregateExpression>
+  - uid: 'Record<string, azure-maps-control.atlas.AggregateExpression>'
     name: AggregateExpression>
     spec.typeScript:
-      - name: Dictionary
-        fullName: Dictionary
-        uid: azure-maps-control.Dictionary
-      - name: '<string, '
-        fullName: '<string, '
+      - name: 'Record<string, '
+        fullName: 'Record<string, '
       - name: AggregateExpression
         fullName: AggregateExpression
         uid: azure-maps-control.atlas.AggregateExpression

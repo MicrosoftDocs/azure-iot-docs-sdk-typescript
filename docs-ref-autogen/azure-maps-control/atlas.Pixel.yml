@@ -1308,149 +1308,6 @@ references:
       azure-maps-control.atlas.data.Position |
       azure-maps-control.atlas.data.Point |
       azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
-      any>
-    name: 'Point, any>'
-    spec.typeScript:
-      - name: Position
-        fullName: Position
-        uid: azure-maps-control.atlas.data.Position
-      - name: ' | '
-        fullName: ' | '
-      - name: Point
-        fullName: Point
-        uid: azure-maps-control.atlas.data.Point
-      - name: ' | '
-        fullName: ' | '
-      - name: Feature
-        fullName: Feature
-        uid: azure-maps-control.atlas.data.Feature
-      - name: <
-        fullName: <
-      - name: Point
-        fullName: Point
-        uid: azure-maps-control.atlas.data.Point
-      - name: ', any>'
-        fullName: ', any>'
-  - uid: >-
-      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
-      Object>
-    name: 'Point, Object>'
-    spec.typeScript:
-      - name: Feature
-        fullName: Feature
-        uid: azure-maps-control.atlas.data.Feature
-      - name: <
-        fullName: <
-      - name: Point
-        fullName: Point
-        uid: azure-maps-control.atlas.data.Point
-      - name: ', Object>'
-        fullName: ', Object>'
-  - uid: >-
-      azure-maps-control.atlas.data.Position[] |
-      azure-maps-control.atlas.data.Geometry |
-      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
-      any> | azure-maps-control.atlas.data.FeatureCollection |
-      azure-maps-control.atlas.data.GeometryCollection |
-      azure-maps-control.atlas.data.Geometry[] |
-      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
-      any>>
-    name: 'Geometry, any>>'
-    spec.typeScript:
-      - name: Position
-        fullName: Position
-        uid: azure-maps-control.atlas.data.Position
-      - name: '[] | '
-        fullName: '[] | '
-      - name: Geometry
-        fullName: Geometry
-        uid: azure-maps-control.atlas.data.Geometry
-      - name: ' | '
-        fullName: ' | '
-      - name: Feature
-        fullName: Feature
-        uid: azure-maps-control.atlas.data.Feature
-      - name: <
-        fullName: <
-      - name: Geometry
-        fullName: Geometry
-        uid: azure-maps-control.atlas.data.Geometry
-      - name: ', any> | '
-        fullName: ', any> | '
-      - name: FeatureCollection
-        fullName: FeatureCollection
-        uid: azure-maps-control.atlas.data.FeatureCollection
-      - name: ' | '
-        fullName: ' | '
-      - name: GeometryCollection
-        fullName: GeometryCollection
-        uid: azure-maps-control.atlas.data.GeometryCollection
-      - name: ' | '
-        fullName: ' | '
-      - name: Geometry
-        fullName: Geometry
-        uid: azure-maps-control.atlas.data.Geometry
-      - name: '[] | Array<'
-        fullName: '[] | Array<'
-      - name: Feature
-        fullName: Feature
-        uid: azure-maps-control.atlas.data.Feature
-      - name: <
-        fullName: <
-      - name: Geometry
-        fullName: Geometry
-        uid: azure-maps-control.atlas.data.Geometry
-      - name: ', any>>'
-        fullName: ', any>>'
-  - uid: >-
-      azure-maps-control.atlas.data.Position |
-      azure-maps-control.atlas.data.Point
-    name: Point
-    spec.typeScript:
-      - name: Position
-        fullName: Position
-        uid: azure-maps-control.atlas.data.Position
-      - name: ' | '
-        fullName: ' | '
-      - name: Point
-        fullName: Point
-        uid: azure-maps-control.atlas.data.Point
-  - uid: >-
-      azure-maps-control.atlas.data.LineString |
-      azure-maps-control.atlas.data.Position[]
-    name: 'Position[]'
-    spec.typeScript:
-      - name: LineString
-        fullName: LineString
-        uid: azure-maps-control.atlas.data.LineString
-      - name: ' | '
-        fullName: ' | '
-      - name: Position
-        fullName: Position
-        uid: azure-maps-control.atlas.data.Position
-      - name: '[]'
-        fullName: '[]'
-  - uid: >-
-      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
-      Object>>
-    name: 'Point, Object>>'
-    spec.typeScript:
-      - name: Array<
-        fullName: Array<
-      - name: Feature
-        fullName: Feature
-        uid: azure-maps-control.atlas.data.Feature
-      - name: <
-        fullName: <
-      - name: Point
-        fullName: Point
-        uid: azure-maps-control.atlas.data.Point
-      - name: ', Object>>'
-        fullName: ', Object>>'
-  - uid: >-
-      azure-maps-control.atlas.data.Position |
-      azure-maps-control.atlas.data.Point |
-      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
       any> | azure-maps-control.atlas.Shape
     name: Shape
     spec.typeScript:
@@ -1477,6 +1334,21 @@ references:
       - name: Shape
         fullName: Shape
         uid: azure-maps-control.atlas.Shape
+  - uid: >-
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+      Object>
+    name: 'Point, Object>'
+    spec.typeScript:
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ', Object>'
+        fullName: ', Object>'
   - uid: >-
       azure-maps-control.atlas.data.Position[] |
       azure-maps-control.atlas.data.Geometry |
@@ -1541,6 +1413,78 @@ references:
       - name: Shape
         fullName: Shape
         uid: azure-maps-control.atlas.Shape
+  - uid: >-
+      azure-maps-control.atlas.data.Position |
+      azure-maps-control.atlas.data.Point
+    name: Point
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: ' | '
+        fullName: ' | '
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+  - uid: >-
+      azure-maps-control.atlas.data.LineString |
+      azure-maps-control.atlas.data.Position[]
+    name: 'Position[]'
+    spec.typeScript:
+      - name: LineString
+        fullName: LineString
+        uid: azure-maps-control.atlas.data.LineString
+      - name: ' | '
+        fullName: ' | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+      Object>>
+    name: 'Point, Object>>'
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ', Object>>'
+        fullName: ', Object>>'
+  - uid: >-
+      azure-maps-control.atlas.data.Position |
+      azure-maps-control.atlas.data.Point |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+      any>
+    name: 'Point, any>'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: ' | '
+        fullName: ' | '
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ', any>'
+        fullName: ', any>'
   - uid: azure-maps-control.atlas.math.TimeUnits
     name: TimeUnits
     spec.typeScript:
@@ -1695,8 +1639,10 @@ references:
   - uid: >-
       number | string | azure-maps-control.atlas.Shape |
       azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
-      any>
-    name: 'Geometry, any>'
+      any> | Array<number | string | azure-maps-control.atlas.Shape |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any>>
+    name: 'Geometry, any>>'
     spec.typeScript:
       - name: 'number | string | '
         fullName: 'number | string | '
@@ -1713,8 +1659,23 @@ references:
       - name: Geometry
         fullName: Geometry
         uid: azure-maps-control.atlas.data.Geometry
-      - name: ', any>'
-        fullName: ', any>'
+      - name: ', any> | Array<number | string | '
+        fullName: ', any> | Array<number | string | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any>>'
+        fullName: ', any>>'
   - uid: >-
       azure-maps-control.atlas.data.FeatureCollection |
       Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
@@ -2346,12 +2307,26 @@ references:
         uid: azure-maps-control.atlas.data.Geometry
       - name: ', any>>'
         fullName: ', any>>'
+  - uid: Object | azure-maps-control.atlas.Expression
+    name: Expression
+    spec.typeScript:
+      - name: 'Object | '
+        fullName: 'Object | '
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.atlas.Expression
   - uid: azure-maps-control.atlas.MapEvent
     name: MapEvent
     spec.typeScript:
       - name: MapEvent
         fullName: MapEvent
         uid: azure-maps-control.atlas.MapEvent
+  - uid: azure-maps-control.atlas.Tile
+    name: Tile
+    spec.typeScript:
+      - name: Tile
+        fullName: Tile
+        uid: azure-maps-control.atlas.Tile
   - uid: azure-maps-control.atlas.MapMouseWheelEvent
     name: MapMouseWheelEvent
     spec.typeScript:
@@ -2403,6 +2378,12 @@ references:
         uid: azure-maps-control.atlas.source.Source
       - name: '>'
         fullName: '>'
+  - uid: azure-maps-control.atlas.LightOptions
+    name: LightOptions
+    spec.typeScript:
+      - name: LightOptions
+        fullName: LightOptions
+        uid: azure-maps-control.atlas.LightOptions
   - uid: azure-maps-control.atlas.IconOptions
     name: IconOptions
     spec.typeScript:
@@ -2434,3 +2415,9 @@ references:
       - name: Expression
         fullName: Expression
         uid: azure-maps-control.atlas.Expression
+  - uid: azure-maps-control.atlas.TileId
+    name: TileId
+    spec.typeScript:
+      - name: TileId
+        fullName: TileId
+        uid: azure-maps-control.atlas.TileId

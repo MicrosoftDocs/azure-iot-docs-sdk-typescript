@@ -68,8 +68,10 @@ items:
       - azure-maps-control.atlas.layer.TileLayer
       - azure-maps-control.atlas.LayerManager
       - azure-maps-control.atlas.LayerOptions
+      - azure-maps-control.atlas.LightOptions
       - azure-maps-control.atlas.LineLayerOptions
       - azure-maps-control.atlas.Map
+      - azure-maps-control.atlas.MapDataEvent
       - azure-maps-control.atlas.MapErrorEvent
       - azure-maps-control.atlas.MapEvent
       - azure-maps-control.atlas.MapMouseEvent
@@ -108,6 +110,8 @@ items:
       - azure-maps-control.atlas.SymbolLayerOptions
       - azure-maps-control.atlas.TargetedEvent
       - azure-maps-control.atlas.TextOptions
+      - azure-maps-control.atlas.Tile
+      - azure-maps-control.atlas.TileId
       - azure-maps-control.atlas.TileLayerOptions
       - azure-maps-control.atlas.TrafficOptions
       - azure-maps-control.atlas.UserInteractionOptions
@@ -246,10 +250,14 @@ references:
     name: LayerManager
   - uid: azure-maps-control.atlas.LayerOptions
     name: LayerOptions
+  - uid: azure-maps-control.atlas.LightOptions
+    name: LightOptions
   - uid: azure-maps-control.atlas.LineLayerOptions
     name: LineLayerOptions
   - uid: azure-maps-control.atlas.Map
     name: Map
+  - uid: azure-maps-control.atlas.MapDataEvent
+    name: MapDataEvent
   - uid: azure-maps-control.atlas.MapErrorEvent
     name: MapErrorEvent
   - uid: azure-maps-control.atlas.MapEvent
@@ -326,6 +334,10 @@ references:
     name: TargetedEvent
   - uid: azure-maps-control.atlas.TextOptions
     name: TextOptions
+  - uid: azure-maps-control.atlas.Tile
+    name: Tile
+  - uid: azure-maps-control.atlas.TileId
+    name: TileId
   - uid: azure-maps-control.atlas.TileLayerOptions
     name: TileLayerOptions
   - uid: azure-maps-control.atlas.TrafficOptions

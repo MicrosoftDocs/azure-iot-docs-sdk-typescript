@@ -4,40 +4,44 @@ items:
     name: EventManager
     fullName: EventManager
     children:
-      - azure-maps-control.atlas.EventManager.add_4
-      - azure-maps-control.atlas.EventManager.add_9
-      - azure-maps-control.atlas.EventManager.add_8
-      - azure-maps-control.atlas.EventManager.add_7
-      - azure-maps-control.atlas.EventManager.add_14
-      - azure-maps-control.atlas.EventManager.add_3
-      - azure-maps-control.atlas.EventManager.add_5
-      - azure-maps-control.atlas.EventManager.add_11
-      - azure-maps-control.atlas.EventManager.add_1
-      - azure-maps-control.atlas.EventManager.add_12
-      - azure-maps-control.atlas.EventManager.add_15
       - azure-maps-control.atlas.EventManager.add_6
-      - azure-maps-control.atlas.EventManager.add_16
+      - azure-maps-control.atlas.EventManager.add_11
       - azure-maps-control.atlas.EventManager.add
       - azure-maps-control.atlas.EventManager.add_10
-      - azure-maps-control.atlas.EventManager.add_2
+      - azure-maps-control.atlas.EventManager.add_9
+      - azure-maps-control.atlas.EventManager.add_16
+      - azure-maps-control.atlas.EventManager.add_1
+      - azure-maps-control.atlas.EventManager.add_7
       - azure-maps-control.atlas.EventManager.add_13
-      - azure-maps-control.atlas.EventManager.addOnce_6
-      - azure-maps-control.atlas.EventManager.addOnce_9
+      - azure-maps-control.atlas.EventManager.add_3
+      - azure-maps-control.atlas.EventManager.add_14
+      - azure-maps-control.atlas.EventManager.add_17
+      - azure-maps-control.atlas.EventManager.add_8
+      - azure-maps-control.atlas.EventManager.add_18
+      - azure-maps-control.atlas.EventManager.add_4
+      - azure-maps-control.atlas.EventManager.add_2
+      - azure-maps-control.atlas.EventManager.add_12
+      - azure-maps-control.atlas.EventManager.add_5
+      - azure-maps-control.atlas.EventManager.add_15
       - azure-maps-control.atlas.EventManager.addOnce_8
-      - azure-maps-control.atlas.EventManager.addOnce_7
-      - azure-maps-control.atlas.EventManager.addOnce_14
-      - azure-maps-control.atlas.EventManager.addOnce_5
-      - azure-maps-control.atlas.EventManager.addOnce_1
       - azure-maps-control.atlas.EventManager.addOnce_11
-      - azure-maps-control.atlas.EventManager.addOnce_2
-      - azure-maps-control.atlas.EventManager.addOnce_12
-      - azure-maps-control.atlas.EventManager.addOnce_15
-      - azure-maps-control.atlas.EventManager.addOnce_3
-      - azure-maps-control.atlas.EventManager.addOnce_16
       - azure-maps-control.atlas.EventManager.addOnce
       - azure-maps-control.atlas.EventManager.addOnce_10
-      - azure-maps-control.atlas.EventManager.addOnce_4
+      - azure-maps-control.atlas.EventManager.addOnce_9
+      - azure-maps-control.atlas.EventManager.addOnce_16
+      - azure-maps-control.atlas.EventManager.addOnce_1
+      - azure-maps-control.atlas.EventManager.addOnce_3
       - azure-maps-control.atlas.EventManager.addOnce_13
+      - azure-maps-control.atlas.EventManager.addOnce_4
+      - azure-maps-control.atlas.EventManager.addOnce_14
+      - azure-maps-control.atlas.EventManager.addOnce_17
+      - azure-maps-control.atlas.EventManager.addOnce_5
+      - azure-maps-control.atlas.EventManager.addOnce_18
+      - azure-maps-control.atlas.EventManager.addOnce_6
+      - azure-maps-control.atlas.EventManager.addOnce_2
+      - azure-maps-control.atlas.EventManager.addOnce_12
+      - azure-maps-control.atlas.EventManager.addOnce_7
+      - azure-maps-control.atlas.EventManager.addOnce_15
       - azure-maps-control.atlas.EventManager.invoke
       - azure-maps-control.atlas.EventManager.invoke_1
       - azure-maps-control.atlas.EventManager.remove
@@ -55,12 +59,12 @@ items:
       Exposed through the events property of the atlas.Map class.
       Cannot be instantiated by the user.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add_4
+  - uid: azure-maps-control.atlas.EventManager.add_6
     name: >-
       add("boxzoomstart" | "boxzoomend" | "dragstart" | "drag" | "dragend" |
-      "load" | "movestart" | "move" | "moveend" | "pitchstart" | "pitch" |
-      "pitchend" | "ready" | "render" | "resize" | "rotatestart" | "rotate" |
-      "rotateend" | "styledata" | "tokenacquired" | "zoomstart" | "zoom" |
+      "idle" | "load" | "movestart" | "move" | "moveend" | "pitchstart" |
+      "pitch" | "pitchend" | "ready" | "render" | "resize" | "rotatestart" |
+      "rotate" | "rotateend" | "tokenacquired" | "zoomstart" | "zoom" |
       "zoomend", (e: MapEvent) => void)
     children: []
     type: method
@@ -70,18 +74,18 @@ items:
     syntax:
       content: >-
         function add(eventType: "boxzoomstart" | "boxzoomend" | "dragstart" |
-        "drag" | "dragend" | "load" | "movestart" | "move" | "moveend" |
-        "pitchstart" | "pitch" | "pitchend" | "ready" | "render" | "resize" |
-        "rotatestart" | "rotate" | "rotateend" | "styledata" | "tokenacquired" |
-        "zoomstart" | "zoom" | "zoomend", callback: (e: MapEvent) => void)
+        "drag" | "dragend" | "idle" | "load" | "movestart" | "move" | "moveend"
+        | "pitchstart" | "pitch" | "pitchend" | "ready" | "render" | "resize" |
+        "rotatestart" | "rotate" | "rotateend" | "tokenacquired" | "zoomstart" |
+        "zoom" | "zoomend", callback: (e: MapEvent) => void)
       parameters:
         - id: eventType
           type:
             - >-
               "boxzoomstart" | "boxzoomend" | "dragstart" | "drag" | "dragend" |
-              "load" | "movestart" | "move" | "moveend" | "pitchstart" | "pitch"
-              | "pitchend" | "ready" | "render" | "resize" | "rotatestart" |
-              "rotate" | "rotateend" | "styledata" | "tokenacquired" |
+              "idle" | "load" | "movestart" | "move" | "moveend" | "pitchstart"
+              | "pitch" | "pitchend" | "ready" | "render" | "resize" |
+              "rotatestart" | "rotate" | "rotateend" | "tokenacquired" |
               "zoomstart" | "zoom" | "zoomend"
           description: The event name.
         - id: callback
@@ -90,7 +94,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add_9
+  - uid: azure-maps-control.atlas.EventManager.add_11
     name: >-
       add("click" | "contextmenu" | "dblclick" | "drag" | "dragstart" |
       "dragend" | "keydown" | "keypress" | "keyup" | "mousedown" | "mouseenter"
@@ -129,7 +133,29 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add_8
+  - uid: azure-maps-control.atlas.EventManager.add
+    name: 'add("data" | "sourcedata" | "styledata", (e: MapDataEvent) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds a data event to the map.
+    syntax:
+      content: >-
+        function add(eventType: "data" | "sourcedata" | "styledata", callback:
+        (e: MapDataEvent) => void)
+      parameters:
+        - id: eventType
+          type:
+            - '"data" | "sourcedata" | "styledata"'
+          description: The data event name.
+        - id: callback
+          type:
+            - '(e: MapDataEvent) => void'
+          description: |
+            The event handler callback.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.add_10
     name: >-
       add("dataadded" | "dataremoved", DataSource | DataSource[], (e: Shape[])
       => void)
@@ -159,7 +185,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add_7
+  - uid: azure-maps-control.atlas.EventManager.add_9
     name: >-
       add("datasourceupdated", DataSource | DataSource[], (e: DataSource) =>
       void)
@@ -189,7 +215,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add_14
+  - uid: azure-maps-control.atlas.EventManager.add_16
     name: >-
       add("drag" | "dragend" | "dragstart" | "open" | "close", Popup | Popup[],
       (e: TargetedEvent) => void)
@@ -217,7 +243,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add_3
+  - uid: azure-maps-control.atlas.EventManager.add_1
     name: 'add("error", (e: MapErrorEvent) => void)'
     children: []
     type: method
@@ -237,7 +263,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add_5
+  - uid: azure-maps-control.atlas.EventManager.add_7
     name: 'add("layeradded" | "layerremoved", (e: Layer) => void)'
     children: []
     type: method
@@ -259,7 +285,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add_11
+  - uid: azure-maps-control.atlas.EventManager.add_13
     name: 'add("layeradded" | "layerremoved", Layer | Layer[], (e: Layer) => void)'
     children: []
     type: method
@@ -287,7 +313,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add_1
+  - uid: azure-maps-control.atlas.EventManager.add_3
     name: >-
       add("mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
       "dblclick" | "mouseout" | "contextmenu", (e: MapMouseEvent) => void)
@@ -314,7 +340,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add_12
+  - uid: azure-maps-control.atlas.EventManager.add_14
     name: >-
       add("mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
       "dblclick" | "mouseout" | "mouseenter" | "mouseleave" | "contextmenu",
@@ -350,7 +376,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add_15
+  - uid: azure-maps-control.atlas.EventManager.add_17
     name: 'add("shapechanged", Shape | Shape[], (e: Shape) => void)'
     children: []
     type: method
@@ -376,7 +402,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add_6
+  - uid: azure-maps-control.atlas.EventManager.add_8
     name: 'add("sourceadded" | "sourceremoved", (e: Source) => void)'
     children: []
     type: method
@@ -398,7 +424,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add_16
+  - uid: azure-maps-control.atlas.EventManager.add_18
     name: >-
       add("sourceadded" | "sourceremoved", Source | Source[], (e: Source) =>
       void)
@@ -428,7 +454,29 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add
+  - uid: azure-maps-control.atlas.EventManager.add_4
+    name: 'add("styleimagemissing", (e: string) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds a style image missing event to the map.
+    syntax:
+      content: >-
+        function add(eventType: "styleimagemissing", callback: (e: string) =>
+        void)
+      parameters:
+        - id: eventType
+          type:
+            - '"styleimagemissing"'
+          description: The style image missing event name.
+        - id: callback
+          type:
+            - '(e: string) => void'
+          description: |
+            The event handler callback.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.add_2
     name: >-
       add("touchstart" | "touchend" | "touchmove" | "touchcancel", (e:
       MapTouchEvent) => void)
@@ -452,7 +500,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add_10
+  - uid: azure-maps-control.atlas.EventManager.add_12
     name: >-
       add("touchstart" | "touchend" | "touchmove" | "touchcancel", Layer |
       Layer[], (e: MapTouchEvent) => void)
@@ -483,7 +531,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add_2
+  - uid: azure-maps-control.atlas.EventManager.add_5
     name: 'add("wheel", (e: MapMouseWheelEvent) => void)'
     children: []
     type: method
@@ -505,7 +553,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.add_13
+  - uid: azure-maps-control.atlas.EventManager.add_15
     name: 'add("wheel", Layer | Layer[], (e: MapMouseWheelEvent) => void)'
     children: []
     type: method
@@ -533,12 +581,12 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_6
+  - uid: azure-maps-control.atlas.EventManager.addOnce_8
     name: >-
       addOnce("boxzoomstart" | "boxzoomend" | "dragstart" | "drag" | "dragend" |
-      "load" | "movestart" | "move" | "moveend" | "pitchstart" | "pitch" |
-      "pitchend" | "ready" | "render" | "resize" | "rotatestart" | "rotate" |
-      "rotateend" | "styledata" | "tokenacquired" | "zoomstart" | "zoom" |
+      "idle" | "load" | "movestart" | "move" | "moveend" | "pitchstart" |
+      "pitch" | "pitchend" | "ready" | "render" | "resize" | "rotatestart" |
+      "rotate" | "rotateend" | "tokenacquired" | "zoomstart" | "zoom" |
       "zoomend", (e: MapEvent) => void)
     children: []
     type: method
@@ -548,18 +596,18 @@ items:
     syntax:
       content: >-
         function addOnce(eventType: "boxzoomstart" | "boxzoomend" | "dragstart"
-        | "drag" | "dragend" | "load" | "movestart" | "move" | "moveend" |
-        "pitchstart" | "pitch" | "pitchend" | "ready" | "render" | "resize" |
-        "rotatestart" | "rotate" | "rotateend" | "styledata" | "tokenacquired" |
+        | "drag" | "dragend" | "idle" | "load" | "movestart" | "move" |
+        "moveend" | "pitchstart" | "pitch" | "pitchend" | "ready" | "render" |
+        "resize" | "rotatestart" | "rotate" | "rotateend" | "tokenacquired" |
         "zoomstart" | "zoom" | "zoomend", callback: (e: MapEvent) => void)
       parameters:
         - id: eventType
           type:
             - >-
               "boxzoomstart" | "boxzoomend" | "dragstart" | "drag" | "dragend" |
-              "load" | "movestart" | "move" | "moveend" | "pitchstart" | "pitch"
-              | "pitchend" | "ready" | "render" | "resize" | "rotatestart" |
-              "rotate" | "rotateend" | "styledata" | "tokenacquired" |
+              "idle" | "load" | "movestart" | "move" | "moveend" | "pitchstart"
+              | "pitch" | "pitchend" | "ready" | "render" | "resize" |
+              "rotatestart" | "rotate" | "rotateend" | "tokenacquired" |
               "zoomstart" | "zoom" | "zoomend"
           description: The event name.
         - id: callback
@@ -568,7 +616,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_9
+  - uid: azure-maps-control.atlas.EventManager.addOnce_11
     name: >-
       addOnce("click" | "contextmenu" | "dblclick" | "drag" | "dragstart" |
       "dragend" | "keydown" | "keypress" | "keyup" | "mousedown" | "mouseenter"
@@ -605,7 +653,29 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_8
+  - uid: azure-maps-control.atlas.EventManager.addOnce
+    name: 'addOnce("data" | "sourcedata" | "styledata", (e: MapDataEvent) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds a data event to the map.
+    syntax:
+      content: >-
+        function addOnce(eventType: "data" | "sourcedata" | "styledata",
+        callback: (e: MapDataEvent) => void)
+      parameters:
+        - id: eventType
+          type:
+            - '"data" | "sourcedata" | "styledata"'
+          description: The data event name.
+        - id: callback
+          type:
+            - '(e: MapDataEvent) => void'
+          description: |
+            The event handler callback.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.addOnce_10
     name: 'addOnce("dataadded" | "dataremoved", DataSource, (e: Shape[]) => void)'
     children: []
     type: method
@@ -631,7 +701,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_7
+  - uid: azure-maps-control.atlas.EventManager.addOnce_9
     name: 'addOnce("datasourceupdated", DataSource, (e: DataSource) => void)'
     children: []
     type: method
@@ -657,7 +727,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_14
+  - uid: azure-maps-control.atlas.EventManager.addOnce_16
     name: >-
       addOnce("drag" | "dragend" | "dragstart" | "open" | "close", Popup, (e:
       TargetedEvent) => void)
@@ -685,7 +755,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_5
+  - uid: azure-maps-control.atlas.EventManager.addOnce_1
     name: 'addOnce("error", (e: MapErrorEvent) => void)'
     children: []
     type: method
@@ -707,7 +777,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_1
+  - uid: azure-maps-control.atlas.EventManager.addOnce_3
     name: 'addOnce("layeradded" | "layerremoved", (e: Layer) => void)'
     children: []
     type: method
@@ -729,7 +799,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_11
+  - uid: azure-maps-control.atlas.EventManager.addOnce_13
     name: 'addOnce("layeradded" | "layerremoved", Layer, (e: Layer) => void)'
     children: []
     type: method
@@ -755,7 +825,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_2
+  - uid: azure-maps-control.atlas.EventManager.addOnce_4
     name: >-
       addOnce("mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
       "dblclick" | "mouseout" | "contextmenu", (e: MapMouseEvent) => void)
@@ -782,7 +852,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_12
+  - uid: azure-maps-control.atlas.EventManager.addOnce_14
     name: >-
       addOnce("mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
       "dblclick" | "mouseout" | "mouseenter" | "mouseleave" | "contextmenu",
@@ -816,7 +886,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_15
+  - uid: azure-maps-control.atlas.EventManager.addOnce_17
     name: 'addOnce("shapechanged", Shape, (e: Shape) => void)'
     children: []
     type: method
@@ -842,7 +912,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_3
+  - uid: azure-maps-control.atlas.EventManager.addOnce_5
     name: 'addOnce("sourceadded" | "sourceremoved", (e: Source) => void)'
     children: []
     type: method
@@ -864,7 +934,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_16
+  - uid: azure-maps-control.atlas.EventManager.addOnce_18
     name: 'addOnce("sourceadded" | "sourceremoved", Source, (e: Source) => void)'
     children: []
     type: method
@@ -890,7 +960,29 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce
+  - uid: azure-maps-control.atlas.EventManager.addOnce_6
+    name: 'addOnce("styleimagemissing", (e: string) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Adds a style image missing event to the map.
+    syntax:
+      content: >-
+        function addOnce(eventType: "styleimagemissing", callback: (e: string)
+        => void)
+      parameters:
+        - id: eventType
+          type:
+            - '"styleimagemissing"'
+          description: The style image missing event name.
+        - id: callback
+          type:
+            - '(e: string) => void'
+          description: |
+            The event handler callback.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.EventManager.addOnce_2
     name: >-
       addOnce("touchstart" | "touchend" | "touchmove" | "touchcancel", (e:
       MapTouchEvent) => void)
@@ -914,7 +1006,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_10
+  - uid: azure-maps-control.atlas.EventManager.addOnce_12
     name: >-
       addOnce("touchstart" | "touchend" | "touchmove" | "touchcancel", Layer,
       (e: MapTouchEvent) => void)
@@ -942,7 +1034,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_4
+  - uid: azure-maps-control.atlas.EventManager.addOnce_7
     name: 'addOnce("wheel", (e: MapMouseWheelEvent) => void)'
     children: []
     type: method
@@ -964,7 +1056,7 @@ items:
           description: |
             The event handler callback.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.EventManager.addOnce_13
+  - uid: azure-maps-control.atlas.EventManager.addOnce_15
     name: 'addOnce("wheel", Layer, (e: MapMouseWheelEvent) => void)'
     children: []
     type: method
@@ -1053,8 +1145,8 @@ items:
     package: azure-maps-control
   - uid: azure-maps-control.atlas.EventManager.remove
     name: >-
-      remove(string, (e: void | Layer | MapMouseEvent | MapTouchEvent |
-      MapMouseWheelEvent | Source) => void)
+      remove(string, (e: void | Layer | MapEvent | MapDataEvent | MapMouseEvent
+      | MapTouchEvent | MapMouseWheelEvent | Source | string) => void)
     children: []
     type: method
     langs:
@@ -1062,8 +1154,9 @@ items:
     summary: Removes an event listener from the map.
     syntax:
       content: >-
-        function remove(eventType: string, callback: (e: void | Layer |
-        MapMouseEvent | MapTouchEvent | MapMouseWheelEvent | Source) => void)
+        function remove(eventType: string, callback: (e: void | Layer | MapEvent
+        | MapDataEvent | MapMouseEvent | MapTouchEvent | MapMouseWheelEvent |
+        Source | string) => void)
       parameters:
         - id: eventType
           type:
@@ -1072,8 +1165,8 @@ items:
         - id: callback
           type:
             - >-
-              (e: void | Layer | MapMouseEvent | MapTouchEvent |
-              MapMouseWheelEvent | Source) => void
+              (e: void | Layer | MapEvent | MapDataEvent | MapMouseEvent |
+              MapTouchEvent | MapMouseWheelEvent | Source | string) => void
           description: |
             The event handler callback.
     package: azure-maps-control
@@ -1597,149 +1690,6 @@ references:
       azure-maps-control.atlas.data.Position |
       azure-maps-control.atlas.data.Point |
       azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
-      any>
-    name: 'Point, any>'
-    spec.typeScript:
-      - name: Position
-        fullName: Position
-        uid: azure-maps-control.atlas.data.Position
-      - name: ' | '
-        fullName: ' | '
-      - name: Point
-        fullName: Point
-        uid: azure-maps-control.atlas.data.Point
-      - name: ' | '
-        fullName: ' | '
-      - name: Feature
-        fullName: Feature
-        uid: azure-maps-control.atlas.data.Feature
-      - name: <
-        fullName: <
-      - name: Point
-        fullName: Point
-        uid: azure-maps-control.atlas.data.Point
-      - name: ', any>'
-        fullName: ', any>'
-  - uid: >-
-      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
-      Object>
-    name: 'Point, Object>'
-    spec.typeScript:
-      - name: Feature
-        fullName: Feature
-        uid: azure-maps-control.atlas.data.Feature
-      - name: <
-        fullName: <
-      - name: Point
-        fullName: Point
-        uid: azure-maps-control.atlas.data.Point
-      - name: ', Object>'
-        fullName: ', Object>'
-  - uid: >-
-      azure-maps-control.atlas.data.Position[] |
-      azure-maps-control.atlas.data.Geometry |
-      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
-      any> | azure-maps-control.atlas.data.FeatureCollection |
-      azure-maps-control.atlas.data.GeometryCollection |
-      azure-maps-control.atlas.data.Geometry[] |
-      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
-      any>>
-    name: 'Geometry, any>>'
-    spec.typeScript:
-      - name: Position
-        fullName: Position
-        uid: azure-maps-control.atlas.data.Position
-      - name: '[] | '
-        fullName: '[] | '
-      - name: Geometry
-        fullName: Geometry
-        uid: azure-maps-control.atlas.data.Geometry
-      - name: ' | '
-        fullName: ' | '
-      - name: Feature
-        fullName: Feature
-        uid: azure-maps-control.atlas.data.Feature
-      - name: <
-        fullName: <
-      - name: Geometry
-        fullName: Geometry
-        uid: azure-maps-control.atlas.data.Geometry
-      - name: ', any> | '
-        fullName: ', any> | '
-      - name: FeatureCollection
-        fullName: FeatureCollection
-        uid: azure-maps-control.atlas.data.FeatureCollection
-      - name: ' | '
-        fullName: ' | '
-      - name: GeometryCollection
-        fullName: GeometryCollection
-        uid: azure-maps-control.atlas.data.GeometryCollection
-      - name: ' | '
-        fullName: ' | '
-      - name: Geometry
-        fullName: Geometry
-        uid: azure-maps-control.atlas.data.Geometry
-      - name: '[] | Array<'
-        fullName: '[] | Array<'
-      - name: Feature
-        fullName: Feature
-        uid: azure-maps-control.atlas.data.Feature
-      - name: <
-        fullName: <
-      - name: Geometry
-        fullName: Geometry
-        uid: azure-maps-control.atlas.data.Geometry
-      - name: ', any>>'
-        fullName: ', any>>'
-  - uid: >-
-      azure-maps-control.atlas.data.Position |
-      azure-maps-control.atlas.data.Point
-    name: Point
-    spec.typeScript:
-      - name: Position
-        fullName: Position
-        uid: azure-maps-control.atlas.data.Position
-      - name: ' | '
-        fullName: ' | '
-      - name: Point
-        fullName: Point
-        uid: azure-maps-control.atlas.data.Point
-  - uid: >-
-      azure-maps-control.atlas.data.LineString |
-      azure-maps-control.atlas.data.Position[]
-    name: 'Position[]'
-    spec.typeScript:
-      - name: LineString
-        fullName: LineString
-        uid: azure-maps-control.atlas.data.LineString
-      - name: ' | '
-        fullName: ' | '
-      - name: Position
-        fullName: Position
-        uid: azure-maps-control.atlas.data.Position
-      - name: '[]'
-        fullName: '[]'
-  - uid: >-
-      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
-      Object>>
-    name: 'Point, Object>>'
-    spec.typeScript:
-      - name: Array<
-        fullName: Array<
-      - name: Feature
-        fullName: Feature
-        uid: azure-maps-control.atlas.data.Feature
-      - name: <
-        fullName: <
-      - name: Point
-        fullName: Point
-        uid: azure-maps-control.atlas.data.Point
-      - name: ', Object>>'
-        fullName: ', Object>>'
-  - uid: >-
-      azure-maps-control.atlas.data.Position |
-      azure-maps-control.atlas.data.Point |
-      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
       any> | azure-maps-control.atlas.Shape
     name: Shape
     spec.typeScript:
@@ -1766,6 +1716,21 @@ references:
       - name: Shape
         fullName: Shape
         uid: azure-maps-control.atlas.Shape
+  - uid: >-
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+      Object>
+    name: 'Point, Object>'
+    spec.typeScript:
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ', Object>'
+        fullName: ', Object>'
   - uid: >-
       azure-maps-control.atlas.data.Position[] |
       azure-maps-control.atlas.data.Geometry |
@@ -1830,6 +1795,78 @@ references:
       - name: Shape
         fullName: Shape
         uid: azure-maps-control.atlas.Shape
+  - uid: >-
+      azure-maps-control.atlas.data.Position |
+      azure-maps-control.atlas.data.Point
+    name: Point
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: ' | '
+        fullName: ' | '
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+  - uid: >-
+      azure-maps-control.atlas.data.LineString |
+      azure-maps-control.atlas.data.Position[]
+    name: 'Position[]'
+    spec.typeScript:
+      - name: LineString
+        fullName: LineString
+        uid: azure-maps-control.atlas.data.LineString
+      - name: ' | '
+        fullName: ' | '
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: '[]'
+        fullName: '[]'
+  - uid: >-
+      Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+      Object>>
+    name: 'Point, Object>>'
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ', Object>>'
+        fullName: ', Object>>'
+  - uid: >-
+      azure-maps-control.atlas.data.Position |
+      azure-maps-control.atlas.data.Point |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
+      any>
+    name: 'Point, any>'
+    spec.typeScript:
+      - name: Position
+        fullName: Position
+        uid: azure-maps-control.atlas.data.Position
+      - name: ' | '
+        fullName: ' | '
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Point
+        fullName: Point
+        uid: azure-maps-control.atlas.data.Point
+      - name: ', any>'
+        fullName: ', any>'
   - uid: azure-maps-control.atlas.math.TimeUnits
     name: TimeUnits
     spec.typeScript:
@@ -1984,8 +2021,10 @@ references:
   - uid: >-
       number | string | azure-maps-control.atlas.Shape |
       azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
-      any>
-    name: 'Geometry, any>'
+      any> | Array<number | string | azure-maps-control.atlas.Shape |
+      azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
+      any>>
+    name: 'Geometry, any>>'
     spec.typeScript:
       - name: 'number | string | '
         fullName: 'number | string | '
@@ -2002,8 +2041,23 @@ references:
       - name: Geometry
         fullName: Geometry
         uid: azure-maps-control.atlas.data.Geometry
-      - name: ', any>'
-        fullName: ', any>'
+      - name: ', any> | Array<number | string | '
+        fullName: ', any> | Array<number | string | '
+      - name: Shape
+        fullName: Shape
+        uid: azure-maps-control.atlas.Shape
+      - name: ' | '
+        fullName: ' | '
+      - name: Feature
+        fullName: Feature
+        uid: azure-maps-control.atlas.data.Feature
+      - name: <
+        fullName: <
+      - name: Geometry
+        fullName: Geometry
+        uid: azure-maps-control.atlas.data.Geometry
+      - name: ', any>>'
+        fullName: ', any>>'
   - uid: >-
       azure-maps-control.atlas.data.FeatureCollection |
       Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
@@ -2635,12 +2689,26 @@ references:
         uid: azure-maps-control.atlas.data.Geometry
       - name: ', any>>'
         fullName: ', any>>'
+  - uid: Object | azure-maps-control.atlas.Expression
+    name: Expression
+    spec.typeScript:
+      - name: 'Object | '
+        fullName: 'Object | '
+      - name: Expression
+        fullName: Expression
+        uid: azure-maps-control.atlas.Expression
   - uid: azure-maps-control.atlas.MapEvent
     name: MapEvent
     spec.typeScript:
       - name: MapEvent
         fullName: MapEvent
         uid: azure-maps-control.atlas.MapEvent
+  - uid: azure-maps-control.atlas.Tile
+    name: Tile
+    spec.typeScript:
+      - name: Tile
+        fullName: Tile
+        uid: azure-maps-control.atlas.Tile
   - uid: azure-maps-control.atlas.MapMouseWheelEvent
     name: MapMouseWheelEvent
     spec.typeScript:
@@ -2692,6 +2760,12 @@ references:
         uid: azure-maps-control.atlas.source.Source
       - name: '>'
         fullName: '>'
+  - uid: azure-maps-control.atlas.LightOptions
+    name: LightOptions
+    spec.typeScript:
+      - name: LightOptions
+        fullName: LightOptions
+        uid: azure-maps-control.atlas.LightOptions
   - uid: azure-maps-control.atlas.IconOptions
     name: IconOptions
     spec.typeScript:
@@ -2723,3 +2797,9 @@ references:
       - name: Expression
         fullName: Expression
         uid: azure-maps-control.atlas.Expression
+  - uid: azure-maps-control.atlas.TileId
+    name: TileId
+    spec.typeScript:
+      - name: TileId
+        fullName: TileId
+        uid: azure-maps-control.atlas.TileId

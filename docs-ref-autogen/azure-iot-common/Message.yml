@@ -65,6 +65,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: azure-iot-common
   - uid: azure-iot-common.Message.contentEncoding
     name: contentEncoding
@@ -81,6 +82,7 @@ items:
       return:
         type:
           - undefined | "utf-8" | "utf-16" | "utf-32"
+        description: ''
     package: azure-iot-common
   - uid: azure-iot-common.Message.contentType
     name: contentType
@@ -97,6 +99,7 @@ items:
       return:
         type:
           - undefined | "application/json"
+        description: ''
     package: azure-iot-common
   - uid: azure-iot-common.Message.correlationId
     name: correlationId
@@ -111,6 +114,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: azure-iot-common
   - uid: azure-iot-common.Message.data
     name: data
@@ -125,6 +129,7 @@ items:
       return:
         type:
           - any
+        description: ''
     package: azure-iot-common
   - uid: azure-iot-common.Message.expiryTimeUtc
     name: expiryTimeUtc
@@ -141,6 +146,7 @@ items:
       return:
         type:
           - any
+        description: ''
     package: azure-iot-common
   - uid: azure-iot-common.Message.interfaceId
     name: interfaceId
@@ -155,6 +161,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: azure-iot-common
   - uid: azure-iot-common.Message.lockToken
     name: lockToken
@@ -169,6 +176,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: azure-iot-common
   - uid: azure-iot-common.Message.messageId
     name: messageId
@@ -186,6 +194,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: azure-iot-common
   - uid: azure-iot-common.Message.properties
     name: properties
@@ -202,6 +211,7 @@ items:
       return:
         type:
           - azure-iot-common.Properties
+        description: ''
     package: azure-iot-common
   - uid: azure-iot-common.Message.to
     name: to
@@ -216,6 +226,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: azure-iot-common
   - uid: azure-iot-common.Message.userId
     name: userId
@@ -230,6 +241,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: azure-iot-common
   - uid: azure-iot-common.Message.getBytes
     name: getBytes()
@@ -246,6 +258,7 @@ items:
       return:
         type:
           - Buffer
+        description: ''
     package: azure-iot-common
   - uid: azure-iot-common.Message.getData
     name: getData()
@@ -260,6 +273,7 @@ items:
       return:
         type:
           - azure-iot-common.Message.BufferConvertible
+        description: 'The content of the {@link azure-iot-common.Message}.'
     package: azure-iot-common
   - uid: azure-iot-common.Message.setAsSecurityMessage
     name: setAsSecurityMessage()
@@ -294,6 +308,7 @@ items:
       return:
         type:
           - boolean
+        description: 'True if the object is of type {@link Message.BufferConvertible}'
     package: azure-iot-common
 references:
   - uid: azure-iot-common.Message.BufferConvertible

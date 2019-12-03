@@ -41,6 +41,7 @@ items:
       return:
         type:
           - 'any[]'
+        description: ''
     package: azure-iot-common
   - uid: azure-iot-common.Properties.add
     name: 'add(string, string)'
@@ -66,6 +67,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: azure-iot-common
   - uid: azure-iot-common.Properties.count
     name: count()
@@ -80,6 +82,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: azure-iot-common
   - uid: azure-iot-common.Properties.getItem
     name: getItem(number)
@@ -98,6 +101,10 @@ items:
       return:
         type:
           - Object
+        description: |-
+          Key-value pair corresponding to the given index. The
+                             returned object has the properties `key` and `value`
+                             corresponding to the key and value of the property.
     package: azure-iot-common
   - uid: azure-iot-common.Properties.getValue
     name: getValue(string)
@@ -116,4 +123,5 @@ items:
       return:
         type:
           - any
+        description: corresponding value or undefined if the key doesn't exist.
     package: azure-iot-common

@@ -87,6 +87,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.abandon
     name: 'abandon(Message, Callback<MessageAbandoned>)'
@@ -126,6 +127,7 @@ items:
       return:
         type:
           - Promise<MessageAbandoned>
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.addListener
     name: 'addListener(string | symbol, (args: any[]) => void)'
@@ -150,6 +152,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.close
     name: close(Callback<Disconnected>)
@@ -187,6 +190,7 @@ items:
       return:
         type:
           - Promise<Disconnected>
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.complete
     name: 'complete(Message, Callback<MessageCompleted>)'
@@ -226,6 +230,7 @@ items:
       return:
         type:
           - Promise<MessageCompleted>
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.emit
     name: 'emit(string | symbol, any[])'
@@ -248,6 +253,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.eventNames
     name: eventNames()
@@ -262,6 +268,7 @@ items:
       return:
         type:
           - Array<string | symbol>
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.getMaxListeners
     name: getMaxListeners()
@@ -276,6 +283,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.getTwin
     name: getTwin(Callback<Twin>)
@@ -305,6 +313,7 @@ items:
       return:
         type:
           - Promise<azure-iot-device.Twin>
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.invokeMethod
     name: 'invokeMethod(string, MethodParams, Callback<MethodResult>)'
@@ -393,6 +402,7 @@ items:
       return:
         type:
           - Promise<azure-iot-device.MethodResult>
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.invokeMethod_3
     name: 'invokeMethod(string, string, MethodParams)'
@@ -425,6 +435,7 @@ items:
       return:
         type:
           - Promise<azure-iot-device.MethodResult>
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.listenerCount
     name: listenerCount(string | symbol)
@@ -443,6 +454,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.listeners
     name: listeners(string | symbol)
@@ -461,6 +473,7 @@ items:
       return:
         type:
           - 'Function[]'
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.off
     name: 'off(string | symbol, (args: any[]) => void)'
@@ -483,6 +496,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.on
     name: 'on(string | symbol, (args: any[]) => void)'
@@ -505,6 +519,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.onMethod
     name: >-
@@ -554,6 +569,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.open
     name: open(Callback<Connected>)
@@ -583,6 +599,7 @@ items:
       return:
         type:
           - Promise<Connected>
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.prependListener
     name: 'prependListener(string | symbol, (args: any[]) => void)'
@@ -607,6 +624,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.prependOnceListener
     name: 'prependOnceListener(string | symbol, (args: any[]) => void)'
@@ -631,6 +649,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.rawListeners
     name: rawListeners(string | symbol)
@@ -649,6 +668,7 @@ items:
       return:
         type:
           - 'Function[]'
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.reject
     name: 'reject(Message, Callback<MessageRejected>)'
@@ -688,6 +708,7 @@ items:
       return:
         type:
           - Promise<MessageRejected>
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.removeAllListeners
     name: removeAllListeners(string | symbol)
@@ -707,6 +728,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.removeListener
     name: 'removeListener(string | symbol, (args: any[]) => void)'
@@ -731,6 +753,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.sendEvent
     name: 'sendEvent(Message, Callback<MessageEnqueued>)'
@@ -770,6 +793,7 @@ items:
       return:
         type:
           - Promise<MessageEnqueued>
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.sendEventBatch
     name: 'sendEventBatch(Message[], Callback<MessageEnqueued>)'
@@ -809,6 +833,7 @@ items:
       return:
         type:
           - Promise<MessageEnqueued>
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.sendOutputEvent
     name: 'sendOutputEvent(string, Message, Callback<MessageEnqueued>)'
@@ -856,6 +881,7 @@ items:
       return:
         type:
           - Promise<MessageEnqueued>
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.sendOutputEventBatch
     name: 'sendOutputEventBatch(string, Message[], Callback<MessageEnqueued>)'
@@ -903,6 +929,7 @@ items:
       return:
         type:
           - Promise<MessageEnqueued>
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.setMaxListeners
     name: setMaxListeners(number)
@@ -921,6 +948,7 @@ items:
       return:
         type:
           - this
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.setOptions
     name: 'setOptions(DeviceClientOptions, Callback<TransportConfigured>)'
@@ -964,6 +992,7 @@ items:
       return:
         type:
           - Promise<TransportConfigured>
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.setRetryPolicy
     name: setRetryPolicy(RetryPolicy)
@@ -1021,6 +1050,7 @@ items:
       return:
         type:
           - Promise<TransportConfigured>
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.updateSharedAccessSignature
     name: >-
@@ -1072,6 +1102,7 @@ items:
       return:
         type:
           - azure-iot-device.ModuleClient
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.fromConnectionString
     name: 'fromConnectionString(string, any)'
@@ -1101,6 +1132,7 @@ items:
       return:
         type:
           - azure-iot-device.ModuleClient
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.fromEnvironment
     name: 'fromEnvironment(any, Callback<ModuleClient>)'
@@ -1172,6 +1204,7 @@ items:
       return:
         type:
           - Promise<azure-iot-device.ModuleClient>
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.fromSharedAccessSignature
     name: 'fromSharedAccessSignature(string, any)'
@@ -1200,6 +1233,7 @@ items:
       return:
         type:
           - azure-iot-device.ModuleClient
+        description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.listenerCount
     name: 'listenerCount(EventEmitter, string | symbol)'
@@ -1224,6 +1258,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: azure-iot-device
     deprecated:
       content: since v4.0.0

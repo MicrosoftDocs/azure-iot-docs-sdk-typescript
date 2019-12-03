@@ -135,6 +135,7 @@ items:
       return:
         type:
           - Promise<ResultWithHttpResponse<any>>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.addDevices
     name: >-
@@ -181,6 +182,7 @@ items:
         type:
           - >-
             Promise<ResultWithHttpResponse<azure-iothub.Registry.BulkRegistryOperationResult>>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.addModule
     name: 'addModule(Module, HttpResponseCallback<any>)'
@@ -218,6 +220,7 @@ items:
       return:
         type:
           - Promise<ResultWithHttpResponse<any>>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.applyConfigurationContentOnDevice
     name: >-
@@ -269,6 +272,7 @@ items:
       return:
         type:
           - Promise<ResultWithHttpResponse<any>>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.cancelJob
     name: 'cancelJob(string, Callback<JobStatus>)'
@@ -308,6 +312,7 @@ items:
       return:
         type:
           - Promise<azure-iothub.Registry.JobStatus>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.create
     name: 'create(DeviceDescription, HttpResponseCallback<Device>)'
@@ -349,6 +354,7 @@ items:
       return:
         type:
           - Promise<ResultWithHttpResponse<azure-iothub.Device>>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.createQuery
     name: 'createQuery(string, number)'
@@ -376,6 +382,7 @@ items:
       return:
         type:
           - azure-iothub.Query
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.delete
     name: 'delete(string, HttpResponseCallback<any>)'
@@ -413,6 +420,7 @@ items:
       return:
         type:
           - Promise<ResultWithHttpResponse<any>>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.exportDevicesToBlob
     name: 'exportDevicesToBlob(string, boolean, Callback<JobStatus>)'
@@ -466,6 +474,7 @@ items:
       return:
         type:
           - Promise<azure-iothub.Registry.JobStatus>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.get
     name: 'get(string, HttpResponseCallback<Device>)'
@@ -507,6 +516,7 @@ items:
       return:
         type:
           - Promise<ResultWithHttpResponse<azure-iothub.Device>>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.getConfiguration
     name: 'getConfiguration(string, HttpResponseCallback<Configuration>)'
@@ -546,6 +556,7 @@ items:
       return:
         type:
           - Promise<ResultWithHttpResponse<azure-iothub.Configuration>>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.getConfigurations
     name: 'getConfigurations(HttpResponseCallback<Configuration[]>)'
@@ -575,6 +586,7 @@ items:
       return:
         type:
           - 'Promise<ResultWithHttpResponse<azure-iothub.Configuration[]>>'
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.getJob
     name: 'getJob(string, Callback<JobStatus>)'
@@ -614,6 +626,7 @@ items:
       return:
         type:
           - Promise<azure-iothub.Registry.JobStatus>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.getModule
     name: 'getModule(string, string, HttpResponseCallback<Module>)'
@@ -661,6 +674,7 @@ items:
       return:
         type:
           - Promise<ResultWithHttpResponse<azure-iothub.Module>>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.getModuleTwin
     name: 'getModuleTwin(string, string, HttpResponseCallback<Twin>)'
@@ -708,6 +722,7 @@ items:
       return:
         type:
           - Promise<ResultWithHttpResponse<azure-iothub.Twin>>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.getModulesOnDevice
     name: 'getModulesOnDevice(string, HttpResponseCallback<Module[]>)'
@@ -747,6 +762,7 @@ items:
       return:
         type:
           - 'Promise<ResultWithHttpResponse<azure-iothub.Module[]>>'
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.getRegistryStatistics
     name: getRegistryStatistics(HttpResponseCallback<RegistryStatistics>)
@@ -779,6 +795,7 @@ items:
         type:
           - >-
             Promise<ResultWithHttpResponse<azure-iothub.Registry.RegistryStatistics>>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.getTwin
     name: 'getTwin(string, HttpResponseCallback<any>)'
@@ -816,6 +833,7 @@ items:
       return:
         type:
           - Promise<ResultWithHttpResponse<any>>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.importDevicesFromBlob
     name: 'importDevicesFromBlob(string, string, Callback<JobStatus>)'
@@ -869,6 +887,7 @@ items:
       return:
         type:
           - Promise<azure-iothub.Registry.JobStatus>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.list
     name: 'list(HttpResponseCallback<Device[]>)'
@@ -902,6 +921,7 @@ items:
       return:
         type:
           - 'Promise<ResultWithHttpResponse<azure-iothub.Device[]>>'
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.listJobs
     name: listJobs(HttpResponseCallback<any>)
@@ -931,6 +951,7 @@ items:
       return:
         type:
           - Promise<ResultWithHttpResponse<any>>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.removeConfiguration
     name: 'removeConfiguration(string, HttpResponseCallback<any>)'
@@ -970,6 +991,7 @@ items:
       return:
         type:
           - Promise<ResultWithHttpResponse<any>>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.removeDevices
     name: >-
@@ -1029,6 +1051,7 @@ items:
         type:
           - >-
             Promise<ResultWithHttpResponse<azure-iothub.Registry.BulkRegistryOperationResult>>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.removeModule
     name: 'removeModule(Module, TripleValueCallback<any, any>)'
@@ -1099,6 +1122,7 @@ items:
       return:
         type:
           - Promise<ResultWithHttpResponse<any>>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.removeModule_3
     name: removeModule(Module | string)
@@ -1117,6 +1141,7 @@ items:
       return:
         type:
           - Promise<ResultWithHttpResponse<any>>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.update
     name: 'update(DeviceDescription, HttpResponseCallback<Device>)'
@@ -1163,6 +1188,7 @@ items:
       return:
         type:
           - Promise<ResultWithHttpResponse<azure-iothub.Device>>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.updateConfiguration
     name: 'updateConfiguration(Configuration, HttpResponseCallback<any>)'
@@ -1235,6 +1261,7 @@ items:
       return:
         type:
           - Promise<ResultWithHttpResponse<any>>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.updateConfiguration_3
     name: updateConfiguration(Configuration)
@@ -1253,6 +1280,7 @@ items:
       return:
         type:
           - Promise<ResultWithHttpResponse<any>>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.updateDevices
     name: >-
@@ -1312,6 +1340,7 @@ items:
         type:
           - >-
             Promise<ResultWithHttpResponse<azure-iothub.Registry.BulkRegistryOperationResult>>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.updateModule
     name: 'updateModule(Module, TripleValueCallback<any, any>)'
@@ -1380,6 +1409,7 @@ items:
       return:
         type:
           - Promise<ResultWithHttpResponse<any>>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.updateModule_3
     name: updateModule(Module)
@@ -1398,6 +1428,7 @@ items:
       return:
         type:
           - Promise<ResultWithHttpResponse<any>>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.updateModuleTwin
     name: 'updateModuleTwin(string, string, any, string, HttpResponseCallback<any>)'
@@ -1466,6 +1497,7 @@ items:
       return:
         type:
           - Promise<ResultWithHttpResponse<any>>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.updateTwin
     name: 'updateTwin(string, any, string, HttpResponseCallback<any>)'
@@ -1524,6 +1556,7 @@ items:
       return:
         type:
           - Promise<ResultWithHttpResponse<any>>
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.fromConnectionString
     name: fromConnectionString(string)
@@ -1545,6 +1578,7 @@ items:
       return:
         type:
           - azure-iothub.Registry
+        description: ''
     package: azure-iothub
   - uid: azure-iothub.Registry.fromSharedAccessSignature
     name: fromSharedAccessSignature(string)
@@ -1566,6 +1600,7 @@ items:
       return:
         type:
           - azure-iothub.Registry
+        description: ''
     package: azure-iothub
 references:
   - uid: 'azure-iothub.Registry.DeviceRegistryOperationError[]'

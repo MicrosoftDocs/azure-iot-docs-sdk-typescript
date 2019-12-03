@@ -27,6 +27,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: azure-iot-provisioning-device
   - uid: azure-iot-provisioning-device.DeviceRegistrationState.deviceId
     name: deviceId
@@ -41,6 +42,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: azure-iot-provisioning-device
   - uid: azure-iot-provisioning-device.DeviceRegistrationState.status
     name: status
@@ -55,6 +57,7 @@ items:
       return:
         type:
           - azure-iot-provisioning-device.RegistrationStatus
+        description: ''
     package: azure-iot-provisioning-device
   - uid: azure-iot-provisioning-device.DeviceRegistrationState.tpm
     name: tpm
@@ -70,6 +73,7 @@ items:
       return:
         type:
           - TpmRegistrationResult
+        description: ''
     package: azure-iot-provisioning-device
   - uid: azure-iot-provisioning-device.DeviceRegistrationState.x509
     name: x509
@@ -85,6 +89,7 @@ items:
       return:
         type:
           - azure-iot-provisioning-device.X509Registration
+        description: ''
     package: azure-iot-provisioning-device
 references:
   - uid: azure-iot-provisioning-device.RegistrationStatus

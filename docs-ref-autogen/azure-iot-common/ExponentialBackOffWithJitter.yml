@@ -63,6 +63,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: azure-iot-common
   - uid: azure-iot-common.ExponentialBackOffWithJitter.normalParameters
     name: normalParameters
@@ -79,6 +80,7 @@ items:
       return:
         type:
           - azure-iot-common.ExponentialBackoffWithJitterParameters
+        description: ''
     package: azure-iot-common
   - uid: azure-iot-common.ExponentialBackOffWithJitter.throttledParameters
     name: throttledParameters
@@ -95,6 +97,7 @@ items:
       return:
         type:
           - azure-iot-common.ExponentialBackoffWithJitterParameters
+        description: ''
     package: azure-iot-common
   - uid: azure-iot-common.ExponentialBackOffWithJitter.nextRetryTimeout
     name: 'nextRetryTimeout(number, boolean)'
@@ -119,6 +122,7 @@ items:
       return:
         type:
           - number
+        description: The time to wait before attempting a retry in milliseconds.
     package: azure-iot-common
   - uid: azure-iot-common.ExponentialBackOffWithJitter.shouldRetry
     name: shouldRetry(Error)
@@ -139,6 +143,7 @@ items:
       return:
         type:
           - boolean
+        description: Whether the operation should be retried or not.
     package: azure-iot-common
 references:
   - uid: azure-iot-common.ExponentialBackoffWithJitterParameters

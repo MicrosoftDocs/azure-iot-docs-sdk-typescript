@@ -35,6 +35,7 @@ items:
       return:
         type:
           - '(retryCount: number, isThrottled: boolean) => number'
+        description: ''
     package: azure-iot-common
   - uid: azure-iot-common.RetryPolicy.shouldRetry
     name: shouldRetry
@@ -51,4 +52,5 @@ items:
       return:
         type:
           - '(error: Error) => boolean'
+        description: ''
     package: azure-iot-common

@@ -29,6 +29,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: azure-iot-common
   - uid: azure-iot-common.NoRetry.shouldRetry
     name: shouldRetry(Error)
@@ -47,4 +48,7 @@ items:
       return:
         type:
           - boolean
+        description: >-
+          Will always be false: retry should not be attempted no matter what the
+          error is.
     package: azure-iot-common

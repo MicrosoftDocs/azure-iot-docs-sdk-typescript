@@ -45,6 +45,7 @@ items:
       return:
         type:
           - number | azure-maps-control.atlas.Expression
+        description: ''
     package: azure-maps-control
   - uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.fillColor
     name: fillColor
@@ -63,6 +64,7 @@ items:
       return:
         type:
           - string | azure-maps-control.atlas.Expression
+        description: ''
     package: azure-maps-control
   - uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.fillOpacity
     name: fillOpacity
@@ -82,6 +84,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: azure-maps-control
   - uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.fillPattern
     name: fillPattern
@@ -101,6 +104,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: azure-maps-control
   - uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.filter
     name: filter
@@ -118,6 +122,7 @@ items:
       return:
         type:
           - azure-maps-control.atlas.Expression
+        description: ''
     package: azure-maps-control
   - uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.height
     name: height
@@ -137,6 +142,7 @@ items:
       return:
         type:
           - number | azure-maps-control.atlas.Expression
+        description: ''
     package: azure-maps-control
   - uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.maxZoom
     name: maxZoom
@@ -158,6 +164,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: azure-maps-control
   - uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.minZoom
     name: minZoom
@@ -179,6 +186,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: azure-maps-control
   - uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.source
     name: source
@@ -194,6 +202,7 @@ items:
       return:
         type:
           - string | azure-maps-control.atlas.source.Source
+        description: ''
     package: azure-maps-control
   - uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.sourceLayer
     name: sourceLayer
@@ -215,6 +224,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: azure-maps-control
   - uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.translate
     name: translate
@@ -233,6 +243,7 @@ items:
       return:
         type:
           - azure-maps-control.atlas.Pixel
+        description: ''
     package: azure-maps-control
   - uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.translateAnchor
     name: translateAnchor
@@ -252,6 +263,7 @@ items:
       return:
         type:
           - '"map" | "viewport"'
+        description: ''
     package: azure-maps-control
   - uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.verticalGradient
     name: verticalGradient
@@ -271,6 +283,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: azure-maps-control
   - uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.visible
     name: visible
@@ -288,6 +301,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.ControlBase
@@ -1259,6 +1273,12 @@ references:
       - name: HtmlMarkerManager
         fullName: HtmlMarkerManager
         uid: azure-maps-control.atlas.HtmlMarkerManager
+  - uid: azure-maps-control.atlas.PopupManager
+    name: PopupManager
+    spec.typeScript:
+      - name: PopupManager
+        fullName: PopupManager
+        uid: azure-maps-control.atlas.PopupManager
   - uid: azure-maps-control.atlas.SourceManager
     name: SourceManager
     spec.typeScript:
@@ -1347,6 +1367,41 @@ references:
       - name: PopupOptions
         fullName: PopupOptions
         uid: azure-maps-control.atlas.PopupOptions
+  - uid: >-
+      string | azure-maps-control.atlas.PropertyInfo[] | Array<string |
+      azure-maps-control.atlas.PropertyInfo[]>
+    name: 'PropertyInfo[]>'
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: PropertyInfo
+        fullName: PropertyInfo
+        uid: azure-maps-control.atlas.PropertyInfo
+      - name: '[] | Array<string | '
+        fullName: '[] | Array<string | '
+      - name: PropertyInfo
+        fullName: PropertyInfo
+        uid: azure-maps-control.atlas.PropertyInfo
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: azure-maps-control.atlas.HyperLinkFormatOptions
+    name: HyperLinkFormatOptions
+    spec.typeScript:
+      - name: HyperLinkFormatOptions
+        fullName: HyperLinkFormatOptions
+        uid: azure-maps-control.atlas.HyperLinkFormatOptions
+  - uid: azure-maps-control.atlas.Properties
+    name: Properties
+    spec.typeScript:
+      - name: Properties
+        fullName: Properties
+        uid: azure-maps-control.atlas.Properties
+  - uid: azure-maps-control.atlas.PopupTemplate
+    name: PopupTemplate
+    spec.typeScript:
+      - name: PopupTemplate
+        fullName: PopupTemplate
+        uid: azure-maps-control.atlas.PopupTemplate
   - uid: >-
       azure-maps-control.atlas.internal.EventEmitter<azure-maps-control.atlas.ShapeEvents>
     name: ShapeEvents>
@@ -1685,12 +1740,28 @@ references:
         uid: azure-maps-control.atlas.Shape
       - name: '>'
         fullName: '>'
+  - uid: 'azure-maps-control.atlas.Popup[]'
+    name: 'Popup[]'
+    spec.typeScript:
+      - name: Popup
+        fullName: Popup
+        uid: azure-maps-control.atlas.Popup
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-control.atlas.AuthenticationOptions
     name: AuthenticationOptions
     spec.typeScript:
       - name: AuthenticationOptions
         fullName: AuthenticationOptions
         uid: azure-maps-control.atlas.AuthenticationOptions
+  - uid: 'azure-maps-control.atlas.source.Source[]'
+    name: 'Source[]'
+    spec.typeScript:
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+      - name: '[]'
+        fullName: '[]'
   - uid: >-
       string | azure-maps-control.atlas.source.Source | Array<string |
       azure-maps-control.atlas.source.Source>

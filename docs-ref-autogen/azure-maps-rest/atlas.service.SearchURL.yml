@@ -38,6 +38,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.SearchURL.newPipeline
     name: 'newPipeline(Credential, INewPipelineOptions)'
@@ -67,6 +68,7 @@ items:
       return:
         type:
           - azure-maps-rest.atlas.service.Pipeline
+        description: A new Pipeline object.
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.SearchURL.searchAddress
     name: 'searchAddress(Aborter, string, SearchAddressOptions)'
@@ -128,6 +130,7 @@ items:
       return:
         type:
           - Promise<azure-maps-rest.atlas.service.SearchAddressResponse>
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.SearchURL.searchAddressReverse
     name: >-
@@ -183,6 +186,7 @@ items:
       return:
         type:
           - Promise<azure-maps-rest.atlas.service.SearchAddressReverseResponse>
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.SearchURL.searchAddressReverseCrossStreet
     name: >-
@@ -240,6 +244,7 @@ items:
         type:
           - >-
             Promise<azure-maps-rest.atlas.service.SearchAddressReverseCrossStreetResponse>
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.SearchURL.searchAddressStructured
     name: 'searchAddressStructured(Aborter, string, SearchAddressStructuredOptions)'
@@ -299,6 +304,7 @@ items:
         type:
           - >-
             Promise<azure-maps-rest.atlas.service.SearchAddressStructuredResponse>
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.SearchURL.searchAlongRoute
     name: >-
@@ -386,6 +392,7 @@ items:
       return:
         type:
           - Promise<azure-maps-rest.atlas.service.SearchAlongRouteResponse>
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.SearchURL.searchFuzzy
     name: 'searchFuzzy(Aborter, string | GeoJSON.Position, SearchFuzzyOptions)'
@@ -464,6 +471,7 @@ items:
       return:
         type:
           - Promise<azure-maps-rest.atlas.service.SearchFuzzyResponse>
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.SearchURL.searchInsideGeometry
     name: >-
@@ -573,6 +581,7 @@ items:
       return:
         type:
           - Promise<azure-maps-rest.atlas.service.SearchInsideGeometryResponse>
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.SearchURL.searchNearby
     name: 'searchNearby(Aborter, GeoJSON.Position, SearchNearbyOptions)'
@@ -621,6 +630,7 @@ items:
       return:
         type:
           - Promise<azure-maps-rest.atlas.service.SearchNearbyResponse>
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.SearchURL.searchPOI
     name: 'searchPOI(Aborter, string, SearchPOIOptions)'
@@ -664,6 +674,7 @@ items:
       return:
         type:
           - Promise<azure-maps-rest.atlas.service.SearchPOIResponse>
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.SearchURL.searchPOICategory
     name: 'searchPOICategory(Aborter, string, SearchPOICategoryOptions)'
@@ -711,6 +722,7 @@ items:
       return:
         type:
           - Promise<azure-maps-rest.atlas.service.SearchPOICategoryResponse>
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.SearchURL.searchPolygon
     name: 'searchPolygon(Aborter, string[])'
@@ -771,6 +783,7 @@ items:
       return:
         type:
           - Promise<azure-maps-rest.atlas.service.SearchPolygonResponse>
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.SearchURL.constructor
     name: 'SearchURL(Pipeline, string)'

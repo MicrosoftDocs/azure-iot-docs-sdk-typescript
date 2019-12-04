@@ -70,6 +70,7 @@ items:
       return:
         type:
           - azure-maps-control.atlas.data.Polygon
+        description: A polygon representation of the BoundingBox.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.convertAcceleration
     name: >-
@@ -110,6 +111,7 @@ items:
       return:
         type:
           - number
+        description: An acceleration value convertered from one unit to another.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.convertArea
     name: 'convertArea(number, string, string, number)'
@@ -147,6 +149,7 @@ items:
       return:
         type:
           - number
+        description: An area value convertered from one unit to another.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.convertDistance
     name: >-
@@ -186,6 +189,7 @@ items:
       return:
         type:
           - number
+        description: A distance in the new units.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.convertSpeed
     name: 'convertSpeed(number, string | SpeedUnits, string | SpeedUnits, number)'
@@ -222,6 +226,7 @@ items:
       return:
         type:
           - number
+        description: A speed value convertered from one unit to another.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.convertTimespan
     name: 'convertTimespan(number, string | TimeUnits, string | TimeUnits, number)'
@@ -258,6 +263,7 @@ items:
       return:
         type:
           - number
+        description: A time value convertered from one unit to another.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.getAcceleration
     name: >-
@@ -323,6 +329,9 @@ items:
       return:
         type:
           - number
+        description: >-
+          An acceleration based on an initial speed, travel distance and
+          timespan.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.getAccelerationFromFeatures
     name: >-
@@ -393,6 +402,10 @@ items:
       return:
         type:
           - number
+        description: >-
+          An acceleration between two point features that have a timestamp
+          property and optionally a speed property. Returns NaN if unable to
+          parse timestamp.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.getAccelerationFromSpeeds
     name: >-
@@ -453,6 +466,7 @@ items:
       return:
         type:
           - number
+        description: 'An acceleration based on an initial speed, final speed and timespan.'
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.getArea
     name: 'getArea(atlas, AreaUnits, number)'
@@ -481,6 +495,7 @@ items:
       return:
         type:
           - number
+        description: The area of a geometry in the specified units.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.getCardinalSpline
     name: 'getCardinalSpline(Position[], number, number, boolean)'
@@ -523,6 +538,9 @@ items:
       return:
         type:
           - 'azure-maps-control.atlas.data.Position[]'
+        description: >-
+          An array of positions that form a cardinal spline between the
+          specified array of positions.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.getClosestPointOnGeometry
     name: >-
@@ -583,6 +601,7 @@ items:
           - >-
             azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
             Object>
+        description: ''
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.getConvexHull
     name: >-
@@ -622,6 +641,7 @@ items:
       return:
         type:
           - azure-maps-control.atlas.data.Polygon
+        description: 'A Convex Hull from an array of positions, geometries or features.'
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.getDestination
     name: 'getDestination(Position | Point, number, number, string | DistanceUnits)'
@@ -661,6 +681,7 @@ items:
       return:
         type:
           - azure-maps-control.atlas.data.Position
+        description: A position that is the specified distance away from the origin.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.getDistanceTo
     name: 'getDistanceTo(Position | Point, Position | Point, string | DistanceUnits)'
@@ -696,6 +717,7 @@ items:
       return:
         type:
           - number
+        description: The shortest distance between two positions in the specified units.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.getEarthRadius
     name: getEarthRadius(string | DistanceUnits)
@@ -715,6 +737,9 @@ items:
       return:
         type:
           - number
+        description: >-
+          A number that represents the radius of the earth in a specific
+          distance unit.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.getGeodesicPath
     name: 'getGeodesicPath(LineString | Position[], number)'
@@ -745,6 +770,7 @@ items:
       return:
         type:
           - 'azure-maps-control.atlas.data.Position[]'
+        description: An array of position objects that form a geodesic paths.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.getHeading
     name: 'getHeading(Position | Point, Position | Point)'
@@ -773,6 +799,7 @@ items:
       return:
         type:
           - number
+        description: A heading in degrees between 0 and 360. 0 degrees points due North.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.getLengthOfPath
     name: 'getLengthOfPath(LineString | Position[], string | DistanceUnits)'
@@ -802,6 +829,9 @@ items:
       return:
         type:
           - number
+        description: >-
+          The distance between all positions in between all position objects in
+          an array on the surface of a earth in the specified units.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.getPixelHeading
     name: 'getPixelHeading(Position | Point, Position | Point)'
@@ -833,6 +863,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.getPointsWithHeadingsAlongPath
     name: 'getPointsWithHeadingsAlongPath(LineString | Position[], number)'
@@ -861,6 +892,7 @@ items:
           - >-
             Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
             Object>>
+        description: An array of evenly spaced points with headings along a path.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.getPointWithHeadingAlongPath
     name: >-
@@ -896,6 +928,7 @@ items:
           - >-
             azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Point,
             Object>
+        description: A point with heading a specified distance along a path.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.getPosition
     name: 'getPosition(Position | Point | Feature<Point, any> | Shape)'
@@ -922,6 +955,9 @@ items:
       return:
         type:
           - azure-maps-control.atlas.data.Position
+        description: >-
+          The position of an object that is a position, point, or point feature.
+          Returns null if invalid data passed in.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.getPositionAlongPath
     name: >-
@@ -962,6 +998,9 @@ items:
       return:
         type:
           - azure-maps-control.atlas.data.Position
+        description: >-
+          A position object that is the specified distance away from the start
+          of the path when following the path.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.getPositions
     name: >-
@@ -999,6 +1038,9 @@ items:
       return:
         type:
           - 'azure-maps-control.atlas.data.Position[]'
+        description: >-
+          An array of all positions in the provided geometry, feature or array
+          of geometries/features.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.getPositionsAlongPath
     name: 'getPositionsAlongPath(LineString | Position[], number)'
@@ -1025,6 +1067,7 @@ items:
       return:
         type:
           - 'azure-maps-control.atlas.data.Position[]'
+        description: An array of evenly spaced positions along a path.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.getRegularPolygonPath
     name: >-
@@ -1072,6 +1115,7 @@ items:
       return:
         type:
           - 'azure-maps-control.atlas.data.Position[]'
+        description: An array of position objects that form a regular polygon.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.getSpeed
     name: >-
@@ -1132,6 +1176,9 @@ items:
       return:
         type:
           - number
+        description: >-
+          The average speed of travel between two points based on the provided
+          amount of time.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.getSpeedFromFeatures
     name: >-
@@ -1191,6 +1238,9 @@ items:
       return:
         type:
           - number
+        description: >-
+          The speed in the specified units or NaN if valid timestamps are not
+          found.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.getTimespan
     name: >-
@@ -1237,6 +1287,9 @@ items:
       return:
         type:
           - number
+        description: >-
+          A timespan between two dates or timestamps. Returns NaN if unable to
+          parse timestamps.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.getTravelDistance
     name: >-
@@ -1300,6 +1353,9 @@ items:
       return:
         type:
           - number
+        description: >-
+          The distance traveled for a specified timespan, speed and optionally
+          an acceleration.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.interpolate
     name: 'interpolate(Position | Point, Position | Point, number)'
@@ -1335,6 +1391,9 @@ items:
       return:
         type:
           - azure-maps-control.atlas.data.Position
+        description: >-
+          A position that lies a fraction of the distance between two position
+          objects, relative to the first position object.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.mercatorPixelsToPositions
     name: 'mercatorPixelsToPositions(Pixel[], number)'
@@ -1362,6 +1421,7 @@ items:
       return:
         type:
           - 'azure-maps-control.atlas.data.Position[]'
+        description: An array of positions.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.mercatorPositionsToPixels
     name: 'mercatorPositionsToPixels(Position[], number)'
@@ -1386,6 +1446,7 @@ items:
       return:
         type:
           - 'azure-maps-control.atlas.Pixel[]'
+        description: Array of global Mercator pixels.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.normalizeLatitude
     name: normalizeLatitude(number)
@@ -1405,6 +1466,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.normalizeLongitude
     name: normalizeLongitude(number)
@@ -1424,6 +1486,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.parseTimestamp
     name: parseTimestamp(Date | string | number)
@@ -1450,6 +1513,9 @@ items:
       return:
         type:
           - Date
+        description: >-
+          A Date object that represents the timestamp or null if the timestamp
+          could not be parsed.
     package: azure-maps-control
   - uid: azure-maps-control.atlas.math.rotatePositions
     name: 'rotatePositions(Position[], Position | Point, number)'
@@ -1483,6 +1549,7 @@ items:
       return:
         type:
           - 'azure-maps-control.atlas.data.Position[]'
+        description: ''
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.ControlBase
@@ -2454,6 +2521,12 @@ references:
       - name: HtmlMarkerManager
         fullName: HtmlMarkerManager
         uid: azure-maps-control.atlas.HtmlMarkerManager
+  - uid: azure-maps-control.atlas.PopupManager
+    name: PopupManager
+    spec.typeScript:
+      - name: PopupManager
+        fullName: PopupManager
+        uid: azure-maps-control.atlas.PopupManager
   - uid: azure-maps-control.atlas.SourceManager
     name: SourceManager
     spec.typeScript:
@@ -2542,6 +2615,41 @@ references:
       - name: PopupOptions
         fullName: PopupOptions
         uid: azure-maps-control.atlas.PopupOptions
+  - uid: >-
+      string | azure-maps-control.atlas.PropertyInfo[] | Array<string |
+      azure-maps-control.atlas.PropertyInfo[]>
+    name: 'PropertyInfo[]>'
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: PropertyInfo
+        fullName: PropertyInfo
+        uid: azure-maps-control.atlas.PropertyInfo
+      - name: '[] | Array<string | '
+        fullName: '[] | Array<string | '
+      - name: PropertyInfo
+        fullName: PropertyInfo
+        uid: azure-maps-control.atlas.PropertyInfo
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: azure-maps-control.atlas.HyperLinkFormatOptions
+    name: HyperLinkFormatOptions
+    spec.typeScript:
+      - name: HyperLinkFormatOptions
+        fullName: HyperLinkFormatOptions
+        uid: azure-maps-control.atlas.HyperLinkFormatOptions
+  - uid: azure-maps-control.atlas.Properties
+    name: Properties
+    spec.typeScript:
+      - name: Properties
+        fullName: Properties
+        uid: azure-maps-control.atlas.Properties
+  - uid: azure-maps-control.atlas.PopupTemplate
+    name: PopupTemplate
+    spec.typeScript:
+      - name: PopupTemplate
+        fullName: PopupTemplate
+        uid: azure-maps-control.atlas.PopupTemplate
   - uid: >-
       azure-maps-control.atlas.internal.EventEmitter<azure-maps-control.atlas.ShapeEvents>
     name: ShapeEvents>
@@ -2880,12 +2988,28 @@ references:
         uid: azure-maps-control.atlas.Shape
       - name: '>'
         fullName: '>'
+  - uid: 'azure-maps-control.atlas.Popup[]'
+    name: 'Popup[]'
+    spec.typeScript:
+      - name: Popup
+        fullName: Popup
+        uid: azure-maps-control.atlas.Popup
+      - name: '[]'
+        fullName: '[]'
   - uid: azure-maps-control.atlas.AuthenticationOptions
     name: AuthenticationOptions
     spec.typeScript:
       - name: AuthenticationOptions
         fullName: AuthenticationOptions
         uid: azure-maps-control.atlas.AuthenticationOptions
+  - uid: 'azure-maps-control.atlas.source.Source[]'
+    name: 'Source[]'
+    spec.typeScript:
+      - name: Source
+        fullName: Source
+        uid: azure-maps-control.atlas.source.Source
+      - name: '[]'
+        fullName: '[]'
   - uid: >-
       string | azure-maps-control.atlas.source.Source | Array<string |
       azure-maps-control.atlas.source.Source>

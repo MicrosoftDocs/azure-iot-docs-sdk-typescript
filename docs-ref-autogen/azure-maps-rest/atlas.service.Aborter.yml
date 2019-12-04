@@ -72,6 +72,7 @@ items:
       return:
         type:
           - boolean
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.Aborter.addEventListener
     name: 'addEventListener("abort", (this: AbortSignalLike, ev: any) => any)'
@@ -117,6 +118,7 @@ items:
       return:
         type:
           - string | number | boolean | null | undefined
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.Aborter.none
     name: none
@@ -131,6 +133,7 @@ items:
       return:
         type:
           - azure-maps-rest.atlas.service.Aborter
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.Aborter.onabort
     name: onabort
@@ -146,6 +149,7 @@ items:
       return:
         type:
           - '(ev?: Event) => any'
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.Aborter.removeEventListener
     name: 'removeEventListener("abort", (this: AbortSignalLike, ev: any) => any)'
@@ -187,6 +191,7 @@ items:
       return:
         type:
           - azure-maps-rest.atlas.service.Aborter
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.Aborter.withTimeout
     name: withTimeout(number)
@@ -218,6 +223,7 @@ items:
       return:
         type:
           - azure-maps-rest.atlas.service.Aborter
+        description: The new Aborter instance created.
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.Aborter.withValue
     name: 'withValue(string, string | number | boolean | null)'
@@ -259,6 +265,7 @@ items:
       return:
         type:
           - azure-maps-rest.atlas.service.Aborter
+        description: ''
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.TransitTypeResult

@@ -22,8 +22,9 @@ items:
     summary: |-
       Primary and secondary CA reference.  These will be names rather than
       actual certificates.
+    optional: true
     syntax:
-      content: 'caReferences: X509CAReferences'
+      content: 'caReferences?: X509CAReferences'
       return:
         type:
           - azure-iot-provisioning-service.X509CAReferences
@@ -39,8 +40,9 @@ items:
     summary: >-
       x509 certificate object which provides all information for a leaf
       certificate.
+    optional: true
     syntax:
-      content: 'clientCertificates: X509Certificates'
+      content: 'clientCertificates?: X509Certificates'
       return:
         type:
           - azure-iot-provisioning-service.X509Certificates
@@ -58,8 +60,9 @@ items:
       certificate
 
       suitable for signing other certificates.
+    optional: true
     syntax:
-      content: 'signingCertificates: X509Certificates'
+      content: 'signingCertificates?: X509Certificates'
       return:
         type:
           - azure-iot-provisioning-service.X509Certificates

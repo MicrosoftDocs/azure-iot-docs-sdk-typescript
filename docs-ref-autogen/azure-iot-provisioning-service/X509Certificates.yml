@@ -39,8 +39,9 @@ items:
       Would typically be the certificate used to provide the identification
       and authentication for an enrollment in the case that the primary is
       revoked.
+    optional: true
     syntax:
-      content: 'secondary: X509CertificateWithInfo'
+      content: 'secondary?: X509CertificateWithInfo'
       return:
         type:
           - azure-iot-provisioning-service.X509CertificateWithInfo

@@ -81,8 +81,9 @@ items:
       - typeScript
     type: property
     summary: The date and time that this object was created.
+    optional: true
     syntax:
-      content: 'createdDateTimeUtc: string'
+      content: 'createdDateTimeUtc?: string'
       return:
         type:
           - string
@@ -131,8 +132,9 @@ items:
     summary: |-
       An opaque value suitable to uniquely identify a particular generation
       of this object for use during a CRUD operation.
+    optional: true
     syntax:
-      content: 'etag: string'
+      content: 'etag?: string'
       return:
         type:
           - string
@@ -148,8 +150,9 @@ items:
     summary: >-
       The initial twin document that will be created for devices upon their
       provisioning.
+    optional: true
     syntax:
-      content: 'initialTwin: InitialTwin'
+      content: 'initialTwin?: InitialTwin'
       return:
         type:
           - azure-iot-provisioning-service.InitialTwin
@@ -165,8 +168,9 @@ items:
     summary: |-
       The IoT Hub that will be the destination of the provisioning for devices
       associated with this object.
+    optional: true
     syntax:
-      content: 'iotHubHostName: string'
+      content: 'iotHubHostName?: string'
       return:
         type:
           - string
@@ -182,8 +186,9 @@ items:
     summary: >-
       The list of names of IoT hubs the device(s) in this resource can be
       allocated to. It must be a subset of tenant level list of IoT hubs.
+    optional: true
     syntax:
-      content: 'iotHubs: string[]'
+      content: 'iotHubs?: string[]'
       return:
         type:
           - 'string[]'
@@ -199,8 +204,9 @@ items:
     summary: |-
       The date and time that this object was last updated.  This
       could include an update or an actual registration.
+    optional: true
     syntax:
-      content: 'lastUpdatedDateTimeUtc: string'
+      content: 'lastUpdatedDateTimeUtc?: string'
       return:
         type:
           - string

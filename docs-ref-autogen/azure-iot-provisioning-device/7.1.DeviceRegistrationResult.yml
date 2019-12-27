@@ -1,0 +1,83 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-device - v1.7.1.DeviceRegistrationResult
+    name: DeviceRegistrationResult
+    fullName: DeviceRegistrationResult
+    children:
+      - >-
+        azure-iot-provisioning-device -
+        v1.7.1.DeviceRegistrationResult.operationId
+      - >-
+        azure-iot-provisioning-device -
+        v1.7.1.DeviceRegistrationResult.registrationState
+      - azure-iot-provisioning-device - v1.7.1.DeviceRegistrationResult.status
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      structure returned from the provisioning service is response to a
+      registrationRequest or queryRegistrationStatus operation
+    package: azure-iot-provisioning-device - v1
+  - uid: >-
+      azure-iot-provisioning-device -
+      v1.7.1.DeviceRegistrationResult.operationId
+    name: operationId
+    fullName: operationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID of the current operation
+    syntax:
+      content: 'operationId: string'
+      return:
+        type:
+          - string
+        description: ''
+    package: azure-iot-provisioning-device - v1
+  - uid: >-
+      azure-iot-provisioning-device -
+      v1.7.1.DeviceRegistrationResult.registrationState
+    name: registrationState
+    fullName: registrationState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: details on the completed registration operation
+    optional: true
+    syntax:
+      content: 'registrationState?: DeviceRegistrationState'
+      return:
+        type:
+          - azure-iot-provisioning-device - v1.7.1.DeviceRegistrationState
+        description: ''
+    package: azure-iot-provisioning-device - v1
+  - uid: azure-iot-provisioning-device - v1.7.1.DeviceRegistrationResult.status
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: registration status
+    syntax:
+      content: 'status: RegistrationStatus'
+      return:
+        type:
+          - azure-iot-provisioning-device - v1.7.1.RegistrationStatus
+        description: ''
+    package: azure-iot-provisioning-device - v1
+references:
+  - uid: azure-iot-provisioning-device - v1.7.1.DeviceRegistrationState
+    name: DeviceRegistrationState
+    spec.typeScript:
+      - name: DeviceRegistrationState
+        fullName: DeviceRegistrationState
+        uid: azure-iot-provisioning-device - v1.7.1.DeviceRegistrationState
+  - uid: azure-iot-provisioning-device - v1.7.1.RegistrationStatus
+    name: RegistrationStatus
+    spec.typeScript:
+      - name: RegistrationStatus
+        fullName: RegistrationStatus
+        uid: azure-iot-provisioning-device - v1.7.1.RegistrationStatus

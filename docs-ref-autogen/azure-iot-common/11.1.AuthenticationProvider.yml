@@ -1,0 +1,97 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-common - v1.11.1.AuthenticationProvider
+    name: AuthenticationProvider
+    fullName: AuthenticationProvider
+    children:
+      - azure-iot-common - v1.11.1.AuthenticationProvider.type
+      - azure-iot-common - v1.11.1.AuthenticationProvider.getDeviceCredentials
+      - azure-iot-common - v1.11.1.AuthenticationProvider.getDeviceCredentials_1
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Interface that must be implemented by objects that are used to provide
+      credentials to the transports used by the device client
+
+      to authenticate with an Azure IoT hub instance.
+    package: azure-iot-common - v1
+  - uid: azure-iot-common - v1.11.1.AuthenticationProvider.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'type: AuthenticationType'
+      return:
+        type:
+          - azure-iot-common - v1.11.1.AuthenticationType
+        description: ''
+    package: azure-iot-common - v1
+  - uid: azure-iot-common - v1.11.1.AuthenticationProvider.getDeviceCredentials
+    name: getDeviceCredentials(Callback<TransportConfig>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getDeviceCredentials(callback: Callback<TransportConfig>)'
+      parameters:
+        - id: callback
+          type:
+            - >-
+              azure-iot-common - v1.11.1.Callback<azure-iot-common -
+              v1.11.1.TransportConfig>
+          description: ''
+    package: azure-iot-common - v1
+  - uid: azure-iot-common - v1.11.1.AuthenticationProvider.getDeviceCredentials_1
+    name: getDeviceCredentials()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function getDeviceCredentials()
+      parameters: []
+      return:
+        type:
+          - Promise<azure-iot-common - v1.11.1.TransportConfig>
+        description: ''
+    package: azure-iot-common - v1
+references:
+  - uid: azure-iot-common - v1.11.1.AuthenticationType
+    name: AuthenticationType
+    spec.typeScript:
+      - name: AuthenticationType
+        fullName: AuthenticationType
+        uid: azure-iot-common - v1.11.1.AuthenticationType
+  - uid: >-
+      azure-iot-common - v1.11.1.Callback<azure-iot-common -
+      v1.11.1.TransportConfig>
+    name: TransportConfig>
+    spec.typeScript:
+      - name: Callback
+        fullName: Callback
+        uid: azure-iot-common - v1.11.1.Callback
+      - name: <
+        fullName: <
+      - name: TransportConfig
+        fullName: TransportConfig
+        uid: azure-iot-common - v1.11.1.TransportConfig
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<azure-iot-common - v1.11.1.TransportConfig>
+    name: TransportConfig>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: TransportConfig
+        fullName: TransportConfig
+        uid: azure-iot-common - v1.11.1.TransportConfig
+      - name: '>'
+        fullName: '>'

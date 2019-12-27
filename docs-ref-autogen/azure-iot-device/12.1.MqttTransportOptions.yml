@@ -1,0 +1,35 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-device - v1.12.1.MqttTransportOptions
+    name: MqttTransportOptions
+    fullName: MqttTransportOptions
+    children:
+      - azure-iot-device - v1.12.1.MqttTransportOptions.webSocketAgent
+    langs:
+      - typeScript
+    type: interface
+    summary: >
+      Options which are specific to the MQTT transport
+
+      This is passed into <xref:Client.setOptions> as a property named `mqtt`
+      inside of an <xref:DeviceClientOptions> object.
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.MqttTransportOptions.webSocketAgent
+    name: webSocketAgent
+    fullName: webSocketAgent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Optional
+      [Agent](https://nodejs.org/api/https.html#https_class_https_agent) object
+      to use with MQTT-WS connections
+    optional: true
+    syntax:
+      content: 'webSocketAgent?: Agent'
+      return:
+        type:
+          - Agent
+        description: ''
+    package: azure-iot-device - v1

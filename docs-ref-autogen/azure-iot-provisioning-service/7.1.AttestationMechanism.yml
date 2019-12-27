@@ -1,0 +1,113 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-service - v1.7.1.AttestationMechanism
+    name: AttestationMechanism
+    fullName: AttestationMechanism
+    children:
+      - >-
+        azure-iot-provisioning-service -
+        v1.7.1.AttestationMechanism.symmetricKey
+      - azure-iot-provisioning-service - v1.7.1.AttestationMechanism.tpm
+      - azure-iot-provisioning-service - v1.7.1.AttestationMechanism.type
+      - azure-iot-provisioning-service - v1.7.1.AttestationMechanism.x509
+    langs:
+      - typeScript
+    type: interface
+    summary: Device attestation method.
+    package: azure-iot-provisioning-service - v1
+  - uid: azure-iot-provisioning-service - v1.7.1.AttestationMechanism.symmetricKey
+    name: symmetricKey
+    fullName: symmetricKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      This property is an object containing the symmetric keys for an enrollment
+      record.
+    optional: true
+    syntax:
+      content: 'symmetricKey?: SymmetricKeyAttestation'
+      return:
+        type:
+          - azure-iot-provisioning-service - v1.7.1.SymmetricKeyAttestation
+        description: ''
+    package: azure-iot-provisioning-service - v1
+  - uid: azure-iot-provisioning-service - v1.7.1.AttestationMechanism.tpm
+    name: tpm
+    fullName: tpm
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      This property is an object containing the TPM specific values
+      for enrollment.
+    optional: true
+    syntax:
+      content: 'tpm?: TpmAttestation'
+      return:
+        type:
+          - azure-iot-provisioning-service - v1.7.1.TpmAttestation
+        description: ''
+    package: azure-iot-provisioning-service - v1
+  - uid: azure-iot-provisioning-service - v1.7.1.AttestationMechanism.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      The type of attestation.  Will be set to a string
+      either `tpm` or `x509`.
+    syntax:
+      content: 'type: AttestationTypes'
+      return:
+        type:
+          - azure-iot-provisioning-service - v1.7.1.AttestationTypes
+        description: ''
+    package: azure-iot-provisioning-service - v1
+  - uid: azure-iot-provisioning-service - v1.7.1.AttestationMechanism.x509
+    name: x509
+    fullName: x509
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      This property is an object containing the x509 specific values
+      for enrollment.
+    optional: true
+    syntax:
+      content: 'x509?: X509Attestation'
+      return:
+        type:
+          - azure-iot-provisioning-service - v1.7.1.X509Attestation
+        description: ''
+    package: azure-iot-provisioning-service - v1
+references:
+  - uid: azure-iot-provisioning-service - v1.7.1.SymmetricKeyAttestation
+    name: SymmetricKeyAttestation
+    spec.typeScript:
+      - name: SymmetricKeyAttestation
+        fullName: SymmetricKeyAttestation
+        uid: azure-iot-provisioning-service - v1.7.1.SymmetricKeyAttestation
+  - uid: azure-iot-provisioning-service - v1.7.1.TpmAttestation
+    name: TpmAttestation
+    spec.typeScript:
+      - name: TpmAttestation
+        fullName: TpmAttestation
+        uid: azure-iot-provisioning-service - v1.7.1.TpmAttestation
+  - uid: azure-iot-provisioning-service - v1.7.1.AttestationTypes
+    name: AttestationTypes
+    spec.typeScript:
+      - name: AttestationTypes
+        fullName: AttestationTypes
+        uid: azure-iot-provisioning-service - v1.7.1.AttestationTypes
+  - uid: azure-iot-provisioning-service - v1.7.1.X509Attestation
+    name: X509Attestation
+    spec.typeScript:
+      - name: X509Attestation
+        fullName: X509Attestation
+        uid: azure-iot-provisioning-service - v1.7.1.X509Attestation

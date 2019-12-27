@@ -1,0 +1,634 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iothub - v1.11.1.Client.ServiceReceiver
+    name: ServiceReceiver
+    fullName: ServiceReceiver
+    children:
+      - azure-iothub - v1.11.1.Client.ServiceReceiver.defaultMaxListeners
+      - azure-iothub - v1.11.1.Client.ServiceReceiver.abandon
+      - azure-iothub - v1.11.1.Client.ServiceReceiver.addListener
+      - azure-iothub - v1.11.1.Client.ServiceReceiver.complete
+      - azure-iothub - v1.11.1.Client.ServiceReceiver.emit
+      - azure-iothub - v1.11.1.Client.ServiceReceiver.eventNames
+      - azure-iothub - v1.11.1.Client.ServiceReceiver.getMaxListeners
+      - azure-iothub - v1.11.1.Client.ServiceReceiver.listenerCount
+      - azure-iothub - v1.11.1.Client.ServiceReceiver.listeners
+      - azure-iothub - v1.11.1.Client.ServiceReceiver.off
+      - azure-iothub - v1.11.1.Client.ServiceReceiver.on
+      - azure-iothub - v1.11.1.Client.ServiceReceiver.on_1
+      - azure-iothub - v1.11.1.Client.ServiceReceiver.on_2
+      - azure-iothub - v1.11.1.Client.ServiceReceiver.once
+      - azure-iothub - v1.11.1.Client.ServiceReceiver.prependListener
+      - azure-iothub - v1.11.1.Client.ServiceReceiver.prependOnceListener
+      - azure-iothub - v1.11.1.Client.ServiceReceiver.rawListeners
+      - azure-iothub - v1.11.1.Client.ServiceReceiver.reject
+      - azure-iothub - v1.11.1.Client.ServiceReceiver.removeAllListeners
+      - azure-iothub - v1.11.1.Client.ServiceReceiver.removeListener
+      - azure-iothub - v1.11.1.Client.ServiceReceiver.setMaxListeners
+      - azure-iothub - v1.11.1.Client.ServiceReceiver.listenerCount
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    extends:
+      name: Receiver
+    package: azure-iothub - v1
+  - uid: azure-iothub - v1.11.1.Client.ServiceReceiver.defaultMaxListeners
+    name: defaultMaxListeners
+    fullName: defaultMaxListeners
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'static defaultMaxListeners: number'
+      return:
+        type:
+          - number
+        description: ''
+    package: azure-iothub - v1
+  - uid: azure-iothub - v1.11.1.Client.ServiceReceiver.abandon
+    name: 'abandon(Message, Callback<MessageAbandoned>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function abandon(message: Message, done?: Callback<MessageAbandoned>)'
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+        - id: done
+          type:
+            - Callback<MessageAbandoned>
+          description: ''
+          optional: true
+    package: azure-iothub - v1
+  - uid: azure-iothub - v1.11.1.Client.ServiceReceiver.addListener
+    name: 'addListener(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function addListener(event: string | symbol, listener: (args: any[]) =>
+        void)
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iothub - v1
+  - uid: azure-iothub - v1.11.1.Client.ServiceReceiver.complete
+    name: 'complete(Message, Callback<MessageCompleted>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function complete(message: Message, done?: Callback<MessageCompleted>)'
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+        - id: done
+          type:
+            - Callback<MessageCompleted>
+          description: ''
+          optional: true
+    package: azure-iothub - v1
+  - uid: azure-iothub - v1.11.1.Client.ServiceReceiver.emit
+    name: 'emit(string | symbol, any[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function emit(event: string | symbol, args: any[])'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: args
+          type:
+            - 'any[]'
+          description: ''
+      return:
+        type:
+          - boolean
+        description: ''
+    package: azure-iothub - v1
+  - uid: azure-iothub - v1.11.1.Client.ServiceReceiver.eventNames
+    name: eventNames()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function eventNames()
+      parameters: []
+      return:
+        type:
+          - Array<string | symbol>
+        description: ''
+    package: azure-iothub - v1
+  - uid: azure-iothub - v1.11.1.Client.ServiceReceiver.getMaxListeners
+    name: getMaxListeners()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function getMaxListeners()
+      parameters: []
+      return:
+        type:
+          - number
+        description: ''
+    package: azure-iothub - v1
+  - uid: azure-iothub - v1.11.1.Client.ServiceReceiver.listenerCount
+    name: listenerCount(string | symbol)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listenerCount(type: string | symbol)'
+      parameters:
+        - id: type
+          type:
+            - string | symbol
+          description: ''
+      return:
+        type:
+          - number
+        description: ''
+    package: azure-iothub - v1
+  - uid: azure-iothub - v1.11.1.Client.ServiceReceiver.listeners
+    name: listeners(string | symbol)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listeners(event: string | symbol)'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+      return:
+        type:
+          - 'Function[]'
+        description: ''
+    package: azure-iothub - v1
+  - uid: azure-iothub - v1.11.1.Client.ServiceReceiver.off
+    name: 'off(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function off(event: string | symbol, listener: (args: any[]) => void)'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iothub - v1
+  - uid: azure-iothub - v1.11.1.Client.ServiceReceiver.on
+    name: 'on("message", (msg: Message) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function on(type: "message", func: (msg: Message) => void)'
+      parameters:
+        - id: type
+          type:
+            - '"message"'
+          description: ''
+        - id: func
+          type:
+            - '(msg: Message) => void'
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iothub - v1
+  - uid: azure-iothub - v1.11.1.Client.ServiceReceiver.on_1
+    name: 'on("errorReceived", (err: Error) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function on(type: "errorReceived", func: (err: Error) => void)'
+      parameters:
+        - id: type
+          type:
+            - '"errorReceived"'
+          description: ''
+        - id: func
+          type:
+            - '(err: Error) => void'
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iothub - v1
+  - uid: azure-iothub - v1.11.1.Client.ServiceReceiver.on_2
+    name: 'on(string, Function)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function on(type: string, func: Function)'
+      parameters:
+        - id: type
+          type:
+            - string
+          description: ''
+        - id: func
+          type:
+            - Function
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iothub - v1
+  - uid: azure-iothub - v1.11.1.Client.ServiceReceiver.once
+    name: 'once(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function once(event: string | symbol, listener: (args: any[]) => void)'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iothub - v1
+  - uid: azure-iothub - v1.11.1.Client.ServiceReceiver.prependListener
+    name: 'prependListener(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function prependListener(event: string | symbol, listener: (args: any[])
+        => void)
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iothub - v1
+  - uid: azure-iothub - v1.11.1.Client.ServiceReceiver.prependOnceListener
+    name: 'prependOnceListener(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function prependOnceListener(event: string | symbol, listener: (args:
+        any[]) => void)
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iothub - v1
+  - uid: azure-iothub - v1.11.1.Client.ServiceReceiver.rawListeners
+    name: rawListeners(string | symbol)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function rawListeners(event: string | symbol)'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+      return:
+        type:
+          - 'Function[]'
+        description: ''
+    package: azure-iothub - v1
+  - uid: azure-iothub - v1.11.1.Client.ServiceReceiver.reject
+    name: 'reject(Message, Callback<MessageRejected>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function reject(message: Message, done?: Callback<MessageRejected>)'
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+        - id: done
+          type:
+            - Callback<MessageRejected>
+          description: ''
+          optional: true
+    package: azure-iothub - v1
+  - uid: azure-iothub - v1.11.1.Client.ServiceReceiver.removeAllListeners
+    name: removeAllListeners(string | symbol)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function removeAllListeners(event?: string | symbol)'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+          optional: true
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iothub - v1
+  - uid: azure-iothub - v1.11.1.Client.ServiceReceiver.removeListener
+    name: 'removeListener(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function removeListener(event: string | symbol, listener: (args: any[])
+        => void)
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iothub - v1
+  - uid: azure-iothub - v1.11.1.Client.ServiceReceiver.setMaxListeners
+    name: setMaxListeners(number)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setMaxListeners(n: number)'
+      parameters:
+        - id: 'n'
+          type:
+            - number
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iothub - v1
+  - uid: azure-iothub - v1.11.1.Client.ServiceReceiver.listenerCount
+    name: 'listenerCount(EventEmitter, string | symbol)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        static function listenerCount(emitter: EventEmitter, event: string |
+        symbol)
+      parameters:
+        - id: emitter
+          type:
+            - EventEmitter
+          description: ''
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+      return:
+        type:
+          - number
+        description: ''
+    package: azure-iothub - v1
+    deprecated:
+      content: since v4.0.0
+references:
+  - uid: Callback<azure-iothub - v1.11.1.Client.ServiceReceiver>
+    name: ServiceReceiver>
+    spec.typeScript:
+      - name: Callback<
+        fullName: Callback<
+      - name: ServiceReceiver
+        fullName: ServiceReceiver
+        uid: azure-iothub - v1.11.1.Client.ServiceReceiver
+      - name: '>'
+        fullName: '>'
+  - uid: azure-iothub - v1.11.1.IncomingMessageCallback<Disconnected>
+    name: IncomingMessageCallback<Disconnected>
+    spec.typeScript:
+      - name: IncomingMessageCallback
+        fullName: IncomingMessageCallback
+        uid: azure-iothub - v1.11.1.IncomingMessageCallback
+      - name: <Disconnected>
+        fullName: <Disconnected>
+  - uid: Promise<azure-iothub - v1.11.1.ResultWithIncomingMessage<Disconnected>>
+    name: ResultWithIncomingMessage<Disconnected>>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ResultWithIncomingMessage
+        fullName: ResultWithIncomingMessage
+        uid: azure-iothub - v1.11.1.ResultWithIncomingMessage
+      - name: <Disconnected>>
+        fullName: <Disconnected>>
+  - uid: >-
+      azure-iothub - v1.11.1.IncomingMessageCallback<azure-iothub -
+      v1.11.1.Client.ServiceReceiver>
+    name: ServiceReceiver>
+    spec.typeScript:
+      - name: IncomingMessageCallback
+        fullName: IncomingMessageCallback
+        uid: azure-iothub - v1.11.1.IncomingMessageCallback
+      - name: <
+        fullName: <
+      - name: ServiceReceiver
+        fullName: ServiceReceiver
+        uid: azure-iothub - v1.11.1.Client.ServiceReceiver
+      - name: '>'
+        fullName: '>'
+  - uid: >-
+      Promise<azure-iothub - v1.11.1.ResultWithIncomingMessage<azure-iothub -
+      v1.11.1.Client.ServiceReceiver>>
+    name: ServiceReceiver>>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ResultWithIncomingMessage
+        fullName: ResultWithIncomingMessage
+        uid: azure-iothub - v1.11.1.ResultWithIncomingMessage
+      - name: <
+        fullName: <
+      - name: ServiceReceiver
+        fullName: ServiceReceiver
+        uid: azure-iothub - v1.11.1.Client.ServiceReceiver
+      - name: '>>'
+        fullName: '>>'
+  - uid: azure-iothub - v1.11.1.DeviceMethodParams
+    name: DeviceMethodParams
+    spec.typeScript:
+      - name: DeviceMethodParams
+        fullName: DeviceMethodParams
+        uid: azure-iothub - v1.11.1.DeviceMethodParams
+  - uid: azure-iothub - v1.11.1.IncomingMessageCallback<any>
+    name: IncomingMessageCallback<any>
+    spec.typeScript:
+      - name: IncomingMessageCallback
+        fullName: IncomingMessageCallback
+        uid: azure-iothub - v1.11.1.IncomingMessageCallback
+      - name: <any>
+        fullName: <any>
+  - uid: Promise<azure-iothub - v1.11.1.ResultWithIncomingMessage<any>>
+    name: ResultWithIncomingMessage<any>>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ResultWithIncomingMessage
+        fullName: ResultWithIncomingMessage
+        uid: azure-iothub - v1.11.1.ResultWithIncomingMessage
+      - name: <any>>
+        fullName: <any>>
+  - uid: azure-iothub - v1.11.1.IncomingMessageCallback<Connected>
+    name: IncomingMessageCallback<Connected>
+    spec.typeScript:
+      - name: IncomingMessageCallback
+        fullName: IncomingMessageCallback
+        uid: azure-iothub - v1.11.1.IncomingMessageCallback
+      - name: <Connected>
+        fullName: <Connected>
+  - uid: Promise<azure-iothub - v1.11.1.ResultWithIncomingMessage<Connected>>
+    name: ResultWithIncomingMessage<Connected>>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ResultWithIncomingMessage
+        fullName: ResultWithIncomingMessage
+        uid: azure-iothub - v1.11.1.ResultWithIncomingMessage
+      - name: <Connected>>
+        fullName: <Connected>>
+  - uid: azure-iothub - v1.11.1.IncomingMessageCallback<MessageEnqueued>
+    name: IncomingMessageCallback<MessageEnqueued>
+    spec.typeScript:
+      - name: IncomingMessageCallback
+        fullName: IncomingMessageCallback
+        uid: azure-iothub - v1.11.1.IncomingMessageCallback
+      - name: <MessageEnqueued>
+        fullName: <MessageEnqueued>
+  - uid: Promise<azure-iothub - v1.11.1.ResultWithIncomingMessage<MessageEnqueued>>
+    name: ResultWithIncomingMessage<MessageEnqueued>>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ResultWithIncomingMessage
+        fullName: ResultWithIncomingMessage
+        uid: azure-iothub - v1.11.1.ResultWithIncomingMessage
+      - name: <MessageEnqueued>>
+        fullName: <MessageEnqueued>>
+  - uid: azure-iothub - v1.11.1.Client.TransportCtor
+    name: TransportCtor
+    spec.typeScript:
+      - name: TransportCtor
+        fullName: TransportCtor
+        uid: azure-iothub - v1.11.1.Client.TransportCtor
+  - uid: azure-iothub - v1.11.1.Client
+    name: Client
+    spec.typeScript:
+      - name: Client
+        fullName: Client
+        uid: azure-iothub - v1.11.1.Client

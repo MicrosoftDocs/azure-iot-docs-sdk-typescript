@@ -1,0 +1,390 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-device-http - v1.7.1.Http
+    name: Http
+    fullName: Http
+    children:
+      - azure-iot-provisioning-device-http - v1.7.1.Http.defaultMaxListeners
+      - azure-iot-provisioning-device-http - v1.7.1.Http.addListener
+      - azure-iot-provisioning-device-http - v1.7.1.Http.emit
+      - azure-iot-provisioning-device-http - v1.7.1.Http.eventNames
+      - azure-iot-provisioning-device-http - v1.7.1.Http.getMaxListeners
+      - azure-iot-provisioning-device-http - v1.7.1.Http.listenerCount
+      - azure-iot-provisioning-device-http - v1.7.1.Http.listeners
+      - azure-iot-provisioning-device-http - v1.7.1.Http.off
+      - azure-iot-provisioning-device-http - v1.7.1.Http.on
+      - azure-iot-provisioning-device-http - v1.7.1.Http.once
+      - azure-iot-provisioning-device-http - v1.7.1.Http.prependListener
+      - azure-iot-provisioning-device-http - v1.7.1.Http.prependOnceListener
+      - azure-iot-provisioning-device-http - v1.7.1.Http.rawListeners
+      - azure-iot-provisioning-device-http - v1.7.1.Http.removeAllListeners
+      - azure-iot-provisioning-device-http - v1.7.1.Http.removeListener
+      - azure-iot-provisioning-device-http - v1.7.1.Http.setMaxListeners
+      - azure-iot-provisioning-device-http - v1.7.1.Http.listenerCount
+    langs:
+      - typeScript
+    type: class
+    summary: Transport used to provision a device over HTTP.
+    extends:
+      name: EventEmitter
+    package: azure-iot-provisioning-device-http - v1
+  - uid: azure-iot-provisioning-device-http - v1.7.1.Http.defaultMaxListeners
+    name: defaultMaxListeners
+    fullName: defaultMaxListeners
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'static defaultMaxListeners: number'
+      return:
+        type:
+          - number
+        description: ''
+    package: azure-iot-provisioning-device-http - v1
+  - uid: azure-iot-provisioning-device-http - v1.7.1.Http.addListener
+    name: 'addListener(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function addListener(event: string | symbol, listener: (args: any[]) =>
+        void)
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iot-provisioning-device-http - v1
+  - uid: azure-iot-provisioning-device-http - v1.7.1.Http.emit
+    name: 'emit(string | symbol, any[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function emit(event: string | symbol, args: any[])'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: args
+          type:
+            - 'any[]'
+          description: ''
+      return:
+        type:
+          - boolean
+        description: ''
+    package: azure-iot-provisioning-device-http - v1
+  - uid: azure-iot-provisioning-device-http - v1.7.1.Http.eventNames
+    name: eventNames()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function eventNames()
+      parameters: []
+      return:
+        type:
+          - Array<string | symbol>
+        description: ''
+    package: azure-iot-provisioning-device-http - v1
+  - uid: azure-iot-provisioning-device-http - v1.7.1.Http.getMaxListeners
+    name: getMaxListeners()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function getMaxListeners()
+      parameters: []
+      return:
+        type:
+          - number
+        description: ''
+    package: azure-iot-provisioning-device-http - v1
+  - uid: azure-iot-provisioning-device-http - v1.7.1.Http.listenerCount
+    name: listenerCount(string | symbol)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listenerCount(type: string | symbol)'
+      parameters:
+        - id: type
+          type:
+            - string | symbol
+          description: ''
+      return:
+        type:
+          - number
+        description: ''
+    package: azure-iot-provisioning-device-http - v1
+  - uid: azure-iot-provisioning-device-http - v1.7.1.Http.listeners
+    name: listeners(string | symbol)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listeners(event: string | symbol)'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+      return:
+        type:
+          - 'Function[]'
+        description: ''
+    package: azure-iot-provisioning-device-http - v1
+  - uid: azure-iot-provisioning-device-http - v1.7.1.Http.off
+    name: 'off(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function off(event: string | symbol, listener: (args: any[]) => void)'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iot-provisioning-device-http - v1
+  - uid: azure-iot-provisioning-device-http - v1.7.1.Http.on
+    name: 'on(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function on(event: string | symbol, listener: (args: any[]) => void)'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iot-provisioning-device-http - v1
+  - uid: azure-iot-provisioning-device-http - v1.7.1.Http.once
+    name: 'once(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function once(event: string | symbol, listener: (args: any[]) => void)'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iot-provisioning-device-http - v1
+  - uid: azure-iot-provisioning-device-http - v1.7.1.Http.prependListener
+    name: 'prependListener(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function prependListener(event: string | symbol, listener: (args: any[])
+        => void)
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iot-provisioning-device-http - v1
+  - uid: azure-iot-provisioning-device-http - v1.7.1.Http.prependOnceListener
+    name: 'prependOnceListener(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function prependOnceListener(event: string | symbol, listener: (args:
+        any[]) => void)
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iot-provisioning-device-http - v1
+  - uid: azure-iot-provisioning-device-http - v1.7.1.Http.rawListeners
+    name: rawListeners(string | symbol)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function rawListeners(event: string | symbol)'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+      return:
+        type:
+          - 'Function[]'
+        description: ''
+    package: azure-iot-provisioning-device-http - v1
+  - uid: azure-iot-provisioning-device-http - v1.7.1.Http.removeAllListeners
+    name: removeAllListeners(string | symbol)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function removeAllListeners(event?: string | symbol)'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+          optional: true
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iot-provisioning-device-http - v1
+  - uid: azure-iot-provisioning-device-http - v1.7.1.Http.removeListener
+    name: 'removeListener(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function removeListener(event: string | symbol, listener: (args: any[])
+        => void)
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iot-provisioning-device-http - v1
+  - uid: azure-iot-provisioning-device-http - v1.7.1.Http.setMaxListeners
+    name: setMaxListeners(number)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setMaxListeners(n: number)'
+      parameters:
+        - id: 'n'
+          type:
+            - number
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iot-provisioning-device-http - v1
+  - uid: azure-iot-provisioning-device-http - v1.7.1.Http.listenerCount
+    name: 'listenerCount(EventEmitter, string | symbol)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        static function listenerCount(emitter: EventEmitter, event: string |
+        symbol)
+      parameters:
+        - id: emitter
+          type:
+            - EventEmitter
+          description: ''
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+      return:
+        type:
+          - number
+        description: ''
+    package: azure-iot-provisioning-device-http - v1
+    deprecated:
+      content: since v4.0.0

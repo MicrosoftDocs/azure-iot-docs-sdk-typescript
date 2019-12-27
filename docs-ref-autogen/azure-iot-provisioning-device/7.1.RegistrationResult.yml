@@ -1,0 +1,114 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-provisioning-device - v1.7.1.RegistrationResult
+    name: RegistrationResult
+    fullName: RegistrationResult
+    children:
+      - azure-iot-provisioning-device - v1.7.1.RegistrationResult.assignedHub
+      - azure-iot-provisioning-device - v1.7.1.RegistrationResult.deviceId
+      - azure-iot-provisioning-device - v1.7.1.RegistrationResult.status
+      - azure-iot-provisioning-device - v1.7.1.RegistrationResult.tpm
+      - azure-iot-provisioning-device - v1.7.1.RegistrationResult.x509
+    langs:
+      - typeScript
+    type: interface
+    summary: Device configuration returned when registration is complete
+    extends:
+      name: azure-iot-provisioning-device - v1.7.1.DeviceRegistrationState
+    package: azure-iot-provisioning-device - v1
+  - uid: azure-iot-provisioning-device - v1.7.1.RegistrationResult.assignedHub
+    name: assignedHub
+    fullName: assignedHub
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: IoT Hub where the provisioned device is located
+    syntax:
+      content: 'assignedHub: string'
+      return:
+        type:
+          - string
+        description: ''
+    package: azure-iot-provisioning-device - v1
+  - uid: azure-iot-provisioning-device - v1.7.1.RegistrationResult.deviceId
+    name: deviceId
+    fullName: deviceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: deviceId for the provisioned device
+    syntax:
+      content: 'deviceId: string'
+      return:
+        type:
+          - string
+        description: ''
+    package: azure-iot-provisioning-device - v1
+  - uid: azure-iot-provisioning-device - v1.7.1.RegistrationResult.status
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: registration status
+    syntax:
+      content: 'status: RegistrationStatus'
+      return:
+        type:
+          - azure-iot-provisioning-device - v1.7.1.RegistrationStatus
+        description: ''
+    package: azure-iot-provisioning-device - v1
+  - uid: azure-iot-provisioning-device - v1.7.1.RegistrationResult.tpm
+    name: tpm
+    fullName: tpm
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: TPM registration result
+    optional: true
+    syntax:
+      content: 'tpm?: TpmRegistrationResult'
+      return:
+        type:
+          - TpmRegistrationResult
+        description: ''
+    package: azure-iot-provisioning-device - v1
+  - uid: azure-iot-provisioning-device - v1.7.1.RegistrationResult.x509
+    name: x509
+    fullName: x509
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: x509 registration result
+    optional: true
+    syntax:
+      content: 'x509?: X509Registration'
+      return:
+        type:
+          - azure-iot-provisioning-device - v1.7.1.X509Registration
+        description: ''
+    package: azure-iot-provisioning-device - v1
+references:
+  - uid: azure-iot-provisioning-device - v1.7.1.DeviceRegistrationState
+    name: DeviceRegistrationState
+    spec.typeScript:
+      - name: DeviceRegistrationState
+        fullName: DeviceRegistrationState
+        uid: azure-iot-provisioning-device - v1.7.1.DeviceRegistrationState
+  - uid: azure-iot-provisioning-device - v1.7.1.RegistrationStatus
+    name: RegistrationStatus
+    spec.typeScript:
+      - name: RegistrationStatus
+        fullName: RegistrationStatus
+        uid: azure-iot-provisioning-device - v1.7.1.RegistrationStatus
+  - uid: azure-iot-provisioning-device - v1.7.1.X509Registration
+    name: X509Registration
+    spec.typeScript:
+      - name: X509Registration
+        fullName: X509Registration
+        uid: azure-iot-provisioning-device - v1.7.1.X509Registration

@@ -1,0 +1,976 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-device - v1.12.1.DeviceTransport
+    name: DeviceTransport
+    fullName: DeviceTransport
+    children:
+      - azure-iot-device - v1.12.1.DeviceTransport.defaultMaxListeners
+      - azure-iot-device - v1.12.1.DeviceTransport.abandon
+      - azure-iot-device - v1.12.1.DeviceTransport.addListener
+      - azure-iot-device - v1.12.1.DeviceTransport.complete
+      - azure-iot-device - v1.12.1.DeviceTransport.connect
+      - azure-iot-device - v1.12.1.DeviceTransport.disableC2D
+      - azure-iot-device - v1.12.1.DeviceTransport.disableInputMessages
+      - azure-iot-device - v1.12.1.DeviceTransport.disableMethods
+      - >-
+        azure-iot-device -
+        v1.12.1.DeviceTransport.disableTwinDesiredPropertiesUpdates
+      - azure-iot-device - v1.12.1.DeviceTransport.disconnect
+      - azure-iot-device - v1.12.1.DeviceTransport.emit
+      - azure-iot-device - v1.12.1.DeviceTransport.enableC2D
+      - azure-iot-device - v1.12.1.DeviceTransport.enableInputMessages
+      - azure-iot-device - v1.12.1.DeviceTransport.enableMethods
+      - >-
+        azure-iot-device -
+        v1.12.1.DeviceTransport.enableTwinDesiredPropertiesUpdates
+      - azure-iot-device - v1.12.1.DeviceTransport.eventNames
+      - azure-iot-device - v1.12.1.DeviceTransport.getMaxListeners
+      - azure-iot-device - v1.12.1.DeviceTransport.getTwin
+      - azure-iot-device - v1.12.1.DeviceTransport.listenerCount
+      - azure-iot-device - v1.12.1.DeviceTransport.listeners
+      - azure-iot-device - v1.12.1.DeviceTransport.off
+      - azure-iot-device - v1.12.1.DeviceTransport.on
+      - azure-iot-device - v1.12.1.DeviceTransport.on_1
+      - azure-iot-device - v1.12.1.DeviceTransport.on_2
+      - azure-iot-device - v1.12.1.DeviceTransport.on_3
+      - azure-iot-device - v1.12.1.DeviceTransport.on_4
+      - azure-iot-device - v1.12.1.DeviceTransport.onDeviceMethod
+      - azure-iot-device - v1.12.1.DeviceTransport.once
+      - azure-iot-device - v1.12.1.DeviceTransport.prependListener
+      - azure-iot-device - v1.12.1.DeviceTransport.prependOnceListener
+      - azure-iot-device - v1.12.1.DeviceTransport.rawListeners
+      - azure-iot-device - v1.12.1.DeviceTransport.reject
+      - azure-iot-device - v1.12.1.DeviceTransport.removeAllListeners
+      - azure-iot-device - v1.12.1.DeviceTransport.removeListener
+      - azure-iot-device - v1.12.1.DeviceTransport.sendEvent
+      - azure-iot-device - v1.12.1.DeviceTransport.sendEventBatch
+      - azure-iot-device - v1.12.1.DeviceTransport.sendMethodResponse
+      - azure-iot-device - v1.12.1.DeviceTransport.sendOutputEvent
+      - azure-iot-device - v1.12.1.DeviceTransport.sendOutputEventBatch
+      - azure-iot-device - v1.12.1.DeviceTransport.setMaxListeners
+      - azure-iot-device - v1.12.1.DeviceTransport.setOptions
+      - azure-iot-device - v1.12.1.DeviceTransport.updateSharedAccessSignature
+      - azure-iot-device - v1.12.1.DeviceTransport.updateTwinReportedProperties
+      - azure-iot-device - v1.12.1.DeviceTransport.listenerCount
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    extends:
+      name: EventEmitter
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.defaultMaxListeners
+    name: defaultMaxListeners
+    fullName: defaultMaxListeners
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'static defaultMaxListeners: number'
+      return:
+        type:
+          - number
+        description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.abandon
+    name: 'abandon(Message, (err?: Error, results?: MessageAbandoned) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function abandon(message: Message, done: (err?: Error, results?:
+        MessageAbandoned) => void)
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+        - id: done
+          type:
+            - '(err?: Error, results?: MessageAbandoned) => void'
+          description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.addListener
+    name: 'addListener(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function addListener(event: string | symbol, listener: (args: any[]) =>
+        void)
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.complete
+    name: 'complete(Message, (err?: Error, result?: MessageCompleted) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function complete(message: Message, done: (err?: Error, result?:
+        MessageCompleted) => void)
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+        - id: done
+          type:
+            - '(err?: Error, result?: MessageCompleted) => void'
+          description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.connect
+    name: 'connect((err?: Error, result?: Connected) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function connect(done: (err?: Error, result?: Connected) => void)'
+      parameters:
+        - id: done
+          type:
+            - '(err?: Error, result?: Connected) => void'
+          description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.disableC2D
+    name: 'disableC2D((err?: Error) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disableC2D(callback: (err?: Error) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.disableInputMessages
+    name: 'disableInputMessages((err?: Error) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disableInputMessages(callback: (err?: Error) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.disableMethods
+    name: 'disableMethods((err?: Error) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disableMethods(callback: (err?: Error) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''
+    package: azure-iot-device - v1
+  - uid: >-
+      azure-iot-device -
+      v1.12.1.DeviceTransport.disableTwinDesiredPropertiesUpdates
+    name: 'disableTwinDesiredPropertiesUpdates((err?: Error) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function disableTwinDesiredPropertiesUpdates(callback: (err?: Error) =>
+        void)
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.disconnect
+    name: 'disconnect((err?: Error, result?: Disconnected) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disconnect(done: (err?: Error, result?: Disconnected) => void)'
+      parameters:
+        - id: done
+          type:
+            - '(err?: Error, result?: Disconnected) => void'
+          description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.emit
+    name: 'emit(string | symbol, any[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function emit(event: string | symbol, args: any[])'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: args
+          type:
+            - 'any[]'
+          description: ''
+      return:
+        type:
+          - boolean
+        description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.enableC2D
+    name: 'enableC2D((err?: Error) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function enableC2D(callback: (err?: Error) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.enableInputMessages
+    name: 'enableInputMessages((err?: Error) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function enableInputMessages(callback: (err?: Error) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.enableMethods
+    name: 'enableMethods((err?: Error) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function enableMethods(callback: (err?: Error) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''
+    package: azure-iot-device - v1
+  - uid: >-
+      azure-iot-device -
+      v1.12.1.DeviceTransport.enableTwinDesiredPropertiesUpdates
+    name: 'enableTwinDesiredPropertiesUpdates((err?: Error) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function enableTwinDesiredPropertiesUpdates(callback: (err?: Error) =>
+        void)
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.eventNames
+    name: eventNames()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function eventNames()
+      parameters: []
+      return:
+        type:
+          - Array<string | symbol>
+        description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.getMaxListeners
+    name: getMaxListeners()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function getMaxListeners()
+      parameters: []
+      return:
+        type:
+          - number
+        description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.getTwin
+    name: 'getTwin((err?: Error, twin?: TwinProperties) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getTwin(callback: (err?: Error, twin?: TwinProperties) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error, twin?: TwinProperties) => void'
+          description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.listenerCount
+    name: listenerCount(string | symbol)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listenerCount(type: string | symbol)'
+      parameters:
+        - id: type
+          type:
+            - string | symbol
+          description: ''
+      return:
+        type:
+          - number
+        description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.listeners
+    name: listeners(string | symbol)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listeners(event: string | symbol)'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+      return:
+        type:
+          - 'Function[]'
+        description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.off
+    name: 'off(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function off(event: string | symbol, listener: (args: any[]) => void)'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.on
+    name: 'on("error", (err: Error) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function on(type: "error", func: (err: Error) => void)'
+      parameters:
+        - id: type
+          type:
+            - '"error"'
+          description: ''
+        - id: func
+          type:
+            - '(err: Error) => void'
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.on_1
+    name: 'on("disconnect", (err?: Error) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function on(type: "disconnect", func: (err?: Error) => void)'
+      parameters:
+        - id: type
+          type:
+            - '"disconnect"'
+          description: ''
+        - id: func
+          type:
+            - '(err?: Error) => void'
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.on_2
+    name: 'on("message", (msg: Message) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function on(type: "message", func: (msg: Message) => void)'
+      parameters:
+        - id: type
+          type:
+            - '"message"'
+          description: ''
+        - id: func
+          type:
+            - '(msg: Message) => void'
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.on_3
+    name: 'on("twinDesiredPropertiesUpdate", (desiredProps: any) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function on(type: "twinDesiredPropertiesUpdate", func: (desiredProps:
+        any) => void)
+      parameters:
+        - id: type
+          type:
+            - '"twinDesiredPropertiesUpdate"'
+          description: ''
+        - id: func
+          type:
+            - '(desiredProps: any) => void'
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.on_4
+    name: 'on("inputMessage", (inputName: string, msg: Message) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function on(type: "inputMessage", func: (inputName: string, msg:
+        Message) => void)
+      parameters:
+        - id: type
+          type:
+            - '"inputMessage"'
+          description: ''
+        - id: func
+          type:
+            - '(inputName: string, msg: Message) => void'
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.onDeviceMethod
+    name: >-
+      onDeviceMethod(string, (request: MethodMessage, response:
+      DeviceMethodResponse) => void)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function onDeviceMethod(methodName: string, methodCallback: (request:
+        MethodMessage, response: DeviceMethodResponse) => void)
+      parameters:
+        - id: methodName
+          type:
+            - string
+          description: ''
+        - id: methodCallback
+          type:
+            - '(request: MethodMessage, response: DeviceMethodResponse) => void'
+          description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.once
+    name: 'once(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function once(event: string | symbol, listener: (args: any[]) => void)'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.prependListener
+    name: 'prependListener(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function prependListener(event: string | symbol, listener: (args: any[])
+        => void)
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.prependOnceListener
+    name: 'prependOnceListener(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function prependOnceListener(event: string | symbol, listener: (args:
+        any[]) => void)
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.rawListeners
+    name: rawListeners(string | symbol)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function rawListeners(event: string | symbol)'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+      return:
+        type:
+          - 'Function[]'
+        description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.reject
+    name: 'reject(Message, (err?: Error, results?: MessageRejected) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function reject(message: Message, done: (err?: Error, results?:
+        MessageRejected) => void)
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+        - id: done
+          type:
+            - '(err?: Error, results?: MessageRejected) => void'
+          description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.removeAllListeners
+    name: removeAllListeners(string | symbol)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function removeAllListeners(event?: string | symbol)'
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+          optional: true
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.removeListener
+    name: 'removeListener(string | symbol, (args: any[]) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function removeListener(event: string | symbol, listener: (args: any[])
+        => void)
+      parameters:
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+        - id: listener
+          type:
+            - '(args: any[]) => void'
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.sendEvent
+    name: 'sendEvent(Message, (err?: Error, result?: MessageEnqueued) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function sendEvent(message: Message, done: (err?: Error, result?:
+        MessageEnqueued) => void)
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+        - id: done
+          type:
+            - '(err?: Error, result?: MessageEnqueued) => void'
+          description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.sendEventBatch
+    name: 'sendEventBatch(Message[], (err?: Error, result?: MessageEnqueued) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function sendEventBatch(messages: Message[], done: (err?: Error,
+        result?: MessageEnqueued) => void)
+      parameters:
+        - id: messages
+          type:
+            - 'Message[]'
+          description: ''
+        - id: done
+          type:
+            - '(err?: Error, result?: MessageEnqueued) => void'
+          description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.sendMethodResponse
+    name: >-
+      sendMethodResponse(DeviceMethodResponse, (err?: Error, result?: any) =>
+      void)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function sendMethodResponse(response: DeviceMethodResponse, done?:
+        (err?: Error, result?: any) => void)
+      parameters:
+        - id: response
+          type:
+            - azure-iot-device - v1.12.1.DeviceMethodResponse
+          description: ''
+        - id: done
+          type:
+            - '(err?: Error, result?: any) => void'
+          description: ''
+          optional: true
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.sendOutputEvent
+    name: >-
+      sendOutputEvent(string, Message, (err?: Error, result?: MessageEnqueued)
+      => void)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function sendOutputEvent(outputName: string, message: Message, done:
+        (err?: Error, result?: MessageEnqueued) => void)
+      parameters:
+        - id: outputName
+          type:
+            - string
+          description: ''
+        - id: message
+          type:
+            - Message
+          description: ''
+        - id: done
+          type:
+            - '(err?: Error, result?: MessageEnqueued) => void'
+          description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.sendOutputEventBatch
+    name: >-
+      sendOutputEventBatch(string, Message[], (err?: Error, result?:
+      MessageEnqueued) => void)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function sendOutputEventBatch(outputName: string, messages: Message[],
+        done: (err?: Error, result?: MessageEnqueued) => void)
+      parameters:
+        - id: outputName
+          type:
+            - string
+          description: ''
+        - id: messages
+          type:
+            - 'Message[]'
+          description: ''
+        - id: done
+          type:
+            - '(err?: Error, result?: MessageEnqueued) => void'
+          description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.setMaxListeners
+    name: setMaxListeners(number)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setMaxListeners(n: number)'
+      parameters:
+        - id: 'n'
+          type:
+            - number
+          description: ''
+      return:
+        type:
+          - this
+        description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.setOptions
+    name: >-
+      setOptions(DeviceClientOptions, (err?: Error, result?:
+      TransportConfigured) => void)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function setOptions(options: DeviceClientOptions, done: (err?: Error,
+        result?: TransportConfigured) => void)
+      parameters:
+        - id: options
+          type:
+            - azure-iot-device - v1.12.1.DeviceClientOptions
+          description: ''
+        - id: done
+          type:
+            - '(err?: Error, result?: TransportConfigured) => void'
+          description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.updateSharedAccessSignature
+    name: >-
+      updateSharedAccessSignature(string, (err?: Error, result?:
+      SharedAccessSignatureUpdated) => void)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateSharedAccessSignature(sharedAccessSignature: string,
+        done: (err?: Error, result?: SharedAccessSignatureUpdated) => void)
+      parameters:
+        - id: sharedAccessSignature
+          type:
+            - string
+          description: ''
+        - id: done
+          type:
+            - '(err?: Error, result?: SharedAccessSignatureUpdated) => void'
+          description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.updateTwinReportedProperties
+    name: 'updateTwinReportedProperties(any, (err?: Error) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateTwinReportedProperties(patch: any, callback: (err?:
+        Error) => void)
+      parameters:
+        - id: patch
+          type:
+            - any
+          description: ''
+        - id: callback
+          type:
+            - '(err?: Error) => void'
+          description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.DeviceTransport.listenerCount
+    name: 'listenerCount(EventEmitter, string | symbol)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        static function listenerCount(emitter: EventEmitter, event: string |
+        symbol)
+      parameters:
+        - id: emitter
+          type:
+            - EventEmitter
+          description: ''
+        - id: event
+          type:
+            - string | symbol
+          description: ''
+      return:
+        type:
+          - number
+        description: ''
+    package: azure-iot-device - v1
+    deprecated:
+      content: since v4.0.0
+references:
+  - uid: azure-iot-device - v1.12.1.DeviceMethodResponse
+    name: DeviceMethodResponse
+    spec.typeScript:
+      - name: DeviceMethodResponse
+        fullName: DeviceMethodResponse
+        uid: azure-iot-device - v1.12.1.DeviceMethodResponse
+  - uid: azure-iot-device - v1.12.1.DeviceClientOptions
+    name: DeviceClientOptions
+    spec.typeScript:
+      - name: DeviceClientOptions
+        fullName: DeviceClientOptions
+        uid: azure-iot-device - v1.12.1.DeviceClientOptions

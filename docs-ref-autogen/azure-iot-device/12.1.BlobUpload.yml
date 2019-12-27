@@ -1,0 +1,57 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-device - v1.12.1.BlobUpload
+    name: BlobUpload
+    fullName: BlobUpload
+    children:
+      - azure-iot-device - v1.12.1.BlobUpload.updateSharedAccessSignature
+      - azure-iot-device - v1.12.1.BlobUpload.uploadToBlob
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.BlobUpload.updateSharedAccessSignature
+    name: updateSharedAccessSignature(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function updateSharedAccessSignature(sharedAccessSignature: string)'
+      parameters:
+        - id: sharedAccessSignature
+          type:
+            - string
+          description: ''
+    package: azure-iot-device - v1
+  - uid: azure-iot-device - v1.12.1.BlobUpload.uploadToBlob
+    name: 'uploadToBlob(string, Stream, number, (err?: Error) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function uploadToBlob(blobName: string, stream: Stream, steamLength:
+        number, done: (err?: Error) => void)
+      parameters:
+        - id: blobName
+          type:
+            - string
+          description: ''
+        - id: stream
+          type:
+            - Stream
+          description: ''
+        - id: steamLength
+          type:
+            - number
+          description: ''
+        - id: done
+          type:
+            - '(err?: Error) => void'
+          description: ''
+    package: azure-iot-device - v1

@@ -1,0 +1,33 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-common - v1.11.1.AuthenticationType
+    name: AuthenticationType
+    fullName: AuthenticationType
+    children:
+      - azure-iot-common - v1.11.1.AuthenticationType.Token
+      - azure-iot-common - v1.11.1.AuthenticationType.X509
+    langs:
+      - typeScript
+    type: enum
+    summary: Designate the type of authentication used by an `AuthenticationProvider`.
+    package: azure-iot-common - v1
+  - uid: azure-iot-common - v1.11.1.AuthenticationType.Token
+    name: Token
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Token-based authentication uses shared access signature security tokens,
+      generated and signed with a secret key.
+    type: field
+    numericValue: 1
+    package: azure-iot-common - v1
+  - uid: azure-iot-common - v1.11.1.AuthenticationType.X509
+    name: X509
+    children: []
+    langs:
+      - typeScript
+    summary: X509 Certificate based authentication.
+    type: field
+    numericValue: 0
+    package: azure-iot-common - v1

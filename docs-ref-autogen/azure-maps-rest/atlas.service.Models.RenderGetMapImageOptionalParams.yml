@@ -58,6 +58,7 @@ items:
       return:
         type:
           - AbortSignalLike
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.Models.RenderGetMapImageOptionalParams.bbox
     name: bbox
@@ -81,6 +82,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.atlas.service.Models.RenderGetMapImageOptionalParams.center
@@ -101,6 +103,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.atlas.service.Models.RenderGetMapImageOptionalParams.customHeaders
@@ -119,6 +122,7 @@ items:
       return:
         type:
           - '[key: string]: string'
+        description: ''
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.atlas.service.Models.RenderGetMapImageOptionalParams.height
@@ -137,6 +141,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.atlas.service.Models.RenderGetMapImageOptionalParams.language
@@ -165,6 +170,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.Models.RenderGetMapImageOptionalParams.layer
     name: layer
@@ -184,6 +190,7 @@ items:
       return:
         type:
           - azure-maps-rest.atlas.service.Models.StaticMapLayer
+        description: ''
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.atlas.service.Models.RenderGetMapImageOptionalParams.onDownloadProgress
@@ -200,6 +207,7 @@ items:
       return:
         type:
           - '(progress: TransferProgressEvent) => void'
+        description: ''
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.atlas.service.Models.RenderGetMapImageOptionalParams.onUploadProgress
@@ -216,6 +224,7 @@ items:
       return:
         type:
           - '(progress: TransferProgressEvent) => void'
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.Models.RenderGetMapImageOptionalParams.path
     name: path
@@ -392,6 +401,7 @@ items:
       return:
         type:
           - 'string[]'
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.Models.RenderGetMapImageOptionalParams.pins
     name: pins
@@ -800,6 +810,7 @@ items:
       return:
         type:
           - 'string[]'
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.Models.RenderGetMapImageOptionalParams.style
     name: style
@@ -819,6 +830,7 @@ items:
       return:
         type:
           - azure-maps-rest.atlas.service.Models.Style
+        description: ''
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.atlas.service.Models.RenderGetMapImageOptionalParams.timeout
@@ -837,6 +849,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.Models.RenderGetMapImageOptionalParams.view
     name: view
@@ -886,6 +899,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.Models.RenderGetMapImageOptionalParams.width
     name: width
@@ -905,6 +919,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.Models.RenderGetMapImageOptionalParams.zoom
     name: zoom
@@ -928,6 +943,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.TransitTypeResult
@@ -2286,6 +2302,26 @@ references:
       - name: GetMapImageOptions
         fullName: GetMapImageOptions
         uid: azure-maps-rest.atlas.service.GetMapImageOptions
+  - uid: Promise<azure-maps-rest.atlas.service.GetMapImageResponse>
+    name: GetMapImageResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetMapImageResponse
+        fullName: GetMapImageResponse
+        uid: azure-maps-rest.atlas.service.GetMapImageResponse
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<azure-maps-rest.atlas.service.GetMapImageryTileResponse>
+    name: GetMapImageryTileResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetMapImageryTileResponse
+        fullName: GetMapImageryTileResponse
+        uid: azure-maps-rest.atlas.service.GetMapImageryTileResponse
+      - name: '>'
+        fullName: '>'
   - uid: azure-maps-rest.atlas.service.Models.TileFormat
     name: TileFormat
     spec.typeScript:
@@ -2310,6 +2346,16 @@ references:
       - name: GetMapTileOptions
         fullName: GetMapTileOptions
         uid: azure-maps-rest.atlas.service.GetMapTileOptions
+  - uid: Promise<azure-maps-rest.atlas.service.GetMapTileResponse>
+    name: GetMapTileResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetMapTileResponse
+        fullName: GetMapTileResponse
+        uid: azure-maps-rest.atlas.service.GetMapTileResponse
+      - name: '>'
+        fullName: '>'
   - uid: azure-maps-rest.atlas.service.IRetryOptions
     name: IRetryOptions
     spec.typeScript:

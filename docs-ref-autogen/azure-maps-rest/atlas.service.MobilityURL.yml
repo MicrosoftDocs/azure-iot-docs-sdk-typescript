@@ -77,6 +77,7 @@ items:
       return:
         type:
           - Promise<azure-maps-rest.atlas.service.GetCarShareInfoResponse>
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.MobilityURL.getMetroArea
     name: 'getMetroArea(Aborter, GeoJSON, GetMetroAreaOptions)'
@@ -131,6 +132,7 @@ items:
       return:
         type:
           - Promise<azure-maps-rest.atlas.service.GetMetroAreaResponse>
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.MobilityURL.getMetroAreaInfo
     name: >-
@@ -194,6 +196,7 @@ items:
       return:
         type:
           - Promise<azure-maps-rest.atlas.service.GetMetroAreaInfoResponse>
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.MobilityURL.getNearbyTransit
     name: >-
@@ -270,6 +273,7 @@ items:
       return:
         type:
           - Promise<azure-maps-rest.atlas.service.GetNearbyTransitResponse>
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.MobilityURL.getRealTimeArrivals
     name: >-
@@ -358,6 +362,7 @@ items:
       return:
         type:
           - Promise<azure-maps-rest.atlas.service.GetRealTimeArrivalsResponse>
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.MobilityURL.getTransitDockInfo
     name: 'getTransitDockInfo(Aborter, string, GetTransitDockInfoOptions)'
@@ -414,6 +419,7 @@ items:
       return:
         type:
           - Promise<azure-maps-rest.atlas.service.GetTransitDockInfoResponse>
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.MobilityURL.getTransitItinerary
     name: 'getTransitItinerary(Aborter, string, GetTransitItineraryOptions)'
@@ -474,6 +480,7 @@ items:
       return:
         type:
           - Promise<azure-maps-rest.atlas.service.GetTransitItineraryResponse>
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.MobilityURL.getTransitLineInfo
     name: 'getTransitLineInfo(Aborter, number, string, GetTransitLineInfoOptions)'
@@ -551,6 +558,7 @@ items:
       return:
         type:
           - Promise<azure-maps-rest.atlas.service.GetTransitLineInfoResponse>
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.MobilityURL.getTransitRoute
     name: >-
@@ -635,6 +643,7 @@ items:
       return:
         type:
           - Promise<azure-maps-rest.atlas.service.GetTransitRouteResponse>
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.MobilityURL.getTransitStopInfo
     name: 'getTransitStopInfo(Aborter, number, string, GetTransitStopInfoOptions)'
@@ -699,6 +708,7 @@ items:
       return:
         type:
           - Promise<azure-maps-rest.atlas.service.GetTransitStopInfoResponse>
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.MobilityURL.mapsUrl
     name: mapsUrl
@@ -713,6 +723,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.MobilityURL.constructor
     name: 'MobilityURL(Pipeline, string)'
@@ -733,9 +744,13 @@ items:
         - id: mapsUrl
           type:
             - string
-          description: |-
+          description: >-
             A URL string pointing to Azure Maps service, default is
+
             `"https://atlas.microsoft.com"`.
+
+            If no protocol is specified, e.g. `"atlas.microsoft.com"`, then
+            `https` will be assumed.
           optional: true
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.MobilityURL.newPipeline
@@ -766,6 +781,7 @@ items:
       return:
         type:
           - azure-maps-rest.atlas.service.Pipeline
+        description: A new Pipeline object.
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.TransitTypeResult
@@ -2124,6 +2140,26 @@ references:
       - name: GetMapImageOptions
         fullName: GetMapImageOptions
         uid: azure-maps-rest.atlas.service.GetMapImageOptions
+  - uid: Promise<azure-maps-rest.atlas.service.GetMapImageResponse>
+    name: GetMapImageResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetMapImageResponse
+        fullName: GetMapImageResponse
+        uid: azure-maps-rest.atlas.service.GetMapImageResponse
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<azure-maps-rest.atlas.service.GetMapImageryTileResponse>
+    name: GetMapImageryTileResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetMapImageryTileResponse
+        fullName: GetMapImageryTileResponse
+        uid: azure-maps-rest.atlas.service.GetMapImageryTileResponse
+      - name: '>'
+        fullName: '>'
   - uid: azure-maps-rest.atlas.service.Models.TileFormat
     name: TileFormat
     spec.typeScript:
@@ -2148,6 +2184,16 @@ references:
       - name: GetMapTileOptions
         fullName: GetMapTileOptions
         uid: azure-maps-rest.atlas.service.GetMapTileOptions
+  - uid: Promise<azure-maps-rest.atlas.service.GetMapTileResponse>
+    name: GetMapTileResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetMapTileResponse
+        fullName: GetMapTileResponse
+        uid: azure-maps-rest.atlas.service.GetMapTileResponse
+      - name: '>'
+        fullName: '>'
   - uid: azure-maps-rest.atlas.service.IRetryOptions
     name: IRetryOptions
     spec.typeScript:

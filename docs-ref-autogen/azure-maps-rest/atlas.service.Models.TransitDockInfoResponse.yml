@@ -34,6 +34,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.Models.TransitDockInfoResponse.lastUpdated
     name: lastUpdated
@@ -49,6 +50,7 @@ items:
       return:
         type:
           - Date
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.Models.TransitDockInfoResponse.operatorInfo
     name: operatorInfo
@@ -68,6 +70,7 @@ items:
       return:
         type:
           - azure-maps-rest.atlas.service.Models.OperatorInfo
+        description: ''
     package: azure-maps-rest
   - uid: azure-maps-rest.atlas.service.Models.TransitDockInfoResponse.position
     name: position
@@ -83,6 +86,7 @@ items:
       return:
         type:
           - azure-maps-rest.atlas.service.Models.Coordinate
+        description: ''
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.atlas.service.Models.TransitDockInfoResponse.vacantLocations
@@ -101,6 +105,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.TransitTypeResult
@@ -1459,6 +1464,26 @@ references:
       - name: GetMapImageOptions
         fullName: GetMapImageOptions
         uid: azure-maps-rest.atlas.service.GetMapImageOptions
+  - uid: Promise<azure-maps-rest.atlas.service.GetMapImageResponse>
+    name: GetMapImageResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetMapImageResponse
+        fullName: GetMapImageResponse
+        uid: azure-maps-rest.atlas.service.GetMapImageResponse
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<azure-maps-rest.atlas.service.GetMapImageryTileResponse>
+    name: GetMapImageryTileResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetMapImageryTileResponse
+        fullName: GetMapImageryTileResponse
+        uid: azure-maps-rest.atlas.service.GetMapImageryTileResponse
+      - name: '>'
+        fullName: '>'
   - uid: azure-maps-rest.atlas.service.Models.TileFormat
     name: TileFormat
     spec.typeScript:
@@ -1483,6 +1508,16 @@ references:
       - name: GetMapTileOptions
         fullName: GetMapTileOptions
         uid: azure-maps-rest.atlas.service.GetMapTileOptions
+  - uid: Promise<azure-maps-rest.atlas.service.GetMapTileResponse>
+    name: GetMapTileResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetMapTileResponse
+        fullName: GetMapTileResponse
+        uid: azure-maps-rest.atlas.service.GetMapTileResponse
+      - name: '>'
+        fullName: '>'
   - uid: azure-maps-rest.atlas.service.IRetryOptions
     name: IRetryOptions
     spec.typeScript:

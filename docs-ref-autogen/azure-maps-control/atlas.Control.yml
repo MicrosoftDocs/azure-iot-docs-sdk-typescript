@@ -1,17 +1,56 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-control.atlas.control
-    name: control
-    fullName: control
+  - uid: azure-maps-control.atlas.Control
+    name: Control
+    fullName: Control
     children:
-      - azure-maps-control.atlas.control.CompassControl
-      - azure-maps-control.atlas.control.PitchControl
-      - azure-maps-control.atlas.control.StyleControl
-      - azure-maps-control.atlas.control.ZoomControl
+      - azure-maps-control.atlas.Control.onAdd
+      - azure-maps-control.atlas.Control.onRemove
     langs:
       - typeScript
-    type: module
-    summary: ''
+    type: interface
+    summary: An interface for defining a control of the map.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Control.onAdd
+    name: 'onAdd(Map, ControlOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Initialization method for the control which is called when added to the
+      map.
+    syntax:
+      content: 'function onAdd(map: Map, options?: ControlOptions)'
+      parameters:
+        - id: map
+          type:
+            - azure-maps-control.atlas.Map
+          description: The map that the control will be added to.
+        - id: options
+          type:
+            - azure-maps-control.atlas.ControlOptions
+          description: The ControlOptions for this control.
+          optional: true
+      return:
+        type:
+          - HTMLElement | null
+        description: An HTMLElement to be placed on the map for the control.
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.Control.onRemove
+    name: onRemove()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Method that is called when the control is removed from the map. Should
+      perform any necessary cleanup for the
+
+      control.
+    syntax:
+      content: function onRemove()
+      parameters: []
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.ControlBase
@@ -1532,11 +1571,3 @@ references:
       - name: TileId
         fullName: TileId
         uid: azure-maps-control.atlas.TileId
-  - uid: azure-maps-control.atlas.control.CompassControl
-    name: CompassControl
-  - uid: azure-maps-control.atlas.control.PitchControl
-    name: PitchControl
-  - uid: azure-maps-control.atlas.control.StyleControl
-    name: StyleControl
-  - uid: azure-maps-control.atlas.control.ZoomControl
-    name: ZoomControl

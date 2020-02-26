@@ -250,7 +250,7 @@ items:
         description: ''
     package: azure-maps-control
   - uid: azure-maps-control.atlas.source.DataSource.getShapeById
-    name: getShapeById(string)
+    name: getShapeById(string | number)
     children: []
     type: method
     langs:
@@ -261,11 +261,11 @@ items:
       If no shape with the specified id is contained in the data source, null
       will be return.
     syntax:
-      content: 'function getShapeById(id: string)'
+      content: 'function getShapeById(id: string | number)'
       parameters:
         - id: id
           type:
-            - string
+            - string | number
           description: |
             The id of the shape to return.
       return:
@@ -353,10 +353,6 @@ items:
           type:
             - number | string | Array<number | string>
           description: ''
-      return:
-        type:
-          - any
-        description: ''
     package: azure-maps-control
   - uid: azure-maps-control.atlas.source.DataSource.setOptions
     name: setOptions(DataSourceOptions)

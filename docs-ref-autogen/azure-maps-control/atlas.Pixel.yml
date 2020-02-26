@@ -262,7 +262,7 @@ items:
       - typeScript
     summary: |-
       Calculates a destination pixel given an origin pixel,
-      a heading relative to the y-axis (0 = north),
+      a heading relative to the y-axis (0 = north) with clockwise-rotation,
       and a distance in pixel units.
     syntax:
       content: >-
@@ -319,7 +319,9 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Calculates the heading between two pixels.
+    summary: >-
+      Calculates the heading between two pixels.​ The heading value is relative
+      to the y-axis (0 = north) with clockwise-rotation.
     syntax:
       content: 'static function getHeading(origin: Pixel, destination: Pixel)'
       parameters:
@@ -600,10 +602,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array.
-      The return value of the callback function is the accumulated result, and
-      is provided as an argument in the next call to the callback function.
+    summary: ''
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: number, currentValue:
@@ -703,11 +702,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: >-
-      Calls the specified callback function for all the elements in an array, in
-      descending order. The return value of the callback function is the
-      accumulated result, and is provided as an argument in the next call to the
-      callback function.
+    summary: ''
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: number, currentValue:

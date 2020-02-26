@@ -6,18 +6,18 @@ items:
     children:
       - >-
         azure-maps-rest.atlas.service.Models.VehicleLoadType.OtherHazmatExplosive
-      - azure-maps-rest.atlas.service.Models.VehicleLoadType.USHazmatClass9
+      - azure-maps-rest.atlas.service.Models.VehicleLoadType.OtherHazmatGeneral
       - >-
         azure-maps-rest.atlas.service.Models.VehicleLoadType.OtherHazmatHarmfulToWater
       - azure-maps-rest.atlas.service.Models.VehicleLoadType.USHazmatClass1
       - azure-maps-rest.atlas.service.Models.VehicleLoadType.USHazmatClass2
       - azure-maps-rest.atlas.service.Models.VehicleLoadType.USHazmatClass3
-      - azure-maps-rest.atlas.service.Models.VehicleLoadType.OtherHazmatGeneral
+      - azure-maps-rest.atlas.service.Models.VehicleLoadType.USHazmatClass4
       - azure-maps-rest.atlas.service.Models.VehicleLoadType.USHazmatClass5
       - azure-maps-rest.atlas.service.Models.VehicleLoadType.USHazmatClass6
       - azure-maps-rest.atlas.service.Models.VehicleLoadType.USHazmatClass7
       - azure-maps-rest.atlas.service.Models.VehicleLoadType.USHazmatClass8
-      - azure-maps-rest.atlas.service.Models.VehicleLoadType.USHazmatClass4
+      - azure-maps-rest.atlas.service.Models.VehicleLoadType.USHazmatClass9
     langs:
       - typeScript
     type: enum
@@ -41,8 +41,8 @@ items:
     type: field
     numericValue: null
     package: azure-maps-rest
-  - uid: azure-maps-rest.atlas.service.Models.VehicleLoadType.USHazmatClass9
-    name: USHazmatClass9
+  - uid: azure-maps-rest.atlas.service.Models.VehicleLoadType.OtherHazmatGeneral
+    name: OtherHazmatGeneral
     children: []
     langs:
       - typeScript
@@ -87,12 +87,12 @@ items:
     type: field
     numericValue: null
     package: azure-maps-rest
-  - uid: azure-maps-rest.atlas.service.Models.VehicleLoadType.OtherHazmatGeneral
-    name: OtherHazmatGeneral
+  - uid: azure-maps-rest.atlas.service.Models.VehicleLoadType.USHazmatClass4
+    name: USHazmatClass4
     children: []
     langs:
       - typeScript
-    summary: Miscellaneous
+    summary: Flammable solids
     type: field
     numericValue: null
     package: azure-maps-rest
@@ -132,12 +132,12 @@ items:
     type: field
     numericValue: null
     package: azure-maps-rest
-  - uid: azure-maps-rest.atlas.service.Models.VehicleLoadType.USHazmatClass4
-    name: USHazmatClass4
+  - uid: azure-maps-rest.atlas.service.Models.VehicleLoadType.USHazmatClass9
+    name: USHazmatClass9
     children: []
     langs:
       - typeScript
-    summary: Flammable solids
+    summary: Miscellaneous
     type: field
     numericValue: null
     package: azure-maps-rest

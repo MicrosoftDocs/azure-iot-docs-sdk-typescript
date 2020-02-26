@@ -5,7 +5,7 @@ items:
     fullName: GuidanceManeuver
     children:
       - azure-maps-rest.atlas.service.Models.GuidanceManeuver.ARRIVE
-      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.WAYPOINTRIGHT
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.ARRIVELEFT
       - azure-maps-rest.atlas.service.Models.GuidanceManeuver.ARRIVERIGHT
       - azure-maps-rest.atlas.service.Models.GuidanceManeuver.BEARLEFT
       - azure-maps-rest.atlas.service.Models.GuidanceManeuver.BEARRIGHT
@@ -20,7 +20,7 @@ items:
       - azure-maps-rest.atlas.service.Models.GuidanceManeuver.MAKEUTURN
       - azure-maps-rest.atlas.service.Models.GuidanceManeuver.MOTORWAYEXITLEFT
       - azure-maps-rest.atlas.service.Models.GuidanceManeuver.MOTORWAYEXITRIGHT
-      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.ARRIVELEFT
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.ROUNDABOUTBACK
       - azure-maps-rest.atlas.service.Models.GuidanceManeuver.ROUNDABOUTCROSS
       - azure-maps-rest.atlas.service.Models.GuidanceManeuver.ROUNDABOUTLEFT
       - azure-maps-rest.atlas.service.Models.GuidanceManeuver.ROUNDABOUTRIGHT
@@ -36,7 +36,7 @@ items:
       - azure-maps-rest.atlas.service.Models.GuidanceManeuver.TURNRIGHT
       - azure-maps-rest.atlas.service.Models.GuidanceManeuver.WAYPOINTLEFT
       - azure-maps-rest.atlas.service.Models.GuidanceManeuver.WAYPOINTREACHED
-      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.ROUNDABOUTBACK
+      - azure-maps-rest.atlas.service.Models.GuidanceManeuver.WAYPOINTRIGHT
     langs:
       - typeScript
     type: enum
@@ -72,12 +72,12 @@ items:
     type: field
     numericValue: null
     package: azure-maps-rest
-  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.WAYPOINTRIGHT
-    name: WAYPOINTRIGHT
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.ARRIVELEFT
+    name: ARRIVELEFT
     children: []
     langs:
       - typeScript
-    summary: You have reached the waypoint. It is on the right.
+    summary: You have arrived. Your destination is on the left.
     type: field
     numericValue: null
     package: azure-maps-rest
@@ -207,12 +207,12 @@ items:
     type: field
     numericValue: null
     package: azure-maps-rest
-  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.ARRIVELEFT
-    name: ARRIVELEFT
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.ROUNDABOUTBACK
+    name: ROUNDABOUTBACK
     children: []
     langs:
       - typeScript
-    summary: You have arrived. Your destination is on the left.
+    summary: Go around the roundabout.
     type: field
     numericValue: null
     package: azure-maps-rest
@@ -351,12 +351,12 @@ items:
     type: field
     numericValue: null
     package: azure-maps-rest
-  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.ROUNDABOUTBACK
-    name: ROUNDABOUTBACK
+  - uid: azure-maps-rest.atlas.service.Models.GuidanceManeuver.WAYPOINTRIGHT
+    name: WAYPOINTRIGHT
     children: []
     langs:
       - typeScript
-    summary: Go around the roundabout.
+    summary: You have reached the waypoint. It is on the right.
     type: field
     numericValue: null
     package: azure-maps-rest

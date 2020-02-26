@@ -5,18 +5,18 @@ items:
     fullName: LegType
     children:
       - azure-maps-rest.atlas.service.Models.LegType.Bicycle
-      - azure-maps-rest.atlas.service.Models.LegType.Walk
+      - azure-maps-rest.atlas.service.Models.LegType.Bus
       - azure-maps-rest.atlas.service.Models.LegType.Cable
       - azure-maps-rest.atlas.service.Models.LegType.Ferry
       - azure-maps-rest.atlas.service.Models.LegType.Funicular
       - azure-maps-rest.atlas.service.Models.LegType.Gondola
-      - azure-maps-rest.atlas.service.Models.LegType.Bus
+      - azure-maps-rest.atlas.service.Models.LegType.PathWayWalk
       - azure-maps-rest.atlas.service.Models.LegType.Rail
       - azure-maps-rest.atlas.service.Models.LegType.Subway
       - azure-maps-rest.atlas.service.Models.LegType.Tram
       - azure-maps-rest.atlas.service.Models.LegType.Wait
       - azure-maps-rest.atlas.service.Models.LegType.WaitOnVehicle
-      - azure-maps-rest.atlas.service.Models.LegType.PathWayWalk
+      - azure-maps-rest.atlas.service.Models.LegType.Walk
     langs:
       - typeScript
     type: enum
@@ -37,12 +37,12 @@ items:
     type: field
     numericValue: null
     package: azure-maps-rest
-  - uid: azure-maps-rest.atlas.service.Models.LegType.Walk
-    name: Walk
+  - uid: azure-maps-rest.atlas.service.Models.LegType.Bus
+    name: Bus
     children: []
     langs:
       - typeScript
-    summary: Pedestrian walk
+    summary: Bus
     type: field
     numericValue: null
     package: azure-maps-rest
@@ -82,12 +82,12 @@ items:
     type: field
     numericValue: null
     package: azure-maps-rest
-  - uid: azure-maps-rest.atlas.service.Models.LegType.Bus
-    name: Bus
+  - uid: azure-maps-rest.atlas.service.Models.LegType.PathWayWalk
+    name: PathWayWalk
     children: []
     langs:
       - typeScript
-    summary: Bus
+    summary: 'A Leg describing a walk within a compound, e.g. Central Station'
     type: field
     numericValue: null
     package: azure-maps-rest
@@ -140,12 +140,12 @@ items:
     type: field
     numericValue: null
     package: azure-maps-rest
-  - uid: azure-maps-rest.atlas.service.Models.LegType.PathWayWalk
-    name: PathWayWalk
+  - uid: azure-maps-rest.atlas.service.Models.LegType.Walk
+    name: Walk
     children: []
     langs:
       - typeScript
-    summary: 'A Leg describing a walk within a compound, e.g. Central Station'
+    summary: Pedestrian walk
     type: field
     numericValue: null
     package: azure-maps-rest

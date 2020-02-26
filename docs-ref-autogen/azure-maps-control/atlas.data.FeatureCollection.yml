@@ -4,6 +4,7 @@ items:
     name: FeatureCollection
     fullName: FeatureCollection
     children:
+      - azure-maps-control.atlas.data.FeatureCollection.bbox
       - azure-maps-control.atlas.data.FeatureCollection.constructor
       - azure-maps-control.atlas.data.FeatureCollection.features
       - azure-maps-control.atlas.data.FeatureCollection.type
@@ -18,23 +19,46 @@ items:
       description is detailed in [RFC
       7946](https://tools.ietf.org/html/rfc7946#section-3.3).
     package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.FeatureCollection.bbox
+    name: bbox
+    fullName: bbox
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The bounding box of the feature collection.
+    optional: true
+    syntax:
+      content: 'bbox?: BoundingBox'
+      return:
+        type:
+          - azure-maps-control.atlas.data.BoundingBox
+        description: ''
+    package: azure-maps-control
   - uid: azure-maps-control.atlas.data.FeatureCollection.constructor
-    name: 'FeatureCollection(Array<Feature<Geometry, any>>)'
+    name: 'FeatureCollection(Array<Feature<Geometry, any>>, BoundingBox)'
     children: []
     type: constructor
     langs:
       - typeScript
     summary: Constructs a FeatureCollection.
     syntax:
-      content: 'new FeatureCollection(features: Array<Feature<Geometry, any>>)'
+      content: >-
+        new FeatureCollection(features: Array<Feature<Geometry, any>>, bbox?:
+        BoundingBox)
       parameters:
         - id: features
           type:
             - >-
               Array<azure-maps-control.atlas.data.Feature<azure-maps-control.atlas.data.Geometry,
               any>>
+          description: The collection of features that make up the feature collection.
+        - id: bbox
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
           description: |
-            The collection of features that make up the feature collection.
+            The bounding box of the feature collection.
+          optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.FeatureCollection.features
     name: features

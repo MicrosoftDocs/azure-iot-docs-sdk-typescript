@@ -5,19 +5,19 @@ items:
     fullName: RelativeDirection
     children:
       - azure-maps-rest.atlas.service.Models.RelativeDirection.CircleClockwise
-      - azure-maps-rest.atlas.service.Models.RelativeDirection.UturnRight
+      - >-
+        azure-maps-rest.atlas.service.Models.RelativeDirection.CircleCounterclockwise
       - azure-maps-rest.atlas.service.Models.RelativeDirection.Continue
       - azure-maps-rest.atlas.service.Models.RelativeDirection.Depart
       - azure-maps-rest.atlas.service.Models.RelativeDirection.Elevator
       - azure-maps-rest.atlas.service.Models.RelativeDirection.HardLeft
-      - >-
-        azure-maps-rest.atlas.service.Models.RelativeDirection.CircleCounterclockwise
+      - azure-maps-rest.atlas.service.Models.RelativeDirection.HardRight
       - azure-maps-rest.atlas.service.Models.RelativeDirection.Left
       - azure-maps-rest.atlas.service.Models.RelativeDirection.Right
       - azure-maps-rest.atlas.service.Models.RelativeDirection.SlightlyLeft
       - azure-maps-rest.atlas.service.Models.RelativeDirection.SlightlyRight
       - azure-maps-rest.atlas.service.Models.RelativeDirection.UturnLeft
-      - azure-maps-rest.atlas.service.Models.RelativeDirection.HardRight
+      - azure-maps-rest.atlas.service.Models.RelativeDirection.UturnRight
     langs:
       - typeScript
     type: enum
@@ -41,12 +41,13 @@ items:
     type: field
     numericValue: null
     package: azure-maps-rest
-  - uid: azure-maps-rest.atlas.service.Models.RelativeDirection.UturnRight
-    name: UturnRight
+  - uid: >-
+      azure-maps-rest.atlas.service.Models.RelativeDirection.CircleCounterclockwise
+    name: CircleCounterclockwise
     children: []
     langs:
       - typeScript
-    summary: Make a U-turn right.
+    summary: Circle counter clockwise.
     type: field
     numericValue: null
     package: azure-maps-rest
@@ -86,13 +87,12 @@ items:
     type: field
     numericValue: null
     package: azure-maps-rest
-  - uid: >-
-      azure-maps-rest.atlas.service.Models.RelativeDirection.CircleCounterclockwise
-    name: CircleCounterclockwise
+  - uid: azure-maps-rest.atlas.service.Models.RelativeDirection.HardRight
+    name: HardRight
     children: []
     langs:
       - typeScript
-    summary: Circle counter clockwise.
+    summary: Turn sharp right.
     type: field
     numericValue: null
     package: azure-maps-rest
@@ -141,12 +141,12 @@ items:
     type: field
     numericValue: null
     package: azure-maps-rest
-  - uid: azure-maps-rest.atlas.service.Models.RelativeDirection.HardRight
-    name: HardRight
+  - uid: azure-maps-rest.atlas.service.Models.RelativeDirection.UturnRight
+    name: UturnRight
     children: []
     langs:
       - typeScript
-    summary: Turn sharp right.
+    summary: Make a U-turn right.
     type: field
     numericValue: null
     package: azure-maps-rest

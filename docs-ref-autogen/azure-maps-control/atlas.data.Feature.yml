@@ -4,6 +4,7 @@ items:
     name: Feature
     fullName: Feature<G>
     children:
+      - azure-maps-control.atlas.data.Feature.bbox
       - azure-maps-control.atlas.data.Feature.constructor
       - azure-maps-control.atlas.data.Feature.geometry
       - azure-maps-control.atlas.data.Feature.id
@@ -19,15 +20,35 @@ items:
 
       [RFC 7946](https://tools.ietf.org/html/rfc7946#section-3.2).
     package: azure-maps-control
+  - uid: azure-maps-control.atlas.data.Feature.bbox
+    name: bbox
+    fullName: bbox
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The bounding box of the feature.
+    optional: true
+    syntax:
+      content: 'bbox?: BoundingBox'
+      return:
+        type:
+          - azure-maps-control.atlas.data.BoundingBox
+        description: ''
+    package: azure-maps-control
   - uid: azure-maps-control.atlas.data.Feature.constructor
-    name: 'Feature(G, P, string | number)'
+
+    name: 'Feature(G, P, string | number, BoundingBox)'
     children: []
     type: constructor
     langs:
       - typeScript
     summary: Constructs a Feature.
     syntax:
-      content: 'new Feature(geometry: G, properties?: P, id?: string | number)'
+
+      content: >-
+        new Feature(geometry: G, properties?: P, id?: string | number, bbox?:
+        BoundingBox)
       parameters:
         - id: geometry
           type:
@@ -41,8 +62,13 @@ items:
         - id: id
           type:
             - string | number
+          description: The id of the feature.
+          optional: true
+        - id: bbox
+          type:
+            - azure-maps-control.atlas.data.BoundingBox
           description: |
-            The id of the feature.
+            The bounding box of the feature.
           optional: true
     package: azure-maps-control
   - uid: azure-maps-control.atlas.data.Feature.geometry

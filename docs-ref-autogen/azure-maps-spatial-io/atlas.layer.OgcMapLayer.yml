@@ -1,0 +1,610 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer
+    name: OgcMapLayer
+    fullName: OgcMapLayer<T>
+    children:
+      - azure-maps-spatial-io.atlas.layer.OgcMapLayer.getCapabilities
+      - azure-maps-spatial-io.atlas.layer.OgcMapLayer.getFeatureInfo
+      - azure-maps-spatial-io.atlas.layer.OgcMapLayer.getFeatureInfoHtml
+      - azure-maps-spatial-io.atlas.layer.OgcMapLayer.getId
+      - azure-maps-spatial-io.atlas.layer.OgcMapLayer.getMap
+      - azure-maps-spatial-io.atlas.layer.OgcMapLayer.getOptions
+      - azure-maps-spatial-io.atlas.layer.OgcMapLayer.metadata
+      - azure-maps-spatial-io.atlas.layer.OgcMapLayer.constructor
+      - azure-maps-spatial-io.atlas.layer.OgcMapLayer.onActiveLayersChanged
+      - azure-maps-spatial-io.atlas.layer.OgcMapLayer.onAdd
+      - azure-maps-spatial-io.atlas.layer.OgcMapLayer.onRemove
+      - azure-maps-spatial-io.atlas.layer.OgcMapLayer.setOptions
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+      Renders raster tiled images on top of the map tiles from an OGC Web
+      Mapping Service (WMS or WMTS).
+    extends:
+      name: TileLayer
+    package: azure-maps-spatial-io
+  - uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.getCapabilities
+    name: getCapabilities()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the capabilities of the underlying WMTS service.
+    syntax:
+      content: function getCapabilities()
+      parameters: []
+      return:
+        type:
+          - Promise<azure-maps-spatial-io.atlas.OgcMapLayerCapabilities>
+        description: ''
+    package: azure-maps-spatial-io
+  - uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.getFeatureInfo
+    name: getFeatureInfo(azmaps.data.Position)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Retrieves an array of WMS feature info objects at a point on the map.
+
+      If the service does not return a geometry, a Point feature for the
+      specified position will be returned.
+    syntax:
+      content: 'function getFeatureInfo(position: azmaps.data.Position)'
+      parameters:
+        - id: position
+          type:
+            - azmaps.data.Position
+          description: |
+            The position on the map to request feature info for.
+      return:
+        type:
+          - Promise<azmaps.data.FeatureCollection>
+        description: ''
+    package: azure-maps-spatial-io
+  - uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.getFeatureInfoHtml
+    name: getFeatureInfoHtml(azmaps.data.Position)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Gets feature info for the WMS layer as a HTML string. The result will be a
+      HTML document string
+
+      and should be added to an IFrame when adding to an existing page. Returns
+      null if no feature is found.
+
+      Requires the service to support 'text/html' format.
+    syntax:
+      content: 'function getFeatureInfoHtml(position: azmaps.data.Position)'
+      parameters:
+        - id: position
+          type:
+            - azmaps.data.Position
+          description: |
+            The position on the map to request feature info for.
+      return:
+        type:
+          - Promise<string>
+        description: ''
+    package: azure-maps-spatial-io
+  - uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.getId
+    name: getId()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the id of the layer
+    syntax:
+      content: function getId()
+      parameters: []
+      return:
+        type:
+          - string
+        description: ''
+    package: azure-maps-spatial-io
+  - uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.getMap
+    name: getMap()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Gets the map that the layer is currently added to, or null.'
+    syntax:
+      content: function getMap()
+      parameters: []
+      return:
+        type:
+          - Map
+        description: ''
+    package: azure-maps-spatial-io
+  - uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.getOptions
+    name: getOptions()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the options of the WMS layer.
+    syntax:
+      content: function getOptions()
+      parameters: []
+      return:
+        type:
+          - azure-maps-spatial-io.atlas.OgcMapLayerOptions
+        description: ''
+    package: azure-maps-spatial-io
+  - uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A property for associating custom data with the layer.
+    optional: true
+    syntax:
+      content: 'metadata?: any'
+      return:
+        type:
+          - any
+        description: ''
+    package: azure-maps-spatial-io
+  - uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.constructor
+    name: OgcMapLayer(OgcMapLayerOptions)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: >-
+      Renders raster images on top of the map tiles from an OGC Web Mapping
+      Service (WMS or WMTS).
+    syntax:
+      content: 'new OgcMapLayer(options: OgcMapLayerOptions)'
+      parameters:
+        - id: options
+          type:
+            - azure-maps-spatial-io.atlas.OgcMapLayerOptions
+          description: |
+            Options for rendering the WMS layer.
+    package: azure-maps-spatial-io
+  - uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.onActiveLayersChanged
+    name: onActiveLayersChanged
+    fullName: onActiveLayersChanged
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'onActiveLayersChanged: (layer: OgcMapLayer) => void'
+      return:
+        type:
+          - '(layer: OgcMapLayer) => void'
+        description: ''
+    package: azure-maps-spatial-io
+  - uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.onAdd
+    name: onAdd(azmaps.Map)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Initialization method for the layer which is called when added to the map.
+    syntax:
+      content: 'function onAdd(map: azmaps.Map)'
+      parameters:
+        - id: map
+          type:
+            - azmaps.Map
+          description: |
+            The map the layer has been added to.
+    package: azure-maps-spatial-io
+  - uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.onRemove
+    name: onRemove()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Method that is called when the layer is removed from the map.
+      Should perform any necessary cleanup for the layer.
+    syntax:
+      content: function onRemove()
+      parameters: []
+    package: azure-maps-spatial-io
+  - uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.setOptions
+    name: setOptions(OgcMapLayerOptions)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Sets the options of the WMS layer.
+    syntax:
+      content: 'function setOptions(options: OgcMapLayerOptions)'
+      parameters:
+        - id: options
+          type:
+            - azure-maps-spatial-io.atlas.OgcMapLayerOptions
+          description: |
+            The options.
+    package: azure-maps-spatial-io
+references:
+  - uid: azure-maps-spatial-io.atlas.GmlReadOptions
+    name: GmlReadOptions
+    spec.typeScript:
+      - name: GmlReadOptions
+        fullName: GmlReadOptions
+        uid: azure-maps-spatial-io.atlas.GmlReadOptions
+  - uid: azure-maps-spatial-io.atlas.ExtendedFeatureCollection
+    name: ExtendedFeatureCollection
+    spec.typeScript:
+      - name: ExtendedFeatureCollection
+        fullName: ExtendedFeatureCollection
+        uid: azure-maps-spatial-io.atlas.ExtendedFeatureCollection
+  - uid: string | azure-maps-spatial-io.atlas.io.core.XmlNode
+    name: XmlNode
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: XmlNode
+        fullName: XmlNode
+        uid: azure-maps-spatial-io.atlas.io.core.XmlNode
+  - uid: azure-maps-spatial-io.atlas.GmlWriteOptions
+    name: GmlWriteOptions
+    spec.typeScript:
+      - name: GmlWriteOptions
+        fullName: GmlWriteOptions
+        uid: azure-maps-spatial-io.atlas.GmlWriteOptions
+  - uid: azure-maps-spatial-io.atlas.io.core.XmlDocument
+    name: XmlDocument
+    spec.typeScript:
+      - name: XmlDocument
+        fullName: XmlDocument
+        uid: azure-maps-spatial-io.atlas.io.core.XmlDocument
+  - uid: azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter
+    name: SimpleXmlWriter
+    spec.typeScript:
+      - name: SimpleXmlWriter
+        fullName: SimpleXmlWriter
+        uid: azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter
+  - uid: azure-maps-spatial-io.atlas.io.core.XmlNode
+    name: XmlNode
+    spec.typeScript:
+      - name: XmlNode
+        fullName: XmlNode
+        uid: azure-maps-spatial-io.atlas.io.core.XmlNode
+  - uid: 'azure-maps-spatial-io.atlas.io.core.XmlNode[]'
+    name: 'XmlNode[]'
+    spec.typeScript:
+      - name: XmlNode
+        fullName: XmlNode
+        uid: azure-maps-spatial-io.atlas.io.core.XmlNode
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.MathOperator
+    name: MathOperator
+    spec.typeScript:
+      - name: MathOperator
+        fullName: MathOperator
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.MathOperator
+  - uid: >-
+      number | azure-maps-spatial-io.atlas.io.ogc.filter.PropertyName |
+      azure-maps-spatial-io.atlas.io.ogc.filter.Filter
+    name: Filter
+    spec.typeScript:
+      - name: 'number | '
+        fullName: 'number | '
+      - name: PropertyName
+        fullName: PropertyName
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.PropertyName
+      - name: ' | '
+        fullName: ' | '
+      - name: Filter
+        fullName: Filter
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Filter
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.LogicOperatorFilter
+    name: LogicOperatorFilter
+    spec.typeScript:
+      - name: LogicOperatorFilter
+        fullName: LogicOperatorFilter
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.LogicOperatorFilter
+  - uid: 'azure-maps-spatial-io.atlas.io.ogc.filter.Filter[]'
+    name: 'Filter[]'
+    spec.typeScript:
+      - name: Filter
+        fullName: Filter
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Filter
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.Filter
+    name: Filter
+    spec.typeScript:
+      - name: Filter
+        fullName: Filter
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Filter
+  - uid: >-
+      azure-maps-spatial-io.atlas.io.ogc.filter.PropertyName |
+      azure-maps-spatial-io.atlas.io.ogc.filter.Literal |
+      azure-maps-spatial-io.atlas.io.ogc.filter.Filter
+    name: Filter
+    spec.typeScript:
+      - name: PropertyName
+        fullName: PropertyName
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.PropertyName
+      - name: ' | '
+        fullName: ' | '
+      - name: Literal
+        fullName: Literal
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Literal
+      - name: ' | '
+        fullName: ' | '
+      - name: Filter
+        fullName: Filter
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Filter
+  - uid: >-
+      azure-maps-spatial-io.atlas.io.ogc.filter.PropertyName |
+      azure-maps-spatial-io.atlas.io.ogc.filter.Literal |
+      azure-maps-spatial-io.atlas.io.ogc.filter.Filter | azmaps.data.Geometry |
+      azmaps.data.Feature<azmaps.data.Geometry, any> | azmaps.data.BoundingBox
+    name: BoundingBox
+    spec.typeScript:
+      - name: PropertyName
+        fullName: PropertyName
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.PropertyName
+      - name: ' | '
+        fullName: ' | '
+      - name: Literal
+        fullName: Literal
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Literal
+      - name: ' | '
+        fullName: ' | '
+      - name: Filter
+        fullName: Filter
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Filter
+      - name: ' | azmaps.data.Geometry | azmaps.data.Feature<azmaps.data.Geometry, any> | azmaps.data.BoundingBox'
+        fullName: ' | azmaps.data.Geometry | azmaps.data.Feature<azmaps.data.Geometry, any> | azmaps.data.BoundingBox'
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.Literal
+    name: Literal
+    spec.typeScript:
+      - name: Literal
+        fullName: Literal
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Literal
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.BinaryComparisonOptions
+    name: BinaryComparisonOptions
+    spec.typeScript:
+      - name: BinaryComparisonOptions
+        fullName: BinaryComparisonOptions
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.BinaryComparisonOptions
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.BinaryComparisonOpType
+    name: BinaryComparisonOpType
+    spec.typeScript:
+      - name: BinaryComparisonOpType
+        fullName: BinaryComparisonOpType
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.BinaryComparisonOpType
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.LikeOptions
+    name: LikeOptions
+    spec.typeScript:
+      - name: LikeOptions
+        fullName: LikeOptions
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.LikeOptions
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsNilOptions
+    name: IsNilOptions
+    spec.typeScript:
+      - name: IsNilOptions
+        fullName: IsNilOptions
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsNilOptions
+  - uid: azure-maps-spatial-io.atlas.WfsServiceOptions
+    name: WfsServiceOptions
+    spec.typeScript:
+      - name: WfsServiceOptions
+        fullName: WfsServiceOptions
+        uid: azure-maps-spatial-io.atlas.WfsServiceOptions
+  - uid: 'Promise<azure-maps-spatial-io.atlas.WfsFeatureTypeDescription[]>'
+    name: 'WfsFeatureTypeDescription[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: WfsFeatureTypeDescription
+        fullName: WfsFeatureTypeDescription
+        uid: azure-maps-spatial-io.atlas.WfsFeatureTypeDescription
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: Promise<azure-maps-spatial-io.atlas.WfsCapabilities>
+    name: WfsCapabilities>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: WfsCapabilities
+        fullName: WfsCapabilities
+        uid: azure-maps-spatial-io.atlas.WfsCapabilities
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-spatial-io.atlas.WfsFeatureRequest
+    name: WfsFeatureRequest
+    spec.typeScript:
+      - name: WfsFeatureRequest
+        fullName: WfsFeatureRequest
+        uid: azure-maps-spatial-io.atlas.WfsFeatureRequest
+  - uid: azure-maps-spatial-io.atlas.SpatialDataReadOptions
+    name: SpatialDataReadOptions
+    spec.typeScript:
+      - name: SpatialDataReadOptions
+        fullName: SpatialDataReadOptions
+        uid: azure-maps-spatial-io.atlas.SpatialDataReadOptions
+  - uid: Promise<azure-maps-spatial-io.atlas.SpatialDataSet>
+    name: SpatialDataSet>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SpatialDataSet
+        fullName: SpatialDataSet
+        uid: azure-maps-spatial-io.atlas.SpatialDataSet
+      - name: '>'
+        fullName: '>'
+  - uid: >-
+      azure-maps-spatial-io.atlas.SpatialXmlWriteOptions &
+      azure-maps-spatial-io.atlas.GmlWriteOptions &
+      azure-maps-spatial-io.atlas.SpatialCsvWriteOptions
+    name: SpatialCsvWriteOptions
+    spec.typeScript:
+      - name: SpatialXmlWriteOptions
+        fullName: SpatialXmlWriteOptions
+        uid: azure-maps-spatial-io.atlas.SpatialXmlWriteOptions
+      - name: ' & '
+        fullName: ' & '
+      - name: GmlWriteOptions
+        fullName: GmlWriteOptions
+        uid: azure-maps-spatial-io.atlas.GmlWriteOptions
+      - name: ' & '
+        fullName: ' & '
+      - name: SpatialCsvWriteOptions
+        fullName: SpatialCsvWriteOptions
+        uid: azure-maps-spatial-io.atlas.SpatialCsvWriteOptions
+  - uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions
+    name: OgcMapLayerOptions
+    spec.typeScript:
+      - name: OgcMapLayerOptions
+        fullName: OgcMapLayerOptions
+        uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions
+  - uid: Promise<azure-maps-spatial-io.atlas.OgcMapLayerCapabilities>
+    name: OgcMapLayerCapabilities>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: OgcMapLayerCapabilities
+        fullName: OgcMapLayerCapabilities
+        uid: azure-maps-spatial-io.atlas.OgcMapLayerCapabilities
+      - name: '>'
+        fullName: '>'
+  - uid: azure-maps-spatial-io.atlas.SimpleDataLayerOptions
+    name: SimpleDataLayerOptions
+    spec.typeScript:
+      - name: SimpleDataLayerOptions
+        fullName: SimpleDataLayerOptions
+        uid: azure-maps-spatial-io.atlas.SimpleDataLayerOptions
+  - uid: azure-maps-spatial-io.atlas.SimpleDataLayerGroup
+    name: SimpleDataLayerGroup
+    spec.typeScript:
+      - name: SimpleDataLayerGroup
+        fullName: SimpleDataLayerGroup
+        uid: azure-maps-spatial-io.atlas.SimpleDataLayerGroup
+  - uid: >-
+      Array<azmaps.data.Feature<azmaps.data.Geometry,
+      azure-maps-spatial-io.atlas.SimpleStyleProperties>>
+    name: SimpleStyleProperties>>
+    spec.typeScript:
+      - name: 'Array<azmaps.data.Feature<azmaps.data.Geometry, '
+        fullName: 'Array<azmaps.data.Feature<azmaps.data.Geometry, '
+      - name: SimpleStyleProperties
+        fullName: SimpleStyleProperties
+        uid: azure-maps-spatial-io.atlas.SimpleStyleProperties
+      - name: '>>'
+        fullName: '>>'
+  - uid: azure-maps-spatial-io.atlas.SpatialDataSetStats
+    name: SpatialDataSetStats
+    spec.typeScript:
+      - name: SpatialDataSetStats
+        fullName: SpatialDataSetStats
+        uid: azure-maps-spatial-io.atlas.SpatialDataSetStats
+  - uid: azure-maps-spatial-io.atlas.SpatialDataSet
+    name: SpatialDataSet
+    spec.typeScript:
+      - name: SpatialDataSet
+        fullName: SpatialDataSet
+        uid: azure-maps-spatial-io.atlas.SpatialDataSet
+  - uid: azure-maps-spatial-io.atlas.BaseSpatialDataReadOptions
+    name: BaseSpatialDataReadOptions
+    spec.typeScript:
+      - name: BaseSpatialDataReadOptions
+        fullName: BaseSpatialDataReadOptions
+        uid: azure-maps-spatial-io.atlas.BaseSpatialDataReadOptions
+  - uid: azure-maps-spatial-io.atlas.BaseSpatialXmlReadOptions
+    name: BaseSpatialXmlReadOptions
+    spec.typeScript:
+      - name: BaseSpatialXmlReadOptions
+        fullName: BaseSpatialXmlReadOptions
+        uid: azure-maps-spatial-io.atlas.BaseSpatialXmlReadOptions
+  - uid: azure-maps-spatial-io.atlas.SpatialXmlWriteOptions
+    name: SpatialXmlWriteOptions
+    spec.typeScript:
+      - name: SpatialXmlWriteOptions
+        fullName: SpatialXmlWriteOptions
+        uid: azure-maps-spatial-io.atlas.SpatialXmlWriteOptions
+  - uid: azure-maps-spatial-io.atlas.CustomGmlNamespace
+    name: CustomGmlNamespace
+    spec.typeScript:
+      - name: CustomGmlNamespace
+        fullName: CustomGmlNamespace
+        uid: azure-maps-spatial-io.atlas.CustomGmlNamespace
+  - uid: 'azure-maps-spatial-io.atlas.OgcSublayer[]'
+    name: 'OgcSublayer[]'
+    spec.typeScript:
+      - name: OgcSublayer
+        fullName: OgcSublayer
+        uid: azure-maps-spatial-io.atlas.OgcSublayer
+      - name: '[]'
+        fullName: '[]'
+  - uid: Array<string | azure-maps-spatial-io.atlas.OgcSublayer>
+    name: OgcSublayer>
+    spec.typeScript:
+      - name: 'Array<string | '
+        fullName: 'Array<string | '
+      - name: OgcSublayer
+        fullName: OgcSublayer
+        uid: azure-maps-spatial-io.atlas.OgcSublayer
+      - name: '>'
+        fullName: '>'
+  - uid: Array<string | azure-maps-spatial-io.atlas.OgcStyle>
+    name: OgcStyle>
+    spec.typeScript:
+      - name: 'Array<string | '
+        fullName: 'Array<string | '
+      - name: OgcStyle
+        fullName: OgcStyle
+        uid: azure-maps-spatial-io.atlas.OgcStyle
+      - name: '>'
+        fullName: '>'
+  - uid: 'azure-maps-spatial-io.atlas.OgcDimension[]'
+    name: 'OgcDimension[]'
+    spec.typeScript:
+      - name: OgcDimension
+        fullName: OgcDimension
+        uid: azure-maps-spatial-io.atlas.OgcDimension
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-maps-spatial-io.atlas.OgcStyle[]'
+    name: 'OgcStyle[]'
+    spec.typeScript:
+      - name: OgcStyle
+        fullName: OgcStyle
+        uid: azure-maps-spatial-io.atlas.OgcStyle
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-spatial-io.atlas.CsvHeader
+    name: CsvHeader
+    spec.typeScript:
+      - name: CsvHeader
+        fullName: CsvHeader
+        uid: azure-maps-spatial-io.atlas.CsvHeader
+  - uid: azure-maps-spatial-io.atlas.SpatialDataWriteOptions
+    name: SpatialDataWriteOptions
+    spec.typeScript:
+      - name: SpatialDataWriteOptions
+        fullName: SpatialDataWriteOptions
+        uid: azure-maps-spatial-io.atlas.SpatialDataWriteOptions
+  - uid: 'azure-maps-spatial-io.atlas.WfsFeatureType[]'
+    name: 'WfsFeatureType[]'
+    spec.typeScript:
+      - name: WfsFeatureType
+        fullName: WfsFeatureType
+        uid: azure-maps-spatial-io.atlas.WfsFeatureType
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-maps-spatial-io.atlas.WfsFeatureType
+    name: WfsFeatureType
+    spec.typeScript:
+      - name: WfsFeatureType
+        fullName: WfsFeatureType
+        uid: azure-maps-spatial-io.atlas.WfsFeatureType

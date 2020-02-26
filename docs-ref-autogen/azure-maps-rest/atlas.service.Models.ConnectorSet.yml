@@ -5,18 +5,18 @@ items:
     fullName: ConnectorSet
     children:
       - azure-maps-rest.atlas.service.Models.ConnectorSet.Chademo
-      - azure-maps-rest.atlas.service.Models.ConnectorSet.Tesla
+      - azure-maps-rest.atlas.service.Models.ConnectorSet.IEC60309AC1PhaseBlue
       - azure-maps-rest.atlas.service.Models.ConnectorSet.IEC60309DCWhite
       - azure-maps-rest.atlas.service.Models.ConnectorSet.IEC62196Type1
       - azure-maps-rest.atlas.service.Models.ConnectorSet.IEC62196Type1CCS
-      - azure-maps-rest.atlas.service.Models.ConnectorSet.IEC60309AC1PhaseBlue
+      - azure-maps-rest.atlas.service.Models.ConnectorSet.IEC62196Type2CCS
       - >-
         azure-maps-rest.atlas.service.Models.ConnectorSet.IEC62196Type2CableAttached
       - azure-maps-rest.atlas.service.Models.ConnectorSet.IEC62196Type2Outlet
       - azure-maps-rest.atlas.service.Models.ConnectorSet.IEC62196Type3
       - >-
         azure-maps-rest.atlas.service.Models.ConnectorSet.StandardHouseholdCountrySpecific
-      - azure-maps-rest.atlas.service.Models.ConnectorSet.IEC62196Type2CCS
+      - azure-maps-rest.atlas.service.Models.ConnectorSet.Tesla
     langs:
       - typeScript
     type: enum
@@ -48,19 +48,19 @@ items:
     type: field
     numericValue: null
     package: azure-maps-rest
-  - uid: azure-maps-rest.atlas.service.Models.ConnectorSet.Tesla
-    name: Tesla
+  - uid: azure-maps-rest.atlas.service.Models.ConnectorSet.IEC60309AC1PhaseBlue
+    name: IEC60309AC1PhaseBlue
     children: []
     langs:
       - typeScript
     summary: >-
-      The Tesla connector is the regionally specific Tesla Supercharger
-      connector. I.e. it refers to
+      Industrial Blue connector is a connector defined in the IEC 60309
+      standard. It is sometime
 
-      either Tesla's proprietary connector, sometimes referred to as Tesla Port
-      mostly limited to
+      referred to as by some combination of the standard, the color and the fact
+      that is a single
 
-      North America or the modified Type 2 (DC over Type 2) in Europe.
+      phase connector. The connector usually has the "P+N+E, 6h" configuration.
     type: field
     numericValue: null
     package: azure-maps-rest
@@ -108,19 +108,19 @@ items:
     type: field
     numericValue: null
     package: azure-maps-rest
-  - uid: azure-maps-rest.atlas.service.Models.ConnectorSet.IEC60309AC1PhaseBlue
-    name: IEC60309AC1PhaseBlue
+  - uid: azure-maps-rest.atlas.service.Models.ConnectorSet.IEC62196Type2CCS
+    name: IEC62196Type2CCS
     children: []
     langs:
       - typeScript
     summary: >-
-      Industrial Blue connector is a connector defined in the IEC 60309
-      standard. It is sometime
+      Type 2 based combo connector as defined in the IEC 62196-3 standard. The
+      connector is based on
 
-      referred to as by some combination of the standard, the color and the fact
-      that is a single
+      the Type 2 connector – as defined in the IEC 62196-2 standard – with two
+      additional direct
 
-      phase connector. The connector usually has the "P+N+E, 6h" configuration.
+      current (DC) contacts to allow DC fast charging.
     type: field
     numericValue: null
     package: azure-maps-rest
@@ -185,19 +185,19 @@ items:
     type: field
     numericValue: null
     package: azure-maps-rest
-  - uid: azure-maps-rest.atlas.service.Models.ConnectorSet.IEC62196Type2CCS
-    name: IEC62196Type2CCS
+  - uid: azure-maps-rest.atlas.service.Models.ConnectorSet.Tesla
+    name: Tesla
     children: []
     langs:
       - typeScript
     summary: >-
-      Type 2 based combo connector as defined in the IEC 62196-3 standard. The
-      connector is based on
+      The Tesla connector is the regionally specific Tesla Supercharger
+      connector. I.e. it refers to
 
-      the Type 2 connector – as defined in the IEC 62196-2 standard – with two
-      additional direct
+      either Tesla's proprietary connector, sometimes referred to as Tesla Port
+      mostly limited to
 
-      current (DC) contacts to allow DC fast charging.
+      North America or the modified Type 2 (DC over Type 2) in Europe.
     type: field
     numericValue: null
     package: azure-maps-rest
@@ -1558,6 +1558,26 @@ references:
       - name: GetMapImageOptions
         fullName: GetMapImageOptions
         uid: azure-maps-rest.atlas.service.GetMapImageOptions
+  - uid: Promise<azure-maps-rest.atlas.service.GetMapImageResponse>
+    name: GetMapImageResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetMapImageResponse
+        fullName: GetMapImageResponse
+        uid: azure-maps-rest.atlas.service.GetMapImageResponse
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<azure-maps-rest.atlas.service.GetMapImageryTileResponse>
+    name: GetMapImageryTileResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetMapImageryTileResponse
+        fullName: GetMapImageryTileResponse
+        uid: azure-maps-rest.atlas.service.GetMapImageryTileResponse
+      - name: '>'
+        fullName: '>'
   - uid: azure-maps-rest.atlas.service.Models.TileFormat
     name: TileFormat
     spec.typeScript:
@@ -1582,6 +1602,16 @@ references:
       - name: GetMapTileOptions
         fullName: GetMapTileOptions
         uid: azure-maps-rest.atlas.service.GetMapTileOptions
+  - uid: Promise<azure-maps-rest.atlas.service.GetMapTileResponse>
+    name: GetMapTileResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetMapTileResponse
+        fullName: GetMapTileResponse
+        uid: azure-maps-rest.atlas.service.GetMapTileResponse
+      - name: '>'
+        fullName: '>'
   - uid: azure-maps-rest.atlas.service.IRetryOptions
     name: IRetryOptions
     spec.typeScript:

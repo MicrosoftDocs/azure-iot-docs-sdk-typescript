@@ -15,12 +15,12 @@ items:
       - azure-maps-control.atlas.CameraOptions
       - azure-maps-control.atlas.ClusteredProperties
       - azure-maps-control.atlas.CompassControlOptions
-      - azure-maps-control.atlas.Control
       - azure-maps-control.atlas.control
       - azure-maps-control.atlas.control.CompassControl
       - azure-maps-control.atlas.control.PitchControl
       - azure-maps-control.atlas.control.StyleControl
       - azure-maps-control.atlas.control.ZoomControl
+      - azure-maps-control.atlas.Control
       - azure-maps-control.atlas.ControlBase
       - azure-maps-control.atlas.ControlManager
       - azure-maps-control.atlas.ControlOptions
@@ -49,6 +49,7 @@ items:
       - azure-maps-control.atlas.HtmlMarkerEvents
       - azure-maps-control.atlas.HtmlMarkerManager
       - azure-maps-control.atlas.HtmlMarkerOptions
+      - azure-maps-control.atlas.HyperLinkFormatOptions
       - azure-maps-control.atlas.IconOptions
       - azure-maps-control.atlas.ImageLayerOptions
       - azure-maps-control.atlas.ImageSpriteManager
@@ -68,8 +69,10 @@ items:
       - azure-maps-control.atlas.layer.TileLayer
       - azure-maps-control.atlas.LayerManager
       - azure-maps-control.atlas.LayerOptions
+      - azure-maps-control.atlas.LightOptions
       - azure-maps-control.atlas.LineLayerOptions
       - azure-maps-control.atlas.Map
+      - azure-maps-control.atlas.MapDataEvent
       - azure-maps-control.atlas.MapErrorEvent
       - azure-maps-control.atlas.MapEvent
       - azure-maps-control.atlas.MapMouseEvent
@@ -91,7 +94,11 @@ items:
       - azure-maps-control.atlas.PolygonLayerOptions
       - azure-maps-control.atlas.Popup
       - azure-maps-control.atlas.PopupEvents
+      - azure-maps-control.atlas.PopupManager
       - azure-maps-control.atlas.PopupOptions
+      - azure-maps-control.atlas.PopupTemplate
+      - azure-maps-control.atlas.Properties
+      - azure-maps-control.atlas.PropertyInfo
       - azure-maps-control.atlas.RequestParameters
       - azure-maps-control.atlas.ServiceOptions
       - azure-maps-control.atlas.Shape
@@ -108,6 +115,8 @@ items:
       - azure-maps-control.atlas.SymbolLayerOptions
       - azure-maps-control.atlas.TargetedEvent
       - azure-maps-control.atlas.TextOptions
+      - azure-maps-control.atlas.Tile
+      - azure-maps-control.atlas.TileId
       - azure-maps-control.atlas.TileLayerOptions
       - azure-maps-control.atlas.TrafficOptions
       - azure-maps-control.atlas.UserInteractionOptions
@@ -140,8 +149,6 @@ references:
     name: ClusteredProperties
   - uid: azure-maps-control.atlas.CompassControlOptions
     name: CompassControlOptions
-  - uid: azure-maps-control.atlas.Control
-    name: Control
   - uid: azure-maps-control.atlas.control
     name: control
   - uid: azure-maps-control.atlas.control.CompassControl
@@ -152,6 +159,8 @@ references:
     name: StyleControl
   - uid: azure-maps-control.atlas.control.ZoomControl
     name: ZoomControl
+  - uid: azure-maps-control.atlas.Control
+    name: Control
   - uid: azure-maps-control.atlas.ControlBase
     name: ControlBase
   - uid: azure-maps-control.atlas.ControlManager
@@ -208,6 +217,8 @@ references:
     name: HtmlMarkerManager
   - uid: azure-maps-control.atlas.HtmlMarkerOptions
     name: HtmlMarkerOptions
+  - uid: azure-maps-control.atlas.HyperLinkFormatOptions
+    name: HyperLinkFormatOptions
   - uid: azure-maps-control.atlas.IconOptions
     name: IconOptions
   - uid: azure-maps-control.atlas.ImageLayerOptions
@@ -246,10 +257,14 @@ references:
     name: LayerManager
   - uid: azure-maps-control.atlas.LayerOptions
     name: LayerOptions
+  - uid: azure-maps-control.atlas.LightOptions
+    name: LightOptions
   - uid: azure-maps-control.atlas.LineLayerOptions
     name: LineLayerOptions
   - uid: azure-maps-control.atlas.Map
     name: Map
+  - uid: azure-maps-control.atlas.MapDataEvent
+    name: MapDataEvent
   - uid: azure-maps-control.atlas.MapErrorEvent
     name: MapErrorEvent
   - uid: azure-maps-control.atlas.MapEvent
@@ -292,8 +307,16 @@ references:
     name: Popup
   - uid: azure-maps-control.atlas.PopupEvents
     name: PopupEvents
+  - uid: azure-maps-control.atlas.PopupManager
+    name: PopupManager
   - uid: azure-maps-control.atlas.PopupOptions
     name: PopupOptions
+  - uid: azure-maps-control.atlas.PopupTemplate
+    name: PopupTemplate
+  - uid: azure-maps-control.atlas.Properties
+    name: Properties
+  - uid: azure-maps-control.atlas.PropertyInfo
+    name: PropertyInfo
   - uid: azure-maps-control.atlas.RequestParameters
     name: RequestParameters
   - uid: azure-maps-control.atlas.ServiceOptions
@@ -326,6 +349,10 @@ references:
     name: TargetedEvent
   - uid: azure-maps-control.atlas.TextOptions
     name: TextOptions
+  - uid: azure-maps-control.atlas.Tile
+    name: Tile
+  - uid: azure-maps-control.atlas.TileId
+    name: TileId
   - uid: azure-maps-control.atlas.TileLayerOptions
     name: TileLayerOptions
   - uid: azure-maps-control.atlas.TrafficOptions

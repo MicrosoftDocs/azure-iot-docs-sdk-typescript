@@ -59,6 +59,7 @@ items:
       return:
         type:
           - AbortSignalLike
+        description: ''
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.atlas.service.Models.MobilityGetTransitRoutePreviewOptionalParams.agency
@@ -85,6 +86,7 @@ items:
       return:
         type:
           - 'string[]'
+        description: ''
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.atlas.service.Models.MobilityGetTransitRoutePreviewOptionalParams.agencyType
@@ -106,6 +108,7 @@ items:
       return:
         type:
           - azure-maps-rest.atlas.service.Models.AgencyType
+        description: ''
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.atlas.service.Models.MobilityGetTransitRoutePreviewOptionalParams.bikeType
@@ -126,6 +129,7 @@ items:
       return:
         type:
           - azure-maps-rest.atlas.service.Models.BikeType
+        description: ''
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.atlas.service.Models.MobilityGetTransitRoutePreviewOptionalParams.customHeaders
@@ -144,6 +148,7 @@ items:
       return:
         type:
           - '[key: string]: string'
+        description: ''
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.atlas.service.Models.MobilityGetTransitRoutePreviewOptionalParams.destinationType
@@ -162,6 +167,7 @@ items:
       return:
         type:
           - azure-maps-rest.atlas.service.Models.DestinationType
+        description: ''
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.atlas.service.Models.MobilityGetTransitRoutePreviewOptionalParams.language
@@ -186,6 +192,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.atlas.service.Models.MobilityGetTransitRoutePreviewOptionalParams.modeType
@@ -209,6 +216,7 @@ items:
       return:
         type:
           - 'azure-maps-rest.atlas.service.Models.ModeType[]'
+        description: ''
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.atlas.service.Models.MobilityGetTransitRoutePreviewOptionalParams.onDownloadProgress
@@ -225,6 +233,7 @@ items:
       return:
         type:
           - '(progress: TransferProgressEvent) => void'
+        description: ''
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.atlas.service.Models.MobilityGetTransitRoutePreviewOptionalParams.onUploadProgress
@@ -241,6 +250,7 @@ items:
       return:
         type:
           - '(progress: TransferProgressEvent) => void'
+        description: ''
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.atlas.service.Models.MobilityGetTransitRoutePreviewOptionalParams.originType
@@ -264,6 +274,7 @@ items:
       return:
         type:
           - azure-maps-rest.atlas.service.Models.OriginType
+        description: ''
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.atlas.service.Models.MobilityGetTransitRoutePreviewOptionalParams.routeType
@@ -284,6 +295,7 @@ items:
       return:
         type:
           - azure-maps-rest.atlas.service.Models.TransitRouteType
+        description: ''
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.atlas.service.Models.MobilityGetTransitRoutePreviewOptionalParams.time
@@ -307,6 +319,7 @@ items:
       return:
         type:
           - string
+        description: ''
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.atlas.service.Models.MobilityGetTransitRoutePreviewOptionalParams.timeout
@@ -325,6 +338,7 @@ items:
       return:
         type:
           - number
+        description: ''
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.atlas.service.Models.MobilityGetTransitRoutePreviewOptionalParams.timeType
@@ -346,6 +360,7 @@ items:
       return:
         type:
           - azure-maps-rest.atlas.service.Models.TimeType
+        description: ''
     package: azure-maps-rest
   - uid: >-
       azure-maps-rest.atlas.service.Models.MobilityGetTransitRoutePreviewOptionalParams.transitType
@@ -372,6 +387,7 @@ items:
       return:
         type:
           - 'azure-maps-rest.atlas.service.Models.TransitTypeFilter[]'
+        description: ''
     package: azure-maps-rest
 references:
   - uid: azure-maps-rest.atlas.service.Models.TransitTypeResult
@@ -1730,6 +1746,26 @@ references:
       - name: GetMapImageOptions
         fullName: GetMapImageOptions
         uid: azure-maps-rest.atlas.service.GetMapImageOptions
+  - uid: Promise<azure-maps-rest.atlas.service.GetMapImageResponse>
+    name: GetMapImageResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetMapImageResponse
+        fullName: GetMapImageResponse
+        uid: azure-maps-rest.atlas.service.GetMapImageResponse
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<azure-maps-rest.atlas.service.GetMapImageryTileResponse>
+    name: GetMapImageryTileResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetMapImageryTileResponse
+        fullName: GetMapImageryTileResponse
+        uid: azure-maps-rest.atlas.service.GetMapImageryTileResponse
+      - name: '>'
+        fullName: '>'
   - uid: azure-maps-rest.atlas.service.Models.TileFormat
     name: TileFormat
     spec.typeScript:
@@ -1754,6 +1790,16 @@ references:
       - name: GetMapTileOptions
         fullName: GetMapTileOptions
         uid: azure-maps-rest.atlas.service.GetMapTileOptions
+  - uid: Promise<azure-maps-rest.atlas.service.GetMapTileResponse>
+    name: GetMapTileResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: GetMapTileResponse
+        fullName: GetMapTileResponse
+        uid: azure-maps-rest.atlas.service.GetMapTileResponse
+      - name: '>'
+        fullName: '>'
   - uid: azure-maps-rest.atlas.service.IRetryOptions
     name: IRetryOptions
     spec.typeScript:

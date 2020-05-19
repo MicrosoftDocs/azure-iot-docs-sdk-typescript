@@ -126,6 +126,18 @@ items:
         description: ''
     package: azure-maps-spatial-io
 references:
+  - uid: azure-maps-spatial-io.atlas.io.core.CsvReader
+    name: CsvReader
+    spec.typeScript:
+      - name: CsvReader
+        fullName: CsvReader
+        uid: azure-maps-spatial-io.atlas.io.core.CsvReader
+  - uid: azure-maps-spatial-io.atlas.io.core.CsvWriter
+    name: CsvWriter
+    spec.typeScript:
+      - name: CsvWriter
+        fullName: CsvWriter
+        uid: azure-maps-spatial-io.atlas.io.core.CsvWriter
   - uid: azure-maps-spatial-io.atlas.GmlReadOptions
     name: GmlReadOptions
     spec.typeScript:
@@ -146,18 +158,36 @@ references:
       - name: XmlNode
         fullName: XmlNode
         uid: azure-maps-spatial-io.atlas.io.core.XmlNode
+  - uid: azure-maps-spatial-io.atlas.io.core.GmlReader
+    name: GmlReader
+    spec.typeScript:
+      - name: GmlReader
+        fullName: GmlReader
+        uid: azure-maps-spatial-io.atlas.io.core.GmlReader
   - uid: azure-maps-spatial-io.atlas.GmlWriteOptions
     name: GmlWriteOptions
     spec.typeScript:
       - name: GmlWriteOptions
         fullName: GmlWriteOptions
         uid: azure-maps-spatial-io.atlas.GmlWriteOptions
+  - uid: azure-maps-spatial-io.atlas.io.core.GmlWriter
+    name: GmlWriter
+    spec.typeScript:
+      - name: GmlWriter
+        fullName: GmlWriter
+        uid: azure-maps-spatial-io.atlas.io.core.GmlWriter
   - uid: azure-maps-spatial-io.atlas.io.core.XmlDocument
     name: XmlDocument
     spec.typeScript:
       - name: XmlDocument
         fullName: XmlDocument
         uid: azure-maps-spatial-io.atlas.io.core.XmlDocument
+  - uid: azure-maps-spatial-io.atlas.io.core.SimpleXmlReader
+    name: SimpleXmlReader
+    spec.typeScript:
+      - name: SimpleXmlReader
+        fullName: SimpleXmlReader
+        uid: azure-maps-spatial-io.atlas.io.core.SimpleXmlReader
   - uid: azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter
     name: SimpleXmlWriter
     spec.typeScript:
@@ -178,6 +208,12 @@ references:
         uid: azure-maps-spatial-io.atlas.io.core.XmlNode
       - name: '[]'
         fullName: '[]'
+  - uid: azure-maps-spatial-io.atlas.io.core
+    name: core
+    spec.typeScript:
+      - name: core
+        fullName: core
+        uid: azure-maps-spatial-io.atlas.io.core
   - uid: azure-maps-spatial-io.atlas.io.ogc.filter.MathOperator
     name: MathOperator
     spec.typeScript:
@@ -199,6 +235,12 @@ references:
       - name: Filter
         fullName: Filter
         uid: azure-maps-spatial-io.atlas.io.ogc.filter.Filter
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.Add
+    name: Add
+    spec.typeScript:
+      - name: Add
+        fullName: Add
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Add
   - uid: azure-maps-spatial-io.atlas.io.ogc.filter.LogicOperatorFilter
     name: LogicOperatorFilter
     spec.typeScript:
@@ -213,6 +255,12 @@ references:
         uid: azure-maps-spatial-io.atlas.io.ogc.filter.Filter
       - name: '[]'
         fullName: '[]'
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.And
+    name: And
+    spec.typeScript:
+      - name: And
+        fullName: And
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.And
   - uid: azure-maps-spatial-io.atlas.io.ogc.filter.Filter
     name: Filter
     spec.typeScript:
@@ -260,6 +308,30 @@ references:
         uid: azure-maps-spatial-io.atlas.io.ogc.filter.Filter
       - name: ' | azmaps.data.Geometry | azmaps.data.Feature<azmaps.data.Geometry, any> | azmaps.data.BoundingBox'
         fullName: ' | azmaps.data.Geometry | azmaps.data.Feature<azmaps.data.Geometry, any> | azmaps.data.BoundingBox'
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.BinaryComparisonOpType
+    name: BinaryComparisonOpType
+    spec.typeScript:
+      - name: BinaryComparisonOpType
+        fullName: BinaryComparisonOpType
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.BinaryComparisonOpType
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.CustomFilter
+    name: CustomFilter
+    spec.typeScript:
+      - name: CustomFilter
+        fullName: CustomFilter
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.CustomFilter
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.Div
+    name: Div
+    spec.typeScript:
+      - name: Div
+        fullName: Div
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Div
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.Id
+    name: Id
+    spec.typeScript:
+      - name: Id
+        fullName: Id
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Id
   - uid: azure-maps-spatial-io.atlas.io.ogc.filter.Literal
     name: Literal
     spec.typeScript:
@@ -272,24 +344,120 @@ references:
       - name: BinaryComparisonOptions
         fullName: BinaryComparisonOptions
         uid: azure-maps-spatial-io.atlas.io.ogc.filter.BinaryComparisonOptions
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.BinaryComparisonOpType
-    name: BinaryComparisonOpType
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsBetween
+    name: IsBetween
     spec.typeScript:
-      - name: BinaryComparisonOpType
-        fullName: BinaryComparisonOpType
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.BinaryComparisonOpType
+      - name: IsBetween
+        fullName: IsBetween
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsBetween
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsEqual
+    name: IsEqual
+    spec.typeScript:
+      - name: IsEqual
+        fullName: IsEqual
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsEqual
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsGreaterThan
+    name: IsGreaterThan
+    spec.typeScript:
+      - name: IsGreaterThan
+        fullName: IsGreaterThan
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsGreaterThan
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsGreaterThanOrEqual
+    name: IsGreaterThanOrEqual
+    spec.typeScript:
+      - name: IsGreaterThanOrEqual
+        fullName: IsGreaterThanOrEqual
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsGreaterThanOrEqual
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsLessThan
+    name: IsLessThan
+    spec.typeScript:
+      - name: IsLessThan
+        fullName: IsLessThan
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsLessThan
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsLessThanOrEqual
+    name: IsLessThanOrEqual
+    spec.typeScript:
+      - name: IsLessThanOrEqual
+        fullName: IsLessThanOrEqual
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsLessThanOrEqual
   - uid: azure-maps-spatial-io.atlas.io.ogc.filter.LikeOptions
     name: LikeOptions
     spec.typeScript:
       - name: LikeOptions
         fullName: LikeOptions
         uid: azure-maps-spatial-io.atlas.io.ogc.filter.LikeOptions
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsLike
+    name: IsLike
+    spec.typeScript:
+      - name: IsLike
+        fullName: IsLike
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsLike
   - uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsNilOptions
     name: IsNilOptions
     spec.typeScript:
       - name: IsNilOptions
         fullName: IsNilOptions
         uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsNilOptions
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsNil
+    name: IsNil
+    spec.typeScript:
+      - name: IsNil
+        fullName: IsNil
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsNil
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsNotEqual
+    name: IsNotEqual
+    spec.typeScript:
+      - name: IsNotEqual
+        fullName: IsNotEqual
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsNotEqual
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsNull
+    name: IsNull
+    spec.typeScript:
+      - name: IsNull
+        fullName: IsNull
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsNull
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.Mul
+    name: Mul
+    spec.typeScript:
+      - name: Mul
+        fullName: Mul
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Mul
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.Not
+    name: Not
+    spec.typeScript:
+      - name: Not
+        fullName: Not
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Not
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.Or
+    name: Or
+    spec.typeScript:
+      - name: Or
+        fullName: Or
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Or
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.PropertyName
+    name: PropertyName
+    spec.typeScript:
+      - name: PropertyName
+        fullName: PropertyName
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.PropertyName
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.Sub
+    name: Sub
+    spec.typeScript:
+      - name: Sub
+        fullName: Sub
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Sub
+  - uid: azure-maps-spatial-io.atlas.io.ogc.filter
+    name: filter
+    spec.typeScript:
+      - name: filter
+        fullName: filter
+        uid: azure-maps-spatial-io.atlas.io.ogc.filter
+  - uid: azure-maps-spatial-io.atlas.io.ogc.WKT
+    name: WKT
+    spec.typeScript:
+      - name: WKT
+        fullName: WKT
+        uid: azure-maps-spatial-io.atlas.io.ogc.WKT
   - uid: azure-maps-spatial-io.atlas.WfsServiceOptions
     name: WfsServiceOptions
     spec.typeScript:
@@ -322,6 +490,18 @@ references:
       - name: WfsFeatureRequest
         fullName: WfsFeatureRequest
         uid: azure-maps-spatial-io.atlas.WfsFeatureRequest
+  - uid: azure-maps-spatial-io.atlas.io.ogc.WfsClient
+    name: WfsClient
+    spec.typeScript:
+      - name: WfsClient
+        fullName: WfsClient
+        uid: azure-maps-spatial-io.atlas.io.ogc.WfsClient
+  - uid: azure-maps-spatial-io.atlas.io.ogc
+    name: ogc
+    spec.typeScript:
+      - name: ogc
+        fullName: ogc
+        uid: azure-maps-spatial-io.atlas.io.ogc
   - uid: azure-maps-spatial-io.atlas.SpatialDataReadOptions
     name: SpatialDataReadOptions
     spec.typeScript:
@@ -357,6 +537,12 @@ references:
       - name: SpatialCsvWriteOptions
         fullName: SpatialCsvWriteOptions
         uid: azure-maps-spatial-io.atlas.SpatialCsvWriteOptions
+  - uid: azure-maps-spatial-io.atlas.io
+    name: io
+    spec.typeScript:
+      - name: io
+        fullName: io
+        uid: azure-maps-spatial-io.atlas.io
   - uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions
     name: OgcMapLayerOptions
     spec.typeScript:
@@ -373,6 +559,12 @@ references:
         uid: azure-maps-spatial-io.atlas.OgcMapLayerCapabilities
       - name: '>'
         fullName: '>'
+  - uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer
+    name: OgcMapLayer
+    spec.typeScript:
+      - name: OgcMapLayer
+        fullName: OgcMapLayer
+        uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer
   - uid: azure-maps-spatial-io.atlas.SimpleDataLayerOptions
     name: SimpleDataLayerOptions
     spec.typeScript:
@@ -385,6 +577,18 @@ references:
       - name: SimpleDataLayerGroup
         fullName: SimpleDataLayerGroup
         uid: azure-maps-spatial-io.atlas.SimpleDataLayerGroup
+  - uid: azure-maps-spatial-io.atlas.layer.SimpleDataLayer
+    name: SimpleDataLayer
+    spec.typeScript:
+      - name: SimpleDataLayer
+        fullName: SimpleDataLayer
+        uid: azure-maps-spatial-io.atlas.layer.SimpleDataLayer
+  - uid: azure-maps-spatial-io.atlas.layer
+    name: layer
+    spec.typeScript:
+      - name: layer
+        fullName: layer
+        uid: azure-maps-spatial-io.atlas.layer
   - uid: >-
       Array<azmaps.data.Feature<azmaps.data.Geometry,
       azure-maps-spatial-io.atlas.SimpleStyleProperties>>
@@ -421,18 +625,42 @@ references:
       - name: BaseSpatialXmlReadOptions
         fullName: BaseSpatialXmlReadOptions
         uid: azure-maps-spatial-io.atlas.BaseSpatialXmlReadOptions
-  - uid: azure-maps-spatial-io.atlas.SpatialXmlWriteOptions
-    name: SpatialXmlWriteOptions
+  - uid: azure-maps-spatial-io.atlas.CsvHeader
+    name: CsvHeader
     spec.typeScript:
-      - name: SpatialXmlWriteOptions
-        fullName: SpatialXmlWriteOptions
-        uid: azure-maps-spatial-io.atlas.SpatialXmlWriteOptions
+      - name: CsvHeader
+        fullName: CsvHeader
+        uid: azure-maps-spatial-io.atlas.CsvHeader
   - uid: azure-maps-spatial-io.atlas.CustomGmlNamespace
     name: CustomGmlNamespace
     spec.typeScript:
       - name: CustomGmlNamespace
         fullName: CustomGmlNamespace
         uid: azure-maps-spatial-io.atlas.CustomGmlNamespace
+  - uid: azure-maps-spatial-io.atlas.SpatialXmlWriteOptions
+    name: SpatialXmlWriteOptions
+    spec.typeScript:
+      - name: SpatialXmlWriteOptions
+        fullName: SpatialXmlWriteOptions
+        uid: azure-maps-spatial-io.atlas.SpatialXmlWriteOptions
+  - uid: azure-maps-spatial-io.atlas.GpxReadOptions
+    name: GpxReadOptions
+    spec.typeScript:
+      - name: GpxReadOptions
+        fullName: GpxReadOptions
+        uid: azure-maps-spatial-io.atlas.GpxReadOptions
+  - uid: azure-maps-spatial-io.atlas.KmlReadOptions
+    name: KmlReadOptions
+    spec.typeScript:
+      - name: KmlReadOptions
+        fullName: KmlReadOptions
+        uid: azure-maps-spatial-io.atlas.KmlReadOptions
+  - uid: azure-maps-spatial-io.atlas.OgcDimension
+    name: OgcDimension
+    spec.typeScript:
+      - name: OgcDimension
+        fullName: OgcDimension
+        uid: azure-maps-spatial-io.atlas.OgcDimension
   - uid: 'azure-maps-spatial-io.atlas.OgcSublayer[]'
     name: 'OgcSublayer[]'
     spec.typeScript:
@@ -441,6 +669,12 @@ references:
         uid: azure-maps-spatial-io.atlas.OgcSublayer
       - name: '[]'
         fullName: '[]'
+  - uid: azure-maps-spatial-io.atlas.OgcMapLayerCapabilities
+    name: OgcMapLayerCapabilities
+    spec.typeScript:
+      - name: OgcMapLayerCapabilities
+        fullName: OgcMapLayerCapabilities
+        uid: azure-maps-spatial-io.atlas.OgcMapLayerCapabilities
   - uid: Array<string | azure-maps-spatial-io.atlas.OgcSublayer>
     name: OgcSublayer>
     spec.typeScript:
@@ -461,6 +695,12 @@ references:
         uid: azure-maps-spatial-io.atlas.OgcStyle
       - name: '>'
         fullName: '>'
+  - uid: azure-maps-spatial-io.atlas.OgcStyle
+    name: OgcStyle
+    spec.typeScript:
+      - name: OgcStyle
+        fullName: OgcStyle
+        uid: azure-maps-spatial-io.atlas.OgcStyle
   - uid: 'azure-maps-spatial-io.atlas.OgcDimension[]'
     name: 'OgcDimension[]'
     spec.typeScript:
@@ -477,18 +717,36 @@ references:
         uid: azure-maps-spatial-io.atlas.OgcStyle
       - name: '[]'
         fullName: '[]'
-  - uid: azure-maps-spatial-io.atlas.CsvHeader
-    name: CsvHeader
+  - uid: azure-maps-spatial-io.atlas.OgcSublayer
+    name: OgcSublayer
     spec.typeScript:
-      - name: CsvHeader
-        fullName: CsvHeader
-        uid: azure-maps-spatial-io.atlas.CsvHeader
+      - name: OgcSublayer
+        fullName: OgcSublayer
+        uid: azure-maps-spatial-io.atlas.OgcSublayer
+  - uid: azure-maps-spatial-io.atlas.SimpleStyleProperties
+    name: SimpleStyleProperties
+    spec.typeScript:
+      - name: SimpleStyleProperties
+        fullName: SimpleStyleProperties
+        uid: azure-maps-spatial-io.atlas.SimpleStyleProperties
+  - uid: azure-maps-spatial-io.atlas.SpatialCsvReadOptions
+    name: SpatialCsvReadOptions
+    spec.typeScript:
+      - name: SpatialCsvReadOptions
+        fullName: SpatialCsvReadOptions
+        uid: azure-maps-spatial-io.atlas.SpatialCsvReadOptions
   - uid: azure-maps-spatial-io.atlas.SpatialDataWriteOptions
     name: SpatialDataWriteOptions
     spec.typeScript:
       - name: SpatialDataWriteOptions
         fullName: SpatialDataWriteOptions
         uid: azure-maps-spatial-io.atlas.SpatialDataWriteOptions
+  - uid: azure-maps-spatial-io.atlas.SpatialCsvWriteOptions
+    name: SpatialCsvWriteOptions
+    spec.typeScript:
+      - name: SpatialCsvWriteOptions
+        fullName: SpatialCsvWriteOptions
+        uid: azure-maps-spatial-io.atlas.SpatialCsvWriteOptions
   - uid: 'azure-maps-spatial-io.atlas.WfsFeatureType[]'
     name: 'WfsFeatureType[]'
     spec.typeScript:
@@ -497,12 +755,24 @@ references:
         uid: azure-maps-spatial-io.atlas.WfsFeatureType
       - name: '[]'
         fullName: '[]'
+  - uid: azure-maps-spatial-io.atlas.WfsCapabilities
+    name: WfsCapabilities
+    spec.typeScript:
+      - name: WfsCapabilities
+        fullName: WfsCapabilities
+        uid: azure-maps-spatial-io.atlas.WfsCapabilities
   - uid: azure-maps-spatial-io.atlas.WfsFeatureType
     name: WfsFeatureType
     spec.typeScript:
       - name: WfsFeatureType
         fullName: WfsFeatureType
         uid: azure-maps-spatial-io.atlas.WfsFeatureType
+  - uid: azure-maps-spatial-io.atlas.WfsFeatureTypeDescription
+    name: WfsFeatureTypeDescription
+    spec.typeScript:
+      - name: WfsFeatureTypeDescription
+        fullName: WfsFeatureTypeDescription
+        uid: azure-maps-spatial-io.atlas.WfsFeatureTypeDescription
   - uid: azure-maps-spatial-io.atlas.io.read
     name: read
   - uid: azure-maps-spatial-io.atlas.io.write

@@ -4,6 +4,7 @@ items:
     name: DataSourceOptions
     fullName: DataSourceOptions
     children:
+      - azure-maps-control.atlas.DataSourceOptions.buffer
       - azure-maps-control.atlas.DataSourceOptions.cluster
       - azure-maps-control.atlas.DataSourceOptions.clusterMaxZoom
       - azure-maps-control.atlas.DataSourceOptions.clusterProperties
@@ -22,6 +23,22 @@ items:
       name: azure-maps-control.atlas.Options
     package: azure-maps-control
     module: Object Definitions
+  - uid: azure-maps-control.atlas.DataSourceOptions.buffer
+    name: buffer
+    fullName: buffer
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'buffer?: number'
+      return:
+        type:
+          - number
+        description: ''
+    package: azure-maps-control
   - uid: azure-maps-control.atlas.DataSourceOptions.cluster
     name: cluster
     fullName: cluster
@@ -221,6 +238,24 @@ references:
       - name: StyleControl
         fullName: StyleControl
         uid: azure-maps-control.atlas.control.StyleControl
+  - uid: azure-maps-control.atlas.TrafficControlOptions
+    name: TrafficControlOptions
+    spec.typeScript:
+      - name: TrafficControlOptions
+        fullName: TrafficControlOptions
+        uid: azure-maps-control.atlas.TrafficControlOptions
+  - uid: azure-maps-control.atlas.control.TrafficControl
+    name: TrafficControl
+    spec.typeScript:
+      - name: TrafficControl
+        fullName: TrafficControl
+        uid: azure-maps-control.atlas.control.TrafficControl
+  - uid: azure-maps-control.atlas.control.TrafficLegendControl
+    name: TrafficLegendControl
+    spec.typeScript:
+      - name: TrafficLegendControl
+        fullName: TrafficLegendControl
+        uid: azure-maps-control.atlas.control.TrafficLegendControl
   - uid: azure-maps-control.atlas.ZoomControlOptions
     name: ZoomControlOptions
     spec.typeScript:

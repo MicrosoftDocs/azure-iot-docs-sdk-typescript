@@ -1,184 +1,109 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-control.atlas.MapTouchEvent
-    name: MapTouchEvent
-    fullName: MapTouchEvent
+  - uid: azure-maps-control.atlas.control.TrafficControl
+    name: TrafficControl
+    fullName: TrafficControl
     children:
-      - azure-maps-control.atlas.MapTouchEvent.layerId
-      - azure-maps-control.atlas.MapTouchEvent.map
-      - azure-maps-control.atlas.MapTouchEvent.originalEvent
-      - azure-maps-control.atlas.MapTouchEvent.pixel
-      - azure-maps-control.atlas.MapTouchEvent.pixels
-      - azure-maps-control.atlas.MapTouchEvent.position
-      - azure-maps-control.atlas.MapTouchEvent.positions
-      - azure-maps-control.atlas.MapTouchEvent.preventDefault
-      - azure-maps-control.atlas.MapTouchEvent.shapes
-      - azure-maps-control.atlas.MapTouchEvent.type
+      - azure-maps-control.atlas.control.TrafficControl.buildContainer
+      - azure-maps-control.atlas.control.TrafficControl.onAdd
+      - azure-maps-control.atlas.control.TrafficControl.onRemove
+      - azure-maps-control.atlas.control.TrafficControl.constructor
     langs:
       - typeScript
-    type: interface
-    summary: Event object returned by the maps when a touch event occurs.
+    type: class
+    summary: A control to display the traffic information of the map.
     extends:
-      name: azure-maps-control.atlas.MapMouseWheelEvent
+      name: azure-maps-control.atlas.ControlBase
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.MapTouchEvent.layerId
-    name: layerId
-    fullName: layerId
+  - uid: azure-maps-control.atlas.control.TrafficControl.buildContainer
+    name: 'buildContainer(Map, ControlStyle, string, K)'
     children: []
+    type: method
     langs:
       - typeScript
-    type: property
-    summary: The id of the layer the event is attached to.
-    optional: true
-    syntax:
-      content: 'layerId?: string'
-      return:
-        type:
-          - string
-        description: ''
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.MapTouchEvent.map
-    name: map
-    fullName: map
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The `Map` instance in which the event occurred on.
-    syntax:
-      content: 'map: Map'
-      return:
-        type:
-          - azure-maps-control.atlas.Map
-        description: ''
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.MapTouchEvent.originalEvent
-    name: originalEvent
-    fullName: originalEvent
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The original event that was fired.
-    optional: true
-    syntax:
-      content: 'originalEvent?: Event'
-      return:
-        type:
-          - Event
-        description: ''
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.MapTouchEvent.pixel
-    name: pixel
-    fullName: pixel
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
-      The pixel coordinate at the center of the all touch points on the map,
-      relative to the top left corner.
-    optional: true
+      Build the outermost container for the control, applies styling including
+      any listeners for auto styling.
     syntax:
-      content: 'pixel?: Pixel'
+      content: >-
+        function buildContainer<K>(map: Map, style: ControlStyle, ariaLabel?:
+        string, tagName?: K)
+      parameters:
+        - id: map
+          type:
+            - azure-maps-control.atlas.Map
+          description: ''
+        - id: style
+          type:
+            - azure-maps-control.atlas.ControlStyle
+          description: ''
+        - id: ariaLabel
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: tagName
+          type:
+            - K
+          description: ''
+          optional: true
       return:
         type:
-          - azure-maps-control.atlas.Pixel
+          - 'HTMLElementTagNameMap[K]'
         description: ''
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.MapTouchEvent.pixels
-    name: pixels
-    fullName: pixels
+  - uid: azure-maps-control.atlas.control.TrafficControl.onAdd
+    name: onAdd(Map)
     children: []
+    type: method
     langs:
       - typeScript
-    type: property
-    summary: The array of pixel coordinates of all touch points on the map.
-    optional: true
+    summary: >-
+      Initialization method for the control which is called when added to the
+      map.
     syntax:
-      content: 'pixels?: Pixel[]'
+      content: 'function onAdd(map: Map)'
+      parameters:
+        - id: map
+          type:
+            - azure-maps-control.atlas.Map
+          description: The map that the control will be added to.
       return:
         type:
-          - 'azure-maps-control.atlas.Pixel[]'
-        description: ''
+          - HTMLElement
+        description: An HTMLElement to be placed on the map for the control.
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.MapTouchEvent.position
-    name: position
-    fullName: position
+  - uid: azure-maps-control.atlas.control.TrafficControl.onRemove
+    name: onRemove()
     children: []
+    type: method
     langs:
       - typeScript
-    type: property
-    summary: The geographic location of the center of all touch points on the map.
-    optional: true
+    summary: >-
+      Method that is called when the control is removed from the map. Should
+      perform any necessary cleanup for the
+
+      control.
     syntax:
-      content: 'position?: Position'
-      return:
-        type:
-          - azure-maps-control.atlas.data.Position
-        description: ''
+      content: function onRemove()
+      parameters: []
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.MapTouchEvent.positions
-    name: positions
-    fullName: positions
+  - uid: azure-maps-control.atlas.control.TrafficControl.constructor
+    name: TrafficControl(TrafficControlOptions)
     children: []
+    type: constructor
     langs:
       - typeScript
-    type: property
-    summary: The geographical location of all touch points on the map.
-    optional: true
+    summary: Constructs a TrafficControl
     syntax:
-      content: 'positions?: Position[]'
-      return:
-        type:
-          - 'azure-maps-control.atlas.data.Position[]'
-        description: ''
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.MapTouchEvent.preventDefault
-    name: preventDefault
-    fullName: preventDefault
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Prevents event propagation bubbling up the event chain.
-    syntax:
-      content: 'preventDefault: () => void'
-      return:
-        type:
-          - () => void
-        description: ''
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.MapTouchEvent.shapes
-    name: shapes
-    fullName: shapes
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The shapes of all touch points on the map.
-    optional: true
-    syntax:
-      content: 'shapes?: Shape[]'
-      return:
-        type:
-          - 'azure-maps-control.atlas.Shape[]'
-        description: ''
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.MapTouchEvent.type
-    name: type
-    fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The event type.
-    syntax:
-      content: 'type: string'
-      return:
-        type:
-          - string
-        description: ''
+      content: 'new TrafficControl(options?: TrafficControlOptions)'
+      parameters:
+        - id: options
+          type:
+            - azure-maps-control.atlas.TrafficControlOptions
+          description: |
+            The options for the control.
+          optional: true
     package: azure-maps-control
 references:
   - uid: azure-maps-control.atlas.ControlBase

@@ -1,183 +1,104 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: azure-maps-control.atlas.MapTouchEvent
-    name: MapTouchEvent
-    fullName: MapTouchEvent
+  - uid: azure-maps-control.atlas.TrafficControlOptions
+    name: TrafficControlOptions
+    fullName: TrafficControlOptions
     children:
-      - azure-maps-control.atlas.MapTouchEvent.layerId
-      - azure-maps-control.atlas.MapTouchEvent.map
-      - azure-maps-control.atlas.MapTouchEvent.originalEvent
-      - azure-maps-control.atlas.MapTouchEvent.pixel
-      - azure-maps-control.atlas.MapTouchEvent.pixels
-      - azure-maps-control.atlas.MapTouchEvent.position
-      - azure-maps-control.atlas.MapTouchEvent.positions
-      - azure-maps-control.atlas.MapTouchEvent.preventDefault
-      - azure-maps-control.atlas.MapTouchEvent.shapes
-      - azure-maps-control.atlas.MapTouchEvent.type
+      - azure-maps-control.atlas.TrafficControlOptions.flow
+      - azure-maps-control.atlas.TrafficControlOptions.incidents
+      - azure-maps-control.atlas.TrafficControlOptions.isActive
+      - azure-maps-control.atlas.TrafficControlOptions.style
     langs:
       - typeScript
     type: interface
-    summary: Event object returned by the maps when a touch event occurs.
+    summary: ''
     extends:
-      name: azure-maps-control.atlas.MapMouseWheelEvent
+      name: azure-maps-control.atlas.Options
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.MapTouchEvent.layerId
-    name: layerId
-    fullName: layerId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The id of the layer the event is attached to.
-    optional: true
-    syntax:
-      content: 'layerId?: string'
-      return:
-        type:
-          - string
-        description: ''
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.MapTouchEvent.map
-    name: map
-    fullName: map
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The `Map` instance in which the event occurred on.
-    syntax:
-      content: 'map: Map'
-      return:
-        type:
-          - azure-maps-control.atlas.Map
-        description: ''
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.MapTouchEvent.originalEvent
-    name: originalEvent
-    fullName: originalEvent
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The original event that was fired.
-    optional: true
-    syntax:
-      content: 'originalEvent?: Event'
-      return:
-        type:
-          - Event
-        description: ''
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.MapTouchEvent.pixel
-    name: pixel
-    fullName: pixel
+  - uid: azure-maps-control.atlas.TrafficControlOptions.flow
+    name: flow
+    fullName: flow
     children: []
     langs:
       - typeScript
     type: property
     summary: >-
-      The pixel coordinate at the center of the all touch points on the map,
-      relative to the top left corner.
+      The type of traffic flow to display:
+
+      <p>"none" is to display no traffic flow data</p>
+
+      <p>"relative" is the speed of the road relative to free-flow</p>
+
+      <p>"absolute" is the absolute speed of the road</p>
+
+      <p>"relative-delay" displays relative speed only where they differ from
+      free-flow;
+
+      false to stop displaying the traffic flow.</p>
+
+      default `"relative"``
     optional: true
     syntax:
-      content: 'pixel?: Pixel'
+      content: 'flow?: "none" | "relative" | "absolute" | "relative-delay"'
       return:
         type:
-          - azure-maps-control.atlas.Pixel
+          - '"none" | "relative" | "absolute" | "relative-delay"'
         description: ''
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.MapTouchEvent.pixels
-    name: pixels
-    fullName: pixels
+  - uid: azure-maps-control.atlas.TrafficControlOptions.incidents
+    name: incidents
+    fullName: incidents
     children: []
     langs:
       - typeScript
     type: property
-    summary: The array of pixel coordinates of all touch points on the map.
+    summary: |-
+      Whether to display incidents on the map.
+      default `true`
     optional: true
     syntax:
-      content: 'pixels?: Pixel[]'
+      content: 'incidents?: boolean'
       return:
         type:
-          - 'azure-maps-control.atlas.Pixel[]'
+          - boolean
         description: ''
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.MapTouchEvent.position
-    name: position
-    fullName: position
+  - uid: azure-maps-control.atlas.TrafficControlOptions.isActive
+    name: isActive
+    fullName: isActive
     children: []
     langs:
       - typeScript
     type: property
-    summary: The geographic location of the center of all touch points on the map.
+    summary: |-
+      Specifies if the control is in the active state (displaying traffic).
+      Default: false
     optional: true
     syntax:
-      content: 'position?: Position'
+      content: 'isActive?: boolean'
       return:
         type:
-          - azure-maps-control.atlas.data.Position
+          - boolean
         description: ''
     package: azure-maps-control
-  - uid: azure-maps-control.atlas.MapTouchEvent.positions
-    name: positions
-    fullName: positions
+  - uid: azure-maps-control.atlas.TrafficControlOptions.style
+    name: style
+    fullName: style
     children: []
     langs:
       - typeScript
     type: property
-    summary: The geographical location of all touch points on the map.
+    summary: >-
+      The style of the control. Can be; light, dark, auto, or any CSS3 color.
+      When set to auto, the style will change based on the map style.
+
+      Default `light'.
     optional: true
     syntax:
-      content: 'positions?: Position[]'
+      content: 'style?: ControlStyle'
       return:
         type:
-          - 'azure-maps-control.atlas.data.Position[]'
-        description: ''
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.MapTouchEvent.preventDefault
-    name: preventDefault
-    fullName: preventDefault
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Prevents event propagation bubbling up the event chain.
-    syntax:
-      content: 'preventDefault: () => void'
-      return:
-        type:
-          - () => void
-        description: ''
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.MapTouchEvent.shapes
-    name: shapes
-    fullName: shapes
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The shapes of all touch points on the map.
-    optional: true
-    syntax:
-      content: 'shapes?: Shape[]'
-      return:
-        type:
-          - 'azure-maps-control.atlas.Shape[]'
-        description: ''
-    package: azure-maps-control
-  - uid: azure-maps-control.atlas.MapTouchEvent.type
-    name: type
-    fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The event type.
-    syntax:
-      content: 'type: string'
-      return:
-        type:
-          - string
+          - azure-maps-control.atlas.ControlStyle
         description: ''
     package: azure-maps-control
 references:

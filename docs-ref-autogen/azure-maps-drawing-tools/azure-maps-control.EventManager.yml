@@ -1,33 +1,28 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-maps-drawing-tools.azure-maps-control.EventManager
-    name: EventManager
-    fullName: EventManager
-    children:
-      - azure-maps-drawing-tools.azure-maps-control.EventManager.add_1
-      - azure-maps-drawing-tools.azure-maps-control.EventManager.add
-      - azure-maps-drawing-tools.azure-maps-control.EventManager.remove
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      This interface partially defines the map control's `EventManager`.
+### YamlMime:TSType
+name: EventManager
+uid: azure-maps-drawing-tools.azure-maps-control.EventManager
+package: azure-maps-drawing-tools
+summary: >-
+  This interface partially defines the map control's `EventManager`.
 
-      This definition only includes the method added by using the drawing tools.
+  This definition only includes the method added by using the drawing tools.
 
-      For the base definition see:
+  For the base definition see:
 
-      https://docs.microsoft.com/javascript/api/azure-maps-control/atlas.eventmanager?view=azure-maps-typescript-latest
-    package: azure-maps-drawing-tools
-  - uid: azure-maps-drawing-tools.azure-maps-control.EventManager.add_1
-    name: >-
+  https://docs.microsoft.com/javascript/api/azure-maps-control/atlas.eventmanager?view=azure-maps-typescript-latest
+fullName: EventManager
+isPreview: false
+isDeprecated: false
+type: interface
+methods:
+  - name: >-
       add("drawingchanged" | "drawingchanging" | "drawingcomplete" |
       "drawingstarted", DrawingManager, (e: azmaps.Shape) => void)
-    children: []
-    type: method
-    langs:
-      - typeScript
+    uid: azure-maps-drawing-tools.azure-maps-control.EventManager.add_1
+    package: azure-maps-drawing-tools
     summary: Adds an event to the `DrawingManager`
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function add(eventType: "drawingchanged" | "drawingchanging" |
@@ -35,83 +30,56 @@ items:
         (e: azmaps.Shape) => void)
       parameters:
         - id: eventType
-          type:
-            - >-
-              "drawingchanged" | "drawingchanging" | "drawingcomplete" |
-              "drawingstarted"
+          type: >-
+            "drawingchanged" | "drawingchanging" | "drawingcomplete" |
+            "drawingstarted"
           description: The event name.
         - id: target
-          type:
-            - azure-maps-drawing-tools.atlas.drawing.DrawingManager
+          type: <xref uid="azure-maps-drawing-tools.atlas.drawing.DrawingManager" />
           description: The `DrawingManager` to add the event for.
         - id: callback
-          type:
-            - '(e: azmaps.Shape) => void'
+          type: '(e: <xref uid="azmaps.Shape" />) =&gt; void'
           description: |
             The event handler callback.
+  - name: 'add("drawingmodechanged", DrawingManager, (e: DrawingMode) => void)'
+    uid: azure-maps-drawing-tools.azure-maps-control.EventManager.add
     package: azure-maps-drawing-tools
-  - uid: azure-maps-drawing-tools.azure-maps-control.EventManager.add
-    name: 'add("drawingmodechanged", DrawingManager, (e: DrawingMode) => void)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Adds an event to the `DrawingManager`
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function add(eventType: "drawingmodechanged", target: DrawingManager,
         callback: (e: DrawingMode) => void)
       parameters:
         - id: eventType
-          type:
-            - '"drawingmodechanged"'
+          type: '"drawingmodechanged"'
           description: The event name.
         - id: target
-          type:
-            - azure-maps-drawing-tools.atlas.drawing.DrawingManager
+          type: <xref uid="azure-maps-drawing-tools.atlas.drawing.DrawingManager" />
           description: The `DrawingManager` to add the event for.
         - id: callback
-          type:
-            - '(e: DrawingMode) => void'
+          type: '(e: DrawingMode) =&gt; void'
           description: |
             The event handler callback.
+  - name: 'remove(string, DrawingManager, (e?: any) => void)'
+    uid: azure-maps-drawing-tools.azure-maps-control.EventManager.remove
     package: azure-maps-drawing-tools
-  - uid: azure-maps-drawing-tools.azure-maps-control.EventManager.remove
-    name: 'remove(string, DrawingManager, (e?: any) => void)'
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Removes an event listener from the `DrawingManager`
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         function remove(eventType: string, target: DrawingManager, callback:
         (e?: any) => void)
       parameters:
         - id: eventType
-          type:
-            - string
+          type: string
           description: The event name.
         - id: target
-          type:
-            - azure-maps-drawing-tools.atlas.drawing.DrawingManager
+          type: <xref uid="azure-maps-drawing-tools.atlas.drawing.DrawingManager" />
           description: The `DrawingManager` to remove the event for.
         - id: callback
-          type:
-            - '(e?: any) => void'
+          type: '(e?: any) =&gt; void'
           description: |
             The event handler callback.
-    package: azure-maps-drawing-tools
-references:
-  - uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager
-    name: DrawingManager
-    spec.typeScript:
-      - name: DrawingManager
-        fullName: DrawingManager
-        uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager
-  - uid: azure-maps-drawing-tools.azure-maps-control.EventManager
-    name: EventManager
-    spec.typeScript:
-      - name: EventManager
-        fullName: EventManager
-        uid: azure-maps-drawing-tools.azure-maps-control.EventManager

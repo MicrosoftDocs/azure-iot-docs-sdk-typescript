@@ -1,997 +1,257 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-maps-spatial-io.atlas.SimpleStyleProperties
-    name: SimpleStyleProperties
-    fullName: SimpleStyleProperties
-    children:
-      - azure-maps-spatial-io.atlas.SimpleStyleProperties.anchor
-      - azure-maps-spatial-io.atlas.SimpleStyleProperties.base
-      - azure-maps-spatial-io.atlas.SimpleStyleProperties.color
-      - azure-maps-spatial-io.atlas.SimpleStyleProperties.description
-      - azure-maps-spatial-io.atlas.SimpleStyleProperties.fillColor
-      - azure-maps-spatial-io.atlas.SimpleStyleProperties.fillOpacity
-      - azure-maps-spatial-io.atlas.SimpleStyleProperties.height
-      - azure-maps-spatial-io.atlas.SimpleStyleProperties.image
-      - azure-maps-spatial-io.atlas.SimpleStyleProperties.imageUrl
-      - azure-maps-spatial-io.atlas.SimpleStyleProperties.offset
-      - azure-maps-spatial-io.atlas.SimpleStyleProperties.popupTemplate
-      - azure-maps-spatial-io.atlas.SimpleStyleProperties.rotation
-      - azure-maps-spatial-io.atlas.SimpleStyleProperties.size
-      - azure-maps-spatial-io.atlas.SimpleStyleProperties.strokeColor
-      - azure-maps-spatial-io.atlas.SimpleStyleProperties.strokeOpacity
-      - azure-maps-spatial-io.atlas.SimpleStyleProperties.strokeWidth
-      - azure-maps-spatial-io.atlas.SimpleStyleProperties.title
-      - azure-maps-spatial-io.atlas.SimpleStyleProperties.visible
-    langs:
-      - typeScript
-    type: interface
-    summary: >-
-      A set of common properties that may be included in feature properties
+### YamlMime:TSType
+name: SimpleStyleProperties
+uid: azure-maps-spatial-io.atlas.SimpleStyleProperties
+package: azure-maps-spatial-io
+summary: >-
+  A set of common properties that may be included in feature properties
 
-      capture style information and common content when reading or writing a
-      spatial data.
+  capture style information and common content when reading or writing a spatial
+  data.
 
-      The SimpleDataLayer uses these properties to dynamically style the data it
-      renders.
+  The SimpleDataLayer uses these properties to dynamically style the data it
+  renders.
 
-      Most of these are the property values used in the geometries respective
-      layer options.
-    extends:
-      name: Object
+  Most of these are the property values used in the geometries respective layer
+  options.
+fullName: SimpleStyleProperties
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: anchor
+    uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.anchor
     package: azure-maps-spatial-io
-  - uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.anchor
-    name: anchor
-    fullName: anchor
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: Icon anchor value.
-    optional: true
+    fullName: anchor
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: >-
         anchor?: "center" | "left" | "right" | "top" | "bottom" | "top-left" |
         "top-right" | "bottom-left" | "bottom-right"
       return:
-        type:
-          - >-
-            "center" | "left" | "right" | "top" | "bottom" | "top-left" |
-            "top-right" | "bottom-left" | "bottom-right"
+        type: >-
+          "center" | "left" | "right" | "top" | "bottom" | "top-left" |
+          "top-right" | "bottom-left" | "bottom-right"
         description: ''
+  - name: base
+    uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.base
     package: azure-maps-spatial-io
-  - uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.base
-    name: base
-    fullName: base
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       For extruded polygons, this value represents the how high the polygon is
       above the ground in meters.
-    optional: true
+    fullName: base
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'base?: number'
       return:
-        type:
-          - number
+        type: number
         description: ''
+  - name: color
+    uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.color
     package: azure-maps-spatial-io
-  - uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.color
-    name: color
-    fullName: color
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: 'For points, the color when displayed on a bubble layer.'
-    optional: true
+    fullName: color
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'color?: string'
       return:
-        type:
-          - string
+        type: string
         description: ''
+  - name: description
+    uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.description
     package: azure-maps-spatial-io
-  - uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.description
-    name: description
-    fullName: description
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       A common description field. Some XML files use 'desc' instead, this value
       will be copied to this property.
-    optional: true
+    fullName: description
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'description?: string'
       return:
-        type:
-          - string
+        type: string
         description: ''
+  - name: fillColor
+    uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.fillColor
     package: azure-maps-spatial-io
-  - uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.fillColor
-    name: fillColor
-    fullName: fillColor
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: 'For polygons, the fill color of a polygon.'
-    optional: true
+    fullName: fillColor
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'fillColor?: string'
       return:
-        type:
-          - string
+        type: string
         description: ''
+  - name: fillOpacity
+    uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.fillOpacity
     package: azure-maps-spatial-io
-  - uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.fillOpacity
-    name: fillOpacity
-    fullName: fillOpacity
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: 'For polygons, the opacity of fill color.'
-    optional: true
+    fullName: fillOpacity
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'fillOpacity?: number'
       return:
-        type:
-          - number
+        type: number
         description: ''
+  - name: height
+    uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.height
     package: azure-maps-spatial-io
-  - uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.height
-    name: height
-    fullName: height
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       For extruded polygons, this value represents the height of the polygon in
       meters.
-    optional: true
+    fullName: height
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'height?: number'
       return:
-        type:
-          - number
+        type: number
         description: ''
+  - name: image
+    uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.image
     package: azure-maps-spatial-io
-  - uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.image
-    name: image
-    fullName: image
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: 'For points, the icon image name when displayed in a Symbol layer.'
-    optional: true
+    fullName: image
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'image?: string'
       return:
-        type:
-          - string
+        type: string
         description: ''
+  - name: imageUrl
+    uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.imageUrl
     package: azure-maps-spatial-io
-  - uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.imageUrl
-    name: imageUrl
-    fullName: imageUrl
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       For points, the URL to a icon image. Can be a data URI or a URL that
       points to a CORs enabled endpoint.
-    optional: true
+    fullName: imageUrl
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'imageUrl?: string'
       return:
-        type:
-          - string
+        type: string
         description: ''
+  - name: offset
+    uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.offset
     package: azure-maps-spatial-io
-  - uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.offset
-    name: offset
-    fullName: offset
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       For points, the icon offset value to apply to icons when displayed in the
       symbol layer.
-    optional: true
+    fullName: offset
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'offset?: Object'
       return:
-        type:
-          - Object
+        type: Object
         description: ''
+  - name: popupTemplate
+    uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.popupTemplate
     package: azure-maps-spatial-io
-  - uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.popupTemplate
-    name: popupTemplate
-    fullName: popupTemplate
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: A template used to define how content is rendered inside of a popup.
-    optional: true
+    fullName: popupTemplate
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'popupTemplate?: azmaps.PopupTemplate'
       return:
-        type:
-          - azmaps.PopupTemplate
+        type: <xref uid="azmaps.PopupTemplate" />
         description: ''
+  - name: rotation
+    uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.rotation
     package: azure-maps-spatial-io
-  - uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.rotation
-    name: rotation
-    fullName: rotation
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       For points, the rotation value to apply to icons when displayed in the
       symbol layer.
-    optional: true
+    fullName: rotation
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'rotation?: number'
       return:
-        type:
-          - number
+        type: number
         description: ''
+  - name: size
+    uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.size
     package: azure-maps-spatial-io
-  - uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.size
-    name: size
-    fullName: size
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       For points, the scale value to apply to icons when displayed in the symbol
       or bubble layer.
-    optional: true
+    fullName: size
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'size?: number'
       return:
-        type:
-          - number
+        type: number
         description: ''
+  - name: strokeColor
+    uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.strokeColor
     package: azure-maps-spatial-io
-  - uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.strokeColor
-    name: strokeColor
-    fullName: strokeColor
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: 'For lines and polygons, the color of a line or our polygon outline.'
-    optional: true
+    fullName: strokeColor
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'strokeColor?: string'
       return:
-        type:
-          - string
+        type: string
         description: ''
+  - name: strokeOpacity
+    uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.strokeOpacity
     package: azure-maps-spatial-io
-  - uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.strokeOpacity
-    name: strokeOpacity
-    fullName: strokeOpacity
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: 'For lines and polygons, the opacity of a line or our polygon outline.'
-    optional: true
+    fullName: strokeOpacity
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'strokeOpacity?: number'
       return:
-        type:
-          - number
+        type: number
         description: ''
+  - name: strokeWidth
+    uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.strokeWidth
     package: azure-maps-spatial-io
-  - uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.strokeWidth
-    name: strokeWidth
-    fullName: strokeWidth
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: 'For lines and polygons, the width of a line or our polygon outline.'
-    optional: true
+    fullName: strokeWidth
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'strokeWidth?: number'
       return:
-        type:
-          - number
+        type: number
         description: ''
+  - name: title
+    uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.title
     package: azure-maps-spatial-io
-  - uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.title
-    name: title
-    fullName: title
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: >-
       A common title field. Some XML files use 'name' instead, this value will
       be copied to this property.
-    optional: true
+    fullName: title
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'title?: string'
       return:
-        type:
-          - string
+        type: string
         description: ''
+  - name: visible
+    uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.visible
     package: azure-maps-spatial-io
-  - uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.visible
-    name: visible
-    fullName: visible
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: If the feature is visible or not.
-    optional: true
+    fullName: visible
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'visible?: boolean'
       return:
-        type:
-          - boolean
+        type: boolean
         description: ''
-    package: azure-maps-spatial-io
-references:
-  - uid: azure-maps-spatial-io.atlas.io.core.CsvReader
-    name: CsvReader
-    spec.typeScript:
-      - name: CsvReader
-        fullName: CsvReader
-        uid: azure-maps-spatial-io.atlas.io.core.CsvReader
-  - uid: azure-maps-spatial-io.atlas.io.core.CsvWriter
-    name: CsvWriter
-    spec.typeScript:
-      - name: CsvWriter
-        fullName: CsvWriter
-        uid: azure-maps-spatial-io.atlas.io.core.CsvWriter
-  - uid: azure-maps-spatial-io.atlas.GmlReadOptions
-    name: GmlReadOptions
-    spec.typeScript:
-      - name: GmlReadOptions
-        fullName: GmlReadOptions
-        uid: azure-maps-spatial-io.atlas.GmlReadOptions
-  - uid: azure-maps-spatial-io.atlas.ExtendedFeatureCollection
-    name: ExtendedFeatureCollection
-    spec.typeScript:
-      - name: ExtendedFeatureCollection
-        fullName: ExtendedFeatureCollection
-        uid: azure-maps-spatial-io.atlas.ExtendedFeatureCollection
-  - uid: string | azure-maps-spatial-io.atlas.io.core.XmlNode
-    name: XmlNode
-    spec.typeScript:
-      - name: 'string | '
-        fullName: 'string | '
-      - name: XmlNode
-        fullName: XmlNode
-        uid: azure-maps-spatial-io.atlas.io.core.XmlNode
-  - uid: azure-maps-spatial-io.atlas.io.core.GmlReader
-    name: GmlReader
-    spec.typeScript:
-      - name: GmlReader
-        fullName: GmlReader
-        uid: azure-maps-spatial-io.atlas.io.core.GmlReader
-  - uid: azure-maps-spatial-io.atlas.GmlWriteOptions
-    name: GmlWriteOptions
-    spec.typeScript:
-      - name: GmlWriteOptions
-        fullName: GmlWriteOptions
-        uid: azure-maps-spatial-io.atlas.GmlWriteOptions
-  - uid: azure-maps-spatial-io.atlas.io.core.GmlWriter
-    name: GmlWriter
-    spec.typeScript:
-      - name: GmlWriter
-        fullName: GmlWriter
-        uid: azure-maps-spatial-io.atlas.io.core.GmlWriter
-  - uid: azure-maps-spatial-io.atlas.io.core.XmlDocument
-    name: XmlDocument
-    spec.typeScript:
-      - name: XmlDocument
-        fullName: XmlDocument
-        uid: azure-maps-spatial-io.atlas.io.core.XmlDocument
-  - uid: azure-maps-spatial-io.atlas.io.core.SimpleXmlReader
-    name: SimpleXmlReader
-    spec.typeScript:
-      - name: SimpleXmlReader
-        fullName: SimpleXmlReader
-        uid: azure-maps-spatial-io.atlas.io.core.SimpleXmlReader
-  - uid: azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter
-    name: SimpleXmlWriter
-    spec.typeScript:
-      - name: SimpleXmlWriter
-        fullName: SimpleXmlWriter
-        uid: azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter
-  - uid: azure-maps-spatial-io.atlas.io.core.XmlNode
-    name: XmlNode
-    spec.typeScript:
-      - name: XmlNode
-        fullName: XmlNode
-        uid: azure-maps-spatial-io.atlas.io.core.XmlNode
-  - uid: 'azure-maps-spatial-io.atlas.io.core.XmlNode[]'
-    name: 'XmlNode[]'
-    spec.typeScript:
-      - name: XmlNode
-        fullName: XmlNode
-        uid: azure-maps-spatial-io.atlas.io.core.XmlNode
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-maps-spatial-io.atlas.io.core
-    name: core
-    spec.typeScript:
-      - name: core
-        fullName: core
-        uid: azure-maps-spatial-io.atlas.io.core
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.MathOperator
-    name: MathOperator
-    spec.typeScript:
-      - name: MathOperator
-        fullName: MathOperator
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.MathOperator
-  - uid: >-
-      number | azure-maps-spatial-io.atlas.io.ogc.filter.PropertyName |
-      azure-maps-spatial-io.atlas.io.ogc.filter.Filter
-    name: Filter
-    spec.typeScript:
-      - name: 'number | '
-        fullName: 'number | '
-      - name: PropertyName
-        fullName: PropertyName
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.PropertyName
-      - name: ' | '
-        fullName: ' | '
-      - name: Filter
-        fullName: Filter
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Filter
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.Add
-    name: Add
-    spec.typeScript:
-      - name: Add
-        fullName: Add
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Add
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.LogicOperatorFilter
-    name: LogicOperatorFilter
-    spec.typeScript:
-      - name: LogicOperatorFilter
-        fullName: LogicOperatorFilter
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.LogicOperatorFilter
-  - uid: 'azure-maps-spatial-io.atlas.io.ogc.filter.Filter[]'
-    name: 'Filter[]'
-    spec.typeScript:
-      - name: Filter
-        fullName: Filter
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Filter
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.And
-    name: And
-    spec.typeScript:
-      - name: And
-        fullName: And
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.And
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.Filter
-    name: Filter
-    spec.typeScript:
-      - name: Filter
-        fullName: Filter
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Filter
-  - uid: >-
-      azure-maps-spatial-io.atlas.io.ogc.filter.PropertyName |
-      azure-maps-spatial-io.atlas.io.ogc.filter.Literal |
-      azure-maps-spatial-io.atlas.io.ogc.filter.Filter
-    name: Filter
-    spec.typeScript:
-      - name: PropertyName
-        fullName: PropertyName
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.PropertyName
-      - name: ' | '
-        fullName: ' | '
-      - name: Literal
-        fullName: Literal
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Literal
-      - name: ' | '
-        fullName: ' | '
-      - name: Filter
-        fullName: Filter
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Filter
-  - uid: >-
-      azure-maps-spatial-io.atlas.io.ogc.filter.PropertyName |
-      azure-maps-spatial-io.atlas.io.ogc.filter.Literal |
-      azure-maps-spatial-io.atlas.io.ogc.filter.Filter | azmaps.data.Geometry |
-      azmaps.data.Feature<azmaps.data.Geometry, any> | azmaps.data.BoundingBox
-    name: BoundingBox
-    spec.typeScript:
-      - name: PropertyName
-        fullName: PropertyName
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.PropertyName
-      - name: ' | '
-        fullName: ' | '
-      - name: Literal
-        fullName: Literal
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Literal
-      - name: ' | '
-        fullName: ' | '
-      - name: Filter
-        fullName: Filter
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Filter
-      - name: ' | azmaps.data.Geometry | azmaps.data.Feature<azmaps.data.Geometry, any> | azmaps.data.BoundingBox'
-        fullName: ' | azmaps.data.Geometry | azmaps.data.Feature<azmaps.data.Geometry, any> | azmaps.data.BoundingBox'
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.BinaryComparisonOpType
-    name: BinaryComparisonOpType
-    spec.typeScript:
-      - name: BinaryComparisonOpType
-        fullName: BinaryComparisonOpType
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.BinaryComparisonOpType
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.CustomFilter
-    name: CustomFilter
-    spec.typeScript:
-      - name: CustomFilter
-        fullName: CustomFilter
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.CustomFilter
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.Div
-    name: Div
-    spec.typeScript:
-      - name: Div
-        fullName: Div
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Div
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.Id
-    name: Id
-    spec.typeScript:
-      - name: Id
-        fullName: Id
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Id
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.Literal
-    name: Literal
-    spec.typeScript:
-      - name: Literal
-        fullName: Literal
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Literal
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.BinaryComparisonOptions
-    name: BinaryComparisonOptions
-    spec.typeScript:
-      - name: BinaryComparisonOptions
-        fullName: BinaryComparisonOptions
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.BinaryComparisonOptions
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsBetween
-    name: IsBetween
-    spec.typeScript:
-      - name: IsBetween
-        fullName: IsBetween
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsBetween
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsEqual
-    name: IsEqual
-    spec.typeScript:
-      - name: IsEqual
-        fullName: IsEqual
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsEqual
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsGreaterThan
-    name: IsGreaterThan
-    spec.typeScript:
-      - name: IsGreaterThan
-        fullName: IsGreaterThan
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsGreaterThan
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsGreaterThanOrEqual
-    name: IsGreaterThanOrEqual
-    spec.typeScript:
-      - name: IsGreaterThanOrEqual
-        fullName: IsGreaterThanOrEqual
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsGreaterThanOrEqual
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsLessThan
-    name: IsLessThan
-    spec.typeScript:
-      - name: IsLessThan
-        fullName: IsLessThan
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsLessThan
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsLessThanOrEqual
-    name: IsLessThanOrEqual
-    spec.typeScript:
-      - name: IsLessThanOrEqual
-        fullName: IsLessThanOrEqual
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsLessThanOrEqual
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.LikeOptions
-    name: LikeOptions
-    spec.typeScript:
-      - name: LikeOptions
-        fullName: LikeOptions
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.LikeOptions
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsLike
-    name: IsLike
-    spec.typeScript:
-      - name: IsLike
-        fullName: IsLike
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsLike
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsNilOptions
-    name: IsNilOptions
-    spec.typeScript:
-      - name: IsNilOptions
-        fullName: IsNilOptions
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsNilOptions
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsNil
-    name: IsNil
-    spec.typeScript:
-      - name: IsNil
-        fullName: IsNil
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsNil
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsNotEqual
-    name: IsNotEqual
-    spec.typeScript:
-      - name: IsNotEqual
-        fullName: IsNotEqual
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsNotEqual
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsNull
-    name: IsNull
-    spec.typeScript:
-      - name: IsNull
-        fullName: IsNull
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsNull
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.Mul
-    name: Mul
-    spec.typeScript:
-      - name: Mul
-        fullName: Mul
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Mul
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.Not
-    name: Not
-    spec.typeScript:
-      - name: Not
-        fullName: Not
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Not
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.Or
-    name: Or
-    spec.typeScript:
-      - name: Or
-        fullName: Or
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Or
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.PropertyName
-    name: PropertyName
-    spec.typeScript:
-      - name: PropertyName
-        fullName: PropertyName
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.PropertyName
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter.Sub
-    name: Sub
-    spec.typeScript:
-      - name: Sub
-        fullName: Sub
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter.Sub
-  - uid: azure-maps-spatial-io.atlas.io.ogc.filter
-    name: filter
-    spec.typeScript:
-      - name: filter
-        fullName: filter
-        uid: azure-maps-spatial-io.atlas.io.ogc.filter
-  - uid: azure-maps-spatial-io.atlas.io.ogc.WKT
-    name: WKT
-    spec.typeScript:
-      - name: WKT
-        fullName: WKT
-        uid: azure-maps-spatial-io.atlas.io.ogc.WKT
-  - uid: azure-maps-spatial-io.atlas.WfsServiceOptions
-    name: WfsServiceOptions
-    spec.typeScript:
-      - name: WfsServiceOptions
-        fullName: WfsServiceOptions
-        uid: azure-maps-spatial-io.atlas.WfsServiceOptions
-  - uid: 'Promise<azure-maps-spatial-io.atlas.WfsFeatureTypeDescription[]>'
-    name: 'WfsFeatureTypeDescription[]>'
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: WfsFeatureTypeDescription
-        fullName: WfsFeatureTypeDescription
-        uid: azure-maps-spatial-io.atlas.WfsFeatureTypeDescription
-      - name: '[]>'
-        fullName: '[]>'
-  - uid: Promise<azure-maps-spatial-io.atlas.WfsCapabilities>
-    name: WfsCapabilities>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: WfsCapabilities
-        fullName: WfsCapabilities
-        uid: azure-maps-spatial-io.atlas.WfsCapabilities
-      - name: '>'
-        fullName: '>'
-  - uid: azure-maps-spatial-io.atlas.WfsFeatureRequest
-    name: WfsFeatureRequest
-    spec.typeScript:
-      - name: WfsFeatureRequest
-        fullName: WfsFeatureRequest
-        uid: azure-maps-spatial-io.atlas.WfsFeatureRequest
-  - uid: azure-maps-spatial-io.atlas.io.ogc.WfsClient
-    name: WfsClient
-    spec.typeScript:
-      - name: WfsClient
-        fullName: WfsClient
-        uid: azure-maps-spatial-io.atlas.io.ogc.WfsClient
-  - uid: azure-maps-spatial-io.atlas.io.ogc
-    name: ogc
-    spec.typeScript:
-      - name: ogc
-        fullName: ogc
-        uid: azure-maps-spatial-io.atlas.io.ogc
-  - uid: azure-maps-spatial-io.atlas.SpatialDataReadOptions
-    name: SpatialDataReadOptions
-    spec.typeScript:
-      - name: SpatialDataReadOptions
-        fullName: SpatialDataReadOptions
-        uid: azure-maps-spatial-io.atlas.SpatialDataReadOptions
-  - uid: Promise<azure-maps-spatial-io.atlas.SpatialDataSet>
-    name: SpatialDataSet>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: SpatialDataSet
-        fullName: SpatialDataSet
-        uid: azure-maps-spatial-io.atlas.SpatialDataSet
-      - name: '>'
-        fullName: '>'
-  - uid: >-
-      azure-maps-spatial-io.atlas.SpatialXmlWriteOptions &
-      azure-maps-spatial-io.atlas.GmlWriteOptions &
-      azure-maps-spatial-io.atlas.SpatialCsvWriteOptions
-    name: SpatialCsvWriteOptions
-    spec.typeScript:
-      - name: SpatialXmlWriteOptions
-        fullName: SpatialXmlWriteOptions
-        uid: azure-maps-spatial-io.atlas.SpatialXmlWriteOptions
-      - name: ' & '
-        fullName: ' & '
-      - name: GmlWriteOptions
-        fullName: GmlWriteOptions
-        uid: azure-maps-spatial-io.atlas.GmlWriteOptions
-      - name: ' & '
-        fullName: ' & '
-      - name: SpatialCsvWriteOptions
-        fullName: SpatialCsvWriteOptions
-        uid: azure-maps-spatial-io.atlas.SpatialCsvWriteOptions
-  - uid: azure-maps-spatial-io.atlas.io
-    name: io
-    spec.typeScript:
-      - name: io
-        fullName: io
-        uid: azure-maps-spatial-io.atlas.io
-  - uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions
-    name: OgcMapLayerOptions
-    spec.typeScript:
-      - name: OgcMapLayerOptions
-        fullName: OgcMapLayerOptions
-        uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions
-  - uid: Promise<azure-maps-spatial-io.atlas.OgcMapLayerCapabilities>
-    name: OgcMapLayerCapabilities>
-    spec.typeScript:
-      - name: Promise<
-        fullName: Promise<
-      - name: OgcMapLayerCapabilities
-        fullName: OgcMapLayerCapabilities
-        uid: azure-maps-spatial-io.atlas.OgcMapLayerCapabilities
-      - name: '>'
-        fullName: '>'
-  - uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer
-    name: OgcMapLayer
-    spec.typeScript:
-      - name: OgcMapLayer
-        fullName: OgcMapLayer
-        uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer
-  - uid: azure-maps-spatial-io.atlas.SimpleDataLayerOptions
-    name: SimpleDataLayerOptions
-    spec.typeScript:
-      - name: SimpleDataLayerOptions
-        fullName: SimpleDataLayerOptions
-        uid: azure-maps-spatial-io.atlas.SimpleDataLayerOptions
-  - uid: azure-maps-spatial-io.atlas.SimpleDataLayerGroup
-    name: SimpleDataLayerGroup
-    spec.typeScript:
-      - name: SimpleDataLayerGroup
-        fullName: SimpleDataLayerGroup
-        uid: azure-maps-spatial-io.atlas.SimpleDataLayerGroup
-  - uid: azure-maps-spatial-io.atlas.layer.SimpleDataLayer
-    name: SimpleDataLayer
-    spec.typeScript:
-      - name: SimpleDataLayer
-        fullName: SimpleDataLayer
-        uid: azure-maps-spatial-io.atlas.layer.SimpleDataLayer
-  - uid: azure-maps-spatial-io.atlas.layer
-    name: layer
-    spec.typeScript:
-      - name: layer
-        fullName: layer
-        uid: azure-maps-spatial-io.atlas.layer
-  - uid: >-
-      Array<azmaps.data.Feature<azmaps.data.Geometry,
-      azure-maps-spatial-io.atlas.SimpleStyleProperties>>
-    name: SimpleStyleProperties>>
-    spec.typeScript:
-      - name: 'Array<azmaps.data.Feature<azmaps.data.Geometry, '
-        fullName: 'Array<azmaps.data.Feature<azmaps.data.Geometry, '
-      - name: SimpleStyleProperties
-        fullName: SimpleStyleProperties
-        uid: azure-maps-spatial-io.atlas.SimpleStyleProperties
-      - name: '>>'
-        fullName: '>>'
-  - uid: azure-maps-spatial-io.atlas.SpatialDataSetStats
-    name: SpatialDataSetStats
-    spec.typeScript:
-      - name: SpatialDataSetStats
-        fullName: SpatialDataSetStats
-        uid: azure-maps-spatial-io.atlas.SpatialDataSetStats
-  - uid: azure-maps-spatial-io.atlas.SpatialDataSet
-    name: SpatialDataSet
-    spec.typeScript:
-      - name: SpatialDataSet
-        fullName: SpatialDataSet
-        uid: azure-maps-spatial-io.atlas.SpatialDataSet
-  - uid: azure-maps-spatial-io.atlas.BaseSpatialDataReadOptions
-    name: BaseSpatialDataReadOptions
-    spec.typeScript:
-      - name: BaseSpatialDataReadOptions
-        fullName: BaseSpatialDataReadOptions
-        uid: azure-maps-spatial-io.atlas.BaseSpatialDataReadOptions
-  - uid: azure-maps-spatial-io.atlas.BaseSpatialXmlReadOptions
-    name: BaseSpatialXmlReadOptions
-    spec.typeScript:
-      - name: BaseSpatialXmlReadOptions
-        fullName: BaseSpatialXmlReadOptions
-        uid: azure-maps-spatial-io.atlas.BaseSpatialXmlReadOptions
-  - uid: azure-maps-spatial-io.atlas.CsvHeader
-    name: CsvHeader
-    spec.typeScript:
-      - name: CsvHeader
-        fullName: CsvHeader
-        uid: azure-maps-spatial-io.atlas.CsvHeader
-  - uid: azure-maps-spatial-io.atlas.CustomGmlNamespace
-    name: CustomGmlNamespace
-    spec.typeScript:
-      - name: CustomGmlNamespace
-        fullName: CustomGmlNamespace
-        uid: azure-maps-spatial-io.atlas.CustomGmlNamespace
-  - uid: azure-maps-spatial-io.atlas.SpatialXmlWriteOptions
-    name: SpatialXmlWriteOptions
-    spec.typeScript:
-      - name: SpatialXmlWriteOptions
-        fullName: SpatialXmlWriteOptions
-        uid: azure-maps-spatial-io.atlas.SpatialXmlWriteOptions
-  - uid: azure-maps-spatial-io.atlas.GpxReadOptions
-    name: GpxReadOptions
-    spec.typeScript:
-      - name: GpxReadOptions
-        fullName: GpxReadOptions
-        uid: azure-maps-spatial-io.atlas.GpxReadOptions
-  - uid: azure-maps-spatial-io.atlas.KmlReadOptions
-    name: KmlReadOptions
-    spec.typeScript:
-      - name: KmlReadOptions
-        fullName: KmlReadOptions
-        uid: azure-maps-spatial-io.atlas.KmlReadOptions
-  - uid: azure-maps-spatial-io.atlas.OgcDimension
-    name: OgcDimension
-    spec.typeScript:
-      - name: OgcDimension
-        fullName: OgcDimension
-        uid: azure-maps-spatial-io.atlas.OgcDimension
-  - uid: 'azure-maps-spatial-io.atlas.OgcSublayer[]'
-    name: 'OgcSublayer[]'
-    spec.typeScript:
-      - name: OgcSublayer
-        fullName: OgcSublayer
-        uid: azure-maps-spatial-io.atlas.OgcSublayer
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-maps-spatial-io.atlas.OgcMapLayerCapabilities
-    name: OgcMapLayerCapabilities
-    spec.typeScript:
-      - name: OgcMapLayerCapabilities
-        fullName: OgcMapLayerCapabilities
-        uid: azure-maps-spatial-io.atlas.OgcMapLayerCapabilities
-  - uid: Array<string | azure-maps-spatial-io.atlas.OgcSublayer>
-    name: OgcSublayer>
-    spec.typeScript:
-      - name: 'Array<string | '
-        fullName: 'Array<string | '
-      - name: OgcSublayer
-        fullName: OgcSublayer
-        uid: azure-maps-spatial-io.atlas.OgcSublayer
-      - name: '>'
-        fullName: '>'
-  - uid: Array<string | azure-maps-spatial-io.atlas.OgcStyle>
-    name: OgcStyle>
-    spec.typeScript:
-      - name: 'Array<string | '
-        fullName: 'Array<string | '
-      - name: OgcStyle
-        fullName: OgcStyle
-        uid: azure-maps-spatial-io.atlas.OgcStyle
-      - name: '>'
-        fullName: '>'
-  - uid: azure-maps-spatial-io.atlas.OgcStyle
-    name: OgcStyle
-    spec.typeScript:
-      - name: OgcStyle
-        fullName: OgcStyle
-        uid: azure-maps-spatial-io.atlas.OgcStyle
-  - uid: 'azure-maps-spatial-io.atlas.OgcDimension[]'
-    name: 'OgcDimension[]'
-    spec.typeScript:
-      - name: OgcDimension
-        fullName: OgcDimension
-        uid: azure-maps-spatial-io.atlas.OgcDimension
-      - name: '[]'
-        fullName: '[]'
-  - uid: 'azure-maps-spatial-io.atlas.OgcStyle[]'
-    name: 'OgcStyle[]'
-    spec.typeScript:
-      - name: OgcStyle
-        fullName: OgcStyle
-        uid: azure-maps-spatial-io.atlas.OgcStyle
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-maps-spatial-io.atlas.OgcSublayer
-    name: OgcSublayer
-    spec.typeScript:
-      - name: OgcSublayer
-        fullName: OgcSublayer
-        uid: azure-maps-spatial-io.atlas.OgcSublayer
-  - uid: azure-maps-spatial-io.atlas.SimpleStyleProperties
-    name: SimpleStyleProperties
-    spec.typeScript:
-      - name: SimpleStyleProperties
-        fullName: SimpleStyleProperties
-        uid: azure-maps-spatial-io.atlas.SimpleStyleProperties
-  - uid: azure-maps-spatial-io.atlas.SpatialCsvReadOptions
-    name: SpatialCsvReadOptions
-    spec.typeScript:
-      - name: SpatialCsvReadOptions
-        fullName: SpatialCsvReadOptions
-        uid: azure-maps-spatial-io.atlas.SpatialCsvReadOptions
-  - uid: azure-maps-spatial-io.atlas.SpatialDataWriteOptions
-    name: SpatialDataWriteOptions
-    spec.typeScript:
-      - name: SpatialDataWriteOptions
-        fullName: SpatialDataWriteOptions
-        uid: azure-maps-spatial-io.atlas.SpatialDataWriteOptions
-  - uid: azure-maps-spatial-io.atlas.SpatialCsvWriteOptions
-    name: SpatialCsvWriteOptions
-    spec.typeScript:
-      - name: SpatialCsvWriteOptions
-        fullName: SpatialCsvWriteOptions
-        uid: azure-maps-spatial-io.atlas.SpatialCsvWriteOptions
-  - uid: 'azure-maps-spatial-io.atlas.WfsFeatureType[]'
-    name: 'WfsFeatureType[]'
-    spec.typeScript:
-      - name: WfsFeatureType
-        fullName: WfsFeatureType
-        uid: azure-maps-spatial-io.atlas.WfsFeatureType
-      - name: '[]'
-        fullName: '[]'
-  - uid: azure-maps-spatial-io.atlas.WfsCapabilities
-    name: WfsCapabilities
-    spec.typeScript:
-      - name: WfsCapabilities
-        fullName: WfsCapabilities
-        uid: azure-maps-spatial-io.atlas.WfsCapabilities
-  - uid: azure-maps-spatial-io.atlas.WfsFeatureType
-    name: WfsFeatureType
-    spec.typeScript:
-      - name: WfsFeatureType
-        fullName: WfsFeatureType
-        uid: azure-maps-spatial-io.atlas.WfsFeatureType
-  - uid: azure-maps-spatial-io.atlas.WfsFeatureTypeDescription
-    name: WfsFeatureTypeDescription
-    spec.typeScript:
-      - name: WfsFeatureTypeDescription
-        fullName: WfsFeatureTypeDescription
-        uid: azure-maps-spatial-io.atlas.WfsFeatureTypeDescription
+extends: Object

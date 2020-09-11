@@ -30,7 +30,16 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The size of the buffer around each tile.
+
+      A buffer value of 0 will provide better performance but will be more
+      likely to generate artifacts when rendering.
+
+      Larger buffers will produce left artifacts but will result in slower
+      performance.
+
+      default `128`
     optional: true
     syntax:
       content: 'buffer?: number'

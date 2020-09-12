@@ -5,6 +5,7 @@ items:
     fullName: TrafficControl
     children:
       - azure-maps-control.atlas.control.TrafficControl.buildContainer
+      - azure-maps-control.atlas.control.TrafficControl.getOptions
       - azure-maps-control.atlas.control.TrafficControl.onAdd
       - azure-maps-control.atlas.control.TrafficControl.onRemove
       - azure-maps-control.atlas.control.TrafficControl.constructor
@@ -50,6 +51,21 @@ items:
       return:
         type:
           - 'HTMLElementTagNameMap[K]'
+        description: ''
+    package: azure-maps-control
+  - uid: azure-maps-control.atlas.control.TrafficControl.getOptions
+    name: getOptions()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Get the TrafficControlOptions
+    syntax:
+      content: function getOptions()
+      parameters: []
+      return:
+        type:
+          - azure-maps-control.atlas.TrafficControlOptions
         description: ''
     package: azure-maps-control
   - uid: azure-maps-control.atlas.control.TrafficControl.onAdd

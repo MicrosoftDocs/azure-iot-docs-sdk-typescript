@@ -140,7 +140,9 @@ methods:
       return:
         type: 'number[]'
         description: ''
-  - name: 'filter<S>((value: number, index: number, array: number[]) => boolean, any)'
+  - name: >-
+      filter<S><S>((value: number, index: number, array: number[]) => boolean,
+      any)
     uid: azure-maps-control.atlas.Pixel.filter
     package: azure-maps-control
     summary: >-
@@ -150,7 +152,7 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: number, index: number, array:
+        function filter<S><S>(callbackfn: (value: number, index: number, array:
         number[]) => boolean, thisArg?: any)
       parameters:
         - id: callbackfn
@@ -371,7 +373,7 @@ methods:
       return:
         type: number
         description: ''
-  - name: 'map<U>((value: number, index: number, array: number[]) => U, any)'
+  - name: 'map<U><U>((value: number, index: number, array: number[]) => U, any)'
     uid: azure-maps-control.atlas.Pixel.map
     package: azure-maps-control
     summary: >-
@@ -381,7 +383,7 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function map<U>(callbackfn: (value: number, index: number, array:
+        function map<U><U>(callbackfn: (value: number, index: number, array:
         number[]) => U, thisArg?: any)
       parameters:
         - id: callbackfn
@@ -478,8 +480,8 @@ methods:
         type: number
         description: ''
   - name: >-
-      reduce<U>((previousValue: U, currentValue: number, currentIndex: number,
-      array: number[]) => U, U)
+      reduce<U><U>((previousValue: U, currentValue: number, currentIndex:
+      number, array: number[]) => U, U)
     uid: azure-maps-control.atlas.Pixel.reduce_2
     package: azure-maps-control
     summary: >-
@@ -490,8 +492,8 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function reduce<U>(callbackfn: (previousValue: U, currentValue: number,
-        currentIndex: number, array: number[]) => U, initialValue: U)
+        function reduce<U><U>(callbackfn: (previousValue: U, currentValue:
+        number, currentIndex: number, array: number[]) => U, initialValue: U)
       parameters:
         - id: callbackfn
           type: >-
@@ -564,7 +566,7 @@ methods:
         type: number
         description: ''
   - name: >-
-      reduceRight<U>((previousValue: U, currentValue: number, currentIndex:
+      reduceRight<U><U>((previousValue: U, currentValue: number, currentIndex:
       number, array: number[]) => U, U)
     uid: azure-maps-control.atlas.Pixel.reduceRight_2
     package: azure-maps-control
@@ -577,7 +579,7 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function reduceRight<U>(callbackfn: (previousValue: U, currentValue:
+        function reduceRight<U><U>(callbackfn: (previousValue: U, currentValue:
         number, currentIndex: number, array: number[]) => U, initialValue: U)
       parameters:
         - id: callbackfn

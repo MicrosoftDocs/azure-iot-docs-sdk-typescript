@@ -22,7 +22,7 @@ constructors:
           description: |
             The options for the control.
 methods:
-  - name: 'buildContainer<K>(Map, ControlStyle, string, K)'
+  - name: 'buildContainer<K><K>(Map, ControlStyle, string, K)'
     uid: azure-maps-control.atlas.control.PitchControl.buildContainer
     package: azure-maps-control
     summary: >-
@@ -32,7 +32,7 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function buildContainer<K>(map: Map, style: ControlStyle, ariaLabel?:
+        function buildContainer<K><K>(map: Map, style: ControlStyle, ariaLabel?:
         string, tagName?: K)
       parameters:
         - id: map

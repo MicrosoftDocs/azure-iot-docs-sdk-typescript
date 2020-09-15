@@ -203,9 +203,7 @@ methods:
       return:
         type: 'number[]'
         description: ''
-  - name: >-
-      filter<S><S>((value: number, index: number, array: number[]) => boolean,
-      any)
+  - name: 'filter<S>((value: number, index: number, array: number[]) => boolean, any)'
     uid: azure-maps-control.atlas.data.BoundingBox.filter
     package: azure-maps-control
     summary: >-
@@ -215,7 +213,7 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S><S>(callbackfn: (value: number, index: number, array:
+        function filter<S>(callbackfn: (value: number, index: number, array:
         number[]) => boolean, thisArg?: any)
       parameters:
         - id: callbackfn
@@ -639,7 +637,7 @@ methods:
       return:
         type: number
         description: ''
-  - name: 'map<U><U>((value: number, index: number, array: number[]) => U, any)'
+  - name: 'map<U>((value: number, index: number, array: number[]) => U, any)'
     uid: azure-maps-control.atlas.data.BoundingBox.map
     package: azure-maps-control
     summary: >-
@@ -649,7 +647,7 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function map<U><U>(callbackfn: (value: number, index: number, array:
+        function map<U>(callbackfn: (value: number, index: number, array:
         number[]) => U, thisArg?: any)
       parameters:
         - id: callbackfn
@@ -764,8 +762,8 @@ methods:
         type: number
         description: ''
   - name: >-
-      reduce<U><U>((previousValue: U, currentValue: number, currentIndex:
-      number, array: number[]) => U, U)
+      reduce<U>((previousValue: U, currentValue: number, currentIndex: number,
+      array: number[]) => U, U)
     uid: azure-maps-control.atlas.data.BoundingBox.reduce_2
     package: azure-maps-control
     summary: >-
@@ -776,8 +774,8 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function reduce<U><U>(callbackfn: (previousValue: U, currentValue:
-        number, currentIndex: number, array: number[]) => U, initialValue: U)
+        function reduce<U>(callbackfn: (previousValue: U, currentValue: number,
+        currentIndex: number, array: number[]) => U, initialValue: U)
       parameters:
         - id: callbackfn
           type: >-
@@ -850,7 +848,7 @@ methods:
         type: number
         description: ''
   - name: >-
-      reduceRight<U><U>((previousValue: U, currentValue: number, currentIndex:
+      reduceRight<U>((previousValue: U, currentValue: number, currentIndex:
       number, array: number[]) => U, U)
     uid: azure-maps-control.atlas.data.BoundingBox.reduceRight_2
     package: azure-maps-control
@@ -863,7 +861,7 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function reduceRight<U><U>(callbackfn: (previousValue: U, currentValue:
+        function reduceRight<U>(callbackfn: (previousValue: U, currentValue:
         number, currentIndex: number, array: number[]) => U, initialValue: U)
       parameters:
         - id: callbackfn

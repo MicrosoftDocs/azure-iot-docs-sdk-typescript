@@ -140,7 +140,7 @@ methods:
       return:
         type: 'any[]'
         description: ''
-  - name: 'filter<S><S>((value: any, index: number, array: any[]) => boolean, any)'
+  - name: 'filter<S>((value: any, index: number, array: any[]) => boolean, any)'
     uid: azure-maps-control.atlas.AggregateExpression.filter
     package: azure-maps-control
     summary: >-
@@ -150,8 +150,8 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S><S>(callbackfn: (value: any, index: number, array:
-        any[]) => boolean, thisArg?: any)
+        function filter<S>(callbackfn: (value: any, index: number, array: any[])
+        => boolean, thisArg?: any)
       parameters:
         - id: callbackfn
           type: '(value: any, index: number, array: any[]) =&gt; boolean'
@@ -250,7 +250,7 @@ methods:
       return:
         type: number
         description: ''
-  - name: 'map<U><U>((value: any, index: number, array: any[]) => U, any)'
+  - name: 'map<U>((value: any, index: number, array: any[]) => U, any)'
     uid: azure-maps-control.atlas.AggregateExpression.map
     package: azure-maps-control
     summary: >-
@@ -260,8 +260,8 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function map<U><U>(callbackfn: (value: any, index: number, array: any[])
-        => U, thisArg?: any)
+        function map<U>(callbackfn: (value: any, index: number, array: any[]) =>
+        U, thisArg?: any)
       parameters:
         - id: callbackfn
           type: '(value: any, index: number, array: any[]) =&gt; U'
@@ -356,7 +356,7 @@ methods:
         type: any
         description: ''
   - name: >-
-      reduce<U><U>((previousValue: U, currentValue: any, currentIndex: number,
+      reduce<U>((previousValue: U, currentValue: any, currentIndex: number,
       array: any[]) => U, U)
     uid: azure-maps-control.atlas.AggregateExpression.reduce_2
     package: azure-maps-control
@@ -368,7 +368,7 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function reduce<U><U>(callbackfn: (previousValue: U, currentValue: any,
+        function reduce<U>(callbackfn: (previousValue: U, currentValue: any,
         currentIndex: number, array: any[]) => U, initialValue: U)
       parameters:
         - id: callbackfn
@@ -441,8 +441,8 @@ methods:
         type: any
         description: ''
   - name: >-
-      reduceRight<U><U>((previousValue: U, currentValue: any, currentIndex:
-      number, array: any[]) => U, U)
+      reduceRight<U>((previousValue: U, currentValue: any, currentIndex: number,
+      array: any[]) => U, U)
     uid: azure-maps-control.atlas.AggregateExpression.reduceRight_2
     package: azure-maps-control
     summary: >-
@@ -454,7 +454,7 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function reduceRight<U><U>(callbackfn: (previousValue: U, currentValue:
+        function reduceRight<U>(callbackfn: (previousValue: U, currentValue:
         any, currentIndex: number, array: any[]) => U, initialValue: U)
       parameters:
         - id: callbackfn

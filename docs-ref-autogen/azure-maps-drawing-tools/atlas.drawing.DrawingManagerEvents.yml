@@ -1,170 +1,73 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-maps-drawing-tools.atlas.drawing.DrawingManagerEvents
-    name: DrawingManagerEvents
-    fullName: DrawingManagerEvents
-    children:
-      - >-
-        azure-maps-drawing-tools.atlas.drawing.DrawingManagerEvents.drawingchanged
-      - >-
-        azure-maps-drawing-tools.atlas.drawing.DrawingManagerEvents.drawingchanging
-      - >-
-        azure-maps-drawing-tools.atlas.drawing.DrawingManagerEvents.drawingcomplete
-      - >-
-        azure-maps-drawing-tools.atlas.drawing.DrawingManagerEvents.drawingmodechanged
-      - >-
-        azure-maps-drawing-tools.atlas.drawing.DrawingManagerEvents.drawingstarted
-    langs:
-      - typeScript
-    type: interface
-    summary: The events supported by the `DrawingManager`
+### YamlMime:TSType
+name: DrawingManagerEvents
+uid: azure-maps-drawing-tools.atlas.drawing.DrawingManagerEvents
+package: azure-maps-drawing-tools
+summary: The events supported by the `DrawingManager`
+fullName: DrawingManagerEvents
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: drawingchanged
+    uid: azure-maps-drawing-tools.atlas.drawing.DrawingManagerEvents.drawingchanged
     package: azure-maps-drawing-tools
-  - uid: azure-maps-drawing-tools.atlas.drawing.DrawingManagerEvents.drawingchanged
-    name: drawingchanged
-    fullName: drawingchanged
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: drawingchanged
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'drawingchanged: azmaps.Shape'
       return:
-        type:
-          - azmaps.Shape
+        type: <xref uid="azmaps.Shape" />
         description: ''
-    package: azure-maps-drawing-tools
-  - uid: >-
+  - name: drawingchanging
+    uid: >-
       azure-maps-drawing-tools.atlas.drawing.DrawingManagerEvents.drawingchanging
-    name: drawingchanging
-    fullName: drawingchanging
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: azure-maps-drawing-tools
     summary: ''
+    fullName: drawingchanging
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'drawingchanging: azmaps.Shape'
       return:
-        type:
-          - azmaps.Shape
+        type: <xref uid="azmaps.Shape" />
         description: ''
-    package: azure-maps-drawing-tools
-  - uid: >-
+  - name: drawingcomplete
+    uid: >-
       azure-maps-drawing-tools.atlas.drawing.DrawingManagerEvents.drawingcomplete
-    name: drawingcomplete
-    fullName: drawingcomplete
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: azure-maps-drawing-tools
     summary: ''
+    fullName: drawingcomplete
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'drawingcomplete: azmaps.Shape'
       return:
-        type:
-          - azmaps.Shape
+        type: <xref uid="azmaps.Shape" />
         description: ''
-    package: azure-maps-drawing-tools
-  - uid: >-
+  - name: drawingmodechanged
+    uid: >-
       azure-maps-drawing-tools.atlas.drawing.DrawingManagerEvents.drawingmodechanged
-    name: drawingmodechanged
-    fullName: drawingmodechanged
-    children: []
-    langs:
-      - typeScript
-    type: property
+    package: azure-maps-drawing-tools
     summary: ''
+    fullName: drawingmodechanged
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'drawingmodechanged: DrawingMode'
       return:
-        type:
-          - azure-maps-drawing-tools.atlas.drawing.DrawingMode
+        type: <xref uid="azure-maps-drawing-tools.atlas.drawing.DrawingMode" />
         description: ''
+  - name: drawingstarted
+    uid: azure-maps-drawing-tools.atlas.drawing.DrawingManagerEvents.drawingstarted
     package: azure-maps-drawing-tools
-  - uid: azure-maps-drawing-tools.atlas.drawing.DrawingManagerEvents.drawingstarted
-    name: drawingstarted
-    fullName: drawingstarted
-    children: []
-    langs:
-      - typeScript
-    type: property
     summary: ''
+    fullName: drawingstarted
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'drawingstarted: azmaps.Shape'
       return:
-        type:
-          - azmaps.Shape
+        type: <xref uid="azmaps.Shape" />
         description: ''
-    package: azure-maps-drawing-tools
-references:
-  - uid: azure-maps-drawing-tools.atlas.DrawingToolbarOptions
-    name: DrawingToolbarOptions
-    spec.typeScript:
-      - name: DrawingToolbarOptions
-        fullName: DrawingToolbarOptions
-        uid: azure-maps-drawing-tools.atlas.DrawingToolbarOptions
-  - uid: azure-maps-drawing-tools.atlas.control.DrawingToolbar
-    name: DrawingToolbar
-    spec.typeScript:
-      - name: DrawingToolbar
-        fullName: DrawingToolbar
-        uid: azure-maps-drawing-tools.atlas.control.DrawingToolbar
-  - uid: azure-maps-drawing-tools.atlas.control
-    name: control
-    spec.typeScript:
-      - name: control
-        fullName: control
-        uid: azure-maps-drawing-tools.atlas.control
-  - uid: EventEmitter<azure-maps-drawing-tools.atlas.drawing.DrawingManagerEvents>
-    name: DrawingManagerEvents>
-    spec.typeScript:
-      - name: EventEmitter<
-        fullName: EventEmitter<
-      - name: DrawingManagerEvents
-        fullName: DrawingManagerEvents
-        uid: azure-maps-drawing-tools.atlas.drawing.DrawingManagerEvents
-      - name: '>'
-        fullName: '>'
-  - uid: azure-maps-drawing-tools.atlas.DrawingManagerOptions
-    name: DrawingManagerOptions
-    spec.typeScript:
-      - name: DrawingManagerOptions
-        fullName: DrawingManagerOptions
-        uid: azure-maps-drawing-tools.atlas.DrawingManagerOptions
-  - uid: azure-maps-drawing-tools.atlas.DrawingLayers
-    name: DrawingLayers
-    spec.typeScript:
-      - name: DrawingLayers
-        fullName: DrawingLayers
-        uid: azure-maps-drawing-tools.atlas.DrawingLayers
-  - uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager
-    name: DrawingManager
-    spec.typeScript:
-      - name: DrawingManager
-        fullName: DrawingManager
-        uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager
-  - uid: azure-maps-drawing-tools.atlas.drawing.DrawingMode
-    name: DrawingMode
-    spec.typeScript:
-      - name: DrawingMode
-        fullName: DrawingMode
-        uid: azure-maps-drawing-tools.atlas.drawing.DrawingMode
-  - uid: azure-maps-drawing-tools.atlas.drawing.DrawingManagerEvents
-    name: DrawingManagerEvents
-    spec.typeScript:
-      - name: DrawingManagerEvents
-        fullName: DrawingManagerEvents
-        uid: azure-maps-drawing-tools.atlas.drawing.DrawingManagerEvents
-  - uid: azure-maps-drawing-tools.atlas.drawing
-    name: drawing
-    spec.typeScript:
-      - name: drawing
-        fullName: drawing
-        uid: azure-maps-drawing-tools.atlas.drawing
-  - uid: azure-maps-drawing-tools.atlas.drawing.DrawingInteractionType
-    name: DrawingInteractionType
-    spec.typeScript:
-      - name: DrawingInteractionType
-        fullName: DrawingInteractionType
-        uid: azure-maps-drawing-tools.atlas.drawing.DrawingInteractionType

@@ -1,33 +1,15 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-maps-drawing-tools.azure-maps-control
-    name: azure-maps-control
-    langs:
-      - typeScript
-    fullName: azure-maps-control
-    children:
-      - azure-maps-drawing-tools.azure-maps-control.EventManager
-    type: module
-    summary: >-
-      This module partially defines the map control.
+### YamlMime:TSPackage
+uid: azure-maps-drawing-tools.azure-maps-control
+name: azure-maps-control
+summary: >-
+  This module partially defines the map control.
 
-      This definition only includes the features added by using the drawing
-      tools.
+  This definition only includes the features added by using the drawing tools.
 
-      For the base definition see:
+  For the base definition see:
 
-      https://docs.microsoft.com/javascript/api/azure-maps-control/?view=azure-maps-typescript-latest
-    package: azure-maps-drawing-tools
-references:
-  - uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager
-    name: DrawingManager
-    spec.typeScript:
-      - name: DrawingManager
-        fullName: DrawingManager
-        uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager
-  - uid: azure-maps-drawing-tools.azure-maps-control.EventManager
-    name: EventManager
-    spec.typeScript:
-      - name: EventManager
-        fullName: EventManager
-        uid: azure-maps-drawing-tools.azure-maps-control.EventManager
+  https://docs.microsoft.com/javascript/api/azure-maps-control/?view=azure-maps-typescript-latest
+type: module
+interfaces:
+  - azure-maps-drawing-tools.azure-maps-control.EventManager
+package: azure-maps-drawing-tools

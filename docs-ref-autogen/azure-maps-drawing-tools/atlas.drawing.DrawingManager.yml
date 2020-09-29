@@ -1,199 +1,99 @@
-### YamlMime:UniversalReference
-items:
-  - uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager
-    name: DrawingManager
-    fullName: DrawingManager
-    children:
-      - azure-maps-drawing-tools.atlas.drawing.DrawingManager.dispose
-      - azure-maps-drawing-tools.atlas.drawing.DrawingManager.constructor
-      - azure-maps-drawing-tools.atlas.drawing.DrawingManager.getLayers
-      - azure-maps-drawing-tools.atlas.drawing.DrawingManager.getOptions
-      - azure-maps-drawing-tools.atlas.drawing.DrawingManager.getSource
-      - azure-maps-drawing-tools.atlas.drawing.DrawingManager.setOptions
-    langs:
-      - typeScript
-    type: class
-    summary: >-
-      The drawing manager is the primary class that manages all the drawing
-      functionality on the map.
+### YamlMime:TSType
+name: DrawingManager
+uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager
+package: azure-maps-drawing-tools
+summary: >-
+  The drawing manager is the primary class that manages all the drawing
+  functionality on the map.
 
-      It can be used directly (programmatically or with custom toolbars)
+  It can be used directly (programmatically or with custom toolbars)
 
-      or in combination with the drawing toolbar control.
-    extends:
-      name: >-
-        EventEmitter<azure-maps-drawing-tools.atlas.drawing.DrawingManagerEvents>
+  or in combination with the drawing toolbar control.
+fullName: DrawingManager
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'DrawingManager(azmaps.Map, DrawingManagerOptions)'
+    uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager.constructor
     package: azure-maps-drawing-tools
-  - uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager.dispose
-    name: dispose()
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: |-
-      Disposes the DrawingManager.
-      When disposed, all resources used by the DrawingManager are released.
-      Any attached toolbars or dialogs will also be disposed.
-    syntax:
-      content: function dispose()
-      parameters: []
-    package: azure-maps-drawing-tools
-  - uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager.constructor
-    name: 'DrawingManager(azmaps.Map, DrawingManagerOptions)'
-    children: []
-    type: constructor
-    langs:
-      - typeScript
     summary: Constructs a DrawingManager.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'new DrawingManager(map: azmaps.Map, options?: DrawingManagerOptions)'
       parameters:
         - id: map
-          type:
-            - azmaps.Map
+          type: <xref uid="azmaps.Map" />
           description: The map to draw on.
         - id: options
-          type:
-            - azure-maps-drawing-tools.atlas.DrawingManagerOptions
+          type: <xref uid="azure-maps-drawing-tools.atlas.DrawingManagerOptions" />
           description: |
             The options for the DrawingManager.
-          optional: true
+methods:
+  - name: dispose()
+    uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager.dispose
     package: azure-maps-drawing-tools
-  - uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager.getLayers
-    name: getLayers()
-    children: []
-    type: method
-    langs:
-      - typeScript
+    summary: |-
+      Disposes the DrawingManager.
+      When disposed, all resources used by the DrawingManager are released.
+      Any attached toolbars or dialogs will also be disposed.
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function dispose()
+  - name: getLayers()
+    uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager.getLayers
+    package: azure-maps-drawing-tools
     summary: >-
       Gets the collection of layers used for rendering the shapes draw on the
       map.
 
       Edit these layers' options to customize the rendering.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: function getLayers()
-      parameters: []
       return:
-        type:
-          - azure-maps-drawing-tools.atlas.DrawingLayers
+        type: <xref uid="azure-maps-drawing-tools.atlas.DrawingLayers" />
         description: ''
+  - name: getOptions()
+    uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager.getOptions
     package: azure-maps-drawing-tools
-  - uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager.getOptions
-    name: getOptions()
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Gets the options used by the DrawingManager.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: function getOptions()
-      parameters: []
       return:
-        type:
-          - azure-maps-drawing-tools.atlas.DrawingManagerOptions
+        type: <xref uid="azure-maps-drawing-tools.atlas.DrawingManagerOptions" />
         description: ''
+  - name: getSource()
+    uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager.getSource
     package: azure-maps-drawing-tools
-  - uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager.getSource
-    name: getSource()
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: >-
       Gets the data source used by the DrawingManager to store the completed
       shapes.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: function getSource()
-      parameters: []
       return:
-        type:
-          - azmaps.source.DataSource
+        type: <xref uid="azmaps.source.DataSource" />
         description: ''
+  - name: setOptions(DrawingManagerOptions)
+    uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager.setOptions
     package: azure-maps-drawing-tools
-  - uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager.setOptions
-    name: setOptions(DrawingManagerOptions)
-    children: []
-    type: method
-    langs:
-      - typeScript
     summary: Sets the options for the DrawingManager.
+    isPreview: false
+    isDeprecated: false
     syntax:
       content: 'function setOptions(options: DrawingManagerOptions)'
       parameters:
         - id: options
-          type:
-            - azure-maps-drawing-tools.atlas.DrawingManagerOptions
+          type: <xref uid="azure-maps-drawing-tools.atlas.DrawingManagerOptions" />
           description: |
             The new options for the DrawingManager.
-    package: azure-maps-drawing-tools
-references:
-  - uid: azure-maps-drawing-tools.atlas.DrawingToolbarOptions
-    name: DrawingToolbarOptions
-    spec.typeScript:
-      - name: DrawingToolbarOptions
-        fullName: DrawingToolbarOptions
-        uid: azure-maps-drawing-tools.atlas.DrawingToolbarOptions
-  - uid: azure-maps-drawing-tools.atlas.control.DrawingToolbar
-    name: DrawingToolbar
-    spec.typeScript:
-      - name: DrawingToolbar
-        fullName: DrawingToolbar
-        uid: azure-maps-drawing-tools.atlas.control.DrawingToolbar
-  - uid: azure-maps-drawing-tools.atlas.control
-    name: control
-    spec.typeScript:
-      - name: control
-        fullName: control
-        uid: azure-maps-drawing-tools.atlas.control
-  - uid: EventEmitter<azure-maps-drawing-tools.atlas.drawing.DrawingManagerEvents>
-    name: DrawingManagerEvents>
-    spec.typeScript:
-      - name: EventEmitter<
-        fullName: EventEmitter<
-      - name: DrawingManagerEvents
-        fullName: DrawingManagerEvents
-        uid: azure-maps-drawing-tools.atlas.drawing.DrawingManagerEvents
-      - name: '>'
-        fullName: '>'
-  - uid: azure-maps-drawing-tools.atlas.DrawingManagerOptions
-    name: DrawingManagerOptions
-    spec.typeScript:
-      - name: DrawingManagerOptions
-        fullName: DrawingManagerOptions
-        uid: azure-maps-drawing-tools.atlas.DrawingManagerOptions
-  - uid: azure-maps-drawing-tools.atlas.DrawingLayers
-    name: DrawingLayers
-    spec.typeScript:
-      - name: DrawingLayers
-        fullName: DrawingLayers
-        uid: azure-maps-drawing-tools.atlas.DrawingLayers
-  - uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager
-    name: DrawingManager
-    spec.typeScript:
-      - name: DrawingManager
-        fullName: DrawingManager
-        uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager
-  - uid: azure-maps-drawing-tools.atlas.drawing.DrawingMode
-    name: DrawingMode
-    spec.typeScript:
-      - name: DrawingMode
-        fullName: DrawingMode
-        uid: azure-maps-drawing-tools.atlas.drawing.DrawingMode
-  - uid: azure-maps-drawing-tools.atlas.drawing.DrawingManagerEvents
-    name: DrawingManagerEvents
-    spec.typeScript:
-      - name: DrawingManagerEvents
-        fullName: DrawingManagerEvents
-        uid: azure-maps-drawing-tools.atlas.drawing.DrawingManagerEvents
-  - uid: azure-maps-drawing-tools.atlas.drawing
-    name: drawing
-    spec.typeScript:
-      - name: drawing
-        fullName: drawing
-        uid: azure-maps-drawing-tools.atlas.drawing
-  - uid: azure-maps-drawing-tools.atlas.drawing.DrawingInteractionType
-    name: DrawingInteractionType
-    spec.typeScript:
-      - name: DrawingInteractionType
-        fullName: DrawingInteractionType
-        uid: azure-maps-drawing-tools.atlas.drawing.DrawingInteractionType
+extends: >-
+  EventEmitter&lt;<xref
+  uid="azure-maps-drawing-tools.atlas.drawing.DrawingManagerEvents" />&gt;

@@ -17,6 +17,7 @@ functions:
     uid: azure-maps-control.atlas.math.boundingBoxToPolygon
     package: azure-maps-control
     summary: Takes a BoundingBox and converts it to a polygon.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -38,6 +39,7 @@ functions:
       Supported units:
          milesPerSecondSquared, kilometersPerSecondSquared, metersPerSecondSquared, feetPerSecondSquared
          yardsPerSecondSquared, kilometersPerHoursSecond, milesPerHourSecond, knotsPerSecond, standardGravity
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -73,6 +75,7 @@ functions:
 
       Supported units: squareMeters, acres, hectares, squareFeet, squareYards,
       squareMiles, squareKilometers
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -103,6 +106,7 @@ functions:
     summary: >-
       Converts a distance from one distance units to another. Supported units:
       miles, nauticalMiles, yards, meters, kilometers, feet
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -134,6 +138,7 @@ functions:
       Converts a speed value from one unit to another.
       Supported units:
          kilometersPerHour, milesPerHour, metersPerSecond, feetPerSecond, knots, mach
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -163,6 +168,7 @@ functions:
       Converts a timespan value from one unit to another.
       Supported units:
          ms (milliseconds), hours, minutes, seconds
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -193,6 +199,7 @@ functions:
     summary: >-
       Calculates an acceleration based on an initial speed, travel distance and
       timespan. Formula: a = 2*(d - v*t)/t^2
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -253,6 +260,7 @@ functions:
 
       if speeds not provided or only provided on first point, calculate straight
       line distance between points and calculate: a = 2*(d - v*t)/t^2
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -309,6 +317,7 @@ functions:
     summary: >-
       Calculates an acceleration based on an initial speed, final speed and
       timespan. Formula: a = 2* (v2 - v1)/t
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -354,6 +363,7 @@ functions:
     uid: azure-maps-control.atlas.math.getArea
     package: azure-maps-control
     summary: Calculates the approximate area of a geometry in the specified units
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -377,6 +387,7 @@ functions:
     summary: >-
       Calculates an array of positions that form a cardinal spline between the
       specified array of positions.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -427,6 +438,7 @@ functions:
       If the geometry is a Polygon or MultiPolygon, the point closest to any
       edge will be returned regardless of if the point intersects the geometry
       or not.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -469,6 +481,7 @@ functions:
     summary: >-
       Calculates a Convex Hull from an array of positions, geometries or
       features.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -503,6 +516,7 @@ functions:
     summary: >-
       Calculates a destination position based on a starting position, a heading,
       a distance, and a distance unit type.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -535,6 +549,7 @@ functions:
     summary: >-
       Calculate the distance between two position objects on the surface of the
       earth using the Haversine formula.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -562,6 +577,7 @@ functions:
     uid: azure-maps-control.atlas.math.getEarthRadius
     package: azure-maps-control
     summary: Retrieves the radius of the earth in a specific distance unit for WGS84.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -582,6 +598,7 @@ functions:
       Takes an array of positions objects and fills in the space between them
       with accurately positioned positions to form an approximated Geodesic
       path.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -604,6 +621,7 @@ functions:
     uid: azure-maps-control.atlas.math.getHeading
     package: azure-maps-control
     summary: Calculates the heading from one position object to another.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -628,6 +646,7 @@ functions:
     uid: azure-maps-control.atlas.math.getLengthOfPath
     package: azure-maps-control
     summary: Calculates the distance between all position objects in an array.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -656,6 +675,7 @@ functions:
     summary: >-
       Calculates the pixel accurate heading from one position to another based
       on the Mercator map projection. This heading is visually accurate.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -681,6 +701,7 @@ functions:
     uid: azure-maps-control.atlas.math.getPointsWithHeadingsAlongPath
     package: azure-maps-control
     summary: Gets an array of evenly spaced points with headings along a path.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -707,6 +728,7 @@ functions:
     uid: azure-maps-control.atlas.math.getPointWithHeadingAlongPath
     package: azure-maps-control
     summary: Gets a point with heading a specified distance along a path.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -736,6 +758,7 @@ functions:
     summary: >-
       Gets the position of an object that is a position, point, point feature,
       or circle. If it is a circle, its center coordinate will be returned.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -767,6 +790,7 @@ functions:
 
       than the length of the path, the last position of the path will be
       returned.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -802,6 +826,7 @@ functions:
     summary: >-
       Retrieves an array of all positions in the provided geometry, feature or
       array of geometries/features.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -834,6 +859,7 @@ functions:
     uid: azure-maps-control.atlas.math.getPositionsAlongPath
     package: azure-maps-control
     summary: Gets an array of evenly spaced positions along a path.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -860,6 +886,7 @@ functions:
     summary: >-
       Calculates an array of position objects that are an equal distance away
       from a central point to create a regular polygon.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -899,6 +926,7 @@ functions:
     summary: >-
       Calculates the average speed of travel between two points based on the
       provided amount of time.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -957,6 +985,7 @@ functions:
            - ISO8601 date format (i.e. 2012-04-23T18:25:43.511Z)
            - RFC282 / IETF date syntax (section 3.3)
            - OData Date string (i.e. "/Date(1235764800000)/")
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1007,6 +1036,7 @@ functions:
            - ISO8601 date format (i.e. 2012-04-23T18:25:43.511Z)
            - RFC282 / IETF date syntax (section 3.3)
            - OData Date string (i.e. "/Date(1235764800000)/")
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1043,6 +1073,7 @@ functions:
       optionally an acceleration.
 
       Formula: d = v*t + 0.5*a*t^2
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1089,6 +1120,7 @@ functions:
     summary: >-
       Calculates a position object that is a fractional distance between two
       position objects.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1123,6 +1155,7 @@ functions:
 
       Global pixel coordinates are relative to the top left corner of the map
       [-180, 90].
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1143,6 +1176,7 @@ functions:
     summary: >-
       Converts an array of positions into an array of global Mercator pixel
       coordinates at a specified zoom level.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1161,6 +1195,7 @@ functions:
     uid: azure-maps-control.atlas.math.normalizeLatitude
     package: azure-maps-control
     summary: Normalizes a latitude value between -90 and 90 degrees.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1177,6 +1212,7 @@ functions:
     uid: azure-maps-control.atlas.math.normalizeLongitude
     package: azure-maps-control
     summary: Normalizes a longitude value between -180 and 180 degrees.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1201,6 +1237,7 @@ functions:
            - ISO8601 date format (i.e. 2012-04-23T18:25:43.511Z)
            - RFC282 / IETF date syntax (section 3.3)
            - OData Date string (i.e. "/Date(1235764800000)/")
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1220,6 +1257,7 @@ functions:
     summary: >-
       Takes an array of positions and rotates them around a given position for
       the specified angle of rotation.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:

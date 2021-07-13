@@ -76,6 +76,23 @@ properties:
       return:
         type: boolean
         description: ''
+  - name: maxParallelImageRequests
+    uid: azure-maps-control.atlas.ServiceOptions.maxParallelImageRequests
+    package: azure-maps-control
+    summary: >-
+      Maximum number of images (raster tiles, sprites, icons) to load in
+      parallel,
+
+      which affects performance in raster-heavy maps. 16 by default.
+    fullName: maxParallelImageRequests
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxParallelImageRequests?: number'
+      return:
+        type: number
+        description: ''
   - name: refreshExpiredTiles
     uid: azure-maps-control.atlas.ServiceOptions.refreshExpiredTiles
     package: azure-maps-control
@@ -140,9 +157,24 @@ properties:
     isDeprecated: false
     syntax:
       content: >-
-        transformRequest?: (url: string, resourceType: string) =>
+        transformRequest?: (url: string, resourceType: ResourceType) =>
         RequestParameters
       return:
-        type: '(url: string, resourceType: string) =&gt; RequestParameters'
+        type: '(url: string, resourceType: ResourceType) =&gt; RequestParameters'
+        description: ''
+  - name: workerCount
+    uid: azure-maps-control.atlas.ServiceOptions.workerCount
+    package: azure-maps-control
+    summary: |-
+      Number of web workers instantiated on a page.
+      By default, it is set to half the number of CPU cores (capped at 6).
+    fullName: workerCount
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'workerCount?: number'
+      return:
+        type: number
         description: ''
 extends: <xref uid="azure-maps-control.atlas.Options" />

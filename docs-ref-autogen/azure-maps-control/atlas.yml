@@ -50,6 +50,7 @@ interfaces:
   - azure-maps-control.atlas.ServiceOptions
   - azure-maps-control.atlas.ShapeEvents
   - azure-maps-control.atlas.SourceManager
+  - azure-maps-control.atlas.StyleChangedEvent
   - azure-maps-control.atlas.StyleControlOptions
   - azure-maps-control.atlas.StyleOptions
   - azure-maps-control.atlas.SymbolLayerOptions
@@ -68,7 +69,6 @@ enums:
   - azure-maps-control.atlas.ControlPosition
   - azure-maps-control.atlas.ControlStyle
 classes:
-  - azure-maps-control.atlas.ControlBase
   - azure-maps-control.atlas.EventManager
   - azure-maps-control.atlas.HtmlMarker
   - azure-maps-control.atlas.Map
@@ -80,6 +80,7 @@ typeAliases:
   - azure-maps-control.atlas.Expression
   - azure-maps-control.atlas.ExpressionName
   - azure-maps-control.atlas.getAuthTokenCallback
+  - azure-maps-control.atlas.ResourceType
 package: azure-maps-control
 functions:
   - name: 'addImageTemplate(string, string, boolean)'
@@ -107,6 +108,25 @@ functions:
           description: >
             Specifies if it should override existing templates if one with the
             same name already exists.
+  - name: clearPrewarmedResources()
+    uid: azure-maps-control.atlas.clearPrewarmedResources
+    package: azure-maps-control
+    summary: >-
+      Clears up resources that have previously been created by
+      `atlas.prewarm()`.
+
+      Note that this is typically not necessary. You should only call this
+      function
+
+      if you expect the user of your app to not return to a Map view at any
+      point
+
+      in your application.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function clearPrewarmedResources()
   - name: getAllImageTemplateNames()
     uid: azure-maps-control.atlas.getAllImageTemplateNames
     package: azure-maps-control
@@ -186,6 +206,20 @@ functions:
       return:
         type: string
         description: ''
+  - name: getMaxParallelImageRequests()
+    uid: azure-maps-control.atlas.getMaxParallelImageRequests
+    package: azure-maps-control
+    summary: >-
+      Gets the Maximum number of images (raster tiles, sprites, icons) to load
+      in parallel
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getMaxParallelImageRequests()
+      return:
+        type: number
+        description: ''
   - name: getSessionId()
     uid: azure-maps-control.atlas.getSessionId
     package: azure-maps-control
@@ -251,6 +285,18 @@ functions:
       return:
         type: string
         description: ''
+  - name: getWorkerCount()
+    uid: azure-maps-control.atlas.getWorkerCount
+    package: azure-maps-control
+    summary: Gets the worker count that will get created.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getWorkerCount()
+      return:
+        type: number
+        description: ''
   - name: isSupported(boolean)
     uid: azure-maps-control.atlas.isSupported
     package: azure-maps-control
@@ -273,6 +319,49 @@ functions:
       return:
         type: boolean
         description: ''
+  - name: prewarm()
+    uid: azure-maps-control.atlas.prewarm
+    package: azure-maps-control
+    summary: >
+      Initializes resources like WebWorkers that can be shared across maps to
+      lower load
+
+      times in some situations. `atlas.setWorkerCount`, if being
+
+      used, must be set before `prewarm()` is called to have an effect.
+
+      By default, the lifecycle of these resources is managed automatically, and
+      they are
+
+      lazily initialized when a Map is first created. By invoking `prewarm()`,
+      these
+
+      resources will be created ahead of time, and will not be cleared when the
+      last Map
+
+      is removed from the page. This allows them to be re-used by new Map
+      instances that
+
+      are created later. They can be manually cleared by calling
+
+      `atlas.clearPrewarmedResources()`. This is only necessary if your web page
+      remains
+
+      active but stops using maps altogether.
+
+
+      This is primarily useful when using GL-JS maps in a single page app,
+      wherein a user
+
+      would navigate between various views that can cause Map instances to
+      constantly be
+
+      created and destroyed.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function prewarm()
   - name: setAuthenticationOptions(AuthenticationOptions)
     uid: azure-maps-control.atlas.setAuthenticationOptions
     package: azure-maps-control
@@ -344,6 +433,24 @@ functions:
           type: string
           description: |
             The new default language.
+  - name: setMaxParallelImageRequests(number)
+    uid: azure-maps-control.atlas.setMaxParallelImageRequests
+    package: azure-maps-control
+    summary: >-
+      Sets Maximum number of images (raster tiles, sprites, icons) to load in
+      parallel,
+
+      which affects performance in raster-heavy maps. 16 by default.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function setMaxParallelImageRequests(maxParallelImageRequests: number)'
+      parameters:
+        - id: maxParallelImageRequests
+          type: number
+          description: |
+            Maximum number of images to load in parallel.
   - name: setSessionId(string)
     uid: azure-maps-control.atlas.setSessionId
     package: azure-maps-control
@@ -433,3 +540,19 @@ functions:
           type: string
           description: |
             The new default view
+  - name: setWorkerCount(number)
+    uid: azure-maps-control.atlas.setWorkerCount
+    package: azure-maps-control
+    summary: |-
+      Sets number of web workers instantiated on a page.
+      By default, it is set to half the number of CPU cores (capped at 6).
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function setWorkerCount(workerCount: number)'
+      parameters:
+        - id: workerCount
+          type: number
+          description: |
+            worker count.

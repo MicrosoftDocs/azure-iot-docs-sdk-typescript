@@ -1280,3 +1280,28 @@ functions:
       return:
         type: '<xref uid="azure-maps-control.atlas.data.Position" />[]'
         description: ''
+  - name: 'simplify(Position | Pixel[], number)'
+    uid: azure-maps-control.atlas.math.simplify
+    package: azure-maps-control
+    summary: >-
+      Perform a Douglas-Peucker simplification on an array of positions or
+      pixels.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function simplify(points: Position | Pixel[], tolerance: number)'
+      parameters:
+        - id: points
+          type: >-
+            <xref uid="azure-maps-control.atlas.data.Position" /> | <xref
+            uid="azure-maps-control.atlas.Pixel" />[]
+          description: The position or pixel points to simplify.
+        - id: tolerance
+          type: number
+          description: A tolerance to use in the simplification.
+      return:
+        type: >-
+          <xref uid="azure-maps-control.atlas.data.Position" /> | <xref
+          uid="azure-maps-control.atlas.Pixel" />[]
+        description: A new array of the simplified set of points.

@@ -9,6 +9,26 @@ isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: autoSelectionMode
+    uid: azure-maps-control.atlas.StyleControlOptions.autoSelectionMode
+    package: azure-maps-control
+    summary: >-
+      Whether to let style control automatically set the style, once user select
+      a map style.
+
+      If set to `false`, then clicking on style will not set the set the style
+      automatically.
+
+      Default `true`
+    fullName: autoSelectionMode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'autoSelectionMode?: boolean'
+      return:
+        type: boolean
+        description: ''
   - name: layout
     uid: azure-maps-control.atlas.StyleControlOptions.layout
     package: azure-maps-control

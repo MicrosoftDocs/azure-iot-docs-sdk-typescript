@@ -53,6 +53,40 @@ methods:
       return:
         type: 'HTMLElementTagNameMap[K]'
         description: ''
+  - name: disableStyle(string)
+    uid: azure-maps-control.atlas.control.StyleControl.disableStyle
+    package: azure-maps-control
+    summary: Set style in a disabled state
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function disableStyle(styleName: string)'
+      parameters:
+        - id: styleName
+          type: string
+          description: |
+            Style to be disabled
+      return:
+        type: any
+        description: ''
+  - name: enableStyle(string)
+    uid: azure-maps-control.atlas.control.StyleControl.enableStyle
+    package: azure-maps-control
+    summary: Enabled style that was previously disabled
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function enableStyle(styleName: string)'
+      parameters:
+        - id: styleName
+          type: string
+          description: |
+            Style to be disabled
+      return:
+        type: any
+        description: ''
   - name: 'onAdd(Map, ControlOptions)'
     uid: azure-maps-control.atlas.control.StyleControl.onAdd
     package: azure-maps-control
@@ -87,4 +121,24 @@ methods:
     isDeprecated: false
     syntax:
       content: function onRemove()
-extends: <xref uid="azure-maps-control.atlas.ControlBase" />
+  - name: setSelectedStyle(string)
+    uid: azure-maps-control.atlas.control.StyleControl.setSelectedStyle
+    package: azure-maps-control
+    summary: >-
+      Set the style that need to be displayed as currently selected.
+
+      Style will automatically get selected if
+      `StyleControlOptions.autoSelectionMode` is `true`
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function setSelectedStyle(styleName: string)'
+      parameters:
+        - id: styleName
+          type: string
+          description: |
+            Style name that need to be disabled as currently selected
+extends: >-
+  <xref uid="azure-maps-control.atlas.control.ControlBase" />&lt;<xref
+  uid="azure-maps-control.atlas.control.StyleControlEvents" />&gt;

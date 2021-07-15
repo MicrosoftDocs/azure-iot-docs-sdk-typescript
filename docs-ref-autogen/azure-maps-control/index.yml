@@ -13,6 +13,7 @@ interfaces:
   - azure-maps-control.atlas.CameraOptions
   - azure-maps-control.atlas.ClusteredProperties
   - azure-maps-control.atlas.CompassControlOptions
+  - azure-maps-control.atlas.control.StyleControlEvents
   - azure-maps-control.atlas.Control
   - azure-maps-control.atlas.ControlManager
   - azure-maps-control.atlas.ControlOptions
@@ -54,6 +55,7 @@ interfaces:
   - azure-maps-control.atlas.source.DataSourceEvents
   - azure-maps-control.atlas.source.SourceEvents
   - azure-maps-control.atlas.SourceManager
+  - azure-maps-control.atlas.StyleChangedEvent
   - azure-maps-control.atlas.StyleControlOptions
   - azure-maps-control.atlas.StyleOptions
   - azure-maps-control.atlas.SymbolLayerOptions
@@ -78,12 +80,12 @@ enums:
   - azure-maps-control.atlas.math.TimeUnits
 classes:
   - azure-maps-control.atlas.control.CompassControl
+  - azure-maps-control.atlas.control.ControlBase
   - azure-maps-control.atlas.control.PitchControl
   - azure-maps-control.atlas.control.StyleControl
   - azure-maps-control.atlas.control.TrafficControl
   - azure-maps-control.atlas.control.TrafficLegendControl
   - azure-maps-control.atlas.control.ZoomControl
-  - azure-maps-control.atlas.ControlBase
   - azure-maps-control.atlas.data.BoundingBox
   - azure-maps-control.atlas.data.Feature
   - azure-maps-control.atlas.data.FeatureCollection
@@ -121,4 +123,5 @@ typeAliases:
   - azure-maps-control.atlas.Expression
   - azure-maps-control.atlas.ExpressionName
   - azure-maps-control.atlas.getAuthTokenCallback
+  - azure-maps-control.atlas.ResourceType
   - azure-maps-control.Position

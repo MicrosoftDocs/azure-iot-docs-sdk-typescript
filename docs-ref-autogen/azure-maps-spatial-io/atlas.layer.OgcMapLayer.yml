@@ -6,6 +6,7 @@ summary: >-
   Renders raster tiled images on top of the map tiles from an OGC Web Mapping
   Service (WMS or WMTS).
 fullName: OgcMapLayer<T>
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
@@ -16,6 +17,7 @@ constructors:
     summary: >-
       Renders raster images on top of the map tiles from an OGC Web Mapping
       Service (WMS or WMTS).
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -31,6 +33,7 @@ properties:
     package: azure-maps-spatial-io
     summary: A property for associating custom data with the layer.
     fullName: metadata
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -43,6 +46,7 @@ properties:
     package: azure-maps-spatial-io
     summary: ''
     fullName: onActiveLayersChanged
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -55,6 +59,7 @@ methods:
     uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.getCapabilities
     package: azure-maps-spatial-io
     summary: Gets the capabilities of the underlying WMTS service.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -72,6 +77,7 @@ methods:
 
       If the service does not return a geometry, a Point feature for the
       specified position will be returned.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -95,6 +101,7 @@ methods:
       null if no feature is found.
 
       Requires the service to support 'text/html' format.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -111,6 +118,7 @@ methods:
     uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.getId
     package: azure-maps-spatial-io
     summary: Gets the id of the layer
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -122,6 +130,7 @@ methods:
     uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.getMap
     package: azure-maps-spatial-io
     summary: 'Gets the map that the layer is currently added to, or null.'
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -133,6 +142,7 @@ methods:
     uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.getOptions
     package: azure-maps-spatial-io
     summary: Gets the options of the WMS layer.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -144,6 +154,7 @@ methods:
     uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.onAdd
     package: azure-maps-spatial-io
     summary: Initialization method for the layer which is called when added to the map.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -159,6 +170,7 @@ methods:
     summary: |-
       Method that is called when the layer is removed from the map.
       Should perform any necessary cleanup for the layer.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -167,6 +179,7 @@ methods:
     uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.setOptions
     package: azure-maps-spatial-io
     summary: Sets the options of the WMS layer.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:

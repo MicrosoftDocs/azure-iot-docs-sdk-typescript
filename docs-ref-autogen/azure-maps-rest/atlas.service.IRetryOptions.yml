@@ -4,6 +4,7 @@ uid: azure-maps-rest.atlas.service.IRetryOptions
 package: azure-maps-rest
 summary: Retry options interface.
 fullName: IRetryOptions
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
@@ -17,6 +18,7 @@ properties:
 
       If you specify 0, then you must also specify 0 for retryDelayInMs.
     fullName: maxRetryDelayInMs
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -32,6 +34,7 @@ properties:
       A value of 1 means 1 try and no retries.
       A value smaller than 1 means default retry number of attempts.
     fullName: maxTries
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -52,6 +55,7 @@ properties:
       maxRetryDelayInMs. If you specify 0, then you must also specify 0 for
       maxRetryDelayInMs.
     fullName: retryDelayInMs
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -64,6 +68,7 @@ properties:
     package: azure-maps-rest
     summary: 'Optional. RetryPolicyType, default is exponential retry policy.'
     fullName: retryPolicyType
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:

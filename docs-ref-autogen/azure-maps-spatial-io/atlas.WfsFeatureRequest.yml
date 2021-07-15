@@ -4,6 +4,7 @@ uid: azure-maps-spatial-io.atlas.WfsFeatureRequest
 package: azure-maps-spatial-io
 summary: Options for requesting features from a WFS service.
 fullName: WfsFeatureRequest
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
@@ -13,6 +14,7 @@ properties:
     package: azure-maps-spatial-io
     summary: Bounding Box limit. Must not be used with Filter.
     fullName: bbox
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -25,6 +27,7 @@ properties:
     package: azure-maps-spatial-io
     summary: Number of features to retrieve when paging.
     fullName: count
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -37,6 +40,7 @@ properties:
     package: azure-maps-spatial-io
     summary: A custom CQL filter to append to the request.
     fullName: cql_filter
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -49,6 +53,7 @@ properties:
     package: azure-maps-spatial-io
     summary: A key-value object containing additional parameters to append the request.
     fullName: customDimensions
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -66,6 +71,7 @@ properties:
        If set to null, and not supported SRS found in capabilities, an error will be thrown.
        Default: 'urn:ogc:def:crs:EPSG::4326'
     fullName: fallbackSrs
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -78,6 +84,7 @@ properties:
     package: azure-maps-spatial-io
     summary: The id of a feature to retrieve.
     fullName: featureId
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -90,6 +97,7 @@ properties:
     package: azure-maps-spatial-io
     summary: Filter condition. Must not be used with BBOX option.
     fullName: filter
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -102,6 +110,7 @@ properties:
     package: azure-maps-spatial-io
     summary: A comma delimited list of property names to return.
     fullName: propertyNames
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -114,6 +123,7 @@ properties:
     package: azure-maps-spatial-io
     summary: Method describing how results should be sorted.
     fullName: sortBy
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -126,6 +136,7 @@ properties:
     package: azure-maps-spatial-io
     summary: Start index to use for WFS paging.
     fullName: startIndex
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -138,6 +149,7 @@ properties:
     package: azure-maps-spatial-io
     summary: The feature type names.
     fullName: typeNames
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:

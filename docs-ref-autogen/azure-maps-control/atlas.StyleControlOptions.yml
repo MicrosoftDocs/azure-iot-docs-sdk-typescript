@@ -4,10 +4,31 @@ uid: azure-maps-control.atlas.StyleControlOptions
 package: azure-maps-control
 summary: The options for a StyleControl object.
 fullName: StyleControlOptions
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: autoSelectionMode
+    uid: azure-maps-control.atlas.StyleControlOptions.autoSelectionMode
+    package: azure-maps-control
+    summary: >-
+      Whether to let style control automatically set the style, once user select
+      a map style.
+
+      If set to `false`, then clicking on style will not set the set the style
+      automatically.
+
+      Default `true`
+    fullName: autoSelectionMode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'autoSelectionMode?: boolean'
+      return:
+        type: boolean
+        description: ''
   - name: layout
     uid: azure-maps-control.atlas.StyleControlOptions.layout
     package: azure-maps-control
@@ -21,6 +42,7 @@ properties:
 
       Default `"icons"`
     fullName: layout
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -49,6 +71,7 @@ properties:
       Default `["road", "grayscale_light", "grayscale_dark", "night",
       "road_shaded_relief"]`
     fullName: mapStyles
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -63,6 +86,7 @@ properties:
       The style of the control.
       Default `ControlStyle.light`.
     fullName: style
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:

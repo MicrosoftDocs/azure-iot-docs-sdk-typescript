@@ -4,8 +4,9 @@ uid: azure-maps-rest.atlas.service.Models.RenderGetMapImageResponse
 package: azure-maps-rest
 summary: Contains response data for the getMapImage operation.
 fullName: RenderGetMapImageResponse
+remarks: ''
 isPreview: false
 isDeprecated: false
 syntax: >-
   type RenderGetMapImageResponse = { _response: HttpResponse, blobBody:
-  Promise<Blob>, readableStreamBody: ReadableStream }
+  Promise<Blob>, readableStreamBody: NodeJS.ReadableStream }

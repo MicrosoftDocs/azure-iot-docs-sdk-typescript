@@ -7,6 +7,7 @@ summary: |-
   Exposed through the events property of the atlas.Map class.
   Cannot be instantiated by the user.
 fullName: EventManager
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
@@ -17,9 +18,10 @@ methods:
       "pitch" | "pitchend" | "ready" | "render" | "resize" | "rotatestart" |
       "rotate" | "rotateend" | "tokenacquired" | "zoomstart" | "zoom" |
       "zoomend", (e: MapEvent) => void)
-    uid: azure-maps-control.atlas.EventManager.add_6
+    uid: azure-maps-control.atlas.EventManager.add_7
     package: azure-maps-control
     summary: Adds an event to the map.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -47,9 +49,10 @@ methods:
       "dragend" | "keydown" | "keypress" | "keyup" | "mousedown" | "mouseenter"
       | "mouseleave" | "mousemove" | "mouseout" | "mouseover" | "mouseup",
       HtmlMarker | HtmlMarker[], (e: TargetedEvent) => void)
-    uid: azure-maps-control.atlas.EventManager.add_11
+    uid: azure-maps-control.atlas.EventManager.add_12
     package: azure-maps-control
     summary: Adds an event to the HtmlMarker(s).
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -80,6 +83,7 @@ methods:
     uid: azure-maps-control.atlas.EventManager.add
     package: azure-maps-control
     summary: Adds a data event to the map.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -97,9 +101,10 @@ methods:
   - name: >-
       add("dataadded" | "dataremoved", DataSource | DataSource[], (e: Shape[])
       => void)
-    uid: azure-maps-control.atlas.EventManager.add_10
+    uid: azure-maps-control.atlas.EventManager.add_11
     package: azure-maps-control
     summary: Adds an event to the DataSource(s).
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -122,9 +127,10 @@ methods:
   - name: >-
       add("datasourceupdated", DataSource | DataSource[], (e: DataSource) =>
       void)
-    uid: azure-maps-control.atlas.EventManager.add_9
+    uid: azure-maps-control.atlas.EventManager.add_10
     package: azure-maps-control
     summary: Adds an event to the DataSource(s).
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -147,9 +153,10 @@ methods:
   - name: >-
       add("drag" | "dragend" | "dragstart" | "open" | "close", Popup | Popup[],
       (e: TargetedEvent) => void)
-    uid: azure-maps-control.atlas.EventManager.add_16
+    uid: azure-maps-control.atlas.EventManager.add_17
     package: azure-maps-control
     summary: Adds an event to the Popup(s).
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -173,6 +180,7 @@ methods:
     uid: azure-maps-control.atlas.EventManager.add_1
     package: azure-maps-control
     summary: Adds an event to the map.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -186,9 +194,10 @@ methods:
           description: |
             The event handler callback.
   - name: 'add("layeradded" | "layerremoved", (e: Layer) => void)'
-    uid: azure-maps-control.atlas.EventManager.add_7
+    uid: azure-maps-control.atlas.EventManager.add_8
     package: azure-maps-control
     summary: Adds an event to the map.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -204,9 +213,10 @@ methods:
           description: |
             The event handler callback.
   - name: 'add("layeradded" | "layerremoved", Layer | Layer[], (e: Layer) => void)'
-    uid: azure-maps-control.atlas.EventManager.add_13
+    uid: azure-maps-control.atlas.EventManager.add_14
     package: azure-maps-control
     summary: Adds an event to the Layer(s).
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -232,6 +242,7 @@ methods:
     uid: azure-maps-control.atlas.EventManager.add_3
     package: azure-maps-control
     summary: Adds a mouse event to the map.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -253,9 +264,10 @@ methods:
       add("mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
       "dblclick" | "mouseout" | "mouseenter" | "mouseleave" | "contextmenu",
       Layer | Layer[], (e: MapMouseEvent) => void)
-    uid: azure-maps-control.atlas.EventManager.add_14
+    uid: azure-maps-control.atlas.EventManager.add_15
     package: azure-maps-control
     summary: Adds a mouse event to the Layer(s).
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -281,9 +293,10 @@ methods:
           description: |
             The event handler callback.
   - name: 'add("shapechanged", Shape | Shape[], (e: Shape) => void)'
-    uid: azure-maps-control.atlas.EventManager.add_17
+    uid: azure-maps-control.atlas.EventManager.add_19
     package: azure-maps-control
     summary: Adds an event to the Shape(s).
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -304,9 +317,10 @@ methods:
           description: |
             The event handler callback.
   - name: 'add("sourceadded" | "sourceremoved", (e: Source) => void)'
-    uid: azure-maps-control.atlas.EventManager.add_8
+    uid: azure-maps-control.atlas.EventManager.add_9
     package: azure-maps-control
     summary: Adds an event to the map.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -324,9 +338,10 @@ methods:
   - name: >-
       add("sourceadded" | "sourceremoved", Source | Source[], (e: Source) =>
       void)
-    uid: azure-maps-control.atlas.EventManager.add_18
+    uid: azure-maps-control.atlas.EventManager.add_20
     package: azure-maps-control
     summary: Adds an event to the Source(s).
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -346,10 +361,30 @@ methods:
           type: '(e: Source) =&gt; void'
           description: |
             The event handler callback.
+  - name: 'add("stylechanged", (e: StyleChangedEvent) => void)'
+    uid: azure-maps-control.atlas.EventManager.add_5
+    package: azure-maps-control
+    summary: Adds a wheel event to the map.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function add(eventType: "stylechanged", callback: (e: StyleChangedEvent)
+        => void)
+      parameters:
+        - id: eventType
+          type: '"stylechanged"'
+          description: The wheel event name.
+        - id: callback
+          type: '(e: StyleChangedEvent) =&gt; void'
+          description: |
+            The event handler callback.
   - name: 'add("styleimagemissing", (e: string) => void)'
     uid: azure-maps-control.atlas.EventManager.add_4
     package: azure-maps-control
     summary: Adds a style image missing event to the map.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -364,12 +399,35 @@ methods:
           type: '(e: string) =&gt; void'
           description: |
             The event handler callback.
+  - name: 'add("styleselected", StyleControl, (e: string) => void)'
+    uid: azure-maps-control.atlas.EventManager.add_18
+    package: azure-maps-control
+    summary: Adds an event to the StyleControl
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function add(eventType: "styleselected", target: StyleControl, callback:
+        (e: string) => void)
+      parameters:
+        - id: eventType
+          type: '"styleselected"'
+          description: The event name.
+        - id: target
+          type: <xref uid="azure-maps-control.atlas.control.StyleControl" />
+          description: The StyleControl to add the event for.
+        - id: callback
+          type: '(e: string) =&gt; void'
+          description: |
+            The event handler callback.
   - name: >-
       add("touchstart" | "touchend" | "touchmove" | "touchcancel", (e:
       MapTouchEvent) => void)
     uid: azure-maps-control.atlas.EventManager.add_2
     package: azure-maps-control
     summary: Adds a touch event to the map.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -387,9 +445,10 @@ methods:
   - name: >-
       add("touchstart" | "touchend" | "touchmove" | "touchcancel", Layer |
       Layer[], (e: MapTouchEvent) => void)
-    uid: azure-maps-control.atlas.EventManager.add_12
+    uid: azure-maps-control.atlas.EventManager.add_13
     package: azure-maps-control
     summary: Adds a touch event to the Layer(s).
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -411,9 +470,10 @@ methods:
           description: |
             The event handler callback.
   - name: 'add("wheel", (e: MapMouseWheelEvent) => void)'
-    uid: azure-maps-control.atlas.EventManager.add_5
+    uid: azure-maps-control.atlas.EventManager.add_6
     package: azure-maps-control
     summary: Adds a wheel event to the map.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -429,9 +489,10 @@ methods:
           description: |
             The event handler callback.
   - name: 'add("wheel", Layer | Layer[], (e: MapMouseWheelEvent) => void)'
-    uid: azure-maps-control.atlas.EventManager.add_15
+    uid: azure-maps-control.atlas.EventManager.add_16
     package: azure-maps-control
     summary: Adds a wheel event to the Layer(s).
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -457,9 +518,10 @@ methods:
       "pitch" | "pitchend" | "ready" | "render" | "resize" | "rotatestart" |
       "rotate" | "rotateend" | "tokenacquired" | "zoomstart" | "zoom" |
       "zoomend", (e: MapEvent) => void)
-    uid: azure-maps-control.atlas.EventManager.addOnce_8
+    uid: azure-maps-control.atlas.EventManager.addOnce_9
     package: azure-maps-control
     summary: Adds an event to the map.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -487,9 +549,10 @@ methods:
       "dragend" | "keydown" | "keypress" | "keyup" | "mousedown" | "mouseenter"
       | "mouseleave" | "mousemove" | "mouseout" | "mouseover" | "mouseup",
       HtmlMarker, (e: TargetedEvent) => void)
-    uid: azure-maps-control.atlas.EventManager.addOnce_11
+    uid: azure-maps-control.atlas.EventManager.addOnce_12
     package: azure-maps-control
     summary: Adds an event to the HtmlMarker.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -518,6 +581,7 @@ methods:
     uid: azure-maps-control.atlas.EventManager.addOnce
     package: azure-maps-control
     summary: Adds a data event to the map.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -533,9 +597,10 @@ methods:
           description: |
             The event handler callback.
   - name: 'addOnce("dataadded" | "dataremoved", DataSource, (e: Shape[]) => void)'
-    uid: azure-maps-control.atlas.EventManager.addOnce_10
+    uid: azure-maps-control.atlas.EventManager.addOnce_11
     package: azure-maps-control
     summary: Adds an event to the DataSource.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -554,9 +619,10 @@ methods:
           description: |
             The event handler callback.
   - name: 'addOnce("datasourceupdated", DataSource, (e: DataSource) => void)'
-    uid: azure-maps-control.atlas.EventManager.addOnce_9
+    uid: azure-maps-control.atlas.EventManager.addOnce_10
     package: azure-maps-control
     summary: Adds an event to the DataSource.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -577,9 +643,10 @@ methods:
   - name: >-
       addOnce("drag" | "dragend" | "dragstart" | "open" | "close", Popup, (e:
       TargetedEvent) => void)
-    uid: azure-maps-control.atlas.EventManager.addOnce_16
+    uid: azure-maps-control.atlas.EventManager.addOnce_17
     package: azure-maps-control
     summary: Adds an event to the Popup.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -601,6 +668,7 @@ methods:
     uid: azure-maps-control.atlas.EventManager.addOnce_1
     package: azure-maps-control
     summary: Adds an event to the map.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -619,6 +687,7 @@ methods:
     uid: azure-maps-control.atlas.EventManager.addOnce_3
     package: azure-maps-control
     summary: Adds an event to the map.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -634,9 +703,10 @@ methods:
           description: |
             The event handler callback.
   - name: 'addOnce("layeradded" | "layerremoved", Layer, (e: Layer) => void)'
-    uid: azure-maps-control.atlas.EventManager.addOnce_13
+    uid: azure-maps-control.atlas.EventManager.addOnce_14
     package: azure-maps-control
     summary: Adds a touch event to the Layer.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -660,6 +730,7 @@ methods:
     uid: azure-maps-control.atlas.EventManager.addOnce_4
     package: azure-maps-control
     summary: Adds a mouse event to the map.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -681,9 +752,10 @@ methods:
       addOnce("mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
       "dblclick" | "mouseout" | "mouseenter" | "mouseleave" | "contextmenu",
       Layer, (e: MapMouseEvent) => void)
-    uid: azure-maps-control.atlas.EventManager.addOnce_14
+    uid: azure-maps-control.atlas.EventManager.addOnce_15
     package: azure-maps-control
     summary: Adds a mouse event to the Layer.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -707,9 +779,10 @@ methods:
           description: |
             The event handler callback.
   - name: 'addOnce("shapechanged", Shape, (e: Shape) => void)'
-    uid: azure-maps-control.atlas.EventManager.addOnce_17
+    uid: azure-maps-control.atlas.EventManager.addOnce_19
     package: azure-maps-control
     summary: Adds an event to the Shape.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -731,6 +804,7 @@ methods:
     uid: azure-maps-control.atlas.EventManager.addOnce_5
     package: azure-maps-control
     summary: Adds an event to the map.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -746,9 +820,10 @@ methods:
           description: |
             The event handler callback.
   - name: 'addOnce("sourceadded" | "sourceremoved", Source, (e: Source) => void)'
-    uid: azure-maps-control.atlas.EventManager.addOnce_18
+    uid: azure-maps-control.atlas.EventManager.addOnce_20
     package: azure-maps-control
     summary: Adds an event to the Source.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -766,10 +841,30 @@ methods:
           type: '(e: Source) =&gt; void'
           description: |
             The event handler callback.
+  - name: 'addOnce("stylechanged", (e: StyleChangedEvent) => void)'
+    uid: azure-maps-control.atlas.EventManager.addOnce_7
+    package: azure-maps-control
+    summary: Adds a wheel event to the map.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addOnce(eventType: "stylechanged", callback: (e:
+        StyleChangedEvent) => void)
+      parameters:
+        - id: eventType
+          type: '"stylechanged"'
+          description: The wheel event name.
+        - id: callback
+          type: '(e: StyleChangedEvent) =&gt; void'
+          description: |
+            The event handler callback.
   - name: 'addOnce("styleimagemissing", (e: string) => void)'
     uid: azure-maps-control.atlas.EventManager.addOnce_6
     package: azure-maps-control
     summary: Adds a style image missing event to the map.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -784,12 +879,35 @@ methods:
           type: '(e: string) =&gt; void'
           description: |
             The event handler callback.
+  - name: 'addOnce("styleselected", StyleControl, (e: string) => void)'
+    uid: azure-maps-control.atlas.EventManager.addOnce_18
+    package: azure-maps-control
+    summary: Adds an event to the StyleControl
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addOnce(eventType: "styleselected", target: StyleControl,
+        callback: (e: string) => void)
+      parameters:
+        - id: eventType
+          type: '"styleselected"'
+          description: The event name.
+        - id: target
+          type: <xref uid="azure-maps-control.atlas.control.StyleControl" />
+          description: The StyleControl to add the event for.
+        - id: callback
+          type: '(e: string) =&gt; void'
+          description: |
+            The event handler callback.
   - name: >-
       addOnce("touchstart" | "touchend" | "touchmove" | "touchcancel", (e:
       MapTouchEvent) => void)
     uid: azure-maps-control.atlas.EventManager.addOnce_2
     package: azure-maps-control
     summary: Adds a touch event to the map.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -807,9 +925,10 @@ methods:
   - name: >-
       addOnce("touchstart" | "touchend" | "touchmove" | "touchcancel", Layer,
       (e: MapTouchEvent) => void)
-    uid: azure-maps-control.atlas.EventManager.addOnce_12
+    uid: azure-maps-control.atlas.EventManager.addOnce_13
     package: azure-maps-control
     summary: Adds a touch event to the Layer.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -828,9 +947,10 @@ methods:
           description: |
             The event handler callback.
   - name: 'addOnce("wheel", (e: MapMouseWheelEvent) => void)'
-    uid: azure-maps-control.atlas.EventManager.addOnce_7
+    uid: azure-maps-control.atlas.EventManager.addOnce_8
     package: azure-maps-control
     summary: Adds a wheel event to the map.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -846,9 +966,10 @@ methods:
           description: |
             The event handler callback.
   - name: 'addOnce("wheel", Layer, (e: MapMouseWheelEvent) => void)'
-    uid: azure-maps-control.atlas.EventManager.addOnce_15
+    uid: azure-maps-control.atlas.EventManager.addOnce_16
     package: azure-maps-control
     summary: Adds a wheel event to the Layer.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -874,6 +995,7 @@ methods:
 
       This causes all event handlers on the map with the specified event name to
       be called.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -897,6 +1019,7 @@ methods:
 
       This causes all event handlers on the target with the specified event name
       to be called.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -924,6 +1047,7 @@ methods:
     uid: azure-maps-control.atlas.EventManager.remove
     package: azure-maps-control
     summary: Removes an event listener from the map.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -947,6 +1071,7 @@ methods:
     uid: azure-maps-control.atlas.EventManager.remove_1
     package: azure-maps-control
     summary: Removes an event listener from the DataSource(s).
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -970,6 +1095,7 @@ methods:
     uid: azure-maps-control.atlas.EventManager.remove_2
     package: azure-maps-control
     summary: Removes an event listener from the HtmlMarker(s).
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -995,6 +1121,7 @@ methods:
     uid: azure-maps-control.atlas.EventManager.remove_3
     package: azure-maps-control
     summary: Removes an event listener from the Layer(s).
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1021,6 +1148,7 @@ methods:
     uid: azure-maps-control.atlas.EventManager.remove_4
     package: azure-maps-control
     summary: Removes an event listener from the Popup(s).
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1041,9 +1169,10 @@ methods:
           description: |
             The event handler callback.
   - name: 'remove(string, Shape | Shape[], (e: Shape) => void)'
-    uid: azure-maps-control.atlas.EventManager.remove_5
+    uid: azure-maps-control.atlas.EventManager.remove_6
     package: azure-maps-control
     summary: Removes an event listener from the Shape(s).
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1064,9 +1193,10 @@ methods:
           description: |
             The event handler callback.
   - name: 'remove(string, Source | Source[], (e: Source) => void)'
-    uid: azure-maps-control.atlas.EventManager.remove_6
+    uid: azure-maps-control.atlas.EventManager.remove_7
     package: azure-maps-control
     summary: Removes an event listener from the Source(s).
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -1084,5 +1214,27 @@ methods:
           description: The Source(s) to remove the event for.
         - id: callback
           type: '(e: Source) =&gt; void'
+          description: |
+            The event handler callback.
+  - name: 'remove(string, StyleControl, (e: string) => void)'
+    uid: azure-maps-control.atlas.EventManager.remove_5
+    package: azure-maps-control
+    summary: Removes an event to the StyleControl
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function remove(eventType: string, target: StyleControl, callback: (e:
+        string) => void)
+      parameters:
+        - id: eventType
+          type: string
+          description: The event name.
+        - id: target
+          type: <xref uid="azure-maps-control.atlas.control.StyleControl" />
+          description: The StyleControl to add the event for.
+        - id: callback
+          type: '(e: string) =&gt; void'
           description: |
             The event handler callback.

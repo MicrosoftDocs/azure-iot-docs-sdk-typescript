@@ -3,7 +3,8 @@ name: PitchControl
 uid: azure-maps-control.atlas.control.PitchControl
 package: azure-maps-control
 summary: A control for changing the pitch of the map.
-fullName: PitchControl
+fullName: PitchControl<T>
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
@@ -12,6 +13,7 @@ constructors:
     uid: azure-maps-control.atlas.control.PitchControl.constructor
     package: azure-maps-control
     summary: Constructs a PitchControl.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -28,6 +30,7 @@ methods:
     summary: >-
       Build the outermost container for the control, applies styling including
       any listeners for auto styling.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -56,6 +59,7 @@ methods:
     summary: >-
       Initialization method for the control which is called when added to the
       map.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -78,8 +82,9 @@ methods:
       perform any necessary cleanup for the
 
       control.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: function onRemove()
-extends: <xref uid="azure-maps-control.atlas.ControlBase" />
+extends: <xref uid="azure-maps-control.atlas.control.ControlBase" />

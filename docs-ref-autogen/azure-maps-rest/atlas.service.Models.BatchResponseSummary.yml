@@ -1,0 +1,46 @@
+### YamlMime:TSType
+name: BatchResponseSummary
+uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary
+package: azure-maps-rest
+summary: Summary for the batch request
+fullName: BatchResponseSummary
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: successfulRequests
+    uid: >-
+      azure-maps-rest.atlas.service.Models.BatchResponseSummary.successfulRequests
+    package: azure-maps-rest
+    summary: >-
+      Number of successful requests in the batch
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: successfulRequests
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'successfulRequests?: number'
+      return:
+        type: number
+        description: ''
+  - name: totalRequests
+    uid: azure-maps-rest.atlas.service.Models.BatchResponseSummary.totalRequests
+    package: azure-maps-rest
+    summary: >-
+      Total number of requests in the batch
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: totalRequests
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'totalRequests?: number'
+      return:
+        type: number
+        description: ''

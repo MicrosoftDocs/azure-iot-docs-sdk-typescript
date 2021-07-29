@@ -1,0 +1,45 @@
+### YamlMime:TSType
+name: BufferResponse
+uid: azure-maps-rest.atlas.service.Models.BufferResponse
+package: azure-maps-rest
+summary: This object is returned from a successful Spatial Buffer call.
+fullName: BufferResponse
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: result
+    uid: azure-maps-rest.atlas.service.Models.BufferResponse.result
+    package: azure-maps-rest
+    summary: The FeatureCollection of buffers for the input.
+    fullName: result
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'result?: GeoJSONFeatureCollection'
+      return:
+        type: >-
+          <xref
+          uid="azure-maps-rest.atlas.service.Models.GeoJSONFeatureCollection" />
+        description: ''
+  - name: summary
+    uid: azure-maps-rest.atlas.service.Models.BufferResponse.summary
+    package: azure-maps-rest
+    summary: >-
+      Summary of the call.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: summary
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'summary?: BufferResponseSummary'
+      return:
+        type: >-
+          <xref uid="azure-maps-rest.atlas.service.Models.BufferResponseSummary"
+          />
+        description: ''

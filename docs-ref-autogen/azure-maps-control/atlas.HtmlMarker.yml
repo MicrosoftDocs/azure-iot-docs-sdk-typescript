@@ -1,0 +1,64 @@
+### YamlMime:TSType
+name: HtmlMarker
+uid: azure-maps-control.atlas.HtmlMarker
+package: azure-maps-control
+summary: This class wraps an HTML element that can be displayed on the map.
+fullName: HtmlMarker
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: HtmlMarker(HtmlMarkerOptions)
+    uid: azure-maps-control.atlas.HtmlMarker.constructor
+    package: azure-maps-control
+    summary: Constructs a new HtmlMarker.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new HtmlMarker(options?: HtmlMarkerOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-maps-control.atlas.HtmlMarkerOptions" />
+          description: |
+            The options for the HtmlMarker.
+methods:
+  - name: getOptions()
+    uid: azure-maps-control.atlas.HtmlMarker.getOptions
+    package: azure-maps-control
+    summary: Gets the HTML marker options.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getOptions()
+      return:
+        type: <xref uid="azure-maps-control.atlas.HtmlMarkerOptions" />
+        description: ''
+  - name: setOptions(HtmlMarkerOptions)
+    uid: azure-maps-control.atlas.HtmlMarker.setOptions
+    package: azure-maps-control
+    summary: Sets the options of the marker.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function setOptions(options: HtmlMarkerOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-maps-control.atlas.HtmlMarkerOptions" />
+          description: |
+            The options for the marker.
+  - name: togglePopup()
+    uid: azure-maps-control.atlas.HtmlMarker.togglePopup
+    package: azure-maps-control
+    summary: Toggles the popup attached to the marker.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function togglePopup()
+extends: >-
+  <xref uid="azure-maps-control.atlas.internal.EventEmitter" />&lt;<xref
+  uid="azure-maps-control.atlas.HtmlMarkerEvents" />&gt;

@@ -1,0 +1,154 @@
+### YamlMime:TSType
+name: CameraOptions
+uid: azure-maps-control.atlas.CameraOptions
+package: azure-maps-control
+summary: The options for setting the map control's camera.
+fullName: CameraOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: bearing
+    uid: azure-maps-control.atlas.CameraOptions.bearing
+    package: azure-maps-control
+    summary: >-
+      The bearing of the map (rotation) in degrees.
+
+      When the bearing is 0, 90, 180, or 270 the top of the map container will
+      be north, east, south or west respectively.
+
+      `default 0`
+    fullName: bearing
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'bearing?: number'
+      return:
+        type: number
+        description: ''
+  - name: center
+    uid: azure-maps-control.atlas.CameraOptions.center
+    package: azure-maps-control
+    summary: |-
+      The position to align the center of the map view with.
+      `default [0, 0]`
+    fullName: center
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'center?: Position'
+      return:
+        type: <xref uid="azure-maps-control.atlas.data.Position" />
+        description: ''
+  - name: centerOffset
+    uid: azure-maps-control.atlas.CameraOptions.centerOffset
+    package: azure-maps-control
+    summary: >-
+      A pixel offset to apply to the center of the map.
+
+      This is useful if you want to programmatically pan the map to another
+      location or if you want to center the map over a shape, then offset the
+      maps view to make room for a popup.
+
+      Default `[0, 0]`.
+    fullName: centerOffset
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'centerOffset?: Pixel'
+      return:
+        type: <xref uid="azure-maps-control.atlas.Pixel" />
+        description: ''
+  - name: maxBounds
+    uid: azure-maps-control.atlas.CameraOptions.maxBounds
+    package: azure-maps-control
+    summary: >-
+      A bounding box in which to constrain the viewable map area to.
+
+      Users won't be able to pan the center of the map outside of this bounding
+      box.
+
+      Set maxBounds to null or undefined to remove maxBounds
+
+      Default `undefined`.
+    fullName: maxBounds
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxBounds?: BoundingBox'
+      return:
+        type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+        description: ''
+  - name: maxZoom
+    uid: azure-maps-control.atlas.CameraOptions.maxZoom
+    package: azure-maps-control
+    summary: >-
+      The maximum zoom level that the map can be zoomed into during the
+      animation. Must be between 0 and 24, and greater than or equal to
+      `minZoom`.
+
+      `default 20`
+    fullName: maxZoom
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxZoom?: number'
+      return:
+        type: number
+        description: ''
+  - name: minZoom
+    uid: azure-maps-control.atlas.CameraOptions.minZoom
+    package: azure-maps-control
+    summary: >-
+      The minimum zoom level that the map can be zoomed out to during the
+      animation. Must be between 0 and 24, and less than or equal to `maxZoom`.
+
+      `default 1`
+    fullName: minZoom
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'minZoom?: number'
+      return:
+        type: number
+        description: ''
+  - name: pitch
+    uid: azure-maps-control.atlas.CameraOptions.pitch
+    package: azure-maps-control
+    summary: >-
+      The pitch (tilt) of the map in degrees between 0 and 60, where 0 is
+      looking straight down on the map.
+
+      `default 0`
+    fullName: pitch
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'pitch?: number'
+      return:
+        type: number
+        description: ''
+  - name: zoom
+    uid: azure-maps-control.atlas.CameraOptions.zoom
+    package: azure-maps-control
+    summary: |-
+      The zoom level of the map view.
+      `default 1`
+    fullName: zoom
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'zoom?: number'
+      return:
+        type: number
+        description: ''
+extends: <xref uid="azure-maps-control.atlas.Options" />

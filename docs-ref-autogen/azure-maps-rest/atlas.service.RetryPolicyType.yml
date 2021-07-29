@@ -1,0 +1,22 @@
+### YamlMime:TSEnum
+name: RetryPolicyType
+uid: azure-maps-rest.atlas.service.RetryPolicyType
+package: azure-maps-rest
+summary: RetryPolicy types.
+fullName: RetryPolicyType
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: EXPONENTIAL
+    uid: azure-maps-rest.atlas.service.RetryPolicyType.EXPONENTIAL
+    package: azure-maps-rest
+    summary: |-
+      Exponential retry. Retry time delay grows exponentially.
+      Literal value `"exponential"`
+  - name: FIXED
+    uid: azure-maps-rest.atlas.service.RetryPolicyType.FIXED
+    package: azure-maps-rest
+    summary: |-
+      Linear retry. Retry time delay grows linearly.
+      Literal value `"fixed"`

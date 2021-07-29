@@ -1,0 +1,128 @@
+### YamlMime:TSType
+name: MapDataEvent
+uid: azure-maps-control.atlas.MapDataEvent
+package: azure-maps-control
+summary: Event object returned by the maps when a data event occurs.
+fullName: MapDataEvent
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: dataType
+    uid: azure-maps-control.atlas.MapDataEvent.dataType
+    package: azure-maps-control
+    summary: |-
+      The type of data that has changed.
+      Either `"source"` or `"style"`.
+    fullName: dataType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'dataType: "style" | "source"'
+      return:
+        type: '"style" | "source"'
+        description: ''
+  - name: isSourceLoaded
+    uid: azure-maps-control.atlas.MapDataEvent.isSourceLoaded
+    package: azure-maps-control
+    summary: >-
+      True if the event has a `dataType` of `"source"` and the source has no
+      outstanding network requests.
+    fullName: isSourceLoaded
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isSourceLoaded?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: map
+    uid: azure-maps-control.atlas.MapDataEvent.map
+    package: azure-maps-control
+    summary: The `Map` instance in which the event occurred on.
+    fullName: map
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'map: Map'
+      return:
+        type: <xref uid="azure-maps-control.atlas.Map" />
+        description: ''
+  - name: originalEvent
+    uid: azure-maps-control.atlas.MapDataEvent.originalEvent
+    package: azure-maps-control
+    summary: The original event that was fired.
+    fullName: originalEvent
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'originalEvent?: Event'
+      return:
+        type: Event
+        description: ''
+  - name: source
+    uid: azure-maps-control.atlas.MapDataEvent.source
+    package: azure-maps-control
+    summary: If the `dataType` is `"source"` this is the related `Source` object.
+    fullName: source
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'source?: Source'
+      return:
+        type: <xref uid="azure-maps-control.atlas.source.Source" />
+        description: ''
+  - name: sourceDataType
+    uid: azure-maps-control.atlas.MapDataEvent.sourceDataType
+    package: azure-maps-control
+    summary: >-
+      Specified if the `dataType` is `"source"` and the event signals that
+      internal data has been received or changed.
+
+      Either `"metadata"` or `"content"`
+    fullName: sourceDataType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'sourceDataType?: "metadata" | "content"'
+      return:
+        type: '"metadata" | "content"'
+        description: ''
+  - name: tile
+    uid: azure-maps-control.atlas.MapDataEvent.tile
+    package: azure-maps-control
+    summary: >-
+      The tile being loaded or changed.
+
+      Specified if `dataType` is `"source"` and the event is related to loading
+      of a tile.
+    fullName: tile
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'tile?: Tile'
+      return:
+        type: <xref uid="azure-maps-control.atlas.Tile" />
+        description: ''
+  - name: type
+    uid: azure-maps-control.atlas.MapDataEvent.type
+    package: azure-maps-control
+    summary: The event type.
+    fullName: type
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'type: string'
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-maps-control.atlas.MapEvent" />

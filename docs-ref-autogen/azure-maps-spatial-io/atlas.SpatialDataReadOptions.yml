@@ -1,0 +1,13 @@
+### YamlMime:TSTypeAlias
+name: SpatialDataReadOptions
+uid: azure-maps-spatial-io.atlas.SpatialDataReadOptions
+package: azure-maps-spatial-io
+summary: Options that customize how spatial files are read and parsed.
+fullName: SpatialDataReadOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: >-
+  type SpatialDataReadOptions = BaseSpatialDataReadOptions &
+  BaseSpatialXmlReadOptions & GmlReadOptions & GpxReadOptions & KmlReadOptions &
+  SpatialCsvReadOptions

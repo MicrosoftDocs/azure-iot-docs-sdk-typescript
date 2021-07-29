@@ -1,0 +1,133 @@
+### YamlMime:TSType
+name: VectorTileSourceOptions
+uid: azure-maps-control.atlas.VectorTileSourceOptions
+package: azure-maps-control
+summary: |-
+  A data source for managing shape data that will be displayed on the map.
+  A data source must be added to a layer before it is visible on the map.
+  Options for a `VectorTileSource`.
+fullName: VectorTileSourceOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: bounds
+    uid: azure-maps-control.atlas.VectorTileSourceOptions.bounds
+    package: azure-maps-control
+    summary: |-
+      A bounding box that specifies where tiles are available.
+      When specified, no tiles outside of the bounding box will be requested.
+    fullName: bounds
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'bounds?: BoundingBox'
+      return:
+        type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+        description: ''
+  - name: isTMS
+    uid: azure-maps-control.atlas.VectorTileSourceOptions.isTMS
+    package: azure-maps-control
+    summary: >-
+      Specifies is the tile systems y coordinate uses the OSGeo Tile Map
+      Services which reverses the Y coordinate axis.
+
+      default `false`
+    fullName: isTMS
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isTMS?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: maxZoom
+    uid: azure-maps-control.atlas.VectorTileSourceOptions.maxZoom
+    package: azure-maps-control
+    summary: |-
+      An integer specifying the maximum zoom level to render the layer at.
+      default `22`
+    fullName: maxZoom
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxZoom?: number'
+      return:
+        type: number
+        description: ''
+  - name: minZoom
+    uid: azure-maps-control.atlas.VectorTileSourceOptions.minZoom
+    package: azure-maps-control
+    summary: |-
+      An integer specifying the minimum zoom level to render the layer at.
+      default `0`
+    fullName: minZoom
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'minZoom?: number'
+      return:
+        type: number
+        description: ''
+  - name: tiles
+    uid: azure-maps-control.atlas.VectorTileSourceOptions.tiles
+    package: azure-maps-control
+    summary: |-
+      An array of one or more tile source URLs. Supported URL parameters:
+       <ul>
+           <li>`{x}` - X position of tile. Tile URL usually also needs {y} and {z}.</li>
+           <li>`{y}` - Y position of tile. Tile URL usually also needs {x} and {z}.</li>
+           <li>`{z}` - Zoom level of tile. Tile URL usually also needs {x} and {y}.</li>
+           <li>`{quadkey}` - Tile quadkey id based on the Bing Maps tile system naming convention.</li>
+           <li>`{bbox-epsg-3857}` - A bounding box string with the format "{west},{south},{east},{north}" with coordinates in the EPSG 3857 Spatial Reference System also commonly known as WGS84 Web Mercator. This is useful when working with WMS imagery services.</li>
+       <ul>
+    fullName: tiles
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'tiles?: string[]'
+      return:
+        type: 'string[]'
+        description: ''
+  - name: tileSize
+    uid: azure-maps-control.atlas.VectorTileSourceOptions.tileSize
+    package: azure-maps-control
+    summary: >-
+      An integer value that specifies the width and height dimensions of the map
+      tiles.
+
+      For a seamless experience, the tile size must by a multiplier of 2. (i.e.
+      256, 512, 1024…).
+
+      default `512`
+    fullName: tileSize
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'tileSize?: number'
+      return:
+        type: number
+        description: ''
+  - name: url
+    uid: azure-maps-control.atlas.VectorTileSourceOptions.url
+    package: azure-maps-control
+    summary: |-
+      A URL to a TileJSON resource.
+      Supported protocols are `http:` and `https:`.
+    fullName: url
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url?: string'
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-maps-control.atlas.Options" />

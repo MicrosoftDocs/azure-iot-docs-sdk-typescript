@@ -1,0 +1,181 @@
+### YamlMime:TSType
+name: TimezoneGetTimezoneByIDOptionalParams
+uid: azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneByIDOptionalParams
+package: azure-maps-rest
+summary: Optional Parameters.
+fullName: TimezoneGetTimezoneByIDOptionalParams
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: abortSignal
+    uid: >-
+      azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneByIDOptionalParams.abortSignal
+    package: azure-maps-rest
+    summary: The signal which can be used to abort requests.
+    fullName: abortSignal
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'abortSignal?: AbortSignalLike'
+      return:
+        type: AbortSignalLike
+        description: ''
+  - name: acceptLanguage
+    uid: >-
+      azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneByIDOptionalParams.acceptLanguage
+    package: azure-maps-rest
+    summary: >-
+      Specifies the language code in which the timezone names should be
+      returned. If no language
+
+      code is provided, the response will be in "EN". Please refer to [Supported
+
+      Languages](https://docs.microsoft.com/en-us/azure/azure-maps/supported-languages)
+      for details.
+    fullName: acceptLanguage
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'acceptLanguage?: string'
+      return:
+        type: string
+        description: ''
+  - name: customHeaders
+    uid: >-
+      azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneByIDOptionalParams.customHeaders
+    package: azure-maps-rest
+    summary: |-
+      {object} [customHeaders] User defined custom request headers that
+      will be applied before the request is sent.
+    fullName: customHeaders
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'customHeaders?: [key: string]: string'
+      return:
+        type: '[key: string]\: string'
+        description: ''
+  - name: onDownloadProgress
+    uid: >-
+      azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneByIDOptionalParams.onDownloadProgress
+    package: azure-maps-rest
+    summary: Callback which fires upon download progress.
+    fullName: onDownloadProgress
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'onDownloadProgress?: (progress: TransferProgressEvent) => void'
+      return:
+        type: '(progress: TransferProgressEvent) =&gt; void'
+        description: ''
+  - name: onUploadProgress
+    uid: >-
+      azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneByIDOptionalParams.onUploadProgress
+    package: azure-maps-rest
+    summary: Callback which fires upon upload progress.
+    fullName: onUploadProgress
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'onUploadProgress?: (progress: TransferProgressEvent) => void'
+      return:
+        type: '(progress: TransferProgressEvent) =&gt; void'
+        description: ''
+  - name: options
+    uid: >-
+      azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneByIDOptionalParams.options
+    package: azure-maps-rest
+    summary: >-
+      Alternatively, use alias "o". Options available for types of information
+      returned in the
+
+      result. Possible values include: 'none', 'zoneInfo', 'transitions', 'all'
+    fullName: options
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'options?: TimezoneOptions'
+      return:
+        type: <xref uid="azure-maps-rest.atlas.service.Models.TimezoneOptions" />
+        description: ''
+  - name: timeout
+    uid: >-
+      azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneByIDOptionalParams.timeout
+    package: azure-maps-rest
+    summary: >-
+      The number of milliseconds a request can take before automatically being
+      terminated.
+    fullName: timeout
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'timeout?: number'
+      return:
+        type: number
+        description: ''
+  - name: timeStamp
+    uid: >-
+      azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneByIDOptionalParams.timeStamp
+    package: azure-maps-rest
+    summary: >-
+      Alternatively, use alias "stamp", or "s". Reference time, if omitted, the
+      API will use the
+
+      machine time serving the request.
+    fullName: timeStamp
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'timeStamp?: Date'
+      return:
+        type: Date
+        description: ''
+  - name: transitionsFrom
+    uid: >-
+      azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneByIDOptionalParams.transitionsFrom
+    package: azure-maps-rest
+    summary: >-
+      Alternatively, use alias "tf". The start date from which daylight savings
+      time (DST)
+
+      transitions are requested, only applies when "options" = all or "options"
+      = transitions.
+    fullName: transitionsFrom
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'transitionsFrom?: Date'
+      return:
+        type: Date
+        description: ''
+  - name: transitionsYears
+    uid: >-
+      azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneByIDOptionalParams.transitionsYears
+    package: azure-maps-rest
+    summary: >-
+      Alternatively, use alias "ty". The number of years from "transitionsFrom"
+      for which DST
+
+      transitions are requested, only applies when "options" = all or "options"
+      = transitions.
+    fullName: transitionsYears
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'transitionsYears?: number'
+      return:
+        type: number
+        description: ''
+extends: RequestOptionsBase

@@ -1,0 +1,189 @@
+### YamlMime:TSType
+name: UserInteractionOptions
+uid: azure-maps-control.atlas.UserInteractionOptions
+package: azure-maps-control
+summary: The options for enabling/disabling user interaction with the map.
+fullName: UserInteractionOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: boxZoomInteraction
+    uid: azure-maps-control.atlas.UserInteractionOptions.boxZoomInteraction
+    package: azure-maps-control
+    summary: |-
+      Whether the Shift + left click and drag will draw a zoom box.
+      default `true`
+    fullName: boxZoomInteraction
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'boxZoomInteraction?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: dblClickZoomInteraction
+    uid: azure-maps-control.atlas.UserInteractionOptions.dblClickZoomInteraction
+    package: azure-maps-control
+    summary: |-
+      Whether double left click will zoom the map inwards.
+      default `true`
+    fullName: dblClickZoomInteraction
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'dblClickZoomInteraction?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: dragPanInteraction
+    uid: azure-maps-control.atlas.UserInteractionOptions.dragPanInteraction
+    package: azure-maps-control
+    summary: |-
+      Whether left click and drag will pan the map.
+      default `true`
+    fullName: dragPanInteraction
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'dragPanInteraction?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: dragRotateInteraction
+    uid: azure-maps-control.atlas.UserInteractionOptions.dragRotateInteraction
+    package: azure-maps-control
+    summary: |-
+      Whether right click and drag will rotate and pitch the map.
+      default `true`
+    fullName: dragRotateInteraction
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'dragRotateInteraction?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: interactive
+    uid: azure-maps-control.atlas.UserInteractionOptions.interactive
+    package: azure-maps-control
+    summary: >-
+      Whether the map is interactive or static. If false, all user interaction
+      is disabled.  If true, only selected
+
+      user interactions will enabled.
+
+      default `true`
+    fullName: interactive
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'interactive?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: keyboardInteraction
+    uid: azure-maps-control.atlas.UserInteractionOptions.keyboardInteraction
+    package: azure-maps-control
+    summary: >-
+      Whether the keyboard interactions are enabled.
+
+      <style> .k-key { border: 1px solid grey; border-radius: 6px;
+      background-color: #ccc; line-height: 14px;
+
+      font-size: 14px; padding: 2px; } </style>
+
+      <p><span class="k-key">Escape</span>: Jump focus to the map.</p>
+
+      <p><span class="k-key">+/=</span>: Increase zoom level by 1.</p>
+
+      <p><span class="k-key">Shift</span> + <span class="k-key">+/=</span>:
+      Increase the zoom level by 2.</p>
+
+      <p><span class="k-key">-</span>: Decrease zoom level by 1.</p>
+
+      <p><span class="k-key">Shift</span> + <span class="k-key">-</span>:
+      Decrease zoom level by 2.</p>
+
+      <p><span class="k-key">⇢</span>: Pan right 100 pixels.</p>
+
+      <p><span class="k-key">⇠</span>: Pan left 100 pixels.</p>
+
+      <p><span class="k-key">⇡</span>: Pan up 100 pixels.</p>
+
+      <p><span class="k-key">⇣</span>: Pan down 100 pixels.</p>
+
+      <p><span class="k-key">Shift</span> + <span class="k-key">⇢</span>: Rotate
+      15 degrees clockwise.</p>
+
+      <p><span class="k-key">Shift</span> + <span class="k-key">⇠</span>: Rotate
+      15 degrees counter-clockwise.</p>
+
+      <p><span class="k-key">Shift</span> + <span class="k-key">⇡</span>:
+      Increase pitch by 10 degrees.</p>
+
+      <p><span class="k-key">Shift</span> + <span class="k-key">⇣</span>:
+      Decrease pitch by 10 degrees.</p>
+
+      default `true`
+    fullName: keyboardInteraction
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'keyboardInteraction?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: scrollZoomInteraction
+    uid: azure-maps-control.atlas.UserInteractionOptions.scrollZoomInteraction
+    package: azure-maps-control
+    summary: |-
+      Whether the map should zoom on scroll input.
+      default `true`
+    fullName: scrollZoomInteraction
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'scrollZoomInteraction?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: touchInteraction
+    uid: azure-maps-control.atlas.UserInteractionOptions.touchInteraction
+    package: azure-maps-control
+    summary: |-
+      Whether touch interactions are enabled for touch devices.
+      default `true`
+    fullName: touchInteraction
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'touchInteraction?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: wheelZoomRate
+    uid: azure-maps-control.atlas.UserInteractionOptions.wheelZoomRate
+    package: azure-maps-control
+    summary: |-
+      Sets the zoom rate of the mouse wheel
+      default `1/450`
+    fullName: wheelZoomRate
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'wheelZoomRate?: number'
+      return:
+        type: number
+        description: ''
+extends: <xref uid="azure-maps-control.atlas.Options" />

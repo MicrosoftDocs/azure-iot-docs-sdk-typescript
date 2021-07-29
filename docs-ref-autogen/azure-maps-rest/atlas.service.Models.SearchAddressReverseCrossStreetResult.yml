@@ -1,0 +1,45 @@
+### YamlMime:TSType
+name: SearchAddressReverseCrossStreetResult
+uid: azure-maps-rest.atlas.service.Models.SearchAddressReverseCrossStreetResult
+package: azure-maps-rest
+summary: An interface representing SearchAddressReverseCrossStreetResult.
+fullName: SearchAddressReverseCrossStreetResult
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: address
+    uid: >-
+      azure-maps-rest.atlas.service.Models.SearchAddressReverseCrossStreetResult.address
+    package: azure-maps-rest
+    summary: ''
+    fullName: address
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'address?: SearchResultAddress'
+      return:
+        type: >-
+          <xref uid="azure-maps-rest.atlas.service.Models.SearchResultAddress"
+          />
+        description: ''
+  - name: position
+    uid: >-
+      azure-maps-rest.atlas.service.Models.SearchAddressReverseCrossStreetResult.position
+    package: azure-maps-rest
+    summary: >-
+      Position property in the form of "{latitude},{longitude}"
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: position
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'position?: string'
+      return:
+        type: string
+        description: ''

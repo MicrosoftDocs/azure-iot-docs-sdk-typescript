@@ -1,0 +1,684 @@
+### YamlMime:TSType
+name: AggregateExpression
+uid: azure-maps-control.atlas.AggregateExpression
+package: azure-maps-control
+summary: >-
+  An aggregate expression defines a calculation that is processed over a set of
+  data.
+
+  Schema: [operator: string, initialValue?: boolean | number, mapExpression:
+  Expression]
+
+  operator: An expression function that is then applied to against all values
+  calculated by the `mapExpression` for each point in the cluster. Supported
+  operators:
+
+  o  For numbers: `+`, `*`, `max`, `min`
+
+  o  For Booleans: `all`, `any`
+
+  initialValue: Optional, an initial value in which the first calculated value
+  is aggregated against.
+
+  mapExpression: An expression that is applied against each point in the data
+  set.
+fullName: AggregateExpression
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: Array
+    uid: azure-maps-control.atlas.AggregateExpression.Array
+    package: azure-maps-control
+    summary: ''
+    fullName: Array
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'Array: ArrayConstructor'
+      return:
+        type: ArrayConstructor
+        description: ''
+  - name: length
+    uid: azure-maps-control.atlas.AggregateExpression.length
+    package: azure-maps-control
+    summary: >-
+      Gets or sets the length of the array. This is a number one higher than the
+      highest element defined in an array.
+    fullName: length
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'length: number'
+      return:
+        type: number
+        description: ''
+methods:
+  - name: 'concat(ConcatArray<any>[])'
+    uid: azure-maps-control.atlas.AggregateExpression.concat
+    package: azure-maps-control
+    summary: Combines two or more arrays.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function concat(items: ConcatArray<any>[])'
+      parameters:
+        - id: items
+          type: 'ConcatArray&lt;any&gt;[]'
+          description: |
+            Additional items to add to the end of array1.
+      return:
+        type: 'any[]'
+        description: ''
+  - name: 'concat(T | ConcatArray<T>[])'
+    uid: azure-maps-control.atlas.AggregateExpression.concat_1
+    package: azure-maps-control
+    summary: Combines two or more arrays.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function concat(items: T | ConcatArray<T>[])'
+      parameters:
+        - id: items
+          type: 'T | ConcatArray&lt;T&gt;[]'
+          description: |
+            Additional items to add to the end of array1.
+      return:
+        type: 'any[]'
+        description: ''
+  - name: 'every((value: any, index: number, array: any[]) => unknown, any)'
+    uid: azure-maps-control.atlas.AggregateExpression.every
+    package: azure-maps-control
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every(callbackfn: (value: any, index: number, array: any[]) =>
+        unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type: '(value: any, index: number, array: any[]) =&gt; unknown'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls the callbackfn function for each element in array1 until the
+            callbackfn returns false, or until the end of the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+      return:
+        type: boolean
+        description: ''
+  - name: 'filter((value: any, index: number, array: any[]) => unknown, any)'
+    uid: azure-maps-control.atlas.AggregateExpression.filter_1
+    package: azure-maps-control
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: any, index: number, array: any[]) =>
+        unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type: '(value: any, index: number, array: any[]) =&gt; unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+      return:
+        type: 'any[]'
+        description: ''
+  - name: 'filter<S>((value: any, index: number, array: any[]) => boolean, any)'
+    uid: azure-maps-control.atlas.AggregateExpression.filter
+    package: azure-maps-control
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function filter<S>(callbackfn: (value: any, index: number, array: any[])
+        => boolean, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type: '(value: any, index: number, array: any[]) =&gt; boolean'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+      return:
+        type: 'S[]'
+        description: ''
+  - name: 'forEach((value: any, index: number, array: any[]) => void, any)'
+    uid: azure-maps-control.atlas.AggregateExpression.forEach
+    package: azure-maps-control
+    summary: Performs the specified action for each element in an array.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function forEach(callbackfn: (value: any, index: number, array: any[])
+        => void, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type: '(value: any, index: number, array: any[]) =&gt; void'
+          description: >-
+            A function that accepts up to three arguments. forEach calls the
+            callbackfn function one time for each element in the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+  - name: 'indexOf(any, number)'
+    uid: azure-maps-control.atlas.AggregateExpression.indexOf
+    package: azure-maps-control
+    summary: Returns the index of the first occurrence of a value in an array.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function indexOf(searchElement: any, fromIndex?: number)'
+      parameters:
+        - id: searchElement
+          type: any
+          description: The value to locate in the array.
+        - id: fromIndex
+          type: number
+          description: >
+            The array index at which to begin the search. If fromIndex is
+            omitted, the search starts at index 0.
+      return:
+        type: number
+        description: ''
+  - name: join(string)
+    uid: azure-maps-control.atlas.AggregateExpression.join
+    package: azure-maps-control
+    summary: >-
+      Adds all the elements of an array separated by the specified separator
+      string.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function join(separator?: string)'
+      parameters:
+        - id: separator
+          type: string
+          description: >
+            A string used to separate one element of an array from the next in
+            the resulting String. If omitted, the array elements are separated
+            with a comma.
+      return:
+        type: string
+        description: ''
+  - name: 'lastIndexOf(any, number)'
+    uid: azure-maps-control.atlas.AggregateExpression.lastIndexOf
+    package: azure-maps-control
+    summary: Returns the index of the last occurrence of a specified value in an array.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function lastIndexOf(searchElement: any, fromIndex?: number)'
+      parameters:
+        - id: searchElement
+          type: any
+          description: The value to locate in the array.
+        - id: fromIndex
+          type: number
+          description: >
+            The array index at which to begin the search. If fromIndex is
+            omitted, the search starts at the last index in the array.
+      return:
+        type: number
+        description: ''
+  - name: 'map<U>((value: any, index: number, array: any[]) => U, any)'
+    uid: azure-maps-control.atlas.AggregateExpression.map
+    package: azure-maps-control
+    summary: >-
+      Calls a defined callback function on each element of an array, and returns
+      an array that contains the results.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function map<U>(callbackfn: (value: any, index: number, array: any[]) =>
+        U, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type: '(value: any, index: number, array: any[]) =&gt; U'
+          description: >-
+            A function that accepts up to three arguments. The map method calls
+            the callbackfn function one time for each element in the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+      return:
+        type: 'U[]'
+        description: ''
+  - name: pop()
+    uid: azure-maps-control.atlas.AggregateExpression.pop
+    package: azure-maps-control
+    summary: Removes the last element from an array and returns it.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function pop()
+      return:
+        type: any | undefined
+        description: ''
+  - name: 'push(any[])'
+    uid: azure-maps-control.atlas.AggregateExpression.push
+    package: azure-maps-control
+    summary: 'Appends new elements to an array, and returns the new length of the array.'
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function push(items: any[])'
+      parameters:
+        - id: items
+          type: 'any[]'
+          description: |
+            New elements of the Array.
+      return:
+        type: number
+        description: ''
+  - name: >-
+      reduce((previousValue: any, currentValue: any, currentIndex: number,
+      array: any[]) => any)
+    uid: azure-maps-control.atlas.AggregateExpression.reduce
+    package: azure-maps-control
+    summary: >-
+      Calls the specified callback function for all the elements in an array.
+      The return value of the callback function is the accumulated result, and
+      is provided as an argument in the next call to the callback function.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function reduce(callbackfn: (previousValue: any, currentValue: any,
+        currentIndex: number, array: any[]) => any)
+      parameters:
+        - id: callbackfn
+          type: >-
+            (previousValue: any, currentValue: any, currentIndex: number, array:
+            any[]) =&gt; any
+          description: >-
+            A function that accepts up to four arguments. The reduce method
+            calls the callbackfn function one time for each element in the
+            array.
+      return:
+        type: any
+        description: ''
+  - name: >-
+      reduce((previousValue: any, currentValue: any, currentIndex: number,
+      array: any[]) => any, any)
+    uid: azure-maps-control.atlas.AggregateExpression.reduce_1
+    package: azure-maps-control
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function reduce(callbackfn: (previousValue: any, currentValue: any,
+        currentIndex: number, array: any[]) => any, initialValue: any)
+      parameters:
+        - id: callbackfn
+          type: >-
+            (previousValue: any, currentValue: any, currentIndex: number, array:
+            any[]) =&gt; any
+          description: ''
+        - id: initialValue
+          type: any
+          description: ''
+      return:
+        type: any
+        description: ''
+  - name: >-
+      reduce<U>((previousValue: U, currentValue: any, currentIndex: number,
+      array: any[]) => U, U)
+    uid: azure-maps-control.atlas.AggregateExpression.reduce_2
+    package: azure-maps-control
+    summary: >-
+      Calls the specified callback function for all the elements in an array.
+      The return value of the callback function is the accumulated result, and
+      is provided as an argument in the next call to the callback function.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function reduce<U>(callbackfn: (previousValue: U, currentValue: any,
+        currentIndex: number, array: any[]) => U, initialValue: U)
+      parameters:
+        - id: callbackfn
+          type: >-
+            (previousValue: U, currentValue: any, currentIndex: number, array:
+            any[]) =&gt; U
+          description: >-
+            A function that accepts up to four arguments. The reduce method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: initialValue
+          type: U
+          description: >
+            If initialValue is specified, it is used as the initial value to
+            start the accumulation. The first call to the callbackfn function
+            provides this value as an argument instead of an array value.
+      return:
+        type: U
+        description: ''
+  - name: >-
+      reduceRight((previousValue: any, currentValue: any, currentIndex: number,
+      array: any[]) => any)
+    uid: azure-maps-control.atlas.AggregateExpression.reduceRight
+    package: azure-maps-control
+    summary: >-
+      Calls the specified callback function for all the elements in an array, in
+      descending order. The return value of the callback function is the
+      accumulated result, and is provided as an argument in the next call to the
+      callback function.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function reduceRight(callbackfn: (previousValue: any, currentValue: any,
+        currentIndex: number, array: any[]) => any)
+      parameters:
+        - id: callbackfn
+          type: >-
+            (previousValue: any, currentValue: any, currentIndex: number, array:
+            any[]) =&gt; any
+          description: >-
+            A function that accepts up to four arguments. The reduceRight method
+            calls the callbackfn function one time for each element in the
+            array.
+      return:
+        type: any
+        description: ''
+  - name: >-
+      reduceRight((previousValue: any, currentValue: any, currentIndex: number,
+      array: any[]) => any, any)
+    uid: azure-maps-control.atlas.AggregateExpression.reduceRight_1
+    package: azure-maps-control
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function reduceRight(callbackfn: (previousValue: any, currentValue: any,
+        currentIndex: number, array: any[]) => any, initialValue: any)
+      parameters:
+        - id: callbackfn
+          type: >-
+            (previousValue: any, currentValue: any, currentIndex: number, array:
+            any[]) =&gt; any
+          description: ''
+        - id: initialValue
+          type: any
+          description: ''
+      return:
+        type: any
+        description: ''
+  - name: >-
+      reduceRight<U>((previousValue: U, currentValue: any, currentIndex: number,
+      array: any[]) => U, U)
+    uid: azure-maps-control.atlas.AggregateExpression.reduceRight_2
+    package: azure-maps-control
+    summary: >-
+      Calls the specified callback function for all the elements in an array, in
+      descending order. The return value of the callback function is the
+      accumulated result, and is provided as an argument in the next call to the
+      callback function.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function reduceRight<U>(callbackfn: (previousValue: U, currentValue:
+        any, currentIndex: number, array: any[]) => U, initialValue: U)
+      parameters:
+        - id: callbackfn
+          type: >-
+            (previousValue: U, currentValue: any, currentIndex: number, array:
+            any[]) =&gt; U
+          description: >-
+            A function that accepts up to four arguments. The reduceRight method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: initialValue
+          type: U
+          description: >
+            If initialValue is specified, it is used as the initial value to
+            start the accumulation. The first call to the callbackfn function
+            provides this value as an argument instead of an array value.
+      return:
+        type: U
+        description: ''
+  - name: reverse()
+    uid: azure-maps-control.atlas.AggregateExpression.reverse
+    package: azure-maps-control
+    summary: Reverses the elements in an Array.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function reverse()
+      return:
+        type: 'any[]'
+        description: ''
+  - name: shift()
+    uid: azure-maps-control.atlas.AggregateExpression.shift
+    package: azure-maps-control
+    summary: Removes the first element from an array and returns it.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function shift()
+      return:
+        type: any | undefined
+        description: ''
+  - name: 'slice(number, number)'
+    uid: azure-maps-control.atlas.AggregateExpression.slice
+    package: azure-maps-control
+    summary: Returns a section of an array.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function slice(start?: number, end?: number)'
+      parameters:
+        - id: start
+          type: number
+          description: The beginning of the specified portion of the array.
+        - id: end
+          type: number
+          description: |
+            The end of the specified portion of the array.
+      return:
+        type: 'any[]'
+        description: ''
+  - name: 'some((value: any, index: number, array: any[]) => unknown, any)'
+    uid: azure-maps-control.atlas.AggregateExpression.some
+    package: azure-maps-control
+    summary: >-
+      Determines whether the specified callback function returns true for any
+      element of an array.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function some(callbackfn: (value: any, index: number, array: any[]) =>
+        unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type: '(value: any, index: number, array: any[]) =&gt; unknown'
+          description: >-
+            A function that accepts up to three arguments. The some method calls
+            the callbackfn function for each element in array1 until the
+            callbackfn returns true, or until the end of the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+      return:
+        type: boolean
+        description: ''
+  - name: 'sort((a: any, b: any) => number)'
+    uid: azure-maps-control.atlas.AggregateExpression.sort
+    package: azure-maps-control
+    summary: Sorts an array.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function sort(compareFn?: (a: any, b: any) => number)'
+      parameters:
+        - id: compareFn
+          type: '(a: any, b: any) =&gt; number'
+          description: >
+            The name of the function used to determine the order of the
+            elements. If omitted, the elements are sorted in ascending, ASCII
+            character order.
+      return:
+        type: this
+        description: ''
+  - name: 'splice(number, number)'
+    uid: azure-maps-control.atlas.AggregateExpression.splice
+    package: azure-maps-control
+    summary: >-
+      Removes elements from an array and, if necessary, inserts new elements in
+      their place, returning the deleted elements.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function splice(start: number, deleteCount?: number)'
+      parameters:
+        - id: start
+          type: number
+          description: >-
+            The zero-based location in the array from which to start removing
+            elements.
+        - id: deleteCount
+          type: number
+          description: |
+            The number of elements to remove.
+      return:
+        type: 'any[]'
+        description: ''
+  - name: 'splice(number, number, any[])'
+    uid: azure-maps-control.atlas.AggregateExpression.splice_1
+    package: azure-maps-control
+    summary: >-
+      Removes elements from an array and, if necessary, inserts new elements in
+      their place, returning the deleted elements.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function splice(start: number, deleteCount: number, items: any[])'
+      parameters:
+        - id: start
+          type: number
+          description: >-
+            The zero-based location in the array from which to start removing
+            elements.
+        - id: deleteCount
+          type: number
+          description: The number of elements to remove.
+        - id: items
+          type: 'any[]'
+          description: |
+            Elements to insert into the array in place of the deleted elements.
+      return:
+        type: 'any[]'
+        description: ''
+  - name: toLocaleString()
+    uid: azure-maps-control.atlas.AggregateExpression.toLocaleString
+    package: azure-maps-control
+    summary: >-
+      Returns a string representation of an array. The elements are converted to
+      string using their toLocalString methods.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function toLocaleString()
+      return:
+        type: string
+        description: ''
+  - name: toString()
+    uid: azure-maps-control.atlas.AggregateExpression.toString
+    package: azure-maps-control
+    summary: Returns a string representation of an array.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function toString()
+      return:
+        type: string
+        description: ''
+  - name: 'unshift(any[])'
+    uid: azure-maps-control.atlas.AggregateExpression.unshift
+    package: azure-maps-control
+    summary: Inserts new elements at the start of an array.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function unshift(items: any[])'
+      parameters:
+        - id: items
+          type: 'any[]'
+          description: |
+            Elements to insert at the start of the Array.
+      return:
+        type: number
+        description: ''
+extends: Array&lt;any&gt;

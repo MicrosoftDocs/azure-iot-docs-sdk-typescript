@@ -1,0 +1,67 @@
+### YamlMime:TSType
+name: RouteMatrixResponse
+uid: azure-maps-rest.atlas.service.Models.RouteMatrixResponse
+package: azure-maps-rest
+summary: >-
+  This object is returned from a successful Route Matrix call. For ex, if 2
+  origins and 3
+
+  destinations are provided, there are going to 2 arrays with 3 elements in
+  each. Each element's
+
+  content depends on the options provided in the query.
+fullName: RouteMatrixResponse
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: formatVersion
+    uid: azure-maps-rest.atlas.service.Models.RouteMatrixResponse.formatVersion
+    package: azure-maps-rest
+    summary: >-
+      Format Version property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: formatVersion
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'formatVersion?: string'
+      return:
+        type: string
+        description: ''
+  - name: matrix
+    uid: azure-maps-rest.atlas.service.Models.RouteMatrixResponse.matrix
+    package: azure-maps-rest
+    summary: >-
+      Results as a 2 dimensional array of route summaries.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: matrix
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'matrix?: RouteMatrixResult[][]'
+      return:
+        type: >-
+          <xref uid="azure-maps-rest.atlas.service.Models.RouteMatrixResult"
+          />[][]
+        description: ''
+  - name: summary
+    uid: azure-maps-rest.atlas.service.Models.RouteMatrixResponse.summary
+    package: azure-maps-rest
+    summary: ''
+    fullName: summary
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'summary?: RouteMatrixSummary'
+      return:
+        type: <xref uid="azure-maps-rest.atlas.service.Models.RouteMatrixSummary" />
+        description: ''

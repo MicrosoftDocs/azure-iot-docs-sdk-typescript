@@ -1,0 +1,836 @@
+### YamlMime:TSType
+name: Position
+uid: azure-maps-control.atlas.data.Position
+package: azure-maps-control
+summary: >-
+  A GeoJSON Position object - an array that specifies the longitude and latitude
+  of a location. The
+
+  full description is detailed in [RFC
+  7946](https://tools.ietf.org/html/rfc7946#section-3.1.1).
+fullName: Position
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'Position(number, number, number)'
+    uid: azure-maps-control.atlas.data.Position.constructor
+    package: azure-maps-control
+    summary: Constructs a Position.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new Position(longitude: number, latitude: number, elevation?: number)'
+      parameters:
+        - id: longitude
+          type: number
+          description: The position's longitude.
+        - id: latitude
+          type: number
+          description: The position's latitude.
+        - id: elevation
+          type: number
+          description: |
+            The position's elevation.
+properties:
+  - name: Array
+    uid: azure-maps-control.atlas.data.Position.Array
+    package: azure-maps-control
+    summary: ''
+    fullName: Array
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static Array: ArrayConstructor'
+      return:
+        type: ArrayConstructor
+        description: ''
+  - name: length
+    uid: azure-maps-control.atlas.data.Position.length
+    package: azure-maps-control
+    summary: >-
+      Gets or sets the length of the array. This is a number one higher than the
+      highest element defined in an array.
+    fullName: length
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'length: number'
+      return:
+        type: number
+        description: ''
+methods:
+  - name: 'areEqual(Position, Position, number)'
+    uid: azure-maps-control.atlas.data.Position.areEqual
+    package: azure-maps-control
+    summary: >-
+      Compares the longitude and latitude values of two positions to see if they
+      are equal at an accuracy of 6 decimal places.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function areEqual(pos1: Position, pos2: Position, precision?:
+        number)
+      parameters:
+        - id: pos1
+          type: <xref uid="azure-maps-control.atlas.data.Position" />
+          description: First position to compare.
+        - id: pos2
+          type: <xref uid="azure-maps-control.atlas.data.Position" />
+          description: Second position to compare.
+        - id: precision
+          type: number
+          description: 'The number of decimal places to compare to. Default: 6.'
+      return:
+        type: boolean
+        description: >-
+          A boolean indicating if two positions to see if they are equal at an
+          accuracy of the specified precision or 6 decimal places.
+  - name: 'concat(ConcatArray<number>[])'
+    uid: azure-maps-control.atlas.data.Position.concat
+    package: azure-maps-control
+    summary: Combines two or more arrays.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function concat(items: ConcatArray<number>[])'
+      parameters:
+        - id: items
+          type: 'ConcatArray&lt;number&gt;[]'
+          description: |
+            Additional items to add to the end of array1.
+      return:
+        type: 'number[]'
+        description: ''
+  - name: 'concat(T | ConcatArray<T>[])'
+    uid: azure-maps-control.atlas.data.Position.concat_1
+    package: azure-maps-control
+    summary: Combines two or more arrays.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function concat(items: T | ConcatArray<T>[])'
+      parameters:
+        - id: items
+          type: 'T | ConcatArray&lt;T&gt;[]'
+          description: |
+            Additional items to add to the end of array1.
+      return:
+        type: 'number[]'
+        description: ''
+  - name: 'every((value: number, index: number, array: number[]) => unknown, any)'
+    uid: azure-maps-control.atlas.data.Position.every
+    package: azure-maps-control
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every(callbackfn: (value: number, index: number, array:
+        number[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type: '(value: number, index: number, array: number[]) =&gt; unknown'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls the callbackfn function for each element in array1 until the
+            callbackfn returns false, or until the end of the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+      return:
+        type: boolean
+        description: ''
+  - name: 'filter((value: number, index: number, array: number[]) => unknown, any)'
+    uid: azure-maps-control.atlas.data.Position.filter_1
+    package: azure-maps-control
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: number, index: number, array:
+        number[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type: '(value: number, index: number, array: number[]) =&gt; unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+      return:
+        type: 'number[]'
+        description: ''
+  - name: 'filter<S>((value: number, index: number, array: number[]) => boolean, any)'
+    uid: azure-maps-control.atlas.data.Position.filter
+    package: azure-maps-control
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function filter<S>(callbackfn: (value: number, index: number, array:
+        number[]) => boolean, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type: '(value: number, index: number, array: number[]) =&gt; boolean'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+      return:
+        type: 'S[]'
+        description: ''
+  - name: 'forEach((value: number, index: number, array: number[]) => void, any)'
+    uid: azure-maps-control.atlas.data.Position.forEach
+    package: azure-maps-control
+    summary: Performs the specified action for each element in an array.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function forEach(callbackfn: (value: number, index: number, array:
+        number[]) => void, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type: '(value: number, index: number, array: number[]) =&gt; void'
+          description: >-
+            A function that accepts up to three arguments. forEach calls the
+            callbackfn function one time for each element in the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+  - name: 'fromLatLng(number, number, number)'
+    uid: azure-maps-control.atlas.data.Position.fromLatLng_1
+    package: azure-maps-control
+    summary: Generates a Position object from latitude and longitude values.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function fromLatLng(lat: number, lng: number, elv?: number)'
+      parameters:
+        - id: lat
+          type: number
+          description: The latitude value.
+        - id: lng
+          type: number
+          description: A longitude value.
+        - id: elv
+          type: number
+          description: An elevation value in meters.
+      return:
+        type: <xref uid="azure-maps-control.atlas.data.Position" />
+        description: A Position object that represents the provided LatLng information.
+  - name: 'fromLatLng(number[])'
+    uid: azure-maps-control.atlas.data.Position.fromLatLng_2
+    package: azure-maps-control
+    summary: >-
+      Generates a Position object from an array that has the format; [lat, lng]
+      or [lat, lng, elv]
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function fromLatLng(latLng: number[])'
+      parameters:
+        - id: latLng
+          type: 'number[]'
+          description: >-
+            An array that contains latitude/longitude information in the format;
+            [lat, lng] or [lat, lng, elv]
+      return:
+        type: <xref uid="azure-maps-control.atlas.data.Position" />
+        description: A Position object that represents the provided LatLng information.
+  - name: fromLatLng(object)
+    uid: azure-maps-control.atlas.data.Position.fromLatLng
+    package: azure-maps-control
+    summary: >-
+      Generates a Position object from an object that contains coordinate
+      information.
+
+      The object is scanned for the following properties using a case
+      insensitive test.
+
+      Longitude: lng, longitude, lon, x
+
+      Latitude: lat, latitude, y
+
+      Elevation: elv, elevation, alt, altitude, z
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function fromLatLng(latLng: object)'
+      parameters:
+        - id: latLng
+          type: object
+          description: The object to extract coordinate information from.
+      return:
+        type: <xref uid="azure-maps-control.atlas.data.Position" />
+        description: A Position object that represents the provided LatLng information.
+  - name: 'fromLatLngs(Array<object | number[]>)'
+    uid: azure-maps-control.atlas.data.Position.fromLatLngs
+    package: azure-maps-control
+    summary: >-
+      Converts an array of objects that contain coordinate information into an
+      array of Positions. Objects that can't be converted are discarded.
+
+      Each object is either an array in the format; [lat, lng] or [lat, lng,
+      elv], or an object with the any combination of the following properties:
+
+      Longitude: lng, longitude, lon, x
+
+      Latitude: lat, latitude, y
+
+      Elevation: elv, elevation, alt, altitude, z
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function fromLatLngs(latLngs: Array<object | number[]>)'
+      parameters:
+        - id: latLngs
+          type: 'Array&lt;object | number[]&gt;'
+          description: The objects that contain coordinate information.
+      return:
+        type: '<xref uid="azure-maps-control.atlas.data.Position" />[]'
+        description: >-
+          An array of Position objects that contain all the provided coordinate
+          information.
+  - name: fromPosition(Position)
+    uid: azure-maps-control.atlas.data.Position.fromPosition
+    package: azure-maps-control
+    summary: Clones a position.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function fromPosition(position: Position)'
+      parameters:
+        - id: position
+          type: <xref uid="azure-maps-control.atlas.data.Position" />
+          description: |
+            The position to clone.
+      return:
+        type: <xref uid="azure-maps-control.atlas.data.Position" />
+        description: ''
+  - name: 'indexOf(number, number)'
+    uid: azure-maps-control.atlas.data.Position.indexOf
+    package: azure-maps-control
+    summary: Returns the index of the first occurrence of a value in an array.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function indexOf(searchElement: number, fromIndex?: number)'
+      parameters:
+        - id: searchElement
+          type: number
+          description: The value to locate in the array.
+        - id: fromIndex
+          type: number
+          description: >
+            The array index at which to begin the search. If fromIndex is
+            omitted, the search starts at index 0.
+      return:
+        type: number
+        description: ''
+  - name: join(string)
+    uid: azure-maps-control.atlas.data.Position.join
+    package: azure-maps-control
+    summary: >-
+      Adds all the elements of an array separated by the specified separator
+      string.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function join(separator?: string)'
+      parameters:
+        - id: separator
+          type: string
+          description: >
+            A string used to separate one element of an array from the next in
+            the resulting String. If omitted, the array elements are separated
+            with a comma.
+      return:
+        type: string
+        description: ''
+  - name: 'lastIndexOf(number, number)'
+    uid: azure-maps-control.atlas.data.Position.lastIndexOf
+    package: azure-maps-control
+    summary: Returns the index of the last occurrence of a specified value in an array.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function lastIndexOf(searchElement: number, fromIndex?: number)'
+      parameters:
+        - id: searchElement
+          type: number
+          description: The value to locate in the array.
+        - id: fromIndex
+          type: number
+          description: >
+            The array index at which to begin the search. If fromIndex is
+            omitted, the search starts at the last index in the array.
+      return:
+        type: number
+        description: ''
+  - name: 'map<U>((value: number, index: number, array: number[]) => U, any)'
+    uid: azure-maps-control.atlas.data.Position.map
+    package: azure-maps-control
+    summary: >-
+      Calls a defined callback function on each element of an array, and returns
+      an array that contains the results.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function map<U>(callbackfn: (value: number, index: number, array:
+        number[]) => U, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type: '(value: number, index: number, array: number[]) =&gt; U'
+          description: >-
+            A function that accepts up to three arguments. The map method calls
+            the callbackfn function one time for each element in the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+      return:
+        type: 'U[]'
+        description: ''
+  - name: pop()
+    uid: azure-maps-control.atlas.data.Position.pop
+    package: azure-maps-control
+    summary: Removes the last element from an array and returns it.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function pop()
+      return:
+        type: number | undefined
+        description: ''
+  - name: 'push(number[])'
+    uid: azure-maps-control.atlas.data.Position.push
+    package: azure-maps-control
+    summary: 'Appends new elements to an array, and returns the new length of the array.'
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function push(items: number[])'
+      parameters:
+        - id: items
+          type: 'number[]'
+          description: |
+            New elements of the Array.
+      return:
+        type: number
+        description: ''
+  - name: >-
+      reduce((previousValue: number, currentValue: number, currentIndex: number,
+      array: number[]) => number)
+    uid: azure-maps-control.atlas.data.Position.reduce
+    package: azure-maps-control
+    summary: >-
+      Calls the specified callback function for all the elements in an array.
+      The return value of the callback function is the accumulated result, and
+      is provided as an argument in the next call to the callback function.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function reduce(callbackfn: (previousValue: number, currentValue:
+        number, currentIndex: number, array: number[]) => number)
+      parameters:
+        - id: callbackfn
+          type: >-
+            (previousValue: number, currentValue: number, currentIndex: number,
+            array: number[]) =&gt; number
+          description: >-
+            A function that accepts up to four arguments. The reduce method
+            calls the callbackfn function one time for each element in the
+            array.
+      return:
+        type: number
+        description: ''
+  - name: >-
+      reduce((previousValue: number, currentValue: number, currentIndex: number,
+      array: number[]) => number, number)
+    uid: azure-maps-control.atlas.data.Position.reduce_1
+    package: azure-maps-control
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function reduce(callbackfn: (previousValue: number, currentValue:
+        number, currentIndex: number, array: number[]) => number, initialValue:
+        number)
+      parameters:
+        - id: callbackfn
+          type: >-
+            (previousValue: number, currentValue: number, currentIndex: number,
+            array: number[]) =&gt; number
+          description: ''
+        - id: initialValue
+          type: number
+          description: ''
+      return:
+        type: number
+        description: ''
+  - name: >-
+      reduce<U>((previousValue: U, currentValue: number, currentIndex: number,
+      array: number[]) => U, U)
+    uid: azure-maps-control.atlas.data.Position.reduce_2
+    package: azure-maps-control
+    summary: >-
+      Calls the specified callback function for all the elements in an array.
+      The return value of the callback function is the accumulated result, and
+      is provided as an argument in the next call to the callback function.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function reduce<U>(callbackfn: (previousValue: U, currentValue: number,
+        currentIndex: number, array: number[]) => U, initialValue: U)
+      parameters:
+        - id: callbackfn
+          type: >-
+            (previousValue: U, currentValue: number, currentIndex: number,
+            array: number[]) =&gt; U
+          description: >-
+            A function that accepts up to four arguments. The reduce method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: initialValue
+          type: U
+          description: >
+            If initialValue is specified, it is used as the initial value to
+            start the accumulation. The first call to the callbackfn function
+            provides this value as an argument instead of an array value.
+      return:
+        type: U
+        description: ''
+  - name: >-
+      reduceRight((previousValue: number, currentValue: number, currentIndex:
+      number, array: number[]) => number)
+    uid: azure-maps-control.atlas.data.Position.reduceRight
+    package: azure-maps-control
+    summary: >-
+      Calls the specified callback function for all the elements in an array, in
+      descending order. The return value of the callback function is the
+      accumulated result, and is provided as an argument in the next call to the
+      callback function.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function reduceRight(callbackfn: (previousValue: number, currentValue:
+        number, currentIndex: number, array: number[]) => number)
+      parameters:
+        - id: callbackfn
+          type: >-
+            (previousValue: number, currentValue: number, currentIndex: number,
+            array: number[]) =&gt; number
+          description: >-
+            A function that accepts up to four arguments. The reduceRight method
+            calls the callbackfn function one time for each element in the
+            array.
+      return:
+        type: number
+        description: ''
+  - name: >-
+      reduceRight((previousValue: number, currentValue: number, currentIndex:
+      number, array: number[]) => number, number)
+    uid: azure-maps-control.atlas.data.Position.reduceRight_1
+    package: azure-maps-control
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function reduceRight(callbackfn: (previousValue: number, currentValue:
+        number, currentIndex: number, array: number[]) => number, initialValue:
+        number)
+      parameters:
+        - id: callbackfn
+          type: >-
+            (previousValue: number, currentValue: number, currentIndex: number,
+            array: number[]) =&gt; number
+          description: ''
+        - id: initialValue
+          type: number
+          description: ''
+      return:
+        type: number
+        description: ''
+  - name: >-
+      reduceRight<U>((previousValue: U, currentValue: number, currentIndex:
+      number, array: number[]) => U, U)
+    uid: azure-maps-control.atlas.data.Position.reduceRight_2
+    package: azure-maps-control
+    summary: >-
+      Calls the specified callback function for all the elements in an array, in
+      descending order. The return value of the callback function is the
+      accumulated result, and is provided as an argument in the next call to the
+      callback function.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function reduceRight<U>(callbackfn: (previousValue: U, currentValue:
+        number, currentIndex: number, array: number[]) => U, initialValue: U)
+      parameters:
+        - id: callbackfn
+          type: >-
+            (previousValue: U, currentValue: number, currentIndex: number,
+            array: number[]) =&gt; U
+          description: >-
+            A function that accepts up to four arguments. The reduceRight method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: initialValue
+          type: U
+          description: >
+            If initialValue is specified, it is used as the initial value to
+            start the accumulation. The first call to the callbackfn function
+            provides this value as an argument instead of an array value.
+      return:
+        type: U
+        description: ''
+  - name: reverse()
+    uid: azure-maps-control.atlas.data.Position.reverse
+    package: azure-maps-control
+    summary: Reverses the elements in an Array.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function reverse()
+      return:
+        type: 'number[]'
+        description: ''
+  - name: shift()
+    uid: azure-maps-control.atlas.data.Position.shift
+    package: azure-maps-control
+    summary: Removes the first element from an array and returns it.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function shift()
+      return:
+        type: number | undefined
+        description: ''
+  - name: 'slice(number, number)'
+    uid: azure-maps-control.atlas.data.Position.slice
+    package: azure-maps-control
+    summary: Returns a section of an array.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function slice(start?: number, end?: number)'
+      parameters:
+        - id: start
+          type: number
+          description: The beginning of the specified portion of the array.
+        - id: end
+          type: number
+          description: |
+            The end of the specified portion of the array.
+      return:
+        type: 'number[]'
+        description: ''
+  - name: 'some((value: number, index: number, array: number[]) => unknown, any)'
+    uid: azure-maps-control.atlas.data.Position.some
+    package: azure-maps-control
+    summary: >-
+      Determines whether the specified callback function returns true for any
+      element of an array.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function some(callbackfn: (value: number, index: number, array:
+        number[]) => unknown, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type: '(value: number, index: number, array: number[]) =&gt; unknown'
+          description: >-
+            A function that accepts up to three arguments. The some method calls
+            the callbackfn function for each element in array1 until the
+            callbackfn returns true, or until the end of the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+      return:
+        type: boolean
+        description: ''
+  - name: 'sort((a: number, b: number) => number)'
+    uid: azure-maps-control.atlas.data.Position.sort
+    package: azure-maps-control
+    summary: Sorts an array.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function sort(compareFn?: (a: number, b: number) => number)'
+      parameters:
+        - id: compareFn
+          type: '(a: number, b: number) =&gt; number'
+          description: >
+            The name of the function used to determine the order of the
+            elements. If omitted, the elements are sorted in ascending, ASCII
+            character order.
+      return:
+        type: this
+        description: ''
+  - name: 'splice(number, number)'
+    uid: azure-maps-control.atlas.data.Position.splice
+    package: azure-maps-control
+    summary: >-
+      Removes elements from an array and, if necessary, inserts new elements in
+      their place, returning the deleted elements.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function splice(start: number, deleteCount?: number)'
+      parameters:
+        - id: start
+          type: number
+          description: >-
+            The zero-based location in the array from which to start removing
+            elements.
+        - id: deleteCount
+          type: number
+          description: |
+            The number of elements to remove.
+      return:
+        type: 'number[]'
+        description: ''
+  - name: 'splice(number, number, number[])'
+    uid: azure-maps-control.atlas.data.Position.splice_1
+    package: azure-maps-control
+    summary: >-
+      Removes elements from an array and, if necessary, inserts new elements in
+      their place, returning the deleted elements.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function splice(start: number, deleteCount: number, items: number[])'
+      parameters:
+        - id: start
+          type: number
+          description: >-
+            The zero-based location in the array from which to start removing
+            elements.
+        - id: deleteCount
+          type: number
+          description: The number of elements to remove.
+        - id: items
+          type: 'number[]'
+          description: |
+            Elements to insert into the array in place of the deleted elements.
+      return:
+        type: 'number[]'
+        description: ''
+  - name: toLocaleString()
+    uid: azure-maps-control.atlas.data.Position.toLocaleString
+    package: azure-maps-control
+    summary: >-
+      Returns a string representation of an array. The elements are converted to
+      string using their toLocalString methods.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function toLocaleString()
+      return:
+        type: string
+        description: ''
+  - name: toString()
+    uid: azure-maps-control.atlas.data.Position.toString
+    package: azure-maps-control
+    summary: Returns a string representation of an array.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function toString()
+      return:
+        type: string
+        description: ''
+  - name: 'unshift(number[])'
+    uid: azure-maps-control.atlas.data.Position.unshift
+    package: azure-maps-control
+    summary: Inserts new elements at the start of an array.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function unshift(items: number[])'
+      parameters:
+        - id: items
+          type: 'number[]'
+          description: |
+            Elements to insert at the start of the Array.
+      return:
+        type: number
+        description: ''
+extends: Array&lt;number&gt;

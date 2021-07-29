@@ -1,0 +1,36 @@
+### YamlMime:TSType
+name: SearchPolygonGeojson
+uid: azure-maps-rest.atlas.service.SearchPolygonGeojson
+package: azure-maps-rest
+summary: >-
+  A helper extension providing methods for accessing the response data in
+  GeoJSON format.
+fullName: SearchPolygonGeojson
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+methods:
+  - name: getFeatures()
+    uid: azure-maps-rest.atlas.service.SearchPolygonGeojson.getFeatures
+    package: azure-maps-rest
+    summary: >-
+      Returns a GeoJSON feature collection built from the results.
+
+      Each feature in the collection is a Polygon or MultiPolygon representing
+      one geometry ID.
+
+      The properties of each feature match the properties of `additionalData`,
+
+      except the `geometryData` is omitted because it is redundant with the
+      feature itself.
+
+      The properties of the features in `geometryData` are kept too.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getFeatures()
+      return:
+        type: FeatureCollection&lt;Polygon | MultiPolygon&gt;
+        description: ''

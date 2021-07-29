@@ -1,0 +1,57 @@
+### YamlMime:TSType
+name: RouteResultSectionTecCause
+uid: azure-maps-rest.atlas.service.Models.RouteResultSectionTecCause
+package: azure-maps-rest
+summary: >-
+  The cause of the traffic event. Can contain <mainCauseCode> and <subCauseCode>
+  elements. Can be
+
+  used to define iconography and descriptions.
+fullName: RouteResultSectionTecCause
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: mainCauseCode
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RouteResultSectionTecCause.mainCauseCode
+    package: azure-maps-rest
+    summary: >-
+      The main cause of the traffic event. Contains a value in the
+      tec002:CauseCode table, as
+
+      defined in the TPEG2-TEC standard.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: mainCauseCode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'mainCauseCode?: number'
+      return:
+        type: number
+        description: ''
+  - name: subCauseCode
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RouteResultSectionTecCause.subCauseCode
+    package: azure-maps-rest
+    summary: >-
+      The subcause of the traffic event. Contains a value in the sub cause table
+      defined by the
+
+      mainCauseCode, as defined in the TPEG2-TEC standard.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: subCauseCode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'subCauseCode?: number'
+      return:
+        type: number
+        description: ''

@@ -1,0 +1,105 @@
+### YamlMime:TSPackage
+uid: azure-maps-spatial-io.atlas.io
+name: io
+type: module
+package: azure-maps-spatial-io
+summary: ''
+functions:
+  - name: 'read(string | ArrayBuffer | Blob, SpatialDataReadOptions)'
+    uid: azure-maps-spatial-io.atlas.io.read
+    package: azure-maps-spatial-io
+    summary: >-
+      Takes a spatial data string or a URL to a file or zipped file and parses
+      the spatial data into GeoJSON objects.
+
+      Supported spatial data formats: KML, KMZ, GPX, GeoRSS, GML, spatial
+      delimited files (CSV), GeoJSON.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function read(spatialData: string | ArrayBuffer | Blob, options?:
+        SpatialDataReadOptions)
+      parameters:
+        - id: spatialData
+          type: string | ArrayBuffer | Blob
+          description: The spatial data string or URL to a file to read.
+        - id: options
+          type: <xref uid="azure-maps-spatial-io.atlas.SpatialDataReadOptions" />
+          description: |
+            The read options.
+      return:
+        type: >-
+          Promise&lt;<xref uid="azure-maps-spatial-io.atlas.SpatialDataSet"
+          />&gt;
+        description: ''
+  - name: >-
+      write(azmaps, SpatialXmlWriteOptions & GmlWriteOptions &
+      SpatialCsvWriteOptions)
+    uid: azure-maps-spatial-io.atlas.io.write
+    package: azure-maps-spatial-io
+    summary: >-
+      Writes GeoJSON object data as a geospatial XML string in the specified
+      format.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function write(data: azmaps, options?: SpatialXmlWriteOptions &
+        GmlWriteOptions & SpatialCsvWriteOptions)
+      parameters:
+        - id: data
+          type: azmaps
+          description: 'The GeoJSON objects to retrieve shapes from, to write.'
+        - id: options
+          type: >-
+            <xref uid="azure-maps-spatial-io.atlas.SpatialXmlWriteOptions" /> &
+            <xref uid="azure-maps-spatial-io.atlas.GmlWriteOptions" /> & <xref
+            uid="azure-maps-spatial-io.atlas.SpatialCsvWriteOptions" />
+          description: |
+            A set of options that customize how the XML is written.
+      return:
+        type: Promise&lt;string&gt;
+        description: ''
+  - name: >-
+      writeCompressed(azmaps, "Base64" | "Blob" | "ArrayBuffer",
+      SpatialXmlWriteOptions & GmlWriteOptions & SpatialCsvWriteOptions)
+    uid: azure-maps-spatial-io.atlas.io.writeCompressed
+    package: azure-maps-spatial-io
+    summary: >-
+      Writes GeoJSON object data to a geospatial XML file embedded in a
+      compressed file.
+
+      The spatial file in the zip file will be names 'doc' and will be assigned
+      an appropriate file extension.
+
+      Possibly file extensions include; xml, kml, json, csv, tsv, txt.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function writeCompressed(data: azmaps, compressFormat?: "Base64" |
+        "Blob" | "ArrayBuffer", options?: SpatialXmlWriteOptions &
+        GmlWriteOptions & SpatialCsvWriteOptions)
+      parameters:
+        - id: data
+          type: azmaps
+          description: 'The GeoJSON objects to retrieve shapes from, to write.'
+        - id: compressFormat
+          type: '"Base64" | "Blob" | "ArrayBuffer"'
+          description: >-
+            The compressed file format to use. Options: Base64 (Data URI), Blob,
+            or ArrayBuffer
+        - id: options
+          type: >-
+            <xref uid="azure-maps-spatial-io.atlas.SpatialXmlWriteOptions" /> &
+            <xref uid="azure-maps-spatial-io.atlas.GmlWriteOptions" /> & <xref
+            uid="azure-maps-spatial-io.atlas.SpatialCsvWriteOptions" />
+          description: |
+            A set of options that customize how the data is written.
+      return:
+        type: Promise&lt;string | ArrayBuffer | Blob&gt;
+        description: ''

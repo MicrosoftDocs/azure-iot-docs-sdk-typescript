@@ -1,0 +1,96 @@
+### YamlMime:TSType
+name: RouteResultInstructionGroup
+uid: azure-maps-rest.atlas.service.Models.RouteResultInstructionGroup
+package: azure-maps-rest
+summary: >-
+  Groups a sequence of instruction elements which are related to each other. The
+  sequence range is
+
+  constrained with firstInstructionIndex and lastInstructionIndex. When
+  human-readable text
+
+  messages are requested for guidance (instructionType=text or tagged), then the
+  instructionGroup
+
+  has a summary message returned when available.
+fullName: RouteResultInstructionGroup
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: firstInstructionIndex
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RouteResultInstructionGroup.firstInstructionIndex
+    package: azure-maps-rest
+    summary: >-
+      Index of the first instruction.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: firstInstructionIndex
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'firstInstructionIndex?: number'
+      return:
+        type: number
+        description: ''
+  - name: groupLengthInMeters
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RouteResultInstructionGroup.groupLengthInMeters
+    package: azure-maps-rest
+    summary: >-
+      Length of the group.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: groupLengthInMeters
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'groupLengthInMeters?: number'
+      return:
+        type: number
+        description: ''
+  - name: groupMessage
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RouteResultInstructionGroup.groupMessage
+    package: azure-maps-rest
+    summary: >-
+      Summary message when human-readable text messages are requested for
+      guidance
+
+      (instructionType=text or tagged).
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: groupMessage
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'groupMessage?: string'
+      return:
+        type: string
+        description: ''
+  - name: lastInstructionIndex
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RouteResultInstructionGroup.lastInstructionIndex
+    package: azure-maps-rest
+    summary: >-
+      Index of the last instruction.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: lastInstructionIndex
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'lastInstructionIndex?: number'
+      return:
+        type: number
+        description: ''

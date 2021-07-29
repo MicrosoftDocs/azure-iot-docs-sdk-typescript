@@ -1,0 +1,76 @@
+### YamlMime:TSType
+name: CustomGmlNamespace
+uid: azure-maps-spatial-io.atlas.CustomGmlNamespace
+package: azure-maps-spatial-io
+summary: Defines a custom XML namespace.
+fullName: CustomGmlNamespace
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: featureTagName
+    uid: azure-maps-spatial-io.atlas.CustomGmlNamespace.featureTagName
+    package: azure-maps-spatial-io
+    summary: The tag name to wrap feature members with.
+    fullName: featureTagName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'featureTagName: string'
+      return:
+        type: string
+        description: ''
+  - name: geometryTagName
+    uid: azure-maps-spatial-io.atlas.CustomGmlNamespace.geometryTagName
+    package: azure-maps-spatial-io
+    summary: The tag name to wrap the geometry with.
+    fullName: geometryTagName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'geometryTagName: string'
+      return:
+        type: string
+        description: ''
+  - name: namespaceUrl
+    uid: azure-maps-spatial-io.atlas.CustomGmlNamespace.namespaceUrl
+    package: azure-maps-spatial-io
+    summary: A URL that points to the namespace schema.
+    fullName: namespaceUrl
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'namespaceUrl: string'
+      return:
+        type: string
+        description: ''
+  - name: prefix
+    uid: azure-maps-spatial-io.atlas.CustomGmlNamespace.prefix
+    package: azure-maps-spatial-io
+    summary: A prefix value to append to the tag names.
+    fullName: prefix
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'prefix: string'
+      return:
+        type: string
+        description: ''
+  - name: tagNames
+    uid: azure-maps-spatial-io.atlas.CustomGmlNamespace.tagNames
+    package: azure-maps-spatial-io
+    summary: An array of tag names that are allowed by this namespace.
+    fullName: tagNames
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'tagNames: string[]'
+      return:
+        type: 'string[]'
+        description: ''

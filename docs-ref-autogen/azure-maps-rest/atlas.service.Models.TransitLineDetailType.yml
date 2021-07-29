@@ -1,0 +1,57 @@
+### YamlMime:TSEnum
+name: TransitLineDetailType
+uid: azure-maps-rest.atlas.service.Models.TransitLineDetailType
+package: azure-maps-rest
+summary: >-
+  Defines values for TransitLineDetailType.
+
+  Possible values include: 'alerts', 'alertDetails', 'lines', 'stops',
+  'schedule', 'patterns'
+fullName: TransitLineDetailType
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: AlertDetails
+    uid: azure-maps-rest.atlas.service.Models.TransitLineDetailType.AlertDetails
+    package: azure-maps-rest
+    summary: >-
+      Can only be used in conjunction with detailType=alerts.Return additional
+      details associated
+
+      with the active service alerts.
+  - name: Alerts
+    uid: azure-maps-rest.atlas.service.Models.TransitLineDetailType.Alerts
+    package: azure-maps-rest
+    summary: >-
+      Return any active service alerts for the specified stop. Response provides
+      brief information
+
+      for disruption in service and all basic data associated with the alert.
+  - name: Lines
+    uid: azure-maps-rest.atlas.service.Models.TransitLineDetailType.Lines
+    package: azure-maps-rest
+    summary: Return transit lines that stops at the specified stop.
+  - name: Patterns
+    uid: azure-maps-rest.atlas.service.Models.TransitLineDetailType.Patterns
+    package: azure-maps-rest
+    summary: >-
+      Return list of patterns this group is comprised of. A pattern consists of
+      a stop sequence and
+
+      shape per line.
+  - name: Schedule
+    uid: azure-maps-rest.atlas.service.Models.TransitLineDetailType.Schedule
+    package: azure-maps-rest
+    summary: >-
+      Return a 24h static schedule for the specified line group from the current
+      time of the day to
+
+      the end of the current day. Data is guaranteed to be returned only between
+      the current day and
+
+      3 days forward.
+  - name: Stops
+    uid: azure-maps-rest.atlas.service.Models.TransitLineDetailType.Stops
+    package: azure-maps-rest
+    summary: Return list of stops the line group goes through.

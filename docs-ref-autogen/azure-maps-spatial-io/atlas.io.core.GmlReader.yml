@@ -1,0 +1,61 @@
+### YamlMime:TSType
+name: GmlReader
+uid: azure-maps-spatial-io.atlas.io.core.GmlReader
+package: azure-maps-spatial-io
+summary: A static class that reads GML data.
+fullName: GmlReader
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+methods:
+  - name: 'read(string, GmlReadOptions)'
+    uid: azure-maps-spatial-io.atlas.io.core.GmlReader.read
+    package: azure-maps-spatial-io
+    summary: Reads GeoJSON objects from a string that is in GML format.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function read(gml: string, options?: GmlReadOptions)'
+      parameters:
+        - id: gml
+          type: string
+          description: The GML string to read.
+        - id: options
+          type: <xref uid="azure-maps-spatial-io.atlas.GmlReadOptions" />
+          description: |
+            Options to use when parsing GML data.
+      return:
+        type: <xref uid="azure-maps-spatial-io.atlas.ExtendedFeatureCollection" />
+        description: ''
+  - name: 'readGeometry(string | XmlNode, GmlReadOptions)'
+    uid: azure-maps-spatial-io.atlas.io.core.GmlReader.readGeometry
+    package: azure-maps-spatial-io
+    summary: >-
+      Reads a GML Geometry; Feature, Point, LineString, Polygon, MultiPoint,
+
+      MultiLineString, MultiPolygon, MultiSurface, MultiCurve.
+
+      Other Spatial XML files such as GeoRSS often have embedded GML geometries
+      in them.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function readGeometry(gmlNode: string | XmlNode, options?:
+        GmlReadOptions)
+      parameters:
+        - id: gmlNode
+          type: string | <xref uid="azure-maps-spatial-io.atlas.io.core.XmlNode" />
+          description: A GML node to parse.
+        - id: options
+          type: <xref uid="azure-maps-spatial-io.atlas.GmlReadOptions" />
+          description: |
+            Options to use when parsing GML data.
+      return:
+        type: >-
+          <xref uid="azmaps.data.Feature" />&lt;<xref uid="azmaps.data.Geometry"
+          />, any&gt;
+        description: ''

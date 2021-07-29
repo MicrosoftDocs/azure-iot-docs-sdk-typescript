@@ -1,0 +1,45 @@
+### YamlMime:TSType
+name: SearchNearbyResponse
+uid: azure-maps-rest.atlas.service.Models.SearchNearbyResponse
+package: azure-maps-rest
+summary: This object is returned from a successful Search Nearby call
+fullName: SearchNearbyResponse
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: results
+    uid: azure-maps-rest.atlas.service.Models.SearchNearbyResponse.results
+    package: azure-maps-rest
+    summary: >-
+      Results array
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: results
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'results?: SearchNearbyResult[]'
+      return:
+        type: >-
+          <xref uid="azure-maps-rest.atlas.service.Models.SearchNearbyResult"
+          />[]
+        description: ''
+  - name: summary
+    uid: azure-maps-rest.atlas.service.Models.SearchNearbyResponse.summary
+    package: azure-maps-rest
+    summary: ''
+    fullName: summary
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'summary?: SearchNearbySummary'
+      return:
+        type: >-
+          <xref uid="azure-maps-rest.atlas.service.Models.SearchNearbySummary"
+          />
+        description: ''

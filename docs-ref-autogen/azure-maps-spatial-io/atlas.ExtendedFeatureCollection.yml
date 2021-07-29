@@ -1,0 +1,79 @@
+### YamlMime:TSType
+name: ExtendedFeatureCollection
+uid: azure-maps-spatial-io.atlas.ExtendedFeatureCollection
+package: azure-maps-spatial-io
+summary: A Feature Collection that has properties for the collection.
+fullName: ExtendedFeatureCollection
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: bbox
+    uid: azure-maps-spatial-io.atlas.ExtendedFeatureCollection.bbox
+    package: azure-maps-spatial-io
+    summary: The bounding box of the feature collection.
+    fullName: bbox
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'bbox?: BoundingBox'
+      return:
+        type: BoundingBox
+        description: ''
+  - name: features
+    uid: azure-maps-spatial-io.atlas.ExtendedFeatureCollection.features
+    package: azure-maps-spatial-io
+    summary: The collection of GeoJSON features contained in the feature collection.
+    fullName: features
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'features: Array<Feature<Geometry, any>>'
+      return:
+        type: 'Array&lt;Feature&lt;Geometry, any&gt;&gt;'
+        description: ''
+  - name: properties
+    uid: azure-maps-spatial-io.atlas.ExtendedFeatureCollection.properties
+    package: azure-maps-spatial-io
+    summary: Properties of the feature collection.
+    fullName: properties
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'properties?: any'
+      return:
+        type: any
+        description: ''
+  - name: type
+    uid: azure-maps-spatial-io.atlas.ExtendedFeatureCollection.type
+    package: azure-maps-spatial-io
+    summary: A GeoJSON type descriptor with value "FeatureCollection".
+    fullName: type
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'type: string'
+      return:
+        type: string
+        description: ''
+  - name: TYPE
+    uid: azure-maps-spatial-io.atlas.ExtendedFeatureCollection.TYPE
+    package: azure-maps-spatial-io
+    summary: >-
+      A static GeoJSON type descriptor for the FeatureCollection class to be
+      used in runtime comparisons.
+    fullName: TYPE
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static TYPE: string'
+      return:
+        type: string
+        description: ''
+extends: FeatureCollection

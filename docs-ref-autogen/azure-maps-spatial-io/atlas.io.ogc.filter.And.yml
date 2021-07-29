@@ -1,0 +1,44 @@
+### YamlMime:TSType
+name: And
+uid: azure-maps-spatial-io.atlas.io.ogc.filter.And
+package: azure-maps-spatial-io
+summary: Represents an AND logic operator filter.
+fullName: And
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'And(Filter[])'
+    uid: azure-maps-spatial-io.atlas.io.ogc.filter.And.constructor
+    package: azure-maps-spatial-io
+    summary: Represents an AND logic operator filter.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new And(filters: Filter[])'
+      parameters:
+        - id: filters
+          type: '<xref uid="azure-maps-spatial-io.atlas.io.ogc.filter.Filter" />[]'
+          description: |
+            A group of filters to apply the AND logic operator to.
+methods:
+  - name: toXml(string)
+    uid: azure-maps-spatial-io.atlas.io.ogc.filter.And.toXml
+    package: azure-maps-spatial-io
+    summary: Generates an XML version of the filter.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function toXml(version?: string)'
+      parameters:
+        - id: version
+          type: string
+          description: |
+            The WFS service version.
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-maps-spatial-io.atlas.io.ogc.filter.LogicOperatorFilter" />

@@ -1,0 +1,65 @@
+### YamlMime:TSType
+name: IStyleDefinitionStyle
+uid: azure-maps-indoor.atlas.indoor.IStyleDefinitionStyle
+package: azure-maps-indoor
+summary: A representation of a style definition's style object.
+fullName: IStyleDefinitionStyle
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: layerGroups
+    uid: azure-maps-indoor.atlas.indoor.IStyleDefinitionStyle.layerGroups
+    package: azure-maps-indoor
+    summary: 'List of layer groups, defining layer names and their layer style paths.'
+    fullName: layerGroups
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'layerGroups: IStyleDefinitionLayerGroup[]'
+      return:
+        type: >-
+          <xref uid="azure-maps-indoor.atlas.indoor.IStyleDefinitionLayerGroup"
+          />[]
+        description: ''
+  - name: name
+    uid: azure-maps-indoor.atlas.indoor.IStyleDefinitionStyle.name
+    package: azure-maps-indoor
+    summary: Style name.
+    fullName: name
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        type: string
+        description: ''
+  - name: spritePath
+    uid: azure-maps-indoor.atlas.indoor.IStyleDefinitionStyle.spritePath
+    package: azure-maps-indoor
+    summary: Style's sprite path.
+    fullName: spritePath
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'spritePath: string'
+      return:
+        type: string
+        description: ''
+  - name: theme
+    uid: azure-maps-indoor.atlas.indoor.IStyleDefinitionStyle.theme
+    package: azure-maps-indoor
+    summary: Style theme. `light` or `dark`.
+    fullName: theme
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'theme: "dark" | "light"'
+      return:
+        type: '"dark" | "light"'
+        description: ''

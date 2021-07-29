@@ -1,0 +1,102 @@
+### YamlMime:TSType
+name: WfsCapabilities
+uid: azure-maps-spatial-io.atlas.WfsCapabilities
+package: azure-maps-spatial-io
+summary: The capabilities of a WFS service.
+fullName: WfsCapabilities
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: abstract
+    uid: azure-maps-spatial-io.atlas.WfsCapabilities.abstract
+    package: azure-maps-spatial-io
+    summary: Description of service.
+    fullName: abstract
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'abstract?: string'
+      return:
+        type: string
+        description: ''
+  - name: featureTypes
+    uid: azure-maps-spatial-io.atlas.WfsCapabilities.featureTypes
+    package: azure-maps-spatial-io
+    summary: The feature types available in the service.
+    fullName: featureTypes
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'featureTypes: WfsFeatureType[]'
+      return:
+        type: '<xref uid="azure-maps-spatial-io.atlas.WfsFeatureType" />[]'
+        description: ''
+  - name: namespaces
+    uid: azure-maps-spatial-io.atlas.WfsCapabilities.namespaces
+    package: azure-maps-spatial-io
+    summary: ''
+    fullName: namespaces
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'namespaces: Record<string, string>'
+      return:
+        type: 'Record&lt;string, string&gt;'
+        description: ''
+  - name: operations
+    uid: azure-maps-spatial-io.atlas.WfsCapabilities.operations
+    package: azure-maps-spatial-io
+    summary: Supported operations of service.
+    fullName: operations
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'operations: string[]'
+      return:
+        type: 'string[]'
+        description: ''
+  - name: providerName
+    uid: azure-maps-spatial-io.atlas.WfsCapabilities.providerName
+    package: azure-maps-spatial-io
+    summary: The name of the service provider.
+    fullName: providerName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'providerName?: string'
+      return:
+        type: string
+        description: ''
+  - name: title
+    uid: azure-maps-spatial-io.atlas.WfsCapabilities.title
+    package: azure-maps-spatial-io
+    summary: Title of service.
+    fullName: title
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'title?: string'
+      return:
+        type: string
+        description: ''
+  - name: version
+    uid: azure-maps-spatial-io.atlas.WfsCapabilities.version
+    package: azure-maps-spatial-io
+    summary: The version of the WFS service.
+    fullName: version
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'version: string'
+      return:
+        type: string
+        description: ''

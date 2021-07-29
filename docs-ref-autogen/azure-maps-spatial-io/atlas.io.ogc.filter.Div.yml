@@ -1,0 +1,55 @@
+### YamlMime:TSType
+name: Div
+uid: azure-maps-spatial-io.atlas.io.ogc.filter.Div
+package: azure-maps-spatial-io
+summary: A divide operator filter.
+fullName: Div
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'Div(number | PropertyName | Filter, number | PropertyName | Filter)'
+    uid: azure-maps-spatial-io.atlas.io.ogc.filter.Div.constructor
+    package: azure-maps-spatial-io
+    summary: A divide operator filter.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new Div(value1: number | PropertyName | Filter, value2: number |
+        PropertyName | Filter)
+      parameters:
+        - id: value1
+          type: >-
+            number | <xref
+            uid="azure-maps-spatial-io.atlas.io.ogc.filter.PropertyName" /> |
+            <xref uid="azure-maps-spatial-io.atlas.io.ogc.filter.Filter" />
+          description: The first value to pass into the operator.
+        - id: value2
+          type: >-
+            number | <xref
+            uid="azure-maps-spatial-io.atlas.io.ogc.filter.PropertyName" /> |
+            <xref uid="azure-maps-spatial-io.atlas.io.ogc.filter.Filter" />
+          description: |
+            The second value to pass into the operator.
+methods:
+  - name: toXml(string)
+    uid: azure-maps-spatial-io.atlas.io.ogc.filter.Div.toXml
+    package: azure-maps-spatial-io
+    summary: Generates an XML version of the filter.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function toXml(version?: string)'
+      parameters:
+        - id: version
+          type: string
+          description: |
+            The WFS service version.
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-maps-spatial-io.atlas.io.ogc.filter.MathOperator" />

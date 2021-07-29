@@ -1,0 +1,53 @@
+### YamlMime:TSType
+name: LevelControl
+uid: azure-maps-indoor.atlas.control.LevelControl
+package: azure-maps-indoor
+summary: A control for changing the level of the indoor map.
+fullName: LevelControl
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: LevelControl(LevelControlOptions)
+    uid: azure-maps-indoor.atlas.control.LevelControl.constructor
+    package: azure-maps-indoor
+    summary: Constructs a LevelControl.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new LevelControl(options?: LevelControlOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-maps-indoor.atlas.control.LevelControlOptions" />
+          description: |
+            The options for the control.
+methods:
+  - name: onAdd()
+    uid: azure-maps-indoor.atlas.control.LevelControl.onAdd
+    package: azure-maps-indoor
+    summary: >-
+      Initialization method for the control which is called when added to the
+      map.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function onAdd()
+      return:
+        type: HTMLElement
+        description: An HTMLElement to be placed on the map for the control.
+  - name: onRemove()
+    uid: azure-maps-indoor.atlas.control.LevelControl.onRemove
+    package: azure-maps-indoor
+    summary: >-
+      Method that is called when the control is removed from the map. Should
+      perform any necessary cleanup for the
+
+      control.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function onRemove()

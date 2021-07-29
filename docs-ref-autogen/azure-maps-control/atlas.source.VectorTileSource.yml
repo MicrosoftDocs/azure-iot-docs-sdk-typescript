@@ -1,0 +1,83 @@
+### YamlMime:TSType
+name: VectorTileSource
+uid: azure-maps-control.atlas.source.VectorTileSource
+package: azure-maps-control
+summary: >-
+  A vector tile source describes how to access a vector tile layer.
+
+  Vector tile sources can be used with; SymbolLayer, LineLayer, PolygonLayer,
+  BubbleLayer, HeatmapLayer and VectorTileLayer.
+fullName: VectorTileSource<T>
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'VectorTileSource(string, VectorTileSourceOptions)'
+    uid: azure-maps-control.atlas.source.VectorTileSource.constructor
+    package: azure-maps-control
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new VectorTileSource(id?: string, options?: VectorTileSourceOptions)'
+      parameters:
+        - id: id
+          type: string
+          description: ''
+        - id: options
+          type: <xref uid="azure-maps-control.atlas.VectorTileSourceOptions" />
+          description: ''
+methods:
+  - name: getId()
+    uid: azure-maps-control.atlas.source.VectorTileSource.getId
+    package: azure-maps-control
+    summary: Gets the id of the data source
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getId()
+      return:
+        type: string
+        description: ''
+  - name: getOptions()
+    uid: azure-maps-control.atlas.source.VectorTileSource.getOptions
+    package: azure-maps-control
+    summary: Gets the options of the VectorTileSource.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getOptions()
+      return:
+        type: <xref uid="azure-maps-control.atlas.VectorTileSourceOptions" />
+        description: ''
+  - name: 'getShape(string, Expression)'
+    uid: azure-maps-control.atlas.source.VectorTileSource.getShape
+    package: azure-maps-control
+    summary: >-
+      Returns all GeoJSON features that are in the VectorTileSource and which
+      satisfy the specified filter expression.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getShape(sourceLayer: string, filter?: Expression)'
+      parameters:
+        - id: sourceLayer
+          type: string
+          description: >-
+            Required if the source is a VectorTileSource. Specifies the layer
+            within the VectorTileSource to query.
+        - id: filter
+          type: <xref uid="azure-maps-control.atlas.Expression" />
+          description: |
+            A filter that will limit the query.
+      return:
+        type: >-
+          Array&lt;<xref uid="azure-maps-control.atlas.data.Feature" />&lt;<xref
+          uid="azure-maps-control.atlas.data.Geometry" />, any&gt;&gt;
+        description: ''
+extends: <xref uid="azure-maps-control.atlas.source.Source" />

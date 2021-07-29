@@ -1,0 +1,121 @@
+### YamlMime:TSType
+name: PopupOptions
+uid: azure-maps-control.atlas.PopupOptions
+package: azure-maps-control
+summary: The options for a popup.
+fullName: PopupOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: closeButton
+    uid: azure-maps-control.atlas.PopupOptions.closeButton
+    package: azure-maps-control
+    summary: |-
+      Specifies if the close button should be displayed in the popup or not.
+      default `true`
+    fullName: closeButton
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'closeButton?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: content
+    uid: azure-maps-control.atlas.PopupOptions.content
+    package: azure-maps-control
+    summary: |-
+      The content to display within the popup.
+      default `span`
+    fullName: content
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'content?: HTMLElement | string'
+      return:
+        type: HTMLElement | string
+        description: ''
+  - name: draggable
+    uid: azure-maps-control.atlas.PopupOptions.draggable
+    package: azure-maps-control
+    summary: |-
+      Specifies if the popup can be dragged away from its position.
+      default `false`
+    fullName: draggable
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'draggable?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: fillColor
+    uid: azure-maps-control.atlas.PopupOptions.fillColor
+    package: azure-maps-control
+    summary: |-
+      Specifies the fill color of the popup.
+      default `"#FFFFFF"`
+    fullName: fillColor
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'fillColor?: string'
+      return:
+        type: string
+        description: ''
+  - name: pixelOffset
+    uid: azure-maps-control.atlas.PopupOptions.pixelOffset
+    package: azure-maps-control
+    summary: >-
+      An array of [pixelsRight, pixelsDown] for how many pixels to the right and
+      down the anchor of the popup should be
+
+      offset. Negative numbers can be used to offset the popup left and up.
+
+      default `[0, 0]`
+    fullName: pixelOffset
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'pixelOffset?: Pixel'
+      return:
+        type: <xref uid="azure-maps-control.atlas.Pixel" />
+        description: ''
+  - name: position
+    uid: azure-maps-control.atlas.PopupOptions.position
+    package: azure-maps-control
+    summary: |-
+      The position on the map where the popup should be anchored.
+      default `[0, 0]`
+    fullName: position
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'position?: Position'
+      return:
+        type: <xref uid="azure-maps-control.atlas.data.Position" />
+        description: ''
+  - name: showPointer
+    uid: azure-maps-control.atlas.PopupOptions.showPointer
+    package: azure-maps-control
+    summary: |-
+      Specifies if the pointer should be displayed in the popup or not.
+      default `true`
+    fullName: showPointer
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'showPointer?: boolean'
+      return:
+        type: boolean
+        description: ''
+extends: <xref uid="azure-maps-control.atlas.Options" />

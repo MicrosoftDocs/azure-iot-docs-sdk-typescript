@@ -1,0 +1,99 @@
+### YamlMime:TSType
+name: SpatialCsvReadOptions
+uid: azure-maps-spatial-io.atlas.SpatialCsvReadOptions
+package: azure-maps-spatial-io
+summary: Options used for reading delimited files.
+fullName: SpatialCsvReadOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: delimiter
+    uid: azure-maps-spatial-io.atlas.SpatialCsvReadOptions.delimiter
+    package: azure-maps-spatial-io
+    summary: >-
+      The delimiter character that separates the cells in a row of data.
+
+      If set to `"auto"`, the data will be analyzed and a suitable delimiter
+      will be chosen from `","` `"|"`, `"\t"`.
+
+      Default: `"auto"`
+    fullName: delimiter
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'delimiter?: string'
+      return:
+        type: string
+        description: ''
+  - name: dynamicTyping
+    uid: azure-maps-spatial-io.atlas.SpatialCsvReadOptions.dynamicTyping
+    package: azure-maps-spatial-io
+    summary: >-
+      If no header information is specified, or the header does not contain type
+      information.
+
+      Each cell value will be analyzed to determine if it is a number, boolean
+      or date and parsed accordingly.
+
+      Default: `false`
+    fullName: dynamicTyping
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'dynamicTyping?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: header
+    uid: azure-maps-spatial-io.atlas.SpatialCsvReadOptions.header
+    package: azure-maps-spatial-io
+    summary: |-
+      Header information for each column in the delimited file.
+      If not specified, the first row in the data will be used.
+    fullName: header
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'header?: CsvHeader'
+      return:
+        type: <xref uid="azure-maps-spatial-io.atlas.CsvHeader" />
+        description: ''
+  - name: maxFeatures
+    uid: azure-maps-spatial-io.atlas.SpatialCsvReadOptions.maxFeatures
+    package: azure-maps-spatial-io
+    summary: |-
+      Specifies the maximum number of features to read from the data set.
+      If not specified, will read all features.
+    fullName: maxFeatures
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxFeatures?: number'
+      return:
+        type: number
+        description: ''
+  - name: proxyService
+    uid: azure-maps-spatial-io.atlas.SpatialCsvReadOptions.proxyService
+    package: azure-maps-spatial-io
+    summary: >-
+      A URL to a proxy service that can have a URL to an external file appended
+      it.
+
+      This will be needed to access files that are hosted on non-CORs enabled
+      endpoints.
+    fullName: proxyService
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'proxyService?: string'
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-maps-spatial-io.atlas.BaseSpatialDataReadOptions" />

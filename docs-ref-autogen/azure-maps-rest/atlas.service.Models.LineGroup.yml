@@ -1,0 +1,130 @@
+### YamlMime:TSType
+name: LineGroup
+uid: azure-maps-rest.atlas.service.Models.LineGroup
+package: azure-maps-rest
+summary: A line group
+fullName: LineGroup
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: agencyId
+    uid: azure-maps-rest.atlas.service.Models.LineGroup.agencyId
+    package: azure-maps-rest
+    summary: 'The Id of the transit agency, for example, ''5872''.'
+    fullName: agencyId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'agencyId?: string'
+      return:
+        type: string
+        description: ''
+  - name: agencyName
+    uid: azure-maps-rest.atlas.service.Models.LineGroup.agencyName
+    package: azure-maps-rest
+    summary: 'The name of the transit agency, e.g. Metro Transit.'
+    fullName: agencyName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'agencyName?: string'
+      return:
+        type: string
+        description: ''
+  - name: caption1
+    uid: azure-maps-rest.atlas.service.Models.LineGroup.caption1
+    package: azure-maps-rest
+    summary: >-
+      A descriptive string. In case caption2 is null, should be used alone as a
+      subtitle to the line
+
+      number (i.e. Circular). In case caption2 has a value present, should be
+      used in conjunction
+
+      with it (i.e. Rome ↔ Napoli).
+    fullName: caption1
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'caption1?: string'
+      return:
+        type: string
+        description: ''
+  - name: caption2
+    uid: azure-maps-rest.atlas.service.Models.LineGroup.caption2
+    package: azure-maps-rest
+    summary: A descriptive string.
+    fullName: caption2
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'caption2?: string'
+      return:
+        type: string
+        description: ''
+  - name: color
+    uid: azure-maps-rest.atlas.service.Models.LineGroup.color
+    package: azure-maps-rest
+    summary: HEX color for the line.
+    fullName: color
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'color?: string'
+      return:
+        type: string
+        description: ''
+  - name: lineGroupId
+    uid: azure-maps-rest.atlas.service.Models.LineGroup.lineGroupId
+    package: azure-maps-rest
+    summary: >-
+      Line group Id. Typically contains 2 lines having the same agency and line,
+      one going from A to
+
+      B, and the other from B to A.
+    fullName: lineGroupId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'lineGroupId?: string'
+      return:
+        type: string
+        description: ''
+  - name: lineNumber
+    uid: azure-maps-rest.atlas.service.Models.LineGroup.lineNumber
+    package: azure-maps-rest
+    summary: The transit line number.
+    fullName: lineNumber
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'lineNumber?: string'
+      return:
+        type: string
+        description: ''
+  - name: transitType
+    uid: azure-maps-rest.atlas.service.Models.LineGroup.transitType
+    package: azure-maps-rest
+    summary: >-
+      The public transit type of the line. Possible values include: 'Bus',
+      'CableCar', 'Ferry',
+
+      'Funicular', 'Gondola', 'Rail', 'Tram', 'Subway'
+    fullName: transitType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'transitType?: TransitType'
+      return:
+        type: <xref uid="azure-maps-rest.atlas.service.Models.TransitType" />
+        description: ''

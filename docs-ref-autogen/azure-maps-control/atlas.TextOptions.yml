@@ -1,0 +1,343 @@
+### YamlMime:TSType
+name: TextOptions
+uid: azure-maps-control.atlas.TextOptions
+package: azure-maps-control
+summary: Options used to customize the text in a SymbolLayer
+fullName: TextOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: allowOverlap
+    uid: azure-maps-control.atlas.TextOptions.allowOverlap
+    package: azure-maps-control
+    summary: >-
+      Specifies if the text will be visible if it collides with other symbols.
+
+      If true, the text will be visible even if it collides with other
+      previously drawn symbols.
+
+      Default `false`.
+    fullName: allowOverlap
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'allowOverlap?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: anchor
+    uid: azure-maps-control.atlas.TextOptions.anchor
+    package: azure-maps-control
+    summary: >-
+      Specifies which part of the icon is placed closest to the icons anchor
+      position on the map.
+
+      <p>`"center"`: The center of the icon is placed closest to the anchor.</p>
+
+      <p>`"left"`: The left side of the icon is placed closest to the
+      anchor.</p>
+
+      <p>`"right"`: The right side of the icon is placed closest to the
+      anchor.</p>
+
+      <p>`"top"`: The top of the icon is placed closest to the anchor.</p>
+
+      <p>`"bottom"`: The bottom of the icon is placed closest to the anchor.</p>
+
+      <p>`"top-left"`: The top left corner of the icon is placed closest to the
+      anchor.</p>
+
+      <p>`"top-right"`: The top right corner of the icon is placed closest to
+      the anchor.</p>
+
+      <p>`"bottom-left"`: The bottom left corner of the icon is placed closest
+      to the anchor.</p>
+
+      <p>`"bottom-right"`: The bottom right corner of the icon is placed closest
+      to the anchor.</p>
+
+      Default `"center"`.
+    fullName: anchor
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        anchor?: "center" | "left" | "right" | "top" | "bottom" | "top-left" |
+        "top-right" | "bottom-left" | "bottom-right" | Expression
+      return:
+        type: >-
+          "center" | "left" | "right" | "top" | "bottom" | "top-left" |
+          "top-right" | "bottom-left" | "bottom-right" | <xref
+          uid="azure-maps-control.atlas.Expression" />
+        description: ''
+  - name: color
+    uid: azure-maps-control.atlas.TextOptions.color
+    package: azure-maps-control
+    summary: |-
+      The color of the text.
+      Default `"#000000"`.
+    fullName: color
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'color?: string | Expression'
+      return:
+        type: string | <xref uid="azure-maps-control.atlas.Expression" />
+        description: ''
+  - name: font
+    uid: azure-maps-control.atlas.TextOptions.font
+    package: azure-maps-control
+    summary: >-
+      The font stack to use for displaying text.
+
+      Possible values: `"SegoeFrutigerHelveticaMYingHei-Bold"`,
+      `"SegoeFrutigerHelveticaMYingHei-Medium"`,
+
+      `"SegoeFrutigerHelveticaMYingHei-Regular"`, `"SegoeUi-Bold"`,
+      `"SegoeUi-Light"`, `"SegoeUi-Regular"`,
+
+      `"SegoeUi-SemiBold"`, `"SegoeUi-SemiLight"`, `"SegoeUi-SymbolRegular"`,
+      `"StandardCondensedSegoeUi-Black"`,
+
+      `"StandardCondensedSegoeUi-Bold"`, `"StandardCondensedSegoeUi-Light"`,
+      `"StandardCondensedSegoeUi-Regular"`,
+
+      `"StandardFont-Black"`, `"StandardFont-Bold"`, `"StandardFont-Light"`,
+      `"StandardFont-Regular"`,
+
+      `"StandardFontCondensed-Black"`, `"StandardFontCondensed-Bold"`,
+      `"StandardFontCondensed-Light"`,
+
+      `"StandardFontCondensed-Regular"`.
+
+      Default `["StandardFont-Regular"]`.
+    fullName: font
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'font?: string[] | Expression'
+      return:
+        type: 'string[] | <xref uid="azure-maps-control.atlas.Expression" />'
+        description: ''
+  - name: haloBlur
+    uid: azure-maps-control.atlas.TextOptions.haloBlur
+    package: azure-maps-control
+    summary: |-
+      The halo's fadeout distance towards the outside in pixels.
+      Must be a number greater or equal to 0.
+      Default `0`.
+    fullName: haloBlur
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'haloBlur?: number | Expression'
+      return:
+        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        description: ''
+  - name: haloColor
+    uid: azure-maps-control.atlas.TextOptions.haloColor
+    package: azure-maps-control
+    summary: |-
+      The color of the text's halo, which helps it stand out from backgrounds.
+      Default `"rgba(0,0,0,0)"`.
+    fullName: haloColor
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'haloColor?: string | Expression'
+      return:
+        type: string | <xref uid="azure-maps-control.atlas.Expression" />
+        description: ''
+  - name: haloWidth
+    uid: azure-maps-control.atlas.TextOptions.haloWidth
+    package: azure-maps-control
+    summary: |-
+      The distance of the halo to the font outline in pixels.
+      Must be a number greater or equal to 0.
+      The maximum text halo width is 1/4 of the font size.
+      Default `0`.
+    fullName: haloWidth
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'haloWidth?: number | Expression'
+      return:
+        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        description: ''
+  - name: ignorePlacement
+    uid: azure-maps-control.atlas.TextOptions.ignorePlacement
+    package: azure-maps-control
+    summary: |-
+      Specifies if the other symbols are allowed to collide with the text.
+      If true, other symbols can be visible even if they collide with the text.
+      Default `false`.
+    fullName: ignorePlacement
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'ignorePlacement?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: offset
+    uid: azure-maps-control.atlas.TextOptions.offset
+    package: azure-maps-control
+    summary: >-
+      Specifies an offset distance of the icon from its anchor in ems.
+
+      Positive values indicate right and down, while negative values indicate
+      left and up.
+
+      Default `[0, 0]`.
+    fullName: offset
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'offset?: Pixel | Expression'
+      return:
+        type: >-
+          <xref uid="azure-maps-control.atlas.Pixel" /> | <xref
+          uid="azure-maps-control.atlas.Expression" />
+        description: ''
+  - name: opacity
+    uid: azure-maps-control.atlas.TextOptions.opacity
+    package: azure-maps-control
+    summary: >-
+      A number between 0 and 1 that indicates the opacity at which the text will
+      be drawn.
+
+      Default `1`.
+    fullName: opacity
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'opacity?: number | Expression'
+      return:
+        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        description: ''
+  - name: optional
+    uid: azure-maps-control.atlas.TextOptions.optional
+    package: azure-maps-control
+    summary: |-
+      Specifies if the text can be hidden if it is overlapped by another symbol.
+      If true, icons will display without their corresponding text
+      when the text collides wit other symbols and the icon does not.
+      Default `false`.
+    fullName: optional
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'optional?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: pitchAlignment
+    uid: azure-maps-control.atlas.TextOptions.pitchAlignment
+    package: azure-maps-control
+    summary: |-
+      Specifies the orientation of the text when the map is pitched.
+      <p>`"auto"`: Automatically matches the value of `rotationAlignment`.</p>
+      <p>`"map"`: The text is aligned to the plane of the map.</p>
+      <p>`"viewport"`: The text is aligned to the plane of the viewport.</p>
+      Default: `"auto"`
+    fullName: pitchAlignment
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'pitchAlignment?: "auto" | "map" | "viewport"'
+      return:
+        type: '"auto" | "map" | "viewport"'
+        description: ''
+  - name: rotation
+    uid: azure-maps-control.atlas.TextOptions.rotation
+    package: azure-maps-control
+    summary: |-
+      The amount to rotate the text clockwise in degrees.
+      Default `0`
+    fullName: rotation
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'rotation?: number | Expression'
+      return:
+        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        description: ''
+  - name: rotationAlignment
+    uid: azure-maps-control.atlas.TextOptions.rotationAlignment
+    package: azure-maps-control
+    summary: >-
+      In combination with the `placement` property of the `SymbolLayerOptions`,
+
+      specifies the rotation behavior of the individual glyphs forming the text.
+
+      <p>`"auto"`: When the `placement` is set to `"point"`, this is equivalent
+      to `"map"`.
+
+      When the `placement` is set to `"line"` this is equivalent to `"map"`.</p>
+
+      <p>`"map"`: When the `placement` is set to `"point"`, aligns text
+      east-west.
+
+      When the `placement` is set to `"line"`, aligns text x-axes with the
+      line.</p>
+
+      <p>`"viewport"`: Produces glyphs whose x-axes are aligned with the x-axis
+      of the viewport,
+
+      regardless of the value of `placement`.</p>
+
+      Default: `"auto"`
+    fullName: rotationAlignment
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'rotationAlignment?: "auto" | "map" | "viewport"'
+      return:
+        type: '"auto" | "map" | "viewport"'
+        description: ''
+  - name: size
+    uid: azure-maps-control.atlas.TextOptions.size
+    package: azure-maps-control
+    summary: |-
+      The size of the font in pixels.
+      Must be a number greater or equal to 0.
+      Default `16`.
+    fullName: size
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'size?: number | Expression'
+      return:
+        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        description: ''
+  - name: textField
+    uid: azure-maps-control.atlas.TextOptions.textField
+    package: azure-maps-control
+    summary: Specifies the name of a property on the features to use for a text label.
+    fullName: textField
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'textField?: string | Expression'
+      return:
+        type: string | <xref uid="azure-maps-control.atlas.Expression" />
+        description: ''
+extends: <xref uid="azure-maps-control.atlas.Options" />

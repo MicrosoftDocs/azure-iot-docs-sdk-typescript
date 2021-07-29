@@ -1,0 +1,64 @@
+### YamlMime:TSType
+name: WKT
+uid: azure-maps-spatial-io.atlas.io.ogc.WKT
+package: azure-maps-spatial-io
+summary: >-
+  A static class for reading/writing Well Known Text (WKT) strings as GeoJSON
+  geometries.
+fullName: WKT
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+methods:
+  - name: read(string)
+    uid: azure-maps-spatial-io.atlas.io.ogc.WKT.read
+    package: azure-maps-spatial-io
+    summary: >-
+      Reads the data in well-known text format and returns the geometry.
+
+      If the geometry is a GeometryCollection, an array of geometries is
+      returned.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function read(wkt: string)'
+      parameters:
+        - id: wkt
+          type: string
+          description: |
+            Well-known text string data that needs to be parsed into geometries.
+      return:
+        type: '<xref uid="azmaps.data.Geometry" />[]'
+        description: ''
+  - name: 'write(azmaps, number, boolean)'
+    uid: azure-maps-spatial-io.atlas.io.ogc.WKT.write
+    package: azure-maps-spatial-io
+    summary: Writes geometry data as well-known text.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function write(data: azmaps, coordinatePrecision?: number,
+        includeElev?: boolean)
+      parameters:
+        - id: data
+          type: azmaps
+          description: |-
+            Geometry data to be written as well-known text.
+            Array of geometries will be written as geometry collections.
+        - id: coordinatePrecision
+          type: number
+          description: 'The number of decimal places to round coordinates to. Default: 6.'
+        - id: includeElev
+          type: boolean
+          description: >
+            Specifies if elevation data, stored in 3rd value of Position, should
+            be written.
+
+            If set to true and no elevation data in Position, will default to 0.
+      return:
+        type: string
+        description: ''

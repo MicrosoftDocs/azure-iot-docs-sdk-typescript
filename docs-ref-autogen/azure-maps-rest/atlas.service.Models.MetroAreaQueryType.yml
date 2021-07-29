@@ -1,0 +1,28 @@
+### YamlMime:TSEnum
+name: MetroAreaQueryType
+uid: azure-maps-rest.atlas.service.Models.MetroAreaQueryType
+package: azure-maps-rest
+summary: |-
+  Defines values for MetroAreaQueryType.
+  Possible values include: 'position', 'countryCode'
+fullName: MetroAreaQueryType
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: CountryCode
+    uid: azure-maps-rest.atlas.service.Models.MetroAreaQueryType.CountryCode
+    package: azure-maps-rest
+    summary: >-
+      2-character [ISO 3166-1](https://www.iso.org/iso-3166-country-codes.html)
+      alpha-2 country
+
+      code. E.g. US.
+  - name: Position
+    uid: azure-maps-rest.atlas.service.Models.MetroAreaQueryType.Position
+    package: azure-maps-rest
+    summary: >-
+      The origin of the route as a comma separated string composed by latitude
+      followed by longitude
+
+      e.g. "47.641268,-122.125679".

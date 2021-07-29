@@ -1,0 +1,263 @@
+### YamlMime:TSType
+name: IconOptions
+uid: azure-maps-control.atlas.IconOptions
+package: azure-maps-control
+summary: Options used to customize the icons in a SymbolLayer
+fullName: IconOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: allowOverlap
+    uid: azure-maps-control.atlas.IconOptions.allowOverlap
+    package: azure-maps-control
+    summary: >-
+      Specifies if the symbol icon can overlay other symbols on the map.
+
+      If `true` the icon will be visible even if it collides with other
+      previously drawn symbols.
+
+      Tip: Set this to true if animating an symbol to ensure smooth rendering.
+
+      Default `false`.
+    fullName: allowOverlap
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'allowOverlap?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: anchor
+    uid: azure-maps-control.atlas.IconOptions.anchor
+    package: azure-maps-control
+    summary: >-
+      Specifies which part of the icon is placed closest to the icons anchor
+      position on the map.
+
+      <p>`"center"`: The center of the icon is placed closest to the anchor.</p>
+
+      <p>`"left"`: The left side of the icon is placed closest to the
+      anchor.</p>
+
+      <p>`"right"`: The right side of the icon is placed closest to the
+      anchor.</p>
+
+      <p>`"top"`: The top of the icon is placed closest to the anchor.</p>
+
+      <p>`"bottom"`: The bottom of the icon is placed closest to the anchor.</p>
+
+      <p>`"top-left"`: The top left corner of the icon is placed closest to the
+      anchor.</p>
+
+      <p>`"top-right"`: The top right corner of the icon is placed closest to
+      the anchor.</p>
+
+      <p>`"bottom-left"`: The bottom left corner of the icon is placed closest
+      to the anchor.</p>
+
+      <p>`"bottom-right"`: The bottom right corner of the icon is placed closest
+      to the anchor.</p>
+
+      Default `"bottom"`.
+    fullName: anchor
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        anchor?: "center" | "left" | "right" | "top" | "bottom" | "top-left" |
+        "top-right" | "bottom-left" | "bottom-right" | Expression
+      return:
+        type: >-
+          "center" | "left" | "right" | "top" | "bottom" | "top-left" |
+          "top-right" | "bottom-left" | "bottom-right" | <xref
+          uid="azure-maps-control.atlas.Expression" />
+        description: ''
+  - name: ignorePlacement
+    uid: azure-maps-control.atlas.IconOptions.ignorePlacement
+    package: azure-maps-control
+    summary: |-
+      Specifies if other symbols can overlap this symbol.
+      If true, other symbols can be visible even if they collide with the icon.
+      Default `false`.
+    fullName: ignorePlacement
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'ignorePlacement?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: image
+    uid: azure-maps-control.atlas.IconOptions.image
+    package: azure-maps-control
+    summary: >-
+      The name of the image in the map's image sprite to use for drawing the
+      icon.
+
+      Available built-in images are: `marker-black`, `marker-blue`,
+      `marker-darkblue`,
+
+      `marker-red`, `marker-yellow`, `pin-blue`, `pin-darkblue`, `pin-red`,
+      `pin-round-blue`,
+
+      `pin-round-darkblue`, `pin-round-red`.
+
+      Default `"marker-blue"`.
+    fullName: image
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'image?: string | Expression'
+      return:
+        type: string | <xref uid="azure-maps-control.atlas.Expression" />
+        description: ''
+  - name: offset
+    uid: azure-maps-control.atlas.IconOptions.offset
+    package: azure-maps-control
+    summary: >-
+      Specifies an offset distance of the icon from its anchor in pixels.
+
+      Positive values indicate right and down, while negative values indicate
+      left and up.
+
+      Each component is multiplied by the value of size to obtain the final
+      offset in pixels.
+
+      When combined with rotation the offset will be as if the rotated direction
+      was up.
+
+      Default `[0, 0]`.
+    fullName: offset
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'offset?: Pixel | Expression'
+      return:
+        type: >-
+          <xref uid="azure-maps-control.atlas.Pixel" /> | <xref
+          uid="azure-maps-control.atlas.Expression" />
+        description: ''
+  - name: opacity
+    uid: azure-maps-control.atlas.IconOptions.opacity
+    package: azure-maps-control
+    summary: >-
+      A number between 0 and 1 that indicates the opacity at which the icon will
+      be drawn.
+
+      Default `1`.
+    fullName: opacity
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'opacity?: number | Expression'
+      return:
+        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        description: ''
+  - name: optional
+    uid: azure-maps-control.atlas.IconOptions.optional
+    package: azure-maps-control
+    summary: >-
+      Specifies if a symbols icon can be hidden but its text displayed if it is
+      overlapped with another symbol.
+
+      If true, text will display without their corresponding icons
+
+      when the icon collides with other symbols and the text does not.
+
+      Default `false`.
+    fullName: optional
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'optional?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: pitchAlignment
+    uid: azure-maps-control.atlas.IconOptions.pitchAlignment
+    package: azure-maps-control
+    summary: |-
+      Specifies the orientation of the icon when the map is pitched.
+      <p>`"auto"`: Automatically matches the value of `rotationAlignment`.</p>
+      <p>`"map"`: The icon is aligned to the plane of the map.</p>
+      <p>`"viewport"`: The icon is aligned to the plane of the viewport</p>
+      Default `"auto"`
+    fullName: pitchAlignment
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'pitchAlignment?: "auto" | "map" | "viewport"'
+      return:
+        type: '"auto" | "map" | "viewport"'
+        description: ''
+  - name: rotation
+    uid: azure-maps-control.atlas.IconOptions.rotation
+    package: azure-maps-control
+    summary: |-
+      The amount to rotate the icon clockwise in degrees
+      Default `0`.
+    fullName: rotation
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'rotation?: number | Expression'
+      return:
+        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        description: ''
+  - name: rotationAlignment
+    uid: azure-maps-control.atlas.IconOptions.rotationAlignment
+    package: azure-maps-control
+    summary: >-
+      In combination with the placement property of a SymbolLayerOptions
+
+      this determines the rotation behavior of icons.
+
+      <p>`"auto"`: When placement is "point" this is equivalent to "viewport".
+
+      When placement is "line" this is equivalent to "map".</p>
+
+      <p>`"map"`: When placement is "point" aligns icons east-west.
+
+      When placement is "line" aligns the icons' x-axes with the line.</p>
+
+      <p>`"viewport"`: Icons' x-axes will align with the x-axis of the
+      viewport.</p>
+
+      Default `"auto"`.
+    fullName: rotationAlignment
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'rotationAlignment?: "auto" | "map" | "viewport"'
+      return:
+        type: '"auto" | "map" | "viewport"'
+        description: ''
+  - name: size
+    uid: azure-maps-control.atlas.IconOptions.size
+    package: azure-maps-control
+    summary: |-
+      Scales the original size of the icon by the provided factor.
+      Must be greater or equal to 0.
+      Default `1`.
+    fullName: size
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'size?: number | Expression'
+      return:
+        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        description: ''
+extends: <xref uid="azure-maps-control.atlas.Options" />

@@ -1,0 +1,142 @@
+### YamlMime:TSType
+name: RouteDirectionsResponse
+uid: azure-maps-rest.atlas.service.Models.RouteDirectionsResponse
+package: azure-maps-rest
+summary: This object is returned from a successful Route Directions call
+fullName: RouteDirectionsResponse
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: copyright
+    uid: azure-maps-rest.atlas.service.Models.RouteDirectionsResponse.copyright
+    package: azure-maps-rest
+    summary: >-
+      Copyright property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: copyright
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'copyright?: string'
+      return:
+        type: string
+        description: ''
+  - name: formatVersion
+    uid: azure-maps-rest.atlas.service.Models.RouteDirectionsResponse.formatVersion
+    package: azure-maps-rest
+    summary: >-
+      Format Version property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: formatVersion
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'formatVersion?: string'
+      return:
+        type: string
+        description: ''
+  - name: optimizedWaypoints
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RouteDirectionsResponse.optimizedWaypoints
+    package: azure-maps-rest
+    summary: >
+      Optimized sequence of waypoints. It shows the index from the user provided
+      waypoint sequence
+
+      for the original and optimized list. For instance, a response:
+
+      ```
+
+      <optimizedWaypoints>
+
+      <waypoint providedIndex="0" optimizedIndex="1"/>
+
+      <waypoint providedIndex="1" optimizedIndex="2"/>
+
+      <waypoint providedIndex="2" optimizedIndex="0"/>
+
+      </optimizedWaypoints>
+
+      ```
+
+
+      means that the original sequence is [0, 1, 2] and optimized sequence is
+      [1, 2, 0]. Since the
+
+      index starts by 0 the original is "first, second, third" while the
+      optimized is "second,
+
+      third, first".
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: optimizedWaypoints
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'optimizedWaypoints?: RouteOptimizedWaypoint[]'
+      return:
+        type: >-
+          <xref
+          uid="azure-maps-rest.atlas.service.Models.RouteOptimizedWaypoint" />[]
+        description: ''
+  - name: privacy
+    uid: azure-maps-rest.atlas.service.Models.RouteDirectionsResponse.privacy
+    package: azure-maps-rest
+    summary: >-
+      Privacy property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: privacy
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'privacy?: string'
+      return:
+        type: string
+        description: ''
+  - name: report
+    uid: azure-maps-rest.atlas.service.Models.RouteDirectionsResponse.report
+    package: azure-maps-rest
+    summary: ''
+    fullName: report
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'report?: RouteResponseReport'
+      return:
+        type: >-
+          <xref uid="azure-maps-rest.atlas.service.Models.RouteResponseReport"
+          />
+        description: ''
+  - name: routes
+    uid: azure-maps-rest.atlas.service.Models.RouteDirectionsResponse.routes
+    package: azure-maps-rest
+    summary: >-
+      Routes array
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: routes
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'routes?: RouteDirectionsResult[]'
+      return:
+        type: >-
+          <xref uid="azure-maps-rest.atlas.service.Models.RouteDirectionsResult"
+          />[]
+        description: ''

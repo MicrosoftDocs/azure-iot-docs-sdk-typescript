@@ -1,0 +1,97 @@
+### YamlMime:TSType
+name: CameraBoundsOptions
+uid: azure-maps-control.atlas.CameraBoundsOptions
+package: azure-maps-control
+summary: The options for setting the bounds of the map control's camera.
+fullName: CameraBoundsOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: bounds
+    uid: azure-maps-control.atlas.CameraBoundsOptions.bounds
+    package: azure-maps-control
+    summary: |-
+      The bounds of the map control's camera.
+      `default [-180, -89, 180, 90]`
+    fullName: bounds
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'bounds?: BoundingBox'
+      return:
+        type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+        description: ''
+  - name: maxBounds
+    uid: azure-maps-control.atlas.CameraBoundsOptions.maxBounds
+    package: azure-maps-control
+    summary: >-
+      A bounding box in which to constrain the viewable map area to.
+
+      Users won't be able to pan the center of the map outside of this bounding
+      box.
+
+      Set maxBounds to null or undefined to remove maxBounds
+
+      Default `undefined`.
+    fullName: maxBounds
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxBounds?: BoundingBox'
+      return:
+        type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+        description: ''
+  - name: maxZoom
+    uid: azure-maps-control.atlas.CameraBoundsOptions.maxZoom
+    package: azure-maps-control
+    summary: >-
+      The maximum zoom level to allow when the map view transitions to the
+      specified bounds.
+
+      `default 20`
+    fullName: maxZoom
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxZoom?: number'
+      return:
+        type: number
+        description: ''
+  - name: offset
+    uid: azure-maps-control.atlas.CameraBoundsOptions.offset
+    package: azure-maps-control
+    summary: >-
+      An offset of the center of the given bounds relative to the map's center,
+      measured in pixels.
+
+      `default [0, 0]`
+    fullName: offset
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'offset?: Pixel'
+      return:
+        type: <xref uid="azure-maps-control.atlas.Pixel" />
+        description: ''
+  - name: padding
+    uid: azure-maps-control.atlas.CameraBoundsOptions.padding
+    package: azure-maps-control
+    summary: |-
+      The amount of padding in pixels to add to the given bounds.
+      `default {top: 0, bottom: 0, left: 0, right: 0}`
+    fullName: padding
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'padding?: Padding | number'
+      return:
+        type: <xref uid="azure-maps-control.atlas.Padding" /> | number
+        description: ''
+extends: <xref uid="azure-maps-control.atlas.Options" />

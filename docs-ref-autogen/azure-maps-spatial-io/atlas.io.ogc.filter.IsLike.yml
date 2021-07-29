@@ -1,0 +1,52 @@
+### YamlMime:TSType
+name: IsLike
+uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsLike
+package: azure-maps-spatial-io
+summary: Checks to see if a value is like another using a wild card search.
+fullName: IsLike
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'IsLike(string, string, LikeOptions)'
+    uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsLike.constructor
+    package: azure-maps-spatial-io
+    summary: Checks to see if a value is like another using a wild card comparison.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new IsLike(propertyName: string, literal: string, options: LikeOptions)'
+      parameters:
+        - id: propertyName
+          type: string
+          description: The name of the property to containing the value to compare.
+        - id: literal
+          type: string
+          description: The value to compare.
+        - id: options
+          type: <xref uid="azure-maps-spatial-io.atlas.io.ogc.filter.LikeOptions" />
+          description: |
+            Options for the comparison.
+methods:
+  - name: toXml(string)
+    uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsLike.toXml
+    package: azure-maps-spatial-io
+    summary: Generates an XML version of the filter.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function toXml(version?: string)'
+      parameters:
+        - id: version
+          type: string
+          description: |
+            The WFS service version.
+      return:
+        type: string
+        description: ''
+extends: >-
+  <xref uid="azure-maps-spatial-io.atlas.io.ogc.filter.BinaryComparisonOpType"
+  />

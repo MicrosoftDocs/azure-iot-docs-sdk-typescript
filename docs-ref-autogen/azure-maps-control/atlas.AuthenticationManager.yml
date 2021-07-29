@@ -1,0 +1,90 @@
+### YamlMime:TSType
+name: AuthenticationManager
+uid: azure-maps-control.atlas.AuthenticationManager
+package: azure-maps-control
+summary: |-
+  A manager for the map control's authentication.
+  Exposed through the authentication property of the atlas.Map class.
+  Cannot be instantiated by the user.
+fullName: AuthenticationManager
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+methods:
+  - name: getAuthType()
+    uid: azure-maps-control.atlas.AuthenticationManager.getAuthType
+    package: azure-maps-control
+    summary: Returns the current authentication type in use.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getAuthType()
+      return:
+        type: <xref uid="azure-maps-control.atlas.AuthenticationType" />
+        description: ''
+  - name: getClientId()
+    uid: azure-maps-control.atlas.AuthenticationManager.getClientId
+    package: azure-maps-control
+    summary: Returns the current client ID in use.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getClientId()
+      return:
+        type: string
+        description: ''
+  - name: getToken()
+    uid: azure-maps-control.atlas.AuthenticationManager.getToken
+    package: azure-maps-control
+    summary: >-
+      Returns the access token with an audience URI of
+      https://atlas.microsoft.com.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getToken()
+      return:
+        type: string
+        description: ''
+  - name: initialize()
+    uid: azure-maps-control.atlas.AuthenticationManager.initialize
+    package: azure-maps-control
+    summary: >-
+      Initializes the authentication mechanism specified in
+      AuthenticationOptions.
+
+      If this method has been called before the original initialize promise is
+      returned.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function initialize()
+      return:
+        type: Promise&lt;void&gt;
+        description: ''
+  - name: signRequest(RequestParameters)
+    uid: azure-maps-control.atlas.AuthenticationManager.signRequest
+    package: azure-maps-control
+    summary: >-
+      Adds the necessary authentication query parameters or headers to a
+      RequestParameters.
+
+      Returns the updated RequestParameters.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function signRequest(params: RequestParameters)'
+      parameters:
+        - id: params
+          type: <xref uid="azure-maps-control.atlas.RequestParameters" />
+          description: |
+            The RequestParameters to update.
+      return:
+        type: <xref uid="azure-maps-control.atlas.RequestParameters" />
+        description: ''

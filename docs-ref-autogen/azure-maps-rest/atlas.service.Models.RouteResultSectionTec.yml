@@ -1,0 +1,52 @@
+### YamlMime:TSType
+name: RouteResultSectionTec
+uid: azure-maps-rest.atlas.service.Models.RouteResultSectionTec
+package: azure-maps-rest
+summary: >-
+  Details of the traffic event, using definitions in the TPEG2-TEC standard. Can
+  contain
+
+  <effectCode> and <causes> elements.
+fullName: RouteResultSectionTec
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: causes
+    uid: azure-maps-rest.atlas.service.Models.RouteResultSectionTec.causes
+    package: azure-maps-rest
+    summary: List of <cause> elements.
+    fullName: causes
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'causes?: RouteResultSectionTecCause[]'
+      return:
+        type: >-
+          <xref
+          uid="azure-maps-rest.atlas.service.Models.RouteResultSectionTecCause"
+          />[]
+        description: ''
+  - name: effectCode
+    uid: azure-maps-rest.atlas.service.Models.RouteResultSectionTec.effectCode
+    package: azure-maps-rest
+    summary: >-
+      The effect on the traffic flow. Contains a value in the tec001:EffectCode
+      table, as defined in
+
+      the TPEG2-TEC standard. Can be used to color-code traffic events according
+      to severity.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: effectCode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'effectCode?: number'
+      return:
+        type: number
+        description: ''

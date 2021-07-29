@@ -1,0 +1,62 @@
+### YamlMime:TSType
+name: CopyrightTileResult
+uid: azure-maps-rest.atlas.service.Models.CopyrightTileResult
+package: azure-maps-rest
+summary: This object is returned from a successful Copyright Tile call
+fullName: CopyrightTileResult
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: formatVersion
+    uid: azure-maps-rest.atlas.service.Models.CopyrightTileResult.formatVersion
+    package: azure-maps-rest
+    summary: >-
+      Format Version property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: formatVersion
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'formatVersion?: string'
+      return:
+        type: string
+        description: ''
+  - name: generalCopyrights
+    uid: azure-maps-rest.atlas.service.Models.CopyrightTileResult.generalCopyrights
+    package: azure-maps-rest
+    summary: >-
+      General Copyrights array
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: generalCopyrights
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'generalCopyrights?: string[]'
+      return:
+        type: 'string[]'
+        description: ''
+  - name: regions
+    uid: azure-maps-rest.atlas.service.Models.CopyrightTileResult.regions
+    package: azure-maps-rest
+    summary: >-
+      Regions array
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: regions
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'regions?: Region[]'
+      return:
+        type: '<xref uid="azure-maps-rest.atlas.service.Models.Region" />[]'
+        description: ''

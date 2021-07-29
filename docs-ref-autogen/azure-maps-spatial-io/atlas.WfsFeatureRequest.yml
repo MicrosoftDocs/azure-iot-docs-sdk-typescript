@@ -1,0 +1,159 @@
+### YamlMime:TSType
+name: WfsFeatureRequest
+uid: azure-maps-spatial-io.atlas.WfsFeatureRequest
+package: azure-maps-spatial-io
+summary: Options for requesting features from a WFS service.
+fullName: WfsFeatureRequest
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: bbox
+    uid: azure-maps-spatial-io.atlas.WfsFeatureRequest.bbox
+    package: azure-maps-spatial-io
+    summary: Bounding Box limit. Must not be used with Filter.
+    fullName: bbox
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'bbox?: azmaps.data.BoundingBox'
+      return:
+        type: <xref uid="azmaps.data.BoundingBox" />
+        description: ''
+  - name: count
+    uid: azure-maps-spatial-io.atlas.WfsFeatureRequest.count
+    package: azure-maps-spatial-io
+    summary: Number of features to retrieve when paging.
+    fullName: count
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'count: number'
+      return:
+        type: number
+        description: ''
+  - name: cql_filter
+    uid: azure-maps-spatial-io.atlas.WfsFeatureRequest.cql_filter
+    package: azure-maps-spatial-io
+    summary: A custom CQL filter to append to the request.
+    fullName: cql_filter
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'cql_filter?: string'
+      return:
+        type: string
+        description: ''
+  - name: customDimensions
+    uid: azure-maps-spatial-io.atlas.WfsFeatureRequest.customDimensions
+    package: azure-maps-spatial-io
+    summary: A key-value object containing additional parameters to append the request.
+    fullName: customDimensions
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'customDimensions?: Record<string, string>'
+      return:
+        type: 'Record&lt;string, string&gt;'
+        description: ''
+  - name: fallbackSrs
+    uid: azure-maps-spatial-io.atlas.WfsFeatureRequest.fallbackSrs
+    package: azure-maps-spatial-io
+    summary: >-
+      Specifies which SRS value to use if a valid one is not specified in the
+      capabilities.
+       Some WFS services support reprojection on the fly and thus do not list every possible supported SRS.
+       If set to null, and not supported SRS found in capabilities, an error will be thrown.
+       Default: 'urn:ogc:def:crs:EPSG::4326'
+    fullName: fallbackSrs
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'fallbackSrs?: string'
+      return:
+        type: string
+        description: ''
+  - name: featureId
+    uid: azure-maps-spatial-io.atlas.WfsFeatureRequest.featureId
+    package: azure-maps-spatial-io
+    summary: The id of a feature to retrieve.
+    fullName: featureId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'featureId?: string'
+      return:
+        type: string
+        description: ''
+  - name: filter
+    uid: azure-maps-spatial-io.atlas.WfsFeatureRequest.filter
+    package: azure-maps-spatial-io
+    summary: Filter condition. Must not be used with BBOX option.
+    fullName: filter
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'filter?: Filter'
+      return:
+        type: <xref uid="azure-maps-spatial-io.atlas.io.ogc.filter.Filter" />
+        description: ''
+  - name: propertyNames
+    uid: azure-maps-spatial-io.atlas.WfsFeatureRequest.propertyNames
+    package: azure-maps-spatial-io
+    summary: A comma delimited list of property names to return.
+    fullName: propertyNames
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'propertyNames?: string'
+      return:
+        type: string
+        description: ''
+  - name: sortBy
+    uid: azure-maps-spatial-io.atlas.WfsFeatureRequest.sortBy
+    package: azure-maps-spatial-io
+    summary: Method describing how results should be sorted.
+    fullName: sortBy
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'sortBy: string'
+      return:
+        type: string
+        description: ''
+  - name: startIndex
+    uid: azure-maps-spatial-io.atlas.WfsFeatureRequest.startIndex
+    package: azure-maps-spatial-io
+    summary: Start index to use for WFS paging.
+    fullName: startIndex
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'startIndex: number'
+      return:
+        type: number
+        description: ''
+  - name: typeNames
+    uid: azure-maps-spatial-io.atlas.WfsFeatureRequest.typeNames
+    package: azure-maps-spatial-io
+    summary: The feature type names.
+    fullName: typeNames
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'typeNames?: string | string[]'
+      return:
+        type: 'string | string[]'
+        description: ''

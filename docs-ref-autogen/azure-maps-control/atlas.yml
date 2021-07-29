@@ -1,0 +1,558 @@
+### YamlMime:TSPackage
+uid: azure-maps-control.atlas
+name: atlas
+summary: ''
+type: module
+interfaces:
+  - azure-maps-control.atlas.AggregateExpression
+  - azure-maps-control.atlas.AnimationOptions
+  - azure-maps-control.atlas.AuthenticationManager
+  - azure-maps-control.atlas.AuthenticationOptions
+  - azure-maps-control.atlas.BubbleLayerOptions
+  - azure-maps-control.atlas.CameraBoundsOptions
+  - azure-maps-control.atlas.CameraOptions
+  - azure-maps-control.atlas.ClusteredProperties
+  - azure-maps-control.atlas.CompassControlOptions
+  - azure-maps-control.atlas.Control
+  - azure-maps-control.atlas.ControlManager
+  - azure-maps-control.atlas.ControlOptions
+  - azure-maps-control.atlas.DataSourceOptions
+  - azure-maps-control.atlas.HeatMapLayerOptions
+  - azure-maps-control.atlas.HtmlMarkerEvents
+  - azure-maps-control.atlas.HtmlMarkerManager
+  - azure-maps-control.atlas.HtmlMarkerOptions
+  - azure-maps-control.atlas.HyperLinkFormatOptions
+  - azure-maps-control.atlas.IconOptions
+  - azure-maps-control.atlas.ImageLayerOptions
+  - azure-maps-control.atlas.ImageSpriteManager
+  - azure-maps-control.atlas.LayerManager
+  - azure-maps-control.atlas.LayerOptions
+  - azure-maps-control.atlas.LightOptions
+  - azure-maps-control.atlas.LineLayerOptions
+  - azure-maps-control.atlas.MapDataEvent
+  - azure-maps-control.atlas.MapErrorEvent
+  - azure-maps-control.atlas.MapEvent
+  - azure-maps-control.atlas.MapMouseEvent
+  - azure-maps-control.atlas.MapMouseWheelEvent
+  - azure-maps-control.atlas.MapTouchEvent
+  - azure-maps-control.atlas.MediaLayerOptions
+  - azure-maps-control.atlas.Options
+  - azure-maps-control.atlas.Padding
+  - azure-maps-control.atlas.PitchControlOptions
+  - azure-maps-control.atlas.PolygonExtrusionLayerOptions
+  - azure-maps-control.atlas.PolygonLayerOptions
+  - azure-maps-control.atlas.PopupEvents
+  - azure-maps-control.atlas.PopupManager
+  - azure-maps-control.atlas.PopupOptions
+  - azure-maps-control.atlas.Properties
+  - azure-maps-control.atlas.PropertyInfo
+  - azure-maps-control.atlas.RequestParameters
+  - azure-maps-control.atlas.ServiceOptions
+  - azure-maps-control.atlas.ShapeEvents
+  - azure-maps-control.atlas.SourceManager
+  - azure-maps-control.atlas.StyleChangedEvent
+  - azure-maps-control.atlas.StyleControlOptions
+  - azure-maps-control.atlas.StyleOptions
+  - azure-maps-control.atlas.SymbolLayerOptions
+  - azure-maps-control.atlas.TargetedEvent
+  - azure-maps-control.atlas.TextOptions
+  - azure-maps-control.atlas.Tile
+  - azure-maps-control.atlas.TileId
+  - azure-maps-control.atlas.TileLayerOptions
+  - azure-maps-control.atlas.TrafficControlOptions
+  - azure-maps-control.atlas.TrafficOptions
+  - azure-maps-control.atlas.UserInteractionOptions
+  - azure-maps-control.atlas.VectorTileSourceOptions
+  - azure-maps-control.atlas.ZoomControlOptions
+enums:
+  - azure-maps-control.atlas.AuthenticationType
+  - azure-maps-control.atlas.ControlPosition
+  - azure-maps-control.atlas.ControlStyle
+classes:
+  - azure-maps-control.atlas.EventManager
+  - azure-maps-control.atlas.HtmlMarker
+  - azure-maps-control.atlas.Map
+  - azure-maps-control.atlas.Pixel
+  - azure-maps-control.atlas.Popup
+  - azure-maps-control.atlas.PopupTemplate
+  - azure-maps-control.atlas.Shape
+typeAliases:
+  - azure-maps-control.atlas.Expression
+  - azure-maps-control.atlas.ExpressionName
+  - azure-maps-control.atlas.getAuthTokenCallback
+  - azure-maps-control.atlas.ResourceType
+package: azure-maps-control
+functions:
+  - name: 'addImageTemplate(string, string, boolean)'
+    uid: azure-maps-control.atlas.addImageTemplate
+    package: azure-maps-control
+    summary: Adds an image template to the atlas namespace.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addImageTemplate(templateName: string, template: string,
+        override: boolean)
+      parameters:
+        - id: templateName
+          type: string
+          description: The name of the template.
+        - id: template
+          type: string
+          description: >-
+            The SVG template to add. Supports {color}, {secondaryColor},
+            {scale}, {text}.
+        - id: override
+          type: boolean
+          description: >
+            Specifies if it should override existing templates if one with the
+            same name already exists.
+  - name: clearPrewarmedResources()
+    uid: azure-maps-control.atlas.clearPrewarmedResources
+    package: azure-maps-control
+    summary: >-
+      Clears up resources that have previously been created by
+      `atlas.prewarm()`.
+
+      Note that this is typically not necessary. You should only call this
+      function
+
+      if you expect the user of your app to not return to a Map view at any
+      point
+
+      in your application.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function clearPrewarmedResources()
+  - name: getAllImageTemplateNames()
+    uid: azure-maps-control.atlas.getAllImageTemplateNames
+    package: azure-maps-control
+    summary: >-
+      Retrieves an array of names for all image templates that are available in
+      the atlas namespace.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getAllImageTemplateNames()
+      return:
+        type: 'string[]'
+        description: ''
+  - name: getAuthenticationOptions()
+    uid: azure-maps-control.atlas.getAuthenticationOptions
+    package: azure-maps-control
+    summary: |-
+      Gets the default authentication options that were provided.
+      If not previously set all properties will be undefined.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getAuthenticationOptions()
+      return:
+        type: <xref uid="azure-maps-control.atlas.AuthenticationOptions" />
+        description: ''
+  - name: getDomain()
+    uid: azure-maps-control.atlas.getDomain
+    package: azure-maps-control
+    summary: |-
+      Gets the default domain that was provided.
+      If not previously set the default value is `"atlas.microsoft.com"`.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getDomain()
+      return:
+        type: string
+        description: ''
+  - name: 'getImageTemplate(string, number)'
+    uid: azure-maps-control.atlas.getImageTemplate
+    package: azure-maps-control
+    summary: Retrieves an SVG template by name.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getImageTemplate(templateName: string, scale?: number)'
+      parameters:
+        - id: templateName
+          type: string
+          description: The name of the template to retrieve.
+        - id: scale
+          type: number
+          description: >
+            Specifies how much to scale the template. For best results, scale
+            the icon to the maximum size you want to display it on the map, then
+            use the symbol layers icon size option to scale down if needed. This
+            will reduce blurriness due to scaling. Default: 1
+      return:
+        type: string
+        description: ''
+  - name: getLanguage()
+    uid: azure-maps-control.atlas.getLanguage
+    package: azure-maps-control
+    summary: |-
+      Gets the default language that was provided.
+      If not previously set the default value is `"NGT"`.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getLanguage()
+      return:
+        type: string
+        description: ''
+  - name: getMaxParallelImageRequests()
+    uid: azure-maps-control.atlas.getMaxParallelImageRequests
+    package: azure-maps-control
+    summary: >-
+      Gets the Maximum number of images (raster tiles, sprites, icons) to load
+      in parallel
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getMaxParallelImageRequests()
+      return:
+        type: number
+        description: ''
+  - name: getSessionId()
+    uid: azure-maps-control.atlas.getSessionId
+    package: azure-maps-control
+    summary: |-
+      Gets the default session id that was provided.
+      If not previously set the default value is a random UUID.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getSessionId()
+      return:
+        type: string
+        description: ''
+  - name: getSubscriptionKey()
+    uid: azure-maps-control.atlas.getSubscriptionKey
+    package: azure-maps-control
+    summary: Gets the default Azure Maps subscription key that was provided.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getSubscriptionKey()
+      return:
+        type: string
+        description: ''
+  - name: getUserRegion()
+    uid: azure-maps-control.atlas.getUserRegion
+    package: azure-maps-control
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: true
+    customDeprecatedMessage: use atlas.getView() instead
+    syntax:
+      content: function getUserRegion()
+      return:
+        type: string
+        description: ''
+  - name: getVersion()
+    uid: azure-maps-control.atlas.getVersion
+    package: azure-maps-control
+    summary: Current API version number based on build number.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getVersion()
+      return:
+        type: string
+        description: ''
+  - name: getView()
+    uid: azure-maps-control.atlas.getView
+    package: azure-maps-control
+    summary: |-
+      Gets the default view setting of the map control.
+      If not previously set the default value is `undefined`.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getView()
+      return:
+        type: string
+        description: ''
+  - name: getWorkerCount()
+    uid: azure-maps-control.atlas.getWorkerCount
+    package: azure-maps-control
+    summary: Gets the worker count that will get created.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getWorkerCount()
+      return:
+        type: number
+        description: ''
+  - name: isSupported(boolean)
+    uid: azure-maps-control.atlas.isSupported
+    package: azure-maps-control
+    summary: Checks to see if the user's browser is supported by the map control.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function isSupported(failIfMajorPerformanceCaveat?: boolean)'
+      parameters:
+        - id: failIfMajorPerformanceCaveat
+          type: boolean
+          description: >
+            If true the function will return false
+
+            if the performance of the map control would be dramatically worse
+            than expected
+
+            (e.g. a software WebGL renderer would be used).
+      return:
+        type: boolean
+        description: ''
+  - name: prewarm()
+    uid: azure-maps-control.atlas.prewarm
+    package: azure-maps-control
+    summary: >
+      Initializes resources like WebWorkers that can be shared across maps to
+      lower load
+
+      times in some situations. `atlas.setWorkerCount`, if being
+
+      used, must be set before `prewarm()` is called to have an effect.
+
+      By default, the lifecycle of these resources is managed automatically, and
+      they are
+
+      lazily initialized when a Map is first created. By invoking `prewarm()`,
+      these
+
+      resources will be created ahead of time, and will not be cleared when the
+      last Map
+
+      is removed from the page. This allows them to be re-used by new Map
+      instances that
+
+      are created later. They can be manually cleared by calling
+
+      `atlas.clearPrewarmedResources()`. This is only necessary if your web page
+      remains
+
+      active but stops using maps altogether.
+
+
+      This is primarily useful when using GL-JS maps in a single page app,
+      wherein a user
+
+      would navigate between various views that can cause Map instances to
+      constantly be
+
+      created and destroyed.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function prewarm()
+  - name: setAuthenticationOptions(AuthenticationOptions)
+    uid: azure-maps-control.atlas.setAuthenticationOptions
+    package: azure-maps-control
+    summary: >-
+      Sets your authentication options as the default options in the atlas
+      namespace
+
+      which is used by the map control and any modules that make requests to the
+      Azure maps services.
+
+      If a Map is initialized with the authentication options explicitly defined
+      and
+
+      setAuthenticationOptions hasn't previously been called it will
+      automatically be called by the Map constructor.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function setAuthenticationOptions(options: AuthenticationOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-maps-control.atlas.AuthenticationOptions" />
+          description: |
+            The new default authentication options.
+  - name: setDomain(string)
+    uid: azure-maps-control.atlas.setDomain
+    package: azure-maps-control
+    summary: >-
+      Sets the default domain used by the map and service modules unless the
+
+      domain is explicitly specified when using those parts of the API.
+
+      If a Map is initialized with the domain explicitly defined and
+
+      setDomain hasn't previously been called it will automatically be called by
+      the Map constructor.
+
+      If the protocol is not specified `https` is assumed.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function setDomain(domain: string)'
+      parameters:
+        - id: domain
+          type: string
+          description: |
+            The new default domain.
+  - name: setLanguage(string)
+    uid: azure-maps-control.atlas.setLanguage
+    package: azure-maps-control
+    summary: >-
+      Sets the default language used by the map and service modules unless the
+
+      language is explicitly specified when using those parts of the API.
+
+      If a Map is initialized with the language explicitly defined and
+
+      setLanguage hasn't previously been called it will automatically be called
+      by the Map constructor.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function setLanguage(language: string)'
+      parameters:
+        - id: language
+          type: string
+          description: |
+            The new default language.
+  - name: setMaxParallelImageRequests(number)
+    uid: azure-maps-control.atlas.setMaxParallelImageRequests
+    package: azure-maps-control
+    summary: >-
+      Sets Maximum number of images (raster tiles, sprites, icons) to load in
+      parallel,
+
+      which affects performance in raster-heavy maps. 16 by default.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function setMaxParallelImageRequests(maxParallelImageRequests: number)'
+      parameters:
+        - id: maxParallelImageRequests
+          type: number
+          description: |
+            Maximum number of images to load in parallel.
+  - name: setSessionId(string)
+    uid: azure-maps-control.atlas.setSessionId
+    package: azure-maps-control
+    summary: >-
+      Sets the default session id used by the map and service modules unless the
+
+      session id is explicitly specified when using those parts of the API.
+
+      If a Map is initialized with the session ID explicitly defined and
+
+      setSessionId hasn't previously been called it will automatically be called
+      by the Map constructor.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function setSessionId(id: string)'
+      parameters:
+        - id: id
+          type: string
+          description: |
+            The new default session id.
+  - name: setSubscriptionKey(string)
+    uid: azure-maps-control.atlas.setSubscriptionKey
+    package: azure-maps-control
+    summary: >-
+      Sets your Azure Maps subscription key as the default subscription key in
+      the atlas namespace
+
+      which is used by the map control and any modules that make requests to the
+      Azure maps services.
+
+      If a Map is initialized with the subscription key explicitly defined and
+
+      setSubscriptionKey hasn't previously been called it will automatically be
+      called by the Map constructor.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function setSubscriptionKey(key: string)'
+      parameters:
+        - id: key
+          type: string
+          description: |
+            The new default subscription key.
+  - name: setUserRegion(string)
+    uid: azure-maps-control.atlas.setUserRegion
+    package: azure-maps-control
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: true
+    customDeprecatedMessage: 'use atlas.setView(view: string) instead.'
+    syntax:
+      content: 'function setUserRegion(userRegion: string)'
+      parameters:
+        - id: userRegion
+          type: string
+          description: ''
+  - name: setView(string)
+    uid: azure-maps-control.atlas.setView
+    package: azure-maps-control
+    summary: >-
+      Specifies which set of geopolitically disputed borders and labels are
+      displayed on the map. The View parameter (also referred to as “user region
+      parameter”) is a 2-letter ISO-3166 Country Code that will show the correct
+      maps for that country/region. Country/Regions that are not on the View
+      list or if unspecified will default to the “Unified” View.
+
+      Please see the supported [Views]{@link
+      https://aka.ms/AzureMapsLocalizationViews }.
+
+      It is your responsibility to determine the location of your users, and
+      then set the View parameter correctly for that location. The View
+      parameter in Azure Maps must be used in compliance with applicable laws,
+      including those regarding mapping, of the country where maps, images and
+      other data and third party content that You are authorized to access via
+      Azure Maps is made available.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function setView(view: string)'
+      parameters:
+        - id: view
+          type: string
+          description: |
+            The new default view
+  - name: setWorkerCount(number)
+    uid: azure-maps-control.atlas.setWorkerCount
+    package: azure-maps-control
+    summary: |-
+      Sets number of web workers instantiated on a page.
+      By default, it is set to half the number of CPU cores (capped at 6).
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function setWorkerCount(workerCount: number)'
+      parameters:
+        - id: workerCount
+          type: number
+          description: |
+            worker count.

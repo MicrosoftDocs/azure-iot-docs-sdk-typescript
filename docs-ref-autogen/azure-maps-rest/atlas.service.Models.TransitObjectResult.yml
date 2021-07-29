@@ -1,0 +1,78 @@
+### YamlMime:TSType
+name: TransitObjectResult
+uid: azure-maps-rest.atlas.service.Models.TransitObjectResult
+package: azure-maps-rest
+summary: An interface representing TransitObjectResult.
+fullName: TransitObjectResult
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: id
+    uid: azure-maps-rest.atlas.service.Models.TransitObjectResult.id
+    package: azure-maps-rest
+    summary: >-
+      The object identifier found as a result of the query, for example, stopId
+      for stops.
+    fullName: id
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'id?: string'
+      return:
+        type: string
+        description: ''
+  - name: objectDetails
+    uid: azure-maps-rest.atlas.service.Models.TransitObjectResult.objectDetails
+    package: azure-maps-rest
+    summary: The object specific details.
+    fullName: objectDetails
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'objectDetails?: any'
+      return:
+        type: any
+        description: ''
+  - name: position
+    uid: azure-maps-rest.atlas.service.Models.TransitObjectResult.position
+    package: azure-maps-rest
+    summary: The transit object's position.
+    fullName: position
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'position?: Coordinate'
+      return:
+        type: <xref uid="azure-maps-rest.atlas.service.Models.Coordinate" />
+        description: ''
+  - name: type
+    uid: azure-maps-rest.atlas.service.Models.TransitObjectResult.type
+    package: azure-maps-rest
+    summary: The type of object found as a result of the query.
+    fullName: type
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'type?: string'
+      return:
+        type: string
+        description: ''
+  - name: viewport
+    uid: azure-maps-rest.atlas.service.Models.TransitObjectResult.viewport
+    package: azure-maps-rest
+    summary: ''
+    fullName: viewport
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'viewport?: ResultViewport'
+      return:
+        type: <xref uid="azure-maps-rest.atlas.service.Models.ResultViewport" />
+        description: ''

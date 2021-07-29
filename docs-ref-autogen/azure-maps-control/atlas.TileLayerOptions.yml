@@ -1,0 +1,333 @@
+### YamlMime:TSType
+name: TileLayerOptions
+uid: azure-maps-control.atlas.TileLayerOptions
+package: azure-maps-control
+summary: Options used when rendering raster tiled images in a TileLayer.
+fullName: TileLayerOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: bounds
+    uid: azure-maps-control.atlas.TileLayerOptions.bounds
+    package: azure-maps-control
+    summary: |-
+      A bounding box that specifies where tiles are available.
+      When specified, no tiles outside of the bounding box will be requested.
+      Default `[-180, -85.0511, 180, 85.0511]`.
+    fullName: bounds
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'bounds?: BoundingBox'
+      return:
+        type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+        description: ''
+  - name: contrast
+    uid: azure-maps-control.atlas.TileLayerOptions.contrast
+    package: azure-maps-control
+    summary: >-
+      A number between -1 and 1 that increases or decreases the contrast of the
+      overlay.
+
+      Default `0`.
+    fullName: contrast
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'contrast?: number'
+      return:
+        type: number
+        description: ''
+  - name: fadeDuration
+    uid: azure-maps-control.atlas.TileLayerOptions.fadeDuration
+    package: azure-maps-control
+    summary: >-
+      The duration in milliseconds of a fade transition when a new tile is
+      added.
+
+      Must be greater or equal to 0.
+
+      Default `300`.
+    fullName: fadeDuration
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'fadeDuration?: number'
+      return:
+        type: number
+        description: ''
+  - name: filter
+    uid: azure-maps-control.atlas.TileLayerOptions.filter
+    package: azure-maps-control
+    summary: |-
+      An expression specifying conditions on source features.
+      Only features that match the filter are displayed.
+    fullName: filter
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'filter?: Expression'
+      return:
+        type: <xref uid="azure-maps-control.atlas.Expression" />
+        description: ''
+  - name: hueRotation
+    uid: azure-maps-control.atlas.TileLayerOptions.hueRotation
+    package: azure-maps-control
+    summary: |-
+      Rotates hues around the color wheel.
+      A number in degrees.
+      Default `0`.
+    fullName: hueRotation
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'hueRotation?: number'
+      return:
+        type: number
+        description: ''
+  - name: isTMS
+    uid: azure-maps-control.atlas.TileLayerOptions.isTMS
+    package: azure-maps-control
+    summary: >-
+      Specifies if the tile systems coordinates uses the Tile Map Services
+      specification,
+
+      which reverses the Y coordinate axis.
+
+      Default `false`.
+    fullName: isTMS
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isTMS?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: maxBrightness
+    uid: azure-maps-control.atlas.TileLayerOptions.maxBrightness
+    package: azure-maps-control
+    summary: >-
+      A number between 0 and 1 that increases or decreases the maximum
+      brightness of the overlay.
+
+      Default `1`.
+    fullName: maxBrightness
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxBrightness?: number'
+      return:
+        type: number
+        description: ''
+  - name: maxSourceZoom
+    uid: azure-maps-control.atlas.TileLayerOptions.maxSourceZoom
+    package: azure-maps-control
+    summary: >-
+      An integer specifying the maximum zoom level in which tiles are available
+      from the tile source.
+
+      Default `22`.
+    fullName: maxSourceZoom
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxSourceZoom?: number'
+      return:
+        type: number
+        description: ''
+  - name: maxZoom
+    uid: azure-maps-control.atlas.TileLayerOptions.maxZoom
+    package: azure-maps-control
+    summary: >-
+      An integer specifying the maximum zoom level to render the layer at.
+
+      This value is exclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `24`.
+    fullName: maxZoom
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxZoom?: number'
+      return:
+        type: number
+        description: ''
+  - name: minBrightness
+    uid: azure-maps-control.atlas.TileLayerOptions.minBrightness
+    package: azure-maps-control
+    summary: >-
+      A number between 0 and 1 that increases or decreases the minimum
+      brightness of the overlay.
+
+      Default `0`.
+    fullName: minBrightness
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'minBrightness?: number'
+      return:
+        type: number
+        description: ''
+  - name: minSourceZoom
+    uid: azure-maps-control.atlas.TileLayerOptions.minSourceZoom
+    package: azure-maps-control
+    summary: >-
+      An integer specifying the minimum zoom level in which tiles are available
+      from the tile source.
+
+      Default `0`.
+    fullName: minSourceZoom
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'minSourceZoom?: number'
+      return:
+        type: number
+        description: ''
+  - name: minZoom
+    uid: azure-maps-control.atlas.TileLayerOptions.minZoom
+    package: azure-maps-control
+    summary: >-
+      An integer specifying the minimum zoom level to render the layer at.
+
+      This value is inclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `0`.
+    fullName: minZoom
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'minZoom?: number'
+      return:
+        type: number
+        description: ''
+  - name: opacity
+    uid: azure-maps-control.atlas.TileLayerOptions.opacity
+    package: azure-maps-control
+    summary: >-
+      A number between 0 and 1 that indicates the opacity at which the overlay
+      will be drawn.
+
+      Default `1`.
+    fullName: opacity
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'opacity?: number'
+      return:
+        type: number
+        description: ''
+  - name: saturation
+    uid: azure-maps-control.atlas.TileLayerOptions.saturation
+    package: azure-maps-control
+    summary: >-
+      A number between -1 and 1 that increases or decreases the saturation of
+      the overlay.
+
+      Default `0`.
+    fullName: saturation
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'saturation?: number'
+      return:
+        type: number
+        description: ''
+  - name: subdomains
+    uid: azure-maps-control.atlas.TileLayerOptions.subdomains
+    package: azure-maps-control
+    summary: An array of subdomain values to apply to the tile URL.
+    fullName: subdomains
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'subdomains?: string[]'
+      return:
+        type: 'string[]'
+        description: ''
+  - name: tileSize
+    uid: azure-maps-control.atlas.TileLayerOptions.tileSize
+    package: azure-maps-control
+    summary: >-
+      An integer value that specifies the width and height dimensions of the map
+      tiles.
+
+      For a seamless experience, the tile size must be a multiplier of 2.
+
+      Default `512`.
+    fullName: tileSize
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'tileSize?: number'
+      return:
+        type: number
+        description: ''
+  - name: tileUrl
+    uid: azure-maps-control.atlas.TileLayerOptions.tileUrl
+    package: azure-maps-control
+    summary: >-
+      A http/https URL to a TileJSON resource or a tile URL template that uses
+      the following parameters:
+
+      <p>{x}: X position of the tile. Usually also needs {y} and {z}.</p>
+
+      <p>{y}: Y position of the tile. Usually also needs {x} and {z}.</p>
+
+      <p>{z}: Zoom level of the tile. Usually also needs {x} and {y}.</p>
+
+      <p>{quadkey}: Tile quadKey id based on the Bing Maps tile system naming
+      convention.</p>
+
+      <p>{bbox-epsg-3857}: A bounding box string with the format
+      {west},{south},{east},{north}
+
+      in the EPSG 4325 Spacial Reference System.</p>
+
+      <p>{subdomain}: A placeholder where the subdomain values if specified will
+      be added.</p>
+    fullName: tileUrl
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'tileUrl?: string'
+      return:
+        type: string
+        description: ''
+  - name: visible
+    uid: azure-maps-control.atlas.TileLayerOptions.visible
+    package: azure-maps-control
+    summary: |-
+      Specifies if the layer is visible or not.
+      Default `true`.
+    fullName: visible
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'visible?: boolean'
+      return:
+        type: boolean
+        description: ''
+extends: <xref uid="azure-maps-control.atlas.MediaLayerOptions" />

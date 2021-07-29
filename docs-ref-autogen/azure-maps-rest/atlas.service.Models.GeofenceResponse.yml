@@ -1,0 +1,93 @@
+### YamlMime:TSType
+name: GeofenceResponse
+uid: azure-maps-rest.atlas.service.Models.GeofenceResponse
+package: azure-maps-rest
+summary: This object is returned from a geofence proximity call.
+fullName: GeofenceResponse
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: expiredGeofenceGeometryId
+    uid: >-
+      azure-maps-rest.atlas.service.Models.GeofenceResponse.expiredGeofenceGeometryId
+    package: azure-maps-rest
+    summary: >-
+      Lists of the geometry ID of the geofence which is expired relative to the
+      user time in the
+
+      request.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: expiredGeofenceGeometryId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'expiredGeofenceGeometryId?: string[]'
+      return:
+        type: 'string[]'
+        description: ''
+  - name: geometries
+    uid: azure-maps-rest.atlas.service.Models.GeofenceResponse.geometries
+    package: azure-maps-rest
+    summary: >-
+      Lists the fence geometries that contain the coordinate position or overlap
+      the searchBuffer
+
+      around the position.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: geometries
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'geometries?: GeofenceGeometry[]'
+      return:
+        type: '<xref uid="azure-maps-rest.atlas.service.Models.GeofenceGeometry" />[]'
+        description: ''
+  - name: invalidPeriodGeofenceGeometryId
+    uid: >-
+      azure-maps-rest.atlas.service.Models.GeofenceResponse.invalidPeriodGeofenceGeometryId
+    package: azure-maps-rest
+    summary: >-
+      Lists of the geometry ID of the geofence which is in invalid period
+      relative to the user time
+
+      in the request.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: invalidPeriodGeofenceGeometryId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'invalidPeriodGeofenceGeometryId?: string[]'
+      return:
+        type: 'string[]'
+        description: ''
+  - name: isEventPublished
+    uid: azure-maps-rest.atlas.service.Models.GeofenceResponse.isEventPublished
+    package: azure-maps-rest
+    summary: >-
+      True if at least one event is published to the Azure Maps event
+      subscriber, false if no event
+
+      is published to the Azure Maps event subscriber.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: isEventPublished
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isEventPublished?: boolean'
+      return:
+        type: boolean
+        description: ''

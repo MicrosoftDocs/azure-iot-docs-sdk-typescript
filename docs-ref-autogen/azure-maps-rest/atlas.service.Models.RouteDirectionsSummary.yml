@@ -1,0 +1,116 @@
+### YamlMime:TSType
+name: RouteDirectionsSummary
+uid: azure-maps-rest.atlas.service.Models.RouteDirectionsSummary
+package: azure-maps-rest
+summary: Summary object
+fullName: RouteDirectionsSummary
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: arrivalTime
+    uid: azure-maps-rest.atlas.service.Models.RouteDirectionsSummary.arrivalTime
+    package: azure-maps-rest
+    summary: >-
+      Arrival Time property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: arrivalTime
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'arrivalTime?: string'
+      return:
+        type: string
+        description: ''
+  - name: departureTime
+    uid: azure-maps-rest.atlas.service.Models.RouteDirectionsSummary.departureTime
+    package: azure-maps-rest
+    summary: >-
+      Departure Time property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: departureTime
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'departureTime?: string'
+      return:
+        type: string
+        description: ''
+  - name: lengthInMeters
+    uid: azure-maps-rest.atlas.service.Models.RouteDirectionsSummary.lengthInMeters
+    package: azure-maps-rest
+    summary: >-
+      Length In Meters property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: lengthInMeters
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'lengthInMeters?: number'
+      return:
+        type: number
+        description: ''
+  - name: trafficDelayInSeconds
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RouteDirectionsSummary.trafficDelayInSeconds
+    package: azure-maps-rest
+    summary: >-
+      Estimated delay in seconds caused by the real-time incident(s) according
+      to traffic
+
+      information. For routes planned with departure time in the future, delays
+      is always 0. To
+
+      return additional travel times using different types of traffic
+      information, parameter
+
+      computeTravelTimeFor=all needs to be added.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: trafficDelayInSeconds
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'trafficDelayInSeconds?: number'
+      return:
+        type: number
+        description: ''
+  - name: travelTimeInSeconds
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RouteDirectionsSummary.travelTimeInSeconds
+    package: azure-maps-rest
+    summary: >-
+      Estimated travel time in seconds property that includes the delay due to
+      real-time traffic.
+
+      Note that even when traffic=false travelTimeInSeconds still includes the
+      delay due to traffic.
+
+      If DepartAt is in the future, travel time is calculated using
+      time-dependent historic traffic
+
+      data.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: travelTimeInSeconds
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'travelTimeInSeconds?: number'
+      return:
+        type: number
+        description: ''

@@ -1,0 +1,45 @@
+### YamlMime:TSType
+name: SearchGeometryResponse
+uid: azure-maps-rest.atlas.service.Models.SearchGeometryResponse
+package: azure-maps-rest
+summary: This object is returned from a successful Search By Geometry call
+fullName: SearchGeometryResponse
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: results
+    uid: azure-maps-rest.atlas.service.Models.SearchGeometryResponse.results
+    package: azure-maps-rest
+    summary: >-
+      A list of Search Inside Geometry results.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: results
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'results?: SearchGeometryResult[]'
+      return:
+        type: >-
+          <xref uid="azure-maps-rest.atlas.service.Models.SearchGeometryResult"
+          />[]
+        description: ''
+  - name: summary
+    uid: azure-maps-rest.atlas.service.Models.SearchGeometryResponse.summary
+    package: azure-maps-rest
+    summary: ''
+    fullName: summary
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'summary?: SearchGeometrySummary'
+      return:
+        type: >-
+          <xref uid="azure-maps-rest.atlas.service.Models.SearchGeometrySummary"
+          />
+        description: ''

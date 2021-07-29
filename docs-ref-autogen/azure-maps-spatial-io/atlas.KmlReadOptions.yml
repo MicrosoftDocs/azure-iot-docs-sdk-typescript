@@ -1,0 +1,135 @@
+### YamlMime:TSType
+name: KmlReadOptions
+uid: azure-maps-spatial-io.atlas.KmlReadOptions
+package: azure-maps-spatial-io
+summary: Options that customize how KML files are read and parsed.
+fullName: KmlReadOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: extrudePolygons
+    uid: azure-maps-spatial-io.atlas.KmlReadOptions.extrudePolygons
+    package: azure-maps-spatial-io
+    summary: >-
+      Specifies if polygon extrusion information should be captured in KML
+      files.
+
+      If set to true, and a polygon has extrusion data, a height property will
+      be added to polygon features properties
+
+      to indicate how much the polygon should be extruded vertically in meters.
+
+      Default: `true`
+    fullName: extrudePolygons
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'extrudePolygons?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: ignoreVisibility
+    uid: azure-maps-spatial-io.atlas.KmlReadOptions.ignoreVisibility
+    package: azure-maps-spatial-io
+    summary: >-
+      Specifies if shapes visible tags should be used to set the visible
+      property of it's equivalent GeoJSON object.
+
+      Default: `true`
+    fullName: ignoreVisibility
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'ignoreVisibility?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: maxFeatures
+    uid: azure-maps-spatial-io.atlas.KmlReadOptions.maxFeatures
+    package: azure-maps-spatial-io
+    summary: |-
+      Specifies the maximum number of features to read from the data set.
+      If not specified, will read all features.
+    fullName: maxFeatures
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxFeatures?: number'
+      return:
+        type: number
+        description: ''
+  - name: maxNetworkLinkDepth
+    uid: azure-maps-spatial-io.atlas.KmlReadOptions.maxNetworkLinkDepth
+    package: azure-maps-spatial-io
+    summary: >-
+      The maximum depth of network links in a KML file.
+
+      Example: when set to 3; file1 links to file2 which links to file3 but
+      won't open links in file3.
+
+      Default: `3`
+    fullName: maxNetworkLinkDepth
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxNetworkLinkDepth?: number'
+      return:
+        type: number
+        description: ''
+  - name: maxNetworkLinks
+    uid: azure-maps-spatial-io.atlas.KmlReadOptions.maxNetworkLinks
+    package: azure-maps-spatial-io
+    summary: |-
+      The maximum number of network links that a single KML file can have.
+      Default: `10`
+    fullName: maxNetworkLinks
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxNetworkLinks?: number'
+      return:
+        type: number
+        description: ''
+  - name: parseStyles
+    uid: azure-maps-spatial-io.atlas.KmlReadOptions.parseStyles
+    package: azure-maps-spatial-io
+    summary: >-
+      Specifies if style information should be parsed from the XML file and
+      included as properties of the features.
+
+      Default: `true`
+    fullName: parseStyles
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'parseStyles?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: proxyService
+    uid: azure-maps-spatial-io.atlas.KmlReadOptions.proxyService
+    package: azure-maps-spatial-io
+    summary: >-
+      A URL to a proxy service that can have a URL to an external file appended
+      it.
+
+      This will be needed to access files that are hosted on non-CORs enabled
+      endpoints.
+    fullName: proxyService
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'proxyService?: string'
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-maps-spatial-io.atlas.BaseSpatialXmlReadOptions" />

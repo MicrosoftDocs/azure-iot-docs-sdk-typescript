@@ -1,0 +1,158 @@
+### YamlMime:TSType
+name: TimezoneURL
+uid: azure-maps-rest.atlas.service.TimezoneURL
+package: azure-maps-rest
+summary: A TimezoneURL represents a URL to the Azure Maps timezone operations.
+fullName: TimezoneURL
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'TimezoneURL(Pipeline, string)'
+    uid: azure-maps-rest.atlas.service.TimezoneURL.constructor
+    package: azure-maps-rest
+    summary: Creates an instance of TimezoneURL.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new TimezoneURL(pipeline: Pipeline, mapsUrl?: string)'
+      parameters:
+        - id: pipeline
+          type: <xref uid="azure-maps-rest.atlas.service.Pipeline" />
+          description: |-
+            Call MapsURL.newPipeline() to create a default
+            pipeline, or provide a customized pipeline.
+        - id: mapsUrl
+          type: string
+          description: >-
+            A URL string pointing to Azure Maps service, default is
+
+            `"https://atlas.microsoft.com"`.
+
+            If no protocol is specified, e.g. `"atlas.microsoft.com"`, then
+            `https` will be assumed.
+properties:
+  - name: mapsUrl
+    uid: azure-maps-rest.atlas.service.TimezoneURL.mapsUrl
+    package: azure-maps-rest
+    summary: Base URL string value.
+    fullName: mapsUrl
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'mapsUrl: string'
+      return:
+        type: string
+        description: ''
+methods:
+  - name: >-
+      getTimezoneByCoordinates(Aborter, GeoJSON.Position,
+      GetTimezoneByCoordinatesOptions)
+    uid: azure-maps-rest.atlas.service.TimezoneURL.getTimezoneByCoordinates
+    package: azure-maps-rest
+    summary: >
+      This API returns current, historical, and future time zone information for
+      a specified
+
+      latitude-longitude pair. In addition, the API provides sunset and sunrise
+      times for a given
+
+      location.
+
+      Uses the Get Timezone By Coordinates API:
+      https://docs.microsoft.com/rest/api/maps/timezone/gettimezonebycoordinates
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getTimezoneByCoordinates(aborter: Aborter, coordinate:
+        GeoJSON.Position, options?: GetTimezoneByCoordinatesOptions)
+      parameters:
+        - id: aborter
+          type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
+          description: ''
+        - id: coordinate
+          type: <xref uid="GeoJSON.Position" />
+          description: >-
+            Coordinates of the point for which time zone information is
+            requested. The
+
+            applicable query is specified as a comma separated string composed
+            by latitude followed by
+
+            longitude e.g. "47.641268,-122.125679".
+        - id: options
+          type: >-
+            <xref
+            uid="azure-maps-rest.atlas.service.GetTimezoneByCoordinatesOptions"
+            />
+          description: ''
+      return:
+        type: >-
+          Promise&lt;<xref
+          uid="azure-maps-rest.atlas.service.GetTimezoneByCoordinatesResponse"
+          />&gt;
+        description: ''
+  - name: 'getTimezoneById(Aborter, string, GetTimezoneByIdOptions)'
+    uid: azure-maps-rest.atlas.service.TimezoneURL.getTimezoneById
+    package: azure-maps-rest
+    summary: >
+      This API returns current, historical, and future time zone information for
+      the specified IANA
+
+      time zone ID.
+
+      Uses the Get Timezone By ID API:
+      https://docs.microsoft.com/rest/api/maps/timezone/gettimezonebyid
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getTimezoneById(aborter: Aborter, id: string, options?:
+        GetTimezoneByIdOptions)
+      parameters:
+        - id: aborter
+          type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
+          description: ''
+        - id: id
+          type: string
+          description: The IANA time zone ID.
+        - id: options
+          type: <xref uid="azure-maps-rest.atlas.service.GetTimezoneByIdOptions" />
+          description: ''
+      return:
+        type: >-
+          Promise&lt;<xref
+          uid="azure-maps-rest.atlas.service.GetTimezoneByIdResponse" />&gt;
+        description: ''
+  - name: 'newPipeline(Credential, INewPipelineOptions)'
+    uid: azure-maps-rest.atlas.service.TimezoneURL.newPipeline
+    package: azure-maps-rest
+    summary: >-
+      A static method used to create a new Pipeline object with Credential
+      provided.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function newPipeline(credential: Credential, pipelineOptions?:
+        INewPipelineOptions)
+      parameters:
+        - id: credential
+          type: <xref uid="azure-maps-rest.atlas.service.Credential" />
+          description: >-
+            Such as SubscriptionKeyCredential, TokenCredential, and
+            MapControlCredential.
+        - id: pipelineOptions
+          type: <xref uid="azure-maps-rest.atlas.service.INewPipelineOptions" />
+          description: ''
+      return:
+        type: <xref uid="azure-maps-rest.atlas.service.Pipeline" />
+        description: A new Pipeline object.
+extends: <xref uid="azure-maps-rest.atlas.service.MapsURL" />

@@ -1,0 +1,180 @@
+### YamlMime:TSType
+name: ServiceOptions
+uid: azure-maps-control.atlas.ServiceOptions
+package: azure-maps-control
+summary: Global properties used in all atlas service requests.
+fullName: ServiceOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: authOptions
+    uid: azure-maps-control.atlas.ServiceOptions.authOptions
+    package: azure-maps-control
+    summary: >-
+      The authentication options used to customize how the map control
+      authenticates with Azure Maps services.
+
+      If these authentication options are specified then
+      ServiceOptions.subscriptionKey should not be.
+
+      Recommend using the atlas.setAuthenticationOptions function instead.
+    fullName: authOptions
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'authOptions?: AuthenticationOptions'
+      return:
+        type: <xref uid="azure-maps-control.atlas.AuthenticationOptions" />
+        description: ''
+  - name: disableTelemetry
+    uid: azure-maps-control.atlas.ServiceOptions.disableTelemetry
+    package: azure-maps-control
+    summary: |-
+      Disable telemetry collection
+      This option may only be set when initializing the map.
+      default: false
+    fullName: disableTelemetry
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'disableTelemetry?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: domain
+    uid: azure-maps-control.atlas.ServiceOptions.domain
+    package: azure-maps-control
+    summary: |-
+      The domain to use when requesting map tiles and other Azure Maps services.
+      If the protocol is not specified `https` is assumed.
+      Recommend using atlas.setDomain function instead.
+    fullName: domain
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'domain?: string'
+      return:
+        type: string
+        description: ''
+  - name: enableAccessibility
+    uid: azure-maps-control.atlas.ServiceOptions.enableAccessibility
+    package: azure-maps-control
+    summary: |-
+      Enable accessibility
+      default: true
+    fullName: enableAccessibility
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'enableAccessibility?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: maxParallelImageRequests
+    uid: azure-maps-control.atlas.ServiceOptions.maxParallelImageRequests
+    package: azure-maps-control
+    summary: >-
+      Maximum number of images (raster tiles, sprites, icons) to load in
+      parallel,
+
+      which affects performance in raster-heavy maps. 16 by default.
+    fullName: maxParallelImageRequests
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxParallelImageRequests?: number'
+      return:
+        type: number
+        description: ''
+  - name: refreshExpiredTiles
+    uid: azure-maps-control.atlas.ServiceOptions.refreshExpiredTiles
+    package: azure-maps-control
+    summary: >-
+      A boolean that specifies if vector and raster tiles should be reloaded
+      when they expire (based on expires header).
+
+      This is useful for data sets that update frequently. When set to false,
+      each tile will be loaded once, when needed, and not reloaded when they
+      expire.
+
+      default: true
+    fullName: refreshExpiredTiles
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'refreshExpiredTiles?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: sessionId
+    uid: azure-maps-control.atlas.ServiceOptions.sessionId
+    package: azure-maps-control
+    summary: |-
+      The session id to pass with requests.
+      Recommend using atlas.setSessionId instead.
+    fullName: sessionId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'sessionId?: string'
+      return:
+        type: string
+        description: ''
+  - name: subscriptionKey
+    uid: azure-maps-control.atlas.ServiceOptions.subscriptionKey
+    package: azure-maps-control
+    summary: |-
+      The customer subscription key used to authorize requests.
+      This option may only be set when initializing the map.
+      Recommend using the atlas.setSubscriptionKey function instead
+    fullName: subscriptionKey
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'subscriptionKey?: string'
+      return:
+        type: string
+        description: ''
+  - name: transformRequest
+    uid: azure-maps-control.atlas.ServiceOptions.transformRequest
+    package: azure-maps-control
+    summary: >-
+      If defined transformRequest will be called to provide custom request
+      parameters for loading a tile.
+    fullName: transformRequest
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        transformRequest?: (url: string, resourceType: ResourceType) =>
+        RequestParameters
+      return:
+        type: '(url: string, resourceType: ResourceType) =&gt; RequestParameters'
+        description: ''
+  - name: workerCount
+    uid: azure-maps-control.atlas.ServiceOptions.workerCount
+    package: azure-maps-control
+    summary: |-
+      Number of web workers instantiated on a page.
+      By default, it is set to half the number of CPU cores (capped at 6).
+    fullName: workerCount
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'workerCount?: number'
+      return:
+        type: number
+        description: ''
+extends: <xref uid="azure-maps-control.atlas.Options" />

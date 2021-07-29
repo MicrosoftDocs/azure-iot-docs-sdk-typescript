@@ -1,0 +1,29 @@
+### YamlMime:TSType
+name: SpatialGetGeofenceHeaders
+uid: azure-maps-rest.atlas.service.Models.SpatialGetGeofenceHeaders
+package: azure-maps-rest
+summary: Defines headers for GetGeofence operation.
+fullName: SpatialGetGeofenceHeaders
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: xCorrelationId
+    uid: >-
+      azure-maps-rest.atlas.service.Models.SpatialGetGeofenceHeaders.xCorrelationId
+    package: azure-maps-rest
+    summary: >-
+      Value present in an async call's response and the Event Grid event data.
+      It helps correlate
+
+      the async call’s response with the corresponding Event Grid event.
+    fullName: xCorrelationId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'xCorrelationId: string'
+      return:
+        type: string
+        description: ''

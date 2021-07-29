@@ -1,0 +1,334 @@
+### YamlMime:TSType
+name: LineLayerOptions
+uid: azure-maps-control.atlas.LineLayerOptions
+package: azure-maps-control
+summary: >-
+  Options used when rendering SimpleLine, SimplePolygon, CirclePolygon,
+
+  LineString, MultiLineString, Polygon, and MultiPolygon objects in a line
+  layer.
+fullName: LineLayerOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: blur
+    uid: azure-maps-control.atlas.LineLayerOptions.blur
+    package: azure-maps-control
+    summary: |-
+      The amount of blur to apply to the line in pixels.
+      Default `0`.
+    fullName: blur
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'blur?: number | Expression'
+      return:
+        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        description: ''
+  - name: filter
+    uid: azure-maps-control.atlas.LineLayerOptions.filter
+    package: azure-maps-control
+    summary: |-
+      An expression specifying conditions on source features.
+      Only features that match the filter are displayed.
+    fullName: filter
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'filter?: Expression'
+      return:
+        type: <xref uid="azure-maps-control.atlas.Expression" />
+        description: ''
+  - name: lineCap
+    uid: azure-maps-control.atlas.LineLayerOptions.lineCap
+    package: azure-maps-control
+    summary: >-
+      Specifies how the ends of the lines are rendered.
+
+      <p>`"butt"`: A cap with a squared-off end which is drawn to the exact
+      endpoint of the line.</p>
+
+      <p>`"round"`: A cap with a rounded end which is drawn beyond the endpoint
+      of the line
+
+      at a radius of one-half of the lines width and centered on the endpoint of
+      the line.</p>
+
+      <p>`"square"`: A cap with a squared-off end which is drawn beyond the
+      endpoint of the line
+
+      at a distance of one-half of the line width.</p>
+
+      Default `"round"`.
+    fullName: lineCap
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'lineCap?: "butt" | "round" | "square"'
+      return:
+        type: '"butt" | "round" | "square"'
+        description: ''
+  - name: lineJoin
+    uid: azure-maps-control.atlas.LineLayerOptions.lineJoin
+    package: azure-maps-control
+    summary: >-
+      Specifies how the joints in the lines are rendered.
+
+      <p>`"bevel"`: A join with a squared-off end which is drawn beyond the
+      endpoint of the line
+
+      at a distance of one-half of the lines width.</p>
+
+      <p>`"round"`: A join with a rounded end which is drawn beyond the endpoint
+      of the line
+
+      at a radius of one-half of the lines width and centered on the endpoint of
+      the line.</p>
+
+      <p>`"miter"`: A join with a sharp, angled corner which is drawn with the
+      outer sides
+
+      beyond the endpoint of the path until they meet.</p>
+
+      Default `"round"`.
+    fullName: lineJoin
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'lineJoin?: "bevel" | "round" | "miter"'
+      return:
+        type: '"bevel" | "round" | "miter"'
+        description: ''
+  - name: maxZoom
+    uid: azure-maps-control.atlas.LineLayerOptions.maxZoom
+    package: azure-maps-control
+    summary: >-
+      An integer specifying the maximum zoom level to render the layer at.
+
+      This value is exclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `24`.
+    fullName: maxZoom
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxZoom?: number'
+      return:
+        type: number
+        description: ''
+  - name: minZoom
+    uid: azure-maps-control.atlas.LineLayerOptions.minZoom
+    package: azure-maps-control
+    summary: >-
+      An integer specifying the minimum zoom level to render the layer at.
+
+      This value is inclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `0`.
+    fullName: minZoom
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'minZoom?: number'
+      return:
+        type: number
+        description: ''
+  - name: offset
+    uid: azure-maps-control.atlas.LineLayerOptions.offset
+    package: azure-maps-control
+    summary: >-
+      The line's offset.
+
+      A positive value offsets the line to the right, relative to the direction
+      of the line.
+
+      A negative value offsets to the left.
+
+      Default `0`.
+    fullName: offset
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'offset?: number | Expression'
+      return:
+        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        description: ''
+  - name: source
+    uid: azure-maps-control.atlas.LineLayerOptions.source
+    package: azure-maps-control
+    summary: The id or instance of a data source which the layer will render.
+    fullName: source
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'source?: string | Source'
+      return:
+        type: string | <xref uid="azure-maps-control.atlas.source.Source" />
+        description: ''
+  - name: sourceLayer
+    uid: azure-maps-control.atlas.LineLayerOptions.sourceLayer
+    package: azure-maps-control
+    summary: >-
+      Required when the source of the layer is a VectorTileSource.
+
+      A vector source can have multiple layers within it, this identifies which
+      one to render in this layer.
+
+      Prohibited for all other types of sources.
+    fullName: sourceLayer
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'sourceLayer?: string'
+      return:
+        type: string
+        description: ''
+  - name: strokeColor
+    uid: azure-maps-control.atlas.LineLayerOptions.strokeColor
+    package: azure-maps-control
+    summary: |-
+      Specifies the color of the line.
+      Default `"#1E90FF"`.
+    fullName: strokeColor
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'strokeColor?: string | Expression'
+      return:
+        type: string | <xref uid="azure-maps-control.atlas.Expression" />
+        description: ''
+  - name: strokeDashArray
+    uid: azure-maps-control.atlas.LineLayerOptions.strokeDashArray
+    package: azure-maps-control
+    summary: >-
+      Specifies the lengths of the alternating dashes and gaps that form the
+      dash pattern.
+
+      Numbers must be equal or greater than 0. The lengths are scaled by the
+      strokeWidth.
+
+      To convert a dash length to pixels, multiply the length by the current
+      stroke width.
+    fullName: strokeDashArray
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'strokeDashArray?: number[]'
+      return:
+        type: 'number[]'
+        description: ''
+  - name: strokeGradient
+    uid: azure-maps-control.atlas.LineLayerOptions.strokeGradient
+    package: azure-maps-control
+    summary: |-
+      Defines a gradient with which to color the lines.
+      Requires the DataSource lineMetrics option to be set to true.
+      Disabled if strokeDashArray is set.
+    fullName: strokeGradient
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'strokeGradient?: Expression'
+      return:
+        type: <xref uid="azure-maps-control.atlas.Expression" />
+        description: ''
+  - name: strokeOpacity
+    uid: azure-maps-control.atlas.LineLayerOptions.strokeOpacity
+    package: azure-maps-control
+    summary: >-
+      A number between 0 and 1 that indicates the opacity at which the line will
+      be drawn.
+
+      Default `1`.
+    fullName: strokeOpacity
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'strokeOpacity?: number | Expression'
+      return:
+        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        description: ''
+  - name: strokeWidth
+    uid: azure-maps-control.atlas.LineLayerOptions.strokeWidth
+    package: azure-maps-control
+    summary: |-
+      The width of the line in pixels. Must be a value greater or equal to 0.
+      Default `2`.
+    fullName: strokeWidth
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'strokeWidth?: number | Expression'
+      return:
+        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        description: ''
+  - name: translate
+    uid: azure-maps-control.atlas.LineLayerOptions.translate
+    package: azure-maps-control
+    summary: >-
+      The amount of offset in pixels to render the line relative to where it
+      would render normally.
+
+      Negative values indicate left and up.
+
+      Default: `[0,0]`
+    fullName: translate
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'translate?: Pixel'
+      return:
+        type: <xref uid="azure-maps-control.atlas.Pixel" />
+        description: ''
+  - name: translateAnchor
+    uid: azure-maps-control.atlas.LineLayerOptions.translateAnchor
+    package: azure-maps-control
+    summary: |-
+      Specifies the frame of reference for `translate`.
+      <p>`"map"`: Lines are translated relative to the map.</p>
+      <p>`"viewport"`: Lines are translated relative to the viewport</p>
+      Default: `"map"`
+    fullName: translateAnchor
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'translateAnchor?: "map" | "viewport"'
+      return:
+        type: '"map" | "viewport"'
+        description: ''
+  - name: visible
+    uid: azure-maps-control.atlas.LineLayerOptions.visible
+    package: azure-maps-control
+    summary: |-
+      Specifies if the layer is visible or not.
+      Default `true`.
+    fullName: visible
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'visible?: boolean'
+      return:
+        type: boolean
+        description: ''
+extends: <xref uid="azure-maps-control.atlas.LayerOptions" />

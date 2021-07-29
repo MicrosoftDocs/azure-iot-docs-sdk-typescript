@@ -1,0 +1,26 @@
+### YamlMime:TSType
+name: SpatialDataWriteOptions
+uid: azure-maps-spatial-io.atlas.SpatialDataWriteOptions
+package: azure-maps-spatial-io
+summary: Base options for writing spatial data.
+fullName: SpatialDataWriteOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: format
+    uid: azure-maps-spatial-io.atlas.SpatialDataWriteOptions.format
+    package: azure-maps-spatial-io
+    summary: |-
+      The spatial data format to write the shapes to.
+      Default: `"GeoJSON"`
+    fullName: format
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'format?: "KML" | "GPX" | "GeoRSS" | "GML" | "GeoJSON" | "CSV"'
+      return:
+        type: '"KML" | "GPX" | "GeoRSS" | "GML" | "GeoJSON" | "CSV"'
+        description: ''

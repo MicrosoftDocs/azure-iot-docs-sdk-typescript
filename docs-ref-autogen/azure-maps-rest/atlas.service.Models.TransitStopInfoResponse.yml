@@ -1,0 +1,63 @@
+### YamlMime:TSType
+name: TransitStopInfoResponse
+uid: azure-maps-rest.atlas.service.Models.TransitStopInfoResponse
+package: azure-maps-rest
+summary: This object is returned from a successful Get Transit Stop Info call
+fullName: TransitStopInfoResponse
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: alerts
+    uid: azure-maps-rest.atlas.service.Models.TransitStopInfoResponse.alerts
+    package: azure-maps-rest
+    summary: ''
+    fullName: alerts
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'alerts?: Alert[]'
+      return:
+        type: '<xref uid="azure-maps-rest.atlas.service.Models.Alert" />[]'
+        description: ''
+  - name: lineGroups
+    uid: azure-maps-rest.atlas.service.Models.TransitStopInfoResponse.lineGroups
+    package: azure-maps-rest
+    summary: ''
+    fullName: lineGroups
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'lineGroups?: LineGroup[]'
+      return:
+        type: '<xref uid="azure-maps-rest.atlas.service.Models.LineGroup" />[]'
+        description: ''
+  - name: lines
+    uid: azure-maps-rest.atlas.service.Models.TransitStopInfoResponse.lines
+    package: azure-maps-rest
+    summary: ''
+    fullName: lines
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'lines?: Line[]'
+      return:
+        type: '<xref uid="azure-maps-rest.atlas.service.Models.Line" />[]'
+        description: ''
+  - name: stop
+    uid: azure-maps-rest.atlas.service.Models.TransitStopInfoResponse.stop
+    package: azure-maps-rest
+    summary: ''
+    fullName: stop
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'stop?: Stop'
+      return:
+        type: <xref uid="azure-maps-rest.atlas.service.Models.Stop" />
+        description: ''

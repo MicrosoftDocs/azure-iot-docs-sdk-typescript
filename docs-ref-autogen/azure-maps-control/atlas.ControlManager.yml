@@ -1,0 +1,61 @@
+### YamlMime:TSType
+name: ControlManager
+uid: azure-maps-control.atlas.ControlManager
+package: azure-maps-control
+summary: |-
+  A manager for the map control's controls.
+  Exposed through the controls property of the atlas.Map class.
+  Cannot be instantiated by the user.
+fullName: ControlManager
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+methods:
+  - name: 'add(Control | Control[], ControlOptions)'
+    uid: azure-maps-control.atlas.ControlManager.add
+    package: azure-maps-control
+    summary: Add a control(s) to the map.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function add(control: Control | Control[], options?: ControlOptions)'
+      parameters:
+        - id: control
+          type: >-
+            <xref uid="azure-maps-control.atlas.Control" /> | <xref
+            uid="azure-maps-control.atlas.Control" />[]
+          description: The control to add.
+        - id: options
+          type: <xref uid="azure-maps-control.atlas.ControlOptions" />
+          description: |
+            The options for the added control.
+  - name: getControls()
+    uid: azure-maps-control.atlas.ControlManager.getControls
+    package: azure-maps-control
+    summary: Gets an array of all controls on the map
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getControls()
+      return:
+        type: '<xref uid="azure-maps-control.atlas.Control" />[]'
+        description: ''
+  - name: 'remove(Control | Control[])'
+    uid: azure-maps-control.atlas.ControlManager.remove
+    package: azure-maps-control
+    summary: Remove a control(s) from the map.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function remove(control: Control | Control[])'
+      parameters:
+        - id: control
+          type: >-
+            <xref uid="azure-maps-control.atlas.Control" /> | <xref
+            uid="azure-maps-control.atlas.Control" />[]
+          description: |
+            The control to remove.

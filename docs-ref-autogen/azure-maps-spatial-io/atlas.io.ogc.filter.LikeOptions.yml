@@ -1,0 +1,79 @@
+### YamlMime:TSType
+name: LikeOptions
+uid: azure-maps-spatial-io.atlas.io.ogc.filter.LikeOptions
+package: azure-maps-spatial-io
+summary: Options for a Like filter.
+fullName: LikeOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: escapeChar
+    uid: azure-maps-spatial-io.atlas.io.ogc.filter.LikeOptions.escapeChar
+    package: azure-maps-spatial-io
+    summary: ''
+    fullName: escapeChar
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'escapeChar?: string'
+      return:
+        type: string
+        description: ''
+  - name: matchAction
+    uid: azure-maps-spatial-io.atlas.io.ogc.filter.LikeOptions.matchAction
+    package: azure-maps-spatial-io
+    summary: ''
+    fullName: matchAction
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'matchAction?: "Any" | "All" | "One"'
+      return:
+        type: '"Any" | "All" | "One"'
+        description: ''
+  - name: matchCase
+    uid: azure-maps-spatial-io.atlas.io.ogc.filter.LikeOptions.matchCase
+    package: azure-maps-spatial-io
+    summary: ''
+    fullName: matchCase
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'matchCase?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: singleChar
+    uid: azure-maps-spatial-io.atlas.io.ogc.filter.LikeOptions.singleChar
+    package: azure-maps-spatial-io
+    summary: ''
+    fullName: singleChar
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'singleChar?: string'
+      return:
+        type: string
+        description: ''
+  - name: wildCard
+    uid: azure-maps-spatial-io.atlas.io.ogc.filter.LikeOptions.wildCard
+    package: azure-maps-spatial-io
+    summary: ''
+    fullName: wildCard
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'wildCard?: string'
+      return:
+        type: string
+        description: ''
+extends: >-
+  <xref uid="azure-maps-spatial-io.atlas.io.ogc.filter.BinaryComparisonOptions"
+  />

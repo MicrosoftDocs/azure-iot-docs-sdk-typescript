@@ -1,0 +1,89 @@
+### YamlMime:TSType
+name: TransitLineInfoResponse
+uid: azure-maps-rest.atlas.service.Models.TransitLineInfoResponse
+package: azure-maps-rest
+summary: This object is returned from a successful Transit Line Info call.
+fullName: TransitLineInfoResponse
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: lineGroup
+    uid: azure-maps-rest.atlas.service.Models.TransitLineInfoResponse.lineGroup
+    package: azure-maps-rest
+    summary: >-
+      Groups together all lines that are logically part of the same group.
+      Typically contains 2
+
+      lines having the same agency and line, one going from A to B, and the
+      other from B to A.
+    fullName: lineGroup
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'lineGroup?: LineGroup'
+      return:
+        type: <xref uid="azure-maps-rest.atlas.service.Models.LineGroup" />
+        description: ''
+  - name: lines
+    uid: azure-maps-rest.atlas.service.Models.TransitLineInfoResponse.lines
+    package: azure-maps-rest
+    summary: The line group’s basic info and list of the lines.
+    fullName: lines
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'lines?: Line[]'
+      return:
+        type: '<xref uid="azure-maps-rest.atlas.service.Models.Line" />[]'
+        description: ''
+  - name: patterns
+    uid: azure-maps-rest.atlas.service.Models.TransitLineInfoResponse.patterns
+    package: azure-maps-rest
+    summary: >-
+      List of patterns this group is comprised of. A pattern consists of a stop
+      sequence and shape
+
+      per a line in GeoJSON format.
+    fullName: patterns
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'patterns?: Pattern[]'
+      return:
+        type: '<xref uid="azure-maps-rest.atlas.service.Models.Pattern" />[]'
+        description: ''
+  - name: schedule
+    uid: azure-maps-rest.atlas.service.Models.TransitLineInfoResponse.schedule
+    package: azure-maps-rest
+    summary: >-
+      Line schedule for the current 24h. May be null in case no schedule exists
+      for the current
+
+      time.
+    fullName: schedule
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'schedule?: LineArrival'
+      return:
+        type: <xref uid="azure-maps-rest.atlas.service.Models.LineArrival" />
+        description: ''
+  - name: stops
+    uid: azure-maps-rest.atlas.service.Models.TransitLineInfoResponse.stops
+    package: azure-maps-rest
+    summary: List of stops the line group goes through.
+    fullName: stops
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'stops?: Stop[]'
+      return:
+        type: '<xref uid="azure-maps-rest.atlas.service.Models.Stop" />[]'
+        description: ''

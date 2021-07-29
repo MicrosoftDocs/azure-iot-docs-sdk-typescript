@@ -1,0 +1,32 @@
+### YamlMime:TSType
+name: RouteRangeGeojson
+uid: azure-maps-rest.atlas.service.RouteRangeGeojson
+package: azure-maps-rest
+summary: >-
+  A helper extension providing methods for accessing the response data in
+  GeoJSON format.
+fullName: RouteRangeGeojson
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+methods:
+  - name: getFeatures()
+    uid: azure-maps-rest.atlas.service.RouteRangeGeojson.getFeatures
+    package: azure-maps-rest
+    summary: >-
+      Returns a GeoJSON feature collection built from the reachable range.
+
+      The first feature in the collection is a Polygon representing the boundary
+      of the reachable range.
+
+      The second feature is a Point representing the center point of the
+      reachable range.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getFeatures()
+      return:
+        type: FeatureCollection&lt;Polygon | Point&gt;
+        description: ''

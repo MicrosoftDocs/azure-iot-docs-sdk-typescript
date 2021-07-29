@@ -1,0 +1,235 @@
+### YamlMime:TSType
+name: ImageLayer
+uid: azure-maps-control.atlas.layer.ImageLayer
+package: azure-maps-control
+summary: >-
+  Overlays an image on the map with each corner anchored to a coordinate on the
+  map. Also known as a ground or image overlay.
+fullName: ImageLayer<T>
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'ImageLayer(ImageLayerOptions, string)'
+    uid: azure-maps-control.atlas.layer.ImageLayer.constructor
+    package: azure-maps-control
+    summary: Constructs a new ImageLayer.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new ImageLayer(options: ImageLayerOptions, id?: string)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-maps-control.atlas.ImageLayerOptions" />
+          description: The options for the tile layer.
+        - id: id
+          type: string
+          description: >
+            The id of the layer. If not specified a random one will be
+            generated.
+properties:
+  - name: metadata
+    uid: azure-maps-control.atlas.layer.ImageLayer.metadata
+    package: azure-maps-control
+    summary: A property for associating custom data with the layer.
+    fullName: metadata
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'metadata?: any'
+      return:
+        type: any
+        description: ''
+methods:
+  - name: 'getCoordinatesFromEdges(number, number, number, number, number)'
+    uid: azure-maps-control.atlas.layer.ImageLayer.getCoordinatesFromEdges
+    package: azure-maps-control
+    summary: >-
+      Calculates coordinates for a rotated image layer when provided with the
+      bounding box edges and rotation value.
+
+      Note: If your rotation value is from a KML Ground Overlay it will need to
+      be converted to a clockwise rotation using the following formula:
+      `rotation = 360 – KmlRotation`
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function getCoordinatesFromEdges(north: number, south: number,
+        east: number, west: number, rotation?: number)
+      parameters:
+        - id: north
+          type: number
+          description: The north edge of the bounding box.
+        - id: south
+          type: number
+          description: The south edge of the bounding box.
+        - id: east
+          type: number
+          description: The east edge of the bounding box.
+        - id: west
+          type: number
+          description: The west edge of the bounding box.
+        - id: rotation
+          type: number
+          description: |
+            Clockwise rotation in degrees
+      return:
+        type: '<xref uid="azure-maps-control.atlas.data.Position" />[]'
+        description: ''
+  - name: 'getCoordinatesFromEdges(number, number, number, number, number)'
+    uid: azure-maps-control.atlas.layer.ImageLayer.getCoordinatesFromEdges_1
+    package: azure-maps-control
+    summary: >-
+      Calculates coordinates for a rotated image layer when provided with the
+      bounding box edges and rotation value.
+
+      Note: If your rotation value is from a KML Ground Overlay it will need to
+      be converted to a clockwise rotation using the following formula:
+      `rotation = 360 – KmlRotation`
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function getCoordinatesFromEdges(north: number, south: number,
+        east: number, west: number, rotation?: number)
+      parameters:
+        - id: north
+          type: number
+          description: The north edge of the bounding box.
+        - id: south
+          type: number
+          description: The south edge of the bounding box.
+        - id: east
+          type: number
+          description: The east edge of the bounding box.
+        - id: west
+          type: number
+          description: The west edge of the bounding box.
+        - id: rotation
+          type: number
+          description: |
+            Clockwise rotation in degrees
+      return:
+        type: '<xref uid="azure-maps-control.atlas.data.Position" />[]'
+        description: ''
+  - name: getId()
+    uid: azure-maps-control.atlas.layer.ImageLayer.getId
+    package: azure-maps-control
+    summary: Gets the id of the layer
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getId()
+      return:
+        type: string
+        description: ''
+  - name: getMap()
+    uid: azure-maps-control.atlas.layer.ImageLayer.getMap
+    package: azure-maps-control
+    summary: 'Gets the map that the layer is currently added to, or null.'
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getMap()
+      return:
+        type: <xref uid="azure-maps-control.atlas.Map" />
+        description: ''
+  - name: getOptions()
+    uid: azure-maps-control.atlas.layer.ImageLayer.getOptions
+    package: azure-maps-control
+    summary: Gets the options of the tile layer.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getOptions()
+      return:
+        type: <xref uid="azure-maps-control.atlas.ImageLayerOptions" />
+        description: ''
+  - name: 'getPixels(Position[])'
+    uid: azure-maps-control.atlas.layer.ImageLayer.getPixels
+    package: azure-maps-control
+    summary: >-
+      Calculates the approximate pixels on the source image that align with the
+      provided positions.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getPixels(positions: Position[])'
+      parameters:
+        - id: positions
+          type: '<xref uid="azure-maps-control.atlas.data.Position" />[]'
+          description: >
+            the provided positions from the source image used to calculate the
+            pixels
+      return:
+        type: 'Promise&lt;<xref uid="azure-maps-control.atlas.Pixel" />[]&gt;'
+        description: ''
+  - name: 'getPositions(Pixel[])'
+    uid: azure-maps-control.atlas.layer.ImageLayer.getPositions
+    package: azure-maps-control
+    summary: >-
+      Calculates the approximate positions that align with the provided pixels
+      from the source image.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getPositions(pixels: Pixel[])'
+      parameters:
+        - id: pixels
+          type: '<xref uid="azure-maps-control.atlas.Pixel" />[]'
+          description: >
+            the provided pixels from the source image used to calculate the
+            positions
+      return:
+        type: 'Promise&lt;<xref uid="azure-maps-control.atlas.data.Position" />[]&gt;'
+        description: ''
+  - name: onAdd(Map)
+    uid: azure-maps-control.atlas.layer.ImageLayer.onAdd
+    package: azure-maps-control
+    summary: Initialization method for the layer which is called when added to the map.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function onAdd(map: Map)'
+      parameters:
+        - id: map
+          type: <xref uid="azure-maps-control.atlas.Map" />
+          description: |
+            The map the layer has been added to.
+  - name: onRemove()
+    uid: azure-maps-control.atlas.layer.ImageLayer.onRemove
+    package: azure-maps-control
+    summary: |-
+      Method that is called when the layer is removed from the map.
+      Should perform any necessary cleanup for the layer.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function onRemove()
+  - name: setOptions(ImageLayerOptions)
+    uid: azure-maps-control.atlas.layer.ImageLayer.setOptions
+    package: azure-maps-control
+    summary: Sets the options of the tile layer.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function setOptions(options: ImageLayerOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-maps-control.atlas.ImageLayerOptions" />
+          description: ''
+extends: <xref uid="azure-maps-control.atlas.layer.Layer" />

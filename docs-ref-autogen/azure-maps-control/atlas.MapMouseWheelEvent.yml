@@ -1,0 +1,64 @@
+### YamlMime:TSType
+name: MapMouseWheelEvent
+uid: azure-maps-control.atlas.MapMouseWheelEvent
+package: azure-maps-control
+summary: Event object returned by the maps when a wheel event occurs.
+fullName: MapMouseWheelEvent
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: map
+    uid: azure-maps-control.atlas.MapMouseWheelEvent.map
+    package: azure-maps-control
+    summary: The `Map` instance in which the event occurred on.
+    fullName: map
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'map: Map'
+      return:
+        type: <xref uid="azure-maps-control.atlas.Map" />
+        description: ''
+  - name: originalEvent
+    uid: azure-maps-control.atlas.MapMouseWheelEvent.originalEvent
+    package: azure-maps-control
+    summary: The original event that was fired.
+    fullName: originalEvent
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'originalEvent?: Event'
+      return:
+        type: Event
+        description: ''
+  - name: preventDefault
+    uid: azure-maps-control.atlas.MapMouseWheelEvent.preventDefault
+    package: azure-maps-control
+    summary: Prevents event propagation bubbling up the event chain.
+    fullName: preventDefault
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'preventDefault: () => void'
+      return:
+        type: () =&gt; void
+        description: ''
+  - name: type
+    uid: azure-maps-control.atlas.MapMouseWheelEvent.type
+    package: azure-maps-control
+    summary: The event type.
+    fullName: type
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'type: string'
+      return:
+        type: string
+        description: ''
+extends: <xref uid="azure-maps-control.atlas.MapEvent" />

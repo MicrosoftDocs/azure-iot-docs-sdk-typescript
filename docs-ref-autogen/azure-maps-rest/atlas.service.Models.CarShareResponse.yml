@@ -1,0 +1,127 @@
+### YamlMime:TSType
+name: CarShareResponse
+uid: azure-maps-rest.atlas.service.Models.CarShareResponse
+package: azure-maps-rest
+summary: >-
+  Details of the car share vehicle. Name is always returned. Level of other
+  returned details
+
+  depends on car share operator.
+fullName: CarShareResponse
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: batteryLevel
+    uid: azure-maps-rest.atlas.service.Models.CarShareResponse.batteryLevel
+    package: azure-maps-rest
+    summary: >-
+      Percentage of battery indicating the battery level, 100 being full, 0
+      empty. Unit: percentage
+
+      (%).
+    fullName: batteryLevel
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'batteryLevel?: number'
+      return:
+        type: number
+        description: ''
+  - name: fuelLevel
+    uid: azure-maps-rest.atlas.service.Models.CarShareResponse.fuelLevel
+    package: azure-maps-rest
+    summary: >-
+      Percentage of fuel indicating the fuel level, 100 being full, 0 empty.
+      Unit: percentage (%).
+    fullName: fuelLevel
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'fuelLevel?: number'
+      return:
+        type: number
+        description: ''
+  - name: model
+    uid: azure-maps-rest.atlas.service.Models.CarShareResponse.model
+    package: azure-maps-rest
+    summary: Model of the car.
+    fullName: model
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'model?: string'
+      return:
+        type: string
+        description: ''
+  - name: name
+    uid: azure-maps-rest.atlas.service.Models.CarShareResponse.name
+    package: azure-maps-rest
+    summary: >-
+      Car share provider specific value – most often will be the vehicle's
+      license plate.
+    fullName: name
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name?: string'
+      return:
+        type: string
+        description: ''
+  - name: operatorInfo
+    uid: azure-maps-rest.atlas.service.Models.CarShareResponse.operatorInfo
+    package: azure-maps-rest
+    summary: Details of the share operator.
+    fullName: operatorInfo
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'operatorInfo?: OperatorInfo'
+      return:
+        type: <xref uid="azure-maps-rest.atlas.service.Models.OperatorInfo" />
+        description: ''
+  - name: position
+    uid: azure-maps-rest.atlas.service.Models.CarShareResponse.position
+    package: azure-maps-rest
+    summary: Last known location of the vehicle.
+    fullName: position
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'position?: Coordinate'
+      return:
+        type: <xref uid="azure-maps-rest.atlas.service.Models.Coordinate" />
+        description: ''
+  - name: pricing
+    uid: azure-maps-rest.atlas.service.Models.CarShareResponse.pricing
+    package: azure-maps-rest
+    summary: 'Pricing details including currency, reservation price and usage price.'
+    fullName: pricing
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'pricing?: Pricing'
+      return:
+        type: <xref uid="azure-maps-rest.atlas.service.Models.Pricing" />
+        description: ''
+  - name: seatCount
+    uid: azure-maps-rest.atlas.service.Models.CarShareResponse.seatCount
+    package: azure-maps-rest
+    summary: Total number of seats in the vehicle.
+    fullName: seatCount
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'seatCount?: number'
+      return:
+        type: number
+        description: ''

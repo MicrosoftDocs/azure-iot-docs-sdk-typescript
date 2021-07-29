@@ -1,0 +1,113 @@
+### YamlMime:TSType
+name: AlertDetail
+uid: azure-maps-rest.atlas.service.Models.AlertDetail
+package: azure-maps-rest
+summary: A list of alert details.
+fullName: AlertDetail
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: activeFrom
+    uid: azure-maps-rest.atlas.service.Models.AlertDetail.activeFrom
+    package: azure-maps-rest
+    summary: >-
+      The start time of the alert in the local time in ISO format
+      (2019-04-05T14:24:18-04:00).
+    fullName: activeFrom
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'activeFrom?: Date'
+      return:
+        type: Date
+        description: ''
+  - name: activeTo
+    uid: azure-maps-rest.atlas.service.Models.AlertDetail.activeTo
+    package: azure-maps-rest
+    summary: |-
+      The estimated end time of the alert in the local time in ISO format
+      (2019-04-05T14:24:18-04:00).
+    fullName: activeTo
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'activeTo?: Date'
+      return:
+        type: Date
+        description: ''
+  - name: agencyId
+    uid: azure-maps-rest.atlas.service.Models.AlertDetail.agencyId
+    package: azure-maps-rest
+    summary: 'The Id of the relevant transit agency, for example, ''5872''.'
+    fullName: agencyId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'agencyId?: string'
+      return:
+        type: string
+        description: ''
+  - name: agencyName
+    uid: azure-maps-rest.atlas.service.Models.AlertDetail.agencyName
+    package: azure-maps-rest
+    summary: 'Name of the relevant transit agency, e.g. Metro Transit.'
+    fullName: agencyName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'agencyName?: string'
+      return:
+        type: string
+        description: ''
+  - name: description
+    uid: azure-maps-rest.atlas.service.Models.AlertDetail.description
+    package: azure-maps-rest
+    summary: A short description of the alert.
+    fullName: description
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'description?: AlertDescription'
+      return:
+        type: <xref uid="azure-maps-rest.atlas.service.Models.AlertDescription" />
+        description: ''
+  - name: effect
+    uid: azure-maps-rest.atlas.service.Models.AlertDetail.effect
+    package: azure-maps-rest
+    summary: >-
+      Service Alert effect - one of SA_NO_SERVICE, SA_REDUCED_SERVICE,
+      SA_SIGNIFICANT_DELAYS,
+
+      SA_DETOUR, SA_ADDITIONAL_SERVICE, SA_MODIFIED_SERVICE, SA_OTHER_EFFECT,
+      SA_STOP_MOVED,
+
+      SA_GOOD_SERVICE, SA_SLEEPING, SA_OTHER_EFFECT
+    fullName: effect
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'effect?: string'
+      return:
+        type: string
+        description: ''
+  - name: title
+    uid: azure-maps-rest.atlas.service.Models.AlertDetail.title
+    package: azure-maps-rest
+    summary: The title of the alert.
+    fullName: title
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'title?: string'
+      return:
+        type: string
+        description: ''

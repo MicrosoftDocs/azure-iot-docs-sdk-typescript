@@ -55,6 +55,20 @@ methods:
       return:
         type: <xref uid="azmaps.layer.LineLayer" />
         description: A line layer used to render the grid lines.
+  - name: getOptions()
+    uid: azure-maps-drawing-tools.atlas.drawing.SnapGridManager.getOptions
+    package: azure-maps-drawing-tools
+    summary: Gets the options used by the SnapGridManager.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getOptions()
+      return:
+        type: >-
+          <xref
+          uid="azure-maps-drawing-tools.atlas.drawing.SnapGridManagerOptions" />
+        description: ''
   - name: setOptions(SnapGridManagerOptions)
     uid: azure-maps-drawing-tools.atlas.drawing.SnapGridManager.setOptions
     package: azure-maps-drawing-tools
@@ -91,7 +105,7 @@ methods:
           type: number
           description: >-
             Optionally specify which zoom level to optimize the snapping for. If
-            not specified, the maps zoom level will be used.
+            not specified, the map's zoom level will be used.
       return:
         type: '<xref uid="azmaps.data.Position" />[]'
         description: A new array of snapped positions.

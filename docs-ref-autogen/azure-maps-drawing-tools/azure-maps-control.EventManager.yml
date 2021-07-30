@@ -18,7 +18,8 @@ type: interface
 methods:
   - name: >-
       add("drawingchanged" | "drawingchanging" | "drawingcomplete" |
-      "drawingstarted", DrawingManager, (e: azmaps.Shape) => void)
+      "drawingstarted" | "drawingerased", DrawingManager, (e: azmaps.Shape) =>
+      void)
     uid: azure-maps-drawing-tools.azure-maps-control.EventManager.add_1
     package: azure-maps-drawing-tools
     summary: Adds an event to the `DrawingManager`
@@ -28,13 +29,13 @@ methods:
     syntax:
       content: >-
         function add(eventType: "drawingchanged" | "drawingchanging" |
-        "drawingcomplete" | "drawingstarted", target: DrawingManager, callback:
-        (e: azmaps.Shape) => void)
+        "drawingcomplete" | "drawingstarted" | "drawingerased", target:
+        DrawingManager, callback: (e: azmaps.Shape) => void)
       parameters:
         - id: eventType
           type: >-
             "drawingchanged" | "drawingchanging" | "drawingcomplete" |
-            "drawingstarted"
+            "drawingstarted" | "drawingerased"
           description: The event name.
         - id: target
           type: <xref uid="azure-maps-drawing-tools.atlas.drawing.DrawingManager" />

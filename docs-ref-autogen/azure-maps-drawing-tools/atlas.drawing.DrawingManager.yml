@@ -45,6 +45,25 @@ methods:
     isDeprecated: false
     syntax:
       content: function dispose()
+  - name: edit(azmaps.Shape)
+    uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager.edit
+    package: azure-maps-drawing-tools
+    summary: >-
+      Edits a shape. If the shape is not already in the data source, it adds it
+      to it.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function edit(shape: azmaps.Shape)'
+      parameters:
+        - id: shape
+          type: <xref uid="azmaps.Shape" />
+          description: |
+            The shape to put in edit mode.
+      return:
+        type: any
+        description: ''
   - name: getLayers()
     uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager.getLayers
     package: azure-maps-drawing-tools

@@ -4,6 +4,7 @@ uid: azure-maps-drawing-tools.atlas.DrawingManagerOptions
 package: azure-maps-drawing-tools
 summary: Options for the drawing manager.
 fullName: DrawingManagerOptions
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
@@ -13,6 +14,7 @@ properties:
     package: azure-maps-drawing-tools
     summary: The style options for the primary drag handles
     fullName: dragHandleStyle
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -31,6 +33,7 @@ properties:
 
       Default is `3`.
     fullName: freehandInterval
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -45,6 +48,7 @@ properties:
       The type of drawing interaction the manager should adhere to.
       Default is `"hybrid"`.
     fullName: interactionType
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -61,6 +65,7 @@ properties:
       The drawing mode the manager is in.
       Default is `"idle"`.
     fullName: mode
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -78,6 +83,7 @@ properties:
       These provide handles at mid-points for creating new coordinates between
       existing coordinates.
     fullName: secondaryDragHandleStyle
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -90,10 +96,24 @@ properties:
     package: azure-maps-drawing-tools
     summary: Specifies if shapes can be dragged when in edit or select mode.
     fullName: shapeDraggingEnabled
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'shapeDraggingEnabled?: boolean'
+      return:
+        type: boolean
+        description: ''
+  - name: shapeRotationEnabled
+    uid: azure-maps-drawing-tools.atlas.DrawingManagerOptions.shapeRotationEnabled
+    package: azure-maps-drawing-tools
+    summary: Specifies if shapes can be rotated when in edit mode.
+    fullName: shapeRotationEnabled
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'shapeRotationEnabled?: boolean'
       return:
         type: boolean
         description: ''
@@ -109,6 +129,7 @@ properties:
       If the data source is changed the drawing manager will be switched to
       `"idle"` mode.
     fullName: source
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -121,6 +142,7 @@ properties:
     package: azure-maps-drawing-tools
     summary: A drawing toolbar to display as a control for the drawing manager.
     fullName: toolbar
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:

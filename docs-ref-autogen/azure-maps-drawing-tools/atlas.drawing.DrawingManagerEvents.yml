@@ -4,6 +4,7 @@ uid: azure-maps-drawing-tools.atlas.drawing.DrawingManagerEvents
 package: azure-maps-drawing-tools
 summary: The events supported by the `DrawingManager`
 fullName: DrawingManagerEvents
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
@@ -13,6 +14,7 @@ properties:
     package: azure-maps-drawing-tools
     summary: ''
     fullName: drawingchanged
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -26,6 +28,7 @@ properties:
     package: azure-maps-drawing-tools
     summary: ''
     fullName: drawingchanging
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -39,10 +42,24 @@ properties:
     package: azure-maps-drawing-tools
     summary: ''
     fullName: drawingcomplete
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'drawingcomplete: azmaps.Shape'
+      return:
+        type: <xref uid="azmaps.Shape" />
+        description: ''
+  - name: drawingerased
+    uid: azure-maps-drawing-tools.atlas.drawing.DrawingManagerEvents.drawingerased
+    package: azure-maps-drawing-tools
+    summary: ''
+    fullName: drawingerased
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'drawingerased: azmaps.Shape'
       return:
         type: <xref uid="azmaps.Shape" />
         description: ''
@@ -52,6 +69,7 @@ properties:
     package: azure-maps-drawing-tools
     summary: ''
     fullName: drawingmodechanged
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -64,6 +82,7 @@ properties:
     package: azure-maps-drawing-tools
     summary: ''
     fullName: drawingstarted
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:

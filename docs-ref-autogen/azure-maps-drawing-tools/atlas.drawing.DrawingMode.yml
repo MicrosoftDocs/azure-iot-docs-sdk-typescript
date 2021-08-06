@@ -4,6 +4,7 @@ uid: azure-maps-drawing-tools.atlas.drawing.DrawingMode
 package: azure-maps-drawing-tools
 summary: An enumeration of the available drawing modes.
 fullName: DrawingMode
+remarks: ''
 isPreview: false
 isDeprecated: false
 fields:
@@ -43,6 +44,12 @@ fields:
     summary: >-
       When in this mode the user can add/remove/move points/coordinates of a
       shape, rotate shapes, drag shapes.
+  - name: eraseGeometry
+    uid: azure-maps-drawing-tools.atlas.drawing.DrawingMode.eraseGeometry
+    package: azure-maps-drawing-tools
+    summary: >-
+      When in this mode the user can erase (delete) shapes tracked by the
+      DrawingManager.
   - name: idle
     uid: azure-maps-drawing-tools.atlas.drawing.DrawingMode.idle
     package: azure-maps-drawing-tools

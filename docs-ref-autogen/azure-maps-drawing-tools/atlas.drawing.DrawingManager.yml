@@ -10,6 +10,7 @@ summary: >-
 
   or in combination with the drawing toolbar control.
 fullName: DrawingManager
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
@@ -18,6 +19,7 @@ constructors:
     uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager.constructor
     package: azure-maps-drawing-tools
     summary: Constructs a DrawingManager.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -38,10 +40,30 @@ methods:
       Disposes the DrawingManager.
       When disposed, all resources used by the DrawingManager are released.
       Any attached toolbars or dialogs will also be disposed.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: function dispose()
+  - name: edit(azmaps.Shape)
+    uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager.edit
+    package: azure-maps-drawing-tools
+    summary: >-
+      Edits a shape. If the shape is not already in the data source, it adds it
+      to it.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function edit(shape: azmaps.Shape)'
+      parameters:
+        - id: shape
+          type: <xref uid="azmaps.Shape" />
+          description: |
+            The shape to put in edit mode.
+      return:
+        type: any
+        description: ''
   - name: getLayers()
     uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager.getLayers
     package: azure-maps-drawing-tools
@@ -50,6 +72,7 @@ methods:
       map.
 
       Edit these layers' options to customize the rendering.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -61,6 +84,7 @@ methods:
     uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager.getOptions
     package: azure-maps-drawing-tools
     summary: Gets the options used by the DrawingManager.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -68,12 +92,29 @@ methods:
       return:
         type: <xref uid="azure-maps-drawing-tools.atlas.DrawingManagerOptions" />
         description: ''
+  - name: getPreviewLayers()
+    uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager.getPreviewLayers
+    package: azure-maps-drawing-tools
+    summary: >-
+      Gets the collection of preview layers used for rendering the shapes draw
+      on the map.
+
+      Edit these layers' options to customize the rendering.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function getPreviewLayers()
+      return:
+        type: <xref uid="azure-maps-drawing-tools.atlas.DrawingLayers" />
+        description: ''
   - name: getSource()
     uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager.getSource
     package: azure-maps-drawing-tools
     summary: >-
       Gets the data source used by the DrawingManager to store the completed
       shapes.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -85,6 +126,7 @@ methods:
     uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager.setOptions
     package: azure-maps-drawing-tools
     summary: Sets the options for the DrawingManager.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:

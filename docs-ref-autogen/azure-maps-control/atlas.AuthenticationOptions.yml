@@ -6,6 +6,7 @@ summary: >-
   Options for specifying how the map control should authenticate with the Azure
   Maps services.
 fullName: AuthenticationOptions
+remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
@@ -19,6 +20,7 @@ properties:
 
       Must be specified for AAD authentication type.
     fullName: aadAppId
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -34,6 +36,7 @@ properties:
       Can be optionally specified when using the AAD authentication type.
       By default the `https://login.microsoftonline.com/` instance will be used.
     fullName: aadInstance
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -48,6 +51,7 @@ properties:
       The AAD tenant that owns the registered app specified by `aadAppId`.
       Must be specified for AAD authentication type.
     fullName: aadTenant
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -72,6 +76,7 @@ properties:
       If this is not provided all map instances will share their own private
       auth context.
     fullName: authContext
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -84,6 +89,7 @@ properties:
     package: azure-maps-control
     summary: The authentication mechanism to be used.
     fullName: authType
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -101,6 +107,7 @@ properties:
       Preferred to always be specified, but must be specified for AAD and
       anonymous authentication types.
     fullName: clientId
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -116,6 +123,7 @@ properties:
       This callback will be responsible for resolving to a authentication token.
       E.g. fetching a CORS protected token from an endpoint.
     fullName: getToken
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -130,6 +138,7 @@ properties:
       Subscription key from your Azure Maps account.
       Must be specified for subscription key authentication type.
     fullName: subscriptionKey
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -144,6 +153,7 @@ methods:
     summary: >-
       Sets the required authentication options to configure the AAD implicit
       grant mechanism.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -173,6 +183,7 @@ methods:
     summary: >-
       Sets the required options to configure the subscription key authentication
       mechanism.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
@@ -187,6 +198,7 @@ methods:
     summary: >-
       Sets the required options to configure the anonymous authentication
       method.
+    remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:

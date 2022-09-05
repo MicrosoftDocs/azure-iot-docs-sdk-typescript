@@ -23,21 +23,23 @@ constructors:
           type: <xref uid="azure-maps-indoor.atlas.control.LevelControlOptions" />
           description: |
             The options for the control.
-methods:
-  - name: onAdd()
+properties:
+  - name: onAdd
     uid: azure-maps-indoor.atlas.control.LevelControl.onAdd
     package: azure-maps-indoor
     summary: >-
       Initialization method for the control which is called when added to the
       map.
+    fullName: onAdd
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function onAdd()
+      content: 'onAdd: () => HTMLElement'
       return:
-        type: HTMLElement
-        description: An HTMLElement to be placed on the map for the control.
+        description: ''
+        type: () =&gt; HTMLElement
+methods:
   - name: onRemove()
     uid: azure-maps-indoor.atlas.control.LevelControl.onRemove
     package: azure-maps-indoor

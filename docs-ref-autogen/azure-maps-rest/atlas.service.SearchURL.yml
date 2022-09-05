@@ -33,7 +33,7 @@ constructors:
 
             If no protocol is specified, e.g. `"atlas.microsoft.com"`, then
             `https` will be assumed.
-properties:
+inheritedProperties:
   - name: mapsUrl
     uid: azure-maps-rest.atlas.service.SearchURL.mapsUrl
     package: azure-maps-rest
@@ -45,9 +45,10 @@ properties:
     syntax:
       content: 'mapsUrl: string'
       return:
-        type: string
         description: ''
-methods:
+        type: string
+    inheritanceDescription: '<b>Inherited From</b> [MapsURL.mapsUrl](xref:MapsURL.mapsUrl)'
+inheritedMethods:
   - name: 'newPipeline(Credential, INewPipelineOptions)'
     uid: azure-maps-rest.atlas.service.SearchURL.newPipeline
     package: azure-maps-rest
@@ -60,7 +61,7 @@ methods:
     syntax:
       content: >-
         static function newPipeline(credential: Credential, pipelineOptions?:
-        INewPipelineOptions)
+        INewPipelineOptions): Pipeline
       parameters:
         - id: credential
           type: <xref uid="azure-maps-rest.atlas.service.Credential" />
@@ -71,8 +72,10 @@ methods:
           type: <xref uid="azure-maps-rest.atlas.service.INewPipelineOptions" />
           description: ''
       return:
-        type: <xref uid="azure-maps-rest.atlas.service.Pipeline" />
         description: A new Pipeline object.
+        type: <xref uid="azure-maps-rest.atlas.service.Pipeline" />
+    inheritanceDescription: '<b>Inherited From</b> [MapsURL.newPipeline](xref:MapsURL.newPipeline)'
+methods:
   - name: 'searchAddress(Aborter, string, SearchAddressOptions)'
     uid: azure-maps-rest.atlas.service.SearchURL.searchAddress
     package: azure-maps-rest
@@ -110,7 +113,7 @@ methods:
     syntax:
       content: >-
         function searchAddress(aborter: Aborter, query: string, options?:
-        SearchAddressOptions)
+        SearchAddressOptions): Promise<SearchAddressResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -127,10 +130,10 @@ methods:
           type: <xref uid="azure-maps-rest.atlas.service.SearchAddressOptions" />
           description: ''
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.SearchAddressResponse" />&gt;
-        description: ''
   - name: >-
       searchAddressReverse(Aborter, GeoJSON.Position,
       SearchAddressReverseOptions)
@@ -158,7 +161,8 @@ methods:
     syntax:
       content: >-
         function searchAddressReverse(aborter: Aborter, position:
-        GeoJSON.Position, options?: SearchAddressReverseOptions)
+        GeoJSON.Position, options?: SearchAddressReverseOptions):
+        Promise<SearchAddressReverseResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -181,11 +185,11 @@ methods:
             uid="azure-maps-rest.atlas.service.SearchAddressReverseOptions" />
           description: ''
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.SearchAddressReverseResponse"
           />&gt;
-        description: ''
   - name: >-
       searchAddressReverseCrossStreet(Aborter, GeoJSON.Position,
       SearchAddressReverseCrossStreetOptions)
@@ -213,7 +217,8 @@ methods:
     syntax:
       content: >-
         function searchAddressReverseCrossStreet(aborter: Aborter, position:
-        GeoJSON.Position, options?: SearchAddressReverseCrossStreetOptions)
+        GeoJSON.Position, options?: SearchAddressReverseCrossStreetOptions):
+        Promise<SearchAddressReverseCrossStreetResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -237,11 +242,11 @@ methods:
             />
           description: ''
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.SearchAddressReverseCrossStreetResponse"
           />&gt;
-        description: ''
   - name: 'searchAddressStructured(Aborter, string, SearchAddressStructuredOptions)'
     uid: azure-maps-rest.atlas.service.SearchURL.searchAddressStructured
     package: azure-maps-rest
@@ -270,7 +275,8 @@ methods:
     syntax:
       content: >-
         function searchAddressStructured(aborter: Aborter, countryCode: string,
-        options?: SearchAddressStructuredOptions)
+        options?: SearchAddressStructuredOptions):
+        Promise<SearchAddressStructuredResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -296,11 +302,11 @@ methods:
             />
           description: ''
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.SearchAddressStructuredResponse"
           />&gt;
-        description: ''
   - name: >-
       searchAlongRoute(Aborter, string, number, SearchAlongRouteRequestBody,
       SearchAlongRouteOptions)
@@ -346,7 +352,7 @@ methods:
       content: >-
         function searchAlongRoute(aborter: Aborter, query: string,
         maxDetourTime: number, body: SearchAlongRouteRequestBody, options?:
-        SearchAlongRouteOptions)
+        SearchAlongRouteOptions): Promise<SearchAlongRouteResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -382,10 +388,10 @@ methods:
           type: <xref uid="azure-maps-rest.atlas.service.SearchAlongRouteOptions" />
           description: ''
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.SearchAlongRouteResponse" />&gt;
-        description: ''
   - name: 'searchFuzzy(Aborter, string | GeoJSON.Position, SearchFuzzyOptions)'
     uid: azure-maps-rest.atlas.service.SearchURL.searchFuzzy
     package: azure-maps-rest
@@ -436,7 +442,7 @@ methods:
     syntax:
       content: >-
         function searchFuzzy(aborter: Aborter, query: string | GeoJSON.Position,
-        options?: SearchFuzzyOptions)
+        options?: SearchFuzzyOptions): Promise<SearchFuzzyResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -457,10 +463,10 @@ methods:
           type: <xref uid="azure-maps-rest.atlas.service.SearchFuzzyOptions" />
           description: ''
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.SearchFuzzyResponse" />&gt;
-        description: ''
   - name: >-
       searchInsideGeometry(Aborter, string, SearchInsideGeometryRequestBody,
       SearchInsideGeometryOptions)
@@ -534,7 +540,8 @@ methods:
     syntax:
       content: >-
         function searchInsideGeometry(aborter: Aborter, query: string, body:
-        SearchInsideGeometryRequestBody, options?: SearchInsideGeometryOptions)
+        SearchInsideGeometryRequestBody, options?: SearchInsideGeometryOptions):
+        Promise<SearchInsideGeometryResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -566,11 +573,11 @@ methods:
             uid="azure-maps-rest.atlas.service.SearchInsideGeometryOptions" />
           description: ''
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.SearchInsideGeometryResponse"
           />&gt;
-        description: ''
   - name: 'searchNearby(Aborter, GeoJSON.Position, SearchNearbyOptions)'
     uid: azure-maps-rest.atlas.service.SearchURL.searchNearby
     package: azure-maps-rest
@@ -591,7 +598,7 @@ methods:
     syntax:
       content: >-
         function searchNearby(aborter: Aborter, location: GeoJSON.Position,
-        options?: SearchNearbyOptions)
+        options?: SearchNearbyOptions): Promise<SearchNearbyResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -612,10 +619,10 @@ methods:
           type: <xref uid="azure-maps-rest.atlas.service.SearchNearbyOptions" />
           description: ''
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.SearchNearbyResponse" />&gt;
-        description: ''
   - name: 'searchPOI(Aborter, string, SearchPOIOptions)'
     uid: azure-maps-rest.atlas.service.SearchURL.searchPOI
     package: azure-maps-rest
@@ -635,7 +642,7 @@ methods:
     syntax:
       content: >-
         function searchPOI(aborter: Aborter, query: string, options?:
-        SearchPOIOptions)
+        SearchPOIOptions): Promise<SearchPOIResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -652,10 +659,10 @@ methods:
           type: <xref uid="azure-maps-rest.atlas.service.SearchPOIOptions" />
           description: ''
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-maps-rest.atlas.service.SearchPOIResponse"
           />&gt;
-        description: ''
   - name: 'searchPOICategory(Aborter, string, SearchPOICategoryOptions)'
     uid: azure-maps-rest.atlas.service.SearchURL.searchPOICategory
     package: azure-maps-rest
@@ -679,7 +686,7 @@ methods:
     syntax:
       content: >-
         function searchPOICategory(aborter: Aborter, query: string, options?:
-        SearchPOICategoryOptions)
+        SearchPOICategoryOptions): Promise<SearchPOICategoryResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -698,10 +705,10 @@ methods:
             />
           description: ''
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.SearchPOICategoryResponse" />&gt;
-        description: ''
   - name: 'searchPolygon(Aborter, string[])'
     uid: azure-maps-rest.atlas.service.SearchURL.searchPolygon
     package: azure-maps-rest
@@ -739,7 +746,9 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function searchPolygon(aborter: Aborter, geometries: string[])'
+      content: >-
+        function searchPolygon(aborter: Aborter, geometries: string[]):
+        Promise<SearchPolygonResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -757,8 +766,8 @@ methods:
 
             Search request.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.SearchPolygonResponse" />&gt;
-        description: ''
 extends: <xref uid="azure-maps-rest.atlas.service.MapsURL" />

@@ -17,7 +17,9 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'static function read(gml: string, options?: GmlReadOptions)'
+      content: >-
+        static function read(gml: string, options?: GmlReadOptions):
+        ExtendedFeatureCollection
       parameters:
         - id: gml
           type: string
@@ -27,8 +29,8 @@ methods:
           description: |
             Options to use when parsing GML data.
       return:
-        type: <xref uid="azure-maps-spatial-io.atlas.ExtendedFeatureCollection" />
         description: ''
+        type: <xref uid="azure-maps-spatial-io.atlas.ExtendedFeatureCollection" />
   - name: 'readGeometry(string | XmlNode, GmlReadOptions)'
     uid: azure-maps-spatial-io.atlas.io.core.GmlReader.readGeometry
     package: azure-maps-spatial-io
@@ -45,7 +47,7 @@ methods:
     syntax:
       content: >-
         static function readGeometry(gmlNode: string | XmlNode, options?:
-        GmlReadOptions)
+        GmlReadOptions): azmaps.data.Feature<azmaps.data.Geometry, any>
       parameters:
         - id: gmlNode
           type: string | <xref uid="azure-maps-spatial-io.atlas.io.core.XmlNode" />
@@ -55,7 +57,7 @@ methods:
           description: |
             Options to use when parsing GML data.
       return:
+        description: ''
         type: >-
           <xref uid="azmaps.data.Feature" />&lt;<xref uid="azmaps.data.Geometry"
           />, any&gt;
-        description: ''

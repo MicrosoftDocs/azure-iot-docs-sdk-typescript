@@ -39,8 +39,9 @@ properties:
     syntax:
       content: 'Array: ArrayConstructor'
       return:
-        type: ArrayConstructor
         description: ''
+        type: ArrayConstructor
+inheritedProperties:
   - name: length
     uid: azure-maps-control.atlas.AggregateExpression.length
     package: azure-maps-control
@@ -54,9 +55,10 @@ properties:
     syntax:
       content: 'length: number'
       return:
-        type: number
         description: ''
-methods:
+        type: number
+    inheritanceDescription: <b>Inherited From</b> Array.length
+inheritedMethods:
   - name: 'concat(ConcatArray<any>[])'
     uid: azure-maps-control.atlas.AggregateExpression.concat
     package: azure-maps-control
@@ -65,15 +67,16 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: ConcatArray<any>[])'
+      content: 'function concat(items: ConcatArray<any>[]): any[]'
       parameters:
         - id: items
           type: 'ConcatArray&lt;any&gt;[]'
           description: |
             Additional items to add to the end of array1.
       return:
-        type: 'any[]'
         description: ''
+        type: 'any[]'
+    inheritanceDescription: <b>Inherited From</b> Array.concat
   - name: 'concat(T | ConcatArray<T>[])'
     uid: azure-maps-control.atlas.AggregateExpression.concat_1
     package: azure-maps-control
@@ -82,15 +85,16 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: T | ConcatArray<T>[]): any[]'
       parameters:
         - id: items
           type: 'T | ConcatArray&lt;T&gt;[]'
           description: |
             Additional items to add to the end of array1.
       return:
-        type: 'any[]'
         description: ''
+        type: 'any[]'
+    inheritanceDescription: <b>Inherited From</b> Array.concat
   - name: 'every((value: any, index: number, array: any[]) => unknown, any)'
     uid: azure-maps-control.atlas.AggregateExpression.every
     package: azure-maps-control
@@ -101,7 +105,7 @@ methods:
     syntax:
       content: >-
         function every(callbackfn: (value: any, index: number, array: any[]) =>
-        unknown, thisArg?: any)
+        unknown, thisArg?: any): boolean
       parameters:
         - id: callbackfn
           type: '(value: any, index: number, array: any[]) =&gt; unknown'
@@ -116,8 +120,9 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: boolean
         description: ''
+        type: boolean
+    inheritanceDescription: <b>Inherited From</b> Array.every
   - name: 'filter((value: any, index: number, array: any[]) => unknown, any)'
     uid: azure-maps-control.atlas.AggregateExpression.filter_1
     package: azure-maps-control
@@ -130,7 +135,7 @@ methods:
     syntax:
       content: >-
         function filter(callbackfn: (value: any, index: number, array: any[]) =>
-        unknown, thisArg?: any)
+        unknown, thisArg?: any): any[]
       parameters:
         - id: callbackfn
           type: '(value: any, index: number, array: any[]) =&gt; unknown'
@@ -145,8 +150,9 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: 'any[]'
         description: ''
+        type: 'any[]'
+    inheritanceDescription: <b>Inherited From</b> Array.filter
   - name: 'filter<S>((value: any, index: number, array: any[]) => boolean, any)'
     uid: azure-maps-control.atlas.AggregateExpression.filter
     package: azure-maps-control
@@ -159,7 +165,7 @@ methods:
     syntax:
       content: >-
         function filter<S>(callbackfn: (value: any, index: number, array: any[])
-        => boolean, thisArg?: any)
+        => boolean, thisArg?: any): S[]
       parameters:
         - id: callbackfn
           type: '(value: any, index: number, array: any[]) =&gt; boolean'
@@ -174,8 +180,9 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: 'S[]'
         description: ''
+        type: 'S[]'
+    inheritanceDescription: <b>Inherited From</b> Array.filter
   - name: 'forEach((value: any, index: number, array: any[]) => void, any)'
     uid: azure-maps-control.atlas.AggregateExpression.forEach
     package: azure-maps-control
@@ -199,6 +206,7 @@ methods:
             An object to which the this keyword can refer in the callbackfn
             function. If thisArg is omitted, undefined is used as the this
             value.
+    inheritanceDescription: <b>Inherited From</b> Array.forEach
   - name: 'indexOf(any, number)'
     uid: azure-maps-control.atlas.AggregateExpression.indexOf
     package: azure-maps-control
@@ -207,7 +215,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function indexOf(searchElement: any, fromIndex?: number)'
+      content: 'function indexOf(searchElement: any, fromIndex?: number): number'
       parameters:
         - id: searchElement
           type: any
@@ -218,8 +226,9 @@ methods:
             The array index at which to begin the search. If fromIndex is
             omitted, the search starts at index 0.
       return:
-        type: number
         description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> Array.indexOf
   - name: join(string)
     uid: azure-maps-control.atlas.AggregateExpression.join
     package: azure-maps-control
@@ -230,7 +239,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function join(separator?: string)'
+      content: 'function join(separator?: string): string'
       parameters:
         - id: separator
           type: string
@@ -239,8 +248,9 @@ methods:
             the resulting String. If omitted, the array elements are separated
             with a comma.
       return:
-        type: string
         description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Array.join
   - name: 'lastIndexOf(any, number)'
     uid: azure-maps-control.atlas.AggregateExpression.lastIndexOf
     package: azure-maps-control
@@ -249,7 +259,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function lastIndexOf(searchElement: any, fromIndex?: number)'
+      content: 'function lastIndexOf(searchElement: any, fromIndex?: number): number'
       parameters:
         - id: searchElement
           type: any
@@ -260,8 +270,9 @@ methods:
             The array index at which to begin the search. If fromIndex is
             omitted, the search starts at the last index in the array.
       return:
-        type: number
         description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> Array.lastIndexOf
   - name: 'map<U>((value: any, index: number, array: any[]) => U, any)'
     uid: azure-maps-control.atlas.AggregateExpression.map
     package: azure-maps-control
@@ -274,7 +285,7 @@ methods:
     syntax:
       content: >-
         function map<U>(callbackfn: (value: any, index: number, array: any[]) =>
-        U, thisArg?: any)
+        U, thisArg?: any): U[]
       parameters:
         - id: callbackfn
           type: '(value: any, index: number, array: any[]) =&gt; U'
@@ -288,8 +299,9 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: 'U[]'
         description: ''
+        type: 'U[]'
+    inheritanceDescription: <b>Inherited From</b> Array.map
   - name: pop()
     uid: azure-maps-control.atlas.AggregateExpression.pop
     package: azure-maps-control
@@ -298,10 +310,11 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function pop()
+      content: 'function pop(): any | undefined'
       return:
-        type: any | undefined
         description: ''
+        type: any | undefined
+    inheritanceDescription: <b>Inherited From</b> Array.pop
   - name: 'push(any[])'
     uid: azure-maps-control.atlas.AggregateExpression.push
     package: azure-maps-control
@@ -310,15 +323,16 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function push(items: any[])'
+      content: 'function push(items: any[]): number'
       parameters:
         - id: items
           type: 'any[]'
           description: |
             New elements of the Array.
       return:
-        type: number
         description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> Array.push
   - name: >-
       reduce((previousValue: any, currentValue: any, currentIndex: number,
       array: any[]) => any)
@@ -334,7 +348,7 @@ methods:
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: any, currentValue: any,
-        currentIndex: number, array: any[]) => any)
+        currentIndex: number, array: any[]) => any): any
       parameters:
         - id: callbackfn
           type: >-
@@ -345,8 +359,9 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: any
         description: ''
+        type: any
+    inheritanceDescription: <b>Inherited From</b> Array.reduce
   - name: >-
       reduce((previousValue: any, currentValue: any, currentIndex: number,
       array: any[]) => any, any)
@@ -359,7 +374,7 @@ methods:
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: any, currentValue: any,
-        currentIndex: number, array: any[]) => any, initialValue: any)
+        currentIndex: number, array: any[]) => any, initialValue: any): any
       parameters:
         - id: callbackfn
           type: >-
@@ -370,8 +385,9 @@ methods:
           type: any
           description: ''
       return:
-        type: any
         description: ''
+        type: any
+    inheritanceDescription: <b>Inherited From</b> Array.reduce
   - name: >-
       reduce<U>((previousValue: U, currentValue: any, currentIndex: number,
       array: any[]) => U, U)
@@ -387,7 +403,7 @@ methods:
     syntax:
       content: >-
         function reduce<U>(callbackfn: (previousValue: U, currentValue: any,
-        currentIndex: number, array: any[]) => U, initialValue: U)
+        currentIndex: number, array: any[]) => U, initialValue: U): U
       parameters:
         - id: callbackfn
           type: >-
@@ -404,8 +420,9 @@ methods:
             start the accumulation. The first call to the callbackfn function
             provides this value as an argument instead of an array value.
       return:
-        type: U
         description: ''
+        type: U
+    inheritanceDescription: <b>Inherited From</b> Array.reduce
   - name: >-
       reduceRight((previousValue: any, currentValue: any, currentIndex: number,
       array: any[]) => any)
@@ -422,7 +439,7 @@ methods:
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: any, currentValue: any,
-        currentIndex: number, array: any[]) => any)
+        currentIndex: number, array: any[]) => any): any
       parameters:
         - id: callbackfn
           type: >-
@@ -433,8 +450,9 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: any
         description: ''
+        type: any
+    inheritanceDescription: <b>Inherited From</b> Array.reduceRight
   - name: >-
       reduceRight((previousValue: any, currentValue: any, currentIndex: number,
       array: any[]) => any, any)
@@ -447,7 +465,7 @@ methods:
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: any, currentValue: any,
-        currentIndex: number, array: any[]) => any, initialValue: any)
+        currentIndex: number, array: any[]) => any, initialValue: any): any
       parameters:
         - id: callbackfn
           type: >-
@@ -458,8 +476,9 @@ methods:
           type: any
           description: ''
       return:
-        type: any
         description: ''
+        type: any
+    inheritanceDescription: <b>Inherited From</b> Array.reduceRight
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: any, currentIndex: number,
       array: any[]) => U, U)
@@ -476,7 +495,7 @@ methods:
     syntax:
       content: >-
         function reduceRight<U>(callbackfn: (previousValue: U, currentValue:
-        any, currentIndex: number, array: any[]) => U, initialValue: U)
+        any, currentIndex: number, array: any[]) => U, initialValue: U): U
       parameters:
         - id: callbackfn
           type: >-
@@ -493,8 +512,9 @@ methods:
             start the accumulation. The first call to the callbackfn function
             provides this value as an argument instead of an array value.
       return:
-        type: U
         description: ''
+        type: U
+    inheritanceDescription: <b>Inherited From</b> Array.reduceRight
   - name: reverse()
     uid: azure-maps-control.atlas.AggregateExpression.reverse
     package: azure-maps-control
@@ -503,10 +523,11 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function reverse()
+      content: 'function reverse(): any[]'
       return:
-        type: 'any[]'
         description: ''
+        type: 'any[]'
+    inheritanceDescription: <b>Inherited From</b> Array.reverse
   - name: shift()
     uid: azure-maps-control.atlas.AggregateExpression.shift
     package: azure-maps-control
@@ -515,10 +536,11 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function shift()
+      content: 'function shift(): any | undefined'
       return:
-        type: any | undefined
         description: ''
+        type: any | undefined
+    inheritanceDescription: <b>Inherited From</b> Array.shift
   - name: 'slice(number, number)'
     uid: azure-maps-control.atlas.AggregateExpression.slice
     package: azure-maps-control
@@ -527,7 +549,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function slice(start?: number, end?: number)'
+      content: 'function slice(start?: number, end?: number): any[]'
       parameters:
         - id: start
           type: number
@@ -537,8 +559,9 @@ methods:
           description: |
             The end of the specified portion of the array.
       return:
-        type: 'any[]'
         description: ''
+        type: 'any[]'
+    inheritanceDescription: <b>Inherited From</b> Array.slice
   - name: 'some((value: any, index: number, array: any[]) => unknown, any)'
     uid: azure-maps-control.atlas.AggregateExpression.some
     package: azure-maps-control
@@ -551,7 +574,7 @@ methods:
     syntax:
       content: >-
         function some(callbackfn: (value: any, index: number, array: any[]) =>
-        unknown, thisArg?: any)
+        unknown, thisArg?: any): boolean
       parameters:
         - id: callbackfn
           type: '(value: any, index: number, array: any[]) =&gt; unknown'
@@ -566,8 +589,9 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: boolean
         description: ''
+        type: boolean
+    inheritanceDescription: <b>Inherited From</b> Array.some
   - name: 'sort((a: any, b: any) => number)'
     uid: azure-maps-control.atlas.AggregateExpression.sort
     package: azure-maps-control
@@ -576,7 +600,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function sort(compareFn?: (a: any, b: any) => number)'
+      content: 'function sort(compareFn?: (a: any, b: any) => number): this'
       parameters:
         - id: compareFn
           type: '(a: any, b: any) =&gt; number'
@@ -585,8 +609,9 @@ methods:
             elements. If omitted, the elements are sorted in ascending, ASCII
             character order.
       return:
-        type: this
         description: ''
+        type: this
+    inheritanceDescription: <b>Inherited From</b> Array.sort
   - name: 'splice(number, number)'
     uid: azure-maps-control.atlas.AggregateExpression.splice
     package: azure-maps-control
@@ -597,7 +622,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function splice(start: number, deleteCount?: number)'
+      content: 'function splice(start: number, deleteCount?: number): any[]'
       parameters:
         - id: start
           type: number
@@ -609,8 +634,9 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: 'any[]'
         description: ''
+        type: 'any[]'
+    inheritanceDescription: <b>Inherited From</b> Array.splice
   - name: 'splice(number, number, any[])'
     uid: azure-maps-control.atlas.AggregateExpression.splice_1
     package: azure-maps-control
@@ -621,7 +647,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function splice(start: number, deleteCount: number, items: any[])'
+      content: 'function splice(start: number, deleteCount: number, items: any[]): any[]'
       parameters:
         - id: start
           type: number
@@ -636,8 +662,9 @@ methods:
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: 'any[]'
         description: ''
+        type: 'any[]'
+    inheritanceDescription: <b>Inherited From</b> Array.splice
   - name: toLocaleString()
     uid: azure-maps-control.atlas.AggregateExpression.toLocaleString
     package: azure-maps-control
@@ -648,10 +675,11 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function toLocaleString()
+      content: 'function toLocaleString(): string'
       return:
-        type: string
         description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Array.toLocaleString
   - name: toString()
     uid: azure-maps-control.atlas.AggregateExpression.toString
     package: azure-maps-control
@@ -660,10 +688,11 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function toString()
+      content: 'function toString(): string'
       return:
-        type: string
         description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Array.toString
   - name: 'unshift(any[])'
     uid: azure-maps-control.atlas.AggregateExpression.unshift
     package: azure-maps-control
@@ -672,13 +701,14 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function unshift(items: any[])'
+      content: 'function unshift(items: any[]): number'
       parameters:
         - id: items
           type: 'any[]'
           description: |
             Elements to insert at the start of the Array.
       return:
-        type: number
         description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> Array.unshift
 extends: Array&lt;any&gt;

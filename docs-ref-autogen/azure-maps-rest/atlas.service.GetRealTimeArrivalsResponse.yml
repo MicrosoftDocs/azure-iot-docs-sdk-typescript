@@ -7,6 +7,9 @@ fullName: GetRealTimeArrivalsResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type GetRealTimeArrivalsResponse =
-  Response<RealTimeArrivalsResponse,Models.MobilityGetRealTimeArrivalsPreviewResponse,RealTimeArrivalsGeojson>
+syntax: |
+  type GetRealTimeArrivalsResponse = Response<
+    RealTimeArrivalsResponse,
+    Models.MobilityGetRealTimeArrivalsPreviewResponse,
+    RealTimeArrivalsGeojson
+  >

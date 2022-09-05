@@ -7,6 +7,10 @@ fullName: TimezoneGetTimezoneEnumWindowsResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
+syntax: |
   type TimezoneGetTimezoneEnumWindowsResponse = Array<TimezoneEnumWindow> & {
-  _response: Object }
+    _response: HttpResponse & {
+      bodyAsText: string,
+      parsedBody: TimezoneEnumWindow[],
+    },
+  }

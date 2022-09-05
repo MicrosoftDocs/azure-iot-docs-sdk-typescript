@@ -40,7 +40,9 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function toSource(targetPoints: number[][], decimals?: number)'
+      content: >-
+        function toSource(targetPoints: number[][], decimals?: number):
+        number[][]
       parameters:
         - id: targetPoints
           type: 'number[][]'
@@ -49,10 +51,10 @@ methods:
           type: number
           description: Number of decimal places to round the results off to.
       return:
-        type: 'number[][]'
         description: >-
           An array of points that have been transformed to the source reference
           system.
+        type: 'number[][]'
   - name: 'toTarget(number[][], number)'
     uid: azure-maps-control.atlas.math.AffineTransform.toTarget
     package: azure-maps-control
@@ -63,7 +65,9 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function toTarget(sourcePoints: number[][], decimals?: number)'
+      content: >-
+        function toTarget(sourcePoints: number[][], decimals?: number):
+        number[][]
       parameters:
         - id: sourcePoints
           type: 'number[][]'
@@ -72,7 +76,7 @@ methods:
           type: number
           description: Number of decimal places to round the results off to.
       return:
-        type: 'number[][]'
         description: >-
           An array of points that have been transformed to the target reference
           system.
+        type: 'number[][]'

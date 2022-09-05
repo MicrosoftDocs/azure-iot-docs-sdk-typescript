@@ -9,25 +9,13 @@ isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: filter
-    uid: azure-maps-control.atlas.SymbolLayerOptions.filter
-    package: azure-maps-control
-    summary: |-
-      An expression specifying conditions on source features.
-      Only features that match the filter are displayed.
-    fullName: filter
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'filter?: Expression'
-      return:
-        type: <xref uid="azure-maps-control.atlas.Expression" />
-        description: ''
   - name: iconOptions
     uid: azure-maps-control.atlas.SymbolLayerOptions.iconOptions
     package: azure-maps-control
-    summary: Options used to customize the icons of the symbols.
+    summary: |-
+      Options used to customize the icons of the symbols.
+
+      See IconOptions for defaults.
     fullName: iconOptions
     remarks: ''
     isPreview: false
@@ -35,8 +23,8 @@ properties:
     syntax:
       content: 'iconOptions?: IconOptions'
       return:
-        type: <xref uid="azure-maps-control.atlas.IconOptions" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.IconOptions" />
   - name: lineSpacing
     uid: azure-maps-control.atlas.SymbolLayerOptions.lineSpacing
     package: azure-maps-control
@@ -52,46 +40,8 @@ properties:
     syntax:
       content: 'lineSpacing?: number | Expression'
       return:
+        description: ''
         type: number | <xref uid="azure-maps-control.atlas.Expression" />
-        description: ''
-  - name: maxZoom
-    uid: azure-maps-control.atlas.SymbolLayerOptions.maxZoom
-    package: azure-maps-control
-    summary: >-
-      An integer specifying the maximum zoom level to render the layer at.
-
-      This value is exclusive, i.e. the layer will be visible at `maxZoom > zoom
-      >= minZoom`.
-
-      Default `24`.
-    fullName: maxZoom
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'maxZoom?: number'
-      return:
-        type: number
-        description: ''
-  - name: minZoom
-    uid: azure-maps-control.atlas.SymbolLayerOptions.minZoom
-    package: azure-maps-control
-    summary: >-
-      An integer specifying the minimum zoom level to render the layer at.
-
-      This value is inclusive, i.e. the layer will be visible at `maxZoom > zoom
-      >= minZoom`.
-
-      Default `0`.
-    fullName: minZoom
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'minZoom?: number'
-      return:
-        type: number
-        description: ''
   - name: placement
     uid: azure-maps-control.atlas.SymbolLayerOptions.placement
     package: azure-maps-control
@@ -118,8 +68,24 @@ properties:
     syntax:
       content: 'placement?: "point" | "line" | "line-center"'
       return:
-        type: '"point" | "line" | "line-center"'
         description: ''
+        type: '"point" | "line" | "line-center"'
+  - name: sortKey
+    uid: azure-maps-control.atlas.SymbolLayerOptions.sortKey
+    package: azure-maps-control
+    summary: |-
+      Sorts features in ascending order based on this value. Features with
+      lower sort keys are drawn and placed first.
+      Default `undefined`.
+    fullName: sortKey
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'sortKey?: number | Expression'
+      return:
+        description: ''
+        type: number | <xref uid="azure-maps-control.atlas.Expression" />
   - name: source
     uid: azure-maps-control.atlas.SymbolLayerOptions.source
     package: azure-maps-control
@@ -131,8 +97,8 @@ properties:
     syntax:
       content: 'source?: string | Source'
       return:
-        type: string | <xref uid="azure-maps-control.atlas.source.Source" />
         description: ''
+        type: string | <xref uid="azure-maps-control.atlas.source.Source" />
   - name: sourceLayer
     uid: azure-maps-control.atlas.SymbolLayerOptions.sourceLayer
     package: azure-maps-control
@@ -150,12 +116,15 @@ properties:
     syntax:
       content: 'sourceLayer?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: textOptions
     uid: azure-maps-control.atlas.SymbolLayerOptions.textOptions
     package: azure-maps-control
-    summary: Options used to customize the text of the symbols.
+    summary: |-
+      Options used to customize the text of the symbols.
+
+      See TextOptions for defaults.
     fullName: textOptions
     remarks: ''
     isPreview: false
@@ -163,8 +132,101 @@ properties:
     syntax:
       content: 'textOptions?: TextOptions'
       return:
-        type: <xref uid="azure-maps-control.atlas.TextOptions" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.TextOptions" />
+  - name: zOrder
+    uid: azure-maps-control.atlas.SymbolLayerOptions.zOrder
+    package: azure-maps-control
+    summary: >-
+      Determines whether overlapping symbols in the same layer are rendered in
+      the order
+
+      that they appear in the data source, or by their y position relative to
+      the viewport.
+
+      To control the order and prioritization of symbols otherwise, use
+      `sortKey`.
+
+      <p>`"auto"`: Sorts symbols by `sortKey` if set. Otherwise behaves like
+      `"viewport-y"`.
+
+      <p>`"viewport-y"`: Sorts symbols by their y position if `allowOverlap` is
+      `true` or
+
+      if `ignorePlacement` is `false`.
+
+      <p>`"source"`: Sorts symbols by `sortKey` if set. Otherwise, symbols are
+      rendered in the
+
+      same order as the source data.
+
+      Default `"auto"`
+    fullName: zOrder
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'zOrder?: "auto" | "viewport-y" | "source"'
+      return:
+        description: ''
+        type: '"auto" | "viewport-y" | "source"'
+inheritedProperties:
+  - name: filter
+    uid: azure-maps-control.atlas.SymbolLayerOptions.filter
+    package: azure-maps-control
+    summary: |-
+      An expression specifying conditions on source features.
+      Only features that match the filter are displayed.
+    fullName: filter
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'filter?: Expression'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.atlas.Expression" />
+    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.filter](xref:LayerOptions.filter)'
+  - name: maxZoom
+    uid: azure-maps-control.atlas.SymbolLayerOptions.maxZoom
+    package: azure-maps-control
+    summary: >-
+      An integer specifying the maximum zoom level to render the layer at.
+
+      This value is exclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `24`.
+    fullName: maxZoom
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxZoom?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.maxZoom](xref:LayerOptions.maxZoom)'
+  - name: minZoom
+    uid: azure-maps-control.atlas.SymbolLayerOptions.minZoom
+    package: azure-maps-control
+    summary: >-
+      An integer specifying the minimum zoom level to render the layer at.
+
+      This value is inclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `0`.
+    fullName: minZoom
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'minZoom?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.minZoom](xref:LayerOptions.minZoom)'
   - name: visible
     uid: azure-maps-control.atlas.SymbolLayerOptions.visible
     package: azure-maps-control
@@ -178,6 +240,7 @@ properties:
     syntax:
       content: 'visible?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
+    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.visible](xref:LayerOptions.visible)'
 extends: <xref uid="azure-maps-control.atlas.LayerOptions" />

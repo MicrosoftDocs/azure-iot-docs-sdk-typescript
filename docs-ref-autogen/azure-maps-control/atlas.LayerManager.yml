@@ -52,15 +52,15 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getLayerById(id: string)'
+      content: 'function getLayerById(id: string): Layer'
       parameters:
         - id: id
           type: string
           description: |
             The id of the layer to retrieve.
       return:
-        type: <xref uid="azure-maps-control.atlas.layer.Layer" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.layer.Layer" />
   - name: getLayers()
     uid: azure-maps-control.atlas.LayerManager.getLayers
     package: azure-maps-control
@@ -69,10 +69,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getLayers()
+      content: 'function getLayers(): Layer[]'
       return:
-        type: '<xref uid="azure-maps-control.atlas.layer.Layer" />[]'
         description: ''
+        type: '<xref uid="azure-maps-control.atlas.layer.Layer" />[]'
   - name: >-
       getRenderedShapes(Position | Point | BoundingBox, string | Layer |
       Array<string | Layer>, Expression)
@@ -120,7 +120,8 @@ methods:
     syntax:
       content: >-
         function getRenderedShapes(geometry?: Position | Point | BoundingBox,
-        layers?: string | Layer | Array<string | Layer>, filter?: Expression)
+        layers?: string | Layer | Array<string | Layer>, filter?: Expression):
+        Array<Shape | Feature<atlas.data.Geometry, any>>
       parameters:
         - id: geometry
           type: >-
@@ -141,11 +142,11 @@ methods:
           description: |
             A expression to filter the returned features by.
       return:
+        description: ''
         type: >-
           Array&lt;<xref uid="azure-maps-control.atlas.Shape" /> | <xref
           uid="azure-maps-control.atlas.data.Feature" />&lt;<xref
           uid="azure-maps-control.atlas.data.Geometry" />, any&gt;&gt;
-        description: ''
   - name: 'move(string | Layer, string | Layer)'
     uid: azure-maps-control.atlas.LayerManager.move
     package: azure-maps-control

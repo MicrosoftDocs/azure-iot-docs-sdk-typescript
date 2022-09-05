@@ -9,6 +9,19 @@ isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: inverted
+    uid: azure-maps-control.atlas.CompassControlOptions.inverted
+    package: azure-maps-control
+    summary: Inverts the direction of map rotation controls.
+    fullName: inverted
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'inverted?: boolean'
+      return:
+        description: ''
+        type: boolean
   - name: rotationDegreesDelta
     uid: azure-maps-control.atlas.CompassControlOptions.rotationDegreesDelta
     package: azure-maps-control
@@ -22,8 +35,8 @@ properties:
     syntax:
       content: 'rotationDegreesDelta: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: style
     uid: azure-maps-control.atlas.CompassControlOptions.style
     package: azure-maps-control
@@ -37,6 +50,6 @@ properties:
     syntax:
       content: 'style: ControlStyle'
       return:
-        type: <xref uid="azure-maps-control.atlas.ControlStyle" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.ControlStyle" />
 extends: <xref uid="azure-maps-control.atlas.Options" />

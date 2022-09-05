@@ -7,7 +7,7 @@ summary: >-
   entity. The full description is detailed in
 
   [RFC 7946](https://tools.ietf.org/html/rfc7946#section-3.2).
-fullName: Feature<G>
+fullName: 'Feature<G, P>'
 remarks: ''
 isPreview: false
 isDeprecated: false
@@ -50,8 +50,8 @@ properties:
     syntax:
       content: 'bbox?: BoundingBox'
       return:
-        type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
   - name: geometry
     uid: azure-maps-control.atlas.data.Feature.geometry
     package: azure-maps-control
@@ -63,8 +63,8 @@ properties:
     syntax:
       content: 'geometry: G'
       return:
-        type: G
         description: ''
+        type: G
   - name: id
     uid: azure-maps-control.atlas.data.Feature.id
     package: azure-maps-control
@@ -76,8 +76,8 @@ properties:
     syntax:
       content: 'id?: string | number'
       return:
-        type: string | number
         description: ''
+        type: string | number
   - name: properties
     uid: azure-maps-control.atlas.data.Feature.properties
     package: azure-maps-control
@@ -89,8 +89,8 @@ properties:
     syntax:
       content: 'properties?: P'
       return:
-        type: P
         description: ''
+        type: P
   - name: type
     uid: azure-maps-control.atlas.data.Feature.type
     package: azure-maps-control
@@ -102,8 +102,8 @@ properties:
     syntax:
       content: 'type: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: TYPE
     uid: azure-maps-control.atlas.data.Feature.TYPE
     package: azure-maps-control
@@ -117,5 +117,5 @@ properties:
     syntax:
       content: 'static TYPE: string'
       return:
-        type: string
         description: ''
+        type: string

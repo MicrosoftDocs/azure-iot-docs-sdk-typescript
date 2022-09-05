@@ -7,6 +7,9 @@ fullName: SearchNearbyResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type SearchNearbyResponse =
-  Response<SearchNearbyResponse,Models.SearchGetSearchNearbyResponse,SearchGeojson>
+syntax: |
+  type SearchNearbyResponse = Response<
+    SearchNearbyResponse,
+    Models.SearchGetSearchNearbyResponse,
+    SearchGeojson
+  >

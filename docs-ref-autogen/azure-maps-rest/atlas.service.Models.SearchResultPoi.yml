@@ -24,10 +24,10 @@ properties:
     syntax:
       content: 'brands?: SearchResultPoiBrand[]'
       return:
+        description: ''
         type: >-
           <xref uid="azure-maps-rest.atlas.service.Models.SearchResultPoiBrand"
           />[]
-        description: ''
   - name: categories
     uid: azure-maps-rest.atlas.service.Models.SearchResultPoi.categories
     package: azure-maps-rest
@@ -43,8 +43,8 @@ properties:
     syntax:
       content: 'categories?: string[]'
       return:
-        type: 'string[]'
         description: ''
+        type: 'string[]'
   - name: classifications
     uid: azure-maps-rest.atlas.service.Models.SearchResultPoi.classifications
     package: azure-maps-rest
@@ -60,11 +60,11 @@ properties:
     syntax:
       content: 'classifications?: SearchResultPoiClassification[]'
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-maps-rest.atlas.service.Models.SearchResultPoiClassification"
           />[]
-        description: ''
   - name: name
     uid: azure-maps-rest.atlas.service.Models.SearchResultPoi.name
     package: azure-maps-rest
@@ -80,8 +80,8 @@ properties:
     syntax:
       content: 'name?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: phone
     uid: azure-maps-rest.atlas.service.Models.SearchResultPoi.phone
     package: azure-maps-rest
@@ -97,8 +97,8 @@ properties:
     syntax:
       content: 'phone?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: url
     uid: azure-maps-rest.atlas.service.Models.SearchResultPoi.url
     package: azure-maps-rest
@@ -114,5 +114,5 @@ properties:
     syntax:
       content: 'url?: string'
       return:
-        type: string
         description: ''
+        type: string

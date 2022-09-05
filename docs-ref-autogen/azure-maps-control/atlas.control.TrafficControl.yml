@@ -23,7 +23,23 @@ constructors:
           type: <xref uid="azure-maps-control.atlas.TrafficControlOptions" />
           description: |
             The options for the control.
-methods:
+properties:
+  - name: isActive
+    uid: azure-maps-control.atlas.control.TrafficControl.isActive
+    package: azure-maps-control
+    summary: |-
+      Current control state (is traffic information displayed?)
+      Sets the control state
+    fullName: isActive
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: boolean isActive
+      return:
+        description: ''
+        type: boolean
+inheritedMethods:
   - name: 'buildContainer<K>(Map, ControlStyle, string, K)'
     uid: azure-maps-control.atlas.control.TrafficControl.buildContainer
     package: azure-maps-control
@@ -36,7 +52,7 @@ methods:
     syntax:
       content: >-
         function buildContainer<K>(map: Map, style: ControlStyle, ariaLabel?:
-        string, tagName?: K)
+        string, tagName?: K): HTMLElementTagNameMap[K]
       parameters:
         - id: map
           type: <xref uid="azure-maps-control.atlas.Map" />
@@ -51,8 +67,12 @@ methods:
           type: K
           description: ''
       return:
-        type: 'HTMLElementTagNameMap[K]'
         description: ''
+        type: 'HTMLElementTagNameMap[K]'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ControlBase.buildContainer](xref:ControlBase.buildContainer)
+methods:
   - name: getOptions()
     uid: azure-maps-control.atlas.control.TrafficControl.getOptions
     package: azure-maps-control
@@ -61,10 +81,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getOptions()
+      content: 'function getOptions(): TrafficControlOptions'
       return:
-        type: <xref uid="azure-maps-control.atlas.TrafficControlOptions" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.TrafficControlOptions" />
   - name: onAdd(Map)
     uid: azure-maps-control.atlas.control.TrafficControl.onAdd
     package: azure-maps-control
@@ -75,14 +95,14 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function onAdd(map: Map)'
+      content: 'function onAdd(map: Map): HTMLElement'
       parameters:
         - id: map
           type: <xref uid="azure-maps-control.atlas.Map" />
           description: The map that the control will be added to.
       return:
-        type: HTMLElement
         description: An HTMLElement to be placed on the map for the control.
+        type: HTMLElement
   - name: onRemove()
     uid: azure-maps-control.atlas.control.TrafficControl.onRemove
     package: azure-maps-control
@@ -96,4 +116,13 @@ methods:
     isDeprecated: false
     syntax:
       content: function onRemove()
+  - name: updateButtonState()
+    uid: azure-maps-control.atlas.control.TrafficControl.updateButtonState
+    package: azure-maps-control
+    summary: Updates the button state according to current traffic state
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function updateButtonState()
 extends: <xref uid="azure-maps-control.atlas.control.ControlBase" />

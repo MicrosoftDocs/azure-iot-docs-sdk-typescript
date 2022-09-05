@@ -33,7 +33,7 @@ constructors:
           type: <xref uid="azure-maps-control.atlas.BubbleLayerOptions" />
           description: |
             The options of the bubble layer.
-properties:
+inheritedProperties:
   - name: metadata
     uid: azure-maps-control.atlas.layer.BubbleLayer.metadata
     package: azure-maps-control
@@ -45,9 +45,10 @@ properties:
     syntax:
       content: 'metadata?: any'
       return:
-        type: any
         description: ''
-methods:
+        type: any
+    inheritanceDescription: '<b>Inherited From</b> [Layer.metadata](xref:Layer.metadata)'
+inheritedMethods:
   - name: getId()
     uid: azure-maps-control.atlas.layer.BubbleLayer.getId
     package: azure-maps-control
@@ -56,10 +57,11 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getId()
+      content: 'function getId(): string'
       return:
-        type: string
         description: ''
+        type: string
+    inheritanceDescription: '<b>Inherited From</b> [Layer.getId](xref:Layer.getId)'
   - name: getMap()
     uid: azure-maps-control.atlas.layer.BubbleLayer.getMap
     package: azure-maps-control
@@ -68,34 +70,11 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getMap()
+      content: 'function getMap(): Map'
       return:
+        description: ''
         type: <xref uid="azure-maps-control.atlas.Map" />
-        description: ''
-  - name: getOptions()
-    uid: azure-maps-control.atlas.layer.BubbleLayer.getOptions
-    package: azure-maps-control
-    summary: Gets the options of the bubble layer.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: function getOptions()
-      return:
-        type: <xref uid="azure-maps-control.atlas.BubbleLayerOptions" />
-        description: ''
-  - name: getSource()
-    uid: azure-maps-control.atlas.layer.BubbleLayer.getSource
-    package: azure-maps-control
-    summary: Gets the source provided when creating the layer.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: function getSource()
-      return:
-        type: string | <xref uid="azure-maps-control.atlas.source.Source" />
-        description: ''
+    inheritanceDescription: '<b>Inherited From</b> [Layer.getMap](xref:Layer.getMap)'
   - name: onAdd(Map)
     uid: azure-maps-control.atlas.layer.BubbleLayer.onAdd
     package: azure-maps-control
@@ -110,6 +89,7 @@ methods:
           type: <xref uid="azure-maps-control.atlas.Map" />
           description: |
             The map the layer has been added to.
+    inheritanceDescription: '<b>Inherited From</b> [Layer.onAdd](xref:Layer.onAdd)'
   - name: onRemove()
     uid: azure-maps-control.atlas.layer.BubbleLayer.onRemove
     package: azure-maps-control
@@ -121,6 +101,32 @@ methods:
     isDeprecated: false
     syntax:
       content: function onRemove()
+    inheritanceDescription: '<b>Inherited From</b> [Layer.onRemove](xref:Layer.onRemove)'
+methods:
+  - name: getOptions()
+    uid: azure-maps-control.atlas.layer.BubbleLayer.getOptions
+    package: azure-maps-control
+    summary: Gets the options of the bubble layer.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getOptions(): BubbleLayerOptions'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.atlas.BubbleLayerOptions" />
+  - name: getSource()
+    uid: azure-maps-control.atlas.layer.BubbleLayer.getSource
+    package: azure-maps-control
+    summary: Gets the source provided when creating the layer.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getSource(): string | Source'
+      return:
+        description: ''
+        type: string | <xref uid="azure-maps-control.atlas.source.Source" />
   - name: setOptions(BubbleLayerOptions)
     uid: azure-maps-control.atlas.layer.BubbleLayer.setOptions
     package: azure-maps-control

@@ -29,7 +29,7 @@ constructors:
         - id: options
           type: <xref uid="azure-maps-control.atlas.VectorTileSourceOptions" />
           description: ''
-methods:
+inheritedMethods:
   - name: getId()
     uid: azure-maps-control.atlas.source.VectorTileSource.getId
     package: azure-maps-control
@@ -38,10 +38,12 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getId()
+      content: 'function getId(): string'
       return:
-        type: string
         description: ''
+        type: string
+    inheritanceDescription: '<b>Inherited From</b> [Source.getId](xref:Source.getId)'
+methods:
   - name: getOptions()
     uid: azure-maps-control.atlas.source.VectorTileSource.getOptions
     package: azure-maps-control
@@ -50,10 +52,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getOptions()
+      content: 'function getOptions(): VectorTileSourceOptions'
       return:
-        type: <xref uid="azure-maps-control.atlas.VectorTileSourceOptions" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.VectorTileSourceOptions" />
   - name: 'getShape(string, Expression)'
     uid: azure-maps-control.atlas.source.VectorTileSource.getShape
     package: azure-maps-control
@@ -64,7 +66,9 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getShape(sourceLayer: string, filter?: Expression)'
+      content: >-
+        function getShape(sourceLayer: string, filter?: Expression):
+        Array<Feature<atlas.data.Geometry, any>>
       parameters:
         - id: sourceLayer
           type: string
@@ -76,8 +80,8 @@ methods:
           description: |
             A filter that will limit the query.
       return:
+        description: ''
         type: >-
           Array&lt;<xref uid="azure-maps-control.atlas.data.Feature" />&lt;<xref
           uid="azure-maps-control.atlas.data.Geometry" />, any&gt;&gt;
-        description: ''
 extends: <xref uid="azure-maps-control.atlas.source.Source" />

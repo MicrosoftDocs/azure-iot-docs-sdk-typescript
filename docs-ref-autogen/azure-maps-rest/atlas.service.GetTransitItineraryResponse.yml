@@ -7,6 +7,9 @@ fullName: GetTransitItineraryResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type GetTransitItineraryResponse =
-  Response<TransitItineraryResponse,Models.MobilityGetTransitItineraryPreviewResponse,TransitItineraryGeojson>
+syntax: |
+  type GetTransitItineraryResponse = Response<
+    TransitItineraryResponse,
+    Models.MobilityGetTransitItineraryPreviewResponse,
+    TransitItineraryGeojson
+  >

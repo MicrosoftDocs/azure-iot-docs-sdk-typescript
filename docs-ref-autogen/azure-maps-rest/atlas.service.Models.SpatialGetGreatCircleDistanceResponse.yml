@@ -7,6 +7,10 @@ fullName: SpatialGetGreatCircleDistanceResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
+syntax: |
   type SpatialGetGreatCircleDistanceResponse = GreatCircleDistanceResponse & {
-  _response: Object }
+    _response: HttpResponse & {
+      bodyAsText: string,
+      parsedBody: GreatCircleDistanceResponse,
+    },
+  }

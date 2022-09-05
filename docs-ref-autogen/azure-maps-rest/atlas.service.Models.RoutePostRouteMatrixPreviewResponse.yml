@@ -7,6 +7,12 @@ fullName: RoutePostRouteMatrixPreviewResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
+syntax: |
   type RoutePostRouteMatrixPreviewResponse = RouteMatrixResponse &
-  RoutePostRouteMatrixPreviewHeaders & { _response: Object }
+    RoutePostRouteMatrixPreviewHeaders & {
+      _response: HttpResponse & {
+        bodyAsText: string,
+        parsedBody: RouteMatrixResponse,
+        parsedHeaders: RoutePostRouteMatrixPreviewHeaders,
+      },
+    }

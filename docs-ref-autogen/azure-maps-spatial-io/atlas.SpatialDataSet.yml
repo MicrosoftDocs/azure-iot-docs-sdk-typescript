@@ -24,8 +24,8 @@ properties:
     syntax:
       content: 'bbox: azmaps.data.BoundingBox'
       return:
-        type: <xref uid="azmaps.data.BoundingBox" />
         description: ''
+        type: <xref uid="azmaps.data.BoundingBox" />
   - name: features
     uid: azure-maps-spatial-io.atlas.SpatialDataSet.features
     package: azure-maps-spatial-io
@@ -39,11 +39,11 @@ properties:
         features: Array<azmaps.data.Feature<azmaps.data.Geometry,
         SimpleStyleProperties>>
       return:
+        description: ''
         type: >-
           Array&lt;<xref uid="azmaps.data.Feature" />&lt;<xref
           uid="azmaps.data.Geometry" />, <xref
           uid="azure-maps-spatial-io.atlas.SimpleStyleProperties" />&gt;&gt;
-        description: ''
   - name: groundOverlays
     uid: azure-maps-spatial-io.atlas.SpatialDataSet.groundOverlays
     package: azure-maps-spatial-io
@@ -53,10 +53,12 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'groundOverlays: Array<azmaps>'
+      content: 'groundOverlays: Array<azmaps.layer.ImageLayer | OgcMapLayer>'
       return:
-        type: Array&lt;azmaps&gt;
         description: ''
+        type: >-
+          Array&lt;<xref uid="azmaps.layer.ImageLayer" /> | <xref
+          uid="azure-maps-spatial-io.atlas.layer.OgcMapLayer" />&gt;
   - name: icons
     uid: azure-maps-spatial-io.atlas.SpatialDataSet.icons
     package: azure-maps-spatial-io
@@ -68,8 +70,8 @@ properties:
     syntax:
       content: 'icons: Record<string, string>'
       return:
-        type: 'Record&lt;string, string&gt;'
         description: ''
+        type: 'Record&lt;string, string&gt;'
   - name: properties
     uid: azure-maps-spatial-io.atlas.SpatialDataSet.properties
     package: azure-maps-spatial-io
@@ -81,8 +83,8 @@ properties:
     syntax:
       content: 'properties: any'
       return:
-        type: any
         description: ''
+        type: any
   - name: stats
     uid: azure-maps-spatial-io.atlas.SpatialDataSet.stats
     package: azure-maps-spatial-io
@@ -94,8 +96,8 @@ properties:
     syntax:
       content: 'stats: SpatialDataSetStats'
       return:
-        type: <xref uid="azure-maps-spatial-io.atlas.SpatialDataSetStats" />
         description: ''
+        type: <xref uid="azure-maps-spatial-io.atlas.SpatialDataSetStats" />
   - name: type
     uid: azure-maps-spatial-io.atlas.SpatialDataSet.type
     package: azure-maps-spatial-io
@@ -107,8 +109,8 @@ properties:
     syntax:
       content: 'type: "FeatureCollection" = "FeatureCollection"'
       return:
-        type: '"FeatureCollection"'
         description: ''
+        type: '"FeatureCollection"'
 methods:
   - name: computeStats(SpatialDataSet)
     uid: azure-maps-spatial-io.atlas.SpatialDataSet.computeStats
@@ -150,15 +152,15 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'static function getBounds(data: SpatialDataSet)'
+      content: 'static function getBounds(data: SpatialDataSet): azmaps.data.BoundingBox'
       parameters:
         - id: data
           type: <xref uid="azure-maps-spatial-io.atlas.SpatialDataSet" />
           description: |
             The data set to calculate the bounding box for.
       return:
-        type: <xref uid="azmaps.data.BoundingBox" />
         description: ''
+        type: <xref uid="azmaps.data.BoundingBox" />
   - name: 'merge(SpatialDataSet, SpatialDataSet)'
     uid: azure-maps-spatial-io.atlas.SpatialDataSet.merge
     package: azure-maps-spatial-io

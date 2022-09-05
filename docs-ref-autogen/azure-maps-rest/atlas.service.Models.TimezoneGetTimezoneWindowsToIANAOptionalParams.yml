@@ -10,6 +10,21 @@ isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: territory
+    uid: >-
+      azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneWindowsToIANAOptionalParams.territory
+    package: azure-maps-rest
+    summary: Windows Time Zone territory code.
+    fullName: territory
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'territory?: string'
+      return:
+        description: ''
+        type: string
+inheritedProperties:
   - name: abortSignal
     uid: >-
       azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneWindowsToIANAOptionalParams.abortSignal
@@ -22,8 +37,9 @@ properties:
     syntax:
       content: 'abortSignal?: AbortSignalLike'
       return:
-        type: AbortSignalLike
         description: ''
+        type: AbortSignalLike
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.abortSignal
   - name: customHeaders
     uid: >-
       azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneWindowsToIANAOptionalParams.customHeaders
@@ -38,8 +54,9 @@ properties:
     syntax:
       content: 'customHeaders?: [key: string]: string'
       return:
-        type: '[key: string]\: string'
         description: ''
+        type: '[key: string]\: string'
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.customHeaders
   - name: onDownloadProgress
     uid: >-
       azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneWindowsToIANAOptionalParams.onDownloadProgress
@@ -52,8 +69,9 @@ properties:
     syntax:
       content: 'onDownloadProgress?: (progress: TransferProgressEvent) => void'
       return:
-        type: '(progress: TransferProgressEvent) =&gt; void'
         description: ''
+        type: '(progress: TransferProgressEvent) =&gt; void'
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.onDownloadProgress
   - name: onUploadProgress
     uid: >-
       azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneWindowsToIANAOptionalParams.onUploadProgress
@@ -66,22 +84,9 @@ properties:
     syntax:
       content: 'onUploadProgress?: (progress: TransferProgressEvent) => void'
       return:
+        description: ''
         type: '(progress: TransferProgressEvent) =&gt; void'
-        description: ''
-  - name: territory
-    uid: >-
-      azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneWindowsToIANAOptionalParams.territory
-    package: azure-maps-rest
-    summary: Windows Time Zone territory code.
-    fullName: territory
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'territory?: string'
-      return:
-        type: string
-        description: ''
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.onUploadProgress
   - name: timeout
     uid: >-
       azure-maps-rest.atlas.service.Models.TimezoneGetTimezoneWindowsToIANAOptionalParams.timeout
@@ -96,6 +101,7 @@ properties:
     syntax:
       content: 'timeout?: number'
       return:
-        type: number
         description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.timeout
 extends: RequestOptionsBase

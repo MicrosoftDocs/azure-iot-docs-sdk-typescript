@@ -20,10 +20,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getAuthType()
+      content: 'function getAuthType(): AuthenticationType'
       return:
-        type: <xref uid="azure-maps-control.atlas.AuthenticationType" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.AuthenticationType" />
   - name: getClientId()
     uid: azure-maps-control.atlas.AuthenticationManager.getClientId
     package: azure-maps-control
@@ -32,10 +32,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getClientId()
+      content: 'function getClientId(): string'
       return:
-        type: string
         description: ''
+        type: string
   - name: getToken()
     uid: azure-maps-control.atlas.AuthenticationManager.getToken
     package: azure-maps-control
@@ -46,10 +46,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getToken()
+      content: 'function getToken(): string | null'
       return:
-        type: string
         description: ''
+        type: string | null
   - name: initialize()
     uid: azure-maps-control.atlas.AuthenticationManager.initialize
     package: azure-maps-control
@@ -63,10 +63,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function initialize()
+      content: 'function initialize(): Promise<void>'
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: signRequest(RequestParameters)
     uid: azure-maps-control.atlas.AuthenticationManager.signRequest
     package: azure-maps-control
@@ -79,12 +79,12 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function signRequest(params: RequestParameters)'
+      content: 'function signRequest(params: RequestParameters): RequestParameters'
       parameters:
         - id: params
           type: <xref uid="azure-maps-control.atlas.RequestParameters" />
           description: |
             The RequestParameters to update.
       return:
-        type: <xref uid="azure-maps-control.atlas.RequestParameters" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.RequestParameters" />

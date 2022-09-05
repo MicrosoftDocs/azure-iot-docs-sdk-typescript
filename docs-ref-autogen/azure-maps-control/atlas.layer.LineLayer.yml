@@ -35,7 +35,7 @@ constructors:
           type: <xref uid="azure-maps-control.atlas.LineLayerOptions" />
           description: |
             The options of the line layer.
-properties:
+inheritedProperties:
   - name: metadata
     uid: azure-maps-control.atlas.layer.LineLayer.metadata
     package: azure-maps-control
@@ -47,9 +47,10 @@ properties:
     syntax:
       content: 'metadata?: any'
       return:
-        type: any
         description: ''
-methods:
+        type: any
+    inheritanceDescription: '<b>Inherited From</b> [Layer.metadata](xref:Layer.metadata)'
+inheritedMethods:
   - name: getId()
     uid: azure-maps-control.atlas.layer.LineLayer.getId
     package: azure-maps-control
@@ -58,10 +59,11 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getId()
+      content: 'function getId(): string'
       return:
-        type: string
         description: ''
+        type: string
+    inheritanceDescription: '<b>Inherited From</b> [Layer.getId](xref:Layer.getId)'
   - name: getMap()
     uid: azure-maps-control.atlas.layer.LineLayer.getMap
     package: azure-maps-control
@@ -70,34 +72,11 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getMap()
+      content: 'function getMap(): Map'
       return:
+        description: ''
         type: <xref uid="azure-maps-control.atlas.Map" />
-        description: ''
-  - name: getOptions()
-    uid: azure-maps-control.atlas.layer.LineLayer.getOptions
-    package: azure-maps-control
-    summary: Gets the options of the line layer.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: function getOptions()
-      return:
-        type: <xref uid="azure-maps-control.atlas.LineLayerOptions" />
-        description: ''
-  - name: getSource()
-    uid: azure-maps-control.atlas.layer.LineLayer.getSource
-    package: azure-maps-control
-    summary: Gets the source provided when creating the layer.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: function getSource()
-      return:
-        type: string | <xref uid="azure-maps-control.atlas.source.Source" />
-        description: ''
+    inheritanceDescription: '<b>Inherited From</b> [Layer.getMap](xref:Layer.getMap)'
   - name: onAdd(Map)
     uid: azure-maps-control.atlas.layer.LineLayer.onAdd
     package: azure-maps-control
@@ -112,6 +91,7 @@ methods:
           type: <xref uid="azure-maps-control.atlas.Map" />
           description: |
             The map the layer has been added to.
+    inheritanceDescription: '<b>Inherited From</b> [Layer.onAdd](xref:Layer.onAdd)'
   - name: onRemove()
     uid: azure-maps-control.atlas.layer.LineLayer.onRemove
     package: azure-maps-control
@@ -123,6 +103,32 @@ methods:
     isDeprecated: false
     syntax:
       content: function onRemove()
+    inheritanceDescription: '<b>Inherited From</b> [Layer.onRemove](xref:Layer.onRemove)'
+methods:
+  - name: getOptions()
+    uid: azure-maps-control.atlas.layer.LineLayer.getOptions
+    package: azure-maps-control
+    summary: Gets the options of the line layer.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getOptions(): LineLayerOptions'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.atlas.LineLayerOptions" />
+  - name: getSource()
+    uid: azure-maps-control.atlas.layer.LineLayer.getSource
+    package: azure-maps-control
+    summary: Gets the source provided when creating the layer.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getSource(): string | Source'
+      return:
+        description: ''
+        type: string | <xref uid="azure-maps-control.atlas.source.Source" />
   - name: setOptions(LineLayerOptions)
     uid: azure-maps-control.atlas.layer.LineLayer.setOptions
     package: azure-maps-control

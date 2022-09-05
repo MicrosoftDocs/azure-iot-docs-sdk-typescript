@@ -31,8 +31,8 @@ properties:
     syntax:
       content: 'countryCode?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: drivingSide
     uid: azure-maps-rest.atlas.service.Models.RouteResultInstruction.drivingSide
     package: azure-maps-rest
@@ -51,8 +51,8 @@ properties:
     syntax:
       content: 'drivingSide?: DrivingSide'
       return:
-        type: <xref uid="azure-maps-rest.atlas.service.Models.DrivingSide" />
         description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.DrivingSide" />
   - name: instructionType
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteResultInstruction.instructionType
@@ -70,10 +70,10 @@ properties:
     syntax:
       content: 'instructionType?: GuidanceInstructionType'
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-maps-rest.atlas.service.Models.GuidanceInstructionType" />
-        description: ''
   - name: maneuver
     uid: azure-maps-rest.atlas.service.Models.RouteResultInstruction.maneuver
     package: azure-maps-rest
@@ -107,8 +107,8 @@ properties:
     syntax:
       content: 'maneuver?: GuidanceManeuver'
       return:
-        type: <xref uid="azure-maps-rest.atlas.service.Models.GuidanceManeuver" />
         description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.GuidanceManeuver" />
   - name: message
     uid: azure-maps-rest.atlas.service.Models.RouteResultInstruction.message
     package: azure-maps-rest
@@ -124,8 +124,8 @@ properties:
     syntax:
       content: 'message?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: point
     uid: azure-maps-rest.atlas.service.Models.RouteResultInstruction.point
     package: azure-maps-rest
@@ -137,8 +137,8 @@ properties:
     syntax:
       content: 'point?: Coordinate'
       return:
-        type: <xref uid="azure-maps-rest.atlas.service.Models.Coordinate" />
         description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.Coordinate" />
   - name: possibleCombineWithNext
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteResultInstruction.possibleCombineWithNext
@@ -158,8 +158,8 @@ properties:
     syntax:
       content: 'possibleCombineWithNext?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: routeOffsetInMeters
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteResultInstruction.routeOffsetInMeters
@@ -176,8 +176,8 @@ properties:
     syntax:
       content: 'routeOffsetInMeters?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: street
     uid: azure-maps-rest.atlas.service.Models.RouteResultInstruction.street
     package: azure-maps-rest
@@ -196,8 +196,8 @@ properties:
     syntax:
       content: 'street?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: travelTimeInSeconds
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteResultInstruction.travelTimeInSeconds
@@ -215,5 +215,5 @@ properties:
     syntax:
       content: 'travelTimeInSeconds?: number'
       return:
-        type: number
         description: ''
+        type: number

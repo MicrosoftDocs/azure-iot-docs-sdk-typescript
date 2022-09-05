@@ -20,34 +20,8 @@ properties:
     syntax:
       content: 'escapeChar?: string'
       return:
+        description: ''
         type: string
-        description: ''
-  - name: matchAction
-    uid: azure-maps-spatial-io.atlas.io.ogc.filter.LikeOptions.matchAction
-    package: azure-maps-spatial-io
-    summary: ''
-    fullName: matchAction
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'matchAction?: "Any" | "All" | "One"'
-      return:
-        type: '"Any" | "All" | "One"'
-        description: ''
-  - name: matchCase
-    uid: azure-maps-spatial-io.atlas.io.ogc.filter.LikeOptions.matchCase
-    package: azure-maps-spatial-io
-    summary: ''
-    fullName: matchCase
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'matchCase?: boolean'
-      return:
-        type: boolean
-        description: ''
   - name: singleChar
     uid: azure-maps-spatial-io.atlas.io.ogc.filter.LikeOptions.singleChar
     package: azure-maps-spatial-io
@@ -59,8 +33,8 @@ properties:
     syntax:
       content: 'singleChar?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: wildCard
     uid: azure-maps-spatial-io.atlas.io.ogc.filter.LikeOptions.wildCard
     package: azure-maps-spatial-io
@@ -72,8 +46,41 @@ properties:
     syntax:
       content: 'wildCard?: string'
       return:
-        type: string
         description: ''
+        type: string
+inheritedProperties:
+  - name: matchAction
+    uid: azure-maps-spatial-io.atlas.io.ogc.filter.LikeOptions.matchAction
+    package: azure-maps-spatial-io
+    summary: ''
+    fullName: matchAction
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'matchAction?: "Any" | "All" | "One"'
+      return:
+        description: ''
+        type: '"Any" | "All" | "One"'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BinaryComparisonOptions.matchAction](xref:BinaryComparisonOptions.matchAction)
+  - name: matchCase
+    uid: azure-maps-spatial-io.atlas.io.ogc.filter.LikeOptions.matchCase
+    package: azure-maps-spatial-io
+    summary: ''
+    fullName: matchCase
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'matchCase?: boolean'
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BinaryComparisonOptions.matchCase](xref:BinaryComparisonOptions.matchCase)
 extends: >-
   <xref uid="azure-maps-spatial-io.atlas.io.ogc.filter.BinaryComparisonOptions"
   />

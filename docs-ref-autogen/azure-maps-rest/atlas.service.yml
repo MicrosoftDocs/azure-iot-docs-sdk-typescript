@@ -120,6 +120,7 @@ typeAliases:
   - azure-maps-rest.atlas.service.SearchPOIResponse
   - azure-maps-rest.atlas.service.SearchPolygonResponse
   - azure-maps-rest.atlas.service.SpatialFeatureCollection
+  - azure-maps-rest.atlas.service.UndefinedGeojson
   - azure-maps-rest.atlas.service.WebResource
 interfaces:
   - azure-maps-rest.atlas.service.IBaseGeojson
@@ -143,7 +144,7 @@ functions:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function deserializationPolicy()
+      content: 'function deserializationPolicy(): RequestPolicyFactory'
       return:
-        type: <xref uid="azure-maps-rest.atlas.service.RequestPolicyFactory" />
         description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.RequestPolicyFactory" />

@@ -7,4 +7,7 @@ fullName: SpatialPostBufferResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: 'type SpatialPostBufferResponse = BufferResponse & { _response: Object }'
+syntax: |
+  type SpatialPostBufferResponse = BufferResponse & {
+    _response: HttpResponse & { bodyAsText: string, parsedBody: BufferResponse },
+  }

@@ -7,6 +7,9 @@ fullName: SearchPOIResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type SearchPOIResponse =
-  Response<SearchPoiResponse,Models.SearchGetSearchPOICategoryResponse,SearchGeojson>
+syntax: |
+  type SearchPOIResponse = Response<
+    SearchPoiResponse,
+    Models.SearchGetSearchPOICategoryResponse,
+    SearchGeojson
+  >

@@ -44,10 +44,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getNextRow()
+      content: 'function getNextRow(): string[]'
       return:
-        type: 'string[]'
         description: ''
+        type: 'string[]'
   - name: read()
     uid: azure-maps-spatial-io.atlas.io.core.CsvReader.read
     package: azure-maps-spatial-io
@@ -58,7 +58,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function read()
+      content: 'function read(): string[][]'
       return:
-        type: 'string[][]'
         description: ''
+        type: 'string[][]'

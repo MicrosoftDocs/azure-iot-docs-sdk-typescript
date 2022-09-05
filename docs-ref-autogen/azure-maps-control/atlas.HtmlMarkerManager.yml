@@ -20,7 +20,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function add(element: HtmlMarker, position?: Position)'
+      content: 'function add(element: HtmlMarker, position?: Position): any'
       parameters:
         - id: element
           type: <xref uid="azure-maps-control.atlas.HtmlMarker" />
@@ -30,8 +30,8 @@ methods:
           description: |
             Optionally specify the position of the marker on the map.
       return:
-        type: any
         description: ''
+        type: any
   - name: 'add(HtmlMarker[])'
     uid: azure-maps-control.atlas.HtmlMarkerManager.add
     package: azure-maps-control
@@ -40,15 +40,15 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function add(elements: HtmlMarker[])'
+      content: 'function add(elements: HtmlMarker[]): any'
       parameters:
         - id: elements
           type: '<xref uid="azure-maps-control.atlas.HtmlMarker" />[]'
           description: |
             The markers to add.
       return:
-        type: any
         description: ''
+        type: any
   - name: clear()
     uid: azure-maps-control.atlas.HtmlMarkerManager.clear
     package: azure-maps-control
@@ -66,10 +66,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getMarkers()
+      content: 'function getMarkers(): HtmlMarker[]'
       return:
-        type: '<xref uid="azure-maps-control.atlas.HtmlMarker" />[]'
         description: ''
+        type: '<xref uid="azure-maps-control.atlas.HtmlMarker" />[]'
   - name: remove(string | HtmlMarker | Array<string | HtmlMarker>)
     uid: azure-maps-control.atlas.HtmlMarkerManager.remove
     package: azure-maps-control

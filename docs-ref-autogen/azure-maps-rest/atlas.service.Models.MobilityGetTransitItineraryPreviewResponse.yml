@@ -8,6 +8,10 @@ fullName: MobilityGetTransitItineraryPreviewResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
+syntax: |
   type MobilityGetTransitItineraryPreviewResponse = TransitItineraryResponse & {
-  _response: Object }
+    _response: HttpResponse & {
+      bodyAsText: string,
+      parsedBody: TransitItineraryResponse,
+    },
+  }

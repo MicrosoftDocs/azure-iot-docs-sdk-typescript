@@ -7,6 +7,10 @@ fullName: RenderGetCopyrightForTileResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type RenderGetCopyrightForTileResponse = CopyrightTileResult & { _response:
-  Object }
+syntax: |
+  type RenderGetCopyrightForTileResponse = CopyrightTileResult & {
+    _response: HttpResponse & {
+      bodyAsText: string,
+      parsedBody: CopyrightTileResult,
+    },
+  }

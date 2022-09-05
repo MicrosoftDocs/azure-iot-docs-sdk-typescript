@@ -23,7 +23,7 @@ methods:
     syntax:
       content: >-
         function buildContainer<K>(map: Map, style: ControlStyle, ariaLabel?:
-        string, tagName?: K)
+        string, tagName?: K): HTMLElementTagNameMap[K]
       parameters:
         - id: map
           type: <xref uid="azure-maps-control.atlas.Map" />
@@ -38,8 +38,8 @@ methods:
           type: K
           description: ''
       return:
-        type: 'HTMLElementTagNameMap[K]'
         description: ''
+        type: 'HTMLElementTagNameMap[K]'
   - name: 'onAdd(Map, ControlOptions)'
     uid: azure-maps-control.atlas.control.ControlBase.onAdd
     package: azure-maps-control
@@ -50,7 +50,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function onAdd(map: Map, options?: ControlOptions)'
+      content: 'function onAdd(map: Map, options?: ControlOptions): HTMLElement'
       parameters:
         - id: map
           type: <xref uid="azure-maps-control.atlas.Map" />
@@ -59,8 +59,8 @@ methods:
           type: <xref uid="azure-maps-control.atlas.ControlOptions" />
           description: The ControlOptions for this control.
       return:
-        type: HTMLElement
         description: An HTMLElement to be placed on the map for the control.
+        type: HTMLElement
   - name: onRemove()
     uid: azure-maps-control.atlas.control.ControlBase.onRemove
     package: azure-maps-control

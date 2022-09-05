@@ -7,6 +7,9 @@ fullName: GetTransitDockInfoResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type GetTransitDockInfoResponse =
-  Response<TransitDockInfoResponse,Models.MobilityGetTransitDockInfoPreviewResponse,TransitDockGeojson>
+syntax: |
+  type GetTransitDockInfoResponse = Response<
+    TransitDockInfoResponse,
+    Models.MobilityGetTransitDockInfoPreviewResponse,
+    TransitDockGeojson
+  >

@@ -13,7 +13,7 @@ remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
-properties:
+inheritedProperties:
   - name: geometries
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteDirectionsRequestBodySupportingPoints.geometries
@@ -26,10 +26,13 @@ properties:
     syntax:
       content: 'geometries: GeoJSONGeometryUnion[]'
       return:
+        description: ''
         type: >-
           <xref uid="azure-maps-rest.atlas.service.Models.GeoJSONGeometryUnion"
           />[]
-        description: ''
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GeoJSONGeometryCollection.geometries](xref:GeoJSONGeometryCollection.geometries)
   - name: type
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteDirectionsRequestBodySupportingPoints.type
@@ -44,6 +47,9 @@ properties:
     syntax:
       content: 'type?: string'
       return:
-        type: string
         description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [GeoJSONGeometryCollection.type](xref:GeoJSONGeometryCollection.type)
 extends: <xref uid="azure-maps-rest.atlas.service.Models.GeoJSONGeometryCollection" />

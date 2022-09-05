@@ -8,6 +8,12 @@ fullName: SearchPostSearchAddressBatchPreviewResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
+syntax: |
   type SearchPostSearchAddressBatchPreviewResponse = BatchResponse &
-  SearchPostSearchAddressBatchPreviewHeaders & { _response: Object }
+    SearchPostSearchAddressBatchPreviewHeaders & {
+      _response: HttpResponse & {
+        bodyAsText: string,
+        parsedBody: BatchResponse,
+        parsedHeaders: SearchPostSearchAddressBatchPreviewHeaders,
+      },
+    }

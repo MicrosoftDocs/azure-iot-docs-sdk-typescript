@@ -53,6 +53,8 @@ interfaces:
   - azure-maps-control.atlas.StyleChangedEvent
   - azure-maps-control.atlas.StyleControlOptions
   - azure-maps-control.atlas.StyleOptions
+  - azure-maps-control.atlas.StyleSet
+  - azure-maps-control.atlas.StyleSetStyle
   - azure-maps-control.atlas.SymbolLayerOptions
   - azure-maps-control.atlas.TargetedEvent
   - azure-maps-control.atlas.TextOptions
@@ -81,6 +83,7 @@ typeAliases:
   - azure-maps-control.atlas.ExpressionName
   - azure-maps-control.atlas.getAuthTokenCallback
   - azure-maps-control.atlas.ResourceType
+  - azure-maps-control.atlas.StyleImageMetadata
 package: azure-maps-control
 functions:
   - name: 'addImageTemplate(string, string, boolean)'
@@ -137,10 +140,10 @@ functions:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getAllImageTemplateNames()
+      content: 'function getAllImageTemplateNames(): string[]'
       return:
-        type: 'string[]'
         description: ''
+        type: 'string[]'
   - name: getAuthenticationOptions()
     uid: azure-maps-control.atlas.getAuthenticationOptions
     package: azure-maps-control
@@ -151,10 +154,10 @@ functions:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getAuthenticationOptions()
+      content: 'function getAuthenticationOptions(): AuthenticationOptions'
       return:
-        type: <xref uid="azure-maps-control.atlas.AuthenticationOptions" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.AuthenticationOptions" />
   - name: getDomain()
     uid: azure-maps-control.atlas.getDomain
     package: azure-maps-control
@@ -165,10 +168,10 @@ functions:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getDomain()
+      content: 'function getDomain(): string'
       return:
-        type: string
         description: ''
+        type: string
   - name: 'getImageTemplate(string, number)'
     uid: azure-maps-control.atlas.getImageTemplate
     package: azure-maps-control
@@ -177,7 +180,7 @@ functions:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getImageTemplate(templateName: string, scale?: number)'
+      content: 'function getImageTemplate(templateName: string, scale?: number): string'
       parameters:
         - id: templateName
           type: string
@@ -190,8 +193,8 @@ functions:
             use the symbol layers icon size option to scale down if needed. This
             will reduce blurriness due to scaling. Default: 1
       return:
-        type: string
         description: ''
+        type: string
   - name: getLanguage()
     uid: azure-maps-control.atlas.getLanguage
     package: azure-maps-control
@@ -202,10 +205,10 @@ functions:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getLanguage()
+      content: 'function getLanguage(): string'
       return:
-        type: string
         description: ''
+        type: string
   - name: getMaxParallelImageRequests()
     uid: azure-maps-control.atlas.getMaxParallelImageRequests
     package: azure-maps-control
@@ -216,10 +219,10 @@ functions:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getMaxParallelImageRequests()
+      content: 'function getMaxParallelImageRequests(): number'
       return:
-        type: number
         description: ''
+        type: number
   - name: getSessionId()
     uid: azure-maps-control.atlas.getSessionId
     package: azure-maps-control
@@ -230,10 +233,10 @@ functions:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getSessionId()
+      content: 'function getSessionId(): string'
       return:
-        type: string
         description: ''
+        type: string
   - name: getSubscriptionKey()
     uid: azure-maps-control.atlas.getSubscriptionKey
     package: azure-maps-control
@@ -242,10 +245,10 @@ functions:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getSubscriptionKey()
+      content: 'function getSubscriptionKey(): string'
       return:
-        type: string
         description: ''
+        type: string
   - name: getUserRegion()
     uid: azure-maps-control.atlas.getUserRegion
     package: azure-maps-control
@@ -255,10 +258,10 @@ functions:
     isDeprecated: true
     customDeprecatedMessage: use atlas.getView() instead
     syntax:
-      content: function getUserRegion()
+      content: 'function getUserRegion(): string'
       return:
-        type: string
         description: ''
+        type: string
   - name: getVersion()
     uid: azure-maps-control.atlas.getVersion
     package: azure-maps-control
@@ -267,10 +270,10 @@ functions:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getVersion()
+      content: 'function getVersion(): string'
       return:
-        type: string
         description: ''
+        type: string
   - name: getView()
     uid: azure-maps-control.atlas.getView
     package: azure-maps-control
@@ -281,10 +284,10 @@ functions:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getView()
+      content: 'function getView(): string'
       return:
-        type: string
         description: ''
+        type: string
   - name: getWorkerCount()
     uid: azure-maps-control.atlas.getWorkerCount
     package: azure-maps-control
@@ -293,10 +296,10 @@ functions:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getWorkerCount()
+      content: 'function getWorkerCount(): number'
       return:
-        type: number
         description: ''
+        type: number
   - name: isSupported(boolean)
     uid: azure-maps-control.atlas.isSupported
     package: azure-maps-control
@@ -305,7 +308,7 @@ functions:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function isSupported(failIfMajorPerformanceCaveat?: boolean)'
+      content: 'function isSupported(failIfMajorPerformanceCaveat?: boolean): boolean'
       parameters:
         - id: failIfMajorPerformanceCaveat
           type: boolean
@@ -317,8 +320,8 @@ functions:
 
             (e.g. a software WebGL renderer would be used).
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: prewarm()
     uid: azure-maps-control.atlas.prewarm
     package: azure-maps-control

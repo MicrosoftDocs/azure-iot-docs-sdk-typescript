@@ -2,14 +2,51 @@
 name: IndoorManager
 uid: azure-maps-indoor.atlas.indoor.IndoorManager
 package: azure-maps-indoor
-summary: An IndoorManager handles loading the indoor maps styles.
+summary: |2
+      [ Indoor Manager for Azure Maps Control ]
+  This module applies filtering logic to mapbox layers
+  so that indoor tilesets with multiple floors worth of
+  overlapping features can be presented.
+
+  This module was written because of a constraint in mapbox
+  styles that prevents feature state from being used in
+  expressions that drive layout properties like visibility
+  and sort-key. If this constraint were removed, the logic
+  in this module could be captured in a style definition.
+
+             [ Event/Data Flow ]
+
+  ┌─────────────────┐  ┌────────────────┐
+  │      event:     │  │     event:     │
+  │   "sourcedata"  │  │ "levelchanged" │
+  └────────┬────────┘  └────────┬───────┘
+           │                    │
+           ▼                    ▼
+  ┌─────────────────┐  ┌────────────────┐
+  │ facilityMapping │  │ selectedLevels │
+  └────────┬────────┘  └────────┬───────┘
+           │                    │
+           │                    │
+           │  ┌──────────────┐  │    ┌────────────────────┐
+           └─►│ masterFilter │◄─┘    │ mapbox.getLayers() │
+              └───────┬──────┘       └────────┬───────────┘
+                      │                       │
+                      ▼                       │
+              ┌──────────────┐                │
+              │  filterList  │◄───────────────┘
+              └───────┬──────┘
+                      │
+                      ▼
+           ┌────────────────────┐
+           │ mapbox.setFilter() │
+           └────────────────────┘
 fullName: IndoorManager
 remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
 constructors:
-  - name: 'IndoorManager(azmaps.Map, IndoorManagerOptions)'
+  - name: 'IndoorManager(IMap, IndoorManagerOptions)'
     uid: azure-maps-indoor.atlas.indoor.IndoorManager.constructor
     package: azure-maps-indoor
     summary: Constructs an IndoorManager.
@@ -17,15 +54,84 @@ constructors:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'new IndoorManager(map: azmaps.Map, options?: IndoorManagerOptions)'
+      content: 'new IndoorManager(map: IMap, options?: IndoorManagerOptions)'
       parameters:
         - id: map
-          type: <xref uid="azmaps.Map" />
+          type: <xref uid="azure-maps-indoor.atlas.indoor.IMap" />
           description: The map to overlay indoor styles on.
         - id: options
           type: <xref uid="azure-maps-indoor.atlas.indoor.IndoorManagerOptions" />
           description: |
             The options for the manager.
+properties:
+  - name: getCreatorSourceId
+    uid: azure-maps-indoor.atlas.indoor.IndoorManager.getCreatorSourceId
+    package: azure-maps-indoor
+    summary: Retrieves the source name of the Creator's tileset.
+    fullName: getCreatorSourceId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'getCreatorSourceId: () => string'
+      return:
+        description: ''
+        type: () =&gt; string
+  - name: getCurrentFacility
+    uid: azure-maps-indoor.atlas.indoor.IndoorManager.getCurrentFacility
+    package: azure-maps-indoor
+    summary: Retrieves the currently selected facility.
+    fullName: getCurrentFacility
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'getCurrentFacility: () => [string, number]'
+      return:
+        description: ''
+        type: '() =&gt; [string, number]'
+  - name: getOptions
+    uid: azure-maps-indoor.atlas.indoor.IndoorManager.getOptions
+    package: azure-maps-indoor
+    summary: Gets the options used by the IndoorManager.
+    fullName: getOptions
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'getOptions: () => IndoorManagerOptions'
+      return:
+        description: ''
+        type: () =&gt; IndoorManagerOptions
+  - name: setFacility
+    uid: azure-maps-indoor.atlas.indoor.IndoorManager.setFacility
+    package: azure-maps-indoor
+    summary: |-
+      Sets the current facility and its ordinal.
+      If an empty string is provided for the facilityId,
+      it will reset any facility selection and remove the level picker.
+    fullName: setFacility
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'setFacility: (newFacilityId: string, newLevelOrdinal: number) => void'
+      return:
+        description: ''
+        type: '(newFacilityId: string, newLevelOrdinal: number) =&gt; void'
+  - name: setOptions
+    uid: azure-maps-indoor.atlas.indoor.IndoorManager.setOptions
+    package: azure-maps-indoor
+    summary: Sets the options used by the IndoorManager.
+    fullName: setOptions
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'setOptions: (options?: IndoorManagerOptions) => void'
+      return:
+        description: ''
+        type: '(options?: IndoorManagerOptions) =&gt; void'
 methods:
   - name: dispose()
     uid: azure-maps-indoor.atlas.indoor.IndoorManager.dispose
@@ -38,54 +144,6 @@ methods:
     isDeprecated: false
     syntax:
       content: function dispose()
-  - name: getCurrentFacility()
-    uid: azure-maps-indoor.atlas.indoor.IndoorManager.getCurrentFacility
-    package: azure-maps-indoor
-    summary: |-
-      Retrieves the currently selected facility.
-      [ currentFacilityId, currentLevelOrdinal ]
-      Note: The returned type may change to an object.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: function getCurrentFacility()
-      return:
-        type: Object
-        description: ''
-  - name: getOptions()
-    uid: azure-maps-indoor.atlas.indoor.IndoorManager.getOptions
-    package: azure-maps-indoor
-    summary: Gets the options used by the IndoorManager.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: function getOptions()
-      return:
-        type: <xref uid="azure-maps-indoor.atlas.indoor.IndoorManagerOptions" />
-        description: ''
-  - name: getStyleDefinition()
-    uid: azure-maps-indoor.atlas.indoor.IndoorManager.getStyleDefinition
-    package: azure-maps-indoor
-    summary: Retrieves the style definition that is used in this indoor style manager.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: function getStyleDefinition()
-      return:
-        type: <xref uid="azure-maps-indoor.atlas.indoor.IStyleDefinition" />
-        description: ''
-  - name: initialize()
-    uid: azure-maps-indoor.atlas.indoor.IndoorManager.initialize
-    package: azure-maps-indoor
-    summary: Adds or updates the indoor styles to the map.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: function initialize()
   - name: setDynamicStyling(boolean)
     uid: azure-maps-indoor.atlas.indoor.IndoorManager.setDynamicStyling
     package: azure-maps-indoor
@@ -108,37 +166,6 @@ methods:
           type: boolean
           description: |
             true to enable Dynamic Styling; false to disable Dynamic Styling.
-  - name: 'setFacility(string, number)'
-    uid: azure-maps-indoor.atlas.indoor.IndoorManager.setFacility
-    package: azure-maps-indoor
-    summary: |-
-      Sets the current facility and its ordinal.
-      If an empty string is provided for the facilityId,
-      it will reset any facility selection and remove the level picker.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function setFacility(facilityId: string, levelOrdinal: number)'
-      parameters:
-        - id: facilityId
-          type: string
-          description: The facility Id.
-        - id: levelOrdinal
-          type: number
-          description: |
-            The level ordinal number.
-  - name: setOptions(IndoorManagerOptions)
-    uid: azure-maps-indoor.atlas.indoor.IndoorManager.setOptions
-    package: azure-maps-indoor
-    summary: Sets the options used by the IndoorManager.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function setOptions(options: IndoorManagerOptions)'
-      parameters:
-        - id: options
-          type: <xref uid="azure-maps-indoor.atlas.indoor.IndoorManagerOptions" />
-          description: |
-            The indoor manager options.
+extends: >-
+  EventEmitter&lt;<xref
+  uid="azure-maps-indoor.atlas.indoor.IIndoorManagerEvents" />&gt;

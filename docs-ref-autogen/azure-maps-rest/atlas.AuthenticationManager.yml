@@ -17,10 +17,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function initialize()
+      content: 'function initialize(): Promise<void>'
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: signRequest(RequestParameters)
     uid: azure-maps-rest.atlas.AuthenticationManager.signRequest
     package: azure-maps-rest
@@ -29,11 +29,11 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function signRequest(params: RequestParameters)'
+      content: 'function signRequest(params: RequestParameters): RequestParameters'
       parameters:
         - id: params
           type: <xref uid="azure-maps-rest.atlas.RequestParameters" />
           description: ''
       return:
-        type: <xref uid="azure-maps-rest.atlas.RequestParameters" />
         description: ''
+        type: <xref uid="azure-maps-rest.atlas.RequestParameters" />

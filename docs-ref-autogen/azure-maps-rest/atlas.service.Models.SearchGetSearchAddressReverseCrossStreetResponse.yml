@@ -8,6 +8,11 @@ fullName: SearchGetSearchAddressReverseCrossStreetResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
+syntax: |
   type SearchGetSearchAddressReverseCrossStreetResponse =
-  SearchAddressReverseCrossStreetResponse & { _response: Object }
+    SearchAddressReverseCrossStreetResponse & {
+      _response: HttpResponse & {
+        bodyAsText: string,
+        parsedBody: SearchAddressReverseCrossStreetResponse,
+      },
+    }

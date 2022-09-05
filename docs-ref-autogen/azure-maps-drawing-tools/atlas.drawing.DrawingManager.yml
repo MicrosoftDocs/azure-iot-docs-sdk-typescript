@@ -55,15 +55,15 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function edit(shape: azmaps.Shape)'
+      content: 'function edit(shape: azmaps.Shape): any'
       parameters:
         - id: shape
           type: <xref uid="azmaps.Shape" />
           description: |
             The shape to put in edit mode.
       return:
-        type: any
         description: ''
+        type: any
   - name: getLayers()
     uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager.getLayers
     package: azure-maps-drawing-tools
@@ -76,10 +76,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getLayers()
+      content: 'function getLayers(): DrawingLayers'
       return:
-        type: <xref uid="azure-maps-drawing-tools.atlas.DrawingLayers" />
         description: ''
+        type: <xref uid="azure-maps-drawing-tools.atlas.DrawingLayers" />
   - name: getOptions()
     uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager.getOptions
     package: azure-maps-drawing-tools
@@ -88,10 +88,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getOptions()
+      content: 'function getOptions(): DrawingManagerOptions'
       return:
-        type: <xref uid="azure-maps-drawing-tools.atlas.DrawingManagerOptions" />
         description: ''
+        type: <xref uid="azure-maps-drawing-tools.atlas.DrawingManagerOptions" />
   - name: getPreviewLayers()
     uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager.getPreviewLayers
     package: azure-maps-drawing-tools
@@ -104,10 +104,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getPreviewLayers()
+      content: 'function getPreviewLayers(): DrawingLayers'
       return:
-        type: <xref uid="azure-maps-drawing-tools.atlas.DrawingLayers" />
         description: ''
+        type: <xref uid="azure-maps-drawing-tools.atlas.DrawingLayers" />
   - name: getSource()
     uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager.getSource
     package: azure-maps-drawing-tools
@@ -118,10 +118,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getSource()
+      content: 'function getSource(): azmaps.source.DataSource'
       return:
-        type: <xref uid="azmaps.source.DataSource" />
         description: ''
+        type: <xref uid="azmaps.source.DataSource" />
   - name: setOptions(DrawingManagerOptions)
     uid: azure-maps-drawing-tools.atlas.drawing.DrawingManager.setOptions
     package: azure-maps-drawing-tools

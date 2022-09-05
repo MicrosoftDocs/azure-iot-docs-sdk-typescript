@@ -7,6 +7,12 @@ fullName: GeoJSONGeometryUnion
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type GeoJSONGeometryUnion = GeoJSONGeometry | LineString | MultiPoint | Point
-  | MultiPolygon | Polygon | MultiLineString
+syntax: |
+  type GeoJSONGeometryUnion =
+    | GeoJSONGeometry
+    | LineString
+    | MultiPoint
+    | Point
+    | MultiPolygon
+    | Polygon
+    | MultiLineString

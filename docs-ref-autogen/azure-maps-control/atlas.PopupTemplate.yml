@@ -25,11 +25,11 @@ properties:
     syntax:
       content: 'content?: string | PropertyInfo[] | Array<string | PropertyInfo[]>'
       return:
+        description: ''
         type: >-
           string | <xref uid="azure-maps-control.atlas.PropertyInfo" />[] |
           Array&lt;string | <xref uid="azure-maps-control.atlas.PropertyInfo"
           />[]&gt;
-        description: ''
   - name: dateFormat
     uid: azure-maps-control.atlas.PopupTemplate.dateFormat
     package: azure-maps-control
@@ -50,8 +50,8 @@ properties:
     syntax:
       content: 'dateFormat?: DateTimeFormatOptions'
       return:
-        type: DateTimeFormatOptions
         description: ''
+        type: DateTimeFormatOptions
   - name: detectHyperlinks
     uid: azure-maps-control.atlas.PopupTemplate.detectHyperlinks
     package: azure-maps-control
@@ -67,8 +67,8 @@ properties:
     syntax:
       content: 'detectHyperlinks?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: fillColor
     uid: azure-maps-control.atlas.PopupTemplate.fillColor
     package: azure-maps-control
@@ -80,8 +80,8 @@ properties:
     syntax:
       content: 'fillColor?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: hyperlinkFormat
     uid: azure-maps-control.atlas.PopupTemplate.hyperlinkFormat
     package: azure-maps-control
@@ -93,8 +93,8 @@ properties:
     syntax:
       content: 'hyperlinkFormat?: HyperLinkFormatOptions'
       return:
-        type: <xref uid="azure-maps-control.atlas.HyperLinkFormatOptions" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.HyperLinkFormatOptions" />
   - name: numberFormat
     uid: azure-maps-control.atlas.PopupTemplate.numberFormat
     package: azure-maps-control
@@ -111,8 +111,8 @@ properties:
     syntax:
       content: 'numberFormat?: NumberFormatOptions'
       return:
-        type: NumberFormatOptions
         description: ''
+        type: NumberFormatOptions
   - name: sandboxContent
     uid: azure-maps-control.atlas.PopupTemplate.sandboxContent
     package: azure-maps-control
@@ -136,8 +136,8 @@ properties:
     syntax:
       content: 'sandboxContent?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: singleDescription
     uid: azure-maps-control.atlas.PopupTemplate.singleDescription
     package: azure-maps-control
@@ -153,8 +153,8 @@ properties:
     syntax:
       content: 'singleDescription?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: textColor
     uid: azure-maps-control.atlas.PopupTemplate.textColor
     package: azure-maps-control
@@ -166,8 +166,8 @@ properties:
     syntax:
       content: 'textColor?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: title
     uid: azure-maps-control.atlas.PopupTemplate.title
     package: azure-maps-control
@@ -184,8 +184,8 @@ properties:
     syntax:
       content: 'title?: string'
       return:
-        type: string
         description: ''
+        type: string
 methods:
   - name: 'applyTemplate(Properties, PopupTemplate)'
     uid: azure-maps-control.atlas.PopupTemplate.applyTemplate
@@ -204,7 +204,7 @@ methods:
     syntax:
       content: >-
         static function applyTemplate(prop: Properties, template?:
-        PopupTemplate)
+        PopupTemplate): HTMLElement
       parameters:
         - id: prop
           type: <xref uid="azure-maps-control.atlas.Properties" />
@@ -214,5 +214,5 @@ methods:
           description: |
             The template to apply.
       return:
-        type: HTMLElement
         description: ''
+        type: HTMLElement

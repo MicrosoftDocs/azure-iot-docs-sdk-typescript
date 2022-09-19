@@ -7,6 +7,12 @@ fullName: SpatialGetGeofenceResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type SpatialGetGeofenceResponse = GeofenceResponse & SpatialGetGeofenceHeaders
-  & { _response: Object }
+syntax: |
+  type SpatialGetGeofenceResponse = GeofenceResponse &
+    SpatialGetGeofenceHeaders & {
+      _response: HttpResponse & {
+        bodyAsText: string,
+        parsedBody: GeofenceResponse,
+        parsedHeaders: SpatialGetGeofenceHeaders,
+      },
+    }

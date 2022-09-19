@@ -34,8 +34,8 @@ properties:
     syntax:
       content: 'metadata?: any'
       return:
-        type: any
         description: ''
+        type: any
 methods:
   - name: getId()
     uid: azure-maps-control.atlas.layer.Layer.getId
@@ -45,10 +45,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getId()
+      content: 'function getId(): string'
       return:
-        type: string
         description: ''
+        type: string
   - name: getMap()
     uid: azure-maps-control.atlas.layer.Layer.getMap
     package: azure-maps-control
@@ -57,10 +57,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getMap()
+      content: 'function getMap(): Map'
       return:
-        type: <xref uid="azure-maps-control.atlas.Map" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.Map" />
   - name: onAdd(Map)
     uid: azure-maps-control.atlas.layer.Layer.onAdd
     package: azure-maps-control

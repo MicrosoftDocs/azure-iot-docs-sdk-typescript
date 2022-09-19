@@ -7,6 +7,10 @@ fullName: SearchGetSearchNearbyResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type SearchGetSearchNearbyResponse = SearchNearbyResponse & { _response:
-  Object }
+syntax: |
+  type SearchGetSearchNearbyResponse = SearchNearbyResponse & {
+    _response: HttpResponse & {
+      bodyAsText: string,
+      parsedBody: SearchNearbyResponse,
+    },
+  }

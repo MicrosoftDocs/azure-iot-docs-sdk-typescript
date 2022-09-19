@@ -9,21 +9,6 @@ isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: format
-    uid: azure-maps-spatial-io.atlas.SpatialXmlWriteOptions.format
-    package: azure-maps-spatial-io
-    summary: |-
-      The spatial data format to write the shapes to.
-      Default: `"GeoJSON"`
-    fullName: format
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'format?: "KML" | "GPX" | "GeoRSS" | "GML" | "GeoJSON" | "CSV"'
-      return:
-        type: '"KML" | "GPX" | "GeoRSS" | "GML" | "GeoJSON" | "CSV"'
-        description: ''
   - name: indentChars
     uid: azure-maps-spatial-io.atlas.SpatialXmlWriteOptions.indentChars
     package: azure-maps-spatial-io
@@ -37,8 +22,8 @@ properties:
     syntax:
       content: 'indentChars?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: newLineChars
     uid: azure-maps-spatial-io.atlas.SpatialXmlWriteOptions.newLineChars
     package: azure-maps-spatial-io
@@ -52,8 +37,8 @@ properties:
     syntax:
       content: 'newLineChars?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: prettyPrint
     uid: azure-maps-spatial-io.atlas.SpatialXmlWriteOptions.prettyPrint
     package: azure-maps-spatial-io
@@ -71,8 +56,8 @@ properties:
     syntax:
       content: 'prettyPrint?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: roundPositions
     uid: azure-maps-spatial-io.atlas.SpatialXmlWriteOptions.roundPositions
     package: azure-maps-spatial-io
@@ -88,8 +73,8 @@ properties:
     syntax:
       content: 'roundPositions?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: writeIds
     uid: azure-maps-spatial-io.atlas.SpatialXmlWriteOptions.writeIds
     package: azure-maps-spatial-io
@@ -103,6 +88,25 @@ properties:
     syntax:
       content: 'writeIds?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
+inheritedProperties:
+  - name: format
+    uid: azure-maps-spatial-io.atlas.SpatialXmlWriteOptions.format
+    package: azure-maps-spatial-io
+    summary: |-
+      The spatial data format to write the shapes to.
+      Default: `"GeoJSON"`
+    fullName: format
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'format?: "KML" | "GPX" | "GeoRSS" | "GML" | "GeoJSON" | "CSV"'
+      return:
+        description: ''
+        type: '"KML" | "GPX" | "GeoRSS" | "GML" | "GeoJSON" | "CSV"'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SpatialDataWriteOptions.format](xref:SpatialDataWriteOptions.format)
 extends: <xref uid="azure-maps-spatial-io.atlas.SpatialDataWriteOptions" />

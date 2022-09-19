@@ -36,17 +36,19 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function describeFeatureTypes(featureTypeNames: string | string[])'
+      content: >-
+        function describeFeatureTypes(featureTypeNames: string | string[]):
+        Promise<WfsFeatureTypeDescription[]>
       parameters:
         - id: featureTypeNames
           type: 'string | string[]'
           description: |
             One or more feature type names to retrieve details for.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-spatial-io.atlas.WfsFeatureTypeDescription" />[]&gt;
-        description: ''
   - name: getCapabilities()
     uid: azure-maps-spatial-io.atlas.io.ogc.WfsClient.getCapabilities
     package: azure-maps-spatial-io
@@ -59,12 +61,12 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getCapabilities()
+      content: 'function getCapabilities(): Promise<WfsCapabilities>'
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-maps-spatial-io.atlas.WfsCapabilities"
           />&gt;
-        description: ''
   - name: getFeatureCount(WfsFeatureRequest)
     uid: azure-maps-spatial-io.atlas.io.ogc.WfsClient.getFeatureCount
     package: azure-maps-spatial-io
@@ -75,14 +77,14 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getFeatureCount(request: WfsFeatureRequest)'
+      content: 'function getFeatureCount(request: WfsFeatureRequest): Promise<number>'
       parameters:
         - id: request
           type: <xref uid="azure-maps-spatial-io.atlas.WfsFeatureRequest" />
           description: ''
       return:
-        type: Promise&lt;number&gt;
         description: ''
+        type: Promise&lt;number&gt;
   - name: getFeatureInfo(WfsFeatureRequest)
     uid: azure-maps-spatial-io.atlas.io.ogc.WfsClient.getFeatureInfo
     package: azure-maps-spatial-io
@@ -94,15 +96,17 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getFeatureInfo(request: WfsFeatureRequest)'
+      content: >-
+        function getFeatureInfo(request: WfsFeatureRequest):
+        Promise<Record<string, any>>
       parameters:
         - id: request
           type: <xref uid="azure-maps-spatial-io.atlas.WfsFeatureRequest" />
           description: |
             The request details for the WFS service.
       return:
-        type: 'Promise&lt;Record&lt;string, any&gt;&gt;'
         description: ''
+        type: 'Promise&lt;Record&lt;string, any&gt;&gt;'
   - name: getFeatures(WfsFeatureRequest)
     uid: azure-maps-spatial-io.atlas.io.ogc.WfsClient.getFeatures
     package: azure-maps-spatial-io
@@ -114,12 +118,14 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getFeatures(request: WfsFeatureRequest)'
+      content: >-
+        function getFeatures(request: WfsFeatureRequest):
+        Promise<azmaps.data.FeatureCollection>
       parameters:
         - id: request
           type: <xref uid="azure-maps-spatial-io.atlas.WfsFeatureRequest" />
           description: |
             The request details for the WFS service.
       return:
-        type: Promise&lt;<xref uid="azmaps.data.FeatureCollection" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azmaps.data.FeatureCollection" />&gt;

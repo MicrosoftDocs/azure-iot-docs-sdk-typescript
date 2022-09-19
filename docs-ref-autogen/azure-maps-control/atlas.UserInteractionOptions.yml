@@ -22,8 +22,8 @@ properties:
     syntax:
       content: 'boxZoomInteraction?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: dblClickZoomInteraction
     uid: azure-maps-control.atlas.UserInteractionOptions.dblClickZoomInteraction
     package: azure-maps-control
@@ -37,8 +37,8 @@ properties:
     syntax:
       content: 'dblClickZoomInteraction?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: dragPanInteraction
     uid: azure-maps-control.atlas.UserInteractionOptions.dragPanInteraction
     package: azure-maps-control
@@ -52,8 +52,8 @@ properties:
     syntax:
       content: 'dragPanInteraction?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: dragRotateInteraction
     uid: azure-maps-control.atlas.UserInteractionOptions.dragRotateInteraction
     package: azure-maps-control
@@ -67,8 +67,8 @@ properties:
     syntax:
       content: 'dragRotateInteraction?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: interactive
     uid: azure-maps-control.atlas.UserInteractionOptions.interactive
     package: azure-maps-control
@@ -86,8 +86,8 @@ properties:
     syntax:
       content: 'interactive?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: keyboardInteraction
     uid: azure-maps-control.atlas.UserInteractionOptions.keyboardInteraction
     package: azure-maps-control
@@ -139,8 +139,8 @@ properties:
     syntax:
       content: 'keyboardInteraction?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: scrollZoomInteraction
     uid: azure-maps-control.atlas.UserInteractionOptions.scrollZoomInteraction
     package: azure-maps-control
@@ -154,8 +154,8 @@ properties:
     syntax:
       content: 'scrollZoomInteraction?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: touchInteraction
     uid: azure-maps-control.atlas.UserInteractionOptions.touchInteraction
     package: azure-maps-control
@@ -169,8 +169,25 @@ properties:
     syntax:
       content: 'touchInteraction?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
+  - name: touchRotate
+    uid: azure-maps-control.atlas.UserInteractionOptions.touchRotate
+    package: azure-maps-control
+    summary: >-
+      Whether touch rotation is enabled for touch devices. This option is not
+      applied if touchInteraction is disabled.
+
+      default `true`
+    fullName: touchRotate
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'touchRotate?: boolean'
+      return:
+        description: ''
+        type: boolean
   - name: wheelZoomRate
     uid: azure-maps-control.atlas.UserInteractionOptions.wheelZoomRate
     package: azure-maps-control
@@ -184,6 +201,6 @@ properties:
     syntax:
       content: 'wheelZoomRate?: number'
       return:
-        type: number
         description: ''
+        type: number
 extends: <xref uid="azure-maps-control.atlas.Options" />

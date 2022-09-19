@@ -7,6 +7,10 @@ fullName: MobilityGetCarShareInfoPreviewResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type MobilityGetCarShareInfoPreviewResponse = CarShareResponse & { _response:
-  Object }
+syntax: |
+  type MobilityGetCarShareInfoPreviewResponse = CarShareResponse & {
+    _response: HttpResponse & {
+      bodyAsText: string,
+      parsedBody: CarShareResponse,
+    },
+  }

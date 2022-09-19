@@ -33,7 +33,7 @@ constructors:
 
             If no protocol is specified, e.g. `"atlas.microsoft.com"`, then
             `https` will be assumed.
-properties:
+inheritedProperties:
   - name: mapsUrl
     uid: azure-maps-rest.atlas.service.RouteURL.mapsUrl
     package: azure-maps-rest
@@ -45,8 +45,36 @@ properties:
     syntax:
       content: 'mapsUrl: string'
       return:
-        type: string
         description: ''
+        type: string
+    inheritanceDescription: '<b>Inherited From</b> [MapsURL.mapsUrl](xref:MapsURL.mapsUrl)'
+inheritedMethods:
+  - name: 'newPipeline(Credential, INewPipelineOptions)'
+    uid: azure-maps-rest.atlas.service.RouteURL.newPipeline
+    package: azure-maps-rest
+    summary: >-
+      A static method used to create a new Pipeline object with Credential
+      provided.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function newPipeline(credential: Credential, pipelineOptions?:
+        INewPipelineOptions): Pipeline
+      parameters:
+        - id: credential
+          type: <xref uid="azure-maps-rest.atlas.service.Credential" />
+          description: >-
+            Such as SubscriptionKeyCredential, TokenCredential, and
+            MapControlCredential.
+        - id: pipelineOptions
+          type: <xref uid="azure-maps-rest.atlas.service.INewPipelineOptions" />
+          description: ''
+      return:
+        description: A new Pipeline object.
+        type: <xref uid="azure-maps-rest.atlas.service.Pipeline" />
+    inheritanceDescription: '<b>Inherited From</b> [MapsURL.newPipeline](xref:MapsURL.newPipeline)'
 methods:
   - name: >-
       calculateRouteDirections(Aborter, GeoJSON.Position[],
@@ -94,7 +122,8 @@ methods:
     syntax:
       content: >-
         function calculateRouteDirections(aborter: Aborter, coordinates:
-        GeoJSON.Position[], options?: CalculateRouteDirectionsOptions)
+        GeoJSON.Position[], options?: CalculateRouteDirectionsOptions):
+        Promise<CalculateRouteDirectionsResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -124,11 +153,11 @@ methods:
             />
           description: ''
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.CalculateRouteDirectionsResponse"
           />&gt;
-        description: ''
   - name: >-
       calculateRouteMatrix(Aborter, CalculateRouteMatrixRequestBody,
       CalculateRouteMatrixOptions)
@@ -193,7 +222,8 @@ methods:
     syntax:
       content: >-
         function calculateRouteMatrix(aborter: Aborter, body:
-        CalculateRouteMatrixRequestBody, options?: CalculateRouteMatrixOptions)
+        CalculateRouteMatrixRequestBody, options?: CalculateRouteMatrixOptions):
+        Promise<CalculateRouteMatrixResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -226,11 +256,11 @@ methods:
             uid="azure-maps-rest.atlas.service.CalculateRouteMatrixOptions" />
           description: ''
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.CalculateRouteMatrixResponse"
           />&gt;
-        description: ''
   - name: 'calculateRouteRange(Aborter, GeoJSON.Position, CalculateRouteRangeOptions)'
     uid: azure-maps-rest.atlas.service.RouteURL.calculateRouteRange
     package: azure-maps-rest
@@ -263,7 +293,8 @@ methods:
     syntax:
       content: >-
         function calculateRouteRange(aborter: Aborter, center: GeoJSON.Position,
-        options?: CalculateRouteRangeOptions)
+        options?: CalculateRouteRangeOptions):
+        Promise<CalculateRouteRangeResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -282,33 +313,8 @@ methods:
             />
           description: ''
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.CalculateRouteRangeResponse" />&gt;
-        description: ''
-  - name: 'newPipeline(Credential, INewPipelineOptions)'
-    uid: azure-maps-rest.atlas.service.RouteURL.newPipeline
-    package: azure-maps-rest
-    summary: >-
-      A static method used to create a new Pipeline object with Credential
-      provided.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        static function newPipeline(credential: Credential, pipelineOptions?:
-        INewPipelineOptions)
-      parameters:
-        - id: credential
-          type: <xref uid="azure-maps-rest.atlas.service.Credential" />
-          description: >-
-            Such as SubscriptionKeyCredential, TokenCredential, and
-            MapControlCredential.
-        - id: pipelineOptions
-          type: <xref uid="azure-maps-rest.atlas.service.INewPipelineOptions" />
-          description: ''
-      return:
-        type: <xref uid="azure-maps-rest.atlas.service.Pipeline" />
-        description: A new Pipeline object.
 extends: <xref uid="azure-maps-rest.atlas.service.MapsURL" />

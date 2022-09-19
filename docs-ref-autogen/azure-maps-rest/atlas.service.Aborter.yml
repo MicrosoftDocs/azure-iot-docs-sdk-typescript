@@ -39,8 +39,8 @@ properties:
     syntax:
       content: 'aborted: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: none
     uid: azure-maps-rest.atlas.service.Aborter.none
     package: azure-maps-rest
@@ -52,8 +52,8 @@ properties:
     syntax:
       content: 'static none: Aborter'
       return:
-        type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
         description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
   - name: onabort
     uid: azure-maps-rest.atlas.service.Aborter.onabort
     package: azure-maps-rest
@@ -65,8 +65,8 @@ properties:
     syntax:
       content: 'onabort?: (ev?: Event) => any'
       return:
-        type: '(ev?: Event) =&gt; any'
         description: ''
+        type: '(ev?: Event) =&gt; any'
 methods:
   - name: abort()
     uid: azure-maps-rest.atlas.service.Aborter.abort
@@ -117,14 +117,16 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getValue(key: string)'
+      content: >-
+        function getValue(key: string): string | number | boolean | null |
+        undefined
       parameters:
         - id: key
           type: string
           description: ''
       return:
-        type: string | number | boolean | null | undefined
         description: ''
+        type: string | number | boolean | null | undefined
   - name: 'removeEventListener("abort", (this: AbortSignalLike, ev: any) => any)'
     uid: azure-maps-rest.atlas.service.Aborter.removeEventListener
     package: azure-maps-rest
@@ -153,14 +155,14 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'static function timeout(timeout: number)'
+      content: 'static function timeout(timeout: number): Aborter'
       parameters:
         - id: timeout
           type: number
           description: ''
       return:
-        type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
         description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
   - name: withTimeout(number)
     uid: azure-maps-rest.atlas.service.Aborter.withTimeout
     package: azure-maps-rest
@@ -182,14 +184,14 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function withTimeout(timeout: number)'
+      content: 'function withTimeout(timeout: number): Aborter'
       parameters:
         - id: timeout
           type: number
           description: ''
       return:
-        type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
         description: The new Aborter instance created.
+        type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
   - name: 'withValue(string, string | number | boolean | null)'
     uid: azure-maps-rest.atlas.service.Aborter.withValue
     package: azure-maps-rest
@@ -216,7 +218,7 @@ methods:
     syntax:
       content: >-
         function withValue(key: string, value?: string | number | boolean |
-        null)
+        null): Aborter
       parameters:
         - id: key
           type: string
@@ -225,5 +227,5 @@ methods:
           type: string | number | boolean | null
           description: ''
       return:
-        type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
         description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Aborter" />

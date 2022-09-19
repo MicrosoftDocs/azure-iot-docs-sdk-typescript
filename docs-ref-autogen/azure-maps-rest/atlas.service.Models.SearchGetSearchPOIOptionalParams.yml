@@ -9,20 +9,6 @@ isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: abortSignal
-    uid: >-
-      azure-maps-rest.atlas.service.Models.SearchGetSearchPOIOptionalParams.abortSignal
-    package: azure-maps-rest
-    summary: The signal which can be used to abort requests.
-    fullName: abortSignal
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'abortSignal?: AbortSignalLike'
-      return:
-        type: AbortSignalLike
-        description: ''
   - name: brandSet
     uid: >-
       azure-maps-rest.atlas.service.Models.SearchGetSearchPOIOptionalParams.brandSet
@@ -56,8 +42,8 @@ properties:
     syntax:
       content: 'brandSet?: string[]'
       return:
-        type: 'string[]'
         description: ''
+        type: 'string[]'
   - name: btmRight
     uid: >-
       azure-maps-rest.atlas.service.Models.SearchGetSearchPOIOptionalParams.btmRight
@@ -70,8 +56,8 @@ properties:
     syntax:
       content: 'btmRight?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: connectorSet
     uid: >-
       azure-maps-rest.atlas.service.Models.SearchGetSearchPOIOptionalParams.connectorSet
@@ -192,8 +178,8 @@ properties:
     syntax:
       content: 'connectorSet?: ConnectorSet[]'
       return:
-        type: '<xref uid="azure-maps-rest.atlas.service.Models.ConnectorSet" />[]'
         description: ''
+        type: '<xref uid="azure-maps-rest.atlas.service.Models.ConnectorSet" />[]'
   - name: countrySet
     uid: >-
       azure-maps-rest.atlas.service.Models.SearchGetSearchPOIOptionalParams.countrySet
@@ -210,24 +196,8 @@ properties:
     syntax:
       content: 'countrySet?: string[]'
       return:
+        description: ''
         type: 'string[]'
-        description: ''
-  - name: customHeaders
-    uid: >-
-      azure-maps-rest.atlas.service.Models.SearchGetSearchPOIOptionalParams.customHeaders
-    package: azure-maps-rest
-    summary: |-
-      {object} [customHeaders] User defined custom request headers that
-      will be applied before the request is sent.
-    fullName: customHeaders
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'customHeaders?: [key: string]: string'
-      return:
-        type: '[key: string]\: string'
-        description: ''
   - name: extendedPostalCodesFor
     uid: >-
       azure-maps-rest.atlas.service.Models.SearchGetSearchPOIOptionalParams.extendedPostalCodesFor
@@ -267,8 +237,8 @@ properties:
     syntax:
       content: 'extendedPostalCodesFor?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: language
     uid: >-
       azure-maps-rest.atlas.service.Models.SearchGetSearchPOIOptionalParams.language
@@ -293,8 +263,8 @@ properties:
     syntax:
       content: 'language?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: lat
     uid: azure-maps-rest.atlas.service.Models.SearchGetSearchPOIOptionalParams.lat
     package: azure-maps-rest
@@ -306,8 +276,8 @@ properties:
     syntax:
       content: 'lat?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: limit
     uid: >-
       azure-maps-rest.atlas.service.Models.SearchGetSearchPOIOptionalParams.limit
@@ -322,8 +292,8 @@ properties:
     syntax:
       content: 'limit?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: lon
     uid: azure-maps-rest.atlas.service.Models.SearchGetSearchPOIOptionalParams.lon
     package: azure-maps-rest
@@ -335,8 +305,8 @@ properties:
     syntax:
       content: 'lon?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: ofs
     uid: azure-maps-rest.atlas.service.Models.SearchGetSearchPOIOptionalParams.ofs
     package: azure-maps-rest
@@ -352,36 +322,8 @@ properties:
     syntax:
       content: 'ofs?: number'
       return:
+        description: ''
         type: number
-        description: ''
-  - name: onDownloadProgress
-    uid: >-
-      azure-maps-rest.atlas.service.Models.SearchGetSearchPOIOptionalParams.onDownloadProgress
-    package: azure-maps-rest
-    summary: Callback which fires upon download progress.
-    fullName: onDownloadProgress
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'onDownloadProgress?: (progress: TransferProgressEvent) => void'
-      return:
-        type: '(progress: TransferProgressEvent) =&gt; void'
-        description: ''
-  - name: onUploadProgress
-    uid: >-
-      azure-maps-rest.atlas.service.Models.SearchGetSearchPOIOptionalParams.onUploadProgress
-    package: azure-maps-rest
-    summary: Callback which fires upon upload progress.
-    fullName: onUploadProgress
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'onUploadProgress?: (progress: TransferProgressEvent) => void'
-      return:
-        type: '(progress: TransferProgressEvent) =&gt; void'
-        description: ''
   - name: openingHours
     uid: >-
       azure-maps-rest.atlas.service.Models.SearchGetSearchPOIOptionalParams.openingHours
@@ -398,8 +340,8 @@ properties:
     syntax:
       content: 'openingHours?: OpeningHours'
       return:
-        type: <xref uid="azure-maps-rest.atlas.service.Models.OpeningHours" />
         description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.OpeningHours" />
   - name: radius
     uid: >-
       azure-maps-rest.atlas.service.Models.SearchGetSearchPOIOptionalParams.radius
@@ -414,24 +356,8 @@ properties:
     syntax:
       content: 'radius?: number'
       return:
-        type: number
         description: ''
-  - name: timeout
-    uid: >-
-      azure-maps-rest.atlas.service.Models.SearchGetSearchPOIOptionalParams.timeout
-    package: azure-maps-rest
-    summary: >-
-      The number of milliseconds a request can take before automatically being
-      terminated.
-    fullName: timeout
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'timeout?: number'
-      return:
         type: number
-        description: ''
   - name: topLeft
     uid: >-
       azure-maps-rest.atlas.service.Models.SearchGetSearchPOIOptionalParams.topLeft
@@ -444,8 +370,8 @@ properties:
     syntax:
       content: 'topLeft?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: typeahead
     uid: >-
       azure-maps-rest.atlas.service.Models.SearchGetSearchPOIOptionalParams.typeahead
@@ -462,8 +388,8 @@ properties:
     syntax:
       content: 'typeahead?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: view
     uid: azure-maps-rest.atlas.service.Models.SearchGetSearchPOIOptionalParams.view
     package: azure-maps-rest
@@ -509,6 +435,86 @@ properties:
     syntax:
       content: 'view?: string'
       return:
-        type: string
         description: ''
+        type: string
+inheritedProperties:
+  - name: abortSignal
+    uid: >-
+      azure-maps-rest.atlas.service.Models.SearchGetSearchPOIOptionalParams.abortSignal
+    package: azure-maps-rest
+    summary: The signal which can be used to abort requests.
+    fullName: abortSignal
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'abortSignal?: AbortSignalLike'
+      return:
+        description: ''
+        type: AbortSignalLike
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.abortSignal
+  - name: customHeaders
+    uid: >-
+      azure-maps-rest.atlas.service.Models.SearchGetSearchPOIOptionalParams.customHeaders
+    package: azure-maps-rest
+    summary: |-
+      {object} [customHeaders] User defined custom request headers that
+      will be applied before the request is sent.
+    fullName: customHeaders
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'customHeaders?: [key: string]: string'
+      return:
+        description: ''
+        type: '[key: string]\: string'
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.customHeaders
+  - name: onDownloadProgress
+    uid: >-
+      azure-maps-rest.atlas.service.Models.SearchGetSearchPOIOptionalParams.onDownloadProgress
+    package: azure-maps-rest
+    summary: Callback which fires upon download progress.
+    fullName: onDownloadProgress
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'onDownloadProgress?: (progress: TransferProgressEvent) => void'
+      return:
+        description: ''
+        type: '(progress: TransferProgressEvent) =&gt; void'
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.onDownloadProgress
+  - name: onUploadProgress
+    uid: >-
+      azure-maps-rest.atlas.service.Models.SearchGetSearchPOIOptionalParams.onUploadProgress
+    package: azure-maps-rest
+    summary: Callback which fires upon upload progress.
+    fullName: onUploadProgress
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'onUploadProgress?: (progress: TransferProgressEvent) => void'
+      return:
+        description: ''
+        type: '(progress: TransferProgressEvent) =&gt; void'
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.onUploadProgress
+  - name: timeout
+    uid: >-
+      azure-maps-rest.atlas.service.Models.SearchGetSearchPOIOptionalParams.timeout
+    package: azure-maps-rest
+    summary: >-
+      The number of milliseconds a request can take before automatically being
+      terminated.
+    fullName: timeout
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'timeout?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.timeout
 extends: RequestOptionsBase

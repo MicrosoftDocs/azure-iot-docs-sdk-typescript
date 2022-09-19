@@ -7,6 +7,10 @@ fullName: SearchGetSearchFuzzyResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type SearchGetSearchFuzzyResponse = SearchFuzzyResponse & { _response: Object
+syntax: |
+  type SearchGetSearchFuzzyResponse = SearchFuzzyResponse & {
+    _response: HttpResponse & {
+      bodyAsText: string,
+      parsedBody: SearchFuzzyResponse,
+    },
   }

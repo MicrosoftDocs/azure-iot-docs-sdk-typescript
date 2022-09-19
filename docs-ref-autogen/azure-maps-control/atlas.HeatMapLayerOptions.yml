@@ -27,23 +27,8 @@ properties:
     syntax:
       content: 'color?: Expression'
       return:
-        type: <xref uid="azure-maps-control.atlas.Expression" />
         description: ''
-  - name: filter
-    uid: azure-maps-control.atlas.HeatMapLayerOptions.filter
-    package: azure-maps-control
-    summary: |-
-      An expression specifying conditions on source features.
-      Only features that match the filter are displayed.
-    fullName: filter
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'filter?: Expression'
-      return:
         type: <xref uid="azure-maps-control.atlas.Expression" />
-        description: ''
   - name: intensity
     uid: azure-maps-control.atlas.HeatMapLayerOptions.intensity
     package: azure-maps-control
@@ -61,46 +46,8 @@ properties:
     syntax:
       content: 'intensity?: number | Expression'
       return:
+        description: ''
         type: number | <xref uid="azure-maps-control.atlas.Expression" />
-        description: ''
-  - name: maxZoom
-    uid: azure-maps-control.atlas.HeatMapLayerOptions.maxZoom
-    package: azure-maps-control
-    summary: >-
-      An integer specifying the maximum zoom level to render the layer at.
-
-      This value is exclusive, i.e. the layer will be visible at `maxZoom > zoom
-      >= minZoom`.
-
-      Default `24`.
-    fullName: maxZoom
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'maxZoom?: number'
-      return:
-        type: number
-        description: ''
-  - name: minZoom
-    uid: azure-maps-control.atlas.HeatMapLayerOptions.minZoom
-    package: azure-maps-control
-    summary: >-
-      An integer specifying the minimum zoom level to render the layer at.
-
-      This value is inclusive, i.e. the layer will be visible at `maxZoom > zoom
-      >= minZoom`.
-
-      Default `0`.
-    fullName: minZoom
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'minZoom?: number'
-      return:
-        type: number
-        description: ''
   - name: opacity
     uid: azure-maps-control.atlas.HeatMapLayerOptions.opacity
     package: azure-maps-control
@@ -116,8 +63,8 @@ properties:
     syntax:
       content: 'opacity?: number | Expression'
       return:
-        type: number | <xref uid="azure-maps-control.atlas.Expression" />
         description: ''
+        type: number | <xref uid="azure-maps-control.atlas.Expression" />
   - name: radius
     uid: azure-maps-control.atlas.HeatMapLayerOptions.radius
     package: azure-maps-control
@@ -132,8 +79,8 @@ properties:
     syntax:
       content: 'radius?: number | Expression'
       return:
-        type: number | <xref uid="azure-maps-control.atlas.Expression" />
         description: ''
+        type: number | <xref uid="azure-maps-control.atlas.Expression" />
   - name: source
     uid: azure-maps-control.atlas.HeatMapLayerOptions.source
     package: azure-maps-control
@@ -145,8 +92,8 @@ properties:
     syntax:
       content: 'source?: string | Source'
       return:
-        type: string | <xref uid="azure-maps-control.atlas.source.Source" />
         description: ''
+        type: string | <xref uid="azure-maps-control.atlas.source.Source" />
   - name: sourceLayer
     uid: azure-maps-control.atlas.HeatMapLayerOptions.sourceLayer
     package: azure-maps-control
@@ -164,23 +111,8 @@ properties:
     syntax:
       content: 'sourceLayer?: string'
       return:
+        description: ''
         type: string
-        description: ''
-  - name: visible
-    uid: azure-maps-control.atlas.HeatMapLayerOptions.visible
-    package: azure-maps-control
-    summary: |-
-      Specifies if the layer is visible or not.
-      Default `true`.
-    fullName: visible
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'visible?: boolean'
-      return:
-        type: boolean
-        description: ''
   - name: weight
     uid: azure-maps-control.atlas.HeatMapLayerOptions.weight
     package: azure-maps-control
@@ -201,6 +133,79 @@ properties:
     syntax:
       content: 'weight?: number | Expression'
       return:
-        type: number | <xref uid="azure-maps-control.atlas.Expression" />
         description: ''
+        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+inheritedProperties:
+  - name: filter
+    uid: azure-maps-control.atlas.HeatMapLayerOptions.filter
+    package: azure-maps-control
+    summary: |-
+      An expression specifying conditions on source features.
+      Only features that match the filter are displayed.
+    fullName: filter
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'filter?: Expression'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.atlas.Expression" />
+    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.filter](xref:LayerOptions.filter)'
+  - name: maxZoom
+    uid: azure-maps-control.atlas.HeatMapLayerOptions.maxZoom
+    package: azure-maps-control
+    summary: >-
+      An integer specifying the maximum zoom level to render the layer at.
+
+      This value is exclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `24`.
+    fullName: maxZoom
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxZoom?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.maxZoom](xref:LayerOptions.maxZoom)'
+  - name: minZoom
+    uid: azure-maps-control.atlas.HeatMapLayerOptions.minZoom
+    package: azure-maps-control
+    summary: >-
+      An integer specifying the minimum zoom level to render the layer at.
+
+      This value is inclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `0`.
+    fullName: minZoom
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'minZoom?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.minZoom](xref:LayerOptions.minZoom)'
+  - name: visible
+    uid: azure-maps-control.atlas.HeatMapLayerOptions.visible
+    package: azure-maps-control
+    summary: |-
+      Specifies if the layer is visible or not.
+      Default `true`.
+    fullName: visible
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'visible?: boolean'
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.visible](xref:LayerOptions.visible)'
 extends: <xref uid="azure-maps-control.atlas.LayerOptions" />

@@ -27,8 +27,8 @@ properties:
     syntax:
       content: 'authOptions?: AuthenticationOptions'
       return:
-        type: <xref uid="azure-maps-control.atlas.AuthenticationOptions" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.AuthenticationOptions" />
   - name: disableTelemetry
     uid: azure-maps-control.atlas.ServiceOptions.disableTelemetry
     package: azure-maps-control
@@ -43,8 +43,8 @@ properties:
     syntax:
       content: 'disableTelemetry?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: domain
     uid: azure-maps-control.atlas.ServiceOptions.domain
     package: azure-maps-control
@@ -59,8 +59,8 @@ properties:
     syntax:
       content: 'domain?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: enableAccessibility
     uid: azure-maps-control.atlas.ServiceOptions.enableAccessibility
     package: azure-maps-control
@@ -74,8 +74,73 @@ properties:
     syntax:
       content: 'enableAccessibility?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
+  - name: enableAccessibilityLocationFallback
+    uid: >-
+      azure-maps-control.atlas.ServiceOptions.enableAccessibilityLocationFallback
+    package: azure-maps-control
+    summary: >-
+      Enable fallback to geocoder for accessibility location, if failed to
+      extract location from vector data.
+
+      default: true
+    fullName: enableAccessibilityLocationFallback
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'enableAccessibilityLocationFallback?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: fadeDuration
+    uid: azure-maps-control.atlas.ServiceOptions.fadeDuration
+    package: azure-maps-control
+    summary: >-
+      Controls the duration of the fade-in/fade-out animation for label
+      collisions, in milliseconds.
+
+      This setting affects all symbol layers.
+
+      This setting does not affect the duration of runtime styling transitions
+      or raster tile cross-fading.
+    fullName: fadeDuration
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'fadeDuration?: number'
+      return:
+        description: ''
+        type: number
+  - name: localIdeographFontFamily
+    uid: azure-maps-control.atlas.ServiceOptions.localIdeographFontFamily
+    package: azure-maps-control
+    summary: >-
+      Defines a CSS font-family for locally overriding generation of glyphs in
+      the
+
+      'CJK Unified Ideographs', 'Hiragana', 'Katakana' and 'Hangul Syllables'
+      ranges.
+
+      In these ranges, font settings from the map's style will be ignored,
+
+      except for font-weight keywords (light/regular/medium/bold). Set to false,
+
+      to enable font settings from the map's style for these glyph ranges.
+
+      The purpose of this option is to avoid bandwidth-intensive glyph server
+      requests.
+    fullName: localIdeographFontFamily
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'localIdeographFontFamily?: string'
+      return:
+        description: ''
+        type: string
   - name: maxParallelImageRequests
     uid: azure-maps-control.atlas.ServiceOptions.maxParallelImageRequests
     package: azure-maps-control
@@ -91,8 +156,8 @@ properties:
     syntax:
       content: 'maxParallelImageRequests?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: refreshExpiredTiles
     uid: azure-maps-control.atlas.ServiceOptions.refreshExpiredTiles
     package: azure-maps-control
@@ -112,8 +177,8 @@ properties:
     syntax:
       content: 'refreshExpiredTiles?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: sessionId
     uid: azure-maps-control.atlas.ServiceOptions.sessionId
     package: azure-maps-control
@@ -127,8 +192,25 @@ properties:
     syntax:
       content: 'sessionId?: string'
       return:
-        type: string
         description: ''
+        type: string
+  - name: styleSet
+    uid: azure-maps-control.atlas.ServiceOptions.styleSet
+    package: azure-maps-control
+    summary: >-
+      The style set of the map. Determines which styles are available to be
+      picked
+
+      and what do they consist of (style names, thumbnails, URLs, etc).
+    fullName: styleSet
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'styleSet?: StyleSet'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.atlas.StyleSet" />
   - name: subscriptionKey
     uid: azure-maps-control.atlas.ServiceOptions.subscriptionKey
     package: azure-maps-control
@@ -143,8 +225,8 @@ properties:
     syntax:
       content: 'subscriptionKey?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: transformRequest
     uid: azure-maps-control.atlas.ServiceOptions.transformRequest
     package: azure-maps-control
@@ -160,8 +242,8 @@ properties:
         transformRequest?: (url: string, resourceType: ResourceType) =>
         RequestParameters
       return:
-        type: '(url: string, resourceType: ResourceType) =&gt; RequestParameters'
         description: ''
+        type: '(url: string, resourceType: ResourceType) =&gt; RequestParameters'
   - name: workerCount
     uid: azure-maps-control.atlas.ServiceOptions.workerCount
     package: azure-maps-control
@@ -175,6 +257,6 @@ properties:
     syntax:
       content: 'workerCount?: number'
       return:
-        type: number
         description: ''
+        type: number
 extends: <xref uid="azure-maps-control.atlas.Options" />

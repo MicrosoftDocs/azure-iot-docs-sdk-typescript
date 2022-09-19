@@ -23,75 +23,8 @@ properties:
     syntax:
       content: 'bounds?: BoundingBox'
       return:
+        description: ''
         type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
-        description: ''
-  - name: contrast
-    uid: azure-maps-control.atlas.TileLayerOptions.contrast
-    package: azure-maps-control
-    summary: >-
-      A number between -1 and 1 that increases or decreases the contrast of the
-      overlay.
-
-      Default `0`.
-    fullName: contrast
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'contrast?: number'
-      return:
-        type: number
-        description: ''
-  - name: fadeDuration
-    uid: azure-maps-control.atlas.TileLayerOptions.fadeDuration
-    package: azure-maps-control
-    summary: >-
-      The duration in milliseconds of a fade transition when a new tile is
-      added.
-
-      Must be greater or equal to 0.
-
-      Default `300`.
-    fullName: fadeDuration
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'fadeDuration?: number'
-      return:
-        type: number
-        description: ''
-  - name: filter
-    uid: azure-maps-control.atlas.TileLayerOptions.filter
-    package: azure-maps-control
-    summary: |-
-      An expression specifying conditions on source features.
-      Only features that match the filter are displayed.
-    fullName: filter
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'filter?: Expression'
-      return:
-        type: <xref uid="azure-maps-control.atlas.Expression" />
-        description: ''
-  - name: hueRotation
-    uid: azure-maps-control.atlas.TileLayerOptions.hueRotation
-    package: azure-maps-control
-    summary: |-
-      Rotates hues around the color wheel.
-      A number in degrees.
-      Default `0`.
-    fullName: hueRotation
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'hueRotation?: number'
-      return:
-        type: number
-        description: ''
   - name: isTMS
     uid: azure-maps-control.atlas.TileLayerOptions.isTMS
     package: azure-maps-control
@@ -109,25 +42,8 @@ properties:
     syntax:
       content: 'isTMS?: boolean'
       return:
+        description: ''
         type: boolean
-        description: ''
-  - name: maxBrightness
-    uid: azure-maps-control.atlas.TileLayerOptions.maxBrightness
-    package: azure-maps-control
-    summary: >-
-      A number between 0 and 1 that increases or decreases the maximum
-      brightness of the overlay.
-
-      Default `1`.
-    fullName: maxBrightness
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'maxBrightness?: number'
-      return:
-        type: number
-        description: ''
   - name: maxSourceZoom
     uid: azure-maps-control.atlas.TileLayerOptions.maxSourceZoom
     package: azure-maps-control
@@ -143,44 +59,8 @@ properties:
     syntax:
       content: 'maxSourceZoom?: number'
       return:
-        type: number
         description: ''
-  - name: maxZoom
-    uid: azure-maps-control.atlas.TileLayerOptions.maxZoom
-    package: azure-maps-control
-    summary: >-
-      An integer specifying the maximum zoom level to render the layer at.
-
-      This value is exclusive, i.e. the layer will be visible at `maxZoom > zoom
-      >= minZoom`.
-
-      Default `24`.
-    fullName: maxZoom
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'maxZoom?: number'
-      return:
         type: number
-        description: ''
-  - name: minBrightness
-    uid: azure-maps-control.atlas.TileLayerOptions.minBrightness
-    package: azure-maps-control
-    summary: >-
-      A number between 0 and 1 that increases or decreases the minimum
-      brightness of the overlay.
-
-      Default `0`.
-    fullName: minBrightness
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'minBrightness?: number'
-      return:
-        type: number
-        description: ''
   - name: minSourceZoom
     uid: azure-maps-control.atlas.TileLayerOptions.minSourceZoom
     package: azure-maps-control
@@ -196,61 +76,8 @@ properties:
     syntax:
       content: 'minSourceZoom?: number'
       return:
-        type: number
         description: ''
-  - name: minZoom
-    uid: azure-maps-control.atlas.TileLayerOptions.minZoom
-    package: azure-maps-control
-    summary: >-
-      An integer specifying the minimum zoom level to render the layer at.
-
-      This value is inclusive, i.e. the layer will be visible at `maxZoom > zoom
-      >= minZoom`.
-
-      Default `0`.
-    fullName: minZoom
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'minZoom?: number'
-      return:
         type: number
-        description: ''
-  - name: opacity
-    uid: azure-maps-control.atlas.TileLayerOptions.opacity
-    package: azure-maps-control
-    summary: >-
-      A number between 0 and 1 that indicates the opacity at which the overlay
-      will be drawn.
-
-      Default `1`.
-    fullName: opacity
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'opacity?: number'
-      return:
-        type: number
-        description: ''
-  - name: saturation
-    uid: azure-maps-control.atlas.TileLayerOptions.saturation
-    package: azure-maps-control
-    summary: >-
-      A number between -1 and 1 that increases or decreases the saturation of
-      the overlay.
-
-      Default `0`.
-    fullName: saturation
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'saturation?: number'
-      return:
-        type: number
-        description: ''
   - name: subdomains
     uid: azure-maps-control.atlas.TileLayerOptions.subdomains
     package: azure-maps-control
@@ -262,8 +89,8 @@ properties:
     syntax:
       content: 'subdomains?: string[]'
       return:
-        type: 'string[]'
         description: ''
+        type: 'string[]'
   - name: tileSize
     uid: azure-maps-control.atlas.TileLayerOptions.tileSize
     package: azure-maps-control
@@ -281,8 +108,8 @@ properties:
     syntax:
       content: 'tileSize?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: tileUrl
     uid: azure-maps-control.atlas.TileLayerOptions.tileUrl
     package: azure-maps-control
@@ -313,8 +140,206 @@ properties:
     syntax:
       content: 'tileUrl?: string'
       return:
-        type: string
         description: ''
+        type: string
+inheritedProperties:
+  - name: contrast
+    uid: azure-maps-control.atlas.TileLayerOptions.contrast
+    package: azure-maps-control
+    summary: >-
+      A number between -1 and 1 that increases or decreases the contrast of the
+      overlay.
+
+      Default `0`.
+    fullName: contrast
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'contrast?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MediaLayerOptions.contrast](xref:MediaLayerOptions.contrast)
+  - name: fadeDuration
+    uid: azure-maps-control.atlas.TileLayerOptions.fadeDuration
+    package: azure-maps-control
+    summary: >-
+      The duration in milliseconds of a fade transition when a new tile is
+      added.
+
+      Must be greater or equal to 0.
+
+      Default `300`.
+    fullName: fadeDuration
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'fadeDuration?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MediaLayerOptions.fadeDuration](xref:MediaLayerOptions.fadeDuration)
+  - name: filter
+    uid: azure-maps-control.atlas.TileLayerOptions.filter
+    package: azure-maps-control
+    summary: |-
+      An expression specifying conditions on source features.
+      Only features that match the filter are displayed.
+    fullName: filter
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'filter?: Expression'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.atlas.Expression" />
+    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.filter](xref:LayerOptions.filter)'
+  - name: hueRotation
+    uid: azure-maps-control.atlas.TileLayerOptions.hueRotation
+    package: azure-maps-control
+    summary: |-
+      Rotates hues around the color wheel.
+      A number in degrees.
+      Default `0`.
+    fullName: hueRotation
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'hueRotation?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MediaLayerOptions.hueRotation](xref:MediaLayerOptions.hueRotation)
+  - name: maxBrightness
+    uid: azure-maps-control.atlas.TileLayerOptions.maxBrightness
+    package: azure-maps-control
+    summary: >-
+      A number between 0 and 1 that increases or decreases the maximum
+      brightness of the overlay.
+
+      Default `1`.
+    fullName: maxBrightness
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxBrightness?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MediaLayerOptions.maxBrightness](xref:MediaLayerOptions.maxBrightness)
+  - name: maxZoom
+    uid: azure-maps-control.atlas.TileLayerOptions.maxZoom
+    package: azure-maps-control
+    summary: >-
+      An integer specifying the maximum zoom level to render the layer at.
+
+      This value is exclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `24`.
+    fullName: maxZoom
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxZoom?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.maxZoom](xref:LayerOptions.maxZoom)'
+  - name: minBrightness
+    uid: azure-maps-control.atlas.TileLayerOptions.minBrightness
+    package: azure-maps-control
+    summary: >-
+      A number between 0 and 1 that increases or decreases the minimum
+      brightness of the overlay.
+
+      Default `0`.
+    fullName: minBrightness
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'minBrightness?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MediaLayerOptions.minBrightness](xref:MediaLayerOptions.minBrightness)
+  - name: minZoom
+    uid: azure-maps-control.atlas.TileLayerOptions.minZoom
+    package: azure-maps-control
+    summary: >-
+      An integer specifying the minimum zoom level to render the layer at.
+
+      This value is inclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `0`.
+    fullName: minZoom
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'minZoom?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.minZoom](xref:LayerOptions.minZoom)'
+  - name: opacity
+    uid: azure-maps-control.atlas.TileLayerOptions.opacity
+    package: azure-maps-control
+    summary: >-
+      A number between 0 and 1 that indicates the opacity at which the overlay
+      will be drawn.
+
+      Default `1`.
+    fullName: opacity
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'opacity?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MediaLayerOptions.opacity](xref:MediaLayerOptions.opacity)
+  - name: saturation
+    uid: azure-maps-control.atlas.TileLayerOptions.saturation
+    package: azure-maps-control
+    summary: >-
+      A number between -1 and 1 that increases or decreases the saturation of
+      the overlay.
+
+      Default `0`.
+    fullName: saturation
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'saturation?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MediaLayerOptions.saturation](xref:MediaLayerOptions.saturation)
   - name: visible
     uid: azure-maps-control.atlas.TileLayerOptions.visible
     package: azure-maps-control
@@ -328,6 +353,7 @@ properties:
     syntax:
       content: 'visible?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
+    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.visible](xref:LayerOptions.visible)'
 extends: <xref uid="azure-maps-control.atlas.MediaLayerOptions" />

@@ -24,6 +24,18 @@ constructors:
           description: |
             The options for the HtmlMarker.
 methods:
+  - name: getElement()
+    uid: azure-maps-control.atlas.HtmlMarker.getElement
+    package: azure-maps-control
+    summary: Returns the underlying `Marker`'s HTML element.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getElement(): HTMLElement'
+      return:
+        description: ''
+        type: HTMLElement
   - name: getOptions()
     uid: azure-maps-control.atlas.HtmlMarker.getOptions
     package: azure-maps-control
@@ -32,10 +44,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getOptions()
+      content: 'function getOptions(): HtmlMarkerOptions'
       return:
-        type: <xref uid="azure-maps-control.atlas.HtmlMarkerOptions" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.HtmlMarkerOptions" />
   - name: setOptions(HtmlMarkerOptions)
     uid: azure-maps-control.atlas.HtmlMarker.setOptions
     package: azure-maps-control

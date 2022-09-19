@@ -78,10 +78,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getBounds()
+      content: 'function getBounds(): BoundingBox'
       return:
-        type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
   - name: getCircleCoordinates()
     uid: azure-maps-control.atlas.Shape.getCircleCoordinates
     package: azure-maps-control
@@ -92,10 +92,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getCircleCoordinates()
+      content: 'function getCircleCoordinates(): Position[]'
       return:
-        type: '<xref uid="azure-maps-control.atlas.data.Position" />[]'
         description: ''
+        type: '<xref uid="azure-maps-control.atlas.data.Position" />[]'
   - name: getCoordinates()
     uid: azure-maps-control.atlas.Shape.getCoordinates
     package: azure-maps-control
@@ -104,14 +104,16 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getCoordinates()
+      content: >-
+        function getCoordinates(): Position | Position[] | Position[][] |
+        Position[][][]
       return:
+        description: ''
         type: >-
           <xref uid="azure-maps-control.atlas.data.Position" /> | <xref
           uid="azure-maps-control.atlas.data.Position" />[] | <xref
           uid="azure-maps-control.atlas.data.Position" />[][] | <xref
           uid="azure-maps-control.atlas.data.Position" />[][][]
-        description: ''
   - name: getId()
     uid: azure-maps-control.atlas.Shape.getId
     package: azure-maps-control
@@ -120,10 +122,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getId()
+      content: 'function getId(): string | number'
       return:
-        type: string | number
         description: ''
+        type: string | number
   - name: getProperties()
     uid: azure-maps-control.atlas.Shape.getProperties
     package: azure-maps-control
@@ -132,10 +134,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getProperties()
+      content: 'function getProperties(): any'
       return:
-        type: any
         description: ''
+        type: any
   - name: getType()
     uid: azure-maps-control.atlas.Shape.getType
     package: azure-maps-control
@@ -144,10 +146,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getType()
+      content: 'function getType(): string'
       return:
-        type: string
         description: ''
+        type: string
   - name: isCircle()
     uid: azure-maps-control.atlas.Shape.isCircle
     package: azure-maps-control
@@ -161,10 +163,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function isCircle()
+      content: 'function isCircle(): boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: isRectangle()
     uid: azure-maps-control.atlas.Shape.isRectangle
     package: azure-maps-control
@@ -178,10 +180,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function isRectangle()
+      content: 'function isRectangle(): boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: 'setCoordinates(Position | Position[] | Position[][] | Position[][][])'
     uid: azure-maps-control.atlas.Shape.setCoordinates
     package: azure-maps-control
@@ -227,12 +229,12 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function toJson()
+      content: 'function toJson(): Feature<atlas.data.Geometry, any>'
       return:
+        description: ''
         type: >-
           <xref uid="azure-maps-control.atlas.data.Feature" />&lt;<xref
           uid="azure-maps-control.atlas.data.Geometry" />, any&gt;
-        description: ''
 extends: >-
   <xref uid="azure-maps-control.atlas.internal.EventEmitter" />&lt;<xref
   uid="azure-maps-control.atlas.ShapeEvents" />&gt;

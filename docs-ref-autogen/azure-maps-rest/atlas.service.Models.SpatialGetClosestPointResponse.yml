@@ -7,6 +7,10 @@ fullName: SpatialGetClosestPointResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type SpatialGetClosestPointResponse = GetClosestPointResponse & { _response:
-  Object }
+syntax: |
+  type SpatialGetClosestPointResponse = GetClosestPointResponse & {
+    _response: HttpResponse & {
+      bodyAsText: string,
+      parsedBody: GetClosestPointResponse,
+    },
+  }

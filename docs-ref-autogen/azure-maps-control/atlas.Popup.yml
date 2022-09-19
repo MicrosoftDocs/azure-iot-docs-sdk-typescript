@@ -35,8 +35,8 @@ properties:
     syntax:
       content: 'attach: (map: Map) => void'
       return:
-        type: '(map: Map) =&gt; void'
         description: ''
+        type: '(map: Map) =&gt; void'
   - name: close
     uid: azure-maps-control.atlas.Popup.close
     package: azure-maps-control
@@ -50,8 +50,8 @@ properties:
     syntax:
       content: 'close: () => void'
       return:
-        type: () =&gt; void
         description: ''
+        type: () =&gt; void
   - name: isOpen
     uid: azure-maps-control.atlas.Popup.isOpen
     package: azure-maps-control
@@ -63,8 +63,8 @@ properties:
     syntax:
       content: 'isOpen: () => boolean'
       return:
-        type: () =&gt; boolean
         description: ''
+        type: () =&gt; boolean
   - name: open
     uid: azure-maps-control.atlas.Popup.open
     package: azure-maps-control
@@ -76,8 +76,8 @@ properties:
     syntax:
       content: 'open: (map?: Map) => void'
       return:
-        type: '(map?: Map) =&gt; void'
         description: ''
+        type: '(map?: Map) =&gt; void'
   - name: remove
     uid: azure-maps-control.atlas.Popup.remove
     package: azure-maps-control
@@ -89,8 +89,8 @@ properties:
     syntax:
       content: 'remove: () => void'
       return:
-        type: () =&gt; void
         description: ''
+        type: () =&gt; void
 methods:
   - name: getOptions()
     uid: azure-maps-control.atlas.Popup.getOptions
@@ -100,10 +100,22 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getOptions()
+      content: 'function getOptions(): PopupOptions'
       return:
-        type: <xref uid="azure-maps-control.atlas.PopupOptions" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.PopupOptions" />
+  - name: getPopupContainer()
+    uid: azure-maps-control.atlas.Popup.getPopupContainer
+    package: azure-maps-control
+    summary: Returns popup container element.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getPopupContainer(): HTMLElement'
+      return:
+        description: ''
+        type: HTMLElement
   - name: getPopupOptions()
     uid: azure-maps-control.atlas.Popup.getPopupOptions
     package: azure-maps-control
@@ -113,10 +125,10 @@ methods:
     isDeprecated: true
     customDeprecatedMessage: Use getOptions() instead.
     syntax:
-      content: function getPopupOptions()
+      content: 'function getPopupOptions(): PopupOptions'
       return:
-        type: <xref uid="azure-maps-control.atlas.PopupOptions" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.PopupOptions" />
   - name: setOptions(PopupOptions)
     uid: azure-maps-control.atlas.Popup.setOptions
     package: azure-maps-control

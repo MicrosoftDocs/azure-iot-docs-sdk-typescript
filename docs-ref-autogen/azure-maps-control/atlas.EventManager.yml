@@ -18,7 +18,7 @@ methods:
       "pitch" | "pitchend" | "ready" | "render" | "resize" | "rotatestart" |
       "rotate" | "rotateend" | "tokenacquired" | "zoomstart" | "zoom" |
       "zoomend", (e: MapEvent) => void)
-    uid: azure-maps-control.atlas.EventManager.add_7
+    uid: azure-maps-control.atlas.EventManager.add_8
     package: azure-maps-control
     summary: Adds an event to the map.
     remarks: ''
@@ -49,7 +49,7 @@ methods:
       "dragend" | "keydown" | "keypress" | "keyup" | "mousedown" | "mouseenter"
       | "mouseleave" | "mousemove" | "mouseout" | "mouseover" | "mouseup",
       HtmlMarker | HtmlMarker[], (e: TargetedEvent) => void)
-    uid: azure-maps-control.atlas.EventManager.add_12
+    uid: azure-maps-control.atlas.EventManager.add_13
     package: azure-maps-control
     summary: Adds an event to the HtmlMarker(s).
     remarks: ''
@@ -101,7 +101,7 @@ methods:
   - name: >-
       add("dataadded" | "dataremoved", DataSource | DataSource[], (e: Shape[])
       => void)
-    uid: azure-maps-control.atlas.EventManager.add_11
+    uid: azure-maps-control.atlas.EventManager.add_12
     package: azure-maps-control
     summary: Adds an event to the DataSource(s).
     remarks: ''
@@ -127,7 +127,7 @@ methods:
   - name: >-
       add("datasourceupdated", DataSource | DataSource[], (e: DataSource) =>
       void)
-    uid: azure-maps-control.atlas.EventManager.add_10
+    uid: azure-maps-control.atlas.EventManager.add_11
     package: azure-maps-control
     summary: Adds an event to the DataSource(s).
     remarks: ''
@@ -153,7 +153,7 @@ methods:
   - name: >-
       add("drag" | "dragend" | "dragstart" | "open" | "close", Popup | Popup[],
       (e: TargetedEvent) => void)
-    uid: azure-maps-control.atlas.EventManager.add_17
+    uid: azure-maps-control.atlas.EventManager.add_18
     package: azure-maps-control
     summary: Adds an event to the Popup(s).
     remarks: ''
@@ -194,7 +194,7 @@ methods:
           description: |
             The event handler callback.
   - name: 'add("layeradded" | "layerremoved", (e: Layer) => void)'
-    uid: azure-maps-control.atlas.EventManager.add_8
+    uid: azure-maps-control.atlas.EventManager.add_9
     package: azure-maps-control
     summary: Adds an event to the map.
     remarks: ''
@@ -213,7 +213,7 @@ methods:
           description: |
             The event handler callback.
   - name: 'add("layeradded" | "layerremoved", Layer | Layer[], (e: Layer) => void)'
-    uid: azure-maps-control.atlas.EventManager.add_14
+    uid: azure-maps-control.atlas.EventManager.add_15
     package: azure-maps-control
     summary: Adds an event to the Layer(s).
     remarks: ''
@@ -264,7 +264,7 @@ methods:
       add("mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
       "dblclick" | "mouseout" | "mouseenter" | "mouseleave" | "contextmenu",
       Layer | Layer[], (e: MapMouseEvent) => void)
-    uid: azure-maps-control.atlas.EventManager.add_15
+    uid: azure-maps-control.atlas.EventManager.add_16
     package: azure-maps-control
     summary: Adds a mouse event to the Layer(s).
     remarks: ''
@@ -293,7 +293,7 @@ methods:
           description: |
             The event handler callback.
   - name: 'add("shapechanged", Shape | Shape[], (e: Shape) => void)'
-    uid: azure-maps-control.atlas.EventManager.add_19
+    uid: azure-maps-control.atlas.EventManager.add_20
     package: azure-maps-control
     summary: Adds an event to the Shape(s).
     remarks: ''
@@ -317,7 +317,7 @@ methods:
           description: |
             The event handler callback.
   - name: 'add("sourceadded" | "sourceremoved", (e: Source) => void)'
-    uid: azure-maps-control.atlas.EventManager.add_9
+    uid: azure-maps-control.atlas.EventManager.add_10
     package: azure-maps-control
     summary: Adds an event to the map.
     remarks: ''
@@ -338,7 +338,7 @@ methods:
   - name: >-
       add("sourceadded" | "sourceremoved", Source | Source[], (e: Source) =>
       void)
-    uid: azure-maps-control.atlas.EventManager.add_20
+    uid: azure-maps-control.atlas.EventManager.add_21
     package: azure-maps-control
     summary: Adds an event to the Source(s).
     remarks: ''
@@ -400,7 +400,7 @@ methods:
           description: |
             The event handler callback.
   - name: 'add("styleselected", StyleControl, (e: string) => void)'
-    uid: azure-maps-control.atlas.EventManager.add_18
+    uid: azure-maps-control.atlas.EventManager.add_19
     package: azure-maps-control
     summary: Adds an event to the StyleControl
     remarks: ''
@@ -421,6 +421,25 @@ methods:
           type: '(e: string) =&gt; void'
           description: |
             The event handler callback.
+  - name: 'add("stylesetchanged", (e: StyleSet) => void)'
+    uid: azure-maps-control.atlas.EventManager.add_6
+    package: azure-maps-control
+    summary: Adds a styleset change event to the map.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function add(eventType: "stylesetchanged", callback: (e: StyleSet) =>
+        void)
+      parameters:
+        - id: eventType
+          type: '"stylesetchanged"'
+          description: A styleset changed event name
+        - id: callback
+          type: '(e: StyleSet) =&gt; void'
+          description: |
+            The event handler callback
   - name: >-
       add("touchstart" | "touchend" | "touchmove" | "touchcancel", (e:
       MapTouchEvent) => void)
@@ -445,7 +464,7 @@ methods:
   - name: >-
       add("touchstart" | "touchend" | "touchmove" | "touchcancel", Layer |
       Layer[], (e: MapTouchEvent) => void)
-    uid: azure-maps-control.atlas.EventManager.add_13
+    uid: azure-maps-control.atlas.EventManager.add_14
     package: azure-maps-control
     summary: Adds a touch event to the Layer(s).
     remarks: ''
@@ -470,7 +489,7 @@ methods:
           description: |
             The event handler callback.
   - name: 'add("wheel", (e: MapMouseWheelEvent) => void)'
-    uid: azure-maps-control.atlas.EventManager.add_6
+    uid: azure-maps-control.atlas.EventManager.add_7
     package: azure-maps-control
     summary: Adds a wheel event to the map.
     remarks: ''
@@ -489,7 +508,7 @@ methods:
           description: |
             The event handler callback.
   - name: 'add("wheel", Layer | Layer[], (e: MapMouseWheelEvent) => void)'
-    uid: azure-maps-control.atlas.EventManager.add_16
+    uid: azure-maps-control.atlas.EventManager.add_17
     package: azure-maps-control
     summary: Adds a wheel event to the Layer(s).
     remarks: ''
@@ -999,7 +1018,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function invoke(eventType: string, args: any)'
+      content: 'function invoke(eventType: string, args: any): any'
       parameters:
         - id: eventType
           type: string
@@ -1009,8 +1028,8 @@ methods:
           description: |
             The data to be passed to the callbacks.
       return:
-        type: any
         description: ''
+        type: any
   - name: 'invoke(string, any, any)'
     uid: azure-maps-control.atlas.EventManager.invoke_1
     package: azure-maps-control
@@ -1023,7 +1042,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function invoke(eventType: string, target: any, args: any)'
+      content: 'function invoke(eventType: string, target: any, args: any): any'
       parameters:
         - id: eventType
           type: string
@@ -1039,11 +1058,12 @@ methods:
             The data to be passed to the callbacks. The data can be `null` but
             cannot be `undefined`.
       return:
-        type: any
         description: ''
+        type: any
   - name: >-
       remove(string, (e: void | Layer | MapEvent | MapDataEvent | MapMouseEvent
-      | MapTouchEvent | MapMouseWheelEvent | Source | string) => void)
+      | MapTouchEvent | MapMouseWheelEvent | Source | string | StyleSet) =>
+      void)
     uid: azure-maps-control.atlas.EventManager.remove
     package: azure-maps-control
     summary: Removes an event listener from the map.
@@ -1054,7 +1074,7 @@ methods:
       content: >-
         function remove(eventType: string, callback: (e: void | Layer | MapEvent
         | MapDataEvent | MapMouseEvent | MapTouchEvent | MapMouseWheelEvent |
-        Source | string) => void)
+        Source | string | StyleSet) => void)
       parameters:
         - id: eventType
           type: string
@@ -1062,7 +1082,8 @@ methods:
         - id: callback
           type: >-
             (e: void | Layer | MapEvent | MapDataEvent | MapMouseEvent |
-            MapTouchEvent | MapMouseWheelEvent | Source | string) =&gt; void
+            MapTouchEvent | MapMouseWheelEvent | Source | string | StyleSet)
+            =&gt; void
           description: |
             The event handler callback.
   - name: >-

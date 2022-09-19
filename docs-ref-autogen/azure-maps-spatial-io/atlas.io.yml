@@ -20,7 +20,7 @@ functions:
     syntax:
       content: >-
         function read(spatialData: string | ArrayBuffer | Blob, options?:
-        SpatialDataReadOptions)
+        SpatialDataReadOptions): Promise<SpatialDataSet>
       parameters:
         - id: spatialData
           type: string | ArrayBuffer | Blob
@@ -30,13 +30,18 @@ functions:
           description: |
             The read options.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-maps-spatial-io.atlas.SpatialDataSet"
           />&gt;
-        description: ''
   - name: >-
-      write(azmaps, SpatialXmlWriteOptions & GmlWriteOptions &
-      SpatialCsvWriteOptions)
+      write(azmaps.source.DataSource | azmaps.data.FeatureCollection |
+      azmaps.layer.ImageLayer | OgcMapLayer |
+      azmaps.data.Feature<azmaps.data.Geometry, any> | SpatialDataSet |
+      Array<azmaps.source.DataSource | azmaps.data.FeatureCollection |
+      azmaps.layer.ImageLayer | OgcMapLayer |
+      azmaps.data.Feature<azmaps.data.Geometry, any> | SpatialDataSet>,
+      SpatialXmlWriteOptions & GmlWriteOptions & SpatialCsvWriteOptions)
     uid: azure-maps-spatial-io.atlas.io.write
     package: azure-maps-spatial-io
     summary: >-
@@ -47,11 +52,30 @@ functions:
     isDeprecated: false
     syntax:
       content: >-
-        function write(data: azmaps, options?: SpatialXmlWriteOptions &
-        GmlWriteOptions & SpatialCsvWriteOptions)
+        function write(data: azmaps.source.DataSource |
+        azmaps.data.FeatureCollection | azmaps.layer.ImageLayer | OgcMapLayer |
+        azmaps.data.Feature<azmaps.data.Geometry, any> | SpatialDataSet |
+        Array<azmaps.source.DataSource | azmaps.data.FeatureCollection |
+        azmaps.layer.ImageLayer | OgcMapLayer |
+        azmaps.data.Feature<azmaps.data.Geometry, any> | SpatialDataSet>,
+        options?: SpatialXmlWriteOptions & GmlWriteOptions &
+        SpatialCsvWriteOptions): Promise<string>
       parameters:
         - id: data
-          type: azmaps
+          type: >-
+            <xref uid="azmaps.source.DataSource" /> | <xref
+            uid="azmaps.data.FeatureCollection" /> | <xref
+            uid="azmaps.layer.ImageLayer" /> | <xref
+            uid="azure-maps-spatial-io.atlas.layer.OgcMapLayer" /> | <xref
+            uid="azmaps.data.Feature" />&lt;<xref uid="azmaps.data.Geometry" />,
+            any&gt; | <xref uid="azure-maps-spatial-io.atlas.SpatialDataSet" />
+            | Array&lt;<xref uid="azmaps.source.DataSource" /> | <xref
+            uid="azmaps.data.FeatureCollection" /> | <xref
+            uid="azmaps.layer.ImageLayer" /> | <xref
+            uid="azure-maps-spatial-io.atlas.layer.OgcMapLayer" /> | <xref
+            uid="azmaps.data.Feature" />&lt;<xref uid="azmaps.data.Geometry" />,
+            any&gt; | <xref uid="azure-maps-spatial-io.atlas.SpatialDataSet"
+            />&gt;
           description: 'The GeoJSON objects to retrieve shapes from, to write.'
         - id: options
           type: >-
@@ -61,11 +85,17 @@ functions:
           description: |
             A set of options that customize how the XML is written.
       return:
-        type: Promise&lt;string&gt;
         description: ''
+        type: Promise&lt;string&gt;
   - name: >-
-      writeCompressed(azmaps, "Base64" | "Blob" | "ArrayBuffer",
-      SpatialXmlWriteOptions & GmlWriteOptions & SpatialCsvWriteOptions)
+      writeCompressed(azmaps.source.DataSource | azmaps.data.FeatureCollection |
+      azmaps.layer.ImageLayer | OgcMapLayer |
+      azmaps.data.Feature<azmaps.data.Geometry, any> | SpatialDataSet |
+      Array<azmaps.source.DataSource | azmaps.data.FeatureCollection |
+      azmaps.layer.ImageLayer | OgcMapLayer |
+      azmaps.data.Feature<azmaps.data.Geometry, any> | SpatialDataSet>, "Base64"
+      | "Blob" | "ArrayBuffer", SpatialXmlWriteOptions & GmlWriteOptions &
+      SpatialCsvWriteOptions)
     uid: azure-maps-spatial-io.atlas.io.writeCompressed
     package: azure-maps-spatial-io
     summary: >-
@@ -81,12 +111,31 @@ functions:
     isDeprecated: false
     syntax:
       content: >-
-        function writeCompressed(data: azmaps, compressFormat?: "Base64" |
-        "Blob" | "ArrayBuffer", options?: SpatialXmlWriteOptions &
-        GmlWriteOptions & SpatialCsvWriteOptions)
+        function writeCompressed(data: azmaps.source.DataSource |
+        azmaps.data.FeatureCollection | azmaps.layer.ImageLayer | OgcMapLayer |
+        azmaps.data.Feature<azmaps.data.Geometry, any> | SpatialDataSet |
+        Array<azmaps.source.DataSource | azmaps.data.FeatureCollection |
+        azmaps.layer.ImageLayer | OgcMapLayer |
+        azmaps.data.Feature<azmaps.data.Geometry, any> | SpatialDataSet>,
+        compressFormat?: "Base64" | "Blob" | "ArrayBuffer", options?:
+        SpatialXmlWriteOptions & GmlWriteOptions & SpatialCsvWriteOptions):
+        Promise<string | ArrayBuffer | Blob>
       parameters:
         - id: data
-          type: azmaps
+          type: >-
+            <xref uid="azmaps.source.DataSource" /> | <xref
+            uid="azmaps.data.FeatureCollection" /> | <xref
+            uid="azmaps.layer.ImageLayer" /> | <xref
+            uid="azure-maps-spatial-io.atlas.layer.OgcMapLayer" /> | <xref
+            uid="azmaps.data.Feature" />&lt;<xref uid="azmaps.data.Geometry" />,
+            any&gt; | <xref uid="azure-maps-spatial-io.atlas.SpatialDataSet" />
+            | Array&lt;<xref uid="azmaps.source.DataSource" /> | <xref
+            uid="azmaps.data.FeatureCollection" /> | <xref
+            uid="azmaps.layer.ImageLayer" /> | <xref
+            uid="azure-maps-spatial-io.atlas.layer.OgcMapLayer" /> | <xref
+            uid="azmaps.data.Feature" />&lt;<xref uid="azmaps.data.Geometry" />,
+            any&gt; | <xref uid="azure-maps-spatial-io.atlas.SpatialDataSet"
+            />&gt;
           description: 'The GeoJSON objects to retrieve shapes from, to write.'
         - id: compressFormat
           type: '"Base64" | "Blob" | "ArrayBuffer"'
@@ -101,5 +150,5 @@ functions:
           description: |
             A set of options that customize how the data is written.
       return:
-        type: Promise&lt;string | ArrayBuffer | Blob&gt;
         description: ''
+        type: Promise&lt;string | ArrayBuffer | Blob&gt;

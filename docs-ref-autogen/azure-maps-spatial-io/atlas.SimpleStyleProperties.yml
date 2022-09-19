@@ -32,10 +32,10 @@ properties:
         anchor?: "center" | "left" | "right" | "top" | "bottom" | "top-left" |
         "top-right" | "bottom-left" | "bottom-right"
       return:
+        description: ''
         type: >-
           "center" | "left" | "right" | "top" | "bottom" | "top-left" |
           "top-right" | "bottom-left" | "bottom-right"
-        description: ''
   - name: base
     uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.base
     package: azure-maps-spatial-io
@@ -49,8 +49,8 @@ properties:
     syntax:
       content: 'base?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: color
     uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.color
     package: azure-maps-spatial-io
@@ -62,8 +62,8 @@ properties:
     syntax:
       content: 'color?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: description
     uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.description
     package: azure-maps-spatial-io
@@ -77,8 +77,8 @@ properties:
     syntax:
       content: 'description?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: fillColor
     uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.fillColor
     package: azure-maps-spatial-io
@@ -90,8 +90,8 @@ properties:
     syntax:
       content: 'fillColor?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: fillOpacity
     uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.fillOpacity
     package: azure-maps-spatial-io
@@ -103,8 +103,8 @@ properties:
     syntax:
       content: 'fillOpacity?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: height
     uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.height
     package: azure-maps-spatial-io
@@ -118,8 +118,8 @@ properties:
     syntax:
       content: 'height?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: image
     uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.image
     package: azure-maps-spatial-io
@@ -131,8 +131,8 @@ properties:
     syntax:
       content: 'image?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: imageUrl
     uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.imageUrl
     package: azure-maps-spatial-io
@@ -146,8 +146,8 @@ properties:
     syntax:
       content: 'imageUrl?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: offset
     uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.offset
     package: azure-maps-spatial-io
@@ -159,10 +159,10 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'offset?: Object'
+      content: 'offset?: [number, number]'
       return:
-        type: Object
         description: ''
+        type: '[number, number]'
   - name: popupTemplate
     uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.popupTemplate
     package: azure-maps-spatial-io
@@ -174,8 +174,8 @@ properties:
     syntax:
       content: 'popupTemplate?: azmaps.PopupTemplate'
       return:
-        type: <xref uid="azmaps.PopupTemplate" />
         description: ''
+        type: <xref uid="azmaps.PopupTemplate" />
   - name: rotation
     uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.rotation
     package: azure-maps-spatial-io
@@ -189,8 +189,8 @@ properties:
     syntax:
       content: 'rotation?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: size
     uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.size
     package: azure-maps-spatial-io
@@ -204,8 +204,8 @@ properties:
     syntax:
       content: 'size?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: strokeColor
     uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.strokeColor
     package: azure-maps-spatial-io
@@ -217,8 +217,8 @@ properties:
     syntax:
       content: 'strokeColor?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: strokeOpacity
     uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.strokeOpacity
     package: azure-maps-spatial-io
@@ -230,8 +230,8 @@ properties:
     syntax:
       content: 'strokeOpacity?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: strokeWidth
     uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.strokeWidth
     package: azure-maps-spatial-io
@@ -243,8 +243,8 @@ properties:
     syntax:
       content: 'strokeWidth?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: title
     uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.title
     package: azure-maps-spatial-io
@@ -258,8 +258,8 @@ properties:
     syntax:
       content: 'title?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: visible
     uid: azure-maps-spatial-io.atlas.SimpleStyleProperties.visible
     package: azure-maps-spatial-io
@@ -271,6 +271,6 @@ properties:
     syntax:
       content: 'visible?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
 extends: Object

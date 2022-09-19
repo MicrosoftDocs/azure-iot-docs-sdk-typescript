@@ -60,10 +60,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function toString()
+      content: 'function toString(): string'
       return:
-        type: string
         description: ''
+        type: string
   - name: writeCDataContent(string)
     uid: azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter.writeCDataContent
     package: azure-maps-spatial-io
@@ -72,15 +72,15 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function writeCDataContent(content: string)'
+      content: 'function writeCDataContent(content: string): SimpleXmlWriter'
       parameters:
         - id: content
           type: string
           description: |
             The content value to write.
       return:
-        type: <xref uid="azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter" />
         description: ''
+        type: <xref uid="azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter" />
   - name: writeComment(string)
     uid: azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter.writeComment
     package: azure-maps-spatial-io
@@ -89,15 +89,15 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function writeComment(comment: string)'
+      content: 'function writeComment(comment: string): SimpleXmlWriter'
       parameters:
         - id: comment
           type: string
           description: |
             The comment to write add to the document.
       return:
-        type: <xref uid="azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter" />
         description: ''
+        type: <xref uid="azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter" />
   - name: 'writeElement(string, any, Record<string, string>)'
     uid: azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter.writeElement
     package: azure-maps-spatial-io
@@ -108,7 +108,7 @@ methods:
     syntax:
       content: >-
         function writeElement(name: string, content: any, attributes?:
-        Record<string, string>)
+        Record<string, string>): SimpleXmlWriter
       parameters:
         - id: name
           type: string
@@ -121,8 +121,8 @@ methods:
           description: |
             The attributes for the tag.
       return:
-        type: <xref uid="azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter" />
         description: ''
+        type: <xref uid="azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter" />
   - name: writeEndDocument(boolean)
     uid: azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter.writeEndDocument
     package: azure-maps-spatial-io
@@ -133,7 +133,9 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function writeEndDocument(addTrailingNewLineChar?: boolean)'
+      content: >-
+        function writeEndDocument(addTrailingNewLineChar?: boolean):
+        SimpleXmlWriter
       parameters:
         - id: addTrailingNewLineChar
           type: boolean
@@ -143,8 +145,8 @@ methods:
 
             Default: `true`
       return:
-        type: <xref uid="azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter" />
         description: ''
+        type: <xref uid="azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter" />
   - name: writeEndElement(boolean)
     uid: azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter.writeEndElement
     package: azure-maps-spatial-io
@@ -153,7 +155,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function writeEndElement(skipNewLine?: boolean)'
+      content: 'function writeEndElement(skipNewLine?: boolean): SimpleXmlWriter'
       parameters:
         - id: skipNewLine
           type: boolean
@@ -163,8 +165,8 @@ methods:
 
             Default: `false`.
       return:
-        type: <xref uid="azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter" />
         description: ''
+        type: <xref uid="azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter" />
   - name: 'writeStartDocument(boolean, string, boolean)'
     uid: azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter.writeStartDocument
     package: azure-maps-spatial-io
@@ -175,7 +177,7 @@ methods:
     syntax:
       content: >-
         function writeStartDocument(includeEncodingTag?: boolean, encoding?:
-        string, standalone?: boolean)
+        string, standalone?: boolean): SimpleXmlWriter
       parameters:
         - id: includeEncodingTag
           type: boolean
@@ -190,8 +192,8 @@ methods:
           description: |
             A boolean indicating if the XML document is standalone or not.
       return:
-        type: <xref uid="azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter" />
         description: ''
+        type: <xref uid="azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter" />
   - name: >-
       writeStartElement(string, Record<string, string | number>, boolean,
       boolean)
@@ -204,7 +206,8 @@ methods:
     syntax:
       content: >-
         function writeStartElement(name: string, attributes?: Record<string,
-        string | number>, selfClosing?: boolean, skipIndent?: boolean)
+        string | number>, selfClosing?: boolean, skipIndent?: boolean):
+        SimpleXmlWriter
       parameters:
         - id: name
           type: string
@@ -220,8 +223,8 @@ methods:
           type: boolean
           description: ''
       return:
-        type: <xref uid="azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter" />
         description: ''
+        type: <xref uid="azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter" />
   - name: 'writeString(string, boolean)'
     uid: azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter.writeString
     package: azure-maps-spatial-io
@@ -230,7 +233,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function writeString(value: string, validate?: boolean)'
+      content: 'function writeString(value: string, validate?: boolean): SimpleXmlWriter'
       parameters:
         - id: value
           type: string
@@ -241,8 +244,8 @@ methods:
             A boolean indicating if the writer should write the string as-is,
             or validate and escape of special characters.
       return:
-        type: <xref uid="azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter" />
         description: ''
+        type: <xref uid="azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter" />
   - name: writeValue(any)
     uid: azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter.writeValue
     package: azure-maps-spatial-io
@@ -251,12 +254,12 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function writeValue(value: any)'
+      content: 'function writeValue(value: any): SimpleXmlWriter'
       parameters:
         - id: value
           type: any
           description: |
             Any value that is to be written.
       return:
-        type: <xref uid="azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter" />
         description: ''
+        type: <xref uid="azure-maps-spatial-io.atlas.io.core.SimpleXmlWriter" />

@@ -11,7 +11,7 @@ type: class
 constructors:
   - name: >-
       Map(string | HTMLElement, ServiceOptions & StyleOptions &
-      UserInteractionOptions & CameraOptions | CameraBoundsOptions)
+      UserInteractionOptions & (CameraOptions | CameraBoundsOptions))
     uid: azure-maps-control.atlas.Map.constructor
     package: azure-maps-control
     summary: Displays a map in the specified container.
@@ -21,8 +21,8 @@ constructors:
     syntax:
       content: >-
         new Map(container: string | HTMLElement, options: ServiceOptions &
-        StyleOptions & UserInteractionOptions & CameraOptions |
-        CameraBoundsOptions)
+        StyleOptions & UserInteractionOptions & (CameraOptions |
+        CameraBoundsOptions))
       parameters:
         - id: container
           type: string | HTMLElement
@@ -31,9 +31,9 @@ constructors:
           type: >-
             <xref uid="azure-maps-control.atlas.ServiceOptions" /> & <xref
             uid="azure-maps-control.atlas.StyleOptions" /> & <xref
-            uid="azure-maps-control.atlas.UserInteractionOptions" /> & <xref
+            uid="azure-maps-control.atlas.UserInteractionOptions" /> & (<xref
             uid="azure-maps-control.atlas.CameraOptions" /> | <xref
-            uid="azure-maps-control.atlas.CameraBoundsOptions" />
+            uid="azure-maps-control.atlas.CameraBoundsOptions" />)
           description: |
             Options for the initial display and interactability with the map.
 properties:
@@ -48,8 +48,8 @@ properties:
     syntax:
       content: 'authentication: AuthenticationManager'
       return:
-        type: <xref uid="azure-maps-control.atlas.AuthenticationManager" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.AuthenticationManager" />
   - name: controls
     uid: azure-maps-control.atlas.Map.controls
     package: azure-maps-control
@@ -61,8 +61,8 @@ properties:
     syntax:
       content: 'controls: ControlManager'
       return:
-        type: <xref uid="azure-maps-control.atlas.ControlManager" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.ControlManager" />
   - name: events
     uid: azure-maps-control.atlas.Map.events
     package: azure-maps-control
@@ -74,8 +74,8 @@ properties:
     syntax:
       content: 'events: EventManager'
       return:
-        type: <xref uid="azure-maps-control.atlas.EventManager" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.EventManager" />
   - name: imageSprite
     uid: azure-maps-control.atlas.Map.imageSprite
     package: azure-maps-control
@@ -87,8 +87,8 @@ properties:
     syntax:
       content: 'imageSprite: ImageSpriteManager'
       return:
-        type: <xref uid="azure-maps-control.atlas.ImageSpriteManager" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.ImageSpriteManager" />
   - name: layers
     uid: azure-maps-control.atlas.Map.layers
     package: azure-maps-control
@@ -100,8 +100,8 @@ properties:
     syntax:
       content: 'layers: LayerManager'
       return:
-        type: <xref uid="azure-maps-control.atlas.LayerManager" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.LayerManager" />
   - name: markers
     uid: azure-maps-control.atlas.Map.markers
     package: azure-maps-control
@@ -113,8 +113,8 @@ properties:
     syntax:
       content: 'markers: HtmlMarkerManager'
       return:
-        type: <xref uid="azure-maps-control.atlas.HtmlMarkerManager" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.HtmlMarkerManager" />
   - name: popups
     uid: azure-maps-control.atlas.Map.popups
     package: azure-maps-control
@@ -126,8 +126,8 @@ properties:
     syntax:
       content: 'popups: PopupManager'
       return:
-        type: <xref uid="azure-maps-control.atlas.PopupManager" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.PopupManager" />
   - name: sources
     uid: azure-maps-control.atlas.Map.sources
     package: azure-maps-control
@@ -139,8 +139,8 @@ properties:
     syntax:
       content: 'sources: SourceManager'
       return:
-        type: <xref uid="azure-maps-control.atlas.SourceManager" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.SourceManager" />
 methods:
   - name: areTilesLoaded()
     uid: azure-maps-control.atlas.Map.areTilesLoaded
@@ -152,10 +152,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function areTilesLoaded()
+      content: 'function areTilesLoaded(): boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: clear()
     uid: azure-maps-control.atlas.Map.clear
     package: azure-maps-control
@@ -186,12 +186,12 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getCamera()
+      content: 'function getCamera(): CameraOptions & CameraBoundsOptions'
       return:
+        description: ''
         type: >-
           <xref uid="azure-maps-control.atlas.CameraOptions" /> & <xref
           uid="azure-maps-control.atlas.CameraBoundsOptions" />
-        description: ''
   - name: getCanvas()
     uid: azure-maps-control.atlas.Map.getCanvas
     package: azure-maps-control
@@ -200,10 +200,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getCanvas()
+      content: 'function getCanvas(): HTMLCanvasElement'
       return:
-        type: HTMLCanvasElement
         description: ''
+        type: HTMLCanvasElement
   - name: getCanvasContainer()
     uid: azure-maps-control.atlas.Map.getCanvasContainer
     package: azure-maps-control
@@ -216,10 +216,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getCanvasContainer()
+      content: 'function getCanvasContainer(): HTMLElement'
       return:
-        type: HTMLElement
         description: ''
+        type: HTMLElement
   - name: getMapContainer()
     uid: azure-maps-control.atlas.Map.getMapContainer
     package: azure-maps-control
@@ -228,10 +228,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getMapContainer()
+      content: 'function getMapContainer(): HTMLElement'
       return:
-        type: HTMLElement
         description: ''
+        type: HTMLElement
   - name: getServiceOptions()
     uid: azure-maps-control.atlas.Map.getServiceOptions
     package: azure-maps-control
@@ -240,10 +240,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getServiceOptions()
+      content: 'function getServiceOptions(): ServiceOptions'
       return:
-        type: <xref uid="azure-maps-control.atlas.ServiceOptions" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.ServiceOptions" />
   - name: getStyle()
     uid: azure-maps-control.atlas.Map.getStyle
     package: azure-maps-control
@@ -252,10 +252,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getStyle()
+      content: 'function getStyle(): StyleOptions'
       return:
-        type: <xref uid="azure-maps-control.atlas.StyleOptions" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.StyleOptions" />
   - name: getTraffic()
     uid: azure-maps-control.atlas.Map.getTraffic
     package: azure-maps-control
@@ -264,10 +264,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getTraffic()
+      content: 'function getTraffic(): TrafficOptions'
       return:
-        type: <xref uid="azure-maps-control.atlas.TrafficOptions" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.TrafficOptions" />
   - name: getUserInteraction()
     uid: azure-maps-control.atlas.Map.getUserInteraction
     package: azure-maps-control
@@ -276,10 +276,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getUserInteraction()
+      content: 'function getUserInteraction(): UserInteractionOptions'
       return:
-        type: <xref uid="azure-maps-control.atlas.UserInteractionOptions" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.UserInteractionOptions" />
   - name: 'pixelsToPositions(Pixel[])'
     uid: azure-maps-control.atlas.Map.pixelsToPositions
     package: azure-maps-control
@@ -290,15 +290,15 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function pixelsToPositions(pixels: Pixel[])'
+      content: 'function pixelsToPositions(pixels: Pixel[]): Position[]'
       parameters:
         - id: pixels
           type: '<xref uid="azure-maps-control.atlas.Pixel" />[]'
           description: |
             The pixels to be converted.
       return:
-        type: '<xref uid="azure-maps-control.atlas.data.Position" />[]'
         description: ''
+        type: '<xref uid="azure-maps-control.atlas.data.Position" />[]'
   - name: 'positionsToPixels(Position[])'
     uid: azure-maps-control.atlas.Map.positionsToPixels
     package: azure-maps-control
@@ -309,15 +309,15 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function positionsToPixels(positions: Position[])'
+      content: 'function positionsToPixels(positions: Position[]): Pixel[]'
       parameters:
         - id: positions
           type: '<xref uid="azure-maps-control.atlas.data.Position" />[]'
           description: |
             The positions to be converted.
       return:
-        type: '<xref uid="azure-maps-control.atlas.Pixel" />[]'
         description: ''
+        type: '<xref uid="azure-maps-control.atlas.Pixel" />[]'
   - name: resize(any)
     uid: azure-maps-control.atlas.Map.resize
     package: azure-maps-control
@@ -360,7 +360,7 @@ methods:
           description: >
             Optional additional properties to be added to event objects of
             events triggered by this method.
-  - name: setCamera(CameraOptions | CameraBoundsOptions & AnimationOptions)
+  - name: setCamera((CameraOptions | CameraBoundsOptions) & AnimationOptions)
     uid: azure-maps-control.atlas.Map.setCamera
     package: azure-maps-control
     summary: >-
@@ -373,13 +373,13 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function setCamera(options?: CameraOptions | CameraBoundsOptions &
+        function setCamera(options?: (CameraOptions | CameraBoundsOptions) &
         AnimationOptions)
       parameters:
         - id: options
           type: >-
-            <xref uid="azure-maps-control.atlas.CameraOptions" /> | <xref
-            uid="azure-maps-control.atlas.CameraBoundsOptions" /> & <xref
+            (<xref uid="azure-maps-control.atlas.CameraOptions" /> | <xref
+            uid="azure-maps-control.atlas.CameraBoundsOptions" />) & <xref
             uid="azure-maps-control.atlas.AnimationOptions" />
           description: >
             The options for setting the map's camera and for the animation of
@@ -397,7 +397,7 @@ methods:
         - id: options
           type: <xref uid="azure-maps-control.atlas.ServiceOptions" />
           description: ''
-  - name: setStyle(StyleOptions)
+  - name: 'setStyle(StyleOptions, boolean)'
     uid: azure-maps-control.atlas.Map.setStyle
     package: azure-maps-control
     summary: >-
@@ -407,12 +407,17 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function setStyle(options?: StyleOptions)'
+      content: 'function setStyle(options?: StyleOptions, diff?: boolean)'
       parameters:
         - id: options
           type: <xref uid="azure-maps-control.atlas.StyleOptions" />
-          description: |
-            The options for setting the style of the map control.
+          description: The options for setting the style of the map control.
+        - id: diff
+          type: boolean
+          description: >
+            If false, forces a 'full' style update, removing the current style
+            and building the given one instead of attempting a diff-based
+            update. Defaults to true.
   - name: setTraffic(TrafficOptions)
     uid: azure-maps-control.atlas.Map.setTraffic
     package: azure-maps-control

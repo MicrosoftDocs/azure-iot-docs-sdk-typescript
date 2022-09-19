@@ -7,6 +7,9 @@ fullName: RenderGetMapTileResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type RenderGetMapTileResponse = { _response: HttpResponse, blobBody:
-  Promise<Blob>, readableStreamBody: NodeJS.ReadableStream }
+syntax: |
+  type RenderGetMapTileResponse = {
+    _response: HttpResponse,
+    blobBody?: Promise<Blob>,
+    readableStreamBody?: NodeJS.ReadableStream,
+  }

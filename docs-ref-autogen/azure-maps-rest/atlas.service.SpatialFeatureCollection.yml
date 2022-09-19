@@ -9,4 +9,6 @@ fullName: SpatialFeatureCollection
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: 'type SpatialFeatureCollection = FeatureCollection<,>'
+syntax: >-
+  type SpatialFeatureCollection = FeatureCollection<LineString | MultiLineString
+  | Polygon | MultiPolygon | Point | MultiPoint, [key: string]: any>

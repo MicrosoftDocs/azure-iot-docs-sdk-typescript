@@ -26,8 +26,8 @@ properties:
     syntax:
       content: 'aadAppId?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: aadInstance
     uid: azure-maps-control.atlas.AuthenticationOptions.aadInstance
     package: azure-maps-control
@@ -42,8 +42,8 @@ properties:
     syntax:
       content: 'aadInstance?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: aadTenant
     uid: azure-maps-control.atlas.AuthenticationOptions.aadTenant
     package: azure-maps-control
@@ -57,8 +57,8 @@ properties:
     syntax:
       content: 'aadTenant?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: authContext
     uid: azure-maps-control.atlas.AuthenticationOptions.authContext
     package: azure-maps-control
@@ -82,8 +82,8 @@ properties:
     syntax:
       content: 'authContext?: AuthenticationContext'
       return:
-        type: AuthenticationContext
         description: ''
+        type: AuthenticationContext
   - name: authType
     uid: azure-maps-control.atlas.AuthenticationOptions.authType
     package: azure-maps-control
@@ -95,8 +95,8 @@ properties:
     syntax:
       content: 'authType?: AuthenticationType'
       return:
-        type: <xref uid="azure-maps-control.atlas.AuthenticationType" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.AuthenticationType" />
   - name: clientId
     uid: azure-maps-control.atlas.AuthenticationOptions.clientId
     package: azure-maps-control
@@ -113,13 +113,13 @@ properties:
     syntax:
       content: 'clientId?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: getToken
     uid: azure-maps-control.atlas.AuthenticationOptions.getToken
     package: azure-maps-control
     summary: |-
-      A callback to use with the anonymous authentication mechanism.
+      A callback to use with the anonymous/sas authentication mechanism.
       This callback will be responsible for resolving to a authentication token.
       E.g. fetching a CORS protected token from an endpoint.
     fullName: getToken
@@ -129,8 +129,21 @@ properties:
     syntax:
       content: 'getToken?: getAuthTokenCallback'
       return:
-        type: <xref uid="azure-maps-control.atlas.getAuthTokenCallback" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.getAuthTokenCallback" />
+  - name: sasToken
+    uid: azure-maps-control.atlas.AuthenticationOptions.sasToken
+    package: azure-maps-control
+    summary: Optionally provide an initial token for sas authentication.
+    fullName: sasToken
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'sasToken?: string'
+      return:
+        description: ''
+        type: string
   - name: subscriptionKey
     uid: azure-maps-control.atlas.AuthenticationOptions.subscriptionKey
     package: azure-maps-control
@@ -144,8 +157,8 @@ properties:
     syntax:
       content: 'subscriptionKey?: string'
       return:
-        type: string
         description: ''
+        type: string
 methods:
   - name: 'setAadProperties(string, string, string, string, AuthenticationContext)'
     uid: azure-maps-control.atlas.AuthenticationOptions.setAadProperties
@@ -177,6 +190,21 @@ methods:
           type: AuthenticationContext
           description: |
             An optional `AuthenticationContext` from the ADAL.js library
+  - name: setSasCallbackFunction(getAuthTokenCallback)
+    uid: azure-maps-control.atlas.AuthenticationOptions.setSasCallbackFunction
+    package: azure-maps-control
+    summary: Sets the required options to configure the sas authentication method.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function setSasCallbackFunction(getTokenCallback: getAuthTokenCallback)'
+      parameters:
+        - id: getTokenCallback
+          type: <xref uid="azure-maps-control.atlas.getAuthTokenCallback" />
+          description: >
+            Callback function responsible for resolving to an authentication
+            token.
   - name: setSubscriptionKey(string)
     uid: azure-maps-control.atlas.AuthenticationOptions.setSubscriptionKey
     package: azure-maps-control

@@ -40,8 +40,9 @@ properties:
     syntax:
       content: 'static Array: ArrayConstructor'
       return:
-        type: ArrayConstructor
         description: ''
+        type: ArrayConstructor
+inheritedProperties:
   - name: length
     uid: azure-maps-control.atlas.Pixel.length
     package: azure-maps-control
@@ -55,9 +56,10 @@ properties:
     syntax:
       content: 'length: number'
       return:
-        type: number
         description: ''
-methods:
+        type: number
+    inheritanceDescription: <b>Inherited From</b> Array.length
+inheritedMethods:
   - name: 'concat(ConcatArray<number>[])'
     uid: azure-maps-control.atlas.Pixel.concat
     package: azure-maps-control
@@ -66,15 +68,16 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: ConcatArray<number>[])'
+      content: 'function concat(items: ConcatArray<number>[]): number[]'
       parameters:
         - id: items
           type: 'ConcatArray&lt;number&gt;[]'
           description: |
             Additional items to add to the end of array1.
       return:
-        type: 'number[]'
         description: ''
+        type: 'number[]'
+    inheritanceDescription: <b>Inherited From</b> Array.concat
   - name: 'concat(T | ConcatArray<T>[])'
     uid: azure-maps-control.atlas.Pixel.concat_1
     package: azure-maps-control
@@ -83,15 +86,16 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: T | ConcatArray<T>[]): number[]'
       parameters:
         - id: items
           type: 'T | ConcatArray&lt;T&gt;[]'
           description: |
             Additional items to add to the end of array1.
       return:
-        type: 'number[]'
         description: ''
+        type: 'number[]'
+    inheritanceDescription: <b>Inherited From</b> Array.concat
   - name: 'every((value: number, index: number, array: number[]) => unknown, any)'
     uid: azure-maps-control.atlas.Pixel.every
     package: azure-maps-control
@@ -102,7 +106,7 @@ methods:
     syntax:
       content: >-
         function every(callbackfn: (value: number, index: number, array:
-        number[]) => unknown, thisArg?: any)
+        number[]) => unknown, thisArg?: any): boolean
       parameters:
         - id: callbackfn
           type: '(value: number, index: number, array: number[]) =&gt; unknown'
@@ -117,8 +121,9 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: boolean
         description: ''
+        type: boolean
+    inheritanceDescription: <b>Inherited From</b> Array.every
   - name: 'filter((value: number, index: number, array: number[]) => unknown, any)'
     uid: azure-maps-control.atlas.Pixel.filter_1
     package: azure-maps-control
@@ -131,7 +136,7 @@ methods:
     syntax:
       content: >-
         function filter(callbackfn: (value: number, index: number, array:
-        number[]) => unknown, thisArg?: any)
+        number[]) => unknown, thisArg?: any): number[]
       parameters:
         - id: callbackfn
           type: '(value: number, index: number, array: number[]) =&gt; unknown'
@@ -146,8 +151,9 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: 'number[]'
         description: ''
+        type: 'number[]'
+    inheritanceDescription: <b>Inherited From</b> Array.filter
   - name: 'filter<S>((value: number, index: number, array: number[]) => boolean, any)'
     uid: azure-maps-control.atlas.Pixel.filter
     package: azure-maps-control
@@ -160,7 +166,7 @@ methods:
     syntax:
       content: >-
         function filter<S>(callbackfn: (value: number, index: number, array:
-        number[]) => boolean, thisArg?: any)
+        number[]) => boolean, thisArg?: any): S[]
       parameters:
         - id: callbackfn
           type: '(value: number, index: number, array: number[]) =&gt; boolean'
@@ -175,8 +181,9 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: 'S[]'
         description: ''
+        type: 'S[]'
+    inheritanceDescription: <b>Inherited From</b> Array.filter
   - name: 'forEach((value: number, index: number, array: number[]) => void, any)'
     uid: azure-maps-control.atlas.Pixel.forEach
     package: azure-maps-control
@@ -200,133 +207,7 @@ methods:
             An object to which the this keyword can refer in the callbackfn
             function. If thisArg is omitted, undefined is used as the this
             value.
-  - name: fromData(object)
-    uid: azure-maps-control.atlas.Pixel.fromData
-    package: azure-maps-control
-    summary: >-
-      Generates a Pixel object from an object that contains coordinate
-      information.
-
-      The object is scanned for x and y properties using a case insensitive
-      test.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'static function fromData(data: object)'
-      parameters:
-        - id: data
-          type: object
-          description: The object to extract coordinate information from.
-      return:
-        type: <xref uid="azure-maps-control.atlas.Pixel" />
-        description: A Pixel object that represents the provided data information.
-  - name: 'getDestination(Pixel, number, number)'
-    uid: azure-maps-control.atlas.Pixel.getDestination
-    package: azure-maps-control
-    summary: |-
-      Calculates a destination pixel given an origin pixel,
-      a heading relative to the y-axis (0 = north) with clockwise-rotation,
-      and a distance in pixel units.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        static function getDestination(origin: Pixel, heading: number, distance:
-        number)
-      parameters:
-        - id: origin
-          type: <xref uid="azure-maps-control.atlas.Pixel" />
-          description: The starting pixel.
-        - id: heading
-          type: number
-          description: The heading at which to move away from the origin pixel.
-        - id: distance
-          type: number
-          description: |
-            The distance to move from the origin pixel.
-      return:
-        type: <xref uid="azure-maps-control.atlas.Pixel" />
-        description: ''
-  - name: 'getDistance(Pixel, Pixel)'
-    uid: azure-maps-control.atlas.Pixel.getDistance
-    package: azure-maps-control
-    summary: |-
-      Calculates the distance between two pixels.
-      Returned value is in screen pixel units.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'static function getDistance(p1: Pixel, p2: Pixel)'
-      parameters:
-        - id: p1
-          type: <xref uid="azure-maps-control.atlas.Pixel" />
-          description: The first pixel.
-        - id: p2
-          type: <xref uid="azure-maps-control.atlas.Pixel" />
-          description: |
-            The second pixel.
-      return:
-        type: number
-        description: ''
-  - name: 'getHeading(Pixel, Pixel)'
-    uid: azure-maps-control.atlas.Pixel.getHeading
-    package: azure-maps-control
-    summary: >-
-      Calculates the heading between two pixels.​ The heading value is relative
-      to the y-axis (0 = north) with clockwise-rotation.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'static function getHeading(origin: Pixel, destination: Pixel)'
-      parameters:
-        - id: origin
-          type: <xref uid="azure-maps-control.atlas.Pixel" />
-          description: The pixel the heading will point away from.
-        - id: destination
-          type: <xref uid="azure-maps-control.atlas.Pixel" />
-          description: |
-            The pixel the heading will point toward.
-      return:
-        type: number
-        description: ''
-  - name: getX(Pixel)
-    uid: azure-maps-control.atlas.Pixel.getX
-    package: azure-maps-control
-    summary: Return the x coordinate of the specified pixel.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'static function getX(pixel: Pixel)'
-      parameters:
-        - id: pixel
-          type: <xref uid="azure-maps-control.atlas.Pixel" />
-          description: |
-            The pixel to get the x coordinate of.
-      return:
-        type: number
-        description: ''
-  - name: getY(Pixel)
-    uid: azure-maps-control.atlas.Pixel.getY
-    package: azure-maps-control
-    summary: Return the y coordinate of the specified pixel.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'static function getY(pixel: Pixel)'
-      parameters:
-        - id: pixel
-          type: <xref uid="azure-maps-control.atlas.Pixel" />
-          description: |
-            The pixel to get the y coordinate of.
-      return:
-        type: number
-        description: ''
+    inheritanceDescription: <b>Inherited From</b> Array.forEach
   - name: 'indexOf(number, number)'
     uid: azure-maps-control.atlas.Pixel.indexOf
     package: azure-maps-control
@@ -335,7 +216,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function indexOf(searchElement: number, fromIndex?: number)'
+      content: 'function indexOf(searchElement: number, fromIndex?: number): number'
       parameters:
         - id: searchElement
           type: number
@@ -346,8 +227,9 @@ methods:
             The array index at which to begin the search. If fromIndex is
             omitted, the search starts at index 0.
       return:
-        type: number
         description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> Array.indexOf
   - name: join(string)
     uid: azure-maps-control.atlas.Pixel.join
     package: azure-maps-control
@@ -358,7 +240,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function join(separator?: string)'
+      content: 'function join(separator?: string): string'
       parameters:
         - id: separator
           type: string
@@ -367,8 +249,9 @@ methods:
             the resulting String. If omitted, the array elements are separated
             with a comma.
       return:
-        type: string
         description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Array.join
   - name: 'lastIndexOf(number, number)'
     uid: azure-maps-control.atlas.Pixel.lastIndexOf
     package: azure-maps-control
@@ -377,7 +260,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function lastIndexOf(searchElement: number, fromIndex?: number)'
+      content: 'function lastIndexOf(searchElement: number, fromIndex?: number): number'
       parameters:
         - id: searchElement
           type: number
@@ -388,8 +271,9 @@ methods:
             The array index at which to begin the search. If fromIndex is
             omitted, the search starts at the last index in the array.
       return:
-        type: number
         description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> Array.lastIndexOf
   - name: 'map<U>((value: number, index: number, array: number[]) => U, any)'
     uid: azure-maps-control.atlas.Pixel.map
     package: azure-maps-control
@@ -402,7 +286,7 @@ methods:
     syntax:
       content: >-
         function map<U>(callbackfn: (value: number, index: number, array:
-        number[]) => U, thisArg?: any)
+        number[]) => U, thisArg?: any): U[]
       parameters:
         - id: callbackfn
           type: '(value: number, index: number, array: number[]) =&gt; U'
@@ -416,8 +300,9 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: 'U[]'
         description: ''
+        type: 'U[]'
+    inheritanceDescription: <b>Inherited From</b> Array.map
   - name: pop()
     uid: azure-maps-control.atlas.Pixel.pop
     package: azure-maps-control
@@ -426,10 +311,11 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function pop()
+      content: 'function pop(): number | undefined'
       return:
-        type: number | undefined
         description: ''
+        type: number | undefined
+    inheritanceDescription: <b>Inherited From</b> Array.pop
   - name: 'push(number[])'
     uid: azure-maps-control.atlas.Pixel.push
     package: azure-maps-control
@@ -438,15 +324,16 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function push(items: number[])'
+      content: 'function push(items: number[]): number'
       parameters:
         - id: items
           type: 'number[]'
           description: |
             New elements of the Array.
       return:
-        type: number
         description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> Array.push
   - name: >-
       reduce((previousValue: number, currentValue: number, currentIndex: number,
       array: number[]) => number)
@@ -462,7 +349,7 @@ methods:
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: number, currentValue:
-        number, currentIndex: number, array: number[]) => number)
+        number, currentIndex: number, array: number[]) => number): number
       parameters:
         - id: callbackfn
           type: >-
@@ -473,8 +360,9 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: number
         description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> Array.reduce
   - name: >-
       reduce((previousValue: number, currentValue: number, currentIndex: number,
       array: number[]) => number, number)
@@ -488,7 +376,7 @@ methods:
       content: >-
         function reduce(callbackfn: (previousValue: number, currentValue:
         number, currentIndex: number, array: number[]) => number, initialValue:
-        number)
+        number): number
       parameters:
         - id: callbackfn
           type: >-
@@ -499,8 +387,9 @@ methods:
           type: number
           description: ''
       return:
-        type: number
         description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> Array.reduce
   - name: >-
       reduce<U>((previousValue: U, currentValue: number, currentIndex: number,
       array: number[]) => U, U)
@@ -516,7 +405,7 @@ methods:
     syntax:
       content: >-
         function reduce<U>(callbackfn: (previousValue: U, currentValue: number,
-        currentIndex: number, array: number[]) => U, initialValue: U)
+        currentIndex: number, array: number[]) => U, initialValue: U): U
       parameters:
         - id: callbackfn
           type: >-
@@ -533,8 +422,9 @@ methods:
             start the accumulation. The first call to the callbackfn function
             provides this value as an argument instead of an array value.
       return:
-        type: U
         description: ''
+        type: U
+    inheritanceDescription: <b>Inherited From</b> Array.reduce
   - name: >-
       reduceRight((previousValue: number, currentValue: number, currentIndex:
       number, array: number[]) => number)
@@ -551,7 +441,7 @@ methods:
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: number, currentValue:
-        number, currentIndex: number, array: number[]) => number)
+        number, currentIndex: number, array: number[]) => number): number
       parameters:
         - id: callbackfn
           type: >-
@@ -562,8 +452,9 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: number
         description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> Array.reduceRight
   - name: >-
       reduceRight((previousValue: number, currentValue: number, currentIndex:
       number, array: number[]) => number, number)
@@ -577,7 +468,7 @@ methods:
       content: >-
         function reduceRight(callbackfn: (previousValue: number, currentValue:
         number, currentIndex: number, array: number[]) => number, initialValue:
-        number)
+        number): number
       parameters:
         - id: callbackfn
           type: >-
@@ -588,8 +479,9 @@ methods:
           type: number
           description: ''
       return:
-        type: number
         description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> Array.reduceRight
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: number, currentIndex:
       number, array: number[]) => U, U)
@@ -606,7 +498,7 @@ methods:
     syntax:
       content: >-
         function reduceRight<U>(callbackfn: (previousValue: U, currentValue:
-        number, currentIndex: number, array: number[]) => U, initialValue: U)
+        number, currentIndex: number, array: number[]) => U, initialValue: U): U
       parameters:
         - id: callbackfn
           type: >-
@@ -623,8 +515,9 @@ methods:
             start the accumulation. The first call to the callbackfn function
             provides this value as an argument instead of an array value.
       return:
-        type: U
         description: ''
+        type: U
+    inheritanceDescription: <b>Inherited From</b> Array.reduceRight
   - name: reverse()
     uid: azure-maps-control.atlas.Pixel.reverse
     package: azure-maps-control
@@ -633,10 +526,11 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function reverse()
+      content: 'function reverse(): number[]'
       return:
-        type: 'number[]'
         description: ''
+        type: 'number[]'
+    inheritanceDescription: <b>Inherited From</b> Array.reverse
   - name: shift()
     uid: azure-maps-control.atlas.Pixel.shift
     package: azure-maps-control
@@ -645,10 +539,11 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function shift()
+      content: 'function shift(): number | undefined'
       return:
-        type: number | undefined
         description: ''
+        type: number | undefined
+    inheritanceDescription: <b>Inherited From</b> Array.shift
   - name: 'slice(number, number)'
     uid: azure-maps-control.atlas.Pixel.slice
     package: azure-maps-control
@@ -657,7 +552,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function slice(start?: number, end?: number)'
+      content: 'function slice(start?: number, end?: number): number[]'
       parameters:
         - id: start
           type: number
@@ -667,8 +562,9 @@ methods:
           description: |
             The end of the specified portion of the array.
       return:
-        type: 'number[]'
         description: ''
+        type: 'number[]'
+    inheritanceDescription: <b>Inherited From</b> Array.slice
   - name: 'some((value: number, index: number, array: number[]) => unknown, any)'
     uid: azure-maps-control.atlas.Pixel.some
     package: azure-maps-control
@@ -681,7 +577,7 @@ methods:
     syntax:
       content: >-
         function some(callbackfn: (value: number, index: number, array:
-        number[]) => unknown, thisArg?: any)
+        number[]) => unknown, thisArg?: any): boolean
       parameters:
         - id: callbackfn
           type: '(value: number, index: number, array: number[]) =&gt; unknown'
@@ -696,8 +592,9 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: boolean
         description: ''
+        type: boolean
+    inheritanceDescription: <b>Inherited From</b> Array.some
   - name: 'sort((a: number, b: number) => number)'
     uid: azure-maps-control.atlas.Pixel.sort
     package: azure-maps-control
@@ -706,7 +603,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function sort(compareFn?: (a: number, b: number) => number)'
+      content: 'function sort(compareFn?: (a: number, b: number) => number): this'
       parameters:
         - id: compareFn
           type: '(a: number, b: number) =&gt; number'
@@ -715,8 +612,9 @@ methods:
             elements. If omitted, the elements are sorted in ascending, ASCII
             character order.
       return:
-        type: this
         description: ''
+        type: this
+    inheritanceDescription: <b>Inherited From</b> Array.sort
   - name: 'splice(number, number)'
     uid: azure-maps-control.atlas.Pixel.splice
     package: azure-maps-control
@@ -727,7 +625,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function splice(start: number, deleteCount?: number)'
+      content: 'function splice(start: number, deleteCount?: number): number[]'
       parameters:
         - id: start
           type: number
@@ -739,8 +637,9 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: 'number[]'
         description: ''
+        type: 'number[]'
+    inheritanceDescription: <b>Inherited From</b> Array.splice
   - name: 'splice(number, number, number[])'
     uid: azure-maps-control.atlas.Pixel.splice_1
     package: azure-maps-control
@@ -751,7 +650,9 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function splice(start: number, deleteCount: number, items: number[])'
+      content: >-
+        function splice(start: number, deleteCount: number, items: number[]):
+        number[]
       parameters:
         - id: start
           type: number
@@ -766,8 +667,9 @@ methods:
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: 'number[]'
         description: ''
+        type: 'number[]'
+    inheritanceDescription: <b>Inherited From</b> Array.splice
   - name: toLocaleString()
     uid: azure-maps-control.atlas.Pixel.toLocaleString
     package: azure-maps-control
@@ -778,10 +680,11 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function toLocaleString()
+      content: 'function toLocaleString(): string'
       return:
-        type: string
         description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Array.toLocaleString
   - name: toString()
     uid: azure-maps-control.atlas.Pixel.toString
     package: azure-maps-control
@@ -790,10 +693,11 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function toString()
+      content: 'function toString(): string'
       return:
-        type: string
         description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Array.toString
   - name: 'unshift(number[])'
     uid: azure-maps-control.atlas.Pixel.unshift
     package: azure-maps-control
@@ -802,13 +706,142 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function unshift(items: number[])'
+      content: 'function unshift(items: number[]): number'
       parameters:
         - id: items
           type: 'number[]'
           description: |
             Elements to insert at the start of the Array.
       return:
-        type: number
         description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> Array.unshift
+methods:
+  - name: fromData(object)
+    uid: azure-maps-control.atlas.Pixel.fromData
+    package: azure-maps-control
+    summary: >-
+      Generates a Pixel object from an object that contains coordinate
+      information.
+
+      The object is scanned for x and y properties using a case insensitive
+      test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function fromData(data: object): Pixel'
+      parameters:
+        - id: data
+          type: object
+          description: The object to extract coordinate information from.
+      return:
+        description: A Pixel object that represents the provided data information.
+        type: <xref uid="azure-maps-control.atlas.Pixel" />
+  - name: 'getDestination(Pixel, number, number)'
+    uid: azure-maps-control.atlas.Pixel.getDestination
+    package: azure-maps-control
+    summary: |-
+      Calculates a destination pixel given an origin pixel,
+      a heading relative to the y-axis (0 = north) with clockwise-rotation,
+      and a distance in pixel units.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function getDestination(origin: Pixel, heading: number, distance:
+        number): Pixel
+      parameters:
+        - id: origin
+          type: <xref uid="azure-maps-control.atlas.Pixel" />
+          description: The starting pixel.
+        - id: heading
+          type: number
+          description: The heading at which to move away from the origin pixel.
+        - id: distance
+          type: number
+          description: |
+            The distance to move from the origin pixel.
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.atlas.Pixel" />
+  - name: 'getDistance(Pixel, Pixel)'
+    uid: azure-maps-control.atlas.Pixel.getDistance
+    package: azure-maps-control
+    summary: |-
+      Calculates the distance between two pixels.
+      Returned value is in screen pixel units.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function getDistance(p1: Pixel, p2: Pixel): number'
+      parameters:
+        - id: p1
+          type: <xref uid="azure-maps-control.atlas.Pixel" />
+          description: The first pixel.
+        - id: p2
+          type: <xref uid="azure-maps-control.atlas.Pixel" />
+          description: |
+            The second pixel.
+      return:
+        description: ''
+        type: number
+  - name: 'getHeading(Pixel, Pixel)'
+    uid: azure-maps-control.atlas.Pixel.getHeading
+    package: azure-maps-control
+    summary: >-
+      Calculates the heading between two pixels.​ The heading value is relative
+      to the y-axis (0 = north) with clockwise-rotation.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function getHeading(origin: Pixel, destination: Pixel): number'
+      parameters:
+        - id: origin
+          type: <xref uid="azure-maps-control.atlas.Pixel" />
+          description: The pixel the heading will point away from.
+        - id: destination
+          type: <xref uid="azure-maps-control.atlas.Pixel" />
+          description: |
+            The pixel the heading will point toward.
+      return:
+        description: ''
+        type: number
+  - name: getX(Pixel)
+    uid: azure-maps-control.atlas.Pixel.getX
+    package: azure-maps-control
+    summary: Return the x coordinate of the specified pixel.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function getX(pixel: Pixel): number'
+      parameters:
+        - id: pixel
+          type: <xref uid="azure-maps-control.atlas.Pixel" />
+          description: |
+            The pixel to get the x coordinate of.
+      return:
+        description: ''
+        type: number
+  - name: getY(Pixel)
+    uid: azure-maps-control.atlas.Pixel.getY
+    package: azure-maps-control
+    summary: Return the y coordinate of the specified pixel.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function getY(pixel: Pixel): number'
+      parameters:
+        - id: pixel
+          type: <xref uid="azure-maps-control.atlas.Pixel" />
+          description: |
+            The pixel to get the y coordinate of.
+      return:
+        description: ''
+        type: number
 extends: Array&lt;number&gt;

@@ -33,7 +33,7 @@ constructors:
 
             If no protocol is specified, e.g. `"atlas.microsoft.com"`, then
             `https` will be assumed.
-properties:
+inheritedProperties:
   - name: mapsUrl
     uid: azure-maps-rest.atlas.service.TimezoneURL.mapsUrl
     package: azure-maps-rest
@@ -45,8 +45,36 @@ properties:
     syntax:
       content: 'mapsUrl: string'
       return:
-        type: string
         description: ''
+        type: string
+    inheritanceDescription: '<b>Inherited From</b> [MapsURL.mapsUrl](xref:MapsURL.mapsUrl)'
+inheritedMethods:
+  - name: 'newPipeline(Credential, INewPipelineOptions)'
+    uid: azure-maps-rest.atlas.service.TimezoneURL.newPipeline
+    package: azure-maps-rest
+    summary: >-
+      A static method used to create a new Pipeline object with Credential
+      provided.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function newPipeline(credential: Credential, pipelineOptions?:
+        INewPipelineOptions): Pipeline
+      parameters:
+        - id: credential
+          type: <xref uid="azure-maps-rest.atlas.service.Credential" />
+          description: >-
+            Such as SubscriptionKeyCredential, TokenCredential, and
+            MapControlCredential.
+        - id: pipelineOptions
+          type: <xref uid="azure-maps-rest.atlas.service.INewPipelineOptions" />
+          description: ''
+      return:
+        description: A new Pipeline object.
+        type: <xref uid="azure-maps-rest.atlas.service.Pipeline" />
+    inheritanceDescription: '<b>Inherited From</b> [MapsURL.newPipeline](xref:MapsURL.newPipeline)'
 methods:
   - name: >-
       getTimezoneByCoordinates(Aborter, GeoJSON.Position,
@@ -70,7 +98,8 @@ methods:
     syntax:
       content: >-
         function getTimezoneByCoordinates(aborter: Aborter, coordinate:
-        GeoJSON.Position, options?: GetTimezoneByCoordinatesOptions)
+        GeoJSON.Position, options?: GetTimezoneByCoordinatesOptions):
+        Promise<GetTimezoneByCoordinatesResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -92,11 +121,11 @@ methods:
             />
           description: ''
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.GetTimezoneByCoordinatesResponse"
           />&gt;
-        description: ''
   - name: 'getTimezoneById(Aborter, string, GetTimezoneByIdOptions)'
     uid: azure-maps-rest.atlas.service.TimezoneURL.getTimezoneById
     package: azure-maps-rest
@@ -114,7 +143,7 @@ methods:
     syntax:
       content: >-
         function getTimezoneById(aborter: Aborter, id: string, options?:
-        GetTimezoneByIdOptions)
+        GetTimezoneByIdOptions): Promise<GetTimezoneByIdResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -126,33 +155,8 @@ methods:
           type: <xref uid="azure-maps-rest.atlas.service.GetTimezoneByIdOptions" />
           description: ''
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.GetTimezoneByIdResponse" />&gt;
-        description: ''
-  - name: 'newPipeline(Credential, INewPipelineOptions)'
-    uid: azure-maps-rest.atlas.service.TimezoneURL.newPipeline
-    package: azure-maps-rest
-    summary: >-
-      A static method used to create a new Pipeline object with Credential
-      provided.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        static function newPipeline(credential: Credential, pipelineOptions?:
-        INewPipelineOptions)
-      parameters:
-        - id: credential
-          type: <xref uid="azure-maps-rest.atlas.service.Credential" />
-          description: >-
-            Such as SubscriptionKeyCredential, TokenCredential, and
-            MapControlCredential.
-        - id: pipelineOptions
-          type: <xref uid="azure-maps-rest.atlas.service.INewPipelineOptions" />
-          description: ''
-      return:
-        type: <xref uid="azure-maps-rest.atlas.service.Pipeline" />
-        description: A new Pipeline object.
 extends: <xref uid="azure-maps-rest.atlas.service.MapsURL" />

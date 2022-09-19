@@ -26,8 +26,8 @@ properties:
     syntax:
       content: 'base?: number | Expression'
       return:
-        type: number | <xref uid="azure-maps-control.atlas.Expression" />
         description: ''
+        type: number | <xref uid="azure-maps-control.atlas.Expression" />
   - name: fillColor
     uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.fillColor
     package: azure-maps-control
@@ -42,8 +42,8 @@ properties:
     syntax:
       content: 'fillColor?: string | Expression'
       return:
-        type: string | <xref uid="azure-maps-control.atlas.Expression" />
         description: ''
+        type: string | <xref uid="azure-maps-control.atlas.Expression" />
   - name: fillOpacity
     uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.fillOpacity
     package: azure-maps-control
@@ -59,8 +59,8 @@ properties:
     syntax:
       content: 'fillOpacity?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: fillPattern
     uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.fillPattern
     package: azure-maps-control
@@ -76,23 +76,8 @@ properties:
     syntax:
       content: 'fillPattern?: string'
       return:
+        description: ''
         type: string
-        description: ''
-  - name: filter
-    uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.filter
-    package: azure-maps-control
-    summary: |-
-      An expression specifying conditions on source features.
-      Only features that match the filter are displayed.
-    fullName: filter
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'filter?: Expression'
-      return:
-        type: <xref uid="azure-maps-control.atlas.Expression" />
-        description: ''
   - name: height
     uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.height
     package: azure-maps-control
@@ -108,46 +93,8 @@ properties:
     syntax:
       content: 'height?: number | Expression'
       return:
+        description: ''
         type: number | <xref uid="azure-maps-control.atlas.Expression" />
-        description: ''
-  - name: maxZoom
-    uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.maxZoom
-    package: azure-maps-control
-    summary: >-
-      An integer specifying the maximum zoom level to render the layer at.
-
-      This value is exclusive, i.e. the layer will be visible at `maxZoom > zoom
-      >= minZoom`.
-
-      Default `24`.
-    fullName: maxZoom
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'maxZoom?: number'
-      return:
-        type: number
-        description: ''
-  - name: minZoom
-    uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.minZoom
-    package: azure-maps-control
-    summary: >-
-      An integer specifying the minimum zoom level to render the layer at.
-
-      This value is inclusive, i.e. the layer will be visible at `maxZoom > zoom
-      >= minZoom`.
-
-      Default `0`.
-    fullName: minZoom
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'minZoom?: number'
-      return:
-        type: number
-        description: ''
   - name: source
     uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.source
     package: azure-maps-control
@@ -159,8 +106,8 @@ properties:
     syntax:
       content: 'source?: string | Source'
       return:
-        type: string | <xref uid="azure-maps-control.atlas.source.Source" />
         description: ''
+        type: string | <xref uid="azure-maps-control.atlas.source.Source" />
   - name: sourceLayer
     uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.sourceLayer
     package: azure-maps-control
@@ -178,8 +125,8 @@ properties:
     syntax:
       content: 'sourceLayer?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: translate
     uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.translate
     package: azure-maps-control
@@ -194,8 +141,8 @@ properties:
     syntax:
       content: 'translate?: Pixel'
       return:
-        type: <xref uid="azure-maps-control.atlas.Pixel" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.Pixel" />
   - name: translateAnchor
     uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.translateAnchor
     package: azure-maps-control
@@ -211,8 +158,8 @@ properties:
     syntax:
       content: 'translateAnchor?: "map" | "viewport"'
       return:
-        type: '"map" | "viewport"'
         description: ''
+        type: '"map" | "viewport"'
   - name: verticalGradient
     uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.verticalGradient
     package: azure-maps-control
@@ -228,8 +175,65 @@ properties:
     syntax:
       content: 'verticalGradient?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
+inheritedProperties:
+  - name: filter
+    uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.filter
+    package: azure-maps-control
+    summary: |-
+      An expression specifying conditions on source features.
+      Only features that match the filter are displayed.
+    fullName: filter
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'filter?: Expression'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.atlas.Expression" />
+    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.filter](xref:LayerOptions.filter)'
+  - name: maxZoom
+    uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.maxZoom
+    package: azure-maps-control
+    summary: >-
+      An integer specifying the maximum zoom level to render the layer at.
+
+      This value is exclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `24`.
+    fullName: maxZoom
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxZoom?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.maxZoom](xref:LayerOptions.maxZoom)'
+  - name: minZoom
+    uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.minZoom
+    package: azure-maps-control
+    summary: >-
+      An integer specifying the minimum zoom level to render the layer at.
+
+      This value is inclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `0`.
+    fullName: minZoom
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'minZoom?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.minZoom](xref:LayerOptions.minZoom)'
   - name: visible
     uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.visible
     package: azure-maps-control
@@ -243,6 +247,7 @@ properties:
     syntax:
       content: 'visible?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
+    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.visible](xref:LayerOptions.visible)'
 extends: <xref uid="azure-maps-control.atlas.LayerOptions" />

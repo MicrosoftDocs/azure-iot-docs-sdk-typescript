@@ -10,20 +10,6 @@ isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: abortSignal
-    uid: >-
-      azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams.abortSignal
-    package: azure-maps-rest
-    summary: The signal which can be used to abort requests.
-    fullName: abortSignal
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'abortSignal?: AbortSignalLike'
-      return:
-        type: AbortSignalLike
-        description: ''
   - name: arriveAt
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams.arriveAt
@@ -46,8 +32,8 @@ properties:
     syntax:
       content: 'arriveAt?: Date'
       return:
-        type: Date
         description: ''
+        type: Date
   - name: avoid
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams.avoid
@@ -71,10 +57,10 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'avoid?: Avoid'
+      content: 'avoid?: Avoid[]'
       return:
-        type: <xref uid="azure-maps-rest.atlas.service.Models.Avoid" />
         description: ''
+        type: '<xref uid="azure-maps-rest.atlas.service.Models.Avoid" />[]'
   - name: computeTravelTimeFor
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams.computeTravelTimeFor
@@ -94,26 +80,10 @@ properties:
     syntax:
       content: 'computeTravelTimeFor?: ComputeTravelTimeFor'
       return:
+        description: ''
         type: >-
           <xref uid="azure-maps-rest.atlas.service.Models.ComputeTravelTimeFor"
           />
-        description: ''
-  - name: customHeaders
-    uid: >-
-      azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams.customHeaders
-    package: azure-maps-rest
-    summary: |-
-      {object} [customHeaders] User defined custom request headers that
-      will be applied before the request is sent.
-    fullName: customHeaders
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'customHeaders?: [key: string]: string'
-      return:
-        type: '[key: string]\: string'
-        description: ''
   - name: departAt
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams.departAt
@@ -136,8 +106,8 @@ properties:
     syntax:
       content: 'departAt?: Date'
       return:
-        type: Date
         description: ''
+        type: Date
   - name: hilliness
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams.hilliness
@@ -154,36 +124,8 @@ properties:
     syntax:
       content: 'hilliness?: Hilliness'
       return:
+        description: ''
         type: <xref uid="azure-maps-rest.atlas.service.Models.Hilliness" />
-        description: ''
-  - name: onDownloadProgress
-    uid: >-
-      azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams.onDownloadProgress
-    package: azure-maps-rest
-    summary: Callback which fires upon download progress.
-    fullName: onDownloadProgress
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'onDownloadProgress?: (progress: TransferProgressEvent) => void'
-      return:
-        type: '(progress: TransferProgressEvent) =&gt; void'
-        description: ''
-  - name: onUploadProgress
-    uid: >-
-      azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams.onUploadProgress
-    package: azure-maps-rest
-    summary: Callback which fires upon upload progress.
-    fullName: onUploadProgress
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'onUploadProgress?: (progress: TransferProgressEvent) => void'
-      return:
-        type: '(progress: TransferProgressEvent) =&gt; void'
-        description: ''
   - name: routeType
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams.routeType
@@ -200,8 +142,8 @@ properties:
     syntax:
       content: 'routeType?: RouteType'
       return:
-        type: <xref uid="azure-maps-rest.atlas.service.Models.RouteType" />
         description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.RouteType" />
   - name: sectionType
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams.sectionType
@@ -228,24 +170,8 @@ properties:
     syntax:
       content: 'sectionType?: SectionType'
       return:
+        description: ''
         type: <xref uid="azure-maps-rest.atlas.service.Models.SectionType" />
-        description: ''
-  - name: timeout
-    uid: >-
-      azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams.timeout
-    package: azure-maps-rest
-    summary: >-
-      The number of milliseconds a request can take before automatically being
-      terminated.
-    fullName: timeout
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'timeout?: number'
-      return:
-        type: number
-        description: ''
   - name: traffic
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams.traffic
@@ -269,8 +195,8 @@ properties:
     syntax:
       content: 'traffic?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: travelMode
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams.travelMode
@@ -302,8 +228,8 @@ properties:
     syntax:
       content: 'travelMode?: TravelMode'
       return:
-        type: <xref uid="azure-maps-rest.atlas.service.Models.TravelMode" />
         description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.TravelMode" />
   - name: vehicleAxleWeight
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams.vehicleAxleWeight
@@ -320,8 +246,8 @@ properties:
     syntax:
       content: 'vehicleAxleWeight?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: vehicleHeight
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams.vehicleHeight
@@ -338,8 +264,8 @@ properties:
     syntax:
       content: 'vehicleHeight?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: vehicleLength
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams.vehicleLength
@@ -356,8 +282,8 @@ properties:
     syntax:
       content: 'vehicleLength?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: vehicleLoadType
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams.vehicleLoadType
@@ -392,8 +318,8 @@ properties:
     syntax:
       content: 'vehicleLoadType?: VehicleLoadType'
       return:
-        type: <xref uid="azure-maps-rest.atlas.service.Models.VehicleLoadType" />
         description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.VehicleLoadType" />
   - name: vehicleMaxSpeed
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams.vehicleMaxSpeed
@@ -413,8 +339,8 @@ properties:
     syntax:
       content: 'vehicleMaxSpeed?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: vehicleWeight
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams.vehicleWeight
@@ -427,8 +353,8 @@ properties:
     syntax:
       content: 'vehicleWeight?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: vehicleWidth
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams.vehicleWidth
@@ -443,8 +369,8 @@ properties:
     syntax:
       content: 'vehicleWidth?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: waitForResults
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams.waitForResults
@@ -465,8 +391,8 @@ properties:
     syntax:
       content: 'waitForResults?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: windingness
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams.windingness
@@ -483,6 +409,86 @@ properties:
     syntax:
       content: 'windingness?: Windingness'
       return:
-        type: <xref uid="azure-maps-rest.atlas.service.Models.Windingness" />
         description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.Windingness" />
+inheritedProperties:
+  - name: abortSignal
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams.abortSignal
+    package: azure-maps-rest
+    summary: The signal which can be used to abort requests.
+    fullName: abortSignal
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'abortSignal?: AbortSignalLike'
+      return:
+        description: ''
+        type: AbortSignalLike
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.abortSignal
+  - name: customHeaders
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams.customHeaders
+    package: azure-maps-rest
+    summary: |-
+      {object} [customHeaders] User defined custom request headers that
+      will be applied before the request is sent.
+    fullName: customHeaders
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'customHeaders?: [key: string]: string'
+      return:
+        description: ''
+        type: '[key: string]\: string'
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.customHeaders
+  - name: onDownloadProgress
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams.onDownloadProgress
+    package: azure-maps-rest
+    summary: Callback which fires upon download progress.
+    fullName: onDownloadProgress
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'onDownloadProgress?: (progress: TransferProgressEvent) => void'
+      return:
+        description: ''
+        type: '(progress: TransferProgressEvent) =&gt; void'
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.onDownloadProgress
+  - name: onUploadProgress
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams.onUploadProgress
+    package: azure-maps-rest
+    summary: Callback which fires upon upload progress.
+    fullName: onUploadProgress
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'onUploadProgress?: (progress: TransferProgressEvent) => void'
+      return:
+        description: ''
+        type: '(progress: TransferProgressEvent) =&gt; void'
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.onUploadProgress
+  - name: timeout
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RouteBeginPostRouteMatrixPreviewOptionalParams.timeout
+    package: azure-maps-rest
+    summary: >-
+      The number of milliseconds a request can take before automatically being
+      terminated.
+    fullName: timeout
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'timeout?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.timeout
 extends: RequestOptionsBase

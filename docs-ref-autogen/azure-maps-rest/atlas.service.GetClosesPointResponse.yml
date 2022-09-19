@@ -7,6 +7,9 @@ fullName: GetClosesPointResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type GetClosesPointResponse =
-  Response<GetClosestPointResponse,Models.SpatialGetClosestPointResponse,ClosestPointGeojson>
+syntax: |
+  type GetClosesPointResponse = Response<
+    GetClosestPointResponse,
+    Models.SpatialGetClosestPointResponse,
+    ClosestPointGeojson
+  >

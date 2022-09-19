@@ -9,32 +9,6 @@ isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: bbox
-    uid: azure-maps-spatial-io.atlas.ExtendedFeatureCollection.bbox
-    package: azure-maps-spatial-io
-    summary: The bounding box of the feature collection.
-    fullName: bbox
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'bbox?: BoundingBox'
-      return:
-        type: BoundingBox
-        description: ''
-  - name: features
-    uid: azure-maps-spatial-io.atlas.ExtendedFeatureCollection.features
-    package: azure-maps-spatial-io
-    summary: The collection of GeoJSON features contained in the feature collection.
-    fullName: features
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'features: Array<Feature<Geometry, any>>'
-      return:
-        type: 'Array&lt;Feature&lt;Geometry, any&gt;&gt;'
-        description: ''
   - name: properties
     uid: azure-maps-spatial-io.atlas.ExtendedFeatureCollection.properties
     package: azure-maps-spatial-io
@@ -46,8 +20,37 @@ properties:
     syntax:
       content: 'properties?: any'
       return:
-        type: any
         description: ''
+        type: any
+inheritedProperties:
+  - name: bbox
+    uid: azure-maps-spatial-io.atlas.ExtendedFeatureCollection.bbox
+    package: azure-maps-spatial-io
+    summary: The bounding box of the feature collection.
+    fullName: bbox
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'bbox?: BoundingBox'
+      return:
+        description: ''
+        type: BoundingBox
+    inheritanceDescription: <b>Inherited From</b> FeatureCollection.bbox
+  - name: features
+    uid: azure-maps-spatial-io.atlas.ExtendedFeatureCollection.features
+    package: azure-maps-spatial-io
+    summary: The collection of GeoJSON features contained in the feature collection.
+    fullName: features
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'features: Array<Feature<Geometry, any>>'
+      return:
+        description: ''
+        type: 'Array&lt;Feature&lt;Geometry, any&gt;&gt;'
+    inheritanceDescription: <b>Inherited From</b> FeatureCollection.features
   - name: type
     uid: azure-maps-spatial-io.atlas.ExtendedFeatureCollection.type
     package: azure-maps-spatial-io
@@ -59,8 +62,9 @@ properties:
     syntax:
       content: 'type: string'
       return:
-        type: string
         description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> FeatureCollection.type
   - name: TYPE
     uid: azure-maps-spatial-io.atlas.ExtendedFeatureCollection.TYPE
     package: azure-maps-spatial-io
@@ -74,6 +78,7 @@ properties:
     syntax:
       content: 'static TYPE: string'
       return:
-        type: string
         description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> FeatureCollection.TYPE
 extends: FeatureCollection

@@ -7,7 +7,10 @@ fullName: SpatialDataReadOptions
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
+syntax: |
   type SpatialDataReadOptions = BaseSpatialDataReadOptions &
-  BaseSpatialXmlReadOptions & GmlReadOptions & GpxReadOptions & KmlReadOptions &
-  SpatialCsvReadOptions
+    BaseSpatialXmlReadOptions &
+    GmlReadOptions &
+    GpxReadOptions &
+    KmlReadOptions &
+    SpatialCsvReadOptions

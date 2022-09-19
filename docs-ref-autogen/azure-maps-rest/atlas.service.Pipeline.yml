@@ -51,8 +51,8 @@ properties:
     syntax:
       content: 'factories: msRest.RequestPolicyFactory[]'
       return:
-        type: '<xref uid="msRest.RequestPolicyFactory" />[]'
         description: ''
+        type: '<xref uid="msRest.RequestPolicyFactory" />[]'
   - name: options
     uid: azure-maps-rest.atlas.service.Pipeline.options
     package: azure-maps-rest
@@ -64,8 +64,8 @@ properties:
     syntax:
       content: 'options: IPipelineOptions'
       return:
-        type: <xref uid="azure-maps-rest.atlas.service.IPipelineOptions" />
         description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.IPipelineOptions" />
 methods:
   - name: toServiceClientOptions()
     uid: azure-maps-rest.atlas.service.Pipeline.toServiceClientOptions
@@ -77,7 +77,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function toServiceClientOptions()
+      content: 'function toServiceClientOptions(): ServiceClientOptions'
       return:
-        type: ServiceClientOptions
         description: ''
+        type: ServiceClientOptions

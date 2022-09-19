@@ -7,10 +7,10 @@ summary: >-
   geojson helper.
 
   Also provides the raw response data in the response object.
-fullName: Response<D>
+fullName: 'Response<D, R, G>'
 remarks: ''
 isPreview: false
 isDeprecated: false
 syntax: >-
-  type Response<D,R,G> = D & G extends undefined ? { rawResponse:
+  type Response<D, R, G> = D & G extends UndefinedGeojson ? { rawResponse:
   R["_response"]; } : { rawResponse: R["_response"]; geojson: G; }

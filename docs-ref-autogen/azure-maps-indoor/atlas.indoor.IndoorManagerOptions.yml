@@ -2,7 +2,7 @@
 name: IndoorManagerOptions
 uid: azure-maps-indoor.atlas.indoor.IndoorManagerOptions
 package: azure-maps-indoor
-summary: Options for the drawing manager.
+summary: Options for the Indoor Manager.
 fullName: IndoorManagerOptions
 remarks: ''
 isPreview: false
@@ -21,10 +21,10 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'public geography?: "eu" | "us" | string = "us"'
+      content: 'geography?: "eu" | "us" | string'
       return:
-        type: '"eu" | "us" | string'
         description: ''
+        type: '"eu" | "us" | string'
   - name: levelControl
     uid: azure-maps-indoor.atlas.indoor.IndoorManagerOptions.levelControl
     package: azure-maps-indoor
@@ -34,10 +34,10 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'public levelControl?: LevelControl'
+      content: 'levelControl?: LevelControl'
       return:
-        type: <xref uid="azure-maps-indoor.atlas.control.LevelControl" />
         description: ''
+        type: <xref uid="azure-maps-indoor.atlas.control.LevelControl" />
   - name: statesetId
     uid: azure-maps-indoor.atlas.indoor.IndoorManagerOptions.statesetId
     package: azure-maps-indoor
@@ -49,10 +49,10 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'public statesetId?: string'
+      content: 'statesetId?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: theme
     uid: azure-maps-indoor.atlas.indoor.IndoorManagerOptions.theme
     package: azure-maps-indoor
@@ -64,10 +64,10 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'public theme?: "auto" | "dark" | "light"'
+      content: 'theme?: "auto" | "dark" | "light"'
       return:
-        type: '"auto" | "dark" | "light"'
         description: ''
+        type: '"auto" | "dark" | "light"'
   - name: tilesetId
     uid: azure-maps-indoor.atlas.indoor.IndoorManagerOptions.tilesetId
     package: azure-maps-indoor
@@ -79,7 +79,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'public tilesetId?: string'
+      content: 'tilesetId?: string'
       return:
-        type: string
         description: ''
+        type: string

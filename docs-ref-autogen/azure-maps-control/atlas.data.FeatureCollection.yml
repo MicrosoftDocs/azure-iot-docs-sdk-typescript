@@ -48,8 +48,8 @@ properties:
     syntax:
       content: 'bbox?: BoundingBox'
       return:
-        type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
   - name: features
     uid: azure-maps-control.atlas.data.FeatureCollection.features
     package: azure-maps-control
@@ -61,10 +61,10 @@ properties:
     syntax:
       content: 'features: Array<Feature<Geometry, any>>'
       return:
+        description: ''
         type: >-
           Array&lt;<xref uid="azure-maps-control.atlas.data.Feature" />&lt;<xref
           uid="azure-maps-control.atlas.data.Geometry" />, any&gt;&gt;
-        description: ''
   - name: type
     uid: azure-maps-control.atlas.data.FeatureCollection.type
     package: azure-maps-control
@@ -76,8 +76,8 @@ properties:
     syntax:
       content: 'type: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: TYPE
     uid: azure-maps-control.atlas.data.FeatureCollection.TYPE
     package: azure-maps-control
@@ -91,5 +91,5 @@ properties:
     syntax:
       content: 'static TYPE: string'
       return:
-        type: string
         description: ''
+        type: string

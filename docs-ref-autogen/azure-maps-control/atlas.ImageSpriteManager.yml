@@ -12,7 +12,7 @@ isPreview: false
 isDeprecated: false
 type: interface
 methods:
-  - name: 'add(string, string | HTMLImageElement | ImageData)'
+  - name: 'add(string, string | HTMLImageElement | ImageData, StyleImageMetadata)'
     uid: azure-maps-control.atlas.ImageSpriteManager.add
     package: azure-maps-control
     summary: >-
@@ -22,7 +22,9 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function add(id: string, icon: string | HTMLImageElement | ImageData)'
+      content: >-
+        function add(id: string, icon: string | HTMLImageElement | ImageData,
+        meta?: StyleImageMetadata): Promise<void>
       parameters:
         - id: id
           type: string
@@ -33,12 +35,16 @@ methods:
             new image will be ignored.
         - id: icon
           type: string | HTMLImageElement | ImageData
-          description: >
+          description: >-
             The image to add to the map's sprite. Can be a data URI, inline SVG,
             or image URL.
+        - id: meta
+          type: <xref uid="azure-maps-control.atlas.StyleImageMetadata" />
+          description: |
+            Additional options that describe the image
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: clear()
     uid: azure-maps-control.atlas.ImageSpriteManager.clear
     package: azure-maps-control
@@ -70,7 +76,7 @@ methods:
     syntax:
       content: >-
         function createFromTemplate(id: string, templateName: string, color?:
-        string, secondaryColor?: string, scale?: number)
+        string, secondaryColor?: string, scale?: number): Promise<void>
       parameters:
         - id: id
           type: string
@@ -94,8 +100,8 @@ methods:
             use the symbol layers icon size option to scale down if needed. This
             will reduce blurriness due to scaling. Default: 1
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: getImageIds()
     uid: azure-maps-control.atlas.ImageSpriteManager.getImageIds
     package: azure-maps-control
@@ -106,10 +112,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getImageIds()
+      content: 'function getImageIds(): string[]'
       return:
-        type: 'string[]'
         description: ''
+        type: 'string[]'
   - name: hasImage(string)
     uid: azure-maps-control.atlas.ImageSpriteManager.hasImage
     package: azure-maps-control
@@ -118,15 +124,15 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function hasImage(id: string)'
+      content: 'function hasImage(id: string): boolean'
       parameters:
         - id: id
           type: string
           description: |
             The id to check the map's image sprite for.
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: remove(string)
     uid: azure-maps-control.atlas.ImageSpriteManager.remove
     package: azure-maps-control

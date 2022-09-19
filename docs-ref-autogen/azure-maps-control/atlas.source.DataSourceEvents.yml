@@ -20,8 +20,8 @@ properties:
     syntax:
       content: 'dataadded: Shape[]'
       return:
-        type: '<xref uid="azure-maps-control.atlas.Shape" />[]'
         description: ''
+        type: '<xref uid="azure-maps-control.atlas.Shape" />[]'
   - name: dataremoved
     uid: azure-maps-control.atlas.source.DataSourceEvents.dataremoved
     package: azure-maps-control
@@ -33,8 +33,8 @@ properties:
     syntax:
       content: 'dataremoved: Shape[]'
       return:
-        type: '<xref uid="azure-maps-control.atlas.Shape" />[]'
         description: ''
+        type: '<xref uid="azure-maps-control.atlas.Shape" />[]'
   - name: datasourceupdated
     uid: azure-maps-control.atlas.source.DataSourceEvents.datasourceupdated
     package: azure-maps-control
@@ -46,8 +46,9 @@ properties:
     syntax:
       content: 'datasourceupdated: DataSource'
       return:
-        type: <xref uid="azure-maps-control.atlas.source.DataSource" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.source.DataSource" />
+inheritedProperties:
   - name: sourceadded
     uid: azure-maps-control.atlas.source.DataSourceEvents.sourceadded
     package: azure-maps-control
@@ -59,8 +60,11 @@ properties:
     syntax:
       content: 'sourceadded: Source'
       return:
-        type: <xref uid="azure-maps-control.atlas.source.Source" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.source.Source" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SourceEvents.sourceadded](xref:SourceEvents.sourceadded)
   - name: sourceremoved
     uid: azure-maps-control.atlas.source.DataSourceEvents.sourceremoved
     package: azure-maps-control
@@ -72,6 +76,9 @@ properties:
     syntax:
       content: 'sourceremoved: Source'
       return:
-        type: <xref uid="azure-maps-control.atlas.source.Source" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.source.Source" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SourceEvents.sourceremoved](xref:SourceEvents.sourceremoved)
 extends: <xref uid="azure-maps-control.atlas.source.SourceEvents" />

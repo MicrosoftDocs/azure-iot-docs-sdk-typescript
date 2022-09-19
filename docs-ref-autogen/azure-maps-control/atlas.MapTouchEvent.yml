@@ -20,34 +20,8 @@ properties:
     syntax:
       content: 'layerId?: string'
       return:
+        description: ''
         type: string
-        description: ''
-  - name: map
-    uid: azure-maps-control.atlas.MapTouchEvent.map
-    package: azure-maps-control
-    summary: The `Map` instance in which the event occurred on.
-    fullName: map
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'map: Map'
-      return:
-        type: <xref uid="azure-maps-control.atlas.Map" />
-        description: ''
-  - name: originalEvent
-    uid: azure-maps-control.atlas.MapTouchEvent.originalEvent
-    package: azure-maps-control
-    summary: The original event that was fired.
-    fullName: originalEvent
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'originalEvent?: Event'
-      return:
-        type: Event
-        description: ''
   - name: pixel
     uid: azure-maps-control.atlas.MapTouchEvent.pixel
     package: azure-maps-control
@@ -61,8 +35,8 @@ properties:
     syntax:
       content: 'pixel?: Pixel'
       return:
-        type: <xref uid="azure-maps-control.atlas.Pixel" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.Pixel" />
   - name: pixels
     uid: azure-maps-control.atlas.MapTouchEvent.pixels
     package: azure-maps-control
@@ -74,8 +48,8 @@ properties:
     syntax:
       content: 'pixels?: Pixel[]'
       return:
-        type: '<xref uid="azure-maps-control.atlas.Pixel" />[]'
         description: ''
+        type: '<xref uid="azure-maps-control.atlas.Pixel" />[]'
   - name: position
     uid: azure-maps-control.atlas.MapTouchEvent.position
     package: azure-maps-control
@@ -87,8 +61,8 @@ properties:
     syntax:
       content: 'position?: Position'
       return:
-        type: <xref uid="azure-maps-control.atlas.data.Position" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.data.Position" />
   - name: positions
     uid: azure-maps-control.atlas.MapTouchEvent.positions
     package: azure-maps-control
@@ -100,21 +74,8 @@ properties:
     syntax:
       content: 'positions?: Position[]'
       return:
+        description: ''
         type: '<xref uid="azure-maps-control.atlas.data.Position" />[]'
-        description: ''
-  - name: preventDefault
-    uid: azure-maps-control.atlas.MapTouchEvent.preventDefault
-    package: azure-maps-control
-    summary: Prevents event propagation bubbling up the event chain.
-    fullName: preventDefault
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'preventDefault: () => void'
-      return:
-        type: () =&gt; void
-        description: ''
   - name: shapes
     uid: azure-maps-control.atlas.MapTouchEvent.shapes
     package: azure-maps-control
@@ -126,8 +87,55 @@ properties:
     syntax:
       content: 'shapes?: Shape[]'
       return:
-        type: '<xref uid="azure-maps-control.atlas.Shape" />[]'
         description: ''
+        type: '<xref uid="azure-maps-control.atlas.Shape" />[]'
+inheritedProperties:
+  - name: map
+    uid: azure-maps-control.atlas.MapTouchEvent.map
+    package: azure-maps-control
+    summary: The `Map` instance in which the event occurred on.
+    fullName: map
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'map: Map'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.atlas.Map" />
+    inheritanceDescription: '<b>Inherited From</b> [MapEvent.map](xref:MapEvent.map)'
+  - name: originalEvent
+    uid: azure-maps-control.atlas.MapTouchEvent.originalEvent
+    package: azure-maps-control
+    summary: The original event that was fired.
+    fullName: originalEvent
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'originalEvent?: Event'
+      return:
+        description: ''
+        type: Event
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MapEvent.originalEvent](xref:MapEvent.originalEvent)
+  - name: preventDefault
+    uid: azure-maps-control.atlas.MapTouchEvent.preventDefault
+    package: azure-maps-control
+    summary: Prevents event propagation bubbling up the event chain.
+    fullName: preventDefault
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'preventDefault: () => void'
+      return:
+        description: ''
+        type: () =&gt; void
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MapMouseWheelEvent.preventDefault](xref:MapMouseWheelEvent.preventDefault)
   - name: type
     uid: azure-maps-control.atlas.MapTouchEvent.type
     package: azure-maps-control
@@ -139,6 +147,7 @@ properties:
     syntax:
       content: 'type: string'
       return:
-        type: string
         description: ''
+        type: string
+    inheritanceDescription: '<b>Inherited From</b> [MapEvent.type](xref:MapEvent.type)'
 extends: <xref uid="azure-maps-control.atlas.MapMouseWheelEvent" />

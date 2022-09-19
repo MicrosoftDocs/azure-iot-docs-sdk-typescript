@@ -10,20 +10,6 @@ isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: abortSignal
-    uid: >-
-      azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseOptionalParams.abortSignal
-    package: azure-maps-rest
-    summary: The signal which can be used to abort requests.
-    fullName: abortSignal
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'abortSignal?: AbortSignalLike'
-      return:
-        type: AbortSignalLike
-        description: ''
   - name: allowFreeformNewline
     uid: >-
       azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseOptionalParams.allowFreeformNewline
@@ -39,24 +25,8 @@ properties:
     syntax:
       content: 'allowFreeformNewline?: boolean'
       return:
+        description: ''
         type: boolean
-        description: ''
-  - name: customHeaders
-    uid: >-
-      azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseOptionalParams.customHeaders
-    package: azure-maps-rest
-    summary: |-
-      {object} [customHeaders] User defined custom request headers that
-      will be applied before the request is sent.
-    fullName: customHeaders
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'customHeaders?: [key: string]: string'
-      return:
-        type: '[key: string]\: string'
-        description: ''
   - name: entityType
     uid: >-
       azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseOptionalParams.entityType
@@ -91,8 +61,8 @@ properties:
     syntax:
       content: 'entityType?: EntityType'
       return:
-        type: <xref uid="azure-maps-rest.atlas.service.Models.EntityType" />
         description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.EntityType" />
   - name: heading
     uid: >-
       azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseOptionalParams.heading
@@ -112,8 +82,8 @@ properties:
     syntax:
       content: 'heading?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: language
     uid: >-
       azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseOptionalParams.language
@@ -138,8 +108,8 @@ properties:
     syntax:
       content: 'language?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: number
     uid: >-
       azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseOptionalParams.number
@@ -156,36 +126,8 @@ properties:
     syntax:
       content: 'number?: string'
       return:
+        description: ''
         type: string
-        description: ''
-  - name: onDownloadProgress
-    uid: >-
-      azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseOptionalParams.onDownloadProgress
-    package: azure-maps-rest
-    summary: Callback which fires upon download progress.
-    fullName: onDownloadProgress
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'onDownloadProgress?: (progress: TransferProgressEvent) => void'
-      return:
-        type: '(progress: TransferProgressEvent) =&gt; void'
-        description: ''
-  - name: onUploadProgress
-    uid: >-
-      azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseOptionalParams.onUploadProgress
-    package: azure-maps-rest
-    summary: Callback which fires upon upload progress.
-    fullName: onUploadProgress
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'onUploadProgress?: (progress: TransferProgressEvent) => void'
-      return:
-        type: '(progress: TransferProgressEvent) =&gt; void'
-        description: ''
   - name: radius
     uid: >-
       azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseOptionalParams.radius
@@ -200,8 +142,8 @@ properties:
     syntax:
       content: 'radius?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: returnMatchType
     uid: >-
       azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseOptionalParams.returnMatchType
@@ -216,8 +158,8 @@ properties:
     syntax:
       content: 'returnMatchType?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: returnRoadUse
     uid: >-
       azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseOptionalParams.returnRoadUse
@@ -232,8 +174,8 @@ properties:
     syntax:
       content: 'returnRoadUse?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: returnSpeedLimit
     uid: >-
       azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseOptionalParams.returnSpeedLimit
@@ -246,8 +188,8 @@ properties:
     syntax:
       content: 'returnSpeedLimit?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: roadUse
     uid: >-
       azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseOptionalParams.roadUse
@@ -267,24 +209,8 @@ properties:
     syntax:
       content: 'roadUse?: string'
       return:
+        description: ''
         type: string
-        description: ''
-  - name: timeout
-    uid: >-
-      azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseOptionalParams.timeout
-    package: azure-maps-rest
-    summary: >-
-      The number of milliseconds a request can take before automatically being
-      terminated.
-    fullName: timeout
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'timeout?: number'
-      return:
-        type: number
-        description: ''
   - name: view
     uid: >-
       azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseOptionalParams.view
@@ -331,6 +257,86 @@ properties:
     syntax:
       content: 'view?: string'
       return:
-        type: string
         description: ''
+        type: string
+inheritedProperties:
+  - name: abortSignal
+    uid: >-
+      azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseOptionalParams.abortSignal
+    package: azure-maps-rest
+    summary: The signal which can be used to abort requests.
+    fullName: abortSignal
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'abortSignal?: AbortSignalLike'
+      return:
+        description: ''
+        type: AbortSignalLike
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.abortSignal
+  - name: customHeaders
+    uid: >-
+      azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseOptionalParams.customHeaders
+    package: azure-maps-rest
+    summary: |-
+      {object} [customHeaders] User defined custom request headers that
+      will be applied before the request is sent.
+    fullName: customHeaders
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'customHeaders?: [key: string]: string'
+      return:
+        description: ''
+        type: '[key: string]\: string'
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.customHeaders
+  - name: onDownloadProgress
+    uid: >-
+      azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseOptionalParams.onDownloadProgress
+    package: azure-maps-rest
+    summary: Callback which fires upon download progress.
+    fullName: onDownloadProgress
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'onDownloadProgress?: (progress: TransferProgressEvent) => void'
+      return:
+        description: ''
+        type: '(progress: TransferProgressEvent) =&gt; void'
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.onDownloadProgress
+  - name: onUploadProgress
+    uid: >-
+      azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseOptionalParams.onUploadProgress
+    package: azure-maps-rest
+    summary: Callback which fires upon upload progress.
+    fullName: onUploadProgress
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'onUploadProgress?: (progress: TransferProgressEvent) => void'
+      return:
+        description: ''
+        type: '(progress: TransferProgressEvent) =&gt; void'
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.onUploadProgress
+  - name: timeout
+    uid: >-
+      azure-maps-rest.atlas.service.Models.SearchGetSearchAddressReverseOptionalParams.timeout
+    package: azure-maps-rest
+    summary: >-
+      The number of milliseconds a request can take before automatically being
+      terminated.
+    fullName: timeout
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'timeout?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.timeout
 extends: RequestOptionsBase

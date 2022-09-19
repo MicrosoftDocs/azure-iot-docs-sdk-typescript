@@ -19,7 +19,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function onAdd(map: Map, options?: ControlOptions)'
+      content: 'function onAdd(map: Map, options?: ControlOptions): HTMLElement | null'
       parameters:
         - id: map
           type: <xref uid="azure-maps-control.atlas.Map" />
@@ -28,8 +28,8 @@ methods:
           type: <xref uid="azure-maps-control.atlas.ControlOptions" />
           description: The ControlOptions for this control.
       return:
-        type: HTMLElement | null
         description: An HTMLElement to be placed on the map for the control.
+        type: HTMLElement | null
   - name: onRemove()
     uid: azure-maps-control.atlas.Control.onRemove
     package: azure-maps-control

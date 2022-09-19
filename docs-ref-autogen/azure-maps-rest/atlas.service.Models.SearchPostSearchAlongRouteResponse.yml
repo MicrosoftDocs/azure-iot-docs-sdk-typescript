@@ -7,6 +7,10 @@ fullName: SearchPostSearchAlongRouteResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
+syntax: |
   type SearchPostSearchAlongRouteResponse = SearchAlongRouteResponse & {
-  _response: Object }
+    _response: HttpResponse & {
+      bodyAsText: string,
+      parsedBody: SearchAlongRouteResponse,
+    },
+  }

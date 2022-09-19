@@ -22,8 +22,8 @@ properties:
     syntax:
       content: 'delimiter?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: elvColName
     uid: azure-maps-spatial-io.atlas.SpatialCsvWriteOptions.elvColName
     package: azure-maps-spatial-io
@@ -38,23 +38,8 @@ properties:
     syntax:
       content: 'elvColName?: string'
       return:
+        description: ''
         type: string
-        description: ''
-  - name: format
-    uid: azure-maps-spatial-io.atlas.SpatialCsvWriteOptions.format
-    package: azure-maps-spatial-io
-    summary: |-
-      The spatial data format to write the shapes to.
-      Default: `"GeoJSON"`
-    fullName: format
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'format?: "KML" | "GPX" | "GeoRSS" | "GML" | "GeoJSON" | "CSV"'
-      return:
-        type: '"KML" | "GPX" | "GeoRSS" | "GML" | "GeoJSON" | "CSV"'
-        description: ''
   - name: geoColName
     uid: azure-maps-spatial-io.atlas.SpatialCsvWriteOptions.geoColName
     package: azure-maps-spatial-io
@@ -70,8 +55,8 @@ properties:
     syntax:
       content: 'geoColName?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: includeTypesInHeader
     uid: azure-maps-spatial-io.atlas.SpatialCsvWriteOptions.includeTypesInHeader
     package: azure-maps-spatial-io
@@ -89,8 +74,8 @@ properties:
     syntax:
       content: 'includeTypesInHeader?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: latColName
     uid: azure-maps-spatial-io.atlas.SpatialCsvWriteOptions.latColName
     package: azure-maps-spatial-io
@@ -105,8 +90,8 @@ properties:
     syntax:
       content: 'latColName?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: lonColName
     uid: azure-maps-spatial-io.atlas.SpatialCsvWriteOptions.lonColName
     package: azure-maps-spatial-io
@@ -121,8 +106,8 @@ properties:
     syntax:
       content: 'lonColName?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: spatialformat
     uid: azure-maps-spatial-io.atlas.SpatialCsvWriteOptions.spatialformat
     package: azure-maps-spatial-io
@@ -150,8 +135,8 @@ properties:
     syntax:
       content: 'spatialformat?: "latlon" | "latlonelv" | "wkt"'
       return:
-        type: '"latlon" | "latlonelv" | "wkt"'
         description: ''
+        type: '"latlon" | "latlonelv" | "wkt"'
   - name: textQualifier
     uid: azure-maps-spatial-io.atlas.SpatialCsvWriteOptions.textQualifier
     package: azure-maps-spatial-io
@@ -165,6 +150,25 @@ properties:
     syntax:
       content: 'textQualifier?: string'
       return:
-        type: string
         description: ''
+        type: string
+inheritedProperties:
+  - name: format
+    uid: azure-maps-spatial-io.atlas.SpatialCsvWriteOptions.format
+    package: azure-maps-spatial-io
+    summary: |-
+      The spatial data format to write the shapes to.
+      Default: `"GeoJSON"`
+    fullName: format
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'format?: "KML" | "GPX" | "GeoRSS" | "GML" | "GeoJSON" | "CSV"'
+      return:
+        description: ''
+        type: '"KML" | "GPX" | "GeoRSS" | "GML" | "GeoJSON" | "CSV"'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SpatialDataWriteOptions.format](xref:SpatialDataWriteOptions.format)
 extends: <xref uid="azure-maps-spatial-io.atlas.SpatialDataWriteOptions" />

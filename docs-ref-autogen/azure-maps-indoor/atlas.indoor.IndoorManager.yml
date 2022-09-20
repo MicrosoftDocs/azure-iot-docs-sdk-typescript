@@ -80,13 +80,32 @@ properties:
   - name: getCurrentFacility
     uid: azure-maps-indoor.atlas.indoor.IndoorManager.getCurrentFacility
     package: azure-maps-indoor
-    summary: Retrieves the currently selected facility.
+    summary: |-
+      Retrieves the currently selected facility.
+      The format is [ "facilityId": string, levelOrdinal: number ].
     fullName: getCurrentFacility
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: 'getCurrentFacility: () => [string, number]'
+      return:
+        description: ''
+        type: '() =&gt; [string, number]'
+  - name: getCurrentFacilityDetails
+    uid: azure-maps-indoor.atlas.indoor.IndoorManager.getCurrentFacilityDetails
+    package: azure-maps-indoor
+    summary: >-
+      Retrieves the details of currently selected facility: tilesetId,
+      facilityId and levelOrdinal.
+
+      The format is [ "tilesetId:facilityId": string, levelOrdinal: number ].
+    fullName: getCurrentFacilityDetails
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'getCurrentFacilityDetails: () => [string, number]'
       return:
         description: ''
         type: '() =&gt; [string, number]'

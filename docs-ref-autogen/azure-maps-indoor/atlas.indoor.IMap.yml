@@ -498,4 +498,19 @@ inheritedMethods:
     syntax:
       content: function stop()
     inheritanceDescription: <b>Inherited From</b> Map.stop
+  - name: triggerRepaint()
+    uid: azure-maps-indoor.atlas.indoor.IMap.triggerRepaint
+    package: azure-maps-indoor
+    summary: |-
+      Trigger the rendering of a single frame.
+      Use this method with WebGL layers to repaint the map when the layer's
+      properties or properties associated with the layer's source change.
+      Calling this multiple times before the next frame is rendered will still
+      result in only a single frame being rendered.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function triggerRepaint()
+    inheritanceDescription: <b>Inherited From</b> Map.triggerRepaint
 extends: Map

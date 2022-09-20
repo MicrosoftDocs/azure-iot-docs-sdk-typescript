@@ -141,6 +141,19 @@ properties:
       return:
         description: ''
         type: string
+  - name: mapConfiguration
+    uid: azure-maps-control.atlas.ServiceOptions.mapConfiguration
+    package: azure-maps-control
+    summary: The map configuration defines the set of styles available to the map.
+    fullName: mapConfiguration
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'mapConfiguration?: string | MapConfiguration'
+      return:
+        description: ''
+        type: string | <xref uid="azure-maps-control.atlas.MapConfiguration" />
   - name: maxParallelImageRequests
     uid: azure-maps-control.atlas.ServiceOptions.maxParallelImageRequests
     package: azure-maps-control
@@ -194,23 +207,6 @@ properties:
       return:
         description: ''
         type: string
-  - name: styleSet
-    uid: azure-maps-control.atlas.ServiceOptions.styleSet
-    package: azure-maps-control
-    summary: >-
-      The style set of the map. Determines which styles are available to be
-      picked
-
-      and what do they consist of (style names, thumbnails, URLs, etc).
-    fullName: styleSet
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'styleSet?: StyleSet'
-      return:
-        description: ''
-        type: <xref uid="azure-maps-control.atlas.StyleSet" />
   - name: subscriptionKey
     uid: azure-maps-control.atlas.ServiceOptions.subscriptionKey
     package: azure-maps-control

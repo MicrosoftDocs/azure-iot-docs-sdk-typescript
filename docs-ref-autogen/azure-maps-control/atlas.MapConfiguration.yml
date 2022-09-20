@@ -1,16 +1,31 @@
 ### YamlMime:TSType
-name: StyleSet
-uid: azure-maps-control.atlas.StyleSet
+name: MapConfiguration
+uid: azure-maps-control.atlas.MapConfiguration
 package: azure-maps-control
-summary: Represents the contents of the style set.
-fullName: StyleSet
+summary: >-
+  Represents the contents of map configuration holding a list of styles
+  available to them.
+fullName: MapConfiguration
 remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: configurations
+    uid: azure-maps-control.atlas.MapConfiguration.configurations
+    package: azure-maps-control
+    summary: ''
+    fullName: configurations
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'configurations: MapConfigurationStyle[]'
+      return:
+        description: ''
+        type: '<xref uid="azure-maps-control.atlas.MapConfigurationStyle" />[]'
   - name: created
-    uid: azure-maps-control.atlas.StyleSet.created
+    uid: azure-maps-control.atlas.MapConfiguration.created
     package: azure-maps-control
     summary: ''
     fullName: created
@@ -22,21 +37,21 @@ properties:
       return:
         description: ''
         type: string
-  - name: defaultStyle
-    uid: azure-maps-control.atlas.StyleSet.defaultStyle
+  - name: defaultConfiguration
+    uid: azure-maps-control.atlas.MapConfiguration.defaultConfiguration
     package: azure-maps-control
     summary: ''
-    fullName: defaultStyle
+    fullName: defaultConfiguration
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'defaultStyle: string'
+      content: 'defaultConfiguration: string'
       return:
         description: ''
         type: string
   - name: description
-    uid: azure-maps-control.atlas.StyleSet.description
+    uid: azure-maps-control.atlas.MapConfiguration.description
     package: azure-maps-control
     summary: ''
     fullName: description
@@ -49,7 +64,7 @@ properties:
         description: ''
         type: string
   - name: id
-    uid: azure-maps-control.atlas.StyleSet.id
+    uid: azure-maps-control.atlas.MapConfiguration.id
     package: azure-maps-control
     summary: ''
     fullName: id
@@ -61,21 +76,8 @@ properties:
       return:
         description: ''
         type: string
-  - name: styles
-    uid: azure-maps-control.atlas.StyleSet.styles
-    package: azure-maps-control
-    summary: ''
-    fullName: styles
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'styles: StyleSetStyle[]'
-      return:
-        description: ''
-        type: '<xref uid="azure-maps-control.atlas.StyleSetStyle" />[]'
   - name: version
-    uid: azure-maps-control.atlas.StyleSet.version
+    uid: azure-maps-control.atlas.MapConfiguration.version
     package: azure-maps-control
     summary: ''
     fullName: version

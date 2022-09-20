@@ -236,6 +236,25 @@ methods:
           type: '(e: Layer) =&gt; void'
           description: |
             The event handler callback.
+  - name: 'add("mapconfigurationchanged", (e: MapConfiguration) => void)'
+    uid: azure-maps-control.atlas.EventManager.add_6
+    package: azure-maps-control
+    summary: Adds a mapConfiguration change event to the map.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function add(eventType: "mapconfigurationchanged", callback: (e:
+        MapConfiguration) => void)
+      parameters:
+        - id: eventType
+          type: '"mapconfigurationchanged"'
+          description: A mapConfiguration changed event name
+        - id: callback
+          type: '(e: MapConfiguration) =&gt; void'
+          description: |
+            The event handler callback
   - name: >-
       add("mousedown" | "mouseup" | "mouseover" | "mousemove" | "click" |
       "dblclick" | "mouseout" | "contextmenu", (e: MapMouseEvent) => void)
@@ -421,25 +440,6 @@ methods:
           type: '(e: string) =&gt; void'
           description: |
             The event handler callback.
-  - name: 'add("stylesetchanged", (e: StyleSet) => void)'
-    uid: azure-maps-control.atlas.EventManager.add_6
-    package: azure-maps-control
-    summary: Adds a styleset change event to the map.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        function add(eventType: "stylesetchanged", callback: (e: StyleSet) =>
-        void)
-      parameters:
-        - id: eventType
-          type: '"stylesetchanged"'
-          description: A styleset changed event name
-        - id: callback
-          type: '(e: StyleSet) =&gt; void'
-          description: |
-            The event handler callback
   - name: >-
       add("touchstart" | "touchend" | "touchmove" | "touchcancel", (e:
       MapTouchEvent) => void)
@@ -1062,8 +1062,8 @@ methods:
         type: any
   - name: >-
       remove(string, (e: void | Layer | MapEvent | MapDataEvent | MapMouseEvent
-      | MapTouchEvent | MapMouseWheelEvent | Source | string | StyleSet) =>
-      void)
+      | MapTouchEvent | MapMouseWheelEvent | Source | string | MapConfiguration)
+      => void)
     uid: azure-maps-control.atlas.EventManager.remove
     package: azure-maps-control
     summary: Removes an event listener from the map.
@@ -1074,7 +1074,7 @@ methods:
       content: >-
         function remove(eventType: string, callback: (e: void | Layer | MapEvent
         | MapDataEvent | MapMouseEvent | MapTouchEvent | MapMouseWheelEvent |
-        Source | string | StyleSet) => void)
+        Source | string | MapConfiguration) => void)
       parameters:
         - id: eventType
           type: string
@@ -1082,8 +1082,8 @@ methods:
         - id: callback
           type: >-
             (e: void | Layer | MapEvent | MapDataEvent | MapMouseEvent |
-            MapTouchEvent | MapMouseWheelEvent | Source | string | StyleSet)
-            =&gt; void
+            MapTouchEvent | MapMouseWheelEvent | Source | string |
+            MapConfiguration) =&gt; void
           description: |
             The event handler callback.
   - name: >-

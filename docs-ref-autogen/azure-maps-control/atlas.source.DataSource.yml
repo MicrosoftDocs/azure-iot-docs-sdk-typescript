@@ -43,6 +43,20 @@ constructors:
           type: <xref uid="azure-maps-control.atlas.DataSourceOptions" />
           description: |
             the options for the data source.
+inheritedMethods:
+  - name: getId()
+    uid: azure-maps-control.atlas.source.DataSource.getId
+    package: azure-maps-control
+    summary: Gets the id of the data source
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getId(): string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: '<b>Inherited From</b> [Source.getId](xref:Source.getId)'
 methods:
   - name: >-
       add(FeatureCollection | Feature<atlas.data.Geometry, any> |
@@ -117,19 +131,22 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getClusterChildren(clusterId: number)'
+      content: >-
+        function getClusterChildren(clusterId: number):
+        Promise<Array<Feature<atlas.data.Geometry, ClusteredProperties | any> |
+        Shape>>
       parameters:
         - id: clusterId
           type: number
           description: |+
 
       return:
+        description: ''
         type: >-
           Promise&lt;Array&lt;<xref uid="azure-maps-control.atlas.data.Feature"
           />&lt;<xref uid="azure-maps-control.atlas.data.Geometry" />, <xref
           uid="azure-maps-control.atlas.ClusteredProperties" /> | any&gt; |
           <xref uid="azure-maps-control.atlas.Shape" />&gt;&gt;
-        description: ''
   - name: getClusterExpansionZoom(number)
     uid: azure-maps-control.atlas.source.DataSource.getClusterExpansionZoom
     package: azure-maps-control
@@ -140,15 +157,15 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getClusterExpansionZoom(clusterId: number)'
+      content: 'function getClusterExpansionZoom(clusterId: number): Promise<number>'
       parameters:
         - id: clusterId
           type: number
           description: |+
 
       return:
-        type: Promise&lt;number&gt;
         description: ''
+        type: Promise&lt;number&gt;
   - name: 'getClusterLeaves(number, number, number)'
     uid: azure-maps-control.atlas.source.DataSource.getClusterLeaves
     package: azure-maps-control
@@ -159,7 +176,7 @@ methods:
     syntax:
       content: >-
         function getClusterLeaves(clusterId: number, limit: number, offset:
-        number)
+        number): Promise<Array<Feature<atlas.data.Geometry, any> | Shape>>
       parameters:
         - id: clusterId
           type: number
@@ -175,23 +192,11 @@ methods:
             The number of shapes to skip. Allows you to page through the shapes
             in the cluster.
       return:
+        description: ''
         type: >-
           Promise&lt;Array&lt;<xref uid="azure-maps-control.atlas.data.Feature"
           />&lt;<xref uid="azure-maps-control.atlas.data.Geometry" />, any&gt; |
           <xref uid="azure-maps-control.atlas.Shape" />&gt;&gt;
-        description: ''
-  - name: getId()
-    uid: azure-maps-control.atlas.source.DataSource.getId
-    package: azure-maps-control
-    summary: Gets the id of the data source
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: function getId()
-      return:
-        type: string
-        description: ''
   - name: getOptions()
     uid: azure-maps-control.atlas.source.DataSource.getOptions
     package: azure-maps-control
@@ -200,10 +205,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getOptions()
+      content: 'function getOptions(): DataSourceOptions'
       return:
-        type: <xref uid="azure-maps-control.atlas.DataSourceOptions" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.DataSourceOptions" />
   - name: getShapeById(string | number)
     uid: azure-maps-control.atlas.source.DataSource.getShapeById
     package: azure-maps-control
@@ -216,15 +221,15 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getShapeById(id: string | number)'
+      content: 'function getShapeById(id: string | number): Shape'
       parameters:
         - id: id
           type: string | number
           description: |
             The id of the shape to return.
       return:
-        type: <xref uid="azure-maps-control.atlas.Shape" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.Shape" />
   - name: getShapes()
     uid: azure-maps-control.atlas.source.DataSource.getShapes
     package: azure-maps-control
@@ -233,10 +238,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getShapes()
+      content: 'function getShapes(): Shape[]'
       return:
-        type: '<xref uid="azure-maps-control.atlas.Shape" />[]'
         description: ''
+        type: '<xref uid="azure-maps-control.atlas.Shape" />[]'
   - name: importDataFromUrl(string)
     uid: azure-maps-control.atlas.source.DataSource.importDataFromUrl
     package: azure-maps-control
@@ -247,15 +252,15 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function importDataFromUrl(url: string)'
+      content: 'function importDataFromUrl(url: string): Promise<void>'
       parameters:
         - id: url
           type: string
           description: |+
 
       return:
-        type: Promise&lt;void&gt;
         description: ''
+        type: Promise&lt;void&gt;
   - name: >-
       remove(number | string | Shape | Feature<atlas.data.Geometry, any> |
       Array<number | string | Shape | Feature<atlas.data.Geometry, any>>)
@@ -349,10 +354,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function toJson()
+      content: 'function toJson(): FeatureCollection'
       return:
-        type: <xref uid="azure-maps-control.atlas.data.FeatureCollection" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.data.FeatureCollection" />
 extends: >-
   <xref uid="azure-maps-control.atlas.source.Source" />&lt;<xref
   uid="azure-maps-control.atlas.source.DataSourceEvents" />&gt;

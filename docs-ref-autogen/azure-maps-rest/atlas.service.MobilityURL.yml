@@ -33,7 +33,7 @@ constructors:
 
             If no protocol is specified, e.g. `"atlas.microsoft.com"`, then
             `https` will be assumed.
-properties:
+inheritedProperties:
   - name: mapsUrl
     uid: azure-maps-rest.atlas.service.MobilityURL.mapsUrl
     package: azure-maps-rest
@@ -45,8 +45,36 @@ properties:
     syntax:
       content: 'mapsUrl: string'
       return:
-        type: string
         description: ''
+        type: string
+    inheritanceDescription: '<b>Inherited From</b> [MapsURL.mapsUrl](xref:MapsURL.mapsUrl)'
+inheritedMethods:
+  - name: 'newPipeline(Credential, INewPipelineOptions)'
+    uid: azure-maps-rest.atlas.service.MobilityURL.newPipeline
+    package: azure-maps-rest
+    summary: >-
+      A static method used to create a new Pipeline object with Credential
+      provided.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function newPipeline(credential: Credential, pipelineOptions?:
+        INewPipelineOptions): Pipeline
+      parameters:
+        - id: credential
+          type: <xref uid="azure-maps-rest.atlas.service.Credential" />
+          description: >-
+            Such as SubscriptionKeyCredential, TokenCredential, and
+            MapControlCredential.
+        - id: pipelineOptions
+          type: <xref uid="azure-maps-rest.atlas.service.INewPipelineOptions" />
+          description: ''
+      return:
+        description: A new Pipeline object.
+        type: <xref uid="azure-maps-rest.atlas.service.Pipeline" />
+    inheritanceDescription: '<b>Inherited From</b> [MapsURL.newPipeline](xref:MapsURL.newPipeline)'
 methods:
   - name: 'getCarShareInfo(Aborter, string, GetCarShareInfoOptions)'
     uid: azure-maps-rest.atlas.service.MobilityURL.getCarShareInfo
@@ -71,7 +99,7 @@ methods:
     syntax:
       content: >-
         function getCarShareInfo(aborter: Aborter, query: string, options?:
-        GetCarShareInfoOptions)
+        GetCarShareInfoOptions): Promise<GetCarShareInfoResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -95,11 +123,11 @@ methods:
           type: <xref uid="azure-maps-rest.atlas.service.GetCarShareInfoOptions" />
           description: ''
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.GetCarShareInfoResponse" />&gt;
-        description: ''
-  - name: 'getMetroArea(Aborter, GeoJSON, GetMetroAreaOptions)'
+  - name: 'getMetroArea(Aborter, GeoJSON.Position | string, GetMetroAreaOptions)'
     uid: azure-maps-rest.atlas.service.MobilityURL.getMetroArea
     package: azure-maps-rest
     summary: >
@@ -124,8 +152,8 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function getMetroArea(aborter: Aborter, query: GeoJSON, options?:
-        GetMetroAreaOptions)
+        function getMetroArea(aborter: Aborter, query: GeoJSON.Position |
+        string, options?: GetMetroAreaOptions): Promise<GetMetroAreaResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -136,7 +164,7 @@ methods:
             goto documents of Aborter for more examples about request
             cancellation.
         - id: query
-          type: GeoJSON
+          type: <xref uid="GeoJSON.Position" /> | string
           description: >-
             The applicable location input. Can be a GeoJSON position or
             countryCode
@@ -146,10 +174,10 @@ methods:
           type: <xref uid="azure-maps-rest.atlas.service.GetMetroAreaOptions" />
           description: ''
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.GetMetroAreaResponse" />&gt;
-        description: ''
   - name: >-
       getMetroAreaInfo(Aborter, number, MetroAreaDetailType[],
       GetMetroAreaInfoOptions)
@@ -174,7 +202,8 @@ methods:
     syntax:
       content: >-
         function getMetroAreaInfo(aborter: Aborter, query: number, detailType:
-        MetroAreaDetailType[], options?: GetMetroAreaInfoOptions)
+        MetroAreaDetailType[], options?: GetMetroAreaInfoOptions):
+        Promise<GetMetroAreaInfoResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -207,10 +236,10 @@ methods:
           type: <xref uid="azure-maps-rest.atlas.service.GetMetroAreaInfoOptions" />
           description: ''
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.GetMetroAreaInfoResponse" />&gt;
-        description: ''
   - name: >-
       getNearbyTransit(Aborter, number, GeoJSON.Position,
       GetNearbyTransitOptions)
@@ -253,7 +282,8 @@ methods:
     syntax:
       content: >-
         function getNearbyTransit(aborter: Aborter, metroId: number, location:
-        GeoJSON.Position, options?: GetNearbyTransitOptions)
+        GeoJSON.Position, options?: GetNearbyTransitOptions):
+        Promise<GetNearbyTransitResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -279,10 +309,10 @@ methods:
           type: <xref uid="azure-maps-rest.atlas.service.GetNearbyTransitOptions" />
           description: ''
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.GetNearbyTransitResponse" />&gt;
-        description: ''
   - name: >-
       getRealTimeArrivals(Aborter, number, string | string[] | GeoJSON.Position,
       GetRealTimeArrivalsOptions)
@@ -326,7 +356,7 @@ methods:
       content: >-
         function getRealTimeArrivals(aborter: Aborter, metroId: number, query:
         string | string[] | GeoJSON.Position, options?:
-        GetRealTimeArrivalsOptions)
+        GetRealTimeArrivalsOptions): Promise<GetRealTimeArrivalsResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -365,10 +395,10 @@ methods:
             />
           description: ''
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.GetRealTimeArrivalsResponse" />&gt;
-        description: ''
   - name: 'getTransitDockInfo(Aborter, string, GetTransitDockInfoOptions)'
     uid: azure-maps-rest.atlas.service.MobilityURL.getTransitDockInfo
     package: azure-maps-rest
@@ -396,7 +426,7 @@ methods:
     syntax:
       content: >-
         function getTransitDockInfo(aborter: Aborter, query: string, options?:
-        GetTransitDockInfoOptions)
+        GetTransitDockInfoOptions): Promise<GetTransitDockInfoResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -420,10 +450,10 @@ methods:
             />
           description: ''
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.GetTransitDockInfoResponse" />&gt;
-        description: ''
   - name: 'getTransitItinerary(Aborter, string, GetTransitItineraryOptions)'
     uid: azure-maps-rest.atlas.service.MobilityURL.getTransitItinerary
     package: azure-maps-rest
@@ -456,7 +486,7 @@ methods:
     syntax:
       content: >-
         function getTransitItinerary(aborter: Aborter, query: string, options?:
-        GetTransitItineraryOptions)
+        GetTransitItineraryOptions): Promise<GetTransitItineraryResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -479,10 +509,10 @@ methods:
             />
           description: ''
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.GetTransitItineraryResponse" />&gt;
-        description: ''
   - name: 'getTransitLineInfo(Aborter, number, string, GetTransitLineInfoOptions)'
     uid: azure-maps-rest.atlas.service.MobilityURL.getTransitLineInfo
     package: azure-maps-rest
@@ -522,7 +552,8 @@ methods:
     syntax:
       content: >-
         function getTransitLineInfo(aborter: Aborter, metroId: number, query:
-        string, options?: GetTransitLineInfoOptions)
+        string, options?: GetTransitLineInfoOptions):
+        Promise<GetTransitLineInfoResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -554,10 +585,10 @@ methods:
             />
           description: ''
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.GetTransitLineInfoResponse" />&gt;
-        description: ''
   - name: >-
       getTransitRoute(Aborter, number, string | GeoJSON.Position, string |
       GeoJSON.Position, GetTransitRouteOptions)
@@ -595,7 +626,7 @@ methods:
       content: >-
         function getTransitRoute(aborter: Aborter, metroId: number, origin:
         string | GeoJSON.Position, destination: string | GeoJSON.Position,
-        options?: GetTransitRouteOptions)
+        options?: GetTransitRouteOptions): Promise<GetTransitRouteResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -633,10 +664,10 @@ methods:
           type: <xref uid="azure-maps-rest.atlas.service.GetTransitRouteOptions" />
           description: ''
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.GetTransitRouteResponse" />&gt;
-        description: ''
   - name: 'getTransitStopInfo(Aborter, number, string, GetTransitStopInfoOptions)'
     uid: azure-maps-rest.atlas.service.MobilityURL.getTransitStopInfo
     package: azure-maps-rest
@@ -665,7 +696,8 @@ methods:
     syntax:
       content: >-
         function getTransitStopInfo(aborter: Aborter, metroId: number, query:
-        string, options?: GetTransitStopInfoOptions)
+        string, options?: GetTransitStopInfoOptions):
+        Promise<GetTransitStopInfoResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -695,33 +727,8 @@ methods:
             />
           description: ''
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.GetTransitStopInfoResponse" />&gt;
-        description: ''
-  - name: 'newPipeline(Credential, INewPipelineOptions)'
-    uid: azure-maps-rest.atlas.service.MobilityURL.newPipeline
-    package: azure-maps-rest
-    summary: >-
-      A static method used to create a new Pipeline object with Credential
-      provided.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        static function newPipeline(credential: Credential, pipelineOptions?:
-        INewPipelineOptions)
-      parameters:
-        - id: credential
-          type: <xref uid="azure-maps-rest.atlas.service.Credential" />
-          description: >-
-            Such as SubscriptionKeyCredential, TokenCredential, and
-            MapControlCredential.
-        - id: pipelineOptions
-          type: <xref uid="azure-maps-rest.atlas.service.INewPipelineOptions" />
-          description: ''
-      return:
-        type: <xref uid="azure-maps-rest.atlas.service.Pipeline" />
-        description: A new Pipeline object.
 extends: <xref uid="azure-maps-rest.atlas.service.MapsURL" />

@@ -32,10 +32,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getOptions()
+      content: 'function getOptions(): DrawingToolbarOptions'
       return:
-        type: <xref uid="azure-maps-drawing-tools.atlas.DrawingToolbarOptions" />
         description: ''
+        type: <xref uid="azure-maps-drawing-tools.atlas.DrawingToolbarOptions" />
   - name: onAdd()
     uid: azure-maps-drawing-tools.atlas.control.DrawingToolbar.onAdd
     package: azure-maps-drawing-tools
@@ -46,10 +46,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function onAdd()
+      content: 'function onAdd(): HTMLElement'
       return:
-        type: HTMLElement
         description: An HTMLElement to be placed on the map for the control.
+        type: HTMLElement
   - name: onRemove()
     uid: azure-maps-drawing-tools.atlas.control.DrawingToolbar.onRemove
     package: azure-maps-drawing-tools

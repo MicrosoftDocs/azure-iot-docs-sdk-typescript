@@ -24,8 +24,8 @@ properties:
     syntax:
       content: 'contrast?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: fadeDuration
     uid: azure-maps-control.atlas.MediaLayerOptions.fadeDuration
     package: azure-maps-control
@@ -43,23 +43,8 @@ properties:
     syntax:
       content: 'fadeDuration?: number'
       return:
+        description: ''
         type: number
-        description: ''
-  - name: filter
-    uid: azure-maps-control.atlas.MediaLayerOptions.filter
-    package: azure-maps-control
-    summary: |-
-      An expression specifying conditions on source features.
-      Only features that match the filter are displayed.
-    fullName: filter
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'filter?: Expression'
-      return:
-        type: <xref uid="azure-maps-control.atlas.Expression" />
-        description: ''
   - name: hueRotation
     uid: azure-maps-control.atlas.MediaLayerOptions.hueRotation
     package: azure-maps-control
@@ -74,8 +59,8 @@ properties:
     syntax:
       content: 'hueRotation?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: maxBrightness
     uid: azure-maps-control.atlas.MediaLayerOptions.maxBrightness
     package: azure-maps-control
@@ -91,8 +76,76 @@ properties:
     syntax:
       content: 'maxBrightness?: number'
       return:
-        type: number
         description: ''
+        type: number
+  - name: minBrightness
+    uid: azure-maps-control.atlas.MediaLayerOptions.minBrightness
+    package: azure-maps-control
+    summary: >-
+      A number between 0 and 1 that increases or decreases the minimum
+      brightness of the overlay.
+
+      Default `0`.
+    fullName: minBrightness
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'minBrightness?: number'
+      return:
+        description: ''
+        type: number
+  - name: opacity
+    uid: azure-maps-control.atlas.MediaLayerOptions.opacity
+    package: azure-maps-control
+    summary: >-
+      A number between 0 and 1 that indicates the opacity at which the overlay
+      will be drawn.
+
+      Default `1`.
+    fullName: opacity
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'opacity?: number'
+      return:
+        description: ''
+        type: number
+  - name: saturation
+    uid: azure-maps-control.atlas.MediaLayerOptions.saturation
+    package: azure-maps-control
+    summary: >-
+      A number between -1 and 1 that increases or decreases the saturation of
+      the overlay.
+
+      Default `0`.
+    fullName: saturation
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'saturation?: number'
+      return:
+        description: ''
+        type: number
+inheritedProperties:
+  - name: filter
+    uid: azure-maps-control.atlas.MediaLayerOptions.filter
+    package: azure-maps-control
+    summary: |-
+      An expression specifying conditions on source features.
+      Only features that match the filter are displayed.
+    fullName: filter
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'filter?: Expression'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.atlas.Expression" />
+    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.filter](xref:LayerOptions.filter)'
   - name: maxZoom
     uid: azure-maps-control.atlas.MediaLayerOptions.maxZoom
     package: azure-maps-control
@@ -110,25 +163,9 @@ properties:
     syntax:
       content: 'maxZoom?: number'
       return:
-        type: number
         description: ''
-  - name: minBrightness
-    uid: azure-maps-control.atlas.MediaLayerOptions.minBrightness
-    package: azure-maps-control
-    summary: >-
-      A number between 0 and 1 that increases or decreases the minimum
-      brightness of the overlay.
-
-      Default `0`.
-    fullName: minBrightness
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'minBrightness?: number'
-      return:
         type: number
-        description: ''
+    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.maxZoom](xref:LayerOptions.maxZoom)'
   - name: minZoom
     uid: azure-maps-control.atlas.MediaLayerOptions.minZoom
     package: azure-maps-control
@@ -146,42 +183,9 @@ properties:
     syntax:
       content: 'minZoom?: number'
       return:
-        type: number
         description: ''
-  - name: opacity
-    uid: azure-maps-control.atlas.MediaLayerOptions.opacity
-    package: azure-maps-control
-    summary: >-
-      A number between 0 and 1 that indicates the opacity at which the overlay
-      will be drawn.
-
-      Default `1`.
-    fullName: opacity
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'opacity?: number'
-      return:
         type: number
-        description: ''
-  - name: saturation
-    uid: azure-maps-control.atlas.MediaLayerOptions.saturation
-    package: azure-maps-control
-    summary: >-
-      A number between -1 and 1 that increases or decreases the saturation of
-      the overlay.
-
-      Default `0`.
-    fullName: saturation
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'saturation?: number'
-      return:
-        type: number
-        description: ''
+    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.minZoom](xref:LayerOptions.minZoom)'
   - name: visible
     uid: azure-maps-control.atlas.MediaLayerOptions.visible
     package: azure-maps-control
@@ -195,6 +199,7 @@ properties:
     syntax:
       content: 'visible?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
+    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.visible](xref:LayerOptions.visible)'
 extends: <xref uid="azure-maps-control.atlas.LayerOptions" />

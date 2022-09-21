@@ -32,8 +32,8 @@ properties:
     syntax:
       content: 'anchor?: "map" | "viewport"'
       return:
-        type: '"map" | "viewport"'
         description: ''
+        type: '"map" | "viewport"'
   - name: color
     uid: azure-maps-control.atlas.LightOptions.color
     package: azure-maps-control
@@ -47,8 +47,8 @@ properties:
     syntax:
       content: 'color?: string | Expression'
       return:
-        type: string | <xref uid="azure-maps-control.atlas.Expression" />
         description: ''
+        type: string | <xref uid="azure-maps-control.atlas.Expression" />
   - name: intensity
     uid: azure-maps-control.atlas.LightOptions.intensity
     package: azure-maps-control
@@ -63,8 +63,8 @@ properties:
     syntax:
       content: 'intensity?: number | Expression'
       return:
-        type: number | <xref uid="azure-maps-control.atlas.Expression" />
         description: ''
+        type: number | <xref uid="azure-maps-control.atlas.Expression" />
   - name: position
     uid: azure-maps-control.atlas.LightOptions.position
     package: azure-maps-control
@@ -91,8 +91,10 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'position?: Object | Expression'
+      content: 'position?: [number, number, number] | Expression'
       return:
-        type: Object | <xref uid="azure-maps-control.atlas.Expression" />
         description: ''
+        type: >-
+          [number, number, number] | <xref
+          uid="azure-maps-control.atlas.Expression" />
 extends: <xref uid="azure-maps-control.atlas.Options" />

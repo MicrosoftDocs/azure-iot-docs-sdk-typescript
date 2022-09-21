@@ -31,12 +31,12 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function toXml(version?: string)'
+      content: 'function toXml(version?: string): string'
       parameters:
         - id: version
           type: string
           description: |
             The WFS service version.
       return:
-        type: string
         description: ''
+        type: string

@@ -27,8 +27,8 @@ properties:
     syntax:
       content: 'aliases?: string[]'
       return:
-        type: 'string[]'
         description: ''
+        type: 'string[]'
   - name: countries
     uid: azure-maps-rest.atlas.service.Models.TimezoneById.countries
     package: azure-maps-rest
@@ -45,8 +45,8 @@ properties:
     syntax:
       content: 'countries?: Country[]'
       return:
-        type: '<xref uid="azure-maps-rest.atlas.service.Models.Country" />[]'
         description: ''
+        type: '<xref uid="azure-maps-rest.atlas.service.Models.Country" />[]'
   - name: id
     uid: azure-maps-rest.atlas.service.Models.TimezoneById.id
     package: azure-maps-rest
@@ -62,8 +62,8 @@ properties:
     syntax:
       content: 'id?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: names
     uid: azure-maps-rest.atlas.service.Models.TimezoneById.names
     package: azure-maps-rest
@@ -75,8 +75,8 @@ properties:
     syntax:
       content: 'names?: Names'
       return:
-        type: <xref uid="azure-maps-rest.atlas.service.Models.Names" />
         description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.Names" />
   - name: referenceTime
     uid: azure-maps-rest.atlas.service.Models.TimezoneById.referenceTime
     package: azure-maps-rest
@@ -88,8 +88,8 @@ properties:
     syntax:
       content: 'referenceTime?: ReferenceTimeById'
       return:
-        type: <xref uid="azure-maps-rest.atlas.service.Models.ReferenceTimeById" />
         description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.ReferenceTimeById" />
   - name: representativePoint
     uid: azure-maps-rest.atlas.service.Models.TimezoneById.representativePoint
     package: azure-maps-rest
@@ -101,10 +101,10 @@ properties:
     syntax:
       content: 'representativePoint?: RepresentativePoint'
       return:
+        description: ''
         type: >-
           <xref uid="azure-maps-rest.atlas.service.Models.RepresentativePoint"
           />
-        description: ''
   - name: timeTransitions
     uid: azure-maps-rest.atlas.service.Models.TimezoneById.timeTransitions
     package: azure-maps-rest
@@ -120,5 +120,5 @@ properties:
     syntax:
       content: 'timeTransitions?: TimeTransition[]'
       return:
-        type: '<xref uid="azure-maps-rest.atlas.service.Models.TimeTransition" />[]'
         description: ''
+        type: '<xref uid="azure-maps-rest.atlas.service.Models.TimeTransition" />[]'

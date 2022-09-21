@@ -9,6 +9,11 @@ fullName: Geometry
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type Geometry = Point | MultiPoint | LineString | MultiLineString | Polygon |
-  MultiPolygon
+syntax: |
+  type Geometry =
+    | Point
+    | MultiPoint
+    | LineString
+    | MultiLineString
+    | Polygon
+    | MultiPolygon

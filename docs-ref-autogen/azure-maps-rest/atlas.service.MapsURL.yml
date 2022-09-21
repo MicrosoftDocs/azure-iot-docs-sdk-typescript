@@ -20,8 +20,8 @@ properties:
     syntax:
       content: 'mapsUrl: string'
       return:
-        type: string
         description: ''
+        type: string
 methods:
   - name: 'newPipeline(Credential, INewPipelineOptions)'
     uid: azure-maps-rest.atlas.service.MapsURL.newPipeline
@@ -35,7 +35,7 @@ methods:
     syntax:
       content: >-
         static function newPipeline(credential: Credential, pipelineOptions?:
-        INewPipelineOptions)
+        INewPipelineOptions): Pipeline
       parameters:
         - id: credential
           type: <xref uid="azure-maps-rest.atlas.service.Credential" />
@@ -46,5 +46,5 @@ methods:
           type: <xref uid="azure-maps-rest.atlas.service.INewPipelineOptions" />
           description: ''
       return:
-        type: <xref uid="azure-maps-rest.atlas.service.Pipeline" />
         description: A new Pipeline object.
+        type: <xref uid="azure-maps-rest.atlas.service.Pipeline" />

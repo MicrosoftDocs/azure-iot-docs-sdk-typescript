@@ -31,8 +31,8 @@ properties:
     syntax:
       content: 'formatVersion?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: matrix
     uid: azure-maps-rest.atlas.service.Models.RouteMatrixResponse.matrix
     package: azure-maps-rest
@@ -48,10 +48,10 @@ properties:
     syntax:
       content: 'matrix?: RouteMatrixResult[][]'
       return:
+        description: ''
         type: >-
           <xref uid="azure-maps-rest.atlas.service.Models.RouteMatrixResult"
           />[][]
-        description: ''
   - name: summary
     uid: azure-maps-rest.atlas.service.Models.RouteMatrixResponse.summary
     package: azure-maps-rest
@@ -63,5 +63,5 @@ properties:
     syntax:
       content: 'summary?: RouteMatrixSummary'
       return:
-        type: <xref uid="azure-maps-rest.atlas.service.Models.RouteMatrixSummary" />
         description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.RouteMatrixSummary" />

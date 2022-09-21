@@ -7,6 +7,10 @@ fullName: TimezoneGetTimezoneIANAVersionResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
+syntax: |
   type TimezoneGetTimezoneIANAVersionResponse = TimezoneIanaVersionResult & {
-  _response: Object }
+    _response: HttpResponse & {
+      bodyAsText: string,
+      parsedBody: TimezoneIanaVersionResult,
+    },
+  }

@@ -22,8 +22,8 @@ properties:
     syntax:
       content: 'dataType: "style" | "source"'
       return:
-        type: '"style" | "source"'
         description: ''
+        type: '"style" | "source"'
   - name: isSourceLoaded
     uid: azure-maps-control.atlas.MapDataEvent.isSourceLoaded
     package: azure-maps-control
@@ -37,34 +37,8 @@ properties:
     syntax:
       content: 'isSourceLoaded?: boolean'
       return:
+        description: ''
         type: boolean
-        description: ''
-  - name: map
-    uid: azure-maps-control.atlas.MapDataEvent.map
-    package: azure-maps-control
-    summary: The `Map` instance in which the event occurred on.
-    fullName: map
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'map: Map'
-      return:
-        type: <xref uid="azure-maps-control.atlas.Map" />
-        description: ''
-  - name: originalEvent
-    uid: azure-maps-control.atlas.MapDataEvent.originalEvent
-    package: azure-maps-control
-    summary: The original event that was fired.
-    fullName: originalEvent
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'originalEvent?: Event'
-      return:
-        type: Event
-        description: ''
   - name: source
     uid: azure-maps-control.atlas.MapDataEvent.source
     package: azure-maps-control
@@ -76,8 +50,8 @@ properties:
     syntax:
       content: 'source?: Source'
       return:
-        type: <xref uid="azure-maps-control.atlas.source.Source" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.source.Source" />
   - name: sourceDataType
     uid: azure-maps-control.atlas.MapDataEvent.sourceDataType
     package: azure-maps-control
@@ -93,8 +67,8 @@ properties:
     syntax:
       content: 'sourceDataType?: "metadata" | "content"'
       return:
-        type: '"metadata" | "content"'
         description: ''
+        type: '"metadata" | "content"'
   - name: tile
     uid: azure-maps-control.atlas.MapDataEvent.tile
     package: azure-maps-control
@@ -110,8 +84,39 @@ properties:
     syntax:
       content: 'tile?: Tile'
       return:
-        type: <xref uid="azure-maps-control.atlas.Tile" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.Tile" />
+inheritedProperties:
+  - name: map
+    uid: azure-maps-control.atlas.MapDataEvent.map
+    package: azure-maps-control
+    summary: The `Map` instance in which the event occurred on.
+    fullName: map
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'map: Map'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.atlas.Map" />
+    inheritanceDescription: '<b>Inherited From</b> [MapEvent.map](xref:MapEvent.map)'
+  - name: originalEvent
+    uid: azure-maps-control.atlas.MapDataEvent.originalEvent
+    package: azure-maps-control
+    summary: The original event that was fired.
+    fullName: originalEvent
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'originalEvent?: Event'
+      return:
+        description: ''
+        type: Event
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MapEvent.originalEvent](xref:MapEvent.originalEvent)
   - name: type
     uid: azure-maps-control.atlas.MapDataEvent.type
     package: azure-maps-control
@@ -123,6 +128,7 @@ properties:
     syntax:
       content: 'type: string'
       return:
-        type: string
         description: ''
+        type: string
+    inheritanceDescription: '<b>Inherited From</b> [MapEvent.type](xref:MapEvent.type)'
 extends: <xref uid="azure-maps-control.atlas.MapEvent" />

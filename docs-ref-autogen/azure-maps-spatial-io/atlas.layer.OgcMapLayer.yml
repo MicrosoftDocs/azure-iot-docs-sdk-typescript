@@ -28,19 +28,6 @@ constructors:
           description: |
             Options for rendering the WMS layer.
 properties:
-  - name: metadata
-    uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.metadata
-    package: azure-maps-spatial-io
-    summary: A property for associating custom data with the layer.
-    fullName: metadata
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'metadata?: any'
-      return:
-        type: any
-        description: ''
   - name: onActiveLayersChanged
     uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.onActiveLayersChanged
     package: azure-maps-spatial-io
@@ -52,8 +39,62 @@ properties:
     syntax:
       content: 'onActiveLayersChanged: (layer: OgcMapLayer) => void'
       return:
-        type: '(layer: OgcMapLayer) =&gt; void'
         description: ''
+        type: '(layer: OgcMapLayer) =&gt; void'
+inheritedProperties:
+  - name: metadata
+    uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.metadata
+    package: azure-maps-spatial-io
+    summary: A property for associating custom data with the layer.
+    fullName: metadata
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'metadata?: any'
+      return:
+        description: ''
+        type: any
+    inheritanceDescription: <b>Inherited From</b> Layer.metadata
+inheritedMethods:
+  - name: getId()
+    uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.getId
+    package: azure-maps-spatial-io
+    summary: Gets the id of the layer
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getId(): string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Layer.getId
+  - name: getMap()
+    uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.getMap
+    package: azure-maps-spatial-io
+    summary: 'Gets the map that the layer is currently added to, or null.'
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getMap(): Map'
+      return:
+        description: ''
+        type: Map
+    inheritanceDescription: <b>Inherited From</b> Layer.getMap
+  - name: onRemove()
+    uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.onRemove
+    package: azure-maps-spatial-io
+    summary: |-
+      Method that is called when the layer is removed from the map.
+      Should perform any necessary cleanup for the layer.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function onRemove()
+    inheritanceDescription: <b>Inherited From</b> Layer.onRemove
 methods:
   - name: getCapabilities()
     uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.getCapabilities
@@ -63,12 +104,12 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getCapabilities()
+      content: 'function getCapabilities(): Promise<OgcMapLayerCapabilities>'
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-spatial-io.atlas.OgcMapLayerCapabilities" />&gt;
-        description: ''
   - name: getFeatureInfo(azmaps.data.Position)
     uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.getFeatureInfo
     package: azure-maps-spatial-io
@@ -81,15 +122,17 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getFeatureInfo(position: azmaps.data.Position)'
+      content: >-
+        function getFeatureInfo(position: azmaps.data.Position):
+        Promise<azmaps.data.FeatureCollection>
       parameters:
         - id: position
           type: <xref uid="azmaps.data.Position" />
           description: |
             The position on the map to request feature info for.
       return:
-        type: Promise&lt;<xref uid="azmaps.data.FeatureCollection" />&gt;
         description: ''
+        type: Promise&lt;<xref uid="azmaps.data.FeatureCollection" />&gt;
   - name: getFeatureInfoHtml(azmaps.data.Position)
     uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.getFeatureInfoHtml
     package: azure-maps-spatial-io
@@ -105,39 +148,17 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getFeatureInfoHtml(position: azmaps.data.Position)'
+      content: >-
+        function getFeatureInfoHtml(position: azmaps.data.Position):
+        Promise<string>
       parameters:
         - id: position
           type: <xref uid="azmaps.data.Position" />
           description: |
             The position on the map to request feature info for.
       return:
+        description: ''
         type: Promise&lt;string&gt;
-        description: ''
-  - name: getId()
-    uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.getId
-    package: azure-maps-spatial-io
-    summary: Gets the id of the layer
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: function getId()
-      return:
-        type: string
-        description: ''
-  - name: getMap()
-    uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.getMap
-    package: azure-maps-spatial-io
-    summary: 'Gets the map that the layer is currently added to, or null.'
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: function getMap()
-      return:
-        type: Map
-        description: ''
   - name: getOptions()
     uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.getOptions
     package: azure-maps-spatial-io
@@ -146,10 +167,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getOptions()
+      content: 'function getOptions(): OgcMapLayerOptions'
       return:
-        type: <xref uid="azure-maps-spatial-io.atlas.OgcMapLayerOptions" />
         description: ''
+        type: <xref uid="azure-maps-spatial-io.atlas.OgcMapLayerOptions" />
   - name: onAdd(azmaps.Map)
     uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.onAdd
     package: azure-maps-spatial-io
@@ -164,17 +185,6 @@ methods:
           type: <xref uid="azmaps.Map" />
           description: |
             The map the layer has been added to.
-  - name: onRemove()
-    uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.onRemove
-    package: azure-maps-spatial-io
-    summary: |-
-      Method that is called when the layer is removed from the map.
-      Should perform any necessary cleanup for the layer.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: function onRemove()
   - name: setOptions(OgcMapLayerOptions)
     uid: azure-maps-spatial-io.atlas.layer.OgcMapLayer.setOptions
     package: azure-maps-spatial-io

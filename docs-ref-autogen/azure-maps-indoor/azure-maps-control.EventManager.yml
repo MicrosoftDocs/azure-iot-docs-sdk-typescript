@@ -31,6 +31,28 @@ methods:
           type: '(e: IFacilityChangeEvent) =&gt; void'
           description: |
             The event handler callback.
+  - name: 'add("indoorready", IndoorManager, (e: IIndoorReadyEvent) => void)'
+    uid: azure-maps-indoor.azure-maps-control.EventManager.add_2
+    package: azure-maps-indoor
+    summary: Adds an indoor ready event to the `IndoorManager`.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function add(eventType: "indoorready", target: IndoorManager, callback:
+        (e: IIndoorReadyEvent) => void)
+      parameters:
+        - id: eventType
+          type: '"indoorready"'
+          description: The event name.
+        - id: target
+          type: <xref uid="azure-maps-indoor.atlas.indoor.IndoorManager" />
+          description: The `IndoorManager` to add the event for.
+        - id: callback
+          type: '(e: IIndoorReadyEvent) =&gt; void'
+          description: |
+            The event handler callback.
   - name: 'add("levelchanged", IndoorManager, (e: ILevelChangeEvent) => void)'
     uid: azure-maps-indoor.azure-maps-control.EventManager.add_1
     package: azure-maps-indoor

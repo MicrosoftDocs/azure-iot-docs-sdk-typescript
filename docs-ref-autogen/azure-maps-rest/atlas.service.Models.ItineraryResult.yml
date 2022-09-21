@@ -24,8 +24,8 @@ properties:
     syntax:
       content: 'arrivalTime?: Date'
       return:
-        type: Date
         description: ''
+        type: Date
   - name: departureTime
     uid: azure-maps-rest.atlas.service.Models.ItineraryResult.departureTime
     package: azure-maps-rest
@@ -41,8 +41,8 @@ properties:
     syntax:
       content: 'departureTime?: Date'
       return:
-        type: Date
         description: ''
+        type: Date
   - name: itineraryId
     uid: azure-maps-rest.atlas.service.Models.ItineraryResult.itineraryId
     package: azure-maps-rest
@@ -54,8 +54,8 @@ properties:
     syntax:
       content: 'itineraryId?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: legs
     uid: azure-maps-rest.atlas.service.Models.ItineraryResult.legs
     package: azure-maps-rest
@@ -67,10 +67,10 @@ properties:
     syntax:
       content: 'legs?: RouteItineraryLeg[]'
       return:
+        description: ''
         type: >-
           <xref uid="azure-maps-rest.atlas.service.Models.RouteItineraryLeg"
           />[]
-        description: ''
   - name: numberOfLegs
     uid: azure-maps-rest.atlas.service.Models.ItineraryResult.numberOfLegs
     package: azure-maps-rest
@@ -82,8 +82,8 @@ properties:
     syntax:
       content: 'numberOfLegs?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: travelTimeInSeconds
     uid: azure-maps-rest.atlas.service.Models.ItineraryResult.travelTimeInSeconds
     package: azure-maps-rest
@@ -95,5 +95,5 @@ properties:
     syntax:
       content: 'travelTimeInSeconds?: number'
       return:
-        type: number
         description: ''
+        type: number

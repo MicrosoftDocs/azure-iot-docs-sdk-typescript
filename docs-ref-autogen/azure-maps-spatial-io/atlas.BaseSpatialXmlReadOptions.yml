@@ -9,21 +9,6 @@ isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: maxFeatures
-    uid: azure-maps-spatial-io.atlas.BaseSpatialXmlReadOptions.maxFeatures
-    package: azure-maps-spatial-io
-    summary: |-
-      Specifies the maximum number of features to read from the data set.
-      If not specified, will read all features.
-    fullName: maxFeatures
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'maxFeatures?: number'
-      return:
-        type: number
-        description: ''
   - name: parseStyles
     uid: azure-maps-spatial-io.atlas.BaseSpatialXmlReadOptions.parseStyles
     package: azure-maps-spatial-io
@@ -39,8 +24,27 @@ properties:
     syntax:
       content: 'parseStyles?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
+inheritedProperties:
+  - name: maxFeatures
+    uid: azure-maps-spatial-io.atlas.BaseSpatialXmlReadOptions.maxFeatures
+    package: azure-maps-spatial-io
+    summary: |-
+      Specifies the maximum number of features to read from the data set.
+      If not specified, will read all features.
+    fullName: maxFeatures
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxFeatures?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseSpatialDataReadOptions.maxFeatures](xref:BaseSpatialDataReadOptions.maxFeatures)
   - name: proxyService
     uid: azure-maps-spatial-io.atlas.BaseSpatialXmlReadOptions.proxyService
     package: azure-maps-spatial-io
@@ -57,6 +61,9 @@ properties:
     syntax:
       content: 'proxyService?: string'
       return:
-        type: string
         description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseSpatialDataReadOptions.proxyService](xref:BaseSpatialDataReadOptions.proxyService)
 extends: <xref uid="azure-maps-spatial-io.atlas.BaseSpatialDataReadOptions" />

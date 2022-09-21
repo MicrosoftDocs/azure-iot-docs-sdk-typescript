@@ -7,6 +7,9 @@ fullName: GetGeofenceResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type GetGeofenceResponse =
-  Response<,Models.SpatialGetGeofenceResponse,GeofenceGeojson>
+syntax: |
+  type GetGeofenceResponse = Response<
+    GeofenceResponse & SpatialGetGeofenceHeaders,
+    Models.SpatialGetGeofenceResponse,
+    GeofenceGeojson
+  >

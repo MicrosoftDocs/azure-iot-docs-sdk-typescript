@@ -33,7 +33,7 @@ constructors:
 
             If no protocol is specified, e.g. `"atlas.microsoft.com"`, then
             `https` will be assumed.
-properties:
+inheritedProperties:
   - name: mapsUrl
     uid: azure-maps-rest.atlas.service.SpatialURL.mapsUrl
     package: azure-maps-rest
@@ -45,8 +45,36 @@ properties:
     syntax:
       content: 'mapsUrl: string'
       return:
-        type: string
         description: ''
+        type: string
+    inheritanceDescription: '<b>Inherited From</b> [MapsURL.mapsUrl](xref:MapsURL.mapsUrl)'
+inheritedMethods:
+  - name: 'newPipeline(Credential, INewPipelineOptions)'
+    uid: azure-maps-rest.atlas.service.SpatialURL.newPipeline
+    package: azure-maps-rest
+    summary: >-
+      A static method used to create a new Pipeline object with Credential
+      provided.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function newPipeline(credential: Credential, pipelineOptions?:
+        INewPipelineOptions): Pipeline
+      parameters:
+        - id: credential
+          type: <xref uid="azure-maps-rest.atlas.service.Credential" />
+          description: >-
+            Such as SubscriptionKeyCredential, TokenCredential, and
+            MapControlCredential.
+        - id: pipelineOptions
+          type: <xref uid="azure-maps-rest.atlas.service.INewPipelineOptions" />
+          description: ''
+      return:
+        description: A new Pipeline object.
+        type: <xref uid="azure-maps-rest.atlas.service.Pipeline" />
+    inheritanceDescription: '<b>Inherited From</b> [MapsURL.newPipeline](xref:MapsURL.newPipeline)'
 methods:
   - name: 'getBuffer(Aborter, string | SpatialFeatureCollection, number[])'
     uid: azure-maps-rest.atlas.service.SpatialURL.getBuffer
@@ -101,7 +129,8 @@ methods:
     syntax:
       content: >-
         function getBuffer(aborter: Aborter, udidOrFeatureCollection: string |
-        SpatialFeatureCollection, distances: number[])
+        SpatialFeatureCollection, distances: number[]):
+        Promise<GetBufferResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -141,10 +170,10 @@ methods:
             distance larger than the geometry itself, an empty polygon will be
             returned.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref uid="azure-maps-rest.atlas.service.GetBufferResponse"
           />&gt;
-        description: ''
   - name: >-
       getClosestPoint(Aborter, GeoJSON.Position, string |
       SpatialFeatureCollection, GetClosestPointOptions)
@@ -189,7 +218,7 @@ methods:
       content: >-
         function getClosestPoint(aborter: Aborter, position: GeoJSON.Position,
         udidOrFeatureCollection: string | SpatialFeatureCollection, options?:
-        GetClosestPointOptions)
+        GetClosestPointOptions): Promise<GetClosesPointResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -225,10 +254,10 @@ methods:
           type: <xref uid="azure-maps-rest.atlas.service.GetClosestPointOptions" />
           description: ''
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.GetClosesPointResponse" />&gt;
-        description: ''
   - name: >-
       getGeofence(Aborter, string, string | SpatialFeatureCollection,
       GeoJSON.Position, GetGeofenceOptions)
@@ -242,7 +271,8 @@ methods:
       content: >-
         function getGeofence(aborter: Aborter, deviceId: string,
         udidOrFeatureCollection: string | SpatialFeatureCollection, position:
-        GeoJSON.Position, options?: GetGeofenceOptions)
+        GeoJSON.Position, options?: GetGeofenceOptions):
+        Promise<GetGeofenceResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -283,11 +313,11 @@ methods:
           type: <xref uid="azure-maps-rest.atlas.service.GetGeofenceOptions" />
           description: ''
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.GetGeofenceResponse" />&gt;
-        description: ''
-  - name: 'getGreatCircleDistance(Aborter, Object)'
+  - name: 'getGreatCircleDistance(Aborter, [GeoJSON.Position, GeoJSON.Position])'
     uid: azure-maps-rest.atlas.service.SpatialURL.getGreatCircleDistance
     package: azure-maps-rest
     summary: >
@@ -308,7 +338,9 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getGreatCircleDistance(aborter: Aborter, coordinates: Object)'
+      content: >-
+        function getGreatCircleDistance(aborter: Aborter, coordinates:
+        [GeoJSON.Position, GeoJSON.Position]): Promise<GetGreatCircleDistance>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -319,7 +351,7 @@ methods:
             goto documents of Aborter for more examples about request
             cancellation.
         - id: coordinates
-          type: Object
+          type: '[<xref uid="GeoJSON.Position" />, <xref uid="GeoJSON.Position" />]'
           description: >-
             The coordinates through which the distance is calculated. Two
 
@@ -328,10 +360,10 @@ methods:
 
             target point coordinate.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.GetGreatCircleDistance" />&gt;
-        description: ''
   - name: >-
       getPointInPolygon(Aborter, string | SpatialFeatureCollection,
       GeoJSON.Position)
@@ -376,7 +408,8 @@ methods:
     syntax:
       content: >-
         function getPointInPolygon(aborter: Aborter, udidOrFeatureCollection:
-        string | SpatialFeatureCollection, position: GeoJSON.Position)
+        string | SpatialFeatureCollection, position: GeoJSON.Position):
+        Promise<GetPointInPolygonResponse>
       parameters:
         - id: aborter
           type: <xref uid="azure-maps-rest.atlas.service.Aborter" />
@@ -409,33 +442,8 @@ methods:
           type: <xref uid="GeoJSON.Position" />
           description: The base point.
       return:
+        description: ''
         type: >-
           Promise&lt;<xref
           uid="azure-maps-rest.atlas.service.GetPointInPolygonResponse" />&gt;
-        description: ''
-  - name: 'newPipeline(Credential, INewPipelineOptions)'
-    uid: azure-maps-rest.atlas.service.SpatialURL.newPipeline
-    package: azure-maps-rest
-    summary: >-
-      A static method used to create a new Pipeline object with Credential
-      provided.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        static function newPipeline(credential: Credential, pipelineOptions?:
-        INewPipelineOptions)
-      parameters:
-        - id: credential
-          type: <xref uid="azure-maps-rest.atlas.service.Credential" />
-          description: >-
-            Such as SubscriptionKeyCredential, TokenCredential, and
-            MapControlCredential.
-        - id: pipelineOptions
-          type: <xref uid="azure-maps-rest.atlas.service.INewPipelineOptions" />
-          description: ''
-      return:
-        type: <xref uid="azure-maps-rest.atlas.service.Pipeline" />
-        description: A new Pipeline object.
 extends: <xref uid="azure-maps-rest.atlas.service.MapsURL" />

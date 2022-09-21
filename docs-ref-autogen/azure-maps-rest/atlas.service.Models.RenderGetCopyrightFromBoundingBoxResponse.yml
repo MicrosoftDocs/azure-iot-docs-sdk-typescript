@@ -7,6 +7,10 @@ fullName: RenderGetCopyrightFromBoundingBoxResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
+syntax: |
   type RenderGetCopyrightFromBoundingBoxResponse = CopyrightBoundingResult & {
-  _response: Object }
+    _response: HttpResponse & {
+      bodyAsText: string,
+      parsedBody: CopyrightBoundingResult,
+    },
+  }

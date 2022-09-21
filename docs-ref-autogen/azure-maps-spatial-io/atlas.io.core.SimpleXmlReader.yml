@@ -43,11 +43,11 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function parse(xml: string)'
+      content: 'function parse(xml: string): XmlDocument'
       parameters:
         - id: xml
           type: string
           description: The xml string to parse.
       return:
-        type: <xref uid="azure-maps-spatial-io.atlas.io.core.XmlDocument" />
         description: An XmlDocument object generated from an xml string.
+        type: <xref uid="azure-maps-spatial-io.atlas.io.core.XmlDocument" />

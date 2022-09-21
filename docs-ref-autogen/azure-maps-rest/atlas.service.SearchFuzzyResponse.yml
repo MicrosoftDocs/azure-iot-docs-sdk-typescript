@@ -7,6 +7,9 @@ fullName: SearchFuzzyResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type SearchFuzzyResponse =
-  Response<SearchFuzzyResponse,Models.SearchGetSearchFuzzyResponse,SearchGeojson>
+syntax: |
+  type SearchFuzzyResponse = Response<
+    SearchFuzzyResponse,
+    Models.SearchGetSearchFuzzyResponse,
+    SearchGeojson
+  >

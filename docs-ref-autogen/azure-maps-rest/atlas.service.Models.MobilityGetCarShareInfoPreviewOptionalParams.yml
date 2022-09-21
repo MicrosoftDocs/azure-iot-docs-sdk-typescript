@@ -10,36 +10,6 @@ isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: abortSignal
-    uid: >-
-      azure-maps-rest.atlas.service.Models.MobilityGetCarShareInfoPreviewOptionalParams.abortSignal
-    package: azure-maps-rest
-    summary: The signal which can be used to abort requests.
-    fullName: abortSignal
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'abortSignal?: AbortSignalLike'
-      return:
-        type: AbortSignalLike
-        description: ''
-  - name: customHeaders
-    uid: >-
-      azure-maps-rest.atlas.service.Models.MobilityGetCarShareInfoPreviewOptionalParams.customHeaders
-    package: azure-maps-rest
-    summary: |-
-      {object} [customHeaders] User defined custom request headers that
-      will be applied before the request is sent.
-    fullName: customHeaders
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'customHeaders?: [key: string]: string'
-      return:
-        type: '[key: string]\: string'
-        description: ''
   - name: language
     uid: >-
       azure-maps-rest.atlas.service.Models.MobilityGetCarShareInfoPreviewOptionalParams.language
@@ -60,8 +30,41 @@ properties:
     syntax:
       content: 'language?: string'
       return:
-        type: string
         description: ''
+        type: string
+inheritedProperties:
+  - name: abortSignal
+    uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetCarShareInfoPreviewOptionalParams.abortSignal
+    package: azure-maps-rest
+    summary: The signal which can be used to abort requests.
+    fullName: abortSignal
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'abortSignal?: AbortSignalLike'
+      return:
+        description: ''
+        type: AbortSignalLike
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.abortSignal
+  - name: customHeaders
+    uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetCarShareInfoPreviewOptionalParams.customHeaders
+    package: azure-maps-rest
+    summary: |-
+      {object} [customHeaders] User defined custom request headers that
+      will be applied before the request is sent.
+    fullName: customHeaders
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'customHeaders?: [key: string]: string'
+      return:
+        description: ''
+        type: '[key: string]\: string'
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.customHeaders
   - name: onDownloadProgress
     uid: >-
       azure-maps-rest.atlas.service.Models.MobilityGetCarShareInfoPreviewOptionalParams.onDownloadProgress
@@ -74,8 +77,9 @@ properties:
     syntax:
       content: 'onDownloadProgress?: (progress: TransferProgressEvent) => void'
       return:
-        type: '(progress: TransferProgressEvent) =&gt; void'
         description: ''
+        type: '(progress: TransferProgressEvent) =&gt; void'
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.onDownloadProgress
   - name: onUploadProgress
     uid: >-
       azure-maps-rest.atlas.service.Models.MobilityGetCarShareInfoPreviewOptionalParams.onUploadProgress
@@ -88,8 +92,9 @@ properties:
     syntax:
       content: 'onUploadProgress?: (progress: TransferProgressEvent) => void'
       return:
-        type: '(progress: TransferProgressEvent) =&gt; void'
         description: ''
+        type: '(progress: TransferProgressEvent) =&gt; void'
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.onUploadProgress
   - name: timeout
     uid: >-
       azure-maps-rest.atlas.service.Models.MobilityGetCarShareInfoPreviewOptionalParams.timeout
@@ -104,6 +109,7 @@ properties:
     syntax:
       content: 'timeout?: number'
       return:
-        type: number
         description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.timeout
 extends: RequestOptionsBase

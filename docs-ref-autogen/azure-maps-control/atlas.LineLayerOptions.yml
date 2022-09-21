@@ -26,23 +26,8 @@ properties:
     syntax:
       content: 'blur?: number | Expression'
       return:
+        description: ''
         type: number | <xref uid="azure-maps-control.atlas.Expression" />
-        description: ''
-  - name: filter
-    uid: azure-maps-control.atlas.LineLayerOptions.filter
-    package: azure-maps-control
-    summary: |-
-      An expression specifying conditions on source features.
-      Only features that match the filter are displayed.
-    fullName: filter
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'filter?: Expression'
-      return:
-        type: <xref uid="azure-maps-control.atlas.Expression" />
-        description: ''
   - name: lineCap
     uid: azure-maps-control.atlas.LineLayerOptions.lineCap
     package: azure-maps-control
@@ -71,8 +56,8 @@ properties:
     syntax:
       content: 'lineCap?: "butt" | "round" | "square"'
       return:
-        type: '"butt" | "round" | "square"'
         description: ''
+        type: '"butt" | "round" | "square"'
   - name: lineJoin
     uid: azure-maps-control.atlas.LineLayerOptions.lineJoin
     package: azure-maps-control
@@ -103,46 +88,8 @@ properties:
     syntax:
       content: 'lineJoin?: "bevel" | "round" | "miter"'
       return:
+        description: ''
         type: '"bevel" | "round" | "miter"'
-        description: ''
-  - name: maxZoom
-    uid: azure-maps-control.atlas.LineLayerOptions.maxZoom
-    package: azure-maps-control
-    summary: >-
-      An integer specifying the maximum zoom level to render the layer at.
-
-      This value is exclusive, i.e. the layer will be visible at `maxZoom > zoom
-      >= minZoom`.
-
-      Default `24`.
-    fullName: maxZoom
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'maxZoom?: number'
-      return:
-        type: number
-        description: ''
-  - name: minZoom
-    uid: azure-maps-control.atlas.LineLayerOptions.minZoom
-    package: azure-maps-control
-    summary: >-
-      An integer specifying the minimum zoom level to render the layer at.
-
-      This value is inclusive, i.e. the layer will be visible at `maxZoom > zoom
-      >= minZoom`.
-
-      Default `0`.
-    fullName: minZoom
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'minZoom?: number'
-      return:
-        type: number
-        description: ''
   - name: offset
     uid: azure-maps-control.atlas.LineLayerOptions.offset
     package: azure-maps-control
@@ -162,8 +109,8 @@ properties:
     syntax:
       content: 'offset?: number | Expression'
       return:
-        type: number | <xref uid="azure-maps-control.atlas.Expression" />
         description: ''
+        type: number | <xref uid="azure-maps-control.atlas.Expression" />
   - name: source
     uid: azure-maps-control.atlas.LineLayerOptions.source
     package: azure-maps-control
@@ -175,8 +122,8 @@ properties:
     syntax:
       content: 'source?: string | Source'
       return:
-        type: string | <xref uid="azure-maps-control.atlas.source.Source" />
         description: ''
+        type: string | <xref uid="azure-maps-control.atlas.source.Source" />
   - name: sourceLayer
     uid: azure-maps-control.atlas.LineLayerOptions.sourceLayer
     package: azure-maps-control
@@ -194,8 +141,8 @@ properties:
     syntax:
       content: 'sourceLayer?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: strokeColor
     uid: azure-maps-control.atlas.LineLayerOptions.strokeColor
     package: azure-maps-control
@@ -209,8 +156,8 @@ properties:
     syntax:
       content: 'strokeColor?: string | Expression'
       return:
-        type: string | <xref uid="azure-maps-control.atlas.Expression" />
         description: ''
+        type: string | <xref uid="azure-maps-control.atlas.Expression" />
   - name: strokeDashArray
     uid: azure-maps-control.atlas.LineLayerOptions.strokeDashArray
     package: azure-maps-control
@@ -230,8 +177,8 @@ properties:
     syntax:
       content: 'strokeDashArray?: number[]'
       return:
-        type: 'number[]'
         description: ''
+        type: 'number[]'
   - name: strokeGradient
     uid: azure-maps-control.atlas.LineLayerOptions.strokeGradient
     package: azure-maps-control
@@ -246,8 +193,8 @@ properties:
     syntax:
       content: 'strokeGradient?: Expression'
       return:
-        type: <xref uid="azure-maps-control.atlas.Expression" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.Expression" />
   - name: strokeOpacity
     uid: azure-maps-control.atlas.LineLayerOptions.strokeOpacity
     package: azure-maps-control
@@ -263,8 +210,8 @@ properties:
     syntax:
       content: 'strokeOpacity?: number | Expression'
       return:
-        type: number | <xref uid="azure-maps-control.atlas.Expression" />
         description: ''
+        type: number | <xref uid="azure-maps-control.atlas.Expression" />
   - name: strokeWidth
     uid: azure-maps-control.atlas.LineLayerOptions.strokeWidth
     package: azure-maps-control
@@ -278,8 +225,8 @@ properties:
     syntax:
       content: 'strokeWidth?: number | Expression'
       return:
-        type: number | <xref uid="azure-maps-control.atlas.Expression" />
         description: ''
+        type: number | <xref uid="azure-maps-control.atlas.Expression" />
   - name: translate
     uid: azure-maps-control.atlas.LineLayerOptions.translate
     package: azure-maps-control
@@ -297,8 +244,8 @@ properties:
     syntax:
       content: 'translate?: Pixel'
       return:
-        type: <xref uid="azure-maps-control.atlas.Pixel" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.Pixel" />
   - name: translateAnchor
     uid: azure-maps-control.atlas.LineLayerOptions.translateAnchor
     package: azure-maps-control
@@ -314,8 +261,65 @@ properties:
     syntax:
       content: 'translateAnchor?: "map" | "viewport"'
       return:
-        type: '"map" | "viewport"'
         description: ''
+        type: '"map" | "viewport"'
+inheritedProperties:
+  - name: filter
+    uid: azure-maps-control.atlas.LineLayerOptions.filter
+    package: azure-maps-control
+    summary: |-
+      An expression specifying conditions on source features.
+      Only features that match the filter are displayed.
+    fullName: filter
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'filter?: Expression'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.atlas.Expression" />
+    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.filter](xref:LayerOptions.filter)'
+  - name: maxZoom
+    uid: azure-maps-control.atlas.LineLayerOptions.maxZoom
+    package: azure-maps-control
+    summary: >-
+      An integer specifying the maximum zoom level to render the layer at.
+
+      This value is exclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `24`.
+    fullName: maxZoom
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxZoom?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.maxZoom](xref:LayerOptions.maxZoom)'
+  - name: minZoom
+    uid: azure-maps-control.atlas.LineLayerOptions.minZoom
+    package: azure-maps-control
+    summary: >-
+      An integer specifying the minimum zoom level to render the layer at.
+
+      This value is inclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `0`.
+    fullName: minZoom
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'minZoom?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.minZoom](xref:LayerOptions.minZoom)'
   - name: visible
     uid: azure-maps-control.atlas.LineLayerOptions.visible
     package: azure-maps-control
@@ -329,6 +333,7 @@ properties:
     syntax:
       content: 'visible?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
+    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.visible](xref:LayerOptions.visible)'
 extends: <xref uid="azure-maps-control.atlas.LayerOptions" />

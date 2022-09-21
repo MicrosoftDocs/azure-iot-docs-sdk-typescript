@@ -20,10 +20,10 @@ properties:
     syntax:
       content: 'activeLayers?: Array<string | OgcSublayer>'
       return:
+        description: ''
         type: >-
           Array&lt;string | <xref uid="azure-maps-spatial-io.atlas.OgcSublayer"
           />&gt;
-        description: ''
   - name: bringIntoView
     uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.bringIntoView
     package: azure-maps-spatial-io
@@ -37,25 +37,8 @@ properties:
     syntax:
       content: 'bringIntoView?: boolean'
       return:
+        description: ''
         type: boolean
-        description: ''
-  - name: contrast
-    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.contrast
-    package: azure-maps-spatial-io
-    summary: >-
-      A number between -1 and 1 that increases or decreases the contrast of the
-      overlay.
-
-      Default `0`.
-    fullName: contrast
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'contrast?: number'
-      return:
-        type: number
-        description: ''
   - name: debug
     uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.debug
     package: azure-maps-spatial-io
@@ -69,8 +52,8 @@ properties:
     syntax:
       content: 'debug?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: dimensions
     uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.dimensions
     package: azure-maps-spatial-io
@@ -82,147 +65,8 @@ properties:
     syntax:
       content: 'dimensions?: Record<string, string>'
       return:
+        description: ''
         type: 'Record&lt;string, string&gt;'
-        description: ''
-  - name: fadeDuration
-    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.fadeDuration
-    package: azure-maps-spatial-io
-    summary: >-
-      The duration in milliseconds of a fade transition when a new tile is
-      added.
-
-      Must be greater or equal to 0.
-
-      Default `300`.
-    fullName: fadeDuration
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'fadeDuration?: number'
-      return:
-        type: number
-        description: ''
-  - name: filter
-    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.filter
-    package: azure-maps-spatial-io
-    summary: |-
-      An expression specifying conditions on source features.
-      Only features that match the filter are displayed.
-    fullName: filter
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'filter?: Expression'
-      return:
-        type: Expression
-        description: ''
-  - name: hueRotation
-    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.hueRotation
-    package: azure-maps-spatial-io
-    summary: |-
-      Rotates hues around the color wheel.
-      A number in degrees.
-      Default `0`.
-    fullName: hueRotation
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'hueRotation?: number'
-      return:
-        type: number
-        description: ''
-  - name: maxBrightness
-    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.maxBrightness
-    package: azure-maps-spatial-io
-    summary: >-
-      A number between 0 and 1 that increases or decreases the maximum
-      brightness of the overlay.
-
-      Default `1`.
-    fullName: maxBrightness
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'maxBrightness?: number'
-      return:
-        type: number
-        description: ''
-  - name: maxZoom
-    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.maxZoom
-    package: azure-maps-spatial-io
-    summary: >-
-      An integer specifying the maximum zoom level to render the layer at.
-
-      This value is exclusive, i.e. the layer will be visible at `maxZoom > zoom
-      >= minZoom`.
-
-      Default `24`.
-    fullName: maxZoom
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'maxZoom?: number'
-      return:
-        type: number
-        description: ''
-  - name: minBrightness
-    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.minBrightness
-    package: azure-maps-spatial-io
-    summary: >-
-      A number between 0 and 1 that increases or decreases the minimum
-      brightness of the overlay.
-
-      Default `0`.
-    fullName: minBrightness
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'minBrightness?: number'
-      return:
-        type: number
-        description: ''
-  - name: minZoom
-    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.minZoom
-    package: azure-maps-spatial-io
-    summary: >-
-      An integer specifying the minimum zoom level to render the layer at.
-
-      This value is inclusive, i.e. the layer will be visible at `maxZoom > zoom
-      >= minZoom`.
-
-      Default `0`.
-    fullName: minZoom
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'minZoom?: number'
-      return:
-        type: number
-        description: ''
-  - name: opacity
-    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.opacity
-    package: azure-maps-spatial-io
-    summary: >-
-      A number between 0 and 1 that indicates the opacity at which the overlay
-      will be drawn.
-
-      Default `1`.
-    fullName: opacity
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'opacity?: number'
-      return:
-        type: number
-        description: ''
   - name: proxyService
     uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.proxyService
     package: azure-maps-spatial-io
@@ -239,25 +83,8 @@ properties:
     syntax:
       content: 'proxyService?: string'
       return:
+        description: ''
         type: string
-        description: ''
-  - name: saturation
-    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.saturation
-    package: azure-maps-spatial-io
-    summary: >-
-      A number between -1 and 1 that increases or decreases the saturation of
-      the overlay.
-
-      Default `0`.
-    fullName: saturation
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'saturation?: number'
-      return:
-        type: number
-        description: ''
   - name: service
     uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.service
     package: azure-maps-spatial-io
@@ -275,8 +102,8 @@ properties:
     syntax:
       content: 'service?: "WMS" | "WMTS"'
       return:
-        type: '"WMS" | "WMTS"'
         description: ''
+        type: '"WMS" | "WMTS"'
   - name: styles
     uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.styles
     package: azure-maps-spatial-io
@@ -288,10 +115,10 @@ properties:
     syntax:
       content: 'styles?: Array<string | OgcStyle>'
       return:
+        description: ''
         type: >-
           Array&lt;string | <xref uid="azure-maps-spatial-io.atlas.OgcStyle"
           />&gt;
-        description: ''
   - name: url
     uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.url
     package: azure-maps-spatial-io
@@ -303,8 +130,8 @@ properties:
     syntax:
       content: 'url?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: version
     uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.version
     package: azure-maps-spatial-io
@@ -318,8 +145,192 @@ properties:
     syntax:
       content: 'version?: string'
       return:
-        type: string
         description: ''
+        type: string
+inheritedProperties:
+  - name: contrast
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.contrast
+    package: azure-maps-spatial-io
+    summary: >-
+      A number between -1 and 1 that increases or decreases the contrast of the
+      overlay.
+
+      Default `0`.
+    fullName: contrast
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'contrast?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> MediaLayerOptions.contrast
+  - name: fadeDuration
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.fadeDuration
+    package: azure-maps-spatial-io
+    summary: >-
+      The duration in milliseconds of a fade transition when a new tile is
+      added.
+
+      Must be greater or equal to 0.
+
+      Default `300`.
+    fullName: fadeDuration
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'fadeDuration?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> MediaLayerOptions.fadeDuration
+  - name: filter
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.filter
+    package: azure-maps-spatial-io
+    summary: |-
+      An expression specifying conditions on source features.
+      Only features that match the filter are displayed.
+    fullName: filter
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'filter?: Expression'
+      return:
+        description: ''
+        type: Expression
+    inheritanceDescription: <b>Inherited From</b> LayerOptions.filter
+  - name: hueRotation
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.hueRotation
+    package: azure-maps-spatial-io
+    summary: |-
+      Rotates hues around the color wheel.
+      A number in degrees.
+      Default `0`.
+    fullName: hueRotation
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'hueRotation?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> MediaLayerOptions.hueRotation
+  - name: maxBrightness
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.maxBrightness
+    package: azure-maps-spatial-io
+    summary: >-
+      A number between 0 and 1 that increases or decreases the maximum
+      brightness of the overlay.
+
+      Default `1`.
+    fullName: maxBrightness
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxBrightness?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> MediaLayerOptions.maxBrightness
+  - name: maxZoom
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.maxZoom
+    package: azure-maps-spatial-io
+    summary: >-
+      An integer specifying the maximum zoom level to render the layer at.
+
+      This value is exclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `24`.
+    fullName: maxZoom
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxZoom?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> LayerOptions.maxZoom
+  - name: minBrightness
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.minBrightness
+    package: azure-maps-spatial-io
+    summary: >-
+      A number between 0 and 1 that increases or decreases the minimum
+      brightness of the overlay.
+
+      Default `0`.
+    fullName: minBrightness
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'minBrightness?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> MediaLayerOptions.minBrightness
+  - name: minZoom
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.minZoom
+    package: azure-maps-spatial-io
+    summary: >-
+      An integer specifying the minimum zoom level to render the layer at.
+
+      This value is inclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `0`.
+    fullName: minZoom
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'minZoom?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> LayerOptions.minZoom
+  - name: opacity
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.opacity
+    package: azure-maps-spatial-io
+    summary: >-
+      A number between 0 and 1 that indicates the opacity at which the overlay
+      will be drawn.
+
+      Default `1`.
+    fullName: opacity
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'opacity?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> MediaLayerOptions.opacity
+  - name: saturation
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.saturation
+    package: azure-maps-spatial-io
+    summary: >-
+      A number between -1 and 1 that increases or decreases the saturation of
+      the overlay.
+
+      Default `0`.
+    fullName: saturation
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'saturation?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> MediaLayerOptions.saturation
   - name: visible
     uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.visible
     package: azure-maps-spatial-io
@@ -333,6 +344,7 @@ properties:
     syntax:
       content: 'visible?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
+    inheritanceDescription: <b>Inherited From</b> LayerOptions.visible
 extends: MediaLayerOptions

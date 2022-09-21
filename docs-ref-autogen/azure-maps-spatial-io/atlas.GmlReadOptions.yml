@@ -28,40 +28,8 @@ properties:
     syntax:
       content: 'isAxisOrderLonLat?: boolean'
       return:
+        description: ''
         type: boolean
-        description: ''
-  - name: maxFeatures
-    uid: azure-maps-spatial-io.atlas.GmlReadOptions.maxFeatures
-    package: azure-maps-spatial-io
-    summary: |-
-      Specifies the maximum number of features to read from the data set.
-      If not specified, will read all features.
-    fullName: maxFeatures
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'maxFeatures?: number'
-      return:
-        type: number
-        description: ''
-  - name: parseStyles
-    uid: azure-maps-spatial-io.atlas.GmlReadOptions.parseStyles
-    package: azure-maps-spatial-io
-    summary: >-
-      Specifies if style information should be parsed from the XML file and
-      included as properties of the features.
-
-      Default: `true`
-    fullName: parseStyles
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'parseStyles?: boolean'
-      return:
-        type: boolean
-        description: ''
   - name: propertyTypes
     uid: azure-maps-spatial-io.atlas.GmlReadOptions.propertyTypes
     package: azure-maps-spatial-io
@@ -82,10 +50,49 @@ properties:
         propertyTypes?: Record<string, string | "string" | "number" | "boolean"
         | "date">
       return:
+        description: ''
         type: >-
           Record&lt;string, string | "string" | "number" | "boolean" |
           "date"&gt;
+inheritedProperties:
+  - name: maxFeatures
+    uid: azure-maps-spatial-io.atlas.GmlReadOptions.maxFeatures
+    package: azure-maps-spatial-io
+    summary: |-
+      Specifies the maximum number of features to read from the data set.
+      If not specified, will read all features.
+    fullName: maxFeatures
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'maxFeatures?: number'
+      return:
         description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseSpatialDataReadOptions.maxFeatures](xref:BaseSpatialDataReadOptions.maxFeatures)
+  - name: parseStyles
+    uid: azure-maps-spatial-io.atlas.GmlReadOptions.parseStyles
+    package: azure-maps-spatial-io
+    summary: >-
+      Specifies if style information should be parsed from the XML file and
+      included as properties of the features.
+
+      Default: `true`
+    fullName: parseStyles
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'parseStyles?: boolean'
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseSpatialXmlReadOptions.parseStyles](xref:BaseSpatialXmlReadOptions.parseStyles)
   - name: proxyService
     uid: azure-maps-spatial-io.atlas.GmlReadOptions.proxyService
     package: azure-maps-spatial-io
@@ -102,6 +109,9 @@ properties:
     syntax:
       content: 'proxyService?: string'
       return:
-        type: string
         description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseSpatialDataReadOptions.proxyService](xref:BaseSpatialDataReadOptions.proxyService)
 extends: <xref uid="azure-maps-spatial-io.atlas.BaseSpatialXmlReadOptions" />

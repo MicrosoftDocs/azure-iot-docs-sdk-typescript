@@ -7,6 +7,9 @@ fullName: GetCarShareInfoResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type GetCarShareInfoResponse =
-  Response<CarShareResponse,Models.MobilityGetCarShareInfoPreviewResponse,CarShareGeojson>
+syntax: |
+  type GetCarShareInfoResponse = Response<
+    CarShareResponse,
+    Models.MobilityGetCarShareInfoPreviewResponse,
+    CarShareGeojson
+  >

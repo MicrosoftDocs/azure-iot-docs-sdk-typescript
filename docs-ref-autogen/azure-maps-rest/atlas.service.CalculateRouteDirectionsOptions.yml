@@ -7,6 +7,8 @@ fullName: CalculateRouteDirectionsOptions
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
+syntax: >
   type CalculateRouteDirectionsOptions = RouteGetRouteDirectionsOptionalParams &
-  { postBody: RouteDirectionsRequestBody }
+  {
+    postBody?: RouteDirectionsRequestBody,
+  }

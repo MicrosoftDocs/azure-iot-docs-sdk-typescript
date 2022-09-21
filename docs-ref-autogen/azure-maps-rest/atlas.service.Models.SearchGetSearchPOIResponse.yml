@@ -7,4 +7,10 @@ fullName: SearchGetSearchPOIResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: 'type SearchGetSearchPOIResponse = SearchPoiResponse & { _response: Object }'
+syntax: |
+  type SearchGetSearchPOIResponse = SearchPoiResponse & {
+    _response: HttpResponse & {
+      bodyAsText: string,
+      parsedBody: SearchPoiResponse,
+    },
+  }

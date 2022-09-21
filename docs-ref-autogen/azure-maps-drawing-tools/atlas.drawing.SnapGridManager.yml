@@ -51,10 +51,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getGridLayer()
+      content: 'function getGridLayer(): azmaps.layer.LineLayer'
       return:
-        type: <xref uid="azmaps.layer.LineLayer" />
         description: A line layer used to render the grid lines.
+        type: <xref uid="azmaps.layer.LineLayer" />
   - name: getOptions()
     uid: azure-maps-drawing-tools.atlas.drawing.SnapGridManager.getOptions
     package: azure-maps-drawing-tools
@@ -63,12 +63,12 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getOptions()
+      content: 'function getOptions(): SnapGridManagerOptions'
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-maps-drawing-tools.atlas.drawing.SnapGridManagerOptions" />
-        description: ''
   - name: setOptions(SnapGridManagerOptions)
     uid: azure-maps-drawing-tools.atlas.drawing.SnapGridManager.setOptions
     package: azure-maps-drawing-tools
@@ -96,7 +96,9 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function snapPositions(positions: azmaps.data.Position[], zoom?: number)'
+      content: >-
+        function snapPositions(positions: azmaps.data.Position[], zoom?:
+        number): azmaps.data.Position[]
       parameters:
         - id: positions
           type: '<xref uid="azmaps.data.Position" />[]'
@@ -107,8 +109,8 @@ methods:
             Optionally specify which zoom level to optimize the snapping for. If
             not specified, the map's zoom level will be used.
       return:
-        type: '<xref uid="azmaps.data.Position" />[]'
         description: A new array of snapped positions.
+        type: '<xref uid="azmaps.data.Position" />[]'
   - name: 'snapShape(azmaps, number)'
     uid: azure-maps-drawing-tools.atlas.drawing.SnapGridManager.snapShape
     package: azure-maps-drawing-tools

@@ -35,7 +35,7 @@ constructors:
           type: string
           description: |
             The id to filter on.
-methods:
+inheritedMethods:
   - name: toXml(string)
     uid: azure-maps-spatial-io.atlas.io.ogc.filter.Id.toXml
     package: azure-maps-spatial-io
@@ -44,13 +44,14 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function toXml(version?: string)'
+      content: 'function toXml(version?: string): string'
       parameters:
         - id: version
           type: string
           description: |
             The WFS service version.
       return:
-        type: string
         description: ''
+        type: string
+    inheritanceDescription: '<b>Inherited From</b> [Filter.toXml](xref:Filter.toXml)'
 extends: <xref uid="azure-maps-spatial-io.atlas.io.ogc.filter.Filter" />

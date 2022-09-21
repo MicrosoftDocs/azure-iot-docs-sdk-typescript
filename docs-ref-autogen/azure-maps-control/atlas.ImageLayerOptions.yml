@@ -9,6 +9,37 @@ isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: coordinates
+    uid: azure-maps-control.atlas.ImageLayerOptions.coordinates
+    package: azure-maps-control
+    summary: >-
+      An array of positions for the corners of the image listed in clockwise
+      order: [top left, top right, bottom right, bottom left].
+    fullName: coordinates
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'coordinates?: Position[]'
+      return:
+        description: ''
+        type: '<xref uid="azure-maps-control.atlas.data.Position" />[]'
+  - name: url
+    uid: azure-maps-control.atlas.ImageLayerOptions.url
+    package: azure-maps-control
+    summary: >-
+      URL to an image to overlay. Images hosted on other domains must have CORs
+      enabled.
+    fullName: url
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url?: string'
+      return:
+        description: ''
+        type: string
+inheritedProperties:
   - name: contrast
     uid: azure-maps-control.atlas.ImageLayerOptions.contrast
     package: azure-maps-control
@@ -24,23 +55,11 @@ properties:
     syntax:
       content: 'contrast?: number'
       return:
+        description: ''
         type: number
-        description: ''
-  - name: coordinates
-    uid: azure-maps-control.atlas.ImageLayerOptions.coordinates
-    package: azure-maps-control
-    summary: >-
-      An array of positions for the corners of the image listed in clockwise
-      order: [top left, top right, bottom right, bottom left].
-    fullName: coordinates
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'coordinates?: Position[]'
-      return:
-        type: '<xref uid="azure-maps-control.atlas.data.Position" />[]'
-        description: ''
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MediaLayerOptions.contrast](xref:MediaLayerOptions.contrast)
   - name: fadeDuration
     uid: azure-maps-control.atlas.ImageLayerOptions.fadeDuration
     package: azure-maps-control
@@ -58,8 +77,11 @@ properties:
     syntax:
       content: 'fadeDuration?: number'
       return:
-        type: number
         description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MediaLayerOptions.fadeDuration](xref:MediaLayerOptions.fadeDuration)
   - name: filter
     uid: azure-maps-control.atlas.ImageLayerOptions.filter
     package: azure-maps-control
@@ -73,8 +95,9 @@ properties:
     syntax:
       content: 'filter?: Expression'
       return:
-        type: <xref uid="azure-maps-control.atlas.Expression" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.Expression" />
+    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.filter](xref:LayerOptions.filter)'
   - name: hueRotation
     uid: azure-maps-control.atlas.ImageLayerOptions.hueRotation
     package: azure-maps-control
@@ -89,8 +112,11 @@ properties:
     syntax:
       content: 'hueRotation?: number'
       return:
-        type: number
         description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MediaLayerOptions.hueRotation](xref:MediaLayerOptions.hueRotation)
   - name: maxBrightness
     uid: azure-maps-control.atlas.ImageLayerOptions.maxBrightness
     package: azure-maps-control
@@ -106,8 +132,11 @@ properties:
     syntax:
       content: 'maxBrightness?: number'
       return:
-        type: number
         description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MediaLayerOptions.maxBrightness](xref:MediaLayerOptions.maxBrightness)
   - name: maxZoom
     uid: azure-maps-control.atlas.ImageLayerOptions.maxZoom
     package: azure-maps-control
@@ -125,8 +154,9 @@ properties:
     syntax:
       content: 'maxZoom?: number'
       return:
-        type: number
         description: ''
+        type: number
+    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.maxZoom](xref:LayerOptions.maxZoom)'
   - name: minBrightness
     uid: azure-maps-control.atlas.ImageLayerOptions.minBrightness
     package: azure-maps-control
@@ -142,8 +172,11 @@ properties:
     syntax:
       content: 'minBrightness?: number'
       return:
-        type: number
         description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MediaLayerOptions.minBrightness](xref:MediaLayerOptions.minBrightness)
   - name: minZoom
     uid: azure-maps-control.atlas.ImageLayerOptions.minZoom
     package: azure-maps-control
@@ -161,8 +194,9 @@ properties:
     syntax:
       content: 'minZoom?: number'
       return:
-        type: number
         description: ''
+        type: number
+    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.minZoom](xref:LayerOptions.minZoom)'
   - name: opacity
     uid: azure-maps-control.atlas.ImageLayerOptions.opacity
     package: azure-maps-control
@@ -178,8 +212,11 @@ properties:
     syntax:
       content: 'opacity?: number'
       return:
-        type: number
         description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MediaLayerOptions.opacity](xref:MediaLayerOptions.opacity)
   - name: saturation
     uid: azure-maps-control.atlas.ImageLayerOptions.saturation
     package: azure-maps-control
@@ -195,23 +232,11 @@ properties:
     syntax:
       content: 'saturation?: number'
       return:
+        description: ''
         type: number
-        description: ''
-  - name: url
-    uid: azure-maps-control.atlas.ImageLayerOptions.url
-    package: azure-maps-control
-    summary: >-
-      URL to an image to overlay. Images hosted on other domains must have CORs
-      enabled.
-    fullName: url
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'url?: string'
-      return:
-        type: string
-        description: ''
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MediaLayerOptions.saturation](xref:MediaLayerOptions.saturation)
   - name: visible
     uid: azure-maps-control.atlas.ImageLayerOptions.visible
     package: azure-maps-control
@@ -225,6 +250,7 @@ properties:
     syntax:
       content: 'visible?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
+    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.visible](xref:LayerOptions.visible)'
 extends: <xref uid="azure-maps-control.atlas.MediaLayerOptions" />

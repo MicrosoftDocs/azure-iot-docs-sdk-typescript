@@ -9,20 +9,6 @@ isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: abortSignal
-    uid: >-
-      azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.abortSignal
-    package: azure-maps-rest
-    summary: The signal which can be used to abort requests.
-    fullName: abortSignal
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'abortSignal?: AbortSignalLike'
-      return:
-        type: AbortSignalLike
-        description: ''
   - name: accelerationEfficiency
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.accelerationEfficiency
@@ -54,8 +40,8 @@ properties:
     syntax:
       content: 'accelerationEfficiency?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: auxiliaryPowerInkW
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.auxiliaryPowerInkW
@@ -78,8 +64,8 @@ properties:
     syntax:
       content: 'auxiliaryPowerInkW?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: auxiliaryPowerInLitersPerHour
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.auxiliaryPowerInLitersPerHour
@@ -104,8 +90,8 @@ properties:
     syntax:
       content: 'auxiliaryPowerInLitersPerHour?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: avoid
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.avoid
@@ -129,10 +115,10 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'avoid?: Avoid'
+      content: 'avoid?: Avoid[]'
       return:
-        type: <xref uid="azure-maps-rest.atlas.service.Models.Avoid" />
         description: ''
+        type: '<xref uid="azure-maps-rest.atlas.service.Models.Avoid" />[]'
   - name: constantSpeedConsumptionInkWhPerHundredkm
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.constantSpeedConsumptionInkWhPerHundredkm
@@ -198,8 +184,8 @@ properties:
     syntax:
       content: 'constantSpeedConsumptionInkWhPerHundredkm?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: constantSpeedConsumptionInLitersPerHundredkm
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.constantSpeedConsumptionInLitersPerHundredkm
@@ -266,8 +252,8 @@ properties:
     syntax:
       content: 'constantSpeedConsumptionInLitersPerHundredkm?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: currentChargeInkWh
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.currentChargeInkWh
@@ -286,8 +272,8 @@ properties:
     syntax:
       content: 'currentChargeInkWh?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: currentFuelInLiters
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.currentFuelInLiters
@@ -302,24 +288,8 @@ properties:
     syntax:
       content: 'currentFuelInLiters?: number'
       return:
+        description: ''
         type: number
-        description: ''
-  - name: customHeaders
-    uid: >-
-      azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.customHeaders
-    package: azure-maps-rest
-    summary: |-
-      {object} [customHeaders] User defined custom request headers that
-      will be applied before the request is sent.
-    fullName: customHeaders
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'customHeaders?: [key: string]: string'
-      return:
-        type: '[key: string]\: string'
-        description: ''
   - name: decelerationEfficiency
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.decelerationEfficiency
@@ -350,8 +320,8 @@ properties:
     syntax:
       content: 'decelerationEfficiency?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: departAt
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.departAt
@@ -374,8 +344,8 @@ properties:
     syntax:
       content: 'departAt?: Date'
       return:
-        type: Date
         description: ''
+        type: Date
   - name: downhillEfficiency
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.downhillEfficiency
@@ -406,8 +376,8 @@ properties:
     syntax:
       content: 'downhillEfficiency?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: energyBudgetInkWh
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.energyBudgetInkWh
@@ -430,8 +400,8 @@ properties:
     syntax:
       content: 'energyBudgetInkWh?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: fuelBudgetInLiters
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.fuelBudgetInLiters
@@ -454,8 +424,8 @@ properties:
     syntax:
       content: 'fuelBudgetInLiters?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: fuelEnergyDensityInMJoulesPerLiter
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.fuelEnergyDensityInMJoulesPerLiter
@@ -483,8 +453,8 @@ properties:
     syntax:
       content: 'fuelEnergyDensityInMJoulesPerLiter?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: hilliness
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.hilliness
@@ -501,8 +471,8 @@ properties:
     syntax:
       content: 'hilliness?: Hilliness'
       return:
-        type: <xref uid="azure-maps-rest.atlas.service.Models.Hilliness" />
         description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.Hilliness" />
   - name: maxChargeInkWh
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.maxChargeInkWh
@@ -527,36 +497,8 @@ properties:
     syntax:
       content: 'maxChargeInkWh?: string'
       return:
+        description: ''
         type: string
-        description: ''
-  - name: onDownloadProgress
-    uid: >-
-      azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.onDownloadProgress
-    package: azure-maps-rest
-    summary: Callback which fires upon download progress.
-    fullName: onDownloadProgress
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'onDownloadProgress?: (progress: TransferProgressEvent) => void'
-      return:
-        type: '(progress: TransferProgressEvent) =&gt; void'
-        description: ''
-  - name: onUploadProgress
-    uid: >-
-      azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.onUploadProgress
-    package: azure-maps-rest
-    summary: Callback which fires upon upload progress.
-    fullName: onUploadProgress
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'onUploadProgress?: (progress: TransferProgressEvent) => void'
-      return:
-        type: '(progress: TransferProgressEvent) =&gt; void'
-        description: ''
   - name: routeType
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.routeType
@@ -573,8 +515,8 @@ properties:
     syntax:
       content: 'routeType?: RouteType'
       return:
-        type: <xref uid="azure-maps-rest.atlas.service.Models.RouteType" />
         description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.RouteType" />
   - name: timeBudgetInSec
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.timeBudgetInSec
@@ -598,24 +540,8 @@ properties:
     syntax:
       content: 'timeBudgetInSec?: number'
       return:
-        type: number
         description: ''
-  - name: timeout
-    uid: >-
-      azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.timeout
-    package: azure-maps-rest
-    summary: >-
-      The number of milliseconds a request can take before automatically being
-      terminated.
-    fullName: timeout
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'timeout?: number'
-      return:
         type: number
-        description: ''
   - name: traffic
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.traffic
@@ -639,8 +565,8 @@ properties:
     syntax:
       content: 'traffic?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: travelMode
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.travelMode
@@ -672,8 +598,8 @@ properties:
     syntax:
       content: 'travelMode?: TravelMode'
       return:
-        type: <xref uid="azure-maps-rest.atlas.service.Models.TravelMode" />
         description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.TravelMode" />
   - name: uphillEfficiency
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.uphillEfficiency
@@ -705,8 +631,8 @@ properties:
     syntax:
       content: 'uphillEfficiency?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: vehicleAxleWeight
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.vehicleAxleWeight
@@ -723,8 +649,8 @@ properties:
     syntax:
       content: 'vehicleAxleWeight?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: vehicleCommercial
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.vehicleCommercial
@@ -739,8 +665,8 @@ properties:
     syntax:
       content: 'vehicleCommercial?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: vehicleEngineType
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.vehicleEngineType
@@ -760,8 +686,8 @@ properties:
     syntax:
       content: 'vehicleEngineType?: VehicleEngineType'
       return:
-        type: <xref uid="azure-maps-rest.atlas.service.Models.VehicleEngineType" />
         description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.VehicleEngineType" />
   - name: vehicleHeight
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.vehicleHeight
@@ -778,8 +704,8 @@ properties:
     syntax:
       content: 'vehicleHeight?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: vehicleLength
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.vehicleLength
@@ -796,8 +722,8 @@ properties:
     syntax:
       content: 'vehicleLength?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: vehicleLoadType
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.vehicleLoadType
@@ -832,8 +758,8 @@ properties:
     syntax:
       content: 'vehicleLoadType?: VehicleLoadType'
       return:
-        type: <xref uid="azure-maps-rest.atlas.service.Models.VehicleLoadType" />
         description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.VehicleLoadType" />
   - name: vehicleMaxSpeed
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.vehicleMaxSpeed
@@ -853,8 +779,8 @@ properties:
     syntax:
       content: 'vehicleMaxSpeed?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: vehicleWeight
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.vehicleWeight
@@ -889,8 +815,8 @@ properties:
     syntax:
       content: 'vehicleWeight?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: vehicleWidth
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.vehicleWidth
@@ -905,8 +831,8 @@ properties:
     syntax:
       content: 'vehicleWidth?: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: windingness
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.windingness
@@ -923,6 +849,86 @@ properties:
     syntax:
       content: 'windingness?: Windingness'
       return:
-        type: <xref uid="azure-maps-rest.atlas.service.Models.Windingness" />
         description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.Windingness" />
+inheritedProperties:
+  - name: abortSignal
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.abortSignal
+    package: azure-maps-rest
+    summary: The signal which can be used to abort requests.
+    fullName: abortSignal
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'abortSignal?: AbortSignalLike'
+      return:
+        description: ''
+        type: AbortSignalLike
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.abortSignal
+  - name: customHeaders
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.customHeaders
+    package: azure-maps-rest
+    summary: |-
+      {object} [customHeaders] User defined custom request headers that
+      will be applied before the request is sent.
+    fullName: customHeaders
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'customHeaders?: [key: string]: string'
+      return:
+        description: ''
+        type: '[key: string]\: string'
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.customHeaders
+  - name: onDownloadProgress
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.onDownloadProgress
+    package: azure-maps-rest
+    summary: Callback which fires upon download progress.
+    fullName: onDownloadProgress
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'onDownloadProgress?: (progress: TransferProgressEvent) => void'
+      return:
+        description: ''
+        type: '(progress: TransferProgressEvent) =&gt; void'
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.onDownloadProgress
+  - name: onUploadProgress
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.onUploadProgress
+    package: azure-maps-rest
+    summary: Callback which fires upon upload progress.
+    fullName: onUploadProgress
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'onUploadProgress?: (progress: TransferProgressEvent) => void'
+      return:
+        description: ''
+        type: '(progress: TransferProgressEvent) =&gt; void'
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.onUploadProgress
+  - name: timeout
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RouteGetRouteRangeOptionalParams.timeout
+    package: azure-maps-rest
+    summary: >-
+      The number of milliseconds a request can take before automatically being
+      terminated.
+    fullName: timeout
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'timeout?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.timeout
 extends: RequestOptionsBase

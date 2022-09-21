@@ -9,6 +9,20 @@ isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: baseUri
+    uid: azure-maps-rest.atlas.service.Models.MapsClientOptions.baseUri
+    package: azure-maps-rest
+    summary: ''
+    fullName: baseUri
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'baseUri?: string'
+      return:
+        description: ''
+        type: string
+inheritedProperties:
   - name: acceptLanguage
     uid: azure-maps-rest.atlas.service.Models.MapsClientOptions.acceptLanguage
     package: azure-maps-rest
@@ -22,8 +36,9 @@ properties:
     syntax:
       content: 'acceptLanguage?: string'
       return:
-        type: string
         description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> AzureServiceClientOptions.acceptLanguage
   - name: agentSettings
     uid: azure-maps-rest.atlas.service.Models.MapsClientOptions.agentSettings
     package: azure-maps-rest
@@ -37,21 +52,9 @@ properties:
     syntax:
       content: 'agentSettings?: AgentSettings'
       return:
+        description: ''
         type: AgentSettings
-        description: ''
-  - name: baseUri
-    uid: azure-maps-rest.atlas.service.Models.MapsClientOptions.baseUri
-    package: azure-maps-rest
-    summary: ''
-    fullName: baseUri
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'baseUri?: string'
-      return:
-        type: string
-        description: ''
+    inheritanceDescription: <b>Inherited From</b> ServiceClientOptions.agentSettings
   - name: clientRequestIdHeaderName
     uid: >-
       azure-maps-rest.atlas.service.Models.MapsClientOptions.clientRequestIdHeaderName
@@ -69,8 +72,9 @@ properties:
     syntax:
       content: 'clientRequestIdHeaderName?: string'
       return:
-        type: string
         description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> ServiceClientOptions.clientRequestIdHeaderName
   - name: deserializationContentTypes
     uid: >-
       azure-maps-rest.atlas.service.Models.MapsClientOptions.deserializationContentTypes
@@ -83,8 +87,9 @@ properties:
     syntax:
       content: 'deserializationContentTypes?: DeserializationContentTypes'
       return:
-        type: DeserializationContentTypes
         description: ''
+        type: DeserializationContentTypes
+    inheritanceDescription: <b>Inherited From</b> ServiceClientOptions.deserializationContentTypes
   - name: generateClientRequestIdHeader
     uid: >-
       azure-maps-rest.atlas.service.Models.MapsClientOptions.generateClientRequestIdHeader
@@ -99,8 +104,9 @@ properties:
     syntax:
       content: 'generateClientRequestIdHeader?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
+    inheritanceDescription: <b>Inherited From</b> ServiceClientOptions.generateClientRequestIdHeader
   - name: httpClient
     uid: azure-maps-rest.atlas.service.Models.MapsClientOptions.httpClient
     package: azure-maps-rest
@@ -112,8 +118,9 @@ properties:
     syntax:
       content: 'httpClient?: HttpClient'
       return:
-        type: HttpClient
         description: ''
+        type: HttpClient
+    inheritanceDescription: <b>Inherited From</b> ServiceClientOptions.httpClient
   - name: httpPipelineLogger
     uid: azure-maps-rest.atlas.service.Models.MapsClientOptions.httpPipelineLogger
     package: azure-maps-rest
@@ -127,8 +134,9 @@ properties:
     syntax:
       content: 'httpPipelineLogger?: HttpPipelineLogger'
       return:
-        type: HttpPipelineLogger
         description: ''
+        type: HttpPipelineLogger
+    inheritanceDescription: <b>Inherited From</b> ServiceClientOptions.httpPipelineLogger
   - name: longRunningOperationRetryTimeout
     uid: >-
       azure-maps-rest.atlas.service.Models.MapsClientOptions.longRunningOperationRetryTimeout
@@ -145,8 +153,11 @@ properties:
     syntax:
       content: 'longRunningOperationRetryTimeout?: number'
       return:
-        type: number
         description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      AzureServiceClientOptions.longRunningOperationRetryTimeout
   - name: noRetryPolicy
     uid: azure-maps-rest.atlas.service.Models.MapsClientOptions.noRetryPolicy
     package: azure-maps-rest
@@ -158,8 +169,9 @@ properties:
     syntax:
       content: 'noRetryPolicy?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
+    inheritanceDescription: <b>Inherited From</b> ServiceClientOptions.noRetryPolicy
   - name: proxySettings
     uid: azure-maps-rest.atlas.service.Models.MapsClientOptions.proxySettings
     package: azure-maps-rest
@@ -171,8 +183,9 @@ properties:
     syntax:
       content: 'proxySettings?: ProxySettings'
       return:
-        type: ProxySettings
         description: ''
+        type: ProxySettings
+    inheritanceDescription: <b>Inherited From</b> ServiceClientOptions.proxySettings
   - name: requestPolicyFactories
     uid: >-
       azure-maps-rest.atlas.service.Models.MapsClientOptions.requestPolicyFactories
@@ -192,14 +205,17 @@ properties:
     syntax:
       content: >-
         requestPolicyFactories?: RequestPolicyFactory[] |
-        (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void |
-        Object[]
+        (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void | {
+        create(nextPolicy: RequestPolicy, options: RequestPolicyOptions) =>
+        RequestPolicy }[]
       return:
+        description: ''
         type: >-
           <xref uid="azure-maps-rest.atlas.service.RequestPolicyFactory" />[] |
-          (defaultRequestPolicyFactories: RequestPolicyFactory[]) =&gt; void |
-          Object[]
-        description: ''
+          (defaultRequestPolicyFactories: RequestPolicyFactory[]) =&gt; void | {
+          create(nextPolicy: RequestPolicy, options: RequestPolicyOptions) =&gt;
+          RequestPolicy }[]
+    inheritanceDescription: <b>Inherited From</b> ServiceClientOptions.requestPolicyFactories
   - name: rpRegistrationRetryTimeout
     uid: >-
       azure-maps-rest.atlas.service.Models.MapsClientOptions.rpRegistrationRetryTimeout
@@ -214,8 +230,9 @@ properties:
     syntax:
       content: 'rpRegistrationRetryTimeout?: number'
       return:
-        type: number
         description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> ServiceClientOptions.rpRegistrationRetryTimeout
   - name: userAgent
     uid: azure-maps-rest.atlas.service.Models.MapsClientOptions.userAgent
     package: azure-maps-rest
@@ -232,8 +249,9 @@ properties:
     syntax:
       content: 'userAgent?: string | (defaultUserAgent: string) => string'
       return:
-        type: 'string | (defaultUserAgent: string) =&gt; string'
         description: ''
+        type: 'string | (defaultUserAgent: string) =&gt; string'
+    inheritanceDescription: <b>Inherited From</b> ServiceClientOptions.userAgent
   - name: userAgentHeaderName
     uid: azure-maps-rest.atlas.service.Models.MapsClientOptions.userAgentHeaderName
     package: azure-maps-rest
@@ -254,8 +272,9 @@ properties:
         userAgentHeaderName?: string | (defaultUserAgentHeaderName: string) =>
         string
       return:
-        type: 'string | (defaultUserAgentHeaderName: string) =&gt; string'
         description: ''
+        type: 'string | (defaultUserAgentHeaderName: string) =&gt; string'
+    inheritanceDescription: <b>Inherited From</b> ServiceClientOptions.userAgentHeaderName
   - name: withCredentials
     uid: azure-maps-rest.atlas.service.Models.MapsClientOptions.withCredentials
     package: azure-maps-rest
@@ -272,6 +291,7 @@ properties:
     syntax:
       content: 'withCredentials?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
+    inheritanceDescription: <b>Inherited From</b> ServiceClientOptions.withCredentials
 extends: AzureServiceClientOptions

@@ -7,6 +7,9 @@ fullName: GetNearbyTransitResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type GetNearbyTransitResponse =
-  Response<NearbyTransitResponse,Models.MobilityGetNearbyTransitPreviewResponse,NearbyTransitGeojson>
+syntax: |
+  type GetNearbyTransitResponse = Response<
+    NearbyTransitResponse,
+    Models.MobilityGetNearbyTransitPreviewResponse,
+    NearbyTransitGeojson
+  >

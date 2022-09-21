@@ -9,6 +9,21 @@ isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: antialias
+    uid: azure-maps-control.atlas.StyleOptions.antialias
+    package: azure-maps-control
+    summary: >-
+      If true, the gl context will be created with MSAA antialiasing, which can
+      be useful for antialiasing WebGL layers.
+    fullName: antialias
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'antialias?: boolean'
+      return:
+        description: ''
+        type: boolean
   - name: autoResize
     uid: azure-maps-control.atlas.StyleOptions.autoResize
     package: azure-maps-control
@@ -26,8 +41,8 @@ properties:
     syntax:
       content: 'autoResize?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: language
     uid: azure-maps-control.atlas.StyleOptions.language
     package: azure-maps-control
@@ -45,8 +60,8 @@ properties:
     syntax:
       content: 'language?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: light
     uid: azure-maps-control.atlas.StyleOptions.light
     package: azure-maps-control
@@ -58,8 +73,8 @@ properties:
     syntax:
       content: 'light?: LightOptions'
       return:
-        type: <xref uid="azure-maps-control.atlas.LightOptions" />
         description: ''
+        type: <xref uid="azure-maps-control.atlas.LightOptions" />
   - name: preserveDrawingBuffer
     uid: azure-maps-control.atlas.StyleOptions.preserveDrawingBuffer
     package: azure-maps-control
@@ -77,8 +92,8 @@ properties:
     syntax:
       content: 'preserveDrawingBuffer?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: renderWorldCopies
     uid: azure-maps-control.atlas.StyleOptions.renderWorldCopies
     package: azure-maps-control
@@ -94,8 +109,8 @@ properties:
     syntax:
       content: 'renderWorldCopies?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: showBuildingModels
     uid: azure-maps-control.atlas.StyleOptions.showBuildingModels
     package: azure-maps-control
@@ -110,8 +125,8 @@ properties:
     syntax:
       content: 'showBuildingModels?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: showFeedbackLink
     uid: azure-maps-control.atlas.StyleOptions.showFeedbackLink
     package: azure-maps-control
@@ -125,8 +140,21 @@ properties:
     syntax:
       content: 'showFeedbackLink?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
+  - name: showLabels
+    uid: azure-maps-control.atlas.StyleOptions.showLabels
+    package: azure-maps-control
+    summary: Specifies if the map should display labels
+    fullName: showLabels
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'showLabels?: boolean'
+      return:
+        description: ''
+        type: boolean
   - name: showLogo
     uid: azure-maps-control.atlas.StyleOptions.showLogo
     package: azure-maps-control
@@ -141,8 +169,8 @@ properties:
     syntax:
       content: 'showLogo?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: showTileBoundaries
     uid: azure-maps-control.atlas.StyleOptions.showTileBoundaries
     package: azure-maps-control
@@ -165,8 +193,8 @@ properties:
     syntax:
       content: 'showTileBoundaries?: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: style
     uid: azure-maps-control.atlas.StyleOptions.style
     package: azure-maps-control
@@ -186,8 +214,8 @@ properties:
     syntax:
       content: 'style?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: userRegion
     uid: azure-maps-control.atlas.StyleOptions.userRegion
     package: azure-maps-control
@@ -200,8 +228,8 @@ properties:
     syntax:
       content: 'userRegion?: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: view
     uid: azure-maps-control.atlas.StyleOptions.view
     package: azure-maps-control
@@ -230,6 +258,6 @@ properties:
     syntax:
       content: 'view?: string'
       return:
-        type: string
         description: ''
+        type: string
 extends: <xref uid="azure-maps-control.atlas.Options" />

@@ -7,6 +7,9 @@ fullName: GetPointInPolygonResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
-  type GetPointInPolygonResponse =
-  Response<PostPointInPolygonResponse,Models.SpatialPostPointInPolygonResponse,PointInPolygonGeojson>
+syntax: |
+  type GetPointInPolygonResponse = Response<
+    PostPointInPolygonResponse,
+    Models.SpatialPostPointInPolygonResponse,
+    PointInPolygonGeojson
+  >

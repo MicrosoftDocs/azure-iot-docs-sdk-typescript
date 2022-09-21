@@ -7,6 +7,10 @@ fullName: SpatialPostPointInPolygonResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
-syntax: >-
+syntax: |
   type SpatialPostPointInPolygonResponse = PostPointInPolygonResponse & {
-  _response: Object }
+    _response: HttpResponse & {
+      bodyAsText: string,
+      parsedBody: PostPointInPolygonResponse,
+    },
+  }

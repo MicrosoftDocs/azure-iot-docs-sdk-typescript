@@ -23,7 +23,7 @@ constructors:
           type: <xref uid="azure-maps-control.atlas.PitchControlOptions" />
           description: |
             The options for the control.
-methods:
+inheritedMethods:
   - name: 'buildContainer<K>(Map, ControlStyle, string, K)'
     uid: azure-maps-control.atlas.control.PitchControl.buildContainer
     package: azure-maps-control
@@ -36,7 +36,7 @@ methods:
     syntax:
       content: >-
         function buildContainer<K>(map: Map, style: ControlStyle, ariaLabel?:
-        string, tagName?: K)
+        string, tagName?: K): HTMLElementTagNameMap[K]
       parameters:
         - id: map
           type: <xref uid="azure-maps-control.atlas.Map" />
@@ -51,29 +51,11 @@ methods:
           type: K
           description: ''
       return:
-        type: 'HTMLElementTagNameMap[K]'
         description: ''
-  - name: 'onAdd(Map, ControlOptions)'
-    uid: azure-maps-control.atlas.control.PitchControl.onAdd
-    package: azure-maps-control
-    summary: >-
-      Initialization method for the control which is called when added to the
-      map.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function onAdd(map: Map, options?: ControlOptions)'
-      parameters:
-        - id: map
-          type: <xref uid="azure-maps-control.atlas.Map" />
-          description: The map that the control will be added to.
-        - id: options
-          type: <xref uid="azure-maps-control.atlas.ControlOptions" />
-          description: The ControlOptions for this control.
-      return:
-        type: HTMLElement
-        description: An HTMLElement to be placed on the map for the control.
+        type: 'HTMLElementTagNameMap[K]'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ControlBase.buildContainer](xref:ControlBase.buildContainer)
   - name: onRemove()
     uid: azure-maps-control.atlas.control.PitchControl.onRemove
     package: azure-maps-control
@@ -87,4 +69,27 @@ methods:
     isDeprecated: false
     syntax:
       content: function onRemove()
+    inheritanceDescription: '<b>Inherited From</b> [ControlBase.onRemove](xref:ControlBase.onRemove)'
+methods:
+  - name: 'onAdd(Map, ControlOptions)'
+    uid: azure-maps-control.atlas.control.PitchControl.onAdd
+    package: azure-maps-control
+    summary: >-
+      Initialization method for the control which is called when added to the
+      map.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function onAdd(map: Map, options?: ControlOptions): HTMLElement'
+      parameters:
+        - id: map
+          type: <xref uid="azure-maps-control.atlas.Map" />
+          description: The map that the control will be added to.
+        - id: options
+          type: <xref uid="azure-maps-control.atlas.ControlOptions" />
+          description: The ControlOptions for this control.
+      return:
+        description: An HTMLElement to be placed on the map for the control.
+        type: HTMLElement
 extends: <xref uid="azure-maps-control.atlas.control.ControlBase" />

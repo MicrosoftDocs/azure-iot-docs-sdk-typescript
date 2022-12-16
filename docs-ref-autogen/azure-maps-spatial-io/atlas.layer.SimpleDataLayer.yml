@@ -17,7 +17,6 @@ summary: >-
   this.
 fullName: SimpleDataLayer<T>
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -26,7 +25,6 @@ constructors:
     package: azure-maps-spatial-io
     summary: Constructs a new SimpleDataLayer.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -47,7 +45,6 @@ inheritedProperties:
     summary: A property for associating custom data with the layer.
     fullName: metadata
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'metadata?: any'
@@ -61,7 +58,6 @@ inheritedMethods:
     package: azure-maps-spatial-io
     summary: Gets the id of the layer
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getId(): string'
@@ -74,7 +70,6 @@ inheritedMethods:
     package: azure-maps-spatial-io
     summary: 'Gets the map that the layer is currently added to, or null.'
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getMap(): Map'
@@ -88,7 +83,6 @@ methods:
     package: azure-maps-spatial-io
     summary: Closes the popup.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function closePopup()
@@ -97,7 +91,6 @@ methods:
     package: azure-maps-spatial-io
     summary: Cleans up any resources this layer is consuming.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function dispose()
@@ -106,7 +99,6 @@ methods:
     package: azure-maps-spatial-io
     summary: 'Gets the group of layers wrapped by this class, used for rendering data.'
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getLayers(): SimpleDataLayerGroup'
@@ -118,7 +110,6 @@ methods:
     package: azure-maps-spatial-io
     summary: Gets the options of the layer.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getOptions(): SimpleDataLayerOptions'
@@ -130,7 +121,6 @@ methods:
     package: azure-maps-spatial-io
     summary: The event logic that processes when the layer is added to the map.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function onAdd(map: azmaps.Map)'
@@ -143,7 +133,6 @@ methods:
     package: azure-maps-spatial-io
     summary: The event logic that processes when the layer is removed from the map.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function onRemove()
@@ -152,7 +141,6 @@ methods:
     package: azure-maps-spatial-io
     summary: Sets the options of the layer.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setOptions(options: SimpleDataLayerOptions)'

@@ -5,7 +5,6 @@ package: azure-maps-spatial-io
 summary: Options used for reading delimited files.
 fullName: SpatialCsvReadOptions
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -21,7 +20,6 @@ properties:
       Default: `"auto"`
     fullName: delimiter
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'delimiter?: string'
@@ -41,7 +39,6 @@ properties:
       Default: `false`
     fullName: dynamicTyping
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'dynamicTyping?: boolean'
@@ -56,7 +53,6 @@ properties:
       If not specified, the first row in the data will be used.
     fullName: header
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'header?: CsvHeader'
@@ -72,7 +68,6 @@ inheritedProperties:
       If not specified, will read all features.
     fullName: maxFeatures
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'maxFeatures?: number'
@@ -81,7 +76,7 @@ inheritedProperties:
         type: number
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [BaseSpatialDataReadOptions.maxFeatures](xref:BaseSpatialDataReadOptions.maxFeatures)
+      [BaseSpatialDataReadOptions.maxFeatures](xref:azure-maps-spatial-io.atlas.BaseSpatialDataReadOptions.maxFeatures)
   - name: proxyService
     uid: azure-maps-spatial-io.atlas.SpatialCsvReadOptions.proxyService
     package: azure-maps-spatial-io
@@ -93,7 +88,6 @@ inheritedProperties:
       endpoints.
     fullName: proxyService
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'proxyService?: string'
@@ -102,5 +96,5 @@ inheritedProperties:
         type: string
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [BaseSpatialDataReadOptions.proxyService](xref:BaseSpatialDataReadOptions.proxyService)
+      [BaseSpatialDataReadOptions.proxyService](xref:azure-maps-spatial-io.atlas.BaseSpatialDataReadOptions.proxyService)
 extends: <xref uid="azure-maps-spatial-io.atlas.BaseSpatialDataReadOptions" />

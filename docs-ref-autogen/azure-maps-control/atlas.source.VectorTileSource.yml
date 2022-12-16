@@ -9,7 +9,6 @@ summary: >-
   BubbleLayer, HeatmapLayer and VectorTileLayer.
 fullName: VectorTileSource<T>
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -18,7 +17,6 @@ constructors:
     package: azure-maps-control
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new VectorTileSource(id?: string, options?: VectorTileSourceOptions)'
@@ -35,21 +33,21 @@ inheritedMethods:
     package: azure-maps-control
     summary: Gets the id of the data source
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getId(): string'
       return:
         description: ''
         type: string
-    inheritanceDescription: '<b>Inherited From</b> [Source.getId](xref:Source.getId)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Source.getId](xref:azure-maps-control.atlas.source.Source.getId)
 methods:
   - name: getOptions()
     uid: azure-maps-control.atlas.source.VectorTileSource.getOptions
     package: azure-maps-control
     summary: Gets the options of the VectorTileSource.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getOptions(): VectorTileSourceOptions'
@@ -63,7 +61,6 @@ methods:
       Returns all GeoJSON features that are in the VectorTileSource and which
       satisfy the specified filter expression.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-

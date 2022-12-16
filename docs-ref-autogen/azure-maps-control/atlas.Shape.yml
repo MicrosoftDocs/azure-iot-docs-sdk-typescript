@@ -7,7 +7,6 @@ summary: >-
   and maintain.
 fullName: Shape
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -18,7 +17,6 @@ constructors:
       Constructs a Shape object and initializes it with the specified Geometry,
       ID, and properties.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -42,7 +40,6 @@ constructors:
     package: azure-maps-control
     summary: Constructs a Shape object and initializes it with the specified Feature.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new Shape(data: Feature<atlas.data.Geometry, any>)'
@@ -58,7 +55,6 @@ methods:
     package: azure-maps-control
     summary: Adds or updates an existing property value in the shape.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function addProperty(key: string, value: any)'
@@ -75,7 +71,6 @@ methods:
     package: azure-maps-control
     summary: Gets the bounding box of the shape
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getBounds(): BoundingBox'
@@ -89,7 +84,6 @@ methods:
       If the shape is a circle, this gets its coordinates. Otherwise returns
       null.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getCircleCoordinates(): Position[]'
@@ -101,7 +95,6 @@ methods:
     package: azure-maps-control
     summary: Gets the coordinates of the shape.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -119,7 +112,6 @@ methods:
     package: azure-maps-control
     summary: Gets the id of the shape.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getId(): string | number'
@@ -131,7 +123,6 @@ methods:
     package: azure-maps-control
     summary: Gets the properties of the shape.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getProperties(): any'
@@ -143,7 +134,6 @@ methods:
     package: azure-maps-control
     summary: Returns a string indicating the type of geometry this shape contains.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getType(): string'
@@ -160,7 +150,6 @@ methods:
       [Extended
       Spec](https://docs.microsoft.com/en-us/azure/azure-maps/extend-geojson)
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function isCircle(): boolean'
@@ -177,7 +166,6 @@ methods:
       [Extended
       Spec](https://docs.microsoft.com/en-us/azure/azure-maps/extend-geojson)
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function isRectangle(): boolean'
@@ -189,7 +177,6 @@ methods:
     package: azure-maps-control
     summary: Updates the coordinates of the shape
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -212,7 +199,6 @@ methods:
     package: azure-maps-control
     summary: Sets the properties on the shape. Overwrites all existing properties.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setProperties(properties: any)'
@@ -226,7 +212,6 @@ methods:
     package: azure-maps-control
     summary: Returns a GeoJSON feature that represents the shape.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function toJson(): Feature<atlas.data.Geometry, any>'

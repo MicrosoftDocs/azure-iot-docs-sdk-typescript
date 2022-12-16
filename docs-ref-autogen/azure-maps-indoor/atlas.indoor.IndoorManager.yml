@@ -42,7 +42,6 @@ summary: |2
            └────────────────────┘
 fullName: IndoorManager
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -51,7 +50,6 @@ constructors:
     package: azure-maps-indoor
     summary: Constructs an IndoorManager.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new IndoorManager(map: IMap, options?: IndoorManagerOptions)'
@@ -70,7 +68,6 @@ properties:
     summary: Retrieves the source name of the Creator's tileset.
     fullName: getCreatorSourceId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'getCreatorSourceId: () => string'
@@ -85,7 +82,6 @@ properties:
       The format is [ "facilityId": string, levelOrdinal: number ].
     fullName: getCurrentFacility
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'getCurrentFacility: () => [string, number]'
@@ -102,7 +98,6 @@ properties:
       The format is [ "tilesetId:facilityId": string, levelOrdinal: number ].
     fullName: getCurrentFacilityDetails
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'getCurrentFacilityDetails: () => [string, number]'
@@ -115,7 +110,6 @@ properties:
     summary: Gets the options used by the IndoorManager.
     fullName: getOptions
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'getOptions: () => IndoorManagerOptions'
@@ -131,7 +125,6 @@ properties:
       it will reset any facility selection and remove the level picker.
     fullName: setFacility
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'setFacility: (newFacilityId: string, newLevelOrdinal: number) => void'
@@ -144,7 +137,6 @@ properties:
     summary: Sets the options used by the IndoorManager.
     fullName: setOptions
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'setOptions: (options?: IndoorManagerOptions) => void'
@@ -159,7 +151,6 @@ methods:
       Disposes the IndoorManager.
       When disposed, all resources used by the IndoorManager are released.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function dispose()
@@ -176,7 +167,6 @@ methods:
       Requires Initiate Indoor Manager with options that have statesetId value
       set.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setDynamicStyling(enable: boolean)'

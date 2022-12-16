@@ -7,7 +7,6 @@ summary: >-
   Maps services.
 fullName: AuthenticationOptions
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -21,7 +20,6 @@ properties:
       Must be specified for AAD authentication type.
     fullName: aadAppId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'aadAppId?: string'
@@ -37,7 +35,6 @@ properties:
       By default the `https://login.microsoftonline.com/` instance will be used.
     fullName: aadInstance
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'aadInstance?: string'
@@ -52,7 +49,6 @@ properties:
       Must be specified for AAD authentication type.
     fullName: aadTenant
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'aadTenant?: string'
@@ -77,7 +73,6 @@ properties:
       auth context.
     fullName: authContext
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'authContext?: AuthenticationContext'
@@ -90,7 +85,6 @@ properties:
     summary: The authentication mechanism to be used.
     fullName: authType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'authType?: AuthenticationType'
@@ -108,7 +102,6 @@ properties:
       anonymous authentication types.
     fullName: clientId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'clientId?: string'
@@ -124,7 +117,6 @@ properties:
       E.g. fetching a CORS protected token from an endpoint.
     fullName: getToken
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'getToken?: getAuthTokenCallback'
@@ -137,7 +129,6 @@ properties:
     summary: Optionally provide an initial token for sas authentication.
     fullName: sasToken
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'sasToken?: string'
@@ -152,7 +143,6 @@ properties:
       Must be specified for subscription key authentication type.
     fullName: subscriptionKey
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'subscriptionKey?: string'
@@ -167,7 +157,6 @@ methods:
       Sets the required authentication options to configure the AAD implicit
       grant mechanism.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -195,7 +184,6 @@ methods:
     package: azure-maps-control
     summary: Sets the required options to configure the sas authentication method.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setSasCallbackFunction(getTokenCallback: getAuthTokenCallback)'
@@ -212,7 +200,6 @@ methods:
       Sets the required options to configure the subscription key authentication
       mechanism.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setSubscriptionKey(key: string)'
@@ -227,7 +214,6 @@ methods:
       Sets the required options to configure the anonymous authentication
       method.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-

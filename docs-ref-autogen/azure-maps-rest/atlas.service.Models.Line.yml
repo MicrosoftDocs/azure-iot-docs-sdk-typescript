@@ -5,7 +5,6 @@ package: azure-maps-rest
 summary: A stop line
 fullName: Line
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: 'The Id of the transit agency, for example, ''5872''.'
     fullName: agencyId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'agencyId?: string'
@@ -28,7 +26,6 @@ properties:
     summary: 'The name of the transit agency, for example, ''NJ Transit''.'
     fullName: agencyName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'agencyName?: string'
@@ -41,7 +38,6 @@ properties:
     summary: Line direction. Possible values 'forward' or 'backward'.
     fullName: direction
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'direction?: string'
@@ -54,7 +50,6 @@ properties:
     summary: The line’s user displayable destination.
     fullName: lineDestination
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'lineDestination?: string'
@@ -71,7 +66,6 @@ properties:
       B, and the other from B to A.
     fullName: lineGroupId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'lineGroupId?: string'
@@ -84,7 +78,6 @@ properties:
     summary: Line Id.
     fullName: lineId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'lineId?: string'
@@ -97,7 +90,6 @@ properties:
     summary: The transit line number.
     fullName: lineNumber
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'lineNumber?: string'
@@ -110,7 +102,6 @@ properties:
     summary: Most common pattern for the line.
     fullName: mostFrequentPatternId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'mostFrequentPatternId?: string'
@@ -123,7 +114,6 @@ properties:
     summary: 'The line’s origin, will be present according to metro settings.'
     fullName: origin
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'origin?: string'
@@ -140,7 +130,6 @@ properties:
       'Funicular', 'Gondola', 'Rail', 'Tram', 'Subway'
     fullName: transitType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'transitType?: TransitType'

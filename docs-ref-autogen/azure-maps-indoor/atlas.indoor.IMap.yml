@@ -5,7 +5,6 @@ package: azure-maps-indoor
 summary: ''
 fullName: IMap
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: ''
     fullName: layers
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -52,7 +50,6 @@ properties:
     summary: ''
     fullName: styles
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -72,7 +69,6 @@ inheritedProperties:
     summary: ''
     fullName: authentication
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'authentication: AuthenticationManager'
@@ -86,7 +82,6 @@ inheritedProperties:
     summary: ''
     fullName: controls
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'controls: ControlManager'
@@ -100,7 +95,6 @@ inheritedProperties:
     summary: ''
     fullName: events
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'events: EventManager'
@@ -114,7 +108,6 @@ inheritedProperties:
     summary: ''
     fullName: imageSprite
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'imageSprite: ImageSpriteManager'
@@ -128,7 +121,6 @@ inheritedProperties:
     summary: ''
     fullName: markers
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'markers: HtmlMarkerManager'
@@ -142,7 +134,6 @@ inheritedProperties:
     summary: ''
     fullName: popups
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'popups: PopupManager'
@@ -156,7 +147,6 @@ inheritedProperties:
     summary: ''
     fullName: sources
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'sources: SourceManager'
@@ -172,7 +162,6 @@ inheritedMethods:
       Returns a boolean indicating if all tiles in the current viewport for all
       sources have loaded or not.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function areTilesLoaded(): boolean'
@@ -187,7 +176,6 @@ inheritedMethods:
       Removes all user added sources, layers, markers, and popups from the map.
       User added images are preserved.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function clear()
@@ -199,7 +187,6 @@ inheritedMethods:
       Clean up the map's resources. Map will not function correctly after
       calling this method.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function dispose()
@@ -209,7 +196,6 @@ inheritedMethods:
     package: azure-maps-indoor
     summary: Returns the camera's current properties.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getCamera(): CameraOptions & CameraBoundsOptions'
@@ -222,7 +208,6 @@ inheritedMethods:
     package: azure-maps-indoor
     summary: Returns the HTMLCanvasElement that the map is drawn to.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getCanvas(): HTMLCanvasElement'
@@ -239,7 +224,6 @@ inheritedMethods:
 
       are attached to this element.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getCanvasContainer(): HTMLElement'
@@ -252,7 +236,6 @@ inheritedMethods:
     package: azure-maps-indoor
     summary: Returns the HTMLElement that contains the map.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getMapContainer(): HTMLElement'
@@ -265,7 +248,6 @@ inheritedMethods:
     package: azure-maps-indoor
     summary: Returns the service options with which the map control was initialized.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getServiceOptions(): ServiceOptions'
@@ -278,7 +260,6 @@ inheritedMethods:
     package: azure-maps-indoor
     summary: Returns the map control's current style settings.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getStyle(): StyleOptions'
@@ -291,7 +272,6 @@ inheritedMethods:
     package: azure-maps-indoor
     summary: Return the map control's current traffic settings.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getTraffic(): TrafficOptions'
@@ -304,7 +284,6 @@ inheritedMethods:
     package: azure-maps-indoor
     summary: Return the map control's current user interaction handler settings.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getUserInteraction(): UserInteractionOptions'
@@ -319,7 +298,6 @@ inheritedMethods:
       Converts an array of Pixel objects to an array of geographic Positions
       objects on the map.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function pixelsToPositions(pixels: Pixel[]): Position[]'
@@ -339,7 +317,6 @@ inheritedMethods:
       Converts an array of Positions objects to an array of Pixel objects
       relative to the map container.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function positionsToPixels(positions: Position[]): Pixel[]'
@@ -357,7 +334,6 @@ inheritedMethods:
     package: azure-maps-indoor
     summary: Resize the map according to the dimensions of its container element.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function resize(eventData?: any)'
@@ -373,7 +349,6 @@ inheritedMethods:
     package: azure-maps-indoor
     summary: Resizes the map's container element then the map itself.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -405,7 +380,6 @@ inheritedMethods:
 
       current values.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -423,7 +397,6 @@ inheritedMethods:
     package: azure-maps-indoor
     summary: Set the service options.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setServiceOptions(options: ServiceOptions)'
@@ -439,7 +412,6 @@ inheritedMethods:
       Set the map control's style options. Any options not specified will
       default to their current values.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setStyle(options?: StyleOptions, diff?: boolean)'
@@ -461,7 +433,6 @@ inheritedMethods:
       Set the traffic options for the map. Any options not specified will
       default to their current values.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setTraffic(options?: TrafficOptions)'
@@ -478,7 +449,6 @@ inheritedMethods:
       Set the map control's user interaction handlers. Any options not specified
       will default to their current values.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setUserInteraction(options?: UserInteractionOptions)'
@@ -493,7 +463,6 @@ inheritedMethods:
     package: azure-maps-indoor
     summary: Stops any animated transition that is currently underway.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function stop()
@@ -508,7 +477,6 @@ inheritedMethods:
       Calling this multiple times before the next frame is rendered will still
       result in only a single frame being rendered.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function triggerRepaint()

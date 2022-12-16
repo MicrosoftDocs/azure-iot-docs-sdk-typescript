@@ -5,7 +5,6 @@ package: azure-maps-control
 summary: The control for a visual and interactive web map.
 fullName: Map
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -16,7 +15,6 @@ constructors:
     package: azure-maps-control
     summary: Displays a map in the specified container.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -43,7 +41,6 @@ properties:
     summary: ''
     fullName: authentication
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'authentication: AuthenticationManager'
@@ -56,7 +53,6 @@ properties:
     summary: ''
     fullName: controls
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'controls: ControlManager'
@@ -69,7 +65,6 @@ properties:
     summary: ''
     fullName: events
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'events: EventManager'
@@ -82,7 +77,6 @@ properties:
     summary: ''
     fullName: imageSprite
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'imageSprite: ImageSpriteManager'
@@ -95,7 +89,6 @@ properties:
     summary: ''
     fullName: layers
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'layers: LayerManager'
@@ -108,7 +101,6 @@ properties:
     summary: ''
     fullName: markers
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'markers: HtmlMarkerManager'
@@ -121,7 +113,6 @@ properties:
     summary: ''
     fullName: popups
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'popups: PopupManager'
@@ -134,7 +125,6 @@ properties:
     summary: ''
     fullName: sources
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'sources: SourceManager'
@@ -149,7 +139,6 @@ methods:
       Returns a boolean indicating if all tiles in the current viewport for all
       sources have loaded or not.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function areTilesLoaded(): boolean'
@@ -163,7 +152,6 @@ methods:
       Removes all user added sources, layers, markers, and popups from the map.
       User added images are preserved.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function clear()
@@ -174,7 +162,6 @@ methods:
       Clean up the map's resources. Map will not function correctly after
       calling this method.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function dispose()
@@ -183,7 +170,6 @@ methods:
     package: azure-maps-control
     summary: Returns the camera's current properties.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getCamera(): CameraOptions & CameraBoundsOptions'
@@ -197,7 +183,6 @@ methods:
     package: azure-maps-control
     summary: Returns the HTMLCanvasElement that the map is drawn to.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getCanvas(): HTMLCanvasElement'
@@ -213,7 +198,6 @@ methods:
 
       are attached to this element.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getCanvasContainer(): HTMLElement'
@@ -225,7 +209,6 @@ methods:
     package: azure-maps-control
     summary: Returns the HTMLElement that contains the map.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getMapContainer(): HTMLElement'
@@ -237,7 +220,6 @@ methods:
     package: azure-maps-control
     summary: Returns the service options with which the map control was initialized.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getServiceOptions(): ServiceOptions'
@@ -249,7 +231,6 @@ methods:
     package: azure-maps-control
     summary: Returns the map control's current style settings.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getStyle(): StyleOptions'
@@ -261,7 +242,6 @@ methods:
     package: azure-maps-control
     summary: Return the map control's current traffic settings.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getTraffic(): TrafficOptions'
@@ -273,7 +253,6 @@ methods:
     package: azure-maps-control
     summary: Return the map control's current user interaction handler settings.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getUserInteraction(): UserInteractionOptions'
@@ -287,7 +266,6 @@ methods:
       Converts an array of Pixel objects to an array of geographic Positions
       objects on the map.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function pixelsToPositions(pixels: Pixel[]): Position[]'
@@ -306,7 +284,6 @@ methods:
       Converts an array of Positions objects to an array of Pixel objects
       relative to the map container.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function positionsToPixels(positions: Position[]): Pixel[]'
@@ -323,7 +300,6 @@ methods:
     package: azure-maps-control
     summary: Resize the map according to the dimensions of its container element.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function resize(eventData?: any)'
@@ -338,7 +314,6 @@ methods:
     package: azure-maps-control
     summary: Resizes the map's container element then the map itself.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -369,7 +344,6 @@ methods:
 
       current values.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -389,7 +363,6 @@ methods:
     package: azure-maps-control
     summary: Set the service options.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setServiceOptions(options: ServiceOptions)'
@@ -404,7 +377,6 @@ methods:
       Set the map control's style options. Any options not specified will
       default to their current values.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setStyle(options?: StyleOptions, diff?: boolean)'
@@ -425,7 +397,6 @@ methods:
       Set the traffic options for the map. Any options not specified will
       default to their current values.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setTraffic(options?: TrafficOptions)'
@@ -441,7 +412,6 @@ methods:
       Set the map control's user interaction handlers. Any options not specified
       will default to their current values.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setUserInteraction(options?: UserInteractionOptions)'
@@ -455,7 +425,6 @@ methods:
     package: azure-maps-control
     summary: Stops any animated transition that is currently underway.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function stop()
@@ -469,7 +438,6 @@ methods:
       Calling this multiple times before the next frame is rendered will still
       result in only a single frame being rendered.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function triggerRepaint()

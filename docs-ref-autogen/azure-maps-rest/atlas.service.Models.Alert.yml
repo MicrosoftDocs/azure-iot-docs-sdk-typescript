@@ -5,7 +5,6 @@ package: azure-maps-rest
 summary: Basic information associated with the active alert.
 fullName: Alert
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -17,7 +16,6 @@ properties:
       Line, Stop.
     fullName: alertLevel
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'alertLevel?: string'
@@ -30,7 +28,6 @@ properties:
     summary: Text summarizing the alert.
     fullName: alertSummary
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'alertSummary?: string'
@@ -43,7 +40,6 @@ properties:
     summary: 'The category of the alert. One of None, Regular, Info, Modified, Critical.'
     fullName: category
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'category?: string'
@@ -56,7 +52,6 @@ properties:
     summary: ''
     fullName: details
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'details?: AlertDetail'
@@ -69,7 +64,6 @@ properties:
     summary: 'The date and time in ISO 8601 format, e.g. 2019-04-05T14:24:18-04:00.'
     fullName: publicationDate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'publicationDate?: Date'

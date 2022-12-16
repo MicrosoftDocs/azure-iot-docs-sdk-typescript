@@ -5,7 +5,6 @@ package: azure-maps-spatial-io
 summary: A class that writes data as a delimited data set.
 fullName: CsvWriter
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +13,6 @@ constructors:
     package: azure-maps-spatial-io
     summary: Writes data as a delimited data set.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new CsvWriter(delimiter?: string, textQualifier?: string)'
@@ -34,7 +32,6 @@ methods:
       Resets the writer to its initialized state and removes any data it
       contains.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function clear()
@@ -43,7 +40,6 @@ methods:
     package: azure-maps-spatial-io
     summary: Writes the content of the CsvWriter.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function toString(): string'
@@ -55,7 +51,6 @@ methods:
     package: azure-maps-spatial-io
     summary: Writes multiple rows of data as a delimited string.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function write(data: any[][])'
@@ -68,7 +63,6 @@ methods:
     package: azure-maps-spatial-io
     summary: Writes a row as a delimited string.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function writeRow(data: any[])'

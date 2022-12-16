@@ -7,7 +7,6 @@ summary: >-
   `PolygonExtrusionLayer`.
 fullName: PolygonExtrusionLayerOptions
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -21,7 +20,6 @@ properties:
       Default `0`.
     fullName: base
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'base?: number | Expression'
@@ -37,7 +35,6 @@ properties:
       Default `"#1E90FF"`.
     fullName: fillColor
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'fillColor?: string | Expression'
@@ -54,7 +51,6 @@ properties:
       Default `1`.
     fullName: fillOpacity
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'fillOpacity?: number'
@@ -71,7 +67,6 @@ properties:
       512).
     fullName: fillPattern
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'fillPattern?: string'
@@ -88,7 +83,6 @@ properties:
       Default `0`
     fullName: height
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'height?: number | Expression'
@@ -101,7 +95,6 @@ properties:
     summary: The id or instance of a data source which the layer will render.
     fullName: source
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'source?: string | Source'
@@ -120,7 +113,6 @@ properties:
       Prohibited for all other types of sources.
     fullName: sourceLayer
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'sourceLayer?: string'
@@ -136,7 +128,6 @@ properties:
       Default `[0, 0]`
     fullName: translate
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'translate?: Pixel'
@@ -153,7 +144,6 @@ properties:
       Default: `"map"`
     fullName: translateAnchor
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'translateAnchor?: "map" | "viewport"'
@@ -170,7 +160,6 @@ properties:
       Default: `true`
     fullName: verticalGradient
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'verticalGradient?: boolean'
@@ -186,14 +175,15 @@ inheritedProperties:
       Only features that match the filter are displayed.
     fullName: filter
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'filter?: Expression'
       return:
         description: ''
         type: <xref uid="azure-maps-control.atlas.Expression" />
-    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.filter](xref:LayerOptions.filter)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.filter](xref:azure-maps-control.atlas.LayerOptions.filter)
   - name: maxZoom
     uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.maxZoom
     package: azure-maps-control
@@ -206,14 +196,15 @@ inheritedProperties:
       Default `24`.
     fullName: maxZoom
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'maxZoom?: number'
       return:
         description: ''
         type: number
-    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.maxZoom](xref:LayerOptions.maxZoom)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.maxZoom](xref:azure-maps-control.atlas.LayerOptions.maxZoom)
   - name: minZoom
     uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.minZoom
     package: azure-maps-control
@@ -226,14 +217,15 @@ inheritedProperties:
       Default `0`.
     fullName: minZoom
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'minZoom?: number'
       return:
         description: ''
         type: number
-    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.minZoom](xref:LayerOptions.minZoom)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.minZoom](xref:azure-maps-control.atlas.LayerOptions.minZoom)
   - name: visible
     uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.visible
     package: azure-maps-control
@@ -242,12 +234,13 @@ inheritedProperties:
       Default `true`.
     fullName: visible
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'visible?: boolean'
       return:
         description: ''
         type: boolean
-    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.visible](xref:LayerOptions.visible)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.visible](xref:azure-maps-control.atlas.LayerOptions.visible)
 extends: <xref uid="azure-maps-control.atlas.LayerOptions" />

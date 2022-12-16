@@ -5,7 +5,6 @@ package: azure-maps-rest
 summary: Optional Parameters.
 fullName: SearchGetSearchNearbyOptionalParams
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -37,7 +36,6 @@ properties:
       brandSet="A,B,C Comma",Bar
     fullName: brandSet
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'brandSet?: string[]'
@@ -159,7 +157,6 @@ properties:
       connectorSet=IEC62196Type2Outlet,IEC62196Type2CableAttached
     fullName: connectorSet
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'connectorSet?: ConnectorSet[]'
@@ -177,7 +174,6 @@ properties:
       specified countries
     fullName: countrySet
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'countrySet?: string[]'
@@ -243,7 +239,6 @@ properties:
       Availability is region-dependent.
     fullName: extendedPostalCodesFor
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'extendedPostalCodesFor?: string'
@@ -269,7 +264,6 @@ properties:
       for details.
     fullName: language
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'language?: string'
@@ -285,7 +279,6 @@ properties:
       and maximum: 100
     fullName: limit
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'limit?: number'
@@ -299,7 +292,6 @@ properties:
     summary: Starting offset of returned results. Max value is 1900.
     fullName: ofs
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'ofs?: number'
@@ -317,7 +309,6 @@ properties:
       Max Value is 50000.
     fullName: radius
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'radius?: number'
@@ -365,7 +356,6 @@ properties:
       to see the available Views.
     fullName: view
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'view?: string'
@@ -380,7 +370,6 @@ inheritedProperties:
     summary: The signal which can be used to abort requests.
     fullName: abortSignal
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'abortSignal?: AbortSignalLike'
@@ -397,7 +386,6 @@ inheritedProperties:
       will be applied before the request is sent.
     fullName: customHeaders
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'customHeaders?: [key: string]: string'
@@ -412,7 +400,6 @@ inheritedProperties:
     summary: Callback which fires upon download progress.
     fullName: onDownloadProgress
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'onDownloadProgress?: (progress: TransferProgressEvent) => void'
@@ -427,7 +414,6 @@ inheritedProperties:
     summary: Callback which fires upon upload progress.
     fullName: onUploadProgress
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'onUploadProgress?: (progress: TransferProgressEvent) => void'
@@ -444,7 +430,6 @@ inheritedProperties:
       terminated.
     fullName: timeout
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'timeout?: number'

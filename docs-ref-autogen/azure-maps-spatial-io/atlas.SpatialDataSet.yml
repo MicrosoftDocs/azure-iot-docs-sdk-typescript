@@ -9,7 +9,6 @@ summary: >-
   be added to a data source.
 fullName: SpatialDataSet
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 properties:
@@ -19,7 +18,6 @@ properties:
     summary: Bounding box of all the data in the data set.
     fullName: bbox
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'bbox: azmaps.data.BoundingBox'
@@ -32,7 +30,6 @@ properties:
     summary: GeoJSON features within the data set.
     fullName: features
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -50,7 +47,6 @@ properties:
     summary: An array of KML GroundOverlays.
     fullName: groundOverlays
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'groundOverlays: Array<azmaps.layer.ImageLayer | OgcMapLayer>'
@@ -65,7 +61,6 @@ properties:
     summary: 'A set of icon URL''s. Key = icon name, Value = URL.'
     fullName: icons
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'icons: Record<string, string>'
@@ -78,7 +73,6 @@ properties:
     summary: Property information provided at the document level of a spatial data set.
     fullName: properties
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'properties: any'
@@ -91,7 +85,6 @@ properties:
     summary: Statistics about the content and processing time of a spatial data set.
     fullName: stats
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'stats: SpatialDataSetStats'
@@ -104,7 +97,6 @@ properties:
     summary: ''
     fullName: type
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'type: "FeatureCollection" = "FeatureCollection"'
@@ -117,7 +109,6 @@ methods:
     package: azure-maps-spatial-io
     summary: Calculates the stats for a spatial data set.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function computeStats(data: SpatialDataSet)'
@@ -133,7 +124,6 @@ methods:
       Enriches a data set by calculating its bounds, stats,
       and generating summary information if not already available.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function enrich(data: SpatialDataSet)'
@@ -149,7 +139,6 @@ methods:
       Retrieves the bounding box of the data set. If not set on the data set,
       will calculate it.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function getBounds(data: SpatialDataSet): azmaps.data.BoundingBox'
@@ -166,7 +155,6 @@ methods:
     package: azure-maps-spatial-io
     summary: Merges one spatial data set into the other.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function merge(a: SpatialDataSet, b: SpatialDataSet)'

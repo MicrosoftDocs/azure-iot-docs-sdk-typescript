@@ -10,7 +10,6 @@ summary: >-
   7946](https://tools.ietf.org/html/rfc7946#section-3.1.1).
 fullName: Position
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -19,7 +18,6 @@ constructors:
     package: azure-maps-control
     summary: Constructs a Position.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new Position(longitude: number, latitude: number, elevation?: number)'
@@ -41,7 +39,6 @@ properties:
     summary: ''
     fullName: Array
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static Array: ArrayConstructor'
@@ -57,7 +54,6 @@ inheritedProperties:
       highest element defined in an array.
     fullName: length
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'length: number'
@@ -66,12 +62,28 @@ inheritedProperties:
         type: number
     inheritanceDescription: <b>Inherited From</b> Array.length
 inheritedMethods:
+  - name: 'concat((T | ConcatArray<T>)[])'
+    uid: azure-maps-control.atlas.data.Position.concat_1
+    package: azure-maps-control
+    summary: Combines two or more arrays.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function concat(items: (T | ConcatArray<T>)[]): number[]'
+      parameters:
+        - id: items
+          type: '(T | ConcatArray&lt;T&gt;)[]'
+          description: |
+            Additional items to add to the end of array1.
+      return:
+        description: ''
+        type: 'number[]'
+    inheritanceDescription: <b>Inherited From</b> Array.concat
   - name: 'concat(ConcatArray<number>[])'
     uid: azure-maps-control.atlas.data.Position.concat
     package: azure-maps-control
     summary: Combines two or more arrays.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function concat(items: ConcatArray<number>[]): number[]'
@@ -84,30 +96,11 @@ inheritedMethods:
         description: ''
         type: 'number[]'
     inheritanceDescription: <b>Inherited From</b> Array.concat
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: azure-maps-control.atlas.data.Position.concat_1
-    package: azure-maps-control
-    summary: Combines two or more arrays.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function concat(items: T | ConcatArray<T>[]): number[]'
-      parameters:
-        - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
-          description: |
-            Additional items to add to the end of array1.
-      return:
-        description: ''
-        type: 'number[]'
-    inheritanceDescription: <b>Inherited From</b> Array.concat
   - name: 'every((value: number, index: number, array: number[]) => unknown, any)'
     uid: azure-maps-control.atlas.data.Position.every
     package: azure-maps-control
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -137,7 +130,6 @@ inheritedMethods:
       Returns the elements of an array that meet the condition specified in a
       callback function.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -167,7 +159,6 @@ inheritedMethods:
       Returns the elements of an array that meet the condition specified in a
       callback function.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -195,7 +186,6 @@ inheritedMethods:
     package: azure-maps-control
     summary: Performs the specified action for each element in an array.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -219,7 +209,6 @@ inheritedMethods:
     package: azure-maps-control
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function indexOf(searchElement: number, fromIndex?: number): number'
@@ -243,7 +232,6 @@ inheritedMethods:
       Adds all the elements of an array separated by the specified separator
       string.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function join(separator?: string): string'
@@ -263,7 +251,6 @@ inheritedMethods:
     package: azure-maps-control
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function lastIndexOf(searchElement: number, fromIndex?: number): number'
@@ -287,7 +274,6 @@ inheritedMethods:
       Calls a defined callback function on each element of an array, and returns
       an array that contains the results.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -314,7 +300,6 @@ inheritedMethods:
     package: azure-maps-control
     summary: Removes the last element from an array and returns it.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function pop(): number | undefined'
@@ -327,7 +312,6 @@ inheritedMethods:
     package: azure-maps-control
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function push(items: number[]): number'
@@ -350,7 +334,6 @@ inheritedMethods:
       The return value of the callback function is the accumulated result, and
       is provided as an argument in the next call to the callback function.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -376,7 +359,6 @@ inheritedMethods:
     package: azure-maps-control
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -406,7 +388,6 @@ inheritedMethods:
       The return value of the callback function is the accumulated result, and
       is provided as an argument in the next call to the callback function.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -442,7 +423,6 @@ inheritedMethods:
       accumulated result, and is provided as an argument in the next call to the
       callback function.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -468,7 +448,6 @@ inheritedMethods:
     package: azure-maps-control
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -499,7 +478,6 @@ inheritedMethods:
       accumulated result, and is provided as an argument in the next call to the
       callback function.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -529,7 +507,6 @@ inheritedMethods:
     package: azure-maps-control
     summary: Reverses the elements in an Array.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function reverse(): number[]'
@@ -542,7 +519,6 @@ inheritedMethods:
     package: azure-maps-control
     summary: Removes the first element from an array and returns it.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function shift(): number | undefined'
@@ -555,7 +531,6 @@ inheritedMethods:
     package: azure-maps-control
     summary: Returns a section of an array.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function slice(start?: number, end?: number): number[]'
@@ -578,7 +553,6 @@ inheritedMethods:
       Determines whether the specified callback function returns true for any
       element of an array.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -606,7 +580,6 @@ inheritedMethods:
     package: azure-maps-control
     summary: Sorts an array.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function sort(compareFn?: (a: number, b: number) => number): this'
@@ -628,7 +601,6 @@ inheritedMethods:
       Removes elements from an array and, if necessary, inserts new elements in
       their place, returning the deleted elements.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function splice(start: number, deleteCount?: number): number[]'
@@ -653,7 +625,6 @@ inheritedMethods:
       Removes elements from an array and, if necessary, inserts new elements in
       their place, returning the deleted elements.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -683,7 +654,6 @@ inheritedMethods:
       Returns a string representation of an array. The elements are converted to
       string using their toLocalString methods.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function toLocaleString(): string'
@@ -696,7 +666,6 @@ inheritedMethods:
     package: azure-maps-control
     summary: Returns a string representation of an array.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function toString(): string'
@@ -709,7 +678,6 @@ inheritedMethods:
     package: azure-maps-control
     summary: Inserts new elements at the start of an array.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function unshift(items: number[]): number'
@@ -730,7 +698,6 @@ methods:
       Compares the longitude and latitude values of two positions to see if they
       are equal at an accuracy of 6 decimal places.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -756,7 +723,6 @@ methods:
     package: azure-maps-control
     summary: Generates a Position object from latitude and longitude values.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -782,7 +748,6 @@ methods:
       Generates a Position object from an array that has the format; [lat, lng]
       or [lat, lng, elv]
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function fromLatLng(latLng: number[]): Position'
@@ -811,7 +776,6 @@ methods:
 
       Elevation: elv, elevation, alt, altitude, z
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function fromLatLng(latLng: object): Position'
@@ -838,7 +802,6 @@ methods:
 
       Elevation: elv, elevation, alt, altitude, z
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -858,7 +821,6 @@ methods:
     package: azure-maps-control
     summary: Clones a position.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function fromPosition(position: Position): Position'

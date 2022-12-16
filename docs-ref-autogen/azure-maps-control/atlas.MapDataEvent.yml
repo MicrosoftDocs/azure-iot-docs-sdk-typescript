@@ -5,7 +5,6 @@ package: azure-maps-control
 summary: Event object returned by the maps when a data event occurs.
 fullName: MapDataEvent
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -17,7 +16,6 @@ properties:
       Either `"source"` or `"style"`.
     fullName: dataType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'dataType: "style" | "source"'
@@ -32,7 +30,6 @@ properties:
       outstanding network requests.
     fullName: isSourceLoaded
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isSourceLoaded?: boolean'
@@ -45,7 +42,6 @@ properties:
     summary: If the `dataType` is `"source"` this is the related `Source` object.
     fullName: source
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'source?: Source'
@@ -62,7 +58,6 @@ properties:
       Either `"metadata"` or `"content"`
     fullName: sourceDataType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'sourceDataType?: "metadata" | "content"'
@@ -79,7 +74,6 @@ properties:
       of a tile.
     fullName: tile
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'tile?: Tile'
@@ -93,21 +87,21 @@ inheritedProperties:
     summary: The `Map` instance in which the event occurred on.
     fullName: map
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'map: Map'
       return:
         description: ''
         type: <xref uid="azure-maps-control.atlas.Map" />
-    inheritanceDescription: '<b>Inherited From</b> [MapEvent.map](xref:MapEvent.map)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MapEvent.map](xref:azure-maps-control.atlas.MapEvent.map)
   - name: originalEvent
     uid: azure-maps-control.atlas.MapDataEvent.originalEvent
     package: azure-maps-control
     summary: The original event that was fired.
     fullName: originalEvent
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'originalEvent?: Event'
@@ -116,19 +110,20 @@ inheritedProperties:
         type: Event
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [MapEvent.originalEvent](xref:MapEvent.originalEvent)
+      [MapEvent.originalEvent](xref:azure-maps-control.atlas.MapEvent.originalEvent)
   - name: type
     uid: azure-maps-control.atlas.MapDataEvent.type
     package: azure-maps-control
     summary: The event type.
     fullName: type
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'type: string'
       return:
         description: ''
         type: string
-    inheritanceDescription: '<b>Inherited From</b> [MapEvent.type](xref:MapEvent.type)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MapEvent.type](xref:azure-maps-control.atlas.MapEvent.type)
 extends: <xref uid="azure-maps-control.atlas.MapEvent" />

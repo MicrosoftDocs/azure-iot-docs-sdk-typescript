@@ -6,7 +6,6 @@ package: azure-maps-rest
 summary: Optional Parameters.
 fullName: TimezoneGetTimezoneByCoordinatesOptionalParams
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -24,7 +23,6 @@ properties:
       for details.
     fullName: acceptLanguage
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'acceptLanguage?: string'
@@ -42,7 +40,6 @@ properties:
       result. Possible values include: 'none', 'zoneInfo', 'transitions', 'all'
     fullName: options
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'options?: TimezoneOptions'
@@ -60,7 +57,6 @@ properties:
       machine time serving the request.
     fullName: timeStamp
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'timeStamp?: Date'
@@ -79,7 +75,6 @@ properties:
       = transitions.
     fullName: transitionsFrom
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'transitionsFrom?: Date'
@@ -98,7 +93,6 @@ properties:
       = transitions.
     fullName: transitionsYears
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'transitionsYears?: number'
@@ -113,7 +107,6 @@ inheritedProperties:
     summary: The signal which can be used to abort requests.
     fullName: abortSignal
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'abortSignal?: AbortSignalLike'
@@ -130,7 +123,6 @@ inheritedProperties:
       will be applied before the request is sent.
     fullName: customHeaders
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'customHeaders?: [key: string]: string'
@@ -145,7 +137,6 @@ inheritedProperties:
     summary: Callback which fires upon download progress.
     fullName: onDownloadProgress
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'onDownloadProgress?: (progress: TransferProgressEvent) => void'
@@ -160,7 +151,6 @@ inheritedProperties:
     summary: Callback which fires upon upload progress.
     fullName: onUploadProgress
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'onUploadProgress?: (progress: TransferProgressEvent) => void'
@@ -177,7 +167,6 @@ inheritedProperties:
       terminated.
     fullName: timeout
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'timeout?: number'

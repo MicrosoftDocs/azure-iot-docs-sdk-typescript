@@ -5,7 +5,6 @@ package: azure-maps-spatial-io
 summary: Options that customize how XML files are read and parsed.
 fullName: BaseSpatialXmlReadOptions
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -19,7 +18,6 @@ properties:
       Default: `true`
     fullName: parseStyles
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'parseStyles?: boolean'
@@ -35,7 +33,6 @@ inheritedProperties:
       If not specified, will read all features.
     fullName: maxFeatures
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'maxFeatures?: number'
@@ -44,7 +41,7 @@ inheritedProperties:
         type: number
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [BaseSpatialDataReadOptions.maxFeatures](xref:BaseSpatialDataReadOptions.maxFeatures)
+      [BaseSpatialDataReadOptions.maxFeatures](xref:azure-maps-spatial-io.atlas.BaseSpatialDataReadOptions.maxFeatures)
   - name: proxyService
     uid: azure-maps-spatial-io.atlas.BaseSpatialXmlReadOptions.proxyService
     package: azure-maps-spatial-io
@@ -56,7 +53,6 @@ inheritedProperties:
       endpoints.
     fullName: proxyService
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'proxyService?: string'
@@ -65,5 +61,5 @@ inheritedProperties:
         type: string
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [BaseSpatialDataReadOptions.proxyService](xref:BaseSpatialDataReadOptions.proxyService)
+      [BaseSpatialDataReadOptions.proxyService](xref:azure-maps-spatial-io.atlas.BaseSpatialDataReadOptions.proxyService)
 extends: <xref uid="azure-maps-spatial-io.atlas.BaseSpatialDataReadOptions" />

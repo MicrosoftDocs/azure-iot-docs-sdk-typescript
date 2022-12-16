@@ -5,7 +5,6 @@ package: azure-maps-control
 summary: Abstract class for other layer classes to extend.
 fullName: Layer<T>
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +13,6 @@ constructors:
     package: azure-maps-control
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new Layer(id?: string)'
@@ -29,7 +27,6 @@ properties:
     summary: A property for associating custom data with the layer.
     fullName: metadata
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'metadata?: any'
@@ -42,7 +39,6 @@ methods:
     package: azure-maps-control
     summary: Gets the id of the layer
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getId(): string'
@@ -54,7 +50,6 @@ methods:
     package: azure-maps-control
     summary: 'Gets the map that the layer is currently added to, or null.'
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getMap(): Map'
@@ -66,7 +61,6 @@ methods:
     package: azure-maps-control
     summary: Initialization method for the layer which is called when added to the map.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function onAdd(map: Map)'
@@ -82,7 +76,6 @@ methods:
       Method that is called when the layer is removed from the map.
       Should perform any necessary cleanup for the layer.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function onRemove()

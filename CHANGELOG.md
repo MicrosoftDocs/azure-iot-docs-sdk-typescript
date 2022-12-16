@@ -37,6 +37,10 @@ indoorManager.setOptions({
 
 ### Bug Fixes
 
+- Fix an issue that the ordering of user layers wasn't preserved after calling `map.layers.move()`.
+
+- Fix the initial state of `incidents` will always be true in [TrafficControlOptions][TrafficControlOptions].
+
 ## [2.2.0](https://www.npmjs.com/package/azure-maps-control/v/2.2.0) (September 19, 2022)
 
 ### New Features

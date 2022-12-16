@@ -48,25 +48,6 @@ indoorManager.setOptions({
 })
 ```
 
-## [3.0.0-preview.1](https://www.npmjs.com/package/azure-maps-control/v/3.0.0-preview.1) (November 18, 2022)
-
-- This update is the first preview of the upcoming 3.0.0 release. The underlying [maplibre-gl][maplibre-gl] dependency has been upgraded from `1.14` to `3.0.0-pre.1`, offering improvements in stability and performance. The preview is available on npm.
-- Install [azure-maps-control@next][azure-maps-control] to your dependencies:
-
-```shell
-npm i azure-maps-control@next
-```
-
-### Bug Fixes
-
-- Fix a regression issue that prevents IndoorManager from removing a tileset by using
-
-```js
-indoorManager.setOptions({
-    tilesetId: undefined
-})
-```
-
 ## [2.2.2](https://www.npmjs.com/package/azure-maps-control/v/2.2.2) (December 15, 2022)
 
 ### New Features

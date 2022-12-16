@@ -2,7 +2,7 @@
 
 ## [3.0.0-preview.2](https://www.npmjs.com/package/azure-maps-control/v/3.0.0-preview.2) (December 16, 2022)
 
-### New feature
+### New features
 
 Add `progressiveLoading` and `progressiveLoadingInitialLayerGroups` to [StyleOptions][StyleOptions] to enable the capability of loading map layers progressively. This feature improves the perceived loading time of the map. For more information, see [2.2.2 release notes](#222-december-15-2022).
 
@@ -38,7 +38,7 @@ npm i azure-maps-control@next
 npm i azure-maps-control@next
 ```
 
-### Bug Fixes
+### Bug fixes
 
 - Fix a regression issue that prevents IndoorManager from removing a tileset by using
 
@@ -50,7 +50,7 @@ indoorManager.setOptions({
 
 ## [2.2.2](https://www.npmjs.com/package/azure-maps-control/v/2.2.2) (December 15, 2022)
 
-### New Features
+### New features
 
 - Add `progressiveLoading` and `progressiveLoadingInitialLayerGroups` to [StyleOptions][StyleOptions] to enable the capability of loading map layers progressively. This feature improves the perceived loading time of the map.
 
@@ -64,7 +64,7 @@ indoorManager.setOptions({
   - Possible values are `base`, `transit`, `labels`, `buildings`, and `labels_places`.
   - Other layer groups are deferred such that the initial layer groups can be loaded first.
 
-### Bug Fixes
+### Bug fixes
 
 - Fix an issue that the ordering of user layers wasn't preserved after calling `map.layers.move()`.
 
@@ -72,7 +72,7 @@ indoorManager.setOptions({
 
 ## [2.2.0](https://www.npmjs.com/package/azure-maps-control/v/2.2.0) (September 19, 2022)
 
-### New Features
+### New features
 
 - Add `mapConfiguration` option to ServiceOptions that enables the capability to pass Azure Maps Creator Custom Styling's map configurations.
 

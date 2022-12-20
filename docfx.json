@@ -7,6 +7,7 @@
           "**/*.yml"
         ],
         "version": "azure-maps-typescript-latest",
+        "group": "latest",
         "src": "docs-ref-autogen",
         "dest": "api",
         "exclude": [
@@ -17,14 +18,14 @@
           "LICENSE-CODE",
           "ThirdPartyNotices",
           "toc.yml"
-        ],
-        "dest": "api"
+        ]
       },
       {
         "files": [
           "**/*.yml"
         ],
         "version": "azure-maps-typescript-latest",
+        "group": "latest",
         "src": "bread",
         "dest": "api/azure-iot-docs-sdk-typescript/bread",
         "exclude": [
@@ -37,6 +38,7 @@
           "toc.yml"
         ],
         "version": "azure-maps-typescript-latest",
+        "group": "latest",
         "src": "docs-ref-autogen",
         "dest": "api/azure-iot-docs-sdk-typescript",
         "exclude": []
@@ -45,9 +47,24 @@
     "resource": [],
     "overwrite": [],
     "externalReference": [],
+    "versions": {
+      "azure-maps-typescript-latest": {
+        "dest": "latest"
+      }
+    },
+    "groups": {
+      "latest": {
+        "dest": "latest",
+        "moniker_range": "azure-maps-typescript-latest"
+      }
+    },
     "globalMetadata": {
       "breadcrumb_path": "/javascript/api/azure-iot-docs-sdk-typescript/bread/toc.json",
       "toc_path": "/javascript/api/azure-iot-docs-sdk-typescript/toc.json",
+      "products": [
+        "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
+        "https://authoring-docs-microsoft.poolparty.biz/devrel/cdf84aa8-8dea-4da6-9d1d-74eaf3cb9ded"
+      ],
       "brand": "azure"
     },
     "fileMetadata": {

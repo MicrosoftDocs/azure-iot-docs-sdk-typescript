@@ -335,7 +335,9 @@ methods:
           description: >
             Optional additional properties to be added to event objects of
             events triggered by this method.
-  - name: setCamera((CameraOptions | CameraBoundsOptions) & AnimationOptions)
+  - name: >-
+      setCamera((CameraOptions | (CameraBoundsOptions & { bearing?: number,
+      pitch?: number })) & AnimationOptions)
     uid: azure-maps-control.atlas.Map.setCamera
     package: azure-maps-control
     summary: >-
@@ -347,13 +349,14 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function setCamera(options?: (CameraOptions | CameraBoundsOptions) &
-        AnimationOptions)
+        function setCamera(options?: (CameraOptions | (CameraBoundsOptions & {
+        bearing?: number, pitch?: number })) & AnimationOptions)
       parameters:
         - id: options
           type: >-
-            (<xref uid="azure-maps-control.atlas.CameraOptions" /> | <xref
-            uid="azure-maps-control.atlas.CameraBoundsOptions" />) & <xref
+            (<xref uid="azure-maps-control.atlas.CameraOptions" /> | (<xref
+            uid="azure-maps-control.atlas.CameraBoundsOptions" /> & { bearing?:
+            number, pitch?: number })) & <xref
             uid="azure-maps-control.atlas.AnimationOptions" />
           description: >
             The options for setting the map's camera and for the animation of

@@ -371,7 +371,9 @@ inheritedMethods:
             Optional additional properties to be added to event objects of
             events triggered by this method.
     inheritanceDescription: <b>Inherited From</b> Map.resize
-  - name: setCamera((CameraOptions | CameraBoundsOptions) & AnimationOptions)
+  - name: >-
+      setCamera((CameraOptions | (CameraBoundsOptions & { bearing?: number,
+      pitch?: number })) & AnimationOptions)
     uid: azure-maps-indoor.atlas.indoor.IMap.setCamera
     package: azure-maps-indoor
     summary: >-
@@ -383,11 +385,13 @@ inheritedMethods:
     isDeprecated: false
     syntax:
       content: >-
-        function setCamera(options?: (CameraOptions | CameraBoundsOptions) &
-        AnimationOptions)
+        function setCamera(options?: (CameraOptions | (CameraBoundsOptions & {
+        bearing?: number, pitch?: number })) & AnimationOptions)
       parameters:
         - id: options
-          type: (CameraOptions | CameraBoundsOptions) & AnimationOptions
+          type: >-
+            (CameraOptions | (CameraBoundsOptions & { bearing?: number, pitch?:
+            number })) & AnimationOptions
           description: >
             The options for setting the map's camera and for the animation of
             any view change.

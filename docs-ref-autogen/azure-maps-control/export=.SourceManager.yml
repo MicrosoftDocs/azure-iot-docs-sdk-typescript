@@ -1,0 +1,148 @@
+### YamlMime:TSType
+name: SourceManager
+uid: azure-maps-control.export=.SourceManager
+package: azure-maps-control
+summary: |-
+  A manager for the map control's sources.
+  Exposed through the sources property of the atlas.Map class.
+  Cannot be instantiated by the user.
+fullName: SourceManager
+remarks: ''
+isDeprecated: false
+type: interface
+methods:
+  - name: add(Source<SourceEvents> | Source<SourceEvents>[])
+    uid: azure-maps-control.export=.SourceManager.add
+    package: azure-maps-control
+    summary: |-
+      Adds one or more data sources to the map.
+      The map must be ready before a source can be added.
+      Use the map.events.add method with event type 'ready'.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function add(source: Source<SourceEvents> | Source<SourceEvents>[])'
+      parameters:
+        - id: source
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="source.Source"
+            />&lt;<xref uid="azure-maps-control.export" />=.<xref
+            uid="source.SourceEvents" />&gt; | <xref
+            uid="azure-maps-control.export" />=.<xref uid="source.Source"
+            />&lt;<xref uid="azure-maps-control.export" />=.<xref
+            uid="source.SourceEvents" />&gt;[]
+          description: ''
+  - name: clear()
+    uid: azure-maps-control.export=.SourceManager.clear
+    package: azure-maps-control
+    summary: Removes all sources from the map.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function clear()
+  - name: getById(string)
+    uid: azure-maps-control.export=.SourceManager.getById
+    package: azure-maps-control
+    summary: Retrieves a source with the specified id.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getById(id: string): Source<SourceEvents>'
+      parameters:
+        - id: id
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-control.export" />=.<xref uid="source.Source"
+          />&lt;<xref uid="azure-maps-control.export" />=.<xref
+          uid="source.SourceEvents" />&gt;
+  - name: getRenderedShapes(string | Source<SourceEvents>, Expression, string)
+    uid: azure-maps-control.export=.SourceManager.getRenderedShapes
+    package: azure-maps-control
+    summary: >-
+      Returns all rendered shape features in a source that match a specified
+      filter. If the source is a vector tile source, a source layer name needs
+      to be specified.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getRenderedShapes(source: string | Source<SourceEvents>,
+        filter?: Expression, sourceLayer?: string): (Feature<Geometry, any> |
+        Shape)[]
+      parameters:
+        - id: source
+          type: >-
+            string | <xref uid="azure-maps-control.export" />=.<xref
+            uid="source.Source" />&lt;<xref uid="azure-maps-control.export"
+            />=.<xref uid="source.SourceEvents" />&gt;
+          description: source to be queried
+        - id: filter
+          type: <xref uid="azure-maps-control.export" />=.Expression
+          description: a filter to limit the query
+        - id: sourceLayer
+          type: string
+          description: the layer where shapes and features are matched
+      return:
+        description: ''
+        type: >-
+          (<xref uid="azure-maps-control.export" />=.<xref uid="data.Feature"
+          />&lt;<xref uid="azure-maps-control.export" />=.<xref
+          uid="data.Geometry" />, any&gt; | <xref
+          uid="azure-maps-control.export" />=.Shape)[]
+  - name: getSources()
+    uid: azure-maps-control.export=.SourceManager.getSources
+    package: azure-maps-control
+    summary: Retrieves all sources that have been added to the map.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getSources(): Source<SourceEvents>[]'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-control.export" />=.<xref uid="source.Source"
+          />&lt;<xref uid="azure-maps-control.export" />=.<xref
+          uid="source.SourceEvents" />&gt;[]
+  - name: isSourceLoaded(string | Source<SourceEvents>)
+    uid: azure-maps-control.export=.SourceManager.isSourceLoaded
+    package: azure-maps-control
+    summary: Returns a boolean indicating if the source is loaded or not.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isSourceLoaded(source: string | Source<SourceEvents>): boolean'
+      parameters:
+        - id: source
+          type: >-
+            string | <xref uid="azure-maps-control.export" />=.<xref
+            uid="source.Source" />&lt;<xref uid="azure-maps-control.export"
+            />=.<xref uid="source.SourceEvents" />&gt;
+          description: The id of a source or a Source object.
+      return:
+        description: ''
+        type: boolean
+  - name: remove(string | Source<SourceEvents> | (string | Source<SourceEvents>)[])
+    uid: azure-maps-control.export=.SourceManager.remove
+    package: azure-maps-control
+    summary: >-
+      Removes one or more sources from the map by specifying the source id or
+      providing the source itself.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function remove(source: string | Source<SourceEvents> | (string |
+        Source<SourceEvents>)[])
+      parameters:
+        - id: source
+          type: >-
+            string | <xref uid="azure-maps-control.export" />=.<xref
+            uid="source.Source" />&lt;<xref uid="azure-maps-control.export"
+            />=.<xref uid="source.SourceEvents" />&gt; | (string | <xref
+            uid="azure-maps-control.export" />=.<xref uid="source.Source"
+            />&lt;<xref uid="azure-maps-control.export" />=.<xref
+            uid="source.SourceEvents" />&gt;)[]
+          description: ''

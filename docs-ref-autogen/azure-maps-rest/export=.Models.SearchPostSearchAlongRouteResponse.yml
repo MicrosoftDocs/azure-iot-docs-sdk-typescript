@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: SearchPostSearchAlongRouteResponse
+uid: azure-maps-rest.export=.Models.SearchPostSearchAlongRouteResponse
+package: azure-maps-rest
+summary: Contains response data for the postSearchAlongRoute operation.
+fullName: SearchPostSearchAlongRouteResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SearchPostSearchAlongRouteResponse = SearchAlongRouteResponse & {
+    _response: msRest.HttpResponse & {
+      bodyAsText: string,
+      parsedBody: SearchAlongRouteResponse,
+    },
+  }

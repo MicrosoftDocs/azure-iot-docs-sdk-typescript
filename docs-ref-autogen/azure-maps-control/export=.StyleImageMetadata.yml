@@ -1,0 +1,16 @@
+### YamlMime:TSTypeAlias
+name: StyleImageMetadata
+uid: azure-maps-control.export=.StyleImageMetadata
+package: azure-maps-control
+summary: Signature for the `options` parameter passed to `ImageSpriteManager.add`.
+fullName: StyleImageMetadata
+remarks: ''
+isDeprecated: false
+syntax: |
+  type StyleImageMetadata = {
+    content?: number[],
+    pixelRatio?: number,
+    sdf?: boolean,
+    stretchX?: number[][],
+    stretchY?: number[][],
+  }

@@ -1,0 +1,84 @@
+### YamlMime:TSType
+name: VectorTileSource
+uid: azure-maps-control.export=.source.VectorTileSource
+package: azure-maps-control
+summary: >-
+  A vector tile source describes how to access a vector tile layer.
+
+  Vector tile sources can be used with; SymbolLayer, LineLayer, PolygonLayer,
+  BubbleLayer, HeatmapLayer and VectorTileLayer.
+fullName: VectorTileSource
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: VectorTileSource(string, VectorTileSourceOptions)
+    uid: azure-maps-control.export=.source.VectorTileSource.constructor
+    package: azure-maps-control
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new VectorTileSource(id?: string, options?: VectorTileSourceOptions)'
+      parameters:
+        - id: id
+          type: string
+          description: ''
+        - id: options
+          type: <xref uid="azure-maps-control.export" />=.VectorTileSourceOptions
+          description: ''
+inheritedMethods:
+  - name: getId()
+    uid: azure-maps-control.export=.source.VectorTileSource.getId
+    package: azure-maps-control
+    summary: Gets the id of the data source
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getId(): string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Source.getId](xref:azure-maps-control.export=.source.Source.getId)
+methods:
+  - name: getOptions()
+    uid: azure-maps-control.export=.source.VectorTileSource.getOptions
+    package: azure-maps-control
+    summary: Gets the options of the VectorTileSource.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getOptions(): VectorTileSourceOptions'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.export" />=.VectorTileSourceOptions
+  - name: getShape(string, Expression)
+    uid: azure-maps-control.export=.source.VectorTileSource.getShape
+    package: azure-maps-control
+    summary: >-
+      Returns all GeoJSON features that are in the VectorTileSource and which
+      satisfy the specified filter expression.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getShape(sourceLayer: string, filter?: Expression):
+        Feature<Geometry, any>[]
+      parameters:
+        - id: sourceLayer
+          type: string
+          description: >-
+            Required if the source is a VectorTileSource. Specifies the layer
+            within the VectorTileSource to query.
+        - id: filter
+          type: <xref uid="azure-maps-control.export" />=.Expression
+          description: A filter that will limit the query.
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-control.export" />=.<xref uid="data.Feature"
+          />&lt;<xref uid="azure-maps-control.export" />=.<xref
+          uid="data.Geometry" />, any&gt;[]
+extends: <xref uid="azure-maps-control.export" />=.<xref uid="source.Source" />

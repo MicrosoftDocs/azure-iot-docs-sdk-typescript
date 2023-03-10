@@ -1,0 +1,88 @@
+### YamlMime:TSType
+name: ZoomControl
+uid: azure-maps-control.export=.control.ZoomControl
+package: azure-maps-control
+summary: A control for changing the zoom of the map.
+fullName: ZoomControl
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: ZoomControl(ZoomControlOptions)
+    uid: azure-maps-control.export=.control.ZoomControl.constructor
+    package: azure-maps-control
+    summary: Constructs a ZoomControl.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new ZoomControl(options?: ZoomControlOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-maps-control.export" />=.ZoomControlOptions
+          description: The options for the control.
+inheritedMethods:
+  - name: buildContainer<K>(Map, ControlStyle, string, K)
+    uid: azure-maps-control.export=.control.ZoomControl.buildContainer
+    package: azure-maps-control
+    summary: >-
+      Build the outermost container for the control, applies styling including
+      any listeners for auto styling.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function buildContainer<K>(map: Map, style: ControlStyle, ariaLabel?:
+        string, tagName?: K): HTMLElementTagNameMap[K]
+      parameters:
+        - id: map
+          type: <xref uid="azure-maps-control.export" />=.Map
+          description: ''
+        - id: style
+          type: <xref uid="azure-maps-control.export" />=.ControlStyle
+          description: ''
+        - id: ariaLabel
+          type: string
+          description: ''
+        - id: tagName
+          type: K
+          description: ''
+      return:
+        description: ''
+        type: HTMLElementTagNameMap[K]
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ControlBase.buildContainer](xref:azure-maps-control.export=.control.ControlBase.buildContainer)
+  - name: onRemove()
+    uid: azure-maps-control.export=.control.ZoomControl.onRemove
+    package: azure-maps-control
+    summary: >-
+      Method that is called when the control is removed from the map. Should
+      perform any necessary cleanup for the
+
+      control.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function onRemove()
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ControlBase.onRemove](xref:azure-maps-control.export=.control.ControlBase.onRemove)
+methods:
+  - name: onAdd(Map)
+    uid: azure-maps-control.export=.control.ZoomControl.onAdd
+    package: azure-maps-control
+    summary: >-
+      Initialization method for the control which is called when added to the
+      map.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function onAdd(map: Map): HTMLElement'
+      parameters:
+        - id: map
+          type: <xref uid="azure-maps-control.export" />=.Map
+          description: The map that the control will be added to.
+      return:
+        description: An HTMLElement to be placed on the map for the control.
+        type: HTMLElement
+extends: <xref uid="azure-maps-control.export" />=.<xref uid="control.ControlBase" />

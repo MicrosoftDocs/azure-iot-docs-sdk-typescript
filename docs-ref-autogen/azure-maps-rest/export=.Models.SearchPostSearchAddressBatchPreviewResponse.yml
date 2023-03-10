@@ -1,0 +1,17 @@
+### YamlMime:TSTypeAlias
+name: SearchPostSearchAddressBatchPreviewResponse
+uid: azure-maps-rest.export=.Models.SearchPostSearchAddressBatchPreviewResponse
+package: azure-maps-rest
+summary: Contains response data for the postSearchAddressBatchPreview operation.
+fullName: SearchPostSearchAddressBatchPreviewResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SearchPostSearchAddressBatchPreviewResponse = BatchResponse &
+    SearchPostSearchAddressBatchPreviewHeaders & {
+      _response: msRest.HttpResponse & {
+        bodyAsText: string,
+        parsedBody: BatchResponse,
+        parsedHeaders: SearchPostSearchAddressBatchPreviewHeaders,
+      },
+    }

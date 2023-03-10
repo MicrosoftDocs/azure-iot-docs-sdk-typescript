@@ -1,0 +1,17 @@
+### YamlMime:TSTypeAlias
+name: SearchGetSearchAddressReverseCrossStreetResponse
+uid: >-
+  azure-maps-rest.export=.Models.SearchGetSearchAddressReverseCrossStreetResponse
+package: azure-maps-rest
+summary: Contains response data for the getSearchAddressReverseCrossStreet operation.
+fullName: SearchGetSearchAddressReverseCrossStreetResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SearchGetSearchAddressReverseCrossStreetResponse =
+    SearchAddressReverseCrossStreetResponse & {
+      _response: msRest.HttpResponse & {
+        bodyAsText: string,
+        parsedBody: SearchAddressReverseCrossStreetResponse,
+      },
+    }

@@ -1,0 +1,47 @@
+### YamlMime:TSType
+name: AnimationOptions
+uid: azure-maps-control.AnimationOptions
+package: azure-maps-control
+summary: The options for animating changes to the map control's camera.
+fullName: AnimationOptions
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: duration
+    uid: azure-maps-control.AnimationOptions.duration
+    package: azure-maps-control
+    summary: |-
+      The duration of the animation in milliseconds.
+      Default `1000`.
+    fullName: duration
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'duration?: number'
+      return:
+        description: ''
+        type: number
+  - name: type
+    uid: azure-maps-control.AnimationOptions.type
+    package: azure-maps-control
+    summary: >-
+      The type of animation.
+
+      <p>"jump" is an immediate change.</p>
+
+      <p>"ease" is a gradual change of the camera's settings.</p>
+
+      <p>"fly" is a gradual change of the camera's settings following an arc
+      resembling flight.</p>
+
+      Default `"jump"`.
+    fullName: type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'type?: "jump" | "ease" | "fly"'
+      return:
+        description: ''
+        type: '"jump" | "ease" | "fly"'
+extends: <xref uid="azure-maps-control.export" />=.Options

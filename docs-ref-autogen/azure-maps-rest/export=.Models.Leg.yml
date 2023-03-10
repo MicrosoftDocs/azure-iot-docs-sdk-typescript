@@ -1,0 +1,173 @@
+### YamlMime:TSType
+name: Leg
+uid: azure-maps-rest.export=.Models.Leg
+package: azure-maps-rest
+summary: An interface representing Leg.
+fullName: Leg
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: departures
+    uid: azure-maps-rest.export=.Models.Leg.departures
+    package: azure-maps-rest
+    summary: Relevant for Public Transit and Wait legs only
+    fullName: departures
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'departures?: LineArrival[]'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.export" />=.<xref uid="Models.LineArrival"
+          />[]
+  - name: destination
+    uid: azure-maps-rest.export=.Models.Leg.destination
+    package: azure-maps-rest
+    summary: The walk/bike leg’s destination.
+    fullName: destination
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'destination?: LegPoint'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.export" />=.<xref uid="Models.LegPoint" />
+  - name: geometry
+    uid: azure-maps-rest.export=.Models.Leg.geometry
+    package: azure-maps-rest
+    summary: ''
+    fullName: geometry
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'geometry?: LineString'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.export" />=.<xref uid="Models.LineString"
+          />
+  - name: legEndTime
+    uid: azure-maps-rest.export=.Models.Leg.legEndTime
+    package: azure-maps-rest
+    summary: End time for the leg.
+    fullName: legEndTime
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'legEndTime?: string'
+      return:
+        description: ''
+        type: string
+  - name: legStartTime
+    uid: azure-maps-rest.export=.Models.Leg.legStartTime
+    package: azure-maps-rest
+    summary: Start time for the leg.
+    fullName: legStartTime
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'legStartTime?: string'
+      return:
+        description: ''
+        type: string
+  - name: legType
+    uid: azure-maps-rest.export=.Models.Leg.legType
+    package: azure-maps-rest
+    summary: >-
+      The travel mode of the leg. Possible values include: 'Walk', 'Bicycle',
+      'Tram', 'Subway',
+
+      'Rail', 'Bus', 'Ferry', 'Cable', 'Gondola', 'Funicular', 'PathWayWalk',
+      'Wait',
+
+      'WaitOnVehicle'
+    fullName: legType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'legType?: LegType'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.export" />=.<xref uid="Models.LegType" />
+  - name: line
+    uid: azure-maps-rest.export=.Models.Leg.line
+    package: azure-maps-rest
+    summary: In case of a public transit leg, the line serving this leg.
+    fullName: line
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'line?: Line'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.export" />=.<xref uid="Models.Line" />
+  - name: lineGroup
+    uid: azure-maps-rest.export=.Models.Leg.lineGroup
+    package: azure-maps-rest
+    summary: In case of a public transit leg, the line group serving this leg.
+    fullName: lineGroup
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'lineGroup?: LineGroup'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.export" />=.<xref uid="Models.LineGroup" />
+  - name: origin
+    uid: azure-maps-rest.export=.Models.Leg.origin
+    package: azure-maps-rest
+    summary: The walk/bike leg’s origin.
+    fullName: origin
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'origin?: LegPoint'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.export" />=.<xref uid="Models.LegPoint" />
+  - name: steps
+    uid: azure-maps-rest.export=.Models.Leg.steps
+    package: azure-maps-rest
+    summary: In case of walk or bike leg, the directions.
+    fullName: steps
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'steps?: Step[]'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.export" />=.<xref uid="Models.Step" />[]
+  - name: stops
+    uid: azure-maps-rest.export=.Models.Leg.stops
+    package: azure-maps-rest
+    summary: >-
+      List of stops comprising the line’s route within the leg (e.g. the stops
+      the leg passes
+
+      through).
+    fullName: stops
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'stops?: Stop[]'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.export" />=.<xref uid="Models.Stop" />[]
+  - name: waitOnVehicle
+    uid: azure-maps-rest.export=.Models.Leg.waitOnVehicle
+    package: azure-maps-rest
+    summary: >-
+      Indicates whether it’s necessary to wait for the next leg on the same
+      vehicle (i.e. the bus
+
+      will only change its line number).
+    fullName: waitOnVehicle
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'waitOnVehicle?: string'
+      return:
+        description: ''
+        type: string

@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: MobilityGetTransitStopInfoPreviewResponse
+uid: azure-maps-rest.export=.Models.MobilityGetTransitStopInfoPreviewResponse
+package: azure-maps-rest
+summary: Contains response data for the getTransitStopInfoPreview operation.
+fullName: MobilityGetTransitStopInfoPreviewResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type MobilityGetTransitStopInfoPreviewResponse = TransitStopInfoResponse & {
+    _response: msRest.HttpResponse & {
+      bodyAsText: string,
+      parsedBody: TransitStopInfoResponse,
+    },
+  }

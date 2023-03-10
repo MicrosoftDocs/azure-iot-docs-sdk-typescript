@@ -1,0 +1,166 @@
+### YamlMime:TSType
+name: HtmlMarkerOptions
+uid: azure-maps-control.export=.HtmlMarkerOptions
+package: azure-maps-control
+summary: Options for rendering an HtmlMarker object
+fullName: HtmlMarkerOptions
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: anchor
+    uid: azure-maps-control.export=.HtmlMarkerOptions.anchor
+    package: azure-maps-control
+    summary: |-
+      Indicates the marker's location relative to its position on the map.
+      Optional values: `"center"`, `"top"`, `"bottom"`, `"left"`, `"right"`,
+      `"top-left"`, `"top-right"`, `"bottom-left"`, `"bottom-right"`.
+      Default `"bottom"`
+    fullName: anchor
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'anchor?: string'
+      return:
+        description: ''
+        type: string
+  - name: color
+    uid: azure-maps-control.export=.HtmlMarkerOptions.color
+    package: azure-maps-control
+    summary: >-
+      A color value that replaces any {color} placeholder property that has been
+      included in a string htmlContent.
+
+      default `"#1A73AA"`
+    fullName: color
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'color?: string'
+      return:
+        description: ''
+        type: string
+  - name: draggable
+    uid: azure-maps-control.export=.HtmlMarkerOptions.draggable
+    package: azure-maps-control
+    summary: >-
+      Indicates if the user can drag the position of the marker using the mouse
+      or touch controls.
+
+      default `false`
+    fullName: draggable
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'draggable?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: htmlContent
+    uid: azure-maps-control.export=.HtmlMarkerOptions.htmlContent
+    package: azure-maps-control
+    summary: >-
+      The HTML content of the marker. Can be an HTMLElement or HTML string.
+
+      Add {text} and {color} to HTML strings as placeholders to make it easy to
+      update
+
+      these values in your marker by using the setOptions function of the
+      HtmlMarker class.
+
+      This allows you to create a single HTML marker string that can be used as
+      a template for multiple markers.
+    fullName: htmlContent
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'htmlContent?: string | HTMLElement'
+      return:
+        description: ''
+        type: string | HTMLElement
+  - name: pixelOffset
+    uid: azure-maps-control.export=.HtmlMarkerOptions.pixelOffset
+    package: azure-maps-control
+    summary: |-
+      An offset in pixels to move the popup relative to the markers center.
+      Negatives indicate left and up.
+      default `[0, -18]`
+    fullName: pixelOffset
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'pixelOffset?: Pixel'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.export" />=.Pixel
+  - name: popup
+    uid: azure-maps-control.export=.HtmlMarkerOptions.popup
+    package: azure-maps-control
+    summary: A popup that is attached to the marker.
+    fullName: popup
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'popup?: Popup'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.export" />=.Popup
+  - name: position
+    uid: azure-maps-control.export=.HtmlMarkerOptions.position
+    package: azure-maps-control
+    summary: |-
+      The position of the marker.
+      default `[0, 0]`
+    fullName: position
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'position?: Position'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.export" />=.<xref uid="data.Position" />
+  - name: secondaryColor
+    uid: azure-maps-control.export=.HtmlMarkerOptions.secondaryColor
+    package: azure-maps-control
+    summary: >-
+      A color value that replaces any {secondaryColor} placeholder property that
+      has been included in a string htmlContent.
+
+      default `"white"`
+    fullName: secondaryColor
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'secondaryColor?: string'
+      return:
+        description: ''
+        type: string
+  - name: text
+    uid: azure-maps-control.export=.HtmlMarkerOptions.text
+    package: azure-maps-control
+    summary: >-
+      A string of text that replaces any {text} placeholder property that has
+      been included in a string htmlContent.
+    fullName: text
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'text?: string'
+      return:
+        description: ''
+        type: string
+  - name: visible
+    uid: azure-maps-control.export=.HtmlMarkerOptions.visible
+    package: azure-maps-control
+    summary: |-
+      Specifies if the marker is visible or not.
+      default `true`
+    fullName: visible
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'visible?: boolean'
+      return:
+        description: ''
+        type: boolean
+extends: <xref uid="azure-maps-control.export" />=.Options

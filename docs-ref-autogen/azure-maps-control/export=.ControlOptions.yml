@@ -1,0 +1,29 @@
+### YamlMime:TSType
+name: ControlOptions
+uid: azure-maps-control.export=.ControlOptions
+package: azure-maps-control
+summary: The options for adding a control to the map.
+fullName: ControlOptions
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: position
+    uid: azure-maps-control.export=.ControlOptions.position
+    package: azure-maps-control
+    summary: >-
+      The position the control will be placed on the map. If not specified, the
+      control will be located at the
+
+      default position it defines.
+
+      default `ControlPosition.NonFixed`
+    fullName: position
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'position?: ControlPosition'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.export" />=.ControlPosition
+extends: <xref uid="azure-maps-control.export" />=.Options

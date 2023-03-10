@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: GetPointInPolygonResponse
+uid: azure-maps-rest.GetPointInPolygonResponse
+package: azure-maps-rest
+summary: ''
+fullName: GetPointInPolygonResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type GetPointInPolygonResponse = Response<
+    Models.PostPointInPolygonResponse,
+    Models.SpatialPostPointInPolygonResponse,
+    PointInPolygonGeojson
+  >

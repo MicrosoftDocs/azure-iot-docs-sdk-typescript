@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: GetGeofenceResponse
+uid: azure-maps-rest.GetGeofenceResponse
+package: azure-maps-rest
+summary: ''
+fullName: GetGeofenceResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type GetGeofenceResponse = Response<
+    Models.GeofenceResponse & Models.SpatialGetGeofenceHeaders,
+    Models.SpatialGetGeofenceResponse,
+    GeofenceGeojson
+  >

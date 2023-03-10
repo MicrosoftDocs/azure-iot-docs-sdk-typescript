@@ -1,0 +1,27 @@
+### YamlMime:TSEnum
+name: ComputeTravelTimeFor
+uid: azure-maps-rest.export=.Models.ComputeTravelTimeFor
+package: azure-maps-rest
+summary: |-
+  Defines values for ComputeTravelTimeFor.
+  Possible values include: 'none', 'all'
+fullName: ComputeTravelTimeFor
+remarks: ''
+isDeprecated: false
+fields:
+  - name: All
+    uid: azure-maps-rest.export=.Models.ComputeTravelTimeFor.All
+    package: azure-maps-rest
+    summary: >-
+      Computes travel times for all types of traffic information and specifies
+      all results in the
+
+      fields noTrafficTravelTimeInSeconds, historicTrafficTravelTimeInSeconds
+      and
+
+      liveTrafficIncidentsTravelTimeInSeconds being included in the summaries in
+      the route response.
+  - name: None
+    uid: azure-maps-rest.export=.Models.ComputeTravelTimeFor.None
+    package: azure-maps-rest
+    summary: Does not compute additional travel times.

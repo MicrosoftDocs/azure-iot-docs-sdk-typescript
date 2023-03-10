@@ -1,0 +1,130 @@
+### YamlMime:TSType
+name: MapDataEvent
+uid: azure-maps-control.export=.MapDataEvent
+package: azure-maps-control
+summary: Event object returned by the maps when a data event occurs.
+fullName: MapDataEvent
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: dataType
+    uid: azure-maps-control.export=.MapDataEvent.dataType
+    package: azure-maps-control
+    summary: |-
+      The type of data that has changed.
+      Either `"source"` or `"style"`.
+    fullName: dataType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'dataType: "source" | "style"'
+      return:
+        description: ''
+        type: '"source" | "style"'
+  - name: isSourceLoaded
+    uid: azure-maps-control.export=.MapDataEvent.isSourceLoaded
+    package: azure-maps-control
+    summary: >-
+      True if the event has a `dataType` of `"source"` and the source has no
+      outstanding network requests.
+    fullName: isSourceLoaded
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'isSourceLoaded?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: source
+    uid: azure-maps-control.export=.MapDataEvent.source
+    package: azure-maps-control
+    summary: If the `dataType` is `"source"` this is the related `Source` object.
+    fullName: source
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'source?: Source<SourceEvents>'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-control.export" />=.<xref uid="source.Source"
+          />&lt;<xref uid="azure-maps-control.export" />=.<xref
+          uid="source.SourceEvents" />&gt;
+  - name: sourceDataType
+    uid: azure-maps-control.export=.MapDataEvent.sourceDataType
+    package: azure-maps-control
+    summary: >-
+      Specified if the `dataType` is `"source"` and the event signals that
+      internal data has been received or changed.
+
+      Either `"metadata"` or `"content"`
+    fullName: sourceDataType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'sourceDataType?: "metadata" | "content"'
+      return:
+        description: ''
+        type: '"metadata" | "content"'
+  - name: tile
+    uid: azure-maps-control.export=.MapDataEvent.tile
+    package: azure-maps-control
+    summary: >-
+      The tile being loaded or changed.
+
+      Specified if `dataType` is `"source"` and the event is related to loading
+      of a tile.
+    fullName: tile
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'tile?: Tile'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.export" />=.Tile
+inheritedProperties:
+  - name: map
+    uid: azure-maps-control.export=.MapDataEvent.map
+    package: azure-maps-control
+    summary: The `Map` instance in which the event occurred on.
+    fullName: map
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'map: Map'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.export" />=.Map
+    inheritanceDescription: <b>Inherited From</b> [MapEvent.map](xref:azure-maps-control.MapEvent.map)
+  - name: originalEvent
+    uid: azure-maps-control.export=.MapDataEvent.originalEvent
+    package: azure-maps-control
+    summary: The original event that was fired.
+    fullName: originalEvent
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'originalEvent?: Event'
+      return:
+        description: ''
+        type: Event
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MapEvent.originalEvent](xref:azure-maps-control.MapEvent.originalEvent)
+  - name: type
+    uid: azure-maps-control.export=.MapDataEvent.type
+    package: azure-maps-control
+    summary: The event type.
+    fullName: type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'type: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MapEvent.type](xref:azure-maps-control.MapEvent.type)
+extends: <xref uid="azure-maps-control.export" />=.MapEvent

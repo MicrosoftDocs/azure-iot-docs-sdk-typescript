@@ -1,0 +1,16 @@
+### YamlMime:TSTypeAlias
+name: TimezoneGetTimezoneByCoordinatesResponse
+uid: azure-maps-rest.export=.Models.TimezoneGetTimezoneByCoordinatesResponse
+package: azure-maps-rest
+summary: Contains response data for the getTimezoneByCoordinates operation.
+fullName: TimezoneGetTimezoneByCoordinatesResponse
+remarks: ''
+isDeprecated: false
+syntax: >
+  type TimezoneGetTimezoneByCoordinatesResponse = TimezoneByCoordinatesResult &
+  {
+    _response: msRest.HttpResponse & {
+      bodyAsText: string,
+      parsedBody: TimezoneByCoordinatesResult,
+    },
+  }

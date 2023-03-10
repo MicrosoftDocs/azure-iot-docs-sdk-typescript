@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: Response
+uid: azure-maps-rest.Response
+package: azure-maps-rest
+summary: >-
+  A type alias for easily representing a response interface with or without a
+  geojson helper.
+
+  Also provides the raw response data in the response object.
+fullName: Response<D, R, G>
+remarks: ''
+isDeprecated: false
+syntax: >-
+  type Response<D, R, G> = D & (G extends UndefinedGeojson ? { rawResponse:
+  R["_response"] } : { geojson: G, rawResponse: R["_response"] })

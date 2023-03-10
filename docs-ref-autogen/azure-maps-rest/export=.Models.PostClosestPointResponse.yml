@@ -1,0 +1,38 @@
+### YamlMime:TSType
+name: PostClosestPointResponse
+uid: azure-maps-rest.export=.Models.PostClosestPointResponse
+package: azure-maps-rest
+summary: This object is returned from a successful Post Spatial Closest Point call
+fullName: PostClosestPointResponse
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: result
+    uid: azure-maps-rest.export=.Models.PostClosestPointResponse.result
+    package: azure-maps-rest
+    summary: ''
+    fullName: result
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'result?: ClosestPointResultEntry[]'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.export" />=.<xref
+          uid="Models.ClosestPointResultEntry" />[]
+  - name: summary
+    uid: azure-maps-rest.export=.Models.PostClosestPointResponse.summary
+    package: azure-maps-rest
+    summary: ''
+    fullName: summary
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'summary?: PostClosestPointSummary'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.export" />=.<xref
+          uid="Models.PostClosestPointSummary" />

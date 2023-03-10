@@ -1,0 +1,33 @@
+### YamlMime:TSType
+name: GeofenceGeojson
+uid: azure-maps-rest.export=.GeofenceGeojson
+package: azure-maps-rest
+summary: >-
+  A helper extension providing methods for accessing the response data in
+  GeoJSON format.
+fullName: GeofenceGeojson
+remarks: ''
+isDeprecated: false
+type: class
+methods:
+  - name: getFeatures()
+    uid: azure-maps-rest.export=.GeofenceGeojson.getFeatures
+    package: azure-maps-rest
+    summary: >-
+      Returns a GeoJSON feature collection built from the results.
+
+      The collection will include a Point feature for each of the `geometries`.
+
+      The properties of the features match the properties of the geofence
+      geometry,
+
+      except the `nearestLat` and `nearestLon` properties are omitted
+
+      because they are redundant with the feature's coordinates.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getFeatures(): FeatureCollection<Point, GeoJsonProperties>'
+      return:
+        description: ''
+        type: FeatureCollection&lt;Point, GeoJsonProperties&gt;

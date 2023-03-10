@@ -1,0 +1,106 @@
+### YamlMime:TSType
+name: SpatialDataSetStats
+uid: azure-maps-spatial-io.export=.SpatialDataSetStats
+package: azure-maps-spatial-io
+summary: Statistics about the content and processing time of a XML feed.
+fullName: SpatialDataSetStats
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: numCharacters
+    uid: azure-maps-spatial-io.export=.SpatialDataSetStats.numCharacters
+    package: azure-maps-spatial-io
+    summary: The number of characters in the XML feed.
+    fullName: numCharacters
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'numCharacters?: number'
+      return:
+        description: ''
+        type: number
+  - name: numGroundOverlays
+    uid: azure-maps-spatial-io.export=.SpatialDataSetStats.numGroundOverlays
+    package: azure-maps-spatial-io
+    summary: Number of KML Ground Overlays in the XML feed.
+    fullName: numGroundOverlays
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'numGroundOverlays?: number'
+      return:
+        description: ''
+        type: number
+  - name: numLineStrings
+    uid: azure-maps-spatial-io.export=.SpatialDataSetStats.numLineStrings
+    package: azure-maps-spatial-io
+    summary: Number of GeoJSON LineString objects in the XML feed.
+    fullName: numLineStrings
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'numLineStrings?: number'
+      return:
+        description: ''
+        type: number
+  - name: numNetworkLinks
+    uid: azure-maps-spatial-io.export=.SpatialDataSetStats.numNetworkLinks
+    package: azure-maps-spatial-io
+    summary: The number of network links in the XML feed.
+    fullName: numNetworkLinks
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'numNetworkLinks?: number'
+      return:
+        description: ''
+        type: number
+  - name: numPoints
+    uid: azure-maps-spatial-io.export=.SpatialDataSetStats.numPoints
+    package: azure-maps-spatial-io
+    summary: Number of GeoJSON Point objects in the XML feed.
+    fullName: numPoints
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'numPoints?: number'
+      return:
+        description: ''
+        type: number
+  - name: numPolygons
+    uid: azure-maps-spatial-io.export=.SpatialDataSetStats.numPolygons
+    package: azure-maps-spatial-io
+    summary: Number of GeoJSON Polygon objects in the XML feed.
+    fullName: numPolygons
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'numPolygons?: number'
+      return:
+        description: ''
+        type: number
+  - name: numPositions
+    uid: azure-maps-spatial-io.export=.SpatialDataSetStats.numPositions
+    package: azure-maps-spatial-io
+    summary: Number of atlas.data.Position objects in the XML feed.
+    fullName: numPositions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'numPositions?: number'
+      return:
+        description: ''
+        type: number
+  - name: processingTime
+    uid: azure-maps-spatial-io.export=.SpatialDataSetStats.processingTime
+    package: azure-maps-spatial-io
+    summary: The amount of time in ms it took to process the XML feed.
+    fullName: processingTime
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'processingTime?: number'
+      return:
+        description: ''
+        type: number

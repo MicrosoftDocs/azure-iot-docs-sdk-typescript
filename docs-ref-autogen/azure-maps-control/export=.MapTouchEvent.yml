@@ -1,0 +1,148 @@
+### YamlMime:TSType
+name: MapTouchEvent
+uid: azure-maps-control.export=.MapTouchEvent
+package: azure-maps-control
+summary: Event object returned by the maps when a touch event occurs.
+fullName: MapTouchEvent
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: layerId
+    uid: azure-maps-control.export=.MapTouchEvent.layerId
+    package: azure-maps-control
+    summary: The id of the layer the event is attached to.
+    fullName: layerId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'layerId?: string'
+      return:
+        description: ''
+        type: string
+  - name: pixel
+    uid: azure-maps-control.export=.MapTouchEvent.pixel
+    package: azure-maps-control
+    summary: >-
+      The pixel coordinate at the center of the all touch points on the map,
+      relative to the top left corner.
+    fullName: pixel
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'pixel?: Pixel'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.export" />=.Pixel
+  - name: pixels
+    uid: azure-maps-control.export=.MapTouchEvent.pixels
+    package: azure-maps-control
+    summary: The array of pixel coordinates of all touch points on the map.
+    fullName: pixels
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'pixels?: Pixel[]'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.export" />=.Pixel[]
+  - name: position
+    uid: azure-maps-control.export=.MapTouchEvent.position
+    package: azure-maps-control
+    summary: The geographic location of the center of all touch points on the map.
+    fullName: position
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'position?: Position'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.export" />=.<xref uid="data.Position" />
+  - name: positions
+    uid: azure-maps-control.export=.MapTouchEvent.positions
+    package: azure-maps-control
+    summary: The geographical location of all touch points on the map.
+    fullName: positions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'positions?: Position[]'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+          />[]
+  - name: shapes
+    uid: azure-maps-control.export=.MapTouchEvent.shapes
+    package: azure-maps-control
+    summary: The shapes of all touch points on the map.
+    fullName: shapes
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'shapes?: Shape[]'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.export" />=.Shape[]
+inheritedProperties:
+  - name: map
+    uid: azure-maps-control.export=.MapTouchEvent.map
+    package: azure-maps-control
+    summary: The `Map` instance in which the event occurred on.
+    fullName: map
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'map: Map'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.export" />=.Map
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MapMouseWheelEvent.map](xref:azure-maps-control.MapMouseWheelEvent.map)
+  - name: originalEvent
+    uid: azure-maps-control.export=.MapTouchEvent.originalEvent
+    package: azure-maps-control
+    summary: The original event that was fired.
+    fullName: originalEvent
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'originalEvent?: Event'
+      return:
+        description: ''
+        type: Event
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MapMouseWheelEvent.originalEvent](xref:azure-maps-control.MapMouseWheelEvent.originalEvent)
+  - name: preventDefault
+    uid: azure-maps-control.export=.MapTouchEvent.preventDefault
+    package: azure-maps-control
+    summary: Prevents event propagation bubbling up the event chain.
+    fullName: preventDefault
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'preventDefault: () => void'
+      return:
+        description: ''
+        type: () =&gt; void
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MapMouseWheelEvent.preventDefault](xref:azure-maps-control.MapMouseWheelEvent.preventDefault)
+  - name: type
+    uid: azure-maps-control.export=.MapTouchEvent.type
+    package: azure-maps-control
+    summary: The event type.
+    fullName: type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'type: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MapMouseWheelEvent.type](xref:azure-maps-control.MapMouseWheelEvent.type)
+extends: <xref uid="azure-maps-control.export" />=.MapMouseWheelEvent

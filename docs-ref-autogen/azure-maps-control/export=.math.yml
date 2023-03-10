@@ -1,0 +1,1443 @@
+### YamlMime:TSPackage
+uid: azure-maps-control.export=.math
+name: math
+summary: ''
+type: module
+enums:
+  - azure-maps-control.export=.math.AccelerationUnits
+  - azure-maps-control.export=.math.AreaUnits
+  - azure-maps-control.export=.math.DistanceUnits
+  - azure-maps-control.export=.math.SpeedUnits
+  - azure-maps-control.export=.math.TimeUnits
+classes:
+  - azure-maps-control.export=.math.AffineTransform
+package: azure-maps-control
+functions:
+  - name: boundingBoxToPolygon(BoundingBox)
+    uid: azure-maps-control.export=.math.boundingBoxToPolygon
+    package: azure-maps-control
+    summary: Takes a BoundingBox and converts it to a polygon.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function boundingBoxToPolygon(bounds: BoundingBox): atlas.data.Polygon'
+      parameters:
+        - id: bounds
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.BoundingBox" />
+          description: The BoundingBox to convert to a Polygon.
+      return:
+        description: A polygon representation of the BoundingBox.
+        type: <xref uid="azure-maps-control.export" />=.<xref uid="data.Polygon" />
+  - name: convertAcceleration(number, string, string, number)
+    uid: azure-maps-control.export=.math.convertAcceleration
+    package: azure-maps-control
+    summary: |-
+      Converts an acceleration value from one unit to another.
+      Supported units:
+         milesPerSecondSquared, kilometersPerSecondSquared, metersPerSecondSquared, feetPerSecondSquared
+         yardsPerSecondSquared, kilometersPerHoursSecond, milesPerHourSecond, knotsPerSecond, standardGravity
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function convertAcceleration(acceleration: number, fromUnits: string,
+        toUnits: string, decimals?: number): number
+      parameters:
+        - id: acceleration
+          type: number
+          description: The acceleration value to convert.
+        - id: fromUnits
+          type: string
+          description: The acceleration units the value is in.
+        - id: toUnits
+          type: string
+          description: The acceleration units to convert to.
+        - id: decimals
+          type: number
+          description: The number of decimal places to round the result to.
+      return:
+        description: An acceleration value convertered from one unit to another.
+        type: number
+  - name: convertArea(number, string, string, number)
+    uid: azure-maps-control.export=.math.convertArea
+    package: azure-maps-control
+    summary: >-
+      Converts an area value from one unit to another.
+
+      Supported units: squareMeters, acres, hectares, squareFeet, squareYards,
+      squareMiles, squareKilometers
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function convertArea(area: number, fromUnits: string, toUnits: string,
+        decimals?: number): number
+      parameters:
+        - id: area
+          type: number
+          description: The area value to convert.
+        - id: fromUnits
+          type: string
+          description: The area units the value is in.
+        - id: toUnits
+          type: string
+          description: The area units to convert to.
+        - id: decimals
+          type: number
+          description: The number of decimal places to round the result to.
+      return:
+        description: An area value convertered from one unit to another.
+        type: number
+  - name: convertDistance(number, string, string, number)
+    uid: azure-maps-control.export=.math.convertDistance
+    package: azure-maps-control
+    summary: >-
+      Converts a distance from one distance units to another. Supported units:
+      miles, nauticalMiles, yards, meters, kilometers, feet
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function convertDistance(distance: number, fromUnits: string, toUnits:
+        string, decimals?: number): number
+      parameters:
+        - id: distance
+          type: number
+          description: A number that represents a distance to convert.
+        - id: fromUnits
+          type: string
+          description: The distance units the original distance is in.
+        - id: toUnits
+          type: string
+          description: The desired distance units to convert to.
+        - id: decimals
+          type: number
+          description: >-
+            Specifies the number of decimal places to round the result to. If
+            undefined, no rounding will occur.
+      return:
+        description: A distance in the new units.
+        type: number
+  - name: convertSpeed(number, string, string, number)
+    uid: azure-maps-control.export=.math.convertSpeed
+    package: azure-maps-control
+    summary: |-
+      Converts a speed value from one unit to another.
+      Supported units:
+         kilometersPerHour, milesPerHour, metersPerSecond, feetPerSecond, knots, mach
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function convertSpeed(speed: number, fromUnits: string, toUnits: string,
+        decimals?: number): number
+      parameters:
+        - id: speed
+          type: number
+          description: The speed value to convert.
+        - id: fromUnits
+          type: string
+          description: The speed units to convert from.
+        - id: toUnits
+          type: string
+          description: The speed units to convert to.
+        - id: decimals
+          type: number
+          description: The number of decimal places to round the result to.
+      return:
+        description: A speed value convertered from one unit to another.
+        type: number
+  - name: convertTimespan(number, string, string, number)
+    uid: azure-maps-control.export=.math.convertTimespan
+    package: azure-maps-control
+    summary: |-
+      Converts a timespan value from one unit to another.
+      Supported units:
+         ms (milliseconds), hours, minutes, seconds
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function convertTimespan(timespan: number, fromUnits: string, toUnits:
+        string, decimals?: number): number
+      parameters:
+        - id: timespan
+          type: number
+          description: The time value to convert.
+        - id: fromUnits
+          type: string
+          description: The time units to convert from.
+        - id: toUnits
+          type: string
+          description: The time units to convert to.
+        - id: decimals
+          type: number
+          description: The number of decimal places to round the result to.
+      return:
+        description: A time value convertered from one unit to another.
+        type: number
+  - name: >-
+      getAcceleration(number, number, number, string, string, string, string,
+      number)
+    uid: azure-maps-control.export=.math.getAcceleration
+    package: azure-maps-control
+    summary: >-
+      Calculates an acceleration based on an initial speed, travel distance and
+      timespan. Formula: a = 2*(d - v*t)/t^2
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAcceleration(initialSpeed: number, distance: number,
+        timespan: number, speedUnits?: string, distanceUnits?: string,
+        timeUnits?: string, accelerationUnits?: string, decimals?: number):
+        number
+      parameters:
+        - id: initialSpeed
+          type: number
+          description: The initial speed.
+        - id: distance
+          type: number
+          description: The distance that has been travelled.
+        - id: timespan
+          type: number
+          description: The timespan that was travelled.
+        - id: speedUnits
+          type: string
+          description: The units of the speed information. If not specified m/s are used.
+        - id: distanceUnits
+          type: string
+          description: >-
+            The units of the distance information. If not specified meters are
+            used.
+        - id: timeUnits
+          type: string
+          description: >-
+            The units of the timespan information. If not specified seconds are
+            used.
+        - id: accelerationUnits
+          type: string
+          description: >-
+            The units to return the acceleration value in. If not specified
+            m/s^2 are used.
+        - id: decimals
+          type: number
+          description: The number of decimal places to round the result to.
+      return:
+        description: >-
+          An acceleration based on an initial speed, travel distance and
+          timespan.
+        type: number
+  - name: >-
+      getAccelerationFromFeatures(Feature<Point, any>, Feature<Point, any>,
+      string, string, string, string, number)
+    uid: azure-maps-control.export=.math.getAccelerationFromFeatures
+    package: azure-maps-control
+    summary: >-
+      Calculates an acceleration between two point features that have a
+      timestamp property and optionally a speed property.
+
+      if speeds are provided, ignore distance between points as the path may not
+      have been straight and calculate: a = (v2 - v1)/(t2 - t1)
+
+      if speeds not provided or only provided on first point, calculate straight
+      line distance between points and calculate: a = 2*(d - v*t)/t^2
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAccelerationFromFeatures(origin: Feature<Point, any>,
+        destination: Feature<Point, any>, timestampProperty: string,
+        speedProperty?: string, speedUnits?: string, accelerationUnits?: string,
+        decimals?: number): number
+      parameters:
+        - id: origin
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Feature"
+            />&lt;<xref uid="azure-maps-control.export" />=.<xref
+            uid="data.Point" />, any&gt;
+          description: The initial point in which the acceleration is calculated from.
+        - id: destination
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Feature"
+            />&lt;<xref uid="azure-maps-control.export" />=.<xref
+            uid="data.Point" />, any&gt;
+          description: The final point in which the acceleration is calculated from.
+        - id: timestampProperty
+          type: string
+          description: >-
+            The name of the property on the features that contains the timestamp
+            information.
+        - id: speedProperty
+          type: string
+          description: >-
+            The name of the property on the features that contains a speed
+            information.
+        - id: speedUnits
+          type: string
+          description: The units of the speed information. If not specified m/s is used.
+        - id: accelerationUnits
+          type: string
+          description: >-
+            The units to return the acceleration value in. If not specified
+            m/s^2 are used.
+        - id: decimals
+          type: number
+          description: The number of decimal places to round the result to.
+      return:
+        description: >-
+          An acceleration between two point features that have a timestamp
+          property and optionally a speed property. Returns NaN if unable to
+          parse timestamp.
+        type: number
+  - name: >-
+      getAccelerationFromSpeeds(number, number, number, string, string, string,
+      number)
+    uid: azure-maps-control.export=.math.getAccelerationFromSpeeds
+    package: azure-maps-control
+    summary: >-
+      Calculates an acceleration based on an initial speed, final speed and
+      timespan. Formula: a = 2* (v2 - v1)/t
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAccelerationFromSpeeds(initialSpeed: number, finalSpeed:
+        number, timespan: number, speedUnits?: string, timeUnits?: string,
+        accelerationUnits?: string, decimals?: number): number
+      parameters:
+        - id: initialSpeed
+          type: number
+          description: The initial speed.
+        - id: finalSpeed
+          type: number
+          description: The final speed.
+        - id: timespan
+          type: number
+          description: The timespan that was travelled.
+        - id: speedUnits
+          type: string
+          description: >-
+            The units of the speed information. If not specified meters are
+            used.
+        - id: timeUnits
+          type: string
+          description: >-
+            The units of the timespan information. If not specified seconds are
+            used.
+        - id: accelerationUnits
+          type: string
+          description: >-
+            The units to return the acceleration value in. If not specified
+            m/s^2 are used.
+        - id: decimals
+          type: number
+          description: The number of decimal places to round the result to.
+      return:
+        description: An acceleration based on an initial speed, final speed and timespan.
+        type: number
+  - name: getArea(Geometry | Feature<Geometry, any> | Shape, AreaUnits, number)
+    uid: azure-maps-control.export=.math.getArea
+    package: azure-maps-control
+    summary: Calculates the approximate area of a geometry in the specified units
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getArea(data: Geometry | Feature<Geometry, any> | Shape,
+        areaUnits?: AreaUnits, decimals?: number): number
+      parameters:
+        - id: data
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Geometry"
+            /> | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.Feature" />&lt;<xref uid="azure-maps-control.export"
+            />=.<xref uid="data.Geometry" />, any&gt; | <xref
+            uid="azure-maps-control.export" />=.Shape
+          description: ''
+        - id: areaUnits
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="math.AreaUnits"
+            />
+          description: Unit of area measurement. Default is squareMeters.
+        - id: decimals
+          type: number
+          description: The number of decimal places to round the result to.
+      return:
+        description: The area of a geometry in the specified units.
+        type: number
+  - name: getCardinalSpline(Position[], number, number, boolean)
+    uid: azure-maps-control.export=.math.getCardinalSpline
+    package: azure-maps-control
+    summary: >-
+      Calculates an array of positions that form a cardinal spline between the
+      specified array of positions.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getCardinalSpline(positions: Position[], tension?: number,
+        nodeSize?: number, close?: boolean): atlas.data.Position[]
+      parameters:
+        - id: positions
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            />[]
+          description: The array of positions to calculate the spline through.
+        - id: tension
+          type: number
+          description: >-
+            A number that indicates the tightness of the curve. Can be any
+            number, although a value between 0 and 1 is usually used. Default:
+            0.5
+        - id: nodeSize
+          type: number
+          description: 'Number of nodes to insert between each position. Default: 15'
+        - id: close
+          type: boolean
+          description: >-
+            A boolean indicating if the spline should be a closed ring or not.
+            Default: false
+      return:
+        description: >-
+          An array of positions that form a cardinal spline between the
+          specified array of positions.
+        type: >-
+          <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+          />[]
+  - name: >-
+      getClosestPointOnGeometry(Position | Point | Shape | Feature<Point, any>,
+      Geometry | Feature<Geometry, any> | Shape, string, number)
+    uid: azure-maps-control.export=.math.getClosestPointOnGeometry
+    package: azure-maps-control
+    summary: >-
+      Calculates the closest point on the edge of a geometry to a specified
+      point or position.
+
+      The returned point feature will have a `distance` property that specifies
+      the distance between the two points in the specified units.
+
+      If the geometry is a Point, that points position will be used for the
+      result.
+
+      If the geometry is a MultiPoint, the distances to the individual positions
+      will be used.
+
+      If the geometry is a Polygon or MultiPolygon, the point closest to any
+      edge will be returned regardless of if the point intersects the geometry
+      or not.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getClosestPointOnGeometry(pt: Position | Point | Shape |
+        Feature<Point, any>, geom: Geometry | Feature<Geometry, any> | Shape,
+        units?: string, decimals?: number): atlas.data.Feature<atlas.data.Point,
+        { distance: number }>
+      parameters:
+        - id: pt
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            /> | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.Point" /> | <xref uid="azure-maps-control.export"
+            />=.Shape | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.Feature" />&lt;<xref uid="azure-maps-control.export"
+            />=.<xref uid="data.Point" />, any&gt;
+          description: >-
+            The point or position to find the closest point on the edge of the
+            geometry.
+        - id: geom
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Geometry"
+            /> | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.Feature" />&lt;<xref uid="azure-maps-control.export"
+            />=.<xref uid="data.Geometry" />, any&gt; | <xref
+            uid="azure-maps-control.export" />=.Shape
+          description: The geometry to find the closest point on.
+        - id: units
+          type: string
+          description: Unit of distance measurement. Default is meters.
+        - id: decimals
+          type: number
+          description: The number of decimal places to round the result to.
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-control.export" />=.<xref uid="data.Feature"
+          />&lt;<xref uid="azure-maps-control.export" />=.<xref uid="data.Point"
+          />, { distance: number }&gt;
+  - name: >-
+      getConvexHull(Position[] | FeatureCollection | Geometry |
+      Feature<Geometry, any> | Shape | GeometryCollection | Geometry[] |
+      (Feature<Geometry, any> | Shape)[])
+    uid: azure-maps-control.export=.math.getConvexHull
+    package: azure-maps-control
+    summary: >-
+      Calculates a Convex Hull from an array of positions, geometries or
+      features.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getConvexHull(data: Position[] | FeatureCollection | Geometry |
+        Feature<Geometry, any> | Shape | GeometryCollection | Geometry[] |
+        (Feature<Geometry, any> | Shape)[]): atlas.data.Polygon
+      parameters:
+        - id: data
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            />[] | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.FeatureCollection" /> | <xref
+            uid="azure-maps-control.export" />=.<xref uid="data.Geometry" /> |
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Feature"
+            />&lt;<xref uid="azure-maps-control.export" />=.<xref
+            uid="data.Geometry" />, any&gt; | <xref
+            uid="azure-maps-control.export" />=.Shape | <xref
+            uid="azure-maps-control.export" />=.<xref
+            uid="data.GeometryCollection" /> | <xref
+            uid="azure-maps-control.export" />=.<xref uid="data.Geometry" />[] |
+            (<xref uid="azure-maps-control.export" />=.<xref uid="data.Feature"
+            />&lt;<xref uid="azure-maps-control.export" />=.<xref
+            uid="data.Geometry" />, any&gt; | <xref
+            uid="azure-maps-control.export" />=.Shape)[]
+          description: >-
+            The array of positions, geometries or features to calculate a convex
+            hull for.
+      return:
+        description: A Convex Hull from an array of positions, geometries or features.
+        type: <xref uid="azure-maps-control.export" />=.<xref uid="data.Polygon" />
+  - name: getDestination(Position | Point, number, number, string)
+    uid: azure-maps-control.export=.math.getDestination
+    package: azure-maps-control
+    summary: >-
+      Calculates a destination position based on a starting position, a heading,
+      a distance, and a distance unit type.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getDestination(origin: Position | Point, heading: number,
+        distance: number, units?: string): atlas.data.Position
+      parameters:
+        - id: origin
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            /> | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.Point" />
+          description: Position that the destination is relative to.
+        - id: heading
+          type: number
+          description: >-
+            A heading angle between 0 - 360 degrees. 0 - North, 90 - East, 180 -
+            South, 270 - West.
+        - id: distance
+          type: number
+          description: Distance that destination is away.
+        - id: units
+          type: string
+          description: Unit of distance measurement. Default is meters.
+      return:
+        description: A position that is the specified distance away from the origin.
+        type: <xref uid="azure-maps-control.export" />=.<xref uid="data.Position" />
+  - name: getDistanceTo(Position | Point, Position | Point, string)
+    uid: azure-maps-control.export=.math.getDistanceTo
+    package: azure-maps-control
+    summary: >-
+      Calculate the distance between two position objects on the surface of the
+      earth using the Haversine formula.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getDistanceTo(origin: Position | Point, destination: Position |
+        Point, units?: string): number
+      parameters:
+        - id: origin
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            /> | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.Point" />
+          description: First position to calculate distance between.
+        - id: destination
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            /> | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.Point" />
+          description: Second position to calculate distance between.
+        - id: units
+          type: string
+          description: Unit of distance measurement. Default is meters.
+      return:
+        description: The shortest distance between two positions in the specified units.
+        type: number
+  - name: getEarthRadius(string)
+    uid: azure-maps-control.export=.math.getEarthRadius
+    package: azure-maps-control
+    summary: Retrieves the radius of the earth in a specific distance unit for WGS84.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getEarthRadius(units?: string): number'
+      parameters:
+        - id: units
+          type: string
+          description: 'Unit of distance measurement. Default: meters'
+      return:
+        description: >-
+          A number that represents the radius of the earth in a specific
+          distance unit.
+        type: number
+  - name: getGeodesicPath(Position[] | LineString, number)
+    uid: azure-maps-control.export=.math.getGeodesicPath
+    package: azure-maps-control
+    summary: >-
+      Takes an array of positions objects and fills in the space between them
+      with accurately positioned positions to form an approximated Geodesic
+      path.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getGeodesicPath(path: Position[] | LineString, nodeSize?:
+        number): atlas.data.Position[]
+      parameters:
+        - id: path
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            />[] | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.LineString" />
+          description: Array of position objects that form a path to fill in.
+        - id: nodeSize
+          type: number
+          description: 'Number of nodes to insert between each position. Default: 15'
+      return:
+        description: >-
+          An array of position objects that form a geodesic paths, geodesic path
+          crossing antimeridian will contain longitude outside of -180 to 180
+          range. See getGeodesicPaths() when this is undesired.
+        type: >-
+          <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+          />[]
+  - name: getGeodesicPaths(Position[] | LineString, number)
+    uid: azure-maps-control.export=.math.getGeodesicPaths
+    package: azure-maps-control
+    summary: >-
+      Takes an array of positions objects and fills in the space between them
+      with accurately positioned positions to form an approximated Geodesic path
+      broken by antimeridian into multiple sub-paths.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getGeodesicPaths(path: Position[] | LineString, nodeSize?:
+        number): atlas.data.Position[][]
+      parameters:
+        - id: path
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            />[] | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.LineString" />
+          description: Array of position objects that form a path to fill in.
+        - id: nodeSize
+          type: number
+          description: 'Number of nodes to insert between each position. Default: 15'
+      return:
+        description: >-
+          An array of paths that form geodesic paths, Comparing to
+          getGeodesicPath, sub-paths will always contain longitude in -180 to
+          180 range
+        type: >-
+          <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+          />[][]
+  - name: getHeading(Position | Point, Position | Point)
+    uid: azure-maps-control.export=.math.getHeading
+    package: azure-maps-control
+    summary: Calculates the heading from one position object to another.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getHeading(origin: Position | Point, destination: Position |
+        Point): number
+      parameters:
+        - id: origin
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            /> | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.Point" />
+          description: Point of origin.
+        - id: destination
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            /> | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.Point" />
+          description: Destination to calculate relative heading to.
+      return:
+        description: A heading in degrees between 0 and 360. 0 degrees points due North.
+        type: number
+  - name: getLengthOfPath(Position[] | LineString, string)
+    uid: azure-maps-control.export=.math.getLengthOfPath
+    package: azure-maps-control
+    summary: Calculates the distance between all position objects in an array.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getLengthOfPath(path: Position[] | LineString, units?: string):
+        number
+      parameters:
+        - id: path
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            />[] | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.LineString" />
+          description: >-
+            The array of position objects that make up the path to calculate the
+            length of.
+        - id: units
+          type: string
+          description: 'Unit of distance measurement. Default: meters'
+      return:
+        description: >-
+          The distance between all positions in between all position objects in
+          an array on the surface of a earth in the specified units.
+        type: number
+  - name: getPathDenormalizedAtAntimerian(Position[] | LineString)
+    uid: azure-maps-control.export=.math.getPathDenormalizedAtAntimerian
+    package: azure-maps-control
+    summary: >-
+      Denormalizes path on antimeridian, this makes lines with coordinates on
+      the opposite side of the antimeridian to always cross it. Note that the
+      path crossing antimeridian will contain longitude outside of -180 to 180
+      range.
+
+      See getPathSplitByAntimeridian when this is not desired.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getPathDenormalizedAtAntimerian(path: Position[] | LineString):
+        Position[]
+      parameters:
+        - id: path
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            />[] | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.LineString" />
+          description: Array of position objects or linestring to denormalize
+      return:
+        description: >-
+          A denormalized array of position objects, path crossing antimeridian
+          will contain longitude outside of -180 to 180 range.
+        type: Position[]
+  - name: getPathSplitByAntimeridian(Position[] | LineString)
+    uid: azure-maps-control.export=.math.getPathSplitByAntimeridian
+    package: azure-maps-control
+    summary: |-
+      Split path on antimeridian into multiple paths.
+      See getPathDenormalizedAtAntimerian when this is not desired.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getPathSplitByAntimeridian(path: Position[] | LineString):
+        Position[][]
+      parameters:
+        - id: path
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            />[] | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.LineString" />
+          description: Array of position objects or linestring to split
+      return:
+        description: A path split into multiple paths by antimeridian.
+        type: Position[][]
+  - name: getPixelHeading(Position | Point, Position | Point)
+    uid: azure-maps-control.export=.math.getPixelHeading
+    package: azure-maps-control
+    summary: >-
+      Calculates the pixel accurate heading from one position to another based
+      on the Mercator map projection. This heading is visually accurate.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getPixelHeading(origin: Position | Point, destination: Position
+        | Point): number
+      parameters:
+        - id: origin
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            /> | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.Point" />
+          description: ''
+        - id: destination
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            /> | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.Point" />
+          description: ''
+      return:
+        description: ''
+        type: number
+  - name: getPointsWithHeadingsAlongPath(Position[] | LineString, number)
+    uid: azure-maps-control.export=.math.getPointsWithHeadingsAlongPath
+    package: azure-maps-control
+    summary: Gets an array of evenly spaced points with headings along a path.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getPointsWithHeadingsAlongPath(path: Position[] | LineString,
+        numPoints: number): atlas.data.Feature<atlas.data.Point, { heading:
+        number }>[]
+      parameters:
+        - id: path
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            />[] | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.LineString" />
+          description: The path to get the positions from.
+        - id: numPoints
+          type: number
+          description: The number of points to get.
+      return:
+        description: An array of evenly spaced points with headings along a path.
+        type: >-
+          <xref uid="azure-maps-control.export" />=.<xref uid="data.Feature"
+          />&lt;<xref uid="azure-maps-control.export" />=.<xref uid="data.Point"
+          />, { heading: number }&gt;[]
+  - name: getPointWithHeadingAlongPath(Position[] | LineString, number, string)
+    uid: azure-maps-control.export=.math.getPointWithHeadingAlongPath
+    package: azure-maps-control
+    summary: Gets a point with heading a specified distance along a path.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getPointWithHeadingAlongPath(path: Position[] | LineString,
+        distance: number, units?: string): atlas.data.Feature<atlas.data.Point,
+        { heading: number }>
+      parameters:
+        - id: path
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            />[] | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.LineString" />
+          description: The path to get the point from.
+        - id: distance
+          type: number
+          description: The distance along the path to get the point at.
+        - id: units
+          type: string
+          description: The distance units.
+      return:
+        description: A point with heading a specified distance along a path.
+        type: >-
+          <xref uid="azure-maps-control.export" />=.<xref uid="data.Feature"
+          />&lt;<xref uid="azure-maps-control.export" />=.<xref uid="data.Point"
+          />, { heading: number }&gt;
+  - name: getPosition(Position | Point | Shape | Feature<Point, any>)
+    uid: azure-maps-control.export=.math.getPosition
+    package: azure-maps-control
+    summary: >-
+      Gets the position of an object that is a position, point, point feature,
+      or circle. If it is a circle, its center coordinate will be returned.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getPosition(data: Position | Point | Shape | Feature<Point,
+        any>): atlas.data.Position
+      parameters:
+        - id: data
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            /> | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.Point" /> | <xref uid="azure-maps-control.export"
+            />=.Shape | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.Feature" />&lt;<xref uid="azure-maps-control.export"
+            />=.<xref uid="data.Point" />, any&gt;
+          description: The data object to extract the position from.
+      return:
+        description: >-
+          The position of an object that is a position, point, or point feature.
+          Returns null if invalid data passed in.
+        type: <xref uid="azure-maps-control.export" />=.<xref uid="data.Position" />
+  - name: getPositionAlongPath(Position[] | LineString, number, string)
+    uid: azure-maps-control.export=.math.getPositionAlongPath
+    package: azure-maps-control
+    summary: >-
+      Calculates the position object on a path that is a specified distance away
+      from the start of the path. If the specified distance is longer
+
+      than the length of the path, the last position of the path will be
+      returned.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getPositionAlongPath(path: Position[] | LineString, distance:
+        number, units?: string): atlas.data.Position
+      parameters:
+        - id: path
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            />[] | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.LineString" />
+          description: A polyline or array of position coordinates that form a path.
+        - id: distance
+          type: number
+          description: >-
+            The distance along the path (from the start) to calculate the
+            position for.
+        - id: units
+          type: string
+          description: Unit of distance measurement. Default is meters.
+      return:
+        description: >-
+          A position object that is the specified distance away from the start
+          of the path when following the path.
+        type: <xref uid="azure-maps-control.export" />=.<xref uid="data.Position" />
+  - name: >-
+      getPositions(Position[] | FeatureCollection | Geometry | Feature<Geometry,
+      any> | Shape | GeometryCollection | Geometry[] | (Feature<Geometry, any> |
+      Shape)[])
+    uid: azure-maps-control.export=.math.getPositions
+    package: azure-maps-control
+    summary: >-
+      Retrieves an array of all positions in the provided geometry, feature or
+      array of geometries/features.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getPositions(data: Position[] | FeatureCollection | Geometry |
+        Feature<Geometry, any> | Shape | GeometryCollection | Geometry[] |
+        (Feature<Geometry, any> | Shape)[]): atlas.data.Position[]
+      parameters:
+        - id: data
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            />[] | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.FeatureCollection" /> | <xref
+            uid="azure-maps-control.export" />=.<xref uid="data.Geometry" /> |
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Feature"
+            />&lt;<xref uid="azure-maps-control.export" />=.<xref
+            uid="data.Geometry" />, any&gt; | <xref
+            uid="azure-maps-control.export" />=.Shape | <xref
+            uid="azure-maps-control.export" />=.<xref
+            uid="data.GeometryCollection" /> | <xref
+            uid="azure-maps-control.export" />=.<xref uid="data.Geometry" />[] |
+            (<xref uid="azure-maps-control.export" />=.<xref uid="data.Feature"
+            />&lt;<xref uid="azure-maps-control.export" />=.<xref
+            uid="data.Geometry" />, any&gt; | <xref
+            uid="azure-maps-control.export" />=.Shape)[]
+          description: The geometries or features to retrieve the positions from.
+      return:
+        description: >-
+          An array of all positions in the provided geometry, feature or array
+          of geometries/features.
+        type: >-
+          <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+          />[]
+  - name: getPositionsAlongPath(Position[] | LineString, number)
+    uid: azure-maps-control.export=.math.getPositionsAlongPath
+    package: azure-maps-control
+    summary: Gets an array of evenly spaced positions along a path.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getPositionsAlongPath(path: Position[] | LineString,
+        numPositions: number): atlas.data.Position[]
+      parameters:
+        - id: path
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            />[] | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.LineString" />
+          description: The path to get the positions from.
+        - id: numPositions
+          type: number
+          description: The number of positions to get.
+      return:
+        description: An array of evenly spaced positions along a path.
+        type: >-
+          <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+          />[]
+  - name: getRegularPolygonPath(Position | Point, number, number, string, number)
+    uid: azure-maps-control.export=.math.getRegularPolygonPath
+    package: azure-maps-control
+    summary: >-
+      Calculates an array of position objects that are an equal distance away
+      from a central point to create a regular polygon.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getRegularPolygonPath(origin: Position | Point, radius: number,
+        numberOfPositions: number, units?: string, offset?: number):
+        atlas.data.Position[]
+      parameters:
+        - id: origin
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            /> | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.Point" />
+          description: Center of the regular polygon.
+        - id: radius
+          type: number
+          description: Radius of the regular polygon.
+        - id: numberOfPositions
+          type: number
+          description: Number of positions the polygon should have.
+        - id: units
+          type: string
+          description: Unit of distance measurement. Default is meters.
+        - id: offset
+          type: number
+          description: >-
+            An offset to rotate the polygon. When 0 the first position will
+            align with North.
+      return:
+        description: An array of position objects that form a regular polygon.
+        type: >-
+          <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+          />[]
+  - name: getRegularPolygonPaths(Position | Point, number, number, string, number)
+    uid: azure-maps-control.export=.math.getRegularPolygonPaths
+    package: azure-maps-control
+    summary: >-
+      Calculates an array of position objects that are an equal distance away
+      from a central point to create a regular polygon broken by antimeridian
+      into multiple sub-paths.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getRegularPolygonPaths(origin: Position | Point, radius:
+        number, numberOfPositions: number, units?: string, offset?: number):
+        Position[][]
+      parameters:
+        - id: origin
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            /> | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.Point" />
+          description: Center of the regular polygon.
+        - id: radius
+          type: number
+          description: Radius of the regular polygon.
+        - id: numberOfPositions
+          type: number
+          description: Number of positions the polygon should have.
+        - id: units
+          type: string
+          description: Unit of distance measurement. Default is meters.
+        - id: offset
+          type: number
+          description: >-
+            An offset to rotate the polygon. When 0 the first position will
+            align with North.
+      return:
+        description: >-
+          An array of paths that form a regular polygon. Comparing to
+          getRegularPolygonPath, sub-paths will always contain longitude in -180
+          to 180 range
+        type: Position[][]
+  - name: >-
+      getSpeed(Position | Point | Feature<Point, any>, Position | Point |
+      Feature<Point, any>, number, string, string, number)
+    uid: azure-maps-control.export=.math.getSpeed
+    package: azure-maps-control
+    summary: >-
+      Calculates the average speed of travel between two points based on the
+      provided amount of time.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getSpeed(origin: Position | Point | Feature<Point, any>,
+        destination: Position | Point | Feature<Point, any>, timespan: number,
+        timeUnits?: string, speedUnits?: string, decimals?: number): number
+      parameters:
+        - id: origin
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            /> | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.Point" /> | <xref uid="azure-maps-control.export"
+            />=.<xref uid="data.Feature" />&lt;<xref
+            uid="azure-maps-control.export" />=.<xref uid="data.Point" />,
+            any&gt;
+          description: The initial point in which the speed is calculated from.
+        - id: destination
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            /> | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.Point" /> | <xref uid="azure-maps-control.export"
+            />=.<xref uid="data.Feature" />&lt;<xref
+            uid="azure-maps-control.export" />=.<xref uid="data.Point" />,
+            any&gt;
+          description: The final point in which the speed is calculated from.
+        - id: timespan
+          type: number
+          description: ''
+        - id: timeUnits
+          type: string
+          description: The units of the time value. If not specified seconds are used.
+        - id: speedUnits
+          type: string
+          description: >-
+            The units to return the speed value in. If not specified m/s are
+            used.
+        - id: decimals
+          type: number
+          description: The number of decimal places to round the result to.
+      return:
+        description: >-
+          The average speed of travel between two points based on the provided
+          amount of time.
+        type: number
+  - name: >-
+      getSpeedFromFeatures(Feature<Point, any>, Feature<Point, any>, string,
+      string, number)
+    uid: azure-maps-control.export=.math.getSpeedFromFeatures
+    package: azure-maps-control
+    summary: >-
+      Calculates the average speed of travel between two point features that
+      have a property containing a timestamp.
+
+      The timestamp can be;
+       - A JavaScript Date object
+       - A number which represents the number of milliseconds since Jan 1st, 1970.
+       - A string which uses one of the following formats:
+           - ISO8601 date format (i.e. 2012-04-23T18:25:43.511Z)
+           - RFC282 / IETF date syntax (section 3.3)
+           - OData Date string (i.e. "/Date(1235764800000)/")
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getSpeedFromFeatures(origin: Feature<Point, any>, destination:
+        Feature<Point, any>, timestampProperty: string, speedUnits?: string,
+        decimals?: number): number
+      parameters:
+        - id: origin
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Feature"
+            />&lt;<xref uid="azure-maps-control.export" />=.<xref
+            uid="data.Point" />, any&gt;
+          description: The initial point in which the speed is calculated from.
+        - id: destination
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Feature"
+            />&lt;<xref uid="azure-maps-control.export" />=.<xref
+            uid="data.Point" />, any&gt;
+          description: The final point in which the speed is calculated from.
+        - id: timestampProperty
+          type: string
+          description: >-
+            The name of the property on the features which has the timestamp
+            information.
+        - id: speedUnits
+          type: string
+          description: >-
+            The units to return the speed value in. If not specified m/s are
+            used.
+        - id: decimals
+          type: number
+          description: The number of decimal places to round the result to.
+      return:
+        description: >-
+          The speed in the specified units or NaN if valid timestamps are not
+          found.
+        type: number
+  - name: >-
+      getTimespan(string | number | Date, string | number | Date, TimeUnits,
+      number)
+    uid: azure-maps-control.export=.math.getTimespan
+    package: azure-maps-control
+    summary: |-
+      Calculates the timespan between two dates or timestamps.
+      Timestamps can be;
+       - A JavaScript Date object
+       - A number which represents the number of milliseconds since Jan 1st, 1970.
+       - A string which uses one of the following formats:
+           - ISO8601 date format (i.e. 2012-04-23T18:25:43.511Z)
+           - RFC282 / IETF date syntax (section 3.3)
+           - OData Date string (i.e. "/Date(1235764800000)/")
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getTimespan(startTime: string | number | Date, endTime: string
+        | number | Date, units?: TimeUnits, decimals?: number): number
+      parameters:
+        - id: startTime
+          type: string | number | Date
+          description: The start date or time.
+        - id: endTime
+          type: string | number | Date
+          description: The end date or time.
+        - id: units
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="math.TimeUnits"
+            />
+          description: >-
+            The units to return the time value in. If not specified seconds are
+            used.
+        - id: decimals
+          type: number
+          description: ''
+      return:
+        description: >-
+          A timespan between two dates or timestamps. Returns NaN if unable to
+          parse timestamps.
+        type: number
+  - name: >-
+      getTravelDistance(string, number, number, number, string, string, string,
+      number)
+    uid: azure-maps-control.export=.math.getTravelDistance
+    package: azure-maps-control
+    summary: >-
+      Calculates the distance traveled for a specified timespan, speed and
+      optionally an acceleration.
+
+      Formula: d = v*t + 0.5*a*t^2
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getTravelDistance(distanceUnits: string, timespan: number,
+        speed: number, acceleration?: number, timeUnits?: string, speedUnits?:
+        string, accelerationUnits?: string, decimals?: number): number
+      parameters:
+        - id: distanceUnits
+          type: string
+          description: The distance units in which to return the distance in.
+        - id: timespan
+          type: number
+          description: The timespan to calculate the distance for.
+        - id: speed
+          type: number
+          description: The initial or constant speed.
+        - id: acceleration
+          type: number
+          description: Optional. An acceleration which increases the speed over time.
+        - id: timeUnits
+          type: string
+          description: The units of the timespan. If not specified seconds are used.
+        - id: speedUnits
+          type: string
+          description: The units of the speed value. If not specified m/s are used.
+        - id: accelerationUnits
+          type: string
+          description: >-
+            Optional. The units of the acceleration value. If not specified
+            m/s^2 are used.
+        - id: decimals
+          type: number
+          description: The number of decimal places to round the result to.
+      return:
+        description: >-
+          The distance traveled for a specified timespan, speed and optionally
+          an acceleration.
+        type: number
+  - name: interpolate(Position | Point, Position | Point, number)
+    uid: azure-maps-control.export=.math.interpolate
+    package: azure-maps-control
+    summary: >-
+      Calculates a position object that is a fractional distance between two
+      position objects.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function interpolate(origin: Position | Point, destination: Position |
+        Point, fraction?: number): atlas.data.Position
+      parameters:
+        - id: origin
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            /> | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.Point" />
+          description: First position to calculate mid-point between.
+        - id: destination
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            /> | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.Point" />
+          description: Second position to calculate mid-point between.
+        - id: fraction
+          type: number
+          description: The fractional parameter to calculate a mid-point for. Default 0.5.
+      return:
+        description: >-
+          A position that lies a fraction of the distance between two position
+          objects, relative to the first position object.
+        type: <xref uid="azure-maps-control.export" />=.<xref uid="data.Position" />
+  - name: mercatorPixelsToPositions(Pixel[], number)
+    uid: azure-maps-control.export=.math.mercatorPixelsToPositions
+    package: azure-maps-control
+    summary: >-
+      Converts an array of global Mercator pixel coordinates into an array of
+      geospatial positions at a specified zoom level.
+
+      Global pixel coordinates are relative to the top left corner of the map
+      [-180, 90].
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function mercatorPixelsToPositions(pixels: Pixel[], zoom: number):
+        atlas.data.Position[]
+      parameters:
+        - id: pixels
+          type: <xref uid="azure-maps-control.export" />=.Pixel[]
+          description: Array of pixel coordinates.
+        - id: zoom
+          type: number
+          description: Zoom level.
+      return:
+        description: An array of positions.
+        type: >-
+          <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+          />[]
+  - name: mercatorPositionsToPixels(Position[], number)
+    uid: azure-maps-control.export=.math.mercatorPositionsToPixels
+    package: azure-maps-control
+    summary: >-
+      Converts an array of positions into an array of global Mercator pixel
+      coordinates at a specified zoom level.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function mercatorPositionsToPixels(positions: Position[], zoom: number):
+        Pixel[]
+      parameters:
+        - id: positions
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            />[]
+          description: Array of positions.
+        - id: zoom
+          type: number
+          description: Zoom level.
+      return:
+        description: Array of global Mercator pixels.
+        type: <xref uid="azure-maps-control.export" />=.Pixel[]
+  - name: normalizeLatitude(number)
+    uid: azure-maps-control.export=.math.normalizeLatitude
+    package: azure-maps-control
+    summary: Normalizes a latitude value between -90 and 90 degrees.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function normalizeLatitude(lat: number): number'
+      parameters:
+        - id: lat
+          type: number
+          description: The latitude value to normalize.
+      return:
+        description: ''
+        type: number
+  - name: normalizeLongitude(number)
+    uid: azure-maps-control.export=.math.normalizeLongitude
+    package: azure-maps-control
+    summary: Normalizes a longitude value between -180 and 180 degrees.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function normalizeLongitude(lng: number): number'
+      parameters:
+        - id: lng
+          type: number
+          description: The longitude value to normalize.
+      return:
+        description: ''
+        type: number
+  - name: parseTimestamp(string | number | Date)
+    uid: azure-maps-control.export=.math.parseTimestamp
+    package: azure-maps-control
+    summary: |-
+      Parses a timestamp into a JavaScript Date object.
+      Timestamps can be;
+       - A JavaScript Date object
+       - A number which represents the number of milliseconds since Jan 1st, 1970.
+       - A string which uses one of the following formats:
+           - ISO8601 date format (i.e. 2012-04-23T18:25:43.511Z)
+           - RFC282 / IETF date syntax (section 3.3)
+           - OData Date string (i.e. "/Date(1235764800000)/")
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function parseTimestamp(timestamp: string | number | Date): Date'
+      parameters:
+        - id: timestamp
+          type: string | number | Date
+          description: The timestamp value to parse.
+      return:
+        description: >-
+          A Date object that represents the timestamp or null if the timestamp
+          could not be parsed.
+        type: Date
+  - name: rotatePositions(Position[], Position | Point, number)
+    uid: azure-maps-control.export=.math.rotatePositions
+    package: azure-maps-control
+    summary: >-
+      Takes an array of positions and rotates them around a given position for
+      the specified angle of rotation.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function rotatePositions(positions: Position[], origin: Position |
+        Point, angle: number): atlas.data.Position[]
+      parameters:
+        - id: positions
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            />[]
+          description: An array of positions to be rotated.
+        - id: origin
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            /> | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.Point" />
+          description: The position to rotate the positions around.
+        - id: angle
+          type: number
+          description: The amount to rotate the array of positions in degrees clockwise.
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+          />[]
+  - name: simplify((Position | Pixel)[], number)
+    uid: azure-maps-control.export=.math.simplify
+    package: azure-maps-control
+    summary: >-
+      Perform a Douglas-Peucker simplification on an array of positions or
+      pixels.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function simplify(points: (Position | Pixel)[], tolerance: number):
+        (Position | Pixel)[]
+      parameters:
+        - id: points
+          type: >-
+            (<xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            /> | <xref uid="azure-maps-control.export" />=.Pixel)[]
+          description: The position or pixel points to simplify.
+        - id: tolerance
+          type: number
+          description: A tolerance to use in the simplification.
+      return:
+        description: A new array of the simplified set of points.
+        type: (Position | <xref uid="azure-maps-control.export" />=.Pixel)[]

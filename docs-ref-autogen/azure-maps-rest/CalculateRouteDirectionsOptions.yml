@@ -1,0 +1,13 @@
+### YamlMime:TSTypeAlias
+name: CalculateRouteDirectionsOptions
+uid: azure-maps-rest.CalculateRouteDirectionsOptions
+package: azure-maps-rest
+summary: ''
+fullName: CalculateRouteDirectionsOptions
+remarks: ''
+isDeprecated: false
+syntax: |
+  type CalculateRouteDirectionsOptions =
+    Models.RouteGetRouteDirectionsOptionalParams & {
+      postBody?: Models.RouteDirectionsRequestBody,
+    }

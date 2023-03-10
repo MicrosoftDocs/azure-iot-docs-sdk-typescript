@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: SpatialGetClosestPointResponse
+uid: azure-maps-rest.export=.Models.SpatialGetClosestPointResponse
+package: azure-maps-rest
+summary: Contains response data for the getClosestPoint operation.
+fullName: SpatialGetClosestPointResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SpatialGetClosestPointResponse = GetClosestPointResponse & {
+    _response: msRest.HttpResponse & {
+      bodyAsText: string,
+      parsedBody: GetClosestPointResponse,
+    },
+  }

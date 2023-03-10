@@ -1,0 +1,24 @@
+### YamlMime:TSType
+name: BatchRequestBody
+uid: azure-maps-rest.export=.Models.BatchRequestBody
+package: azure-maps-rest
+summary: This type represents the request body for the Batch service.
+fullName: BatchRequestBody
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: batchItems
+    uid: azure-maps-rest.export=.Models.BatchRequestBody.batchItems
+    package: azure-maps-rest
+    summary: The list of queries/requests to process
+    fullName: batchItems
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'batchItems?: BatchRequestBodyBatchItemsItem[]'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.export" />=.<xref
+          uid="Models.BatchRequestBodyBatchItemsItem" />[]

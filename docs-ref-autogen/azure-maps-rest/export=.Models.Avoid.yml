@@ -1,0 +1,47 @@
+### YamlMime:TSEnum
+name: Avoid
+uid: azure-maps-rest.export=.Models.Avoid
+package: azure-maps-rest
+summary: >-
+  Defines values for Avoid.
+
+  Possible values include: 'tollRoads', 'motorways', 'ferries', 'unpavedRoads',
+  'carpools',
+
+  'alreadyUsedRoads', 'borderCrossings'
+fullName: Avoid
+remarks: ''
+isDeprecated: false
+fields:
+  - name: AlreadyUsedRoads
+    uid: azure-maps-rest.export=.Models.Avoid.AlreadyUsedRoads
+    package: azure-maps-rest
+    summary: |-
+      Avoids using the same road multiple times. Most useful in conjunction with
+      `routeType`=thrilling.
+  - name: BorderCrossings
+    uid: azure-maps-rest.export=.Models.Avoid.BorderCrossings
+    package: azure-maps-rest
+    summary: Avoids border crossings in route calculation.
+  - name: Carpools
+    uid: azure-maps-rest.export=.Models.Avoid.Carpools
+    package: azure-maps-rest
+    summary: >-
+      Avoids routes that require the use of carpool (HOV/High Occupancy Vehicle)
+      lanes.
+  - name: Ferries
+    uid: azure-maps-rest.export=.Models.Avoid.Ferries
+    package: azure-maps-rest
+    summary: Avoids ferries
+  - name: Motorways
+    uid: azure-maps-rest.export=.Models.Avoid.Motorways
+    package: azure-maps-rest
+    summary: Avoids motorways
+  - name: TollRoads
+    uid: azure-maps-rest.export=.Models.Avoid.TollRoads
+    package: azure-maps-rest
+    summary: Avoids toll roads.
+  - name: UnpavedRoads
+    uid: azure-maps-rest.export=.Models.Avoid.UnpavedRoads
+    package: azure-maps-rest
+    summary: Avoids unpaved roads

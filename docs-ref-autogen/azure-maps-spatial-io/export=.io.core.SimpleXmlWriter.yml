@@ -1,0 +1,264 @@
+### YamlMime:TSType
+name: SimpleXmlWriter
+uid: azure-maps-spatial-io.export=.io.core.SimpleXmlWriter
+package: azure-maps-spatial-io
+summary: >-
+  A simple and fast XML writing class that makes it easy to efficiently build an
+  XML string.
+fullName: SimpleXmlWriter
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: SimpleXmlWriter(boolean, string, string)
+    uid: azure-maps-spatial-io.export=.io.core.SimpleXmlWriter.constructor
+    package: azure-maps-spatial-io
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new SimpleXmlWriter(prettyPrint?: boolean, newLineChars?: string,
+        indentChars?: string)
+      parameters:
+        - id: prettyPrint
+          type: boolean
+          description: >-
+            A boolean indicating if the generated XML should be formatted and
+            use new lines and indents.
+
+            Default: `true`.
+        - id: newLineChars
+          type: string
+          description: |-
+            The characters to use to create a new line in the XML data.
+            Default: `"\r\n"`
+        - id: indentChars
+          type: string
+          description: |-
+            The characters to use to create an indent in the XML data.
+            Default: `"\t"`
+methods:
+  - name: clear()
+    uid: azure-maps-spatial-io.export=.io.core.SimpleXmlWriter.clear
+    package: azure-maps-spatial-io
+    summary: >-
+      Clears all data in the XML writer and sets itself up to be used to write a
+      new document.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function clear()
+  - name: toString()
+    uid: azure-maps-spatial-io.export=.io.core.SimpleXmlWriter.toString
+    package: azure-maps-spatial-io
+    summary: Closes the document and returns a string version of the XML document.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function toString(): string'
+      return:
+        description: ''
+        type: string
+  - name: writeCDataContent(string)
+    uid: azure-maps-spatial-io.export=.io.core.SimpleXmlWriter.writeCDataContent
+    package: azure-maps-spatial-io
+    summary: Writes a content value inside of a CData tag.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function writeCDataContent(content: string): SimpleXmlWriter'
+      parameters:
+        - id: content
+          type: string
+          description: The content value to write.
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-spatial-io.export" />=.<xref
+          uid="io.core.SimpleXmlWriter" />
+  - name: writeComment(string)
+    uid: azure-maps-spatial-io.export=.io.core.SimpleXmlWriter.writeComment
+    package: azure-maps-spatial-io
+    summary: Writes a comment in the document.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function writeComment(comment: string): SimpleXmlWriter'
+      parameters:
+        - id: comment
+          type: string
+          description: The comment to write add to the document.
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-spatial-io.export" />=.<xref
+          uid="io.core.SimpleXmlWriter" />
+  - name: writeElement(string, any, Record<string, string>)
+    uid: azure-maps-spatial-io.export=.io.core.SimpleXmlWriter.writeElement
+    package: azure-maps-spatial-io
+    summary: Writes a complete tag element.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function writeElement(name: string, content: any, attributes?:
+        Record<string, string>): SimpleXmlWriter
+      parameters:
+        - id: name
+          type: string
+          description: The name of the tag element.
+        - id: content
+          type: any
+          description: The content of the tag element.
+        - id: attributes
+          type: Record&lt;string, string&gt;
+          description: The attributes for the tag.
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-spatial-io.export" />=.<xref
+          uid="io.core.SimpleXmlWriter" />
+  - name: writeEndDocument(boolean)
+    uid: azure-maps-spatial-io.export=.io.core.SimpleXmlWriter.writeEndDocument
+    package: azure-maps-spatial-io
+    summary: >-
+      Writes all the remaining closing tag in the tag name stack so as to close
+      the document.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function writeEndDocument(addTrailingNewLineChar?: boolean):
+        SimpleXmlWriter
+      parameters:
+        - id: addTrailingNewLineChar
+          type: boolean
+          description: >-
+            A boolean indicating if a trailing new line character should be
+            added or not.
+
+            Default: `true`
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-spatial-io.export" />=.<xref
+          uid="io.core.SimpleXmlWriter" />
+  - name: writeEndElement(boolean)
+    uid: azure-maps-spatial-io.export=.io.core.SimpleXmlWriter.writeEndElement
+    package: azure-maps-spatial-io
+    summary: Writes the closing tag of last tag that was opened.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function writeEndElement(skipNewLine?: boolean): SimpleXmlWriter'
+      parameters:
+        - id: skipNewLine
+          type: boolean
+          description: >-
+            A boolean indicating if the new line character should not be added
+            after the closing tag.
+
+            Default: `false`.
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-spatial-io.export" />=.<xref
+          uid="io.core.SimpleXmlWriter" />
+  - name: writeStartDocument(boolean, string, boolean)
+    uid: azure-maps-spatial-io.export=.io.core.SimpleXmlWriter.writeStartDocument
+    package: azure-maps-spatial-io
+    summary: Starts an XML document.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function writeStartDocument(includeEncodingTag?: boolean, encoding?:
+        string, standalone?: boolean): SimpleXmlWriter
+      parameters:
+        - id: includeEncodingTag
+          type: boolean
+          description: >-
+            Specifies if the encoding tag should be added to the document.
+            Default: True.
+        - id: encoding
+          type: string
+          description: The string encoding value of the document.
+        - id: standalone
+          type: boolean
+          description: A boolean indicating if the XML document is standalone or not.
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-spatial-io.export" />=.<xref
+          uid="io.core.SimpleXmlWriter" />
+  - name: >-
+      writeStartElement(string, Record<string, string | number>, boolean,
+      boolean)
+    uid: azure-maps-spatial-io.export=.io.core.SimpleXmlWriter.writeStartElement
+    package: azure-maps-spatial-io
+    summary: Write a tag element.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function writeStartElement(name: string, attributes?: Record<string,
+        string | number>, selfClosing?: boolean, skipIndent?: boolean):
+        SimpleXmlWriter
+      parameters:
+        - id: name
+          type: string
+          description: The name of this tag.
+        - id: attributes
+          type: Record&lt;string, string | number&gt;
+          description: The attributes for this tag.
+        - id: selfClosing
+          type: boolean
+          description: A boolean indicating if this tag should be self closing or not.
+        - id: skipIndent
+          type: boolean
+          description: ''
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-spatial-io.export" />=.<xref
+          uid="io.core.SimpleXmlWriter" />
+  - name: writeString(string, boolean)
+    uid: azure-maps-spatial-io.export=.io.core.SimpleXmlWriter.writeString
+    package: azure-maps-spatial-io
+    summary: Writes a string value.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function writeString(value: string, validate?: boolean): SimpleXmlWriter'
+      parameters:
+        - id: value
+          type: string
+          description: The string value to write.
+        - id: validate
+          type: boolean
+          description: |-
+            A boolean indicating if the writer should write the string as-is,
+            or validate and escape of special characters.
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-spatial-io.export" />=.<xref
+          uid="io.core.SimpleXmlWriter" />
+  - name: writeValue(any)
+    uid: azure-maps-spatial-io.export=.io.core.SimpleXmlWriter.writeValue
+    package: azure-maps-spatial-io
+    summary: Writes a value to XML writer.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function writeValue(value: any): SimpleXmlWriter'
+      parameters:
+        - id: value
+          type: any
+          description: Any value that is to be written.
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-spatial-io.export" />=.<xref
+          uid="io.core.SimpleXmlWriter" />

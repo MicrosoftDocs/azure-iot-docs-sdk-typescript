@@ -1,0 +1,249 @@
+### YamlMime:TSType
+name: PolygonExtrusionLayerOptions
+uid: azure-maps-control.export=.PolygonExtrusionLayerOptions
+package: azure-maps-control
+summary: >-
+  Options used when rendering `Polygon` and `MultiPolygon` objects in a
+  `PolygonExtrusionLayer`.
+fullName: PolygonExtrusionLayerOptions
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: base
+    uid: azure-maps-control.export=.PolygonExtrusionLayerOptions.base
+    package: azure-maps-control
+    summary: |-
+      The height in meters to extrude the base of this layer.
+      This height is relative to the ground.
+      Must be greater or equal to 0 and less than or equal to `height`.
+      Default `0`.
+    fullName: base
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'base?: number | Expression'
+      return:
+        description: ''
+        type: number | <xref uid="azure-maps-control.export" />=.Expression
+  - name: fillColor
+    uid: azure-maps-control.export=.PolygonExtrusionLayerOptions.fillColor
+    package: azure-maps-control
+    summary: |-
+      The color to fill the polygons with.
+      Ignored if `fillPattern` is set.
+      Default `"#1E90FF"`.
+    fullName: fillColor
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'fillColor?: string | Expression'
+      return:
+        description: ''
+        type: string | <xref uid="azure-maps-control.export" />=.Expression
+  - name: fillOpacity
+    uid: azure-maps-control.export=.PolygonExtrusionLayerOptions.fillOpacity
+    package: azure-maps-control
+    summary: >-
+      A number between 0 and 1 that indicates the opacity at which the fill will
+      be drawn.
+
+      Default `1`.
+    fullName: fillOpacity
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'fillOpacity?: number'
+      return:
+        description: ''
+        type: number
+  - name: fillPattern
+    uid: azure-maps-control.export=.PolygonExtrusionLayerOptions.fillPattern
+    package: azure-maps-control
+    summary: >-
+      Name of image in sprite to use for drawing image fills.
+
+      For seamless patterns, image width must be a factor of two (2, 4, 8, ...,
+      512).
+    fullName: fillPattern
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'fillPattern?: string'
+      return:
+        description: ''
+        type: string
+  - name: height
+    uid: azure-maps-control.export=.PolygonExtrusionLayerOptions.height
+    package: azure-maps-control
+    summary: |-
+      The height in meters to extrude this layer.
+      This height is relative to the ground.
+      Must be a number greater or equal to 0.
+      Default `0`
+    fullName: height
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'height?: number | Expression'
+      return:
+        description: ''
+        type: number | <xref uid="azure-maps-control.export" />=.Expression
+  - name: source
+    uid: azure-maps-control.export=.PolygonExtrusionLayerOptions.source
+    package: azure-maps-control
+    summary: The id or instance of a data source which the layer will render.
+    fullName: source
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'source?: string | Source<SourceEvents>'
+      return:
+        description: ''
+        type: >-
+          string | <xref uid="azure-maps-control.export" />=.<xref
+          uid="source.Source" />&lt;<xref uid="azure-maps-control.export"
+          />=.<xref uid="source.SourceEvents" />&gt;
+  - name: sourceLayer
+    uid: azure-maps-control.export=.PolygonExtrusionLayerOptions.sourceLayer
+    package: azure-maps-control
+    summary: >-
+      Required when the source of the layer is a VectorTileSource.
+
+      A vector source can have multiple layers within it, this identifies which
+      one to render in this layer.
+
+      Prohibited for all other types of sources.
+    fullName: sourceLayer
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'sourceLayer?: string'
+      return:
+        description: ''
+        type: string
+  - name: translate
+    uid: azure-maps-control.export=.PolygonExtrusionLayerOptions.translate
+    package: azure-maps-control
+    summary: |-
+      The polygons' pixel offset.
+      Values are [x, y] where negatives indicate left and up, respectively.
+      Default `[0, 0]`
+    fullName: translate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'translate?: Pixel'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.export" />=.Pixel
+  - name: translateAnchor
+    uid: azure-maps-control.export=.PolygonExtrusionLayerOptions.translateAnchor
+    package: azure-maps-control
+    summary: |-
+      Specifies the frame of reference for `translate`.
+      <p>`"map"`: Polygons are translated relative to the map.</p>
+      <p>`"viewport"`: Polygons are translated relative to the viewport.</p>
+      Default: `"map"`
+    fullName: translateAnchor
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'translateAnchor?: "map" | "viewport"'
+      return:
+        description: ''
+        type: '"map" | "viewport"'
+  - name: verticalGradient
+    uid: azure-maps-control.export=.PolygonExtrusionLayerOptions.verticalGradient
+    package: azure-maps-control
+    summary: >-
+      Specifies if the polygon should have a vertical gradient on the sides of
+      the extrusion.
+
+      Default: `true`
+    fullName: verticalGradient
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'verticalGradient?: boolean'
+      return:
+        description: ''
+        type: boolean
+inheritedProperties:
+  - name: filter
+    uid: azure-maps-control.export=.PolygonExtrusionLayerOptions.filter
+    package: azure-maps-control
+    summary: |-
+      An expression specifying conditions on source features.
+      Only features that match the filter are displayed.
+    fullName: filter
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'filter?: Expression'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.export" />=.Expression
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.filter](xref:azure-maps-control.LayerOptions.filter)
+  - name: maxZoom
+    uid: azure-maps-control.export=.PolygonExtrusionLayerOptions.maxZoom
+    package: azure-maps-control
+    summary: >-
+      An integer specifying the maximum zoom level to render the layer at.
+
+      This value is exclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `24`.
+    fullName: maxZoom
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'maxZoom?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.maxZoom](xref:azure-maps-control.LayerOptions.maxZoom)
+  - name: minZoom
+    uid: azure-maps-control.export=.PolygonExtrusionLayerOptions.minZoom
+    package: azure-maps-control
+    summary: >-
+      An integer specifying the minimum zoom level to render the layer at.
+
+      This value is inclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `0`.
+    fullName: minZoom
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'minZoom?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.minZoom](xref:azure-maps-control.LayerOptions.minZoom)
+  - name: visible
+    uid: azure-maps-control.export=.PolygonExtrusionLayerOptions.visible
+    package: azure-maps-control
+    summary: |-
+      Specifies if the layer is visible or not.
+      Default `true`.
+    fullName: visible
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'visible?: boolean'
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.visible](xref:azure-maps-control.LayerOptions.visible)
+extends: <xref uid="azure-maps-control.export" />=.LayerOptions

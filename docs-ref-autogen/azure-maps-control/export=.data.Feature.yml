@@ -1,0 +1,116 @@
+### YamlMime:TSType
+name: Feature
+uid: azure-maps-control.export=.data.Feature
+package: azure-maps-control
+summary: >-
+  A GeoJSON Feature object - a JSON object representing a spatially bounded
+  entity. The full description is detailed in
+
+  [RFC 7946](https://tools.ietf.org/html/rfc7946#section-3.2).
+fullName: Feature<G, P>
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: Feature<G, P>(G, P, string | number, BoundingBox)
+    uid: azure-maps-control.export=.data.Feature.constructor
+    package: azure-maps-control
+    summary: Constructs a Feature.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new Feature(geometry: G, properties?: P, id?: string | number, bbox?:
+        BoundingBox)
+      parameters:
+        - id: geometry
+          type: G
+          description: The geometry of the feature.
+        - id: properties
+          type: P
+          description: The properties of the feature.
+        - id: id
+          type: string | number
+          description: The id of the feature.
+        - id: bbox
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.BoundingBox" />
+          description: The bounding box of the feature.
+properties:
+  - name: bbox
+    uid: azure-maps-control.export=.data.Feature.bbox
+    package: azure-maps-control
+    summary: The bounding box of the feature.
+    fullName: bbox
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'bbox?: BoundingBox'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-control.export" />=.<xref uid="data.BoundingBox"
+          />
+  - name: geometry
+    uid: azure-maps-control.export=.data.Feature.geometry
+    package: azure-maps-control
+    summary: The geometry of the feature.
+    fullName: geometry
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'geometry: G'
+      return:
+        description: ''
+        type: G
+  - name: id
+    uid: azure-maps-control.export=.data.Feature.id
+    package: azure-maps-control
+    summary: The id of the feature.
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id?: string | number'
+      return:
+        description: ''
+        type: string | number
+  - name: properties
+    uid: azure-maps-control.export=.data.Feature.properties
+    package: azure-maps-control
+    summary: The properties of the feature.
+    fullName: properties
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'properties?: P'
+      return:
+        description: ''
+        type: P
+  - name: type
+    uid: azure-maps-control.export=.data.Feature.type
+    package: azure-maps-control
+    summary: A GeoJSON type descriptor with value "Feature".
+    fullName: type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'type: string'
+      return:
+        description: ''
+        type: string
+  - name: TYPE
+    uid: azure-maps-control.export=.data.Feature.TYPE
+    package: azure-maps-control
+    summary: >-
+      A static GeoJSON type descriptor for the Feature class to be used in
+      runtime comparisons.
+    fullName: TYPE
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static TYPE: string'
+      return:
+        description: ''
+        type: string

@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: SpatialGetGreatCircleDistanceResponse
+uid: azure-maps-rest.export=.Models.SpatialGetGreatCircleDistanceResponse
+package: azure-maps-rest
+summary: Contains response data for the getGreatCircleDistance operation.
+fullName: SpatialGetGreatCircleDistanceResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SpatialGetGreatCircleDistanceResponse = GreatCircleDistanceResponse & {
+    _response: msRest.HttpResponse & {
+      bodyAsText: string,
+      parsedBody: GreatCircleDistanceResponse,
+    },
+  }

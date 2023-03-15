@@ -5,7 +5,6 @@ package: azure-maps-rest
 summary: Optional Parameters.
 fullName: RenderGetMapImageOptionalParams
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -23,7 +22,6 @@ properties:
       in the table at the top of this page.
     fullName: bbox
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'bbox?: string'
@@ -41,7 +39,6 @@ properties:
       mutually exclusive.
     fullName: center
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'center?: string'
@@ -57,7 +54,6 @@ properties:
       is 512. It shouldn’t be used with bbox.
     fullName: height
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'height?: number'
@@ -83,7 +79,6 @@ properties:
       for details.
     fullName: language
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'language?: string'
@@ -100,7 +95,6 @@ properties:
       values include: 'basic', 'hybrid', 'labels'
     fullName: layer
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'layer?: StaticMapLayer'
@@ -274,7 +268,6 @@ properties:
       ra        | Circle radius (meters) | Greater than 0
     fullName: path
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'path?: string[]'
@@ -680,7 +673,6 @@ properties:
       The margin size is the minimum of the pin width and height.
     fullName: pins
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'pins?: string[]'
@@ -697,7 +689,6 @@ properties:
       'main'
     fullName: style
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'style?: Style'
@@ -744,7 +735,6 @@ properties:
       to see the available Views.
     fullName: view
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'view?: string'
@@ -761,7 +751,6 @@ properties:
       used with bbox.
     fullName: width
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'width?: number'
@@ -782,7 +771,6 @@ properties:
       for details.
     fullName: zoom
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'zoom?: number'
@@ -797,7 +785,6 @@ inheritedProperties:
     summary: The signal which can be used to abort requests.
     fullName: abortSignal
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'abortSignal?: AbortSignalLike'
@@ -814,7 +801,6 @@ inheritedProperties:
       will be applied before the request is sent.
     fullName: customHeaders
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'customHeaders?: [key: string]: string'
@@ -829,7 +815,6 @@ inheritedProperties:
     summary: Callback which fires upon download progress.
     fullName: onDownloadProgress
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'onDownloadProgress?: (progress: TransferProgressEvent) => void'
@@ -844,7 +829,6 @@ inheritedProperties:
     summary: Callback which fires upon upload progress.
     fullName: onUploadProgress
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'onUploadProgress?: (progress: TransferProgressEvent) => void'
@@ -861,7 +845,6 @@ inheritedProperties:
       terminated.
     fullName: timeout
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'timeout?: number'

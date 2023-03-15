@@ -5,7 +5,6 @@ package: azure-maps-spatial-io
 summary: Options for writing delimited files.
 fullName: SpatialCsvWriteOptions
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -17,7 +16,6 @@ properties:
       Default: `","`
     fullName: delimiter
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'delimiter?: string'
@@ -33,7 +31,6 @@ properties:
       Default: `"elv"`
     fullName: elvColName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'elvColName?: string'
@@ -50,7 +47,6 @@ properties:
       Default: `"geo"`
     fullName: geoColName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'geoColName?: string'
@@ -69,7 +65,6 @@ properties:
       Default: false
     fullName: includeTypesInHeader
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'includeTypesInHeader?: boolean'
@@ -85,7 +80,6 @@ properties:
       Default: `"lat"`
     fullName: latColName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'latColName?: string'
@@ -101,7 +95,6 @@ properties:
       Default: `"lon"`
     fullName: lonColName
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'lonColName?: string'
@@ -130,7 +123,6 @@ properties:
       Default: `"wkt"`
     fullName: spatialformat
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'spatialformat?: "latlon" | "latlonelv" | "wkt"'
@@ -145,7 +137,6 @@ properties:
       Default: `"`
     fullName: textQualifier
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'textQualifier?: string'
@@ -161,7 +152,6 @@ inheritedProperties:
       Default: `"GeoJSON"`
     fullName: format
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'format?: "KML" | "GPX" | "GeoRSS" | "GML" | "GeoJSON" | "CSV"'
@@ -170,5 +160,5 @@ inheritedProperties:
         type: '"KML" | "GPX" | "GeoRSS" | "GML" | "GeoJSON" | "CSV"'
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [SpatialDataWriteOptions.format](xref:SpatialDataWriteOptions.format)
+      [SpatialDataWriteOptions.format](xref:azure-maps-spatial-io.atlas.SpatialDataWriteOptions.format)
 extends: <xref uid="azure-maps-spatial-io.atlas.SpatialDataWriteOptions" />

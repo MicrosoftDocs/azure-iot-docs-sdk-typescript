@@ -5,7 +5,6 @@ package: azure-maps-spatial-io
 summary: Represents an AND logic operator filter.
 fullName: And
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +13,6 @@ constructors:
     package: azure-maps-spatial-io
     summary: Represents an AND logic operator filter.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new And(filters: Filter[])'
@@ -29,7 +27,6 @@ inheritedMethods:
     package: azure-maps-spatial-io
     summary: Generates an XML version of the filter.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function toXml(version?: string): string'
@@ -41,5 +38,7 @@ inheritedMethods:
       return:
         description: ''
         type: string
-    inheritanceDescription: '<b>Inherited From</b> [Filter.toXml](xref:Filter.toXml)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Filter.toXml](xref:azure-maps-spatial-io.atlas.io.ogc.filter.Filter.toXml)
 extends: <xref uid="azure-maps-spatial-io.atlas.io.ogc.filter.LogicOperatorFilter" />

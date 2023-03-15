@@ -5,7 +5,6 @@ package: azure-maps-rest
 summary: This object is returned from a successful Transit Line Info call.
 fullName: TransitLineInfoResponse
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -20,7 +19,6 @@ properties:
       other from B to A.
     fullName: lineGroup
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'lineGroup?: LineGroup'
@@ -33,7 +31,6 @@ properties:
     summary: The line group’s basic info and list of the lines.
     fullName: lines
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'lines?: Line[]'
@@ -50,7 +47,6 @@ properties:
       per a line in GeoJSON format.
     fullName: patterns
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'patterns?: Pattern[]'
@@ -67,7 +63,6 @@ properties:
       time.
     fullName: schedule
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'schedule?: LineArrival'
@@ -80,7 +75,6 @@ properties:
     summary: List of stops the line group goes through.
     fullName: stops
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'stops?: Stop[]'

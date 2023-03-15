@@ -5,7 +5,6 @@ package: azure-maps-control
 summary: Options used to render graphics in a WebGLLayer.
 fullName: WebGLLayerOptions
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: An object that contains the rendering logic.
     fullName: renderer
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'renderer?: WebGLRenderer'
@@ -31,14 +29,15 @@ inheritedProperties:
       Only features that match the filter are displayed.
     fullName: filter
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'filter?: Expression'
       return:
         description: ''
         type: <xref uid="azure-maps-control.atlas.Expression" />
-    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.filter](xref:LayerOptions.filter)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.filter](xref:azure-maps-control.atlas.LayerOptions.filter)
   - name: maxZoom
     uid: azure-maps-control.atlas.WebGLLayerOptions.maxZoom
     package: azure-maps-control
@@ -51,14 +50,15 @@ inheritedProperties:
       Default `24`.
     fullName: maxZoom
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'maxZoom?: number'
       return:
         description: ''
         type: number
-    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.maxZoom](xref:LayerOptions.maxZoom)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.maxZoom](xref:azure-maps-control.atlas.LayerOptions.maxZoom)
   - name: minZoom
     uid: azure-maps-control.atlas.WebGLLayerOptions.minZoom
     package: azure-maps-control
@@ -71,14 +71,15 @@ inheritedProperties:
       Default `0`.
     fullName: minZoom
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'minZoom?: number'
       return:
         description: ''
         type: number
-    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.minZoom](xref:LayerOptions.minZoom)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.minZoom](xref:azure-maps-control.atlas.LayerOptions.minZoom)
   - name: visible
     uid: azure-maps-control.atlas.WebGLLayerOptions.visible
     package: azure-maps-control
@@ -87,12 +88,13 @@ inheritedProperties:
       Default `true`.
     fullName: visible
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'visible?: boolean'
       return:
         description: ''
         type: boolean
-    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.visible](xref:LayerOptions.visible)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.visible](xref:azure-maps-control.atlas.LayerOptions.visible)
 extends: <xref uid="azure-maps-control.atlas.LayerOptions" />

@@ -5,7 +5,6 @@ package: azure-maps-spatial-io
 summary: Column header definition for a delimited file.
 fullName: CsvHeader
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: The name of each column.
     fullName: names
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'names?: string[]'
@@ -32,7 +30,6 @@ properties:
       If unspecified or null, will default to string.
     fullName: types
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'types: Array<"string" | "number" | "date" | "boolean" | "geography">'

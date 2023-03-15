@@ -5,7 +5,6 @@ package: azure-maps-control
 summary: Renders raster tiled images on top of the map tiles.
 fullName: TileLayer<T>
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +13,6 @@ constructors:
     package: azure-maps-control
     summary: Constructs a new TileLayer.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new TileLayer(options?: TileLayerOptions, id?: string)'
@@ -34,47 +32,49 @@ inheritedProperties:
     summary: A property for associating custom data with the layer.
     fullName: metadata
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'metadata?: any'
       return:
         description: ''
         type: any
-    inheritanceDescription: '<b>Inherited From</b> [Layer.metadata](xref:Layer.metadata)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.metadata](xref:azure-maps-control.atlas.layer.Layer.metadata)
 inheritedMethods:
   - name: getId()
     uid: azure-maps-control.atlas.layer.TileLayer.getId
     package: azure-maps-control
     summary: Gets the id of the layer
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getId(): string'
       return:
         description: ''
         type: string
-    inheritanceDescription: '<b>Inherited From</b> [Layer.getId](xref:Layer.getId)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.getId](xref:azure-maps-control.atlas.layer.Layer.getId)
   - name: getMap()
     uid: azure-maps-control.atlas.layer.TileLayer.getMap
     package: azure-maps-control
     summary: 'Gets the map that the layer is currently added to, or null.'
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getMap(): Map'
       return:
         description: ''
         type: <xref uid="azure-maps-control.atlas.Map" />
-    inheritanceDescription: '<b>Inherited From</b> [Layer.getMap](xref:Layer.getMap)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.getMap](xref:azure-maps-control.atlas.layer.Layer.getMap)
   - name: onAdd(Map)
     uid: azure-maps-control.atlas.layer.TileLayer.onAdd
     package: azure-maps-control
     summary: Initialization method for the layer which is called when added to the map.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function onAdd(map: Map)'
@@ -83,7 +83,9 @@ inheritedMethods:
           type: <xref uid="azure-maps-control.atlas.Map" />
           description: |
             The map the layer has been added to.
-    inheritanceDescription: '<b>Inherited From</b> [Layer.onAdd](xref:Layer.onAdd)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.onAdd](xref:azure-maps-control.atlas.layer.Layer.onAdd)
   - name: onRemove()
     uid: azure-maps-control.atlas.layer.TileLayer.onRemove
     package: azure-maps-control
@@ -91,18 +93,18 @@ inheritedMethods:
       Method that is called when the layer is removed from the map.
       Should perform any necessary cleanup for the layer.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function onRemove()
-    inheritanceDescription: '<b>Inherited From</b> [Layer.onRemove](xref:Layer.onRemove)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.onRemove](xref:azure-maps-control.atlas.layer.Layer.onRemove)
 methods:
   - name: getOptions()
     uid: azure-maps-control.atlas.layer.TileLayer.getOptions
     package: azure-maps-control
     summary: Gets the options of the tile layer.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getOptions(): TileLayerOptions'
@@ -114,7 +116,6 @@ methods:
     package: azure-maps-control
     summary: Sets the options of the tile layer.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setOptions(options: TileLayerOptions)'

@@ -5,7 +5,6 @@ package: azure-maps-rest
 summary: A SearchURL represents a URL to the Azure Maps search operations.
 fullName: SearchURL
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +13,6 @@ constructors:
     package: azure-maps-rest
     summary: Creates an instance of SearchURL.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new SearchURL(pipeline: Pipeline, mapsUrl?: string)'
@@ -40,14 +38,15 @@ inheritedProperties:
     summary: Base URL string value.
     fullName: mapsUrl
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'mapsUrl: string'
       return:
         description: ''
         type: string
-    inheritanceDescription: '<b>Inherited From</b> [MapsURL.mapsUrl](xref:MapsURL.mapsUrl)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MapsURL.mapsUrl](xref:azure-maps-rest.atlas.service.MapsURL.mapsUrl)
 inheritedMethods:
   - name: 'newPipeline(Credential, INewPipelineOptions)'
     uid: azure-maps-rest.atlas.service.SearchURL.newPipeline
@@ -56,7 +55,6 @@ inheritedMethods:
       A static method used to create a new Pipeline object with Credential
       provided.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -74,7 +72,9 @@ inheritedMethods:
       return:
         description: A new Pipeline object.
         type: <xref uid="azure-maps-rest.atlas.service.Pipeline" />
-    inheritanceDescription: '<b>Inherited From</b> [MapsURL.newPipeline](xref:MapsURL.newPipeline)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MapsURL.newPipeline](xref:azure-maps-rest.atlas.service.MapsURL.newPipeline)
 methods:
   - name: 'searchAddress(Aborter, string, SearchAddressOptions)'
     uid: azure-maps-rest.atlas.service.SearchURL.searchAddress
@@ -108,7 +108,6 @@ methods:
       Uses the Get Search Address API:
       https://docs.microsoft.com/rest/api/maps/search/getsearchaddress
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -156,7 +155,6 @@ methods:
       Uses the Get Search Address Reverse API:
       https://docs.microsoft.com/rest/api/maps/search/getsearchaddressreverse
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -212,7 +210,6 @@ methods:
       Uses the Get Search Address Reverse Cross Street API:
       https://docs.microsoft.com/rest/api/maps/search/getsearchaddressreversecrossstreet
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -270,7 +267,6 @@ methods:
       Uses the Get Search Address Structured API:
       https://docs.microsoft.com/rest/api/maps/search/getsearchaddressstructured
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -346,7 +342,6 @@ methods:
       Uses the Post Search Along Route API:
       https://docs.microsoft.com/rest/api/maps/search/postsearchalongroute
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -437,7 +432,6 @@ methods:
       Uses the Get Search Fuzzy API:
       https://docs.microsoft.com/rest/api/maps/search/getsearchfuzzy
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -535,7 +529,6 @@ methods:
       Uses the Post Search Inside Geometry API:
       https://docs.microsoft.com/rest/api/maps/search/postsearchinsidegeometry
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -593,7 +586,6 @@ methods:
       Uses the Get Search Nearby API:
       https://docs.microsoft.com/rest/api/maps/search/getsearchnearby
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -637,7 +629,6 @@ methods:
       Uses the Get Search POI API:
       https://docs.microsoft.com/rest/api/maps/search/getsearchpoi
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -681,7 +672,6 @@ methods:
       Uses the Get Search POI Category API:
       https://docs.microsoft.com/rest/api/maps/search/getsearchpoicategory
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -743,7 +733,6 @@ methods:
       Uses the Get Search Polygon API:
       https://docs.microsoft.com/rest/api/maps/search/getsearchpolygon
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-

@@ -7,7 +7,6 @@ summary: >-
   Service (WMS or WMTS).
 fullName: OgcMapLayer<T>
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -18,7 +17,6 @@ constructors:
       Renders raster images on top of the map tiles from an OGC Web Mapping
       Service (WMS or WMTS).
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new OgcMapLayer(options: OgcMapLayerOptions)'
@@ -34,7 +32,6 @@ properties:
     summary: ''
     fullName: onActiveLayersChanged
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'onActiveLayersChanged: (layer: OgcMapLayer) => void'
@@ -48,7 +45,6 @@ inheritedProperties:
     summary: A property for associating custom data with the layer.
     fullName: metadata
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'metadata?: any'
@@ -62,7 +58,6 @@ inheritedMethods:
     package: azure-maps-spatial-io
     summary: Gets the id of the layer
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getId(): string'
@@ -75,7 +70,6 @@ inheritedMethods:
     package: azure-maps-spatial-io
     summary: 'Gets the map that the layer is currently added to, or null.'
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getMap(): Map'
@@ -90,7 +84,6 @@ inheritedMethods:
       Method that is called when the layer is removed from the map.
       Should perform any necessary cleanup for the layer.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function onRemove()
@@ -101,7 +94,6 @@ methods:
     package: azure-maps-spatial-io
     summary: Gets the capabilities of the underlying WMTS service.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getCapabilities(): Promise<OgcMapLayerCapabilities>'
@@ -119,7 +111,6 @@ methods:
       If the service does not return a geometry, a Point feature for the
       specified position will be returned.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -145,7 +136,6 @@ methods:
 
       Requires the service to support 'text/html' format.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -164,7 +154,6 @@ methods:
     package: azure-maps-spatial-io
     summary: Gets the options of the WMS layer.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getOptions(): OgcMapLayerOptions'
@@ -176,7 +165,6 @@ methods:
     package: azure-maps-spatial-io
     summary: Initialization method for the layer which is called when added to the map.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function onAdd(map: azmaps.Map)'
@@ -190,7 +178,6 @@ methods:
     package: azure-maps-spatial-io
     summary: Sets the options of the WMS layer.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setOptions(options: OgcMapLayerOptions)'

@@ -10,7 +10,6 @@ summary: >-
   reconstruction
 fullName: RouteDirectionsRequestBodySupportingPoints
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 inheritedProperties:
@@ -21,7 +20,6 @@ inheritedProperties:
     summary: Contains a list of valid `GeoJSON` geometry objects.
     fullName: geometries
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'geometries: GeoJSONGeometryUnion[]'
@@ -32,7 +30,7 @@ inheritedProperties:
           />[]
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [GeoJSONGeometryCollection.geometries](xref:GeoJSONGeometryCollection.geometries)
+      [GeoJSONGeometryCollection.geometries](xref:azure-maps-rest.atlas.service.Models.GeoJSONGeometryCollection.geometries)
   - name: type
     uid: >-
       azure-maps-rest.atlas.service.Models.RouteDirectionsRequestBodySupportingPoints.type
@@ -42,7 +40,6 @@ inheritedProperties:
       "GeometryCollection".
     fullName: type
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'type?: string'
@@ -51,5 +48,5 @@ inheritedProperties:
         type: string
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [GeoJSONGeometryCollection.type](xref:GeoJSONGeometryCollection.type)
+      [GeoJSONGeometryCollection.type](xref:azure-maps-rest.atlas.service.Models.GeoJSONGeometryCollection.type)
 extends: <xref uid="azure-maps-rest.atlas.service.Models.GeoJSONGeometryCollection" />

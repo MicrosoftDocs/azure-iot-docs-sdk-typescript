@@ -5,7 +5,6 @@ package: azure-maps-rest
 summary: Optional Parameters.
 fullName: RouteGetRouteRangeOptionalParams
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -35,7 +34,6 @@ properties:
       : 0.66
     fullName: accelerationEfficiency
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'accelerationEfficiency?: number'
@@ -59,7 +57,6 @@ properties:
       Sensible Values : 1.7
     fullName: auxiliaryPowerInkW
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'auxiliaryPowerInkW?: string'
@@ -85,7 +82,6 @@ properties:
       Sensible Values : 0.2
     fullName: auxiliaryPowerInLitersPerHour
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'auxiliaryPowerInLitersPerHour?: number'
@@ -112,7 +108,6 @@ properties:
       'borderCrossings'
     fullName: avoid
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'avoid?: Avoid[]'
@@ -179,7 +174,6 @@ properties:
       This parameter is required for **Electric consumption model**.
     fullName: constantSpeedConsumptionInkWhPerHundredkm
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'constantSpeedConsumptionInkWhPerHundredkm?: string'
@@ -247,7 +241,6 @@ properties:
       Model**.
     fullName: constantSpeedConsumptionInLitersPerHundredkm
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'constantSpeedConsumptionInLitersPerHundredkm?: number'
@@ -267,7 +260,6 @@ properties:
       Sensible Values : 43
     fullName: currentChargeInkWh
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'currentChargeInkWh?: string'
@@ -283,7 +275,6 @@ properties:
       Sensible Values : 55
     fullName: currentFuelInLiters
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'currentFuelInLiters?: number'
@@ -315,7 +306,6 @@ properties:
       : 0.91
     fullName: decelerationEfficiency
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'decelerationEfficiency?: number'
@@ -339,7 +329,6 @@ properties:
       (1996-12-19T16:39:57-08:00).
     fullName: departAt
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'departAt?: Date'
@@ -371,7 +360,6 @@ properties:
       : 0.73
     fullName: downhillEfficiency
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'downhillEfficiency?: number'
@@ -395,7 +383,6 @@ properties:
       energyBudgetInkWh or timeBudgetInSec must be provided.
     fullName: energyBudgetInkWh
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'energyBudgetInkWh?: number'
@@ -419,7 +406,6 @@ properties:
       timeBudgetInSec must be provided.
     fullName: fuelBudgetInLiters
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'fuelBudgetInLiters?: number'
@@ -448,7 +434,6 @@ properties:
       Sensible Values : 34.2
     fullName: fuelEnergyDensityInMJoulesPerLiter
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'fuelEnergyDensityInMJoulesPerLiter?: number'
@@ -466,7 +451,6 @@ properties:
       `routeType`=thrilling. Possible values include: 'low', 'normal', 'high'
     fullName: hilliness
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'hilliness?: Hilliness'
@@ -492,7 +476,6 @@ properties:
       Sensible Values : 85
     fullName: maxChargeInkWh
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'maxChargeInkWh?: string'
@@ -510,7 +493,6 @@ properties:
       'thrilling'
     fullName: routeType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'routeType?: RouteType'
@@ -535,7 +517,6 @@ properties:
       be provided.
     fullName: timeBudgetInSec
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'timeBudgetInSec?: number'
@@ -560,7 +541,6 @@ properties:
       still incorporated.
     fullName: traffic
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'traffic?: boolean'
@@ -593,7 +573,6 @@ properties:
       'bus', 'van', 'motorcycle', 'bicycle', 'pedestrian'
     fullName: travelMode
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'travelMode?: TravelMode'
@@ -626,7 +605,6 @@ properties:
       : 0.74
     fullName: uphillEfficiency
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'uphillEfficiency?: number'
@@ -644,7 +622,6 @@ properties:
       not considered.
     fullName: vehicleAxleWeight
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'vehicleAxleWeight?: number'
@@ -660,7 +637,6 @@ properties:
       drive  on some roads.
     fullName: vehicleCommercial
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'vehicleCommercial?: boolean'
@@ -681,7 +657,6 @@ properties:
       'electric'
     fullName: vehicleEngineType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'vehicleEngineType?: VehicleEngineType'
@@ -699,7 +674,6 @@ properties:
       considered.
     fullName: vehicleHeight
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'vehicleHeight?: number'
@@ -717,7 +691,6 @@ properties:
       considered.
     fullName: vehicleLength
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'vehicleLength?: number'
@@ -753,7 +726,6 @@ properties:
       'otherHazmatExplosive', 'otherHazmatGeneral', 'otherHazmatHarmfulToWater'
     fullName: vehicleLoadType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'vehicleLoadType?: VehicleLoadType'
@@ -774,7 +746,6 @@ properties:
       overridden during route planning.
     fullName: vehicleMaxSpeed
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'vehicleMaxSpeed?: number'
@@ -810,7 +781,6 @@ properties:
       : 1900
     fullName: vehicleWeight
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'vehicleWeight?: number'
@@ -826,7 +796,6 @@ properties:
       are not considered.
     fullName: vehicleWidth
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'vehicleWidth?: number'
@@ -844,7 +813,6 @@ properties:
       routeType=thrilling. Possible values include: 'low', 'normal', 'high'
     fullName: windingness
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'windingness?: Windingness'
@@ -859,7 +827,6 @@ inheritedProperties:
     summary: The signal which can be used to abort requests.
     fullName: abortSignal
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'abortSignal?: AbortSignalLike'
@@ -876,7 +843,6 @@ inheritedProperties:
       will be applied before the request is sent.
     fullName: customHeaders
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'customHeaders?: [key: string]: string'
@@ -891,7 +857,6 @@ inheritedProperties:
     summary: Callback which fires upon download progress.
     fullName: onDownloadProgress
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'onDownloadProgress?: (progress: TransferProgressEvent) => void'
@@ -906,7 +871,6 @@ inheritedProperties:
     summary: Callback which fires upon upload progress.
     fullName: onUploadProgress
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'onUploadProgress?: (progress: TransferProgressEvent) => void'
@@ -923,7 +887,6 @@ inheritedProperties:
       terminated.
     fullName: timeout
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'timeout?: number'

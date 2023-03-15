@@ -5,7 +5,6 @@ package: azure-maps-indoor
 summary: Event object returned by map when the level number changes.
 fullName: ILevelChangeEvent
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: The facility that the map is changing to.
     fullName: facilityId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'facilityId: string'
@@ -28,7 +26,6 @@ properties:
     summary: The level ordinal that the map is changing to.
     fullName: levelNumber
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'levelNumber: number'
@@ -41,7 +38,6 @@ properties:
     summary: The facility that the map is changing out of.
     fullName: prevFacilityId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'prevFacilityId: string'
@@ -54,7 +50,6 @@ properties:
     summary: The level number that the map is changing out of.
     fullName: prevLevelNumber
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'prevLevelNumber: number'
@@ -68,7 +63,6 @@ inheritedProperties:
     summary: The `Map` instance in which the event occurred on.
     fullName: map
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'map: Map'
@@ -82,7 +76,6 @@ inheritedProperties:
     summary: The original event that was fired.
     fullName: originalEvent
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'originalEvent?: Event'
@@ -96,7 +89,6 @@ inheritedProperties:
     summary: The event type.
     fullName: type
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'type: string'

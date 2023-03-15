@@ -5,7 +5,6 @@ package: azure-maps-spatial-io
 summary: Options that are used to customize how to write XML.
 fullName: SpatialXmlWriteOptions
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -17,7 +16,6 @@ properties:
       Default: `"\t"`
     fullName: indentChars
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'indentChars?: string'
@@ -32,7 +30,6 @@ properties:
       Default: `"\r\n"`
     fullName: newLineChars
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'newLineChars?: string'
@@ -51,7 +48,6 @@ properties:
       Default: `true`
     fullName: prettyPrint
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'prettyPrint?: boolean'
@@ -68,7 +64,6 @@ properties:
       Default: `false`
     fullName: roundPositions
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'roundPositions?: boolean'
@@ -83,7 +78,6 @@ properties:
       Default: false
     fullName: writeIds
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'writeIds?: boolean'
@@ -99,7 +93,6 @@ inheritedProperties:
       Default: `"GeoJSON"`
     fullName: format
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'format?: "KML" | "GPX" | "GeoRSS" | "GML" | "GeoJSON" | "CSV"'
@@ -108,5 +101,5 @@ inheritedProperties:
         type: '"KML" | "GPX" | "GeoRSS" | "GML" | "GeoJSON" | "CSV"'
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [SpatialDataWriteOptions.format](xref:SpatialDataWriteOptions.format)
+      [SpatialDataWriteOptions.format](xref:azure-maps-spatial-io.atlas.SpatialDataWriteOptions.format)
 extends: <xref uid="azure-maps-spatial-io.atlas.SpatialDataWriteOptions" />

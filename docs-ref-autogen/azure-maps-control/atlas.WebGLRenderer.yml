@@ -5,7 +5,6 @@ package: azure-maps-control
 summary: Interface for rendering WebGL graphics in a WebGLLayer.
 fullName: WebGLRenderer
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: Either "2d" or "3d". Defaults to "2d".
     fullName: renderingMode
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'renderingMode?: "2d" | "3d"'
@@ -32,7 +30,6 @@ methods:
       This gives the layer a chance to initialize gl resources and register
       event listeners.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function onAdd(map: Map, gl: WebGLRenderingContext)'
@@ -53,7 +50,6 @@ methods:
       This gives the layer a chance to clean up gl resources and event
       listeners.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function onRemove(map: Map, gl: WebGLRenderingContext)'
@@ -79,7 +75,6 @@ methods:
 
       before rendering.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function prerender(gl: WebGLRenderingContext, matrix: number[])'
@@ -133,7 +128,6 @@ methods:
       gl.blendFuncSeparate(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA, gl.ONE,
       gl.ONE_MINUS_SRC_ALPHA).
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function render(gl: WebGLRenderingContext, matrix: number[])'

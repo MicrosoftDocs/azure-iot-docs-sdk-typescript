@@ -5,7 +5,6 @@ package: azure-maps-control
 summary: Event object returned by the maps when a mouse event occurs.
 fullName: MapMouseEvent
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: The id of the layer the event is attached to.
     fullName: layerId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'layerId?: string'
@@ -28,7 +26,6 @@ properties:
     summary: 'The pixel coordinate where the event occurred as an array of [x, y].'
     fullName: pixel
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'pixel?: Pixel'
@@ -41,7 +38,6 @@ properties:
     summary: The geographical location of all touch points on the map.
     fullName: position
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'position?: Position'
@@ -77,7 +73,6 @@ properties:
       the point count. i.e. `"10K"`</p>
     fullName: shapes
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'shapes?: Array<Feature<atlas.data.Geometry, any> | Shape>'
@@ -94,21 +89,21 @@ inheritedProperties:
     summary: The `Map` instance in which the event occurred on.
     fullName: map
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'map: Map'
       return:
         description: ''
         type: <xref uid="azure-maps-control.atlas.Map" />
-    inheritanceDescription: '<b>Inherited From</b> [MapEvent.map](xref:MapEvent.map)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MapEvent.map](xref:azure-maps-control.atlas.MapEvent.map)
   - name: originalEvent
     uid: azure-maps-control.atlas.MapMouseEvent.originalEvent
     package: azure-maps-control
     summary: The original event that was fired.
     fullName: originalEvent
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'originalEvent?: Event'
@@ -117,14 +112,13 @@ inheritedProperties:
         type: Event
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [MapEvent.originalEvent](xref:MapEvent.originalEvent)
+      [MapEvent.originalEvent](xref:azure-maps-control.atlas.MapEvent.originalEvent)
   - name: preventDefault
     uid: azure-maps-control.atlas.MapMouseEvent.preventDefault
     package: azure-maps-control
     summary: Prevents event propagation bubbling up the event chain.
     fullName: preventDefault
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'preventDefault: () => void'
@@ -133,19 +127,20 @@ inheritedProperties:
         type: () =&gt; void
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [MapMouseWheelEvent.preventDefault](xref:MapMouseWheelEvent.preventDefault)
+      [MapMouseWheelEvent.preventDefault](xref:azure-maps-control.atlas.MapMouseWheelEvent.preventDefault)
   - name: type
     uid: azure-maps-control.atlas.MapMouseEvent.type
     package: azure-maps-control
     summary: The event type.
     fullName: type
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'type: string'
       return:
         description: ''
         type: string
-    inheritanceDescription: '<b>Inherited From</b> [MapEvent.type](xref:MapEvent.type)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MapEvent.type](xref:azure-maps-control.atlas.MapEvent.type)
 extends: <xref uid="azure-maps-control.atlas.MapMouseWheelEvent" />

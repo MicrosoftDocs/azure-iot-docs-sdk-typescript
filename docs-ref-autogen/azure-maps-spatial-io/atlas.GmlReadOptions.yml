@@ -5,7 +5,6 @@ package: azure-maps-spatial-io
 summary: Options that customize how GML files are read and parsed.
 fullName: GmlReadOptions
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -23,7 +22,6 @@ properties:
       with a preference for 'latitude, longitude' ordering.
     fullName: isAxisOrderLonLat
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isAxisOrderLonLat?: boolean'
@@ -43,7 +41,6 @@ properties:
       as a string.
     fullName: propertyTypes
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -63,7 +60,6 @@ inheritedProperties:
       If not specified, will read all features.
     fullName: maxFeatures
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'maxFeatures?: number'
@@ -72,7 +68,7 @@ inheritedProperties:
         type: number
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [BaseSpatialDataReadOptions.maxFeatures](xref:BaseSpatialDataReadOptions.maxFeatures)
+      [BaseSpatialDataReadOptions.maxFeatures](xref:azure-maps-spatial-io.atlas.BaseSpatialDataReadOptions.maxFeatures)
   - name: parseStyles
     uid: azure-maps-spatial-io.atlas.GmlReadOptions.parseStyles
     package: azure-maps-spatial-io
@@ -83,7 +79,6 @@ inheritedProperties:
       Default: `true`
     fullName: parseStyles
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'parseStyles?: boolean'
@@ -92,7 +87,7 @@ inheritedProperties:
         type: boolean
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [BaseSpatialXmlReadOptions.parseStyles](xref:BaseSpatialXmlReadOptions.parseStyles)
+      [BaseSpatialXmlReadOptions.parseStyles](xref:azure-maps-spatial-io.atlas.BaseSpatialXmlReadOptions.parseStyles)
   - name: proxyService
     uid: azure-maps-spatial-io.atlas.GmlReadOptions.proxyService
     package: azure-maps-spatial-io
@@ -104,7 +99,6 @@ inheritedProperties:
       endpoints.
     fullName: proxyService
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'proxyService?: string'
@@ -113,5 +107,5 @@ inheritedProperties:
         type: string
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [BaseSpatialDataReadOptions.proxyService](xref:BaseSpatialDataReadOptions.proxyService)
+      [BaseSpatialDataReadOptions.proxyService](xref:azure-maps-spatial-io.atlas.BaseSpatialDataReadOptions.proxyService)
 extends: <xref uid="azure-maps-spatial-io.atlas.BaseSpatialXmlReadOptions" />

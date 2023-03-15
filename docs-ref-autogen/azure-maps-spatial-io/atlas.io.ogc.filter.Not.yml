@@ -1,0 +1,43 @@
+### YamlMime:TSType
+name: Not
+uid: azure-maps-spatial-io.atlas.io.ogc.filter.Not
+package: azure-maps-spatial-io
+summary: Represents an NOT logic operator filter.
+fullName: Not
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: Not(Filter)
+    uid: azure-maps-spatial-io.atlas.io.ogc.filter.Not.constructor
+    package: azure-maps-spatial-io
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new Not(filter: Filter)'
+      parameters:
+        - id: filter
+          type: <xref uid="azure-maps-spatial-io.atlas.io.ogc.filter.Filter" />
+          description: ''
+inheritedMethods:
+  - name: toXml(string)
+    uid: azure-maps-spatial-io.atlas.io.ogc.filter.Not.toXml
+    package: azure-maps-spatial-io
+    summary: Generates an XML version of the filter.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function toXml(version?: string): string'
+      parameters:
+        - id: version
+          type: string
+          description: |
+            The WFS service version.
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Filter.toXml](xref:azure-maps-spatial-io.atlas.io.ogc.filter.Filter.toXml)
+extends: <xref uid="azure-maps-spatial-io.atlas.io.ogc.filter.Filter" />

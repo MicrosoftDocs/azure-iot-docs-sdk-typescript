@@ -1,0 +1,111 @@
+### YamlMime:TSType
+name: GmlReadOptions
+uid: azure-maps-spatial-io.atlas.GmlReadOptions
+package: azure-maps-spatial-io
+summary: Options that customize how GML files are read and parsed.
+fullName: GmlReadOptions
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: isAxisOrderLonLat
+    uid: azure-maps-spatial-io.atlas.GmlReadOptions.isAxisOrderLonLat
+    package: azure-maps-spatial-io
+    summary: >-
+      If the reading a GML file, this specifies if the coordinate information is
+      ordered 'longitude, latitude'.
+
+      If set to false, coordinates will be parsed as "latitude, longitude".
+
+      If unspecified, will try and determine based on hints within the GML,
+
+      with a preference for 'latitude, longitude' ordering.
+    fullName: isAxisOrderLonLat
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'isAxisOrderLonLat?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: propertyTypes
+    uid: azure-maps-spatial-io.atlas.GmlReadOptions.propertyTypes
+    package: azure-maps-spatial-io
+    summary: >-
+      If the reading a GML file, this contains a key-value pair list of property
+      names to types
+
+      which is used for deserializing custom properties.
+
+      If a property name is not in the list, the property value will be parsed
+      as a string.
+    fullName: propertyTypes
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        propertyTypes?: Record<string, string | "string" | "number" | "boolean"
+        | "date">
+      return:
+        description: ''
+        type: >-
+          Record&lt;string, string | "string" | "number" | "boolean" |
+          "date"&gt;
+inheritedProperties:
+  - name: maxFeatures
+    uid: azure-maps-spatial-io.atlas.GmlReadOptions.maxFeatures
+    package: azure-maps-spatial-io
+    summary: |-
+      Specifies the maximum number of features to read from the data set.
+      If not specified, will read all features.
+    fullName: maxFeatures
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'maxFeatures?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseSpatialDataReadOptions.maxFeatures](xref:azure-maps-spatial-io.atlas.BaseSpatialDataReadOptions.maxFeatures)
+  - name: parseStyles
+    uid: azure-maps-spatial-io.atlas.GmlReadOptions.parseStyles
+    package: azure-maps-spatial-io
+    summary: >-
+      Specifies if style information should be parsed from the XML file and
+      included as properties of the features.
+
+      Default: `true`
+    fullName: parseStyles
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'parseStyles?: boolean'
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseSpatialXmlReadOptions.parseStyles](xref:azure-maps-spatial-io.atlas.BaseSpatialXmlReadOptions.parseStyles)
+  - name: proxyService
+    uid: azure-maps-spatial-io.atlas.GmlReadOptions.proxyService
+    package: azure-maps-spatial-io
+    summary: >-
+      A URL to a proxy service that can have a URL to an external file appended
+      it.
+
+      This will be needed to access files that are hosted on non-CORs enabled
+      endpoints.
+    fullName: proxyService
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'proxyService?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseSpatialDataReadOptions.proxyService](xref:azure-maps-spatial-io.atlas.BaseSpatialDataReadOptions.proxyService)
+extends: <xref uid="azure-maps-spatial-io.atlas.BaseSpatialXmlReadOptions" />

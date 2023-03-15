@@ -1,0 +1,36 @@
+### YamlMime:TSType
+name: MultiLineString
+uid: azure-maps-rest.atlas.service.Models.MultiLineString
+package: azure-maps-rest
+summary: |-
+  A valid `GeoJSON MultiLineString` geometry type. Please refer to [RFC
+  7946](https://tools.ietf.org/html/rfc7946#section-3.1.5) for details.
+fullName: MultiLineString
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: coordinates
+    uid: azure-maps-rest.atlas.service.Models.MultiLineString.coordinates
+    package: azure-maps-rest
+    summary: Coordinates for the `MultiLineString` geometry.
+    fullName: coordinates
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'coordinates: number[][][]'
+      return:
+        description: ''
+        type: 'number[][][]'
+  - name: type
+    uid: azure-maps-rest.atlas.service.Models.MultiLineString.type
+    package: azure-maps-rest
+    summary: Polymorphic Discriminator
+    fullName: type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'type: "MultiLineString"'
+      return:
+        description: ''
+        type: '"MultiLineString"'

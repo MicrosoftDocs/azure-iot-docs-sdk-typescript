@@ -1,0 +1,196 @@
+### YamlMime:TSType
+name: SearchFuzzyResult
+uid: azure-maps-rest.atlas.service.Models.SearchFuzzyResult
+package: azure-maps-rest
+summary: An interface representing SearchFuzzyResult.
+fullName: SearchFuzzyResult
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: address
+    uid: azure-maps-rest.atlas.service.Models.SearchFuzzyResult.address
+    package: azure-maps-rest
+    summary: ''
+    fullName: address
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'address?: SearchResultAddress'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.atlas.service.Models.SearchResultAddress"
+          />
+  - name: addressRanges
+    uid: azure-maps-rest.atlas.service.Models.SearchFuzzyResult.addressRanges
+    package: azure-maps-rest
+    summary: ''
+    fullName: addressRanges
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'addressRanges?: SearchResultAddressRanges'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-maps-rest.atlas.service.Models.SearchResultAddressRanges"
+          />
+  - name: dataSources
+    uid: azure-maps-rest.atlas.service.Models.SearchFuzzyResult.dataSources
+    package: azure-maps-rest
+    summary: ''
+    fullName: dataSources
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'dataSources?: DataSources'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.DataSources" />
+  - name: entityType
+    uid: azure-maps-rest.atlas.service.Models.SearchFuzzyResult.entityType
+    package: azure-maps-rest
+    summary: >-
+      Possible values include: 'Country', 'CountrySubdivision',
+      'CountrySecondarySubdivision',
+
+      'CountryTertiarySubdivision', 'Municipality', 'MunicipalitySubdivision',
+      'Neighbourhood',
+
+      'PostalCodeArea'
+    fullName: entityType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'entityType?: EntityType'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.EntityType" />
+  - name: entryPoints
+    uid: azure-maps-rest.atlas.service.Models.SearchFuzzyResult.entryPoints
+    package: azure-maps-rest
+    summary: Entry Points array
+    fullName: entryPoints
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'entryPoints?: SearchResultEntryPoint[]'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-maps-rest.atlas.service.Models.SearchResultEntryPoint" />[]
+  - name: id
+    uid: azure-maps-rest.atlas.service.Models.SearchFuzzyResult.id
+    package: azure-maps-rest
+    summary: >-
+      Id property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id?: string'
+      return:
+        description: ''
+        type: string
+  - name: info
+    uid: azure-maps-rest.atlas.service.Models.SearchFuzzyResult.info
+    package: azure-maps-rest
+    summary: >-
+      Info property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: info
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'info?: string'
+      return:
+        description: ''
+        type: string
+  - name: poi
+    uid: azure-maps-rest.atlas.service.Models.SearchFuzzyResult.poi
+    package: azure-maps-rest
+    summary: ''
+    fullName: poi
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'poi?: SearchResultPoi'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.SearchResultPoi" />
+  - name: position
+    uid: azure-maps-rest.atlas.service.Models.SearchFuzzyResult.position
+    package: azure-maps-rest
+    summary: ''
+    fullName: position
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'position?: CoordinateAbbreviated'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.atlas.service.Models.CoordinateAbbreviated"
+          />
+  - name: score
+    uid: azure-maps-rest.atlas.service.Models.SearchFuzzyResult.score
+    package: azure-maps-rest
+    summary: ''
+    fullName: score
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'score?: number'
+      return:
+        description: ''
+        type: number
+  - name: type
+    uid: azure-maps-rest.atlas.service.Models.SearchFuzzyResult.type
+    package: azure-maps-rest
+    summary: >-
+      One of:
+
+      * POI
+
+      * Street
+
+      * Geography
+
+      * Point Address
+
+      * Address Range
+
+      * Cross Street
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'type?: string'
+      return:
+        description: ''
+        type: string
+  - name: viewport
+    uid: azure-maps-rest.atlas.service.Models.SearchFuzzyResult.viewport
+    package: azure-maps-rest
+    summary: ''
+    fullName: viewport
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'viewport?: SearchResultViewport'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.atlas.service.Models.SearchResultViewport"
+          />

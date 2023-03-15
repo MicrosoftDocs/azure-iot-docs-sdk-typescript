@@ -1,0 +1,170 @@
+### YamlMime:TSType
+name: RenderGetMapTileOptionalParams
+uid: azure-maps-rest.atlas.service.Models.RenderGetMapTileOptionalParams
+package: azure-maps-rest
+summary: Optional Parameters.
+fullName: RenderGetMapTileOptionalParams
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: language
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RenderGetMapTileOptionalParams.language
+    package: azure-maps-rest
+    summary: >
+      Language in which search results should be returned. Should be one of
+      supported IETF language
+
+      tags, case insensitive. When data in specified language is not available
+      for a specific field,
+
+      default language is used.
+
+      Please refer to [Supported
+
+      Languages](https://docs.microsoft.com/en-us/azure/azure-maps/supported-languages)
+      for details.
+    fullName: language
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'language?: string'
+      return:
+        description: ''
+        type: string
+  - name: tileSize
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RenderGetMapTileOptionalParams.tileSize
+    package: azure-maps-rest
+    summary: The size of the returned map tile in pixels.
+    fullName: tileSize
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'tileSize?: number'
+      return:
+        description: ''
+        type: number
+  - name: view
+    uid: azure-maps-rest.atlas.service.Models.RenderGetMapTileOptionalParams.view
+    package: azure-maps-rest
+    summary: >
+      The View parameter specifies which set of geopolitically disputed content
+      is returned via
+
+      Azure Maps services, including  borders and labels displayed on the map.
+      The View parameter
+
+      (also referred to as “user region parameter”) will show the  correct maps
+      for that
+
+      country/region. By default, the View parameter is set to “Unified” even if
+      you haven’t defined
+
+      it in  the request. It is your responsibility to determine the location of
+      your users, and
+
+      then set the View parameter correctly  for that location. Alternatively,
+      you have the option
+
+      to set ‘View=Auto’, which will return the map data based on the IP 
+      address of the request.
+
+      The View parameter in Azure Maps must be used in compliance with
+      applicable laws, including
+
+      those  regarding mapping, of the country where maps, images and other data
+      and third party
+
+      content that you are authorized to  access via Azure Maps is made
+      available. Example: view=IN.
+
+      Please refer to [Supported
+      Views](https://aka.ms/AzureMapsLocalizationViews) for details and
+
+      to see the available Views.
+    fullName: view
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'view?: string'
+      return:
+        description: ''
+        type: string
+inheritedProperties:
+  - name: abortSignal
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RenderGetMapTileOptionalParams.abortSignal
+    package: azure-maps-rest
+    summary: The signal which can be used to abort requests.
+    fullName: abortSignal
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'abortSignal?: AbortSignalLike'
+      return:
+        description: ''
+        type: AbortSignalLike
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.abortSignal
+  - name: customHeaders
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RenderGetMapTileOptionalParams.customHeaders
+    package: azure-maps-rest
+    summary: |-
+      {object} [customHeaders] User defined custom request headers that
+      will be applied before the request is sent.
+    fullName: customHeaders
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'customHeaders?: [key: string]: string'
+      return:
+        description: ''
+        type: '[key: string]\: string'
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.customHeaders
+  - name: onDownloadProgress
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RenderGetMapTileOptionalParams.onDownloadProgress
+    package: azure-maps-rest
+    summary: Callback which fires upon download progress.
+    fullName: onDownloadProgress
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'onDownloadProgress?: (progress: TransferProgressEvent) => void'
+      return:
+        description: ''
+        type: '(progress: TransferProgressEvent) =&gt; void'
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.onDownloadProgress
+  - name: onUploadProgress
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RenderGetMapTileOptionalParams.onUploadProgress
+    package: azure-maps-rest
+    summary: Callback which fires upon upload progress.
+    fullName: onUploadProgress
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'onUploadProgress?: (progress: TransferProgressEvent) => void'
+      return:
+        description: ''
+        type: '(progress: TransferProgressEvent) =&gt; void'
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.onUploadProgress
+  - name: timeout
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RenderGetMapTileOptionalParams.timeout
+    package: azure-maps-rest
+    summary: >-
+      The number of milliseconds a request can take before automatically being
+      terminated.
+    fullName: timeout
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'timeout?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.timeout
+extends: RequestOptionsBase

@@ -1,0 +1,34 @@
+### YamlMime:TSType
+name: Step
+uid: azure-maps-rest.atlas.service.Models.Step
+package: azure-maps-rest
+summary: An interface representing Step.
+fullName: Step
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: direction
+    uid: azure-maps-rest.atlas.service.Models.Step.direction
+    package: azure-maps-rest
+    summary: The walking direction associated with this step.
+    fullName: direction
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'direction?: Direction'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.Direction" />
+  - name: streetName
+    uid: azure-maps-rest.atlas.service.Models.Step.streetName
+    package: azure-maps-rest
+    summary: The name of the street in which this step takes place.
+    fullName: streetName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'streetName?: string'
+      return:
+        description: ''
+        type: string

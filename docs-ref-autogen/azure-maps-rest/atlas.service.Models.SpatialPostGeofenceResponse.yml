@@ -1,0 +1,17 @@
+### YamlMime:TSTypeAlias
+name: SpatialPostGeofenceResponse
+uid: azure-maps-rest.atlas.service.Models.SpatialPostGeofenceResponse
+package: azure-maps-rest
+summary: Contains response data for the postGeofence operation.
+fullName: SpatialPostGeofenceResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SpatialPostGeofenceResponse = GeofenceResponse &
+    SpatialPostGeofenceHeaders & {
+      _response: HttpResponse & {
+        bodyAsText: string,
+        parsedBody: GeofenceResponse,
+        parsedHeaders: SpatialPostGeofenceHeaders,
+      },
+    }

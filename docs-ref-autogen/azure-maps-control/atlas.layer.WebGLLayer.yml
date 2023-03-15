@@ -1,0 +1,128 @@
+### YamlMime:TSType
+name: WebGLLayer
+uid: azure-maps-control.atlas.layer.WebGLLayer
+package: azure-maps-control
+summary: Enables custom rendering logic with access to the WebGL context of the map.
+fullName: WebGLLayer<T>
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: 'WebGLLayer(string, WebGLLayerOptions)'
+    uid: azure-maps-control.atlas.layer.WebGLLayer.constructor
+    package: azure-maps-control
+    summary: Constructs a new WebGLLayer.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new WebGLLayer(id?: string, options?: WebGLLayerOptions)'
+      parameters:
+        - id: id
+          type: string
+          description: >-
+            The id of the layer. If not specified a random one will be
+            generated.
+        - id: options
+          type: <xref uid="azure-maps-control.atlas.WebGLLayerOptions" />
+          description: |
+            The options of the WebGL layer.
+inheritedProperties:
+  - name: metadata
+    uid: azure-maps-control.atlas.layer.WebGLLayer.metadata
+    package: azure-maps-control
+    summary: A property for associating custom data with the layer.
+    fullName: metadata
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'metadata?: any'
+      return:
+        description: ''
+        type: any
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.metadata](xref:azure-maps-control.atlas.layer.Layer.metadata)
+inheritedMethods:
+  - name: getId()
+    uid: azure-maps-control.atlas.layer.WebGLLayer.getId
+    package: azure-maps-control
+    summary: Gets the id of the layer
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getId(): string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.getId](xref:azure-maps-control.atlas.layer.Layer.getId)
+  - name: getMap()
+    uid: azure-maps-control.atlas.layer.WebGLLayer.getMap
+    package: azure-maps-control
+    summary: 'Gets the map that the layer is currently added to, or null.'
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getMap(): Map'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.atlas.Map" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.getMap](xref:azure-maps-control.atlas.layer.Layer.getMap)
+  - name: onAdd(Map)
+    uid: azure-maps-control.atlas.layer.WebGLLayer.onAdd
+    package: azure-maps-control
+    summary: Initialization method for the layer which is called when added to the map.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function onAdd(map: Map)'
+      parameters:
+        - id: map
+          type: <xref uid="azure-maps-control.atlas.Map" />
+          description: |
+            The map the layer has been added to.
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.onAdd](xref:azure-maps-control.atlas.layer.Layer.onAdd)
+  - name: onRemove()
+    uid: azure-maps-control.atlas.layer.WebGLLayer.onRemove
+    package: azure-maps-control
+    summary: |-
+      Method that is called when the layer is removed from the map.
+      Should perform any necessary cleanup for the layer.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function onRemove()
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.onRemove](xref:azure-maps-control.atlas.layer.Layer.onRemove)
+methods:
+  - name: getOptions()
+    uid: azure-maps-control.atlas.layer.WebGLLayer.getOptions
+    package: azure-maps-control
+    summary: Gets the options of the WebGL layer.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getOptions(): WebGLLayerOptions'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.atlas.WebGLLayerOptions" />
+  - name: setOptions(WebGLLayerOptions)
+    uid: azure-maps-control.atlas.layer.WebGLLayer.setOptions
+    package: azure-maps-control
+    summary: Sets the options of the WebGL layer.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function setOptions(options: WebGLLayerOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-maps-control.atlas.WebGLLayerOptions" />
+          description: |
+            The new options of the WebGL layer.
+extends: <xref uid="azure-maps-control.atlas.layer.Layer" />

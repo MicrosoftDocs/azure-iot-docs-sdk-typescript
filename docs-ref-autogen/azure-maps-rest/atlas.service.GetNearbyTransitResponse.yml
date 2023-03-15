@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: GetNearbyTransitResponse
+uid: azure-maps-rest.atlas.service.GetNearbyTransitResponse
+package: azure-maps-rest
+summary: ''
+fullName: GetNearbyTransitResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type GetNearbyTransitResponse = Response<
+    NearbyTransitResponse,
+    Models.MobilityGetNearbyTransitPreviewResponse,
+    NearbyTransitGeojson
+  >

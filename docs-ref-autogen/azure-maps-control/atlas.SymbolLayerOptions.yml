@@ -1,0 +1,241 @@
+### YamlMime:TSType
+name: SymbolLayerOptions
+uid: azure-maps-control.atlas.SymbolLayerOptions
+package: azure-maps-control
+summary: Options used when rendering geometries in a SymbolLayer.
+fullName: SymbolLayerOptions
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: iconOptions
+    uid: azure-maps-control.atlas.SymbolLayerOptions.iconOptions
+    package: azure-maps-control
+    summary: |-
+      Options used to customize the icons of the symbols.
+
+      See IconOptions for defaults.
+    fullName: iconOptions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'iconOptions?: IconOptions'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.atlas.IconOptions" />
+  - name: lineSpacing
+    uid: azure-maps-control.atlas.SymbolLayerOptions.lineSpacing
+    package: azure-maps-control
+    summary: >-
+      Distance in pixels between two symbol anchors along a line. Must be
+      greater or equal to 1.
+
+      Default `250`.
+    fullName: lineSpacing
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'lineSpacing?: number | Expression'
+      return:
+        description: ''
+        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+  - name: placement
+    uid: azure-maps-control.atlas.SymbolLayerOptions.placement
+    package: azure-maps-control
+    summary: >-
+      Specifies the label placement relative to its geometry.
+
+      <p>`"point"`: The label is placed at the point where the geometry is
+      located.</p>
+
+      <p>`"line"`: The label is placed along the line of the geometry.
+
+      Can only be used on LineString and Polygon geometries.</p>
+
+      <p> `"line-center"`: The label is placed at the center of the line of the
+      geometry.
+
+      Can only be used on `LineString` and `Polygon` geometries </p>
+
+      Default `"point"`.
+    fullName: placement
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'placement?: "point" | "line" | "line-center"'
+      return:
+        description: ''
+        type: '"point" | "line" | "line-center"'
+  - name: sortKey
+    uid: azure-maps-control.atlas.SymbolLayerOptions.sortKey
+    package: azure-maps-control
+    summary: |-
+      Sorts features in ascending order based on this value. Features with
+      lower sort keys are drawn and placed first.
+      Default `undefined`.
+    fullName: sortKey
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'sortKey?: number | Expression'
+      return:
+        description: ''
+        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+  - name: source
+    uid: azure-maps-control.atlas.SymbolLayerOptions.source
+    package: azure-maps-control
+    summary: The id or instance of a data source which the layer will render.
+    fullName: source
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'source?: string | Source'
+      return:
+        description: ''
+        type: string | <xref uid="azure-maps-control.atlas.source.Source" />
+  - name: sourceLayer
+    uid: azure-maps-control.atlas.SymbolLayerOptions.sourceLayer
+    package: azure-maps-control
+    summary: >-
+      Required when the source of the layer is a VectorTileSource.
+
+      A vector source can have multiple layers within it, this identifies which
+      one to render in this layer.
+
+      Prohibited for all other types of sources.
+    fullName: sourceLayer
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'sourceLayer?: string'
+      return:
+        description: ''
+        type: string
+  - name: textOptions
+    uid: azure-maps-control.atlas.SymbolLayerOptions.textOptions
+    package: azure-maps-control
+    summary: |-
+      Options used to customize the text of the symbols.
+
+      See TextOptions for defaults.
+    fullName: textOptions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'textOptions?: TextOptions'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.atlas.TextOptions" />
+  - name: zOrder
+    uid: azure-maps-control.atlas.SymbolLayerOptions.zOrder
+    package: azure-maps-control
+    summary: >-
+      Determines whether overlapping symbols in the same layer are rendered in
+      the order
+
+      that they appear in the data source, or by their y position relative to
+      the viewport.
+
+      To control the order and prioritization of symbols otherwise, use
+      `sortKey`.
+
+      <p>`"auto"`: Sorts symbols by `sortKey` if set. Otherwise behaves like
+      `"viewport-y"`.
+
+      <p>`"viewport-y"`: Sorts symbols by their y position if `allowOverlap` is
+      `true` or
+
+      if `ignorePlacement` is `false`.
+
+      <p>`"source"`: Sorts symbols by `sortKey` if set. Otherwise, symbols are
+      rendered in the
+
+      same order as the source data.
+
+      Default `"auto"`
+    fullName: zOrder
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'zOrder?: "auto" | "viewport-y" | "source"'
+      return:
+        description: ''
+        type: '"auto" | "viewport-y" | "source"'
+inheritedProperties:
+  - name: filter
+    uid: azure-maps-control.atlas.SymbolLayerOptions.filter
+    package: azure-maps-control
+    summary: |-
+      An expression specifying conditions on source features.
+      Only features that match the filter are displayed.
+    fullName: filter
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'filter?: Expression'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.atlas.Expression" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.filter](xref:azure-maps-control.atlas.LayerOptions.filter)
+  - name: maxZoom
+    uid: azure-maps-control.atlas.SymbolLayerOptions.maxZoom
+    package: azure-maps-control
+    summary: >-
+      An integer specifying the maximum zoom level to render the layer at.
+
+      This value is exclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `24`.
+    fullName: maxZoom
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'maxZoom?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.maxZoom](xref:azure-maps-control.atlas.LayerOptions.maxZoom)
+  - name: minZoom
+    uid: azure-maps-control.atlas.SymbolLayerOptions.minZoom
+    package: azure-maps-control
+    summary: >-
+      An integer specifying the minimum zoom level to render the layer at.
+
+      This value is inclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `0`.
+    fullName: minZoom
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'minZoom?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.minZoom](xref:azure-maps-control.atlas.LayerOptions.minZoom)
+  - name: visible
+    uid: azure-maps-control.atlas.SymbolLayerOptions.visible
+    package: azure-maps-control
+    summary: |-
+      Specifies if the layer is visible or not.
+      Default `true`.
+    fullName: visible
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'visible?: boolean'
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.visible](xref:azure-maps-control.atlas.LayerOptions.visible)
+extends: <xref uid="azure-maps-control.atlas.LayerOptions" />

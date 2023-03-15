@@ -1,0 +1,42 @@
+### YamlMime:TSType
+name: SearchAddressResponse
+uid: azure-maps-rest.atlas.service.Models.SearchAddressResponse
+package: azure-maps-rest
+summary: This object is returned from a successful Search Address call
+fullName: SearchAddressResponse
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: results
+    uid: azure-maps-rest.atlas.service.Models.SearchAddressResponse.results
+    package: azure-maps-rest
+    summary: >-
+      Results array
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: results
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'results?: SearchAddressResult[]'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.atlas.service.Models.SearchAddressResult"
+          />[]
+  - name: summary
+    uid: azure-maps-rest.atlas.service.Models.SearchAddressResponse.summary
+    package: azure-maps-rest
+    summary: ''
+    fullName: summary
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'summary?: SearchAddressSummary'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.atlas.service.Models.SearchAddressSummary"
+          />

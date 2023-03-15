@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: SearchGetSearchFuzzyResponse
+uid: azure-maps-rest.atlas.service.Models.SearchGetSearchFuzzyResponse
+package: azure-maps-rest
+summary: Contains response data for the getSearchFuzzy operation.
+fullName: SearchGetSearchFuzzyResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SearchGetSearchFuzzyResponse = SearchFuzzyResponse & {
+    _response: HttpResponse & {
+      bodyAsText: string,
+      parsedBody: SearchFuzzyResponse,
+    },
+  }

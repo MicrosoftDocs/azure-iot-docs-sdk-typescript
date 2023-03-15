@@ -1,0 +1,34 @@
+### YamlMime:TSType
+name: RouteMatrixRequestBody
+uid: azure-maps-rest.atlas.service.Models.RouteMatrixRequestBody
+package: azure-maps-rest
+summary: An object with a matrix of coordinates.
+fullName: RouteMatrixRequestBody
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: destinations
+    uid: azure-maps-rest.atlas.service.Models.RouteMatrixRequestBody.destinations
+    package: azure-maps-rest
+    summary: ''
+    fullName: destinations
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'destinations?: MultiPoint'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.MultiPoint" />
+  - name: origins
+    uid: azure-maps-rest.atlas.service.Models.RouteMatrixRequestBody.origins
+    package: azure-maps-rest
+    summary: ''
+    fullName: origins
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'origins?: MultiPoint'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.MultiPoint" />

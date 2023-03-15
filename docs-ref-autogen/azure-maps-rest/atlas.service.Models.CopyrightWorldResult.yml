@@ -1,0 +1,59 @@
+### YamlMime:TSType
+name: CopyrightWorldResult
+uid: azure-maps-rest.atlas.service.Models.CopyrightWorldResult
+package: azure-maps-rest
+summary: This object is returned from a successful Copyright World call
+fullName: CopyrightWorldResult
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: formatVersion
+    uid: azure-maps-rest.atlas.service.Models.CopyrightWorldResult.formatVersion
+    package: azure-maps-rest
+    summary: >-
+      Format Version property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: formatVersion
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'formatVersion?: string'
+      return:
+        description: ''
+        type: string
+  - name: generalCopyrights
+    uid: >-
+      azure-maps-rest.atlas.service.Models.CopyrightWorldResult.generalCopyrights
+    package: azure-maps-rest
+    summary: >-
+      General Copyrights array
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: generalCopyrights
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'generalCopyrights?: string[]'
+      return:
+        description: ''
+        type: 'string[]'
+  - name: regions
+    uid: azure-maps-rest.atlas.service.Models.CopyrightWorldResult.regions
+    package: azure-maps-rest
+    summary: >-
+      Regions array
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: regions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'regions?: Region[]'
+      return:
+        description: ''
+        type: '<xref uid="azure-maps-rest.atlas.service.Models.Region" />[]'

@@ -1,0 +1,83 @@
+### YamlMime:TSType
+name: MultiLineString
+uid: azure-maps-control.atlas.data.MultiLineString
+package: azure-maps-control
+summary: >-
+  A GeoJSON MultiLineString object - a JSON object that represents multiple
+  geographic curves. The full description
+
+  is detailed in [RFC 7946](https://tools.ietf.org/html/rfc7946#section-3.1.5).
+fullName: MultiLineString
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: 'MultiLineString(Position[][], BoundingBox)'
+    uid: azure-maps-control.atlas.data.MultiLineString.constructor
+    package: azure-maps-control
+    summary: Constructs a MultiLineString.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new MultiLineString(coordinates: Position[][], bbox?: BoundingBox)'
+      parameters:
+        - id: coordinates
+          type: '<xref uid="azure-maps-control.atlas.data.Position" />[][]'
+          description: >-
+            The array of LineString coordinate arrays defining the
+            multilinestring.
+        - id: bbox
+          type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+          description: |
+            The bounding box of the multilinestring.
+properties:
+  - name: bbox
+    uid: azure-maps-control.atlas.data.MultiLineString.bbox
+    package: azure-maps-control
+    summary: The bounding box of the multilinestring.
+    fullName: bbox
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'public bbox?: BoundingBox'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+  - name: coordinates
+    uid: azure-maps-control.atlas.data.MultiLineString.coordinates
+    package: azure-maps-control
+    summary: The array of LineString coordinate arrays defining the multilinestring.
+    fullName: coordinates
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'public coordinates: Position[][]'
+      return:
+        description: ''
+        type: '<xref uid="azure-maps-control.atlas.data.Position" />[][]'
+  - name: type
+    uid: azure-maps-control.atlas.data.MultiLineString.type
+    package: azure-maps-control
+    summary: A GeoJSON type descriptor with value "MutliLineString".
+    fullName: type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'public type: string'
+      return:
+        description: ''
+        type: string
+  - name: TYPE
+    uid: azure-maps-control.atlas.data.MultiLineString.TYPE
+    package: azure-maps-control
+    summary: >-
+      A static GeoJSON type descriptor for the MultiLineString class to be used
+      in runtime comparisons.
+    fullName: TYPE
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'public static TYPE: string'
+      return:
+        description: ''
+        type: string

@@ -1,0 +1,69 @@
+### YamlMime:TSType
+name: LineArrival
+uid: azure-maps-rest.atlas.service.Models.LineArrival
+package: azure-maps-rest
+summary: An interface representing LineArrival.
+fullName: LineArrival
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: lineId
+    uid: azure-maps-rest.atlas.service.Models.LineArrival.lineId
+    package: azure-maps-rest
+    summary: Line Id.
+    fullName: lineId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'lineId?: string'
+      return:
+        description: ''
+        type: string
+  - name: scheduleTime
+    uid: azure-maps-rest.atlas.service.Models.LineArrival.scheduleTime
+    package: azure-maps-rest
+    summary: |-
+      The date and time of departure from the stop in ISO 8601 format, e.g.
+      1996-12-19T19:39:57-08:00.
+    fullName: scheduleTime
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'scheduleTime?: Date'
+      return:
+        description: ''
+        type: Date
+  - name: scheduleType
+    uid: azure-maps-rest.atlas.service.Models.LineArrival.scheduleType
+    package: azure-maps-rest
+    summary: >-
+      Whether the result is based on real-time or static data. Possible values
+      include:
+
+      'scheduledTime', 'realTime'
+    fullName: scheduleType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'scheduleType?: ScheduleType'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.ScheduleType" />
+  - name: stopId
+    uid: azure-maps-rest.atlas.service.Models.LineArrival.stopId
+    package: azure-maps-rest
+    summary: >-
+      The unique Azure Maps identifier for the respective public transit stop.
+      When referring stops
+
+      overtime, it is suggested to use stopId that will not change if the
+      physical stop exists.
+    fullName: stopId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'stopId?: string'
+      return:
+        description: ''
+        type: string

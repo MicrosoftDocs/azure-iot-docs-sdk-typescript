@@ -1,0 +1,151 @@
+### YamlMime:TSPackage
+uid: azure-maps-spatial-io.atlas.io
+name: io
+type: module
+package: azure-maps-spatial-io
+summary: ''
+functions:
+  - name: 'read(string | ArrayBuffer | Blob, SpatialDataReadOptions)'
+    uid: azure-maps-spatial-io.atlas.io.read
+    package: azure-maps-spatial-io
+    summary: >-
+      Takes a spatial data string or a URL to a file or zipped file and parses
+      the spatial data into GeoJSON objects.
+
+      Supported spatial data formats: KML, KMZ, GPX, GeoRSS, GML, spatial
+      delimited files (CSV), GeoJSON.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function read(spatialData: string | ArrayBuffer | Blob, options?:
+        SpatialDataReadOptions): Promise<SpatialDataSet>
+      parameters:
+        - id: spatialData
+          type: string | ArrayBuffer | Blob
+          description: The spatial data string or URL to a file to read.
+        - id: options
+          type: <xref uid="azure-maps-spatial-io.atlas.SpatialDataReadOptions" />
+          description: |
+            The read options.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-maps-spatial-io.atlas.SpatialDataSet"
+          />&gt;
+  - name: >-
+      write(azmaps.source.DataSource | azmaps.data.FeatureCollection |
+      azmaps.layer.ImageLayer | OgcMapLayer |
+      azmaps.data.Feature<azmaps.data.Geometry, any> | SpatialDataSet |
+      Array<azmaps.source.DataSource | azmaps.data.FeatureCollection |
+      azmaps.layer.ImageLayer | OgcMapLayer |
+      azmaps.data.Feature<azmaps.data.Geometry, any> | SpatialDataSet>,
+      SpatialXmlWriteOptions & GmlWriteOptions & SpatialCsvWriteOptions)
+    uid: azure-maps-spatial-io.atlas.io.write
+    package: azure-maps-spatial-io
+    summary: >-
+      Writes GeoJSON object data as a geospatial XML string in the specified
+      format.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function write(data: azmaps.source.DataSource |
+        azmaps.data.FeatureCollection | azmaps.layer.ImageLayer | OgcMapLayer |
+        azmaps.data.Feature<azmaps.data.Geometry, any> | SpatialDataSet |
+        Array<azmaps.source.DataSource | azmaps.data.FeatureCollection |
+        azmaps.layer.ImageLayer | OgcMapLayer |
+        azmaps.data.Feature<azmaps.data.Geometry, any> | SpatialDataSet>,
+        options?: SpatialXmlWriteOptions & GmlWriteOptions &
+        SpatialCsvWriteOptions): Promise<string>
+      parameters:
+        - id: data
+          type: >-
+            <xref uid="azmaps.source.DataSource" /> | <xref
+            uid="azmaps.data.FeatureCollection" /> | <xref
+            uid="azmaps.layer.ImageLayer" /> | <xref
+            uid="azure-maps-spatial-io.atlas.layer.OgcMapLayer" /> | <xref
+            uid="azmaps.data.Feature" />&lt;<xref uid="azmaps.data.Geometry" />,
+            any&gt; | <xref uid="azure-maps-spatial-io.atlas.SpatialDataSet" />
+            | Array&lt;<xref uid="azmaps.source.DataSource" /> | <xref
+            uid="azmaps.data.FeatureCollection" /> | <xref
+            uid="azmaps.layer.ImageLayer" /> | <xref
+            uid="azure-maps-spatial-io.atlas.layer.OgcMapLayer" /> | <xref
+            uid="azmaps.data.Feature" />&lt;<xref uid="azmaps.data.Geometry" />,
+            any&gt; | <xref uid="azure-maps-spatial-io.atlas.SpatialDataSet"
+            />&gt;
+          description: 'The GeoJSON objects to retrieve shapes from, to write.'
+        - id: options
+          type: >-
+            <xref uid="azure-maps-spatial-io.atlas.SpatialXmlWriteOptions" /> &
+            <xref uid="azure-maps-spatial-io.atlas.GmlWriteOptions" /> & <xref
+            uid="azure-maps-spatial-io.atlas.SpatialCsvWriteOptions" />
+          description: |
+            A set of options that customize how the XML is written.
+      return:
+        description: ''
+        type: Promise&lt;string&gt;
+  - name: >-
+      writeCompressed(azmaps.source.DataSource | azmaps.data.FeatureCollection |
+      azmaps.layer.ImageLayer | OgcMapLayer |
+      azmaps.data.Feature<azmaps.data.Geometry, any> | SpatialDataSet |
+      Array<azmaps.source.DataSource | azmaps.data.FeatureCollection |
+      azmaps.layer.ImageLayer | OgcMapLayer |
+      azmaps.data.Feature<azmaps.data.Geometry, any> | SpatialDataSet>, "Base64"
+      | "Blob" | "ArrayBuffer", SpatialXmlWriteOptions & GmlWriteOptions &
+      SpatialCsvWriteOptions)
+    uid: azure-maps-spatial-io.atlas.io.writeCompressed
+    package: azure-maps-spatial-io
+    summary: >-
+      Writes GeoJSON object data to a geospatial XML file embedded in a
+      compressed file.
+
+      The spatial file in the zip file will be names 'doc' and will be assigned
+      an appropriate file extension.
+
+      Possibly file extensions include; xml, kml, json, csv, tsv, txt.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function writeCompressed(data: azmaps.source.DataSource |
+        azmaps.data.FeatureCollection | azmaps.layer.ImageLayer | OgcMapLayer |
+        azmaps.data.Feature<azmaps.data.Geometry, any> | SpatialDataSet |
+        Array<azmaps.source.DataSource | azmaps.data.FeatureCollection |
+        azmaps.layer.ImageLayer | OgcMapLayer |
+        azmaps.data.Feature<azmaps.data.Geometry, any> | SpatialDataSet>,
+        compressFormat?: "Base64" | "Blob" | "ArrayBuffer", options?:
+        SpatialXmlWriteOptions & GmlWriteOptions & SpatialCsvWriteOptions):
+        Promise<string | ArrayBuffer | Blob>
+      parameters:
+        - id: data
+          type: >-
+            <xref uid="azmaps.source.DataSource" /> | <xref
+            uid="azmaps.data.FeatureCollection" /> | <xref
+            uid="azmaps.layer.ImageLayer" /> | <xref
+            uid="azure-maps-spatial-io.atlas.layer.OgcMapLayer" /> | <xref
+            uid="azmaps.data.Feature" />&lt;<xref uid="azmaps.data.Geometry" />,
+            any&gt; | <xref uid="azure-maps-spatial-io.atlas.SpatialDataSet" />
+            | Array&lt;<xref uid="azmaps.source.DataSource" /> | <xref
+            uid="azmaps.data.FeatureCollection" /> | <xref
+            uid="azmaps.layer.ImageLayer" /> | <xref
+            uid="azure-maps-spatial-io.atlas.layer.OgcMapLayer" /> | <xref
+            uid="azmaps.data.Feature" />&lt;<xref uid="azmaps.data.Geometry" />,
+            any&gt; | <xref uid="azure-maps-spatial-io.atlas.SpatialDataSet"
+            />&gt;
+          description: 'The GeoJSON objects to retrieve shapes from, to write.'
+        - id: compressFormat
+          type: '"Base64" | "Blob" | "ArrayBuffer"'
+          description: >-
+            The compressed file format to use. Options: Base64 (Data URI), Blob,
+            or ArrayBuffer
+        - id: options
+          type: >-
+            <xref uid="azure-maps-spatial-io.atlas.SpatialXmlWriteOptions" /> &
+            <xref uid="azure-maps-spatial-io.atlas.GmlWriteOptions" /> & <xref
+            uid="azure-maps-spatial-io.atlas.SpatialCsvWriteOptions" />
+          description: |
+            A set of options that customize how the data is written.
+      return:
+        description: ''
+        type: Promise&lt;string | ArrayBuffer | Blob&gt;

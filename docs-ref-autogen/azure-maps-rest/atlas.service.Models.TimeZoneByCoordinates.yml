@@ -1,0 +1,120 @@
+### YamlMime:TSType
+name: TimeZoneByCoordinates
+uid: azure-maps-rest.atlas.service.Models.TimeZoneByCoordinates
+package: azure-maps-rest
+summary: An interface representing TimeZoneByCoordinates.
+fullName: TimeZoneByCoordinates
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: aliases
+    uid: azure-maps-rest.atlas.service.Models.TimeZoneByCoordinates.aliases
+    package: azure-maps-rest
+    summary: >
+      An array of time zone ID aliases.  Only returned when [options]=*zoneinfo*
+      or *all*.
+
+      Note: may be null.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: aliases
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'aliases?: string[]'
+      return:
+        description: ''
+        type: 'string[]'
+  - name: countries
+    uid: azure-maps-rest.atlas.service.Models.TimeZoneByCoordinates.countries
+    package: azure-maps-rest
+    summary: >-
+      An array of country records. Only returned when [options]=*zoneinfo* or
+      *all*.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: countries
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'countries?: Country[]'
+      return:
+        description: ''
+        type: '<xref uid="azure-maps-rest.atlas.service.Models.Country" />[]'
+  - name: id
+    uid: azure-maps-rest.atlas.service.Models.TimeZoneByCoordinates.id
+    package: azure-maps-rest
+    summary: >-
+      Id property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id?: string'
+      return:
+        description: ''
+        type: string
+  - name: names
+    uid: azure-maps-rest.atlas.service.Models.TimeZoneByCoordinates.names
+    package: azure-maps-rest
+    summary: ''
+    fullName: names
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'names?: Names'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.Names" />
+  - name: referenceTime
+    uid: azure-maps-rest.atlas.service.Models.TimeZoneByCoordinates.referenceTime
+    package: azure-maps-rest
+    summary: ''
+    fullName: referenceTime
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'referenceTime?: ReferenceTimeByCoordinates'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-maps-rest.atlas.service.Models.ReferenceTimeByCoordinates"
+          />
+  - name: representativePoint
+    uid: >-
+      azure-maps-rest.atlas.service.Models.TimeZoneByCoordinates.representativePoint
+    package: azure-maps-rest
+    summary: ''
+    fullName: representativePoint
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'representativePoint?: RepresentativePoint'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.atlas.service.Models.RepresentativePoint"
+          />
+  - name: timeTransitions
+    uid: azure-maps-rest.atlas.service.Models.TimeZoneByCoordinates.timeTransitions
+    package: azure-maps-rest
+    summary: >-
+      Time zone DST transitions from [transitionsFrom] until timestamp + 1 year.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: timeTransitions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'timeTransitions?: TimeTransition[]'
+      return:
+        description: ''
+        type: '<xref uid="azure-maps-rest.atlas.service.Models.TimeTransition" />[]'

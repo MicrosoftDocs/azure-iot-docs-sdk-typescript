@@ -1,0 +1,81 @@
+### YamlMime:TSType
+name: LineString
+uid: azure-maps-control.atlas.data.LineString
+package: azure-maps-control
+summary: >-
+  A GeoJSON LineString object - a JSON object that represents a geographic
+  curve. The full description is detailed
+
+  in [RFC 7946](https://tools.ietf.org/html/rfc7946#section-3.1.4).
+fullName: LineString
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: 'LineString(Position[], BoundingBox)'
+    uid: azure-maps-control.atlas.data.LineString.constructor
+    package: azure-maps-control
+    summary: Constructs a LineString.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new LineString(coordinates: Position[], bbox?: BoundingBox)'
+      parameters:
+        - id: coordinates
+          type: '<xref uid="azure-maps-control.atlas.data.Position" />[]'
+          description: The ordered list of positions defining the linestring.
+        - id: bbox
+          type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+          description: |
+            The bounding box of the linestring.
+properties:
+  - name: bbox
+    uid: azure-maps-control.atlas.data.LineString.bbox
+    package: azure-maps-control
+    summary: The bounding box of the linestring.
+    fullName: bbox
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'bbox?: BoundingBox'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+  - name: coordinates
+    uid: azure-maps-control.atlas.data.LineString.coordinates
+    package: azure-maps-control
+    summary: The ordered list of positions defining the linestring.
+    fullName: coordinates
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'coordinates: Position[]'
+      return:
+        description: ''
+        type: '<xref uid="azure-maps-control.atlas.data.Position" />[]'
+  - name: type
+    uid: azure-maps-control.atlas.data.LineString.type
+    package: azure-maps-control
+    summary: A GeoJSON type descriptor with value "LineString".
+    fullName: type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'type: string'
+      return:
+        description: ''
+        type: string
+  - name: TYPE
+    uid: azure-maps-control.atlas.data.LineString.TYPE
+    package: azure-maps-control
+    summary: >-
+      A static GeoJSON type descriptor for the LineString class to be used in
+      runtime comparisons.
+    fullName: TYPE
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static TYPE: string'
+      return:
+        description: ''
+        type: string

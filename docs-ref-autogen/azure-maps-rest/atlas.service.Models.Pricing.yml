@@ -1,0 +1,52 @@
+### YamlMime:TSType
+name: Pricing
+uid: azure-maps-rest.atlas.service.Models.Pricing
+package: azure-maps-rest
+summary: 'Pricing details including currency, reservation price and usage price.'
+fullName: Pricing
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: currency
+    uid: azure-maps-rest.atlas.service.Models.Pricing.currency
+    package: azure-maps-rest
+    summary: >-
+      The [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html)
+      of returned prices.
+
+      Will be returned in case any of the other pricing fields were returned.
+    fullName: currency
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'currency?: string'
+      return:
+        description: ''
+        type: string
+  - name: reservationPrice
+    uid: azure-maps-rest.atlas.service.Models.Pricing.reservationPrice
+    package: azure-maps-rest
+    summary: >-
+      The price per minute charged when the vehicle has been reserved but not
+      yet in use.
+    fullName: reservationPrice
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'reservationPrice?: string'
+      return:
+        description: ''
+        type: string
+  - name: usagePrice
+    uid: azure-maps-rest.atlas.service.Models.Pricing.usagePrice
+    package: azure-maps-rest
+    summary: The price per minute charged when the vehicle is in use.
+    fullName: usagePrice
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'usagePrice?: string'
+      return:
+        description: ''
+        type: string

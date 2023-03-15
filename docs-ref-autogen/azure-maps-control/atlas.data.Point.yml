@@ -1,0 +1,66 @@
+### YamlMime:TSType
+name: Point
+uid: azure-maps-control.atlas.data.Point
+package: azure-maps-control
+summary: >-
+  A GeoJSON Point object - a JSON object that represents a geographic position.
+  The full description is detailed in
+
+  [RFC 7946](https://tools.ietf.org/html/rfc7946#section-3.1.2).
+fullName: Point
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: Point(Position)
+    uid: azure-maps-control.atlas.data.Point.constructor
+    package: azure-maps-control
+    summary: Constructs a Point.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new Point(coordinates: Position)'
+      parameters:
+        - id: coordinates
+          type: <xref uid="azure-maps-control.atlas.data.Position" />
+          description: |
+            The position defining the point.
+properties:
+  - name: coordinates
+    uid: azure-maps-control.atlas.data.Point.coordinates
+    package: azure-maps-control
+    summary: The position defining the point.
+    fullName: coordinates
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'coordinates: Position'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.atlas.data.Position" />
+  - name: type
+    uid: azure-maps-control.atlas.data.Point.type
+    package: azure-maps-control
+    summary: A GeoJSON type descriptor with value "Point".
+    fullName: type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'type: string'
+      return:
+        description: ''
+        type: string
+  - name: TYPE
+    uid: azure-maps-control.atlas.data.Point.TYPE
+    package: azure-maps-control
+    summary: >-
+      A static GeoJSON type descriptor for the Point class to be used in runtime
+      comparisons.
+    fullName: TYPE
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static TYPE: string'
+      return:
+        description: ''
+        type: string

@@ -1,0 +1,82 @@
+### YamlMime:TSType
+name: WfsFeatureType
+uid: azure-maps-spatial-io.atlas.WfsFeatureType
+package: azure-maps-spatial-io
+summary: Information about a feature type in a WFS service.
+fullName: WfsFeatureType
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: abstract
+    uid: azure-maps-spatial-io.atlas.WfsFeatureType.abstract
+    package: azure-maps-spatial-io
+    summary: A description of the feature type.
+    fullName: abstract
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'abstract?: string'
+      return:
+        description: ''
+        type: string
+  - name: bounds
+    uid: azure-maps-spatial-io.atlas.WfsFeatureType.bounds
+    package: azure-maps-spatial-io
+    summary: The bounding box in which the feature type can be found.
+    fullName: bounds
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'bounds?: azmaps.data.BoundingBox'
+      return:
+        description: ''
+        type: <xref uid="azmaps.data.BoundingBox" />
+  - name: defaultSrs
+    uid: azure-maps-spatial-io.atlas.WfsFeatureType.defaultSrs
+    package: azure-maps-spatial-io
+    summary: The default spatial reference identifier for accessing the feature type.
+    fullName: defaultSrs
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'defaultSrs?: string'
+      return:
+        description: ''
+        type: string
+  - name: name
+    uid: azure-maps-spatial-io.atlas.WfsFeatureType.name
+    package: azure-maps-spatial-io
+    summary: A name identifier for the feature type.
+    fullName: name
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'name?: string'
+      return:
+        description: ''
+        type: string
+  - name: otherSrs
+    uid: azure-maps-spatial-io.atlas.WfsFeatureType.otherSrs
+    package: azure-maps-spatial-io
+    summary: Additional spatial reference identifier for accessing the feature type.
+    fullName: otherSrs
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'otherSrs?: string[]'
+      return:
+        description: ''
+        type: 'string[]'
+  - name: title
+    uid: azure-maps-spatial-io.atlas.WfsFeatureType.title
+    package: azure-maps-spatial-io
+    summary: A title for the feature type.
+    fullName: title
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'title?: string'
+      return:
+        description: ''
+        type: string

@@ -1,0 +1,469 @@
+### YamlMime:TSType
+name: RoutePostRouteMatrixPreviewOptionalParams
+uid: azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewOptionalParams
+package: azure-maps-rest
+summary: Optional Parameters.
+fullName: RoutePostRouteMatrixPreviewOptionalParams
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: arriveAt
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewOptionalParams.arriveAt
+    package: azure-maps-rest
+    summary: >-
+      The date and time of arrival at the destination point. It must be
+      specified as a dateTime.
+
+      When a time zone offset is not specified it will be assumed to be that of
+      the destination
+
+      point. The arriveAt value must be in the future. The arriveAt parameter
+      cannot be used in
+
+      conjunction with departAt, minDeviationDistance or minDeviationTime.
+    fullName: arriveAt
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'arriveAt?: Date'
+      return:
+        description: ''
+        type: Date
+  - name: avoid
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewOptionalParams.avoid
+    package: azure-maps-rest
+    summary: >-
+      Specifies something that the route calculation should try to avoid when
+      determining the route.
+
+      Can be specified multiple times in one request, for example,
+
+      '&avoid=motorways&avoid=tollRoads&avoid=ferries'. In
+      calculateReachableRange requests, the
+
+      value alreadyUsedRoads must not be used. Possible values include:
+      'tollRoads', 'motorways',
+
+      'ferries', 'unpavedRoads', 'carpools', 'alreadyUsedRoads',
+      'borderCrossings'
+    fullName: avoid
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'avoid?: Avoid[]'
+      return:
+        description: ''
+        type: '<xref uid="azure-maps-rest.atlas.service.Models.Avoid" />[]'
+  - name: computeTravelTimeFor
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewOptionalParams.computeTravelTimeFor
+    package: azure-maps-rest
+    summary: >-
+      Specifies whether to return additional travel times using different types
+      of traffic
+
+      information (none, historic, live) as well as the default best-estimate
+      travel time. Possible
+
+      values include: 'none', 'all'
+    fullName: computeTravelTimeFor
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'computeTravelTimeFor?: ComputeTravelTimeFor'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.atlas.service.Models.ComputeTravelTimeFor"
+          />
+  - name: departAt
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewOptionalParams.departAt
+    package: azure-maps-rest
+    summary: >-
+      The date and time of departure from the origin point. Departure times
+      apart from now must be
+
+      specified as a dateTime. When a time zone offset is not specified, it will
+      be assumed to be
+
+      that of the origin point. The departAt value must be in the future in the
+      date-time format
+
+      (1996-12-19T16:39:57-08:00).
+    fullName: departAt
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'departAt?: Date'
+      return:
+        description: ''
+        type: Date
+  - name: hilliness
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewOptionalParams.hilliness
+    package: azure-maps-rest
+    summary: >-
+      Degree of hilliness for thrilling route. This parameter can only be used
+      in conjunction with
+
+      `routeType`=thrilling. Possible values include: 'low', 'normal', 'high'
+    fullName: hilliness
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'hilliness?: Hilliness'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.Hilliness" />
+  - name: routeType
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewOptionalParams.routeType
+    package: azure-maps-rest
+    summary: >-
+      The type of route requested. Possible values include: 'fastest',
+      'shortest', 'eco',
+
+      'thrilling'
+    fullName: routeType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'routeType?: RouteType'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.RouteType" />
+  - name: sectionType
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewOptionalParams.sectionType
+    package: azure-maps-rest
+    summary: >-
+      Specifies which of the section types is reported in the route response.
+      <br><br>For example if
+
+      sectionType = pedestrian the sections which are suited for pedestrians
+      only are returned.
+
+      Multiple types can be used. The default sectionType refers to the
+      travelMode input. By default
+
+      travelMode is set to car. Possible values include: 'carTrain', 'country',
+      'ferry', 'motorway',
+
+      'pedestrian', 'tollRoad', 'tollVignette', 'traffic', 'travelMode',
+      'tunnel'
+    fullName: sectionType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'sectionType?: SectionType'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.SectionType" />
+  - name: traffic
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewOptionalParams.traffic
+    package: azure-maps-rest
+    summary: >-
+      Possible values:
+
+      * true - Do consider all available traffic information during routing
+
+      * false - Ignore current traffic data during routing. Note that although
+      the current traffic
+
+      data is ignored
+
+      during routing, the effect of historic traffic on effective road speeds is
+      still incorporated.
+    fullName: traffic
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'traffic?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: travelMode
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewOptionalParams.travelMode
+    package: azure-maps-rest
+    summary: >-
+      The mode of travel for the requested route. Note that the requested
+      travelMode may not be
+
+      available for the entire route. Where the requested travelMode is not
+      available for a
+
+      particular section, the travelMode element of the response for that
+      section will be other.
+
+      Note that travel modes bus, motorcycle, taxi and van are BETA
+      functionality. Full restriction
+
+      data is not available in all areas. In **calculateReachableRange**
+      requests, the values
+
+      bicycle and pedestrian must not be used. Possible values include: 'car',
+      'truck', 'taxi',
+
+      'bus', 'van', 'motorcycle', 'bicycle', 'pedestrian'
+    fullName: travelMode
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'travelMode?: TravelMode'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.TravelMode" />
+  - name: vehicleAxleWeight
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewOptionalParams.vehicleAxleWeight
+    package: azure-maps-rest
+    summary: >-
+      Weight per axle of the vehicle in kg. A value of 0 means that weight
+      restrictions per axle are
+
+      not considered.
+    fullName: vehicleAxleWeight
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'vehicleAxleWeight?: number'
+      return:
+        description: ''
+        type: number
+  - name: vehicleHeight
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewOptionalParams.vehicleHeight
+    package: azure-maps-rest
+    summary: >-
+      Height of the vehicle in meters. A value of 0 means that height
+      restrictions are not
+
+      considered.
+    fullName: vehicleHeight
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'vehicleHeight?: number'
+      return:
+        description: ''
+        type: number
+  - name: vehicleLength
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewOptionalParams.vehicleLength
+    package: azure-maps-rest
+    summary: >-
+      Length of the vehicle in meters. A value of 0 means that length
+      restrictions are not
+
+      considered.
+    fullName: vehicleLength
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'vehicleLength?: number'
+      return:
+        description: ''
+        type: number
+  - name: vehicleLoadType
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewOptionalParams.vehicleLoadType
+    package: azure-maps-rest
+    summary: >-
+      Types of cargo that may be classified as hazardous materials and
+      restricted from some roads.
+
+      Available vehicleLoadType values are US Hazmat classes 1 through 9, plus
+      generic
+
+      classifications for use in other countries. Values beginning with USHazmat
+      are for US routing
+
+      while otherHazmat should be used for all other countries. vehicleLoadType
+      can be specified
+
+      multiple times. This parameter is currently only considered for
+      travelMode=truck. Possible
+
+      values include: 'USHazmatClass1', 'USHazmatClass2', 'USHazmatClass3',
+      'USHazmatClass4',
+
+      'USHazmatClass5', 'USHazmatClass6', 'USHazmatClass7', 'USHazmatClass8',
+      'USHazmatClass9',
+
+      'otherHazmatExplosive', 'otherHazmatGeneral', 'otherHazmatHarmfulToWater'
+    fullName: vehicleLoadType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'vehicleLoadType?: VehicleLoadType'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.VehicleLoadType" />
+  - name: vehicleMaxSpeed
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewOptionalParams.vehicleMaxSpeed
+    package: azure-maps-rest
+    summary: >-
+      Maximum speed of the vehicle in km/hour. A value of 0 means that an
+      appropriate value for the
+
+      vehicle will be determined and applied during route planning. A non-zero
+      value may be
+
+      overridden during route planning.
+    fullName: vehicleMaxSpeed
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'vehicleMaxSpeed?: number'
+      return:
+        description: ''
+        type: number
+  - name: vehicleWeight
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewOptionalParams.vehicleWeight
+    package: azure-maps-rest
+    summary: Weight of the vehicle in kilograms.
+    fullName: vehicleWeight
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'vehicleWeight?: number'
+      return:
+        description: ''
+        type: number
+  - name: vehicleWidth
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewOptionalParams.vehicleWidth
+    package: azure-maps-rest
+    summary: >-
+      Width of the vehicle in meters. A value of 0 means that width restrictions
+      are not considered.
+    fullName: vehicleWidth
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'vehicleWidth?: number'
+      return:
+        description: ''
+        type: number
+  - name: waitForResults
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewOptionalParams.waitForResults
+    package: azure-maps-rest
+    summary: >-
+      Boolean to indicate whether to execute the request synchronously. If set
+      to true, user will
+
+      get a 200 response if the request is finished under 120 seconds.
+      Otherwise, user will get a
+
+      202 response right away. Please refer to the API description for more
+      details on 202 response.
+    fullName: waitForResults
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'waitForResults?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: windingness
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewOptionalParams.windingness
+    package: azure-maps-rest
+    summary: >-
+      Level of turns for thrilling route. This parameter can only be used in
+      conjunction with
+
+      routeType=thrilling. Possible values include: 'low', 'normal', 'high'
+    fullName: windingness
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'windingness?: Windingness'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.Windingness" />
+inheritedProperties:
+  - name: abortSignal
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewOptionalParams.abortSignal
+    package: azure-maps-rest
+    summary: The signal which can be used to abort requests.
+    fullName: abortSignal
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'abortSignal?: AbortSignalLike'
+      return:
+        description: ''
+        type: AbortSignalLike
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.abortSignal
+  - name: customHeaders
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewOptionalParams.customHeaders
+    package: azure-maps-rest
+    summary: |-
+      {object} [customHeaders] User defined custom request headers that
+      will be applied before the request is sent.
+    fullName: customHeaders
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'customHeaders?: [key: string]: string'
+      return:
+        description: ''
+        type: '[key: string]\: string'
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.customHeaders
+  - name: onDownloadProgress
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewOptionalParams.onDownloadProgress
+    package: azure-maps-rest
+    summary: Callback which fires upon download progress.
+    fullName: onDownloadProgress
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'onDownloadProgress?: (progress: TransferProgressEvent) => void'
+      return:
+        description: ''
+        type: '(progress: TransferProgressEvent) =&gt; void'
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.onDownloadProgress
+  - name: onUploadProgress
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewOptionalParams.onUploadProgress
+    package: azure-maps-rest
+    summary: Callback which fires upon upload progress.
+    fullName: onUploadProgress
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'onUploadProgress?: (progress: TransferProgressEvent) => void'
+      return:
+        description: ''
+        type: '(progress: TransferProgressEvent) =&gt; void'
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.onUploadProgress
+  - name: timeout
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RoutePostRouteMatrixPreviewOptionalParams.timeout
+    package: azure-maps-rest
+    summary: >-
+      The number of milliseconds a request can take before automatically being
+      terminated.
+    fullName: timeout
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'timeout?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.timeout
+extends: RequestOptionsBase

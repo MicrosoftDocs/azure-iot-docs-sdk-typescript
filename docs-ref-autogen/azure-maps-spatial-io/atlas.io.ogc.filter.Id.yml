@@ -11,7 +11,6 @@ summary: >-
   Version 1.0.0 typically does not support this filter.
 fullName: Id
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -26,7 +25,6 @@ constructors:
 
       Version 1.0.0 typically does not support this filter.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new Id(id: string)'
@@ -41,7 +39,6 @@ inheritedMethods:
     package: azure-maps-spatial-io
     summary: Generates an XML version of the filter.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function toXml(version?: string): string'
@@ -53,5 +50,7 @@ inheritedMethods:
       return:
         description: ''
         type: string
-    inheritanceDescription: '<b>Inherited From</b> [Filter.toXml](xref:Filter.toXml)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Filter.toXml](xref:azure-maps-spatial-io.atlas.io.ogc.filter.Filter.toXml)
 extends: <xref uid="azure-maps-spatial-io.atlas.io.ogc.filter.Filter" />

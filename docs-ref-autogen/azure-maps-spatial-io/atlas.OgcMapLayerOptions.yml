@@ -5,7 +5,6 @@ package: azure-maps-spatial-io
 summary: Options for an OGC layer.
 fullName: OgcMapLayerOptions
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: Specifies the sublayers in the service to render.
     fullName: activeLayers
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'activeLayers?: Array<string | OgcSublayer>'
@@ -32,7 +30,6 @@ properties:
       layer. Not persistent.
     fullName: bringIntoView
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'bringIntoView?: boolean'
@@ -47,7 +44,6 @@ properties:
       the console.
     fullName: debug
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'debug?: boolean'
@@ -60,7 +56,6 @@ properties:
     summary: Custom dimensions to add to tile requests.
     fullName: dimensions
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'dimensions?: Record<string, string>'
@@ -78,7 +73,6 @@ properties:
       endpoints.
     fullName: proxyService
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'proxyService?: string'
@@ -97,7 +91,6 @@ properties:
       URL.
     fullName: service
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'service?: "WMS" | "WMTS"'
@@ -110,7 +103,6 @@ properties:
     summary: The styles of the active layers.
     fullName: styles
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'styles?: Array<string | OgcStyle>'
@@ -125,7 +117,6 @@ properties:
     summary: The URL that points to the service.
     fullName: url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'url?: string'
@@ -140,7 +131,6 @@ properties:
       try and determine this.
     fullName: version
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'version?: string'
@@ -158,7 +148,6 @@ inheritedProperties:
       Default `0`.
     fullName: contrast
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'contrast?: number'
@@ -178,7 +167,6 @@ inheritedProperties:
       Default `300`.
     fullName: fadeDuration
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'fadeDuration?: number'
@@ -194,7 +182,6 @@ inheritedProperties:
       Only features that match the filter are displayed.
     fullName: filter
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'filter?: Expression'
@@ -211,7 +198,6 @@ inheritedProperties:
       Default `0`.
     fullName: hueRotation
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'hueRotation?: number'
@@ -229,7 +215,6 @@ inheritedProperties:
       Default `1`.
     fullName: maxBrightness
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'maxBrightness?: number'
@@ -249,7 +234,6 @@ inheritedProperties:
       Default `24`.
     fullName: maxZoom
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'maxZoom?: number'
@@ -267,7 +251,6 @@ inheritedProperties:
       Default `0`.
     fullName: minBrightness
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'minBrightness?: number'
@@ -287,7 +270,6 @@ inheritedProperties:
       Default `0`.
     fullName: minZoom
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'minZoom?: number'
@@ -305,7 +287,6 @@ inheritedProperties:
       Default `1`.
     fullName: opacity
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'opacity?: number'
@@ -323,7 +304,6 @@ inheritedProperties:
       Default `0`.
     fullName: saturation
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'saturation?: number'
@@ -339,7 +319,6 @@ inheritedProperties:
       Default `true`.
     fullName: visible
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'visible?: boolean'

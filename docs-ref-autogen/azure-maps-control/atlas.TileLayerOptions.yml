@@ -5,7 +5,6 @@ package: azure-maps-control
 summary: Options used when rendering raster tiled images in a TileLayer.
 fullName: TileLayerOptions
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -18,7 +17,6 @@ properties:
       Default `[-180, -85.0511, 180, 85.0511]`.
     fullName: bounds
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'bounds?: BoundingBox'
@@ -37,7 +35,6 @@ properties:
       Default `false`.
     fullName: isTMS
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isTMS?: boolean'
@@ -54,7 +51,6 @@ properties:
       Default `22`.
     fullName: maxSourceZoom
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'maxSourceZoom?: number'
@@ -71,7 +67,6 @@ properties:
       Default `0`.
     fullName: minSourceZoom
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'minSourceZoom?: number'
@@ -84,7 +79,6 @@ properties:
     summary: An array of subdomain values to apply to the tile URL.
     fullName: subdomains
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'subdomains?: string[]'
@@ -103,7 +97,6 @@ properties:
       Default `512`.
     fullName: tileSize
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'tileSize?: number'
@@ -135,7 +128,6 @@ properties:
       be added.</p>
     fullName: tileUrl
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'tileUrl?: string'
@@ -153,7 +145,6 @@ inheritedProperties:
       Default `0`.
     fullName: contrast
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'contrast?: number'
@@ -162,7 +153,7 @@ inheritedProperties:
         type: number
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [MediaLayerOptions.contrast](xref:MediaLayerOptions.contrast)
+      [MediaLayerOptions.contrast](xref:azure-maps-control.atlas.MediaLayerOptions.contrast)
   - name: fadeDuration
     uid: azure-maps-control.atlas.TileLayerOptions.fadeDuration
     package: azure-maps-control
@@ -175,7 +166,6 @@ inheritedProperties:
       Default `300`.
     fullName: fadeDuration
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'fadeDuration?: number'
@@ -184,7 +174,7 @@ inheritedProperties:
         type: number
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [MediaLayerOptions.fadeDuration](xref:MediaLayerOptions.fadeDuration)
+      [MediaLayerOptions.fadeDuration](xref:azure-maps-control.atlas.MediaLayerOptions.fadeDuration)
   - name: filter
     uid: azure-maps-control.atlas.TileLayerOptions.filter
     package: azure-maps-control
@@ -193,14 +183,15 @@ inheritedProperties:
       Only features that match the filter are displayed.
     fullName: filter
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'filter?: Expression'
       return:
         description: ''
         type: <xref uid="azure-maps-control.atlas.Expression" />
-    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.filter](xref:LayerOptions.filter)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.filter](xref:azure-maps-control.atlas.LayerOptions.filter)
   - name: hueRotation
     uid: azure-maps-control.atlas.TileLayerOptions.hueRotation
     package: azure-maps-control
@@ -210,7 +201,6 @@ inheritedProperties:
       Default `0`.
     fullName: hueRotation
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'hueRotation?: number'
@@ -219,7 +209,7 @@ inheritedProperties:
         type: number
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [MediaLayerOptions.hueRotation](xref:MediaLayerOptions.hueRotation)
+      [MediaLayerOptions.hueRotation](xref:azure-maps-control.atlas.MediaLayerOptions.hueRotation)
   - name: maxBrightness
     uid: azure-maps-control.atlas.TileLayerOptions.maxBrightness
     package: azure-maps-control
@@ -230,7 +220,6 @@ inheritedProperties:
       Default `1`.
     fullName: maxBrightness
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'maxBrightness?: number'
@@ -239,7 +228,7 @@ inheritedProperties:
         type: number
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [MediaLayerOptions.maxBrightness](xref:MediaLayerOptions.maxBrightness)
+      [MediaLayerOptions.maxBrightness](xref:azure-maps-control.atlas.MediaLayerOptions.maxBrightness)
   - name: maxZoom
     uid: azure-maps-control.atlas.TileLayerOptions.maxZoom
     package: azure-maps-control
@@ -252,14 +241,15 @@ inheritedProperties:
       Default `24`.
     fullName: maxZoom
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'maxZoom?: number'
       return:
         description: ''
         type: number
-    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.maxZoom](xref:LayerOptions.maxZoom)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.maxZoom](xref:azure-maps-control.atlas.LayerOptions.maxZoom)
   - name: minBrightness
     uid: azure-maps-control.atlas.TileLayerOptions.minBrightness
     package: azure-maps-control
@@ -270,7 +260,6 @@ inheritedProperties:
       Default `0`.
     fullName: minBrightness
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'minBrightness?: number'
@@ -279,7 +268,7 @@ inheritedProperties:
         type: number
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [MediaLayerOptions.minBrightness](xref:MediaLayerOptions.minBrightness)
+      [MediaLayerOptions.minBrightness](xref:azure-maps-control.atlas.MediaLayerOptions.minBrightness)
   - name: minZoom
     uid: azure-maps-control.atlas.TileLayerOptions.minZoom
     package: azure-maps-control
@@ -292,14 +281,15 @@ inheritedProperties:
       Default `0`.
     fullName: minZoom
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'minZoom?: number'
       return:
         description: ''
         type: number
-    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.minZoom](xref:LayerOptions.minZoom)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.minZoom](xref:azure-maps-control.atlas.LayerOptions.minZoom)
   - name: opacity
     uid: azure-maps-control.atlas.TileLayerOptions.opacity
     package: azure-maps-control
@@ -310,7 +300,6 @@ inheritedProperties:
       Default `1`.
     fullName: opacity
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'opacity?: number'
@@ -319,7 +308,7 @@ inheritedProperties:
         type: number
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [MediaLayerOptions.opacity](xref:MediaLayerOptions.opacity)
+      [MediaLayerOptions.opacity](xref:azure-maps-control.atlas.MediaLayerOptions.opacity)
   - name: saturation
     uid: azure-maps-control.atlas.TileLayerOptions.saturation
     package: azure-maps-control
@@ -330,7 +319,6 @@ inheritedProperties:
       Default `0`.
     fullName: saturation
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'saturation?: number'
@@ -339,7 +327,7 @@ inheritedProperties:
         type: number
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [MediaLayerOptions.saturation](xref:MediaLayerOptions.saturation)
+      [MediaLayerOptions.saturation](xref:azure-maps-control.atlas.MediaLayerOptions.saturation)
   - name: visible
     uid: azure-maps-control.atlas.TileLayerOptions.visible
     package: azure-maps-control
@@ -348,12 +336,13 @@ inheritedProperties:
       Default `true`.
     fullName: visible
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'visible?: boolean'
       return:
         description: ''
         type: boolean
-    inheritanceDescription: '<b>Inherited From</b> [LayerOptions.visible](xref:LayerOptions.visible)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.visible](xref:azure-maps-control.atlas.LayerOptions.visible)
 extends: <xref uid="azure-maps-control.atlas.MediaLayerOptions" />

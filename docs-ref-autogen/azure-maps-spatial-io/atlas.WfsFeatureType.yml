@@ -5,7 +5,6 @@ package: azure-maps-spatial-io
 summary: Information about a feature type in a WFS service.
 fullName: WfsFeatureType
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: A description of the feature type.
     fullName: abstract
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'abstract?: string'
@@ -28,7 +26,6 @@ properties:
     summary: The bounding box in which the feature type can be found.
     fullName: bounds
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'bounds?: azmaps.data.BoundingBox'
@@ -41,7 +38,6 @@ properties:
     summary: The default spatial reference identifier for accessing the feature type.
     fullName: defaultSrs
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'defaultSrs?: string'
@@ -54,7 +50,6 @@ properties:
     summary: A name identifier for the feature type.
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name?: string'
@@ -67,7 +62,6 @@ properties:
     summary: Additional spatial reference identifier for accessing the feature type.
     fullName: otherSrs
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'otherSrs?: string[]'
@@ -80,7 +74,6 @@ properties:
     summary: A title for the feature type.
     fullName: title
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'title?: string'

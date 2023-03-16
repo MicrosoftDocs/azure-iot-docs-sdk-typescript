@@ -7,7 +7,6 @@ summary: >-
   map. Also known as a ground or image overlay.
 fullName: ImageLayer<T>
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -16,7 +15,6 @@ constructors:
     package: azure-maps-control
     summary: Constructs a new ImageLayer.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new ImageLayer(options: ImageLayerOptions, id?: string)'
@@ -36,47 +34,49 @@ inheritedProperties:
     summary: A property for associating custom data with the layer.
     fullName: metadata
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'metadata?: any'
       return:
         description: ''
         type: any
-    inheritanceDescription: '<b>Inherited From</b> [Layer.metadata](xref:Layer.metadata)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.metadata](xref:azure-maps-control.atlas.layer.Layer.metadata)
 inheritedMethods:
   - name: getId()
     uid: azure-maps-control.atlas.layer.ImageLayer.getId
     package: azure-maps-control
     summary: Gets the id of the layer
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getId(): string'
       return:
         description: ''
         type: string
-    inheritanceDescription: '<b>Inherited From</b> [Layer.getId](xref:Layer.getId)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.getId](xref:azure-maps-control.atlas.layer.Layer.getId)
   - name: getMap()
     uid: azure-maps-control.atlas.layer.ImageLayer.getMap
     package: azure-maps-control
     summary: 'Gets the map that the layer is currently added to, or null.'
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getMap(): Map'
       return:
         description: ''
         type: <xref uid="azure-maps-control.atlas.Map" />
-    inheritanceDescription: '<b>Inherited From</b> [Layer.getMap](xref:Layer.getMap)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.getMap](xref:azure-maps-control.atlas.layer.Layer.getMap)
   - name: onAdd(Map)
     uid: azure-maps-control.atlas.layer.ImageLayer.onAdd
     package: azure-maps-control
     summary: Initialization method for the layer which is called when added to the map.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function onAdd(map: Map)'
@@ -85,7 +85,9 @@ inheritedMethods:
           type: <xref uid="azure-maps-control.atlas.Map" />
           description: |
             The map the layer has been added to.
-    inheritanceDescription: '<b>Inherited From</b> [Layer.onAdd](xref:Layer.onAdd)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.onAdd](xref:azure-maps-control.atlas.layer.Layer.onAdd)
   - name: onRemove()
     uid: azure-maps-control.atlas.layer.ImageLayer.onRemove
     package: azure-maps-control
@@ -93,11 +95,12 @@ inheritedMethods:
       Method that is called when the layer is removed from the map.
       Should perform any necessary cleanup for the layer.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function onRemove()
-    inheritanceDescription: '<b>Inherited From</b> [Layer.onRemove](xref:Layer.onRemove)'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.onRemove](xref:azure-maps-control.atlas.layer.Layer.onRemove)
 methods:
   - name: 'getCoordinatesFromEdges(number, number, number, number, number)'
     uid: azure-maps-control.atlas.layer.ImageLayer.getCoordinatesFromEdges
@@ -110,7 +113,6 @@ methods:
       be converted to a clockwise rotation using the following formula:
       `rotation = 360 – KmlRotation`
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -147,7 +149,6 @@ methods:
       be converted to a clockwise rotation using the following formula:
       `rotation = 360 – KmlRotation`
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -178,7 +179,6 @@ methods:
     package: azure-maps-control
     summary: Gets the options of the tile layer.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getOptions(): ImageLayerOptions'
@@ -192,7 +192,6 @@ methods:
       Calculates the approximate pixels on the source image that align with the
       provided positions.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getPixels(positions: Position[]): Promise<Pixel[]>'
@@ -212,7 +211,6 @@ methods:
       Calculates the approximate positions that align with the provided pixels
       from the source image.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getPositions(pixels: Pixel[]): Promise<Position[]>'
@@ -230,7 +228,6 @@ methods:
     package: azure-maps-control
     summary: Sets the options of the tile layer.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setOptions(options: ImageLayerOptions)'

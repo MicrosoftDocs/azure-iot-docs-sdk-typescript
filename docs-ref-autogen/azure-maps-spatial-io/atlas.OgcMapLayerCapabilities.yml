@@ -5,7 +5,6 @@ package: azure-maps-spatial-io
 summary: An object that describes the capabilities of an OGC WMS and WMTS service.
 fullName: OgcMapLayerCapabilities
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: 'The bounds in which the service is available in EPSG:4326.'
     fullName: bounds
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'bounds: azmaps.data.BoundingBox'
@@ -28,7 +26,6 @@ properties:
     summary: A description or abstract for the service.
     fullName: description
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'description?: string'
@@ -45,7 +42,6 @@ properties:
       Set to 1 for WMTS services.
     fullName: layerLimit
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'layerLimit: number'
@@ -58,7 +54,6 @@ properties:
     summary: Details of all sublayers available in the service.
     fullName: sublayers
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'sublayers: OgcSublayer[]'
@@ -71,7 +66,6 @@ properties:
     summary: The title of the OGC service.
     fullName: title
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'title?: string'
@@ -84,7 +78,6 @@ properties:
     summary: The version of the service.
     fullName: version
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'version: string'

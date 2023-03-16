@@ -5,7 +5,6 @@ package: azure-maps-control
 summary: ''
 fullName: DataSourceEvents
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: ''
     fullName: dataadded
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'dataadded: Shape[]'
@@ -28,7 +26,6 @@ properties:
     summary: ''
     fullName: dataremoved
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'dataremoved: Shape[]'
@@ -41,7 +38,6 @@ properties:
     summary: ''
     fullName: datasourceupdated
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'datasourceupdated: DataSource'
@@ -55,7 +51,6 @@ inheritedProperties:
     summary: ''
     fullName: sourceadded
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'sourceadded: Source'
@@ -64,14 +59,13 @@ inheritedProperties:
         type: <xref uid="azure-maps-control.atlas.source.Source" />
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [SourceEvents.sourceadded](xref:SourceEvents.sourceadded)
+      [SourceEvents.sourceadded](xref:azure-maps-control.atlas.source.SourceEvents.sourceadded)
   - name: sourceremoved
     uid: azure-maps-control.atlas.source.DataSourceEvents.sourceremoved
     package: azure-maps-control
     summary: ''
     fullName: sourceremoved
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'sourceremoved: Source'
@@ -80,5 +74,5 @@ inheritedProperties:
         type: <xref uid="azure-maps-control.atlas.source.Source" />
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [SourceEvents.sourceremoved](xref:SourceEvents.sourceremoved)
+      [SourceEvents.sourceremoved](xref:azure-maps-control.atlas.source.SourceEvents.sourceremoved)
 extends: <xref uid="azure-maps-control.atlas.source.SourceEvents" />

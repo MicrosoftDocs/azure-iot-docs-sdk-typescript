@@ -7,7 +7,6 @@ summary: >-
   XML string.
 fullName: SimpleXmlWriter
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -16,7 +15,6 @@ constructors:
     package: azure-maps-spatial-io
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -48,7 +46,6 @@ methods:
       Clears all data in the XML writer and sets itself up to be used to write a
       new document.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function clear()
@@ -57,7 +54,6 @@ methods:
     package: azure-maps-spatial-io
     summary: Closes the document and returns a string version of the XML document.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function toString(): string'
@@ -69,7 +65,6 @@ methods:
     package: azure-maps-spatial-io
     summary: Writes a content value inside of a CData tag.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function writeCDataContent(content: string): SimpleXmlWriter'
@@ -86,7 +81,6 @@ methods:
     package: azure-maps-spatial-io
     summary: Writes a comment in the document.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function writeComment(comment: string): SimpleXmlWriter'
@@ -103,7 +97,6 @@ methods:
     package: azure-maps-spatial-io
     summary: Writes a complete tag element.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -130,7 +123,6 @@ methods:
       Writes all the remaining closing tag in the tag name stack so as to close
       the document.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -152,7 +144,6 @@ methods:
     package: azure-maps-spatial-io
     summary: Writes the closing tag of last tag that was opened.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function writeEndElement(skipNewLine?: boolean): SimpleXmlWriter'
@@ -172,7 +163,6 @@ methods:
     package: azure-maps-spatial-io
     summary: Starts an XML document.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -201,7 +191,6 @@ methods:
     package: azure-maps-spatial-io
     summary: Write a tag element.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -230,7 +219,6 @@ methods:
     package: azure-maps-spatial-io
     summary: Writes a string value.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function writeString(value: string, validate?: boolean): SimpleXmlWriter'
@@ -251,7 +239,6 @@ methods:
     package: azure-maps-spatial-io
     summary: Writes a value to XML writer.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function writeValue(value: any): SimpleXmlWriter'

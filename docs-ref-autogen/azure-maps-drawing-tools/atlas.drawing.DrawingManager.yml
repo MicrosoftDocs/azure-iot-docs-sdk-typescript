@@ -11,7 +11,6 @@ summary: >-
   or in combination with the drawing toolbar control.
 fullName: DrawingManager
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -20,7 +19,6 @@ constructors:
     package: azure-maps-drawing-tools
     summary: Constructs a DrawingManager.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new DrawingManager(map: azmaps.Map, options?: DrawingManagerOptions)'
@@ -41,7 +39,6 @@ methods:
       When disposed, all resources used by the DrawingManager are released.
       Any attached toolbars or dialogs will also be disposed.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function dispose()
@@ -52,7 +49,6 @@ methods:
       Edits a shape. If the shape is not already in the data source, it adds it
       to it.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function edit(shape: azmaps.Shape): any'
@@ -73,7 +69,6 @@ methods:
 
       Edit these layers' options to customize the rendering.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getLayers(): DrawingLayers'
@@ -85,7 +80,6 @@ methods:
     package: azure-maps-drawing-tools
     summary: Gets the options used by the DrawingManager.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getOptions(): DrawingManagerOptions'
@@ -101,7 +95,6 @@ methods:
 
       Edit these layers' options to customize the rendering.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getPreviewLayers(): DrawingLayers'
@@ -115,7 +108,6 @@ methods:
       Gets the data source used by the DrawingManager to store the completed
       shapes.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getSource(): azmaps.source.DataSource'
@@ -127,7 +119,6 @@ methods:
     package: azure-maps-drawing-tools
     summary: Sets the options for the DrawingManager.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setOptions(options: DrawingManagerOptions)'

@@ -5,7 +5,6 @@ package: azure-maps-control
 summary: Global properties used in all atlas service requests.
 fullName: ServiceOptions
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -22,7 +21,6 @@ properties:
       Recommend using the atlas.setAuthenticationOptions function instead.
     fullName: authOptions
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'authOptions?: AuthenticationOptions'
@@ -38,7 +36,6 @@ properties:
       default: false
     fullName: disableTelemetry
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'disableTelemetry?: boolean'
@@ -54,7 +51,6 @@ properties:
       Recommend using atlas.setDomain function instead.
     fullName: domain
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'domain?: string'
@@ -69,28 +65,9 @@ properties:
       default: true
     fullName: enableAccessibility
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'enableAccessibility?: boolean'
-      return:
-        description: ''
-        type: boolean
-  - name: enableAccessibilityLocationFallback
-    uid: >-
-      azure-maps-control.atlas.ServiceOptions.enableAccessibilityLocationFallback
-    package: azure-maps-control
-    summary: >-
-      Enable fallback to geocoder for accessibility location, if failed to
-      extract location from vector data.
-
-      default: true
-    fullName: enableAccessibilityLocationFallback
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'enableAccessibilityLocationFallback?: boolean'
       return:
         description: ''
         type: boolean
@@ -107,7 +84,6 @@ properties:
       or raster tile cross-fading.
     fullName: fadeDuration
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'fadeDuration?: number'
@@ -134,7 +110,6 @@ properties:
       requests.
     fullName: localIdeographFontFamily
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'localIdeographFontFamily?: string'
@@ -147,7 +122,6 @@ properties:
     summary: The map configuration defines the set of styles available to the map.
     fullName: mapConfiguration
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'mapConfiguration?: string | MapConfiguration'
@@ -164,7 +138,6 @@ properties:
       which affects performance in raster-heavy maps. 16 by default.
     fullName: maxParallelImageRequests
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'maxParallelImageRequests?: number'
@@ -185,7 +158,6 @@ properties:
       default: true
     fullName: refreshExpiredTiles
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'refreshExpiredTiles?: boolean'
@@ -200,7 +172,6 @@ properties:
       Recommend using atlas.setSessionId instead.
     fullName: sessionId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'sessionId?: string'
@@ -216,7 +187,6 @@ properties:
       Recommend using the atlas.setSubscriptionKey function instead
     fullName: subscriptionKey
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'subscriptionKey?: string'
@@ -231,7 +201,6 @@ properties:
       parameters for loading a tile.
     fullName: transformRequest
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -248,7 +217,6 @@ properties:
       By default, it is set to half the number of CPU cores (capped at 6).
     fullName: workerCount
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'workerCount?: number'

@@ -6,7 +6,6 @@ package: azure-maps-rest
 summary: Optional Parameters.
 fullName: MobilityGetRealTimeArrivalsPreviewOptionalParams
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -21,7 +20,6 @@ properties:
       separated string.
     fullName: agency
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'agency?: string[]'
@@ -42,7 +40,6 @@ properties:
       'agencyKey', 'agencyName'
     fullName: agencyType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'agencyType?: AgencyType'
@@ -64,7 +61,6 @@ properties:
       details.
     fullName: language
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'language?: string'
@@ -85,7 +81,6 @@ properties:
       else max arrivals overall.
     fullName: limit
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'limit?: number'
@@ -106,7 +101,6 @@ properties:
       minutes.
     fullName: maxMinutesInFuture
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'maxMinutesInFuture?: number'
@@ -130,7 +124,6 @@ properties:
       'line', 'lineAndStop', 'position'
     fullName: queryType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'queryType?: RealTimeArrivalsQueryType'
@@ -154,7 +147,6 @@ properties:
       Possible values include: 'stopId', 'stopKey'
     fullName: stopQueryType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'stopQueryType?: StopQueryType'
@@ -172,7 +164,6 @@ properties:
       data.
     fullName: timeoutInSeconds
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'timeoutInSeconds?: number'
@@ -196,7 +187,6 @@ properties:
       Gondola, Funicular. For example, transitType=Bus,Subway.
     fullName: transitType
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'transitType?: TransitTypeFilter[]'
@@ -213,7 +203,6 @@ inheritedProperties:
     summary: The signal which can be used to abort requests.
     fullName: abortSignal
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'abortSignal?: AbortSignalLike'
@@ -230,7 +219,6 @@ inheritedProperties:
       will be applied before the request is sent.
     fullName: customHeaders
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'customHeaders?: [key: string]: string'
@@ -245,7 +233,6 @@ inheritedProperties:
     summary: Callback which fires upon download progress.
     fullName: onDownloadProgress
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'onDownloadProgress?: (progress: TransferProgressEvent) => void'
@@ -260,7 +247,6 @@ inheritedProperties:
     summary: Callback which fires upon upload progress.
     fullName: onUploadProgress
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'onUploadProgress?: (progress: TransferProgressEvent) => void'
@@ -277,7 +263,6 @@ inheritedProperties:
       terminated.
     fullName: timeout
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'timeout?: number'

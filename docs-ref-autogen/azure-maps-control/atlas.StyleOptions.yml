@@ -5,7 +5,6 @@ package: azure-maps-control
 summary: The options for the map's style.
 fullName: StyleOptions
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -17,7 +16,6 @@ properties:
       be useful for antialiasing WebGL layers.
     fullName: antialias
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'antialias?: boolean'
@@ -36,7 +34,6 @@ properties:
       Default `true`.
     fullName: autoResize
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'autoResize?: boolean'
@@ -55,7 +52,6 @@ properties:
       Default `atlas.getLanguage()`.
     fullName: language
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'language?: string'
@@ -68,7 +64,6 @@ properties:
     summary: Sets the lighting options of the map.
     fullName: light
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'light?: LightOptions'
@@ -87,13 +82,48 @@ properties:
       Default `false`
     fullName: preserveDrawingBuffer
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'preserveDrawingBuffer?: boolean'
       return:
         description: ''
         type: boolean
+  - name: progressiveLoading
+    uid: azure-maps-control.atlas.StyleOptions.progressiveLoading
+    package: azure-maps-control
+    summary: >-
+      If true, the map will try to defer non-essential map layers and show
+      essential layers as early as possible.
+
+      This option may only be set when initializing the map.
+
+      Default `false`
+    fullName: progressiveLoading
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'progressiveLoading?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: progressiveLoadingInitialLayerGroups
+    uid: azure-maps-control.atlas.StyleOptions.progressiveLoadingInitialLayerGroups
+    package: azure-maps-control
+    summary: >-
+      The list of layer groups to be loaded at the initial stage. Passing an
+      empty array will disable the progressive loading.
+
+      This option may only be set when initializing the map.
+
+      Default `['base']`
+    fullName: progressiveLoadingInitialLayerGroups
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'progressiveLoadingInitialLayerGroups?: string[]'
+      return:
+        description: ''
+        type: 'string[]'
   - name: renderWorldCopies
     uid: azure-maps-control.atlas.StyleOptions.renderWorldCopies
     package: azure-maps-control
@@ -104,7 +134,6 @@ properties:
       Default `true`
     fullName: renderWorldCopies
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'renderWorldCopies?: boolean'
@@ -120,7 +149,6 @@ properties:
       Default `false`
     fullName: showBuildingModels
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'showBuildingModels?: boolean'
@@ -135,7 +163,6 @@ properties:
       Default `true`
     fullName: showFeedbackLink
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'showFeedbackLink?: boolean'
@@ -148,7 +175,6 @@ properties:
     summary: Specifies if the map should display labels
     fullName: showLabels
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'showLabels?: boolean'
@@ -164,7 +190,6 @@ properties:
       Default `true`
     fullName: showLogo
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'showLogo?: boolean'
@@ -188,7 +213,6 @@ properties:
       Default `false`
     fullName: showTileBoundaries
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'showTileBoundaries?: boolean'
@@ -209,7 +233,6 @@ properties:
       default style is "road".
     fullName: style
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'style?: string'
@@ -222,7 +245,6 @@ properties:
     summary: ''
     fullName: userRegion
     remarks: ''
-    isPreview: false
     isDeprecated: true
     customDeprecatedMessage: use `view` instead.
     syntax:
@@ -246,14 +268,13 @@ properties:
       It is your responsibility to determine the location of your users, and
       then set the View parameter correctly for that location. The View
       parameter in Azure Maps must be used in compliance with applicable laws,
-      including those regarding mapping, of the country where maps, images and
-      other data and third party content that You are authorized to access via
-      Azure Maps is made available.
+      including those regarding mapping, of the country/region where maps,
+      images and other data and third party content that You are authorized to
+      access via Azure Maps is made available.
 
       default: `undefined`
     fullName: view
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'view?: string'

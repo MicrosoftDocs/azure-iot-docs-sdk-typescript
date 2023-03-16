@@ -5,7 +5,6 @@ package: azure-maps-spatial-io
 summary: A class that manages connections to an OGC Web Mapping Feature Service (WFS)
 fullName: WfsClient
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -16,7 +15,6 @@ constructors:
       A class for connecting to a OGC Web Feature Services (WFS). May require
       CORs or a proxy via transformRequest.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new WfsClient(options: WfsServiceOptions)'
@@ -33,7 +31,6 @@ methods:
       Retrieves details about one or more feature types. The order of the
       results may not align with input.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -58,7 +55,6 @@ methods:
 
       content, and acceptable request parameter values.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getCapabilities(): Promise<WfsCapabilities>'
@@ -74,7 +70,6 @@ methods:
       Retrieves the number of features that match the query. Sets the WFS
       `resultType` parameter to `"hits"`
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getFeatureCount(request: WfsFeatureRequest): Promise<number>'
@@ -93,7 +88,6 @@ methods:
       This may not include geometery information depending on filter parameters.
       Sets the WFS `resultType` parameter to `"results"`.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -115,7 +109,6 @@ methods:
       Sets the WFS `resultType` parameter to `"results"`.
       If geometry details are filtered out, null will be returned.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-

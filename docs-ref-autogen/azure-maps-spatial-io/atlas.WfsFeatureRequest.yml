@@ -5,7 +5,6 @@ package: azure-maps-spatial-io
 summary: Options for requesting features from a WFS service.
 fullName: WfsFeatureRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: Bounding Box limit. Must not be used with Filter.
     fullName: bbox
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'bbox?: azmaps.data.BoundingBox'
@@ -28,7 +26,6 @@ properties:
     summary: Number of features to retrieve when paging.
     fullName: count
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'count: number'
@@ -41,7 +38,6 @@ properties:
     summary: A custom CQL filter to append to the request.
     fullName: cql_filter
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'cql_filter?: string'
@@ -54,7 +50,6 @@ properties:
     summary: A key-value object containing additional parameters to append the request.
     fullName: customDimensions
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'customDimensions?: Record<string, string>'
@@ -72,7 +67,6 @@ properties:
        Default: 'urn:ogc:def:crs:EPSG::4326'
     fullName: fallbackSrs
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'fallbackSrs?: string'
@@ -85,7 +79,6 @@ properties:
     summary: The id of a feature to retrieve.
     fullName: featureId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'featureId?: string'
@@ -98,7 +91,6 @@ properties:
     summary: Filter condition. Must not be used with BBOX option.
     fullName: filter
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'filter?: Filter'
@@ -111,7 +103,6 @@ properties:
     summary: A comma delimited list of property names to return.
     fullName: propertyNames
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'propertyNames?: string'
@@ -124,7 +115,6 @@ properties:
     summary: Method describing how results should be sorted.
     fullName: sortBy
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'sortBy: string'
@@ -137,7 +127,6 @@ properties:
     summary: Start index to use for WFS paging.
     fullName: startIndex
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'startIndex: number'
@@ -150,7 +139,6 @@ properties:
     summary: The feature type names.
     fullName: typeNames
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'typeNames?: string | string[]'

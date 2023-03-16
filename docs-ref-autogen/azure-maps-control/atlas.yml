@@ -93,7 +93,6 @@ functions:
     package: azure-maps-control
     summary: Adds an image template to the atlas namespace.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -128,7 +127,6 @@ functions:
 
       in your application.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function clearPrewarmedResources()
@@ -139,7 +137,6 @@ functions:
       Retrieves an array of names for all image templates that are available in
       the atlas namespace.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getAllImageTemplateNames(): string[]'
@@ -153,7 +150,6 @@ functions:
       Gets the default authentication options that were provided.
       If not previously set all properties will be undefined.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getAuthenticationOptions(): AuthenticationOptions'
@@ -167,7 +163,6 @@ functions:
       Gets the default domain that was provided.
       If not previously set the default value is `"atlas.microsoft.com"`.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getDomain(): string'
@@ -179,7 +174,6 @@ functions:
     package: azure-maps-control
     summary: Retrieves an SVG template by name.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getImageTemplate(templateName: string, scale?: number): string'
@@ -204,7 +198,6 @@ functions:
       Gets the default language that was provided.
       If not previously set the default value is `"NGT"`.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getLanguage(): string'
@@ -218,7 +211,6 @@ functions:
       Gets the Maximum number of images (raster tiles, sprites, icons) to load
       in parallel
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getMaxParallelImageRequests(): number'
@@ -232,7 +224,6 @@ functions:
       Gets the default session id that was provided.
       If not previously set the default value is a random UUID.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getSessionId(): string'
@@ -244,7 +235,6 @@ functions:
     package: azure-maps-control
     summary: Gets the default Azure Maps subscription key that was provided.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getSubscriptionKey(): string'
@@ -256,7 +246,6 @@ functions:
     package: azure-maps-control
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: true
     customDeprecatedMessage: use atlas.getView() instead
     syntax:
@@ -269,7 +258,6 @@ functions:
     package: azure-maps-control
     summary: Current API version number based on build number.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getVersion(): string'
@@ -283,7 +271,6 @@ functions:
       Gets the default view setting of the map control.
       If not previously set the default value is `undefined`.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getView(): string'
@@ -295,7 +282,6 @@ functions:
     package: azure-maps-control
     summary: Gets the worker count that will get created.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getWorkerCount(): number'
@@ -307,7 +293,6 @@ functions:
     package: azure-maps-control
     summary: Checks to see if the user's browser is supported by the map control.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function isSupported(failIfMajorPerformanceCaveat?: boolean): boolean'
@@ -363,7 +348,6 @@ functions:
 
       created and destroyed.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function prewarm()
@@ -383,7 +367,6 @@ functions:
       setAuthenticationOptions hasn't previously been called it will
       automatically be called by the Map constructor.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setAuthenticationOptions(options: AuthenticationOptions)'
@@ -407,7 +390,6 @@ functions:
 
       If the protocol is not specified `https` is assumed.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setDomain(domain: string)'
@@ -429,7 +411,6 @@ functions:
       setLanguage hasn't previously been called it will automatically be called
       by the Map constructor.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setLanguage(language: string)'
@@ -447,7 +428,6 @@ functions:
 
       which affects performance in raster-heavy maps. 16 by default.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setMaxParallelImageRequests(maxParallelImageRequests: number)'
@@ -469,7 +449,6 @@ functions:
       setSessionId hasn't previously been called it will automatically be called
       by the Map constructor.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setSessionId(id: string)'
@@ -493,7 +472,6 @@ functions:
       setSubscriptionKey hasn't previously been called it will automatically be
       called by the Map constructor.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setSubscriptionKey(key: string)'
@@ -507,7 +485,6 @@ functions:
     package: azure-maps-control
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: true
     customDeprecatedMessage: 'use atlas.setView(view: string) instead.'
     syntax:
@@ -532,11 +509,10 @@ functions:
       It is your responsibility to determine the location of your users, and
       then set the View parameter correctly for that location. The View
       parameter in Azure Maps must be used in compliance with applicable laws,
-      including those regarding mapping, of the country where maps, images and
-      other data and third party content that You are authorized to access via
-      Azure Maps is made available.
+      including those regarding mapping, of the country/region where maps,
+      images and other data and third party content that You are authorized to
+      access via Azure Maps is made available.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setView(view: string)'
@@ -552,7 +528,6 @@ functions:
       Sets number of web workers instantiated on a page.
       By default, it is set to half the number of CPU cores (capped at 6).
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setWorkerCount(workerCount: number)'

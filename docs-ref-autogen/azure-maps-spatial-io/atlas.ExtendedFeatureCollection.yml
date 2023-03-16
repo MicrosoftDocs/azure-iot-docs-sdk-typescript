@@ -5,7 +5,6 @@ package: azure-maps-spatial-io
 summary: A Feature Collection that has properties for the collection.
 fullName: ExtendedFeatureCollection
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: Properties of the feature collection.
     fullName: properties
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'properties?: any'
@@ -29,7 +27,6 @@ inheritedProperties:
     summary: The bounding box of the feature collection.
     fullName: bbox
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'bbox?: BoundingBox'
@@ -43,7 +40,6 @@ inheritedProperties:
     summary: The collection of GeoJSON features contained in the feature collection.
     fullName: features
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'features: Array<Feature<Geometry, any>>'
@@ -57,7 +53,6 @@ inheritedProperties:
     summary: A GeoJSON type descriptor with value "FeatureCollection".
     fullName: type
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'type: string'
@@ -73,7 +68,6 @@ inheritedProperties:
       used in runtime comparisons.
     fullName: TYPE
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static TYPE: string'

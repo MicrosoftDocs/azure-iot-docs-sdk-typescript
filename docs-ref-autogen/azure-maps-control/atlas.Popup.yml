@@ -5,7 +5,6 @@ package: azure-maps-control
 summary: An information window anchored at a specified position on a map.
 fullName: Popup
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +13,6 @@ constructors:
     package: azure-maps-control
     summary: Constructs a Popup object and initializes it with the specified options.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new Popup(options?: PopupOptions)'
@@ -30,7 +28,6 @@ properties:
     summary: Attaches the popup to the HTML document in a hidden state.
     fullName: attach
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'attach: (map: Map) => void'
@@ -45,7 +42,6 @@ properties:
       document.
     fullName: close
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'close: () => void'
@@ -58,7 +54,6 @@ properties:
     summary: 'Returns true if the popup is currently open, otherwise false.'
     fullName: isOpen
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'isOpen: () => boolean'
@@ -71,7 +66,6 @@ properties:
     summary: Opens the popup.
     fullName: open
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'open: (map?: Map) => void'
@@ -84,7 +78,6 @@ properties:
     summary: Closes the popup on the map and removes it from the HTML document.
     fullName: remove
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'remove: () => void'
@@ -97,7 +90,6 @@ methods:
     package: azure-maps-control
     summary: Returns the options for the popup.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getOptions(): PopupOptions'
@@ -109,7 +101,6 @@ methods:
     package: azure-maps-control
     summary: Returns popup container element.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getPopupContainer(): HTMLElement'
@@ -121,7 +112,6 @@ methods:
     package: azure-maps-control
     summary: Returns the options for the popup.
     remarks: ''
-    isPreview: false
     isDeprecated: true
     customDeprecatedMessage: Use getOptions() instead.
     syntax:
@@ -134,7 +124,6 @@ methods:
     package: azure-maps-control
     summary: Sets the options for the popup.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setOptions(options?: PopupOptions)'
@@ -148,7 +137,6 @@ methods:
     package: azure-maps-control
     summary: Sets the options for the popup.
     remarks: ''
-    isPreview: false
     isDeprecated: true
     customDeprecatedMessage: Use setOptions(...) instead.
     syntax:

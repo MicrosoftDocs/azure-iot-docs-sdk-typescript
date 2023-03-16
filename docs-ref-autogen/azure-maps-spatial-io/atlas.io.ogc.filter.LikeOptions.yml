@@ -5,7 +5,6 @@ package: azure-maps-spatial-io
 summary: Options for a Like filter.
 fullName: LikeOptions
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: ''
     fullName: escapeChar
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'escapeChar?: string'
@@ -28,7 +26,6 @@ properties:
     summary: ''
     fullName: singleChar
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'singleChar?: string'
@@ -41,7 +38,6 @@ properties:
     summary: ''
     fullName: wildCard
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'wildCard?: string'
@@ -55,7 +51,6 @@ inheritedProperties:
     summary: ''
     fullName: matchAction
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'matchAction?: "Any" | "All" | "One"'
@@ -64,14 +59,13 @@ inheritedProperties:
         type: '"Any" | "All" | "One"'
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [BinaryComparisonOptions.matchAction](xref:BinaryComparisonOptions.matchAction)
+      [BinaryComparisonOptions.matchAction](xref:azure-maps-spatial-io.atlas.io.ogc.filter.BinaryComparisonOptions.matchAction)
   - name: matchCase
     uid: azure-maps-spatial-io.atlas.io.ogc.filter.LikeOptions.matchCase
     package: azure-maps-spatial-io
     summary: ''
     fullName: matchCase
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'matchCase?: boolean'
@@ -80,7 +74,7 @@ inheritedProperties:
         type: boolean
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [BinaryComparisonOptions.matchCase](xref:BinaryComparisonOptions.matchCase)
+      [BinaryComparisonOptions.matchCase](xref:azure-maps-spatial-io.atlas.io.ogc.filter.BinaryComparisonOptions.matchCase)
 extends: >-
   <xref uid="azure-maps-spatial-io.atlas.io.ogc.filter.BinaryComparisonOptions"
   />

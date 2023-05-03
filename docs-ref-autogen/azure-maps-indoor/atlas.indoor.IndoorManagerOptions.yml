@@ -8,6 +8,34 @@ remarks: ''
 isDeprecated: false
 type: class
 properties:
+  - name: autofocus
+    uid: azure-maps-indoor.atlas.indoor.IndoorManagerOptions.autofocus
+    package: azure-maps-indoor
+    summary: >-
+      Automatically focus the camera on indoor facilities once the indoor is
+      loaded.
+    fullName: autofocus
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'autofocus?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: autofocusOptions
+    uid: azure-maps-indoor.atlas.indoor.IndoorManagerOptions.autofocusOptions
+    package: azure-maps-indoor
+    summary: Options for the camera automatic focus.
+    fullName: autofocusOptions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'autofocusOptions?: azmaps.CameraBoundsOptions & azmaps.AnimationOptions'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azmaps.CameraBoundsOptions" /> & <xref
+          uid="azmaps.AnimationOptions" />
   - name: geography
     uid: azure-maps-indoor.atlas.indoor.IndoorManagerOptions.geography
     package: azure-maps-indoor
@@ -38,17 +66,24 @@ properties:
   - name: statesetId
     uid: azure-maps-indoor.atlas.indoor.IndoorManagerOptions.statesetId
     package: azure-maps-indoor
-    summary: |-
-      The state set id to pass with requests.
+    summary: >-
+      The state set id or a state set id mapping used for dynamic styling.
+
+      When using map configuration with multiple indoor tilesets, pass a mapping
+      of tileset id to state set id.
+
+      When provided, calling setDynamicStyling(true) will enable dynamic
+      styling.
+
       default: `undefined`
     fullName: statesetId
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'statesetId?: string'
+      content: 'statesetId?: string | [key: string]: string'
       return:
         description: ''
-        type: string
+        type: 'string | [key: string]: string'
   - name: theme
     uid: azure-maps-indoor.atlas.indoor.IndoorManagerOptions.theme
     package: azure-maps-indoor

@@ -161,12 +161,20 @@ methods:
     uid: azure-maps-control.atlas.Map.clear
     package: azure-maps-control
     summary: |-
-      Removes all user added sources, layers, markers, and popups from the map.
+      Removes all sources, layers, markers, and popups from the map.
       User added images are preserved.
     remarks: ''
     isDeprecated: false
     syntax:
       content: function clear()
+  - name: disableElevation()
+    uid: azure-maps-control.atlas.Map.disableElevation
+    package: azure-maps-control
+    summary: Disables the 3D terrain mesh.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function disableElevation()
   - name: dispose()
     uid: azure-maps-control.atlas.Map.dispose
     package: azure-maps-control
@@ -177,6 +185,26 @@ methods:
     isDeprecated: false
     syntax:
       content: function dispose()
+  - name: 'enableElevation(string | ElevationTileSource, number)'
+    uid: azure-maps-control.atlas.Map.enableElevation
+    package: azure-maps-control
+    summary: 'Loads a 3D terrain mesh, based on a "raster-dem" source.'
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function enableElevation(elevationSource: string | ElevationTileSource,
+        exaggeration?: number)
+      parameters:
+        - id: elevationSource
+          type: >-
+            string | <xref
+            uid="azure-maps-control.atlas.source.ElevationTileSource" />
+          description: elevation tile source
+        - id: exaggeration
+          type: number
+          description: |
+            the elevation exaggeration factor
   - name: getCamera()
     uid: azure-maps-control.atlas.Map.getCamera
     package: azure-maps-control

@@ -66,6 +66,20 @@ properties:
       return:
         description: ''
         type: number
+  - name: clusterMinPoints
+    uid: azure-maps-control.atlas.DataSourceOptions.clusterMinPoints
+    package: azure-maps-control
+    summary: >-
+      Minimum number of points necessary to form a cluster if clustering is
+      enabled.
+    fullName: clusterMinPoints
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'clusterMinPoints?: number | undefined'
+      return:
+        description: ''
+        type: number | undefined
   - name: clusterProperties
     uid: azure-maps-control.atlas.DataSourceOptions.clusterProperties
     package: azure-maps-control
@@ -97,6 +111,35 @@ properties:
       return:
         description: ''
         type: number
+  - name: filter
+    uid: azure-maps-control.atlas.DataSourceOptions.filter
+    package: azure-maps-control
+    summary: >-
+      An expression for filtering features prior to processing them for
+      rendering.
+    fullName: filter
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'filter?: any'
+      return:
+        description: ''
+        type: any
+  - name: generateId
+    uid: azure-maps-control.atlas.DataSourceOptions.generateId
+    package: azure-maps-control
+    summary: >-
+      Whether to generate ids for the geojson features. When enabled, the
+      feature.id property will be auto assigned based on its index in the
+      features array, over-writing any previous values.
+    fullName: generateId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'generateId?: boolean | undefined'
+      return:
+        description: ''
+        type: boolean | undefined
   - name: lineMetrics
     uid: azure-maps-control.atlas.DataSourceOptions.lineMetrics
     package: azure-maps-control
@@ -128,6 +171,20 @@ properties:
       return:
         description: ''
         type: number
+  - name: promoteId
+    uid: azure-maps-control.atlas.DataSourceOptions.promoteId
+    package: azure-maps-control
+    summary: >-
+      A property to use as a feature id (for feature state). Either a property
+      name, or an object of the form {<sourceLayer>: <propertyName>}.
+    fullName: promoteId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'promoteId?: [key: string]: string | string | undefined'
+      return:
+        description: ''
+        type: '[key: string]\: string | string | undefined'
   - name: tolerance
     uid: azure-maps-control.atlas.DataSourceOptions.tolerance
     package: azure-maps-control

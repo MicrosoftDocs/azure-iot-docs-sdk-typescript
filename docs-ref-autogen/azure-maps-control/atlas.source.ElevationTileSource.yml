@@ -1,0 +1,60 @@
+### YamlMime:TSType
+name: ElevationTileSource
+uid: azure-maps-control.atlas.source.ElevationTileSource
+package: azure-maps-control
+summary: >-
+  Elevation tile source describes how to access elevation (raster DEM) tile
+  data.
+
+  It can then be used to enable map elevation via
+  `map.enableElevation(elevationSource)`
+fullName: ElevationTileSource<T>
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: 'ElevationTileSource(string, ElevationTileSourceOptions)'
+    uid: azure-maps-control.atlas.source.ElevationTileSource.constructor
+    package: azure-maps-control
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new ElevationTileSource(id?: string, options?:
+        ElevationTileSourceOptions)
+      parameters:
+        - id: id
+          type: string
+          description: ''
+        - id: options
+          type: <xref uid="azure-maps-control.atlas.ElevationTileSourceOptions" />
+          description: ''
+inheritedMethods:
+  - name: getId()
+    uid: azure-maps-control.atlas.source.ElevationTileSource.getId
+    package: azure-maps-control
+    summary: Gets the id of the data source
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getId(): string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Source.getId](xref:azure-maps-control.atlas.source.Source.getId)
+methods:
+  - name: getOptions()
+    uid: azure-maps-control.atlas.source.ElevationTileSource.getOptions
+    package: azure-maps-control
+    summary: Gets the options of the ElevationTileSource.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getOptions(): ElevationTileSourceOptions'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.atlas.ElevationTileSourceOptions" />
+extends: <xref uid="azure-maps-control.atlas.source.Source" />

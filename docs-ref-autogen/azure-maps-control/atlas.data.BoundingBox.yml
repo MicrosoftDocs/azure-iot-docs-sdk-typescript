@@ -789,7 +789,7 @@ methods:
         type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
   - name: >-
       fromData(FeatureCollection | Feature<Geometry, any> | Geometry | Shape |
-      Array<FeatureCollection | Feature<Geometry, any> | Geometry>)
+      Array<FeatureCollection | Feature<Geometry, any> | Geometry | Shape>)
     uid: azure-maps-control.atlas.data.BoundingBox.fromData
     package: azure-maps-control
     summary: >-
@@ -801,7 +801,7 @@ methods:
       content: >-
         static function fromData(data: FeatureCollection | Feature<Geometry,
         any> | Geometry | Shape | Array<FeatureCollection | Feature<Geometry,
-        any> | Geometry>): BoundingBox
+        any> | Geometry | Shape>): BoundingBox
       parameters:
         - id: data
           type: >-
@@ -813,7 +813,8 @@ methods:
             uid="azure-maps-control.atlas.data.FeatureCollection" /> | <xref
             uid="azure-maps-control.atlas.data.Feature" />&lt;<xref
             uid="azure-maps-control.atlas.data.Geometry" />, any&gt; | <xref
-            uid="azure-maps-control.atlas.data.Geometry" />&gt;
+            uid="azure-maps-control.atlas.data.Geometry" /> | <xref
+            uid="azure-maps-control.atlas.Shape" />&gt;
           description: >-
             The FeatureCollection, Feature, Geometry, Shape or array of these
             objects to calculate the bounding box for.

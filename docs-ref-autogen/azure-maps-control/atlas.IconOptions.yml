@@ -65,14 +65,14 @@ properties:
     isDeprecated: false
     syntax:
       content: >-
-        anchor?: "center" | "left" | "right" | "top" | "bottom" | "top-left" |
-        "top-right" | "bottom-left" | "bottom-right" | Expression
+        anchor?: PositionAnchor |
+        DataDrivenPropertyValueSpecification<PositionAnchor>
       return:
         description: ''
         type: >-
-          "center" | "left" | "right" | "top" | "bottom" | "top-left" |
-          "top-right" | "bottom-left" | "bottom-right" | <xref
-          uid="azure-maps-control.atlas.Expression" />
+          <xref uid="azure-maps-control.PositionAnchor" /> |
+          DataDrivenPropertyValueSpecification&lt;<xref
+          uid="azure-maps-control.PositionAnchor" />&gt;
   - name: ignorePlacement
     uid: azure-maps-control.atlas.IconOptions.ignorePlacement
     package: azure-maps-control
@@ -108,10 +108,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'image?: string | Expression'
+      content: 'image?: string | DataDrivenPropertyValueSpecification<string>'
       return:
         description: ''
-        type: string | <xref uid="azure-maps-control.atlas.Expression" />
+        type: string | DataDrivenPropertyValueSpecification&lt;string&gt;
   - name: offset
     uid: azure-maps-control.atlas.IconOptions.offset
     package: azure-maps-control
@@ -132,12 +132,13 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'offset?: Pixel | Expression'
+      content: 'offset?: Pixel | DataDrivenPropertyValueSpecification<Pixel>'
       return:
         description: ''
         type: >-
-          <xref uid="azure-maps-control.atlas.Pixel" /> | <xref
-          uid="azure-maps-control.atlas.Expression" />
+          <xref uid="azure-maps-control.atlas.Pixel" /> |
+          DataDrivenPropertyValueSpecification&lt;<xref
+          uid="azure-maps-control.atlas.Pixel" />&gt;
   - name: opacity
     uid: azure-maps-control.atlas.IconOptions.opacity
     package: azure-maps-control
@@ -150,10 +151,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'opacity?: number | Expression'
+      content: 'opacity?: number | DataDrivenPropertyValueSpecification<number>'
       return:
         description: ''
-        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        type: number | DataDrivenPropertyValueSpecification&lt;number&gt;
   - name: optional
     uid: azure-maps-control.atlas.IconOptions.optional
     package: azure-maps-control
@@ -186,10 +187,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'padding?: number | Expression'
+      content: 'padding?: number | DataDrivenPropertyValueSpecification<number>'
       return:
         description: ''
-        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        type: number | DataDrivenPropertyValueSpecification&lt;number&gt;
   - name: pitchAlignment
     uid: azure-maps-control.atlas.IconOptions.pitchAlignment
     package: azure-maps-control
@@ -217,10 +218,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'rotation?: number | Expression'
+      content: 'rotation?: number | DataDrivenPropertyValueSpecification<number>'
       return:
         description: ''
-        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        type: number | DataDrivenPropertyValueSpecification&lt;number&gt;
   - name: rotationAlignment
     uid: azure-maps-control.atlas.IconOptions.rotationAlignment
     package: azure-maps-control
@@ -260,8 +261,8 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'size?: number | Expression'
+      content: 'size?: number | DataDrivenPropertyValueSpecification<number>'
       return:
         description: ''
-        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        type: number | DataDrivenPropertyValueSpecification&lt;number&gt;
 extends: <xref uid="azure-maps-control.atlas.Options" />

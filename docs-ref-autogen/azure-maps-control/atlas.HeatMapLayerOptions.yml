@@ -41,10 +41,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'intensity?: number | Expression'
+      content: 'intensity?: number | PropertyValueSpecification<number>'
       return:
         description: ''
-        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        type: number | PropertyValueSpecification&lt;number&gt;
   - name: opacity
     uid: azure-maps-control.atlas.HeatMapLayerOptions.opacity
     package: azure-maps-control
@@ -57,10 +57,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'opacity?: number | Expression'
+      content: 'opacity?: number | PropertyValueSpecification<number>'
       return:
         description: ''
-        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        type: number | PropertyValueSpecification&lt;number&gt;
   - name: radius
     uid: azure-maps-control.atlas.HeatMapLayerOptions.radius
     package: azure-maps-control
@@ -72,10 +72,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'radius?: number | Expression'
+      content: 'radius?: number | PropertyValueSpecification<number>'
       return:
         description: ''
-        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        type: number | PropertyValueSpecification&lt;number&gt;
   - name: source
     uid: azure-maps-control.atlas.HeatMapLayerOptions.source
     package: azure-maps-control
@@ -123,10 +123,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'weight?: number | Expression'
+      content: 'weight?: number | PropertyValueSpecification<number>'
       return:
         description: ''
-        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        type: number | PropertyValueSpecification&lt;number&gt;
 inheritedProperties:
   - name: filter
     uid: azure-maps-control.atlas.HeatMapLayerOptions.filter

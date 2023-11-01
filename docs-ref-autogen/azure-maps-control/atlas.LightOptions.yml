@@ -42,10 +42,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'color?: string | Expression'
+      content: 'color?: string | DataDrivenPropertyValueSpecification<string>'
       return:
         description: ''
-        type: string | <xref uid="azure-maps-control.atlas.Expression" />
+        type: string | DataDrivenPropertyValueSpecification&lt;string&gt;
   - name: intensity
     uid: azure-maps-control.atlas.LightOptions.intensity
     package: azure-maps-control
@@ -57,10 +57,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'intensity?: number | Expression'
+      content: 'intensity?: number | DataDrivenPropertyValueSpecification<number>'
       return:
         description: ''
-        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        type: number | DataDrivenPropertyValueSpecification&lt;number&gt;
   - name: position
     uid: azure-maps-control.atlas.LightOptions.position
     package: azure-maps-control

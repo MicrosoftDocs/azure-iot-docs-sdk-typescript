@@ -35,10 +35,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'lineSpacing?: number | Expression'
+      content: 'lineSpacing?: number | PropertyValueSpecification<number>'
       return:
         description: ''
-        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        type: number | PropertyValueSpecification&lt;number&gt;
   - name: placement
     uid: azure-maps-control.atlas.SymbolLayerOptions.placement
     package: azure-maps-control
@@ -77,10 +77,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'sortKey?: number | Expression'
+      content: 'sortKey?: number | DataDrivenPropertyValueSpecification<number>'
       return:
         description: ''
-        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        type: number | DataDrivenPropertyValueSpecification&lt;number&gt;
   - name: source
     uid: azure-maps-control.atlas.SymbolLayerOptions.source
     package: azure-maps-control

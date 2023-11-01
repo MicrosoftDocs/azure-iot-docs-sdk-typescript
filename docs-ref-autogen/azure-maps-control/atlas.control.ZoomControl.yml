@@ -53,21 +53,6 @@ inheritedMethods:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [ControlBase.buildContainer](xref:azure-maps-control.atlas.control.ControlBase.buildContainer)
-  - name: onRemove()
-    uid: azure-maps-control.atlas.control.ZoomControl.onRemove
-    package: azure-maps-control
-    summary: >-
-      Method that is called when the control is removed from the map. Should
-      perform any necessary cleanup for the
-
-      control.
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: function onRemove()
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [ControlBase.onRemove](xref:azure-maps-control.atlas.control.ControlBase.onRemove)
 methods:
   - name: onAdd(Map)
     uid: azure-maps-control.atlas.control.ZoomControl.onAdd
@@ -86,4 +71,12 @@ methods:
       return:
         description: An HTMLElement to be placed on the map for the control.
         type: HTMLElement
+  - name: onRemove()
+    uid: azure-maps-control.atlas.control.ZoomControl.onRemove
+    package: azure-maps-control
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function onRemove()
 extends: <xref uid="azure-maps-control.atlas.control.ControlBase" />

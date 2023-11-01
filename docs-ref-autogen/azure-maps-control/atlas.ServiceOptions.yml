@@ -33,7 +33,7 @@ properties:
     summary: |-
       Disable telemetry collection
       This option may only be set when initializing the map.
-      default: false
+      default: false (true for the Azure Government cloud)
     fullName: disableTelemetry
     remarks: ''
     isDeprecated: false
@@ -235,6 +235,22 @@ properties:
       return:
         description: ''
         type: '(url: string, resourceType: ResourceType) =&gt; RequestParameters'
+  - name: validateStyle
+    uid: azure-maps-control.atlas.ServiceOptions.validateStyle
+    package: azure-maps-control
+    summary: >-
+      True to validate styles before it's getting applied.
+
+      Validation takes significant(few hundred ms) time to process styles during
+      initial load.
+    fullName: validateStyle
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'validateStyle?: boolean'
+      return:
+        description: ''
+        type: boolean
   - name: workerCount
     uid: azure-maps-control.atlas.ServiceOptions.workerCount
     package: azure-maps-control

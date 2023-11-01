@@ -59,7 +59,7 @@ properties:
     uid: azure-maps-control.atlas.AuthenticationOptions.authContext
     package: azure-maps-control
     summary: >-
-      Optionally provide an existing `AuthenticationContext` from the ADAL.js
+      Optionally provide an existing `PublicClientApplication` from the MSAL.js
       library.
 
       This authentication context will be used to acquire the AAD token.
@@ -75,10 +75,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'authContext?: AuthenticationContext'
+      content: 'authContext?: PublicClientApplication'
       return:
         description: ''
-        type: AuthenticationContext
+        type: PublicClientApplication
   - name: authType
     uid: azure-maps-control.atlas.AuthenticationOptions.authType
     package: azure-maps-control
@@ -150,7 +150,7 @@ properties:
         description: ''
         type: string
 methods:
-  - name: 'setAadProperties(string, string, string, string, AuthenticationContext)'
+  - name: 'setAadProperties(string, string, string, string, PublicClientApplication)'
     uid: azure-maps-control.atlas.AuthenticationOptions.setAadProperties
     package: azure-maps-control
     summary: >-
@@ -161,7 +161,7 @@ methods:
     syntax:
       content: >-
         function setAadProperties(clientId: string, aadAppId: string, aadTenant:
-        string, aadInstance?: string, authContext?: AuthenticationContext)
+        string, aadInstance?: string, authContext?: PublicClientApplication)
       parameters:
         - id: clientId
           type: string
@@ -176,9 +176,9 @@ methods:
           type: string
           description: An optional Azure AD Instance
         - id: authContext
-          type: AuthenticationContext
+          type: PublicClientApplication
           description: |
-            An optional `AuthenticationContext` from the ADAL.js library
+            An optional `PublicClientApplication` from the MSAL.js library
   - name: setSasCallbackFunction(getAuthTokenCallback)
     uid: azure-maps-control.atlas.AuthenticationOptions.setSasCallbackFunction
     package: azure-maps-control

@@ -20,10 +20,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'fillColor?: string | Expression'
+      content: 'fillColor?: string | DataDrivenPropertyValueSpecification<string>'
       return:
         description: ''
-        type: string | <xref uid="azure-maps-control.atlas.Expression" />
+        type: string | DataDrivenPropertyValueSpecification&lt;string&gt;
   - name: fillOpacity
     uid: azure-maps-control.atlas.PolygonLayerOptions.fillOpacity
     package: azure-maps-control
@@ -36,10 +36,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'fillOpacity?: number | Expression'
+      content: 'fillOpacity?: number | DataDrivenPropertyValueSpecification<number>'
       return:
         description: ''
-        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        type: number | DataDrivenPropertyValueSpecification&lt;number&gt;
   - name: fillPattern
     uid: azure-maps-control.atlas.PolygonLayerOptions.fillPattern
     package: azure-maps-control
@@ -50,10 +50,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'fillPattern?: string | Expression'
+      content: 'fillPattern?: string | DataDrivenPropertyValueSpecification<string>'
       return:
         description: ''
-        type: string | <xref uid="azure-maps-control.atlas.Expression" />
+        type: string | DataDrivenPropertyValueSpecification&lt;string&gt;
   - name: source
     uid: azure-maps-control.atlas.PolygonLayerOptions.source
     package: azure-maps-control

@@ -18,6 +18,7 @@ interfaces:
   - azure-maps-control.atlas.ControlManager
   - azure-maps-control.atlas.ControlOptions
   - azure-maps-control.atlas.DataSourceOptions
+  - azure-maps-control.atlas.ElevationTileSourceOptions
   - azure-maps-control.atlas.HeatMapLayerOptions
   - azure-maps-control.atlas.HtmlMarkerEvents
   - azure-maps-control.atlas.HtmlMarkerManager
@@ -51,6 +52,7 @@ interfaces:
   - azure-maps-control.atlas.PopupOptions
   - azure-maps-control.atlas.Properties
   - azure-maps-control.atlas.PropertyInfo
+  - azure-maps-control.atlas.RasterTileSourceOptions
   - azure-maps-control.atlas.RequestParameters
   - azure-maps-control.atlas.ServiceOptions
   - azure-maps-control.atlas.ShapeEvents
@@ -122,13 +124,14 @@ classes:
   - azure-maps-control.atlas.PopupTemplate
   - azure-maps-control.atlas.Shape
   - azure-maps-control.atlas.source.DataSource
+  - azure-maps-control.atlas.source.ElevationTileSource
   - azure-maps-control.atlas.source.Source
   - azure-maps-control.atlas.source.VectorTileSource
 typeAliases:
   - azure-maps-control.atlas.data.Geometry
   - azure-maps-control.atlas.Expression
-  - azure-maps-control.atlas.ExpressionName
   - azure-maps-control.atlas.getAuthTokenCallback
   - azure-maps-control.atlas.ResourceType
   - azure-maps-control.atlas.StyleImageMetadata
   - azure-maps-control.Position
+  - azure-maps-control.PositionAnchor

@@ -185,13 +185,22 @@ inheritedMethods:
     uid: azure-maps-indoor.atlas.indoor.IMap.clear
     package: azure-maps-indoor
     summary: |-
-      Removes all user added sources, layers, markers, and popups from the map.
+      Removes all sources, layers, markers, and popups from the map.
       User added images are preserved.
     remarks: ''
     isDeprecated: false
     syntax:
       content: function clear()
     inheritanceDescription: <b>Inherited From</b> Map.clear
+  - name: disableElevation()
+    uid: azure-maps-indoor.atlas.indoor.IMap.disableElevation
+    package: azure-maps-indoor
+    summary: Disables the 3D terrain mesh.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function disableElevation()
+    inheritanceDescription: <b>Inherited From</b> Map.disableElevation
   - name: dispose()
     uid: azure-maps-indoor.atlas.indoor.IMap.dispose
     package: azure-maps-indoor
@@ -203,6 +212,25 @@ inheritedMethods:
     syntax:
       content: function dispose()
     inheritanceDescription: <b>Inherited From</b> Map.dispose
+  - name: 'enableElevation(string | ElevationTileSource, number)'
+    uid: azure-maps-indoor.atlas.indoor.IMap.enableElevation
+    package: azure-maps-indoor
+    summary: 'Loads a 3D terrain mesh, based on a "raster-dem" source.'
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function enableElevation(elevationSource: string | ElevationTileSource,
+        exaggeration?: number)
+      parameters:
+        - id: elevationSource
+          type: string | ElevationTileSource
+          description: elevation tile source
+        - id: exaggeration
+          type: number
+          description: |
+            the elevation exaggeration factor
+    inheritanceDescription: <b>Inherited From</b> Map.enableElevation
   - name: getCamera()
     uid: azure-maps-indoor.atlas.indoor.IMap.getCamera
     package: azure-maps-indoor

@@ -79,6 +79,22 @@ properties:
       return:
         description: ''
         type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+  - name: maxPitch
+    uid: azure-maps-control.atlas.CameraOptions.maxPitch
+    package: azure-maps-control
+    summary: >-
+      The maximum pitch that the map can be pitched to during the animation.
+      Must be between 0 and 85, and greater than or equal to `minPitch`
+
+      Default `60`.
+    fullName: maxPitch
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'maxPitch?: number'
+      return:
+        description: ''
+        type: number
   - name: maxZoom
     uid: azure-maps-control.atlas.CameraOptions.maxZoom
     package: azure-maps-control
@@ -93,6 +109,22 @@ properties:
     isDeprecated: false
     syntax:
       content: 'maxZoom?: number'
+      return:
+        description: ''
+        type: number
+  - name: minPitch
+    uid: azure-maps-control.atlas.CameraOptions.minPitch
+    package: azure-maps-control
+    summary: >-
+      The minimum pitch that the map can be pitched to during the animation.
+      Must be between 0 and 85, and less than or equal to `maxPitch`.
+
+      Default `0`.
+    fullName: minPitch
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'minPitch?: number'
       return:
         description: ''
         type: number

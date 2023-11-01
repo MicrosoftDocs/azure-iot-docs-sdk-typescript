@@ -63,14 +63,14 @@ properties:
     isDeprecated: false
     syntax:
       content: >-
-        anchor?: "center" | "left" | "right" | "top" | "bottom" | "top-left" |
-        "top-right" | "bottom-left" | "bottom-right" | Expression
+        anchor?: PositionAnchor |
+        DataDrivenPropertyValueSpecification<PositionAnchor>
       return:
         description: ''
         type: >-
-          "center" | "left" | "right" | "top" | "bottom" | "top-left" |
-          "top-right" | "bottom-left" | "bottom-right" | <xref
-          uid="azure-maps-control.atlas.Expression" />
+          <xref uid="azure-maps-control.PositionAnchor" /> |
+          DataDrivenPropertyValueSpecification&lt;<xref
+          uid="azure-maps-control.PositionAnchor" />&gt;
   - name: color
     uid: azure-maps-control.atlas.TextOptions.color
     package: azure-maps-control
@@ -81,10 +81,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'color?: string | Expression'
+      content: 'color?: string | DataDrivenPropertyValueSpecification<string>'
       return:
         description: ''
-        type: string | <xref uid="azure-maps-control.atlas.Expression" />
+        type: string | DataDrivenPropertyValueSpecification&lt;string&gt;
   - name: font
     uid: azure-maps-control.atlas.TextOptions.font
     package: azure-maps-control
@@ -116,10 +116,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'font?: string[] | Expression'
+      content: 'font?: string[] | DataDrivenPropertyValueSpecification<string[]>'
       return:
         description: ''
-        type: 'string[] | <xref uid="azure-maps-control.atlas.Expression" />'
+        type: 'string[] | DataDrivenPropertyValueSpecification&lt;string[]&gt;'
   - name: haloBlur
     uid: azure-maps-control.atlas.TextOptions.haloBlur
     package: azure-maps-control
@@ -131,10 +131,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'haloBlur?: number | Expression'
+      content: 'haloBlur?: number | DataDrivenPropertyValueSpecification<number>'
       return:
         description: ''
-        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        type: number | DataDrivenPropertyValueSpecification&lt;number&gt;
   - name: haloColor
     uid: azure-maps-control.atlas.TextOptions.haloColor
     package: azure-maps-control
@@ -145,10 +145,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'haloColor?: string | Expression'
+      content: 'haloColor?: string | DataDrivenPropertyValueSpecification<string>'
       return:
         description: ''
-        type: string | <xref uid="azure-maps-control.atlas.Expression" />
+        type: string | DataDrivenPropertyValueSpecification&lt;string&gt;
   - name: haloWidth
     uid: azure-maps-control.atlas.TextOptions.haloWidth
     package: azure-maps-control
@@ -161,10 +161,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'haloWidth?: number | Expression'
+      content: 'haloWidth?: number | DataDrivenPropertyValueSpecification<number>'
       return:
         description: ''
-        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        type: number | DataDrivenPropertyValueSpecification&lt;number&gt;
   - name: ignorePlacement
     uid: azure-maps-control.atlas.TextOptions.ignorePlacement
     package: azure-maps-control
@@ -212,12 +212,13 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'offset?: Pixel | Expression'
+      content: 'offset?: Pixel | DataDrivenPropertyValueSpecification<Pixel>'
       return:
         description: ''
         type: >-
-          <xref uid="azure-maps-control.atlas.Pixel" /> | <xref
-          uid="azure-maps-control.atlas.Expression" />
+          <xref uid="azure-maps-control.atlas.Pixel" /> |
+          DataDrivenPropertyValueSpecification&lt;<xref
+          uid="azure-maps-control.atlas.Pixel" />&gt;
   - name: opacity
     uid: azure-maps-control.atlas.TextOptions.opacity
     package: azure-maps-control
@@ -230,10 +231,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'opacity?: number | Expression'
+      content: 'opacity?: number | DataDrivenPropertyValueSpecification<number>'
       return:
         description: ''
-        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        type: number | DataDrivenPropertyValueSpecification&lt;number&gt;
   - name: optional
     uid: azure-maps-control.atlas.TextOptions.optional
     package: azure-maps-control
@@ -264,10 +265,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'padding?: number | Expression'
+      content: 'padding?: number | PropertyValueSpecification<number>'
       return:
         description: ''
-        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        type: number | PropertyValueSpecification&lt;number&gt;
   - name: pitchAlignment
     uid: azure-maps-control.atlas.TextOptions.pitchAlignment
     package: azure-maps-control
@@ -300,10 +301,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'radialOffset?: number | Expression'
+      content: 'radialOffset?: number | DataDrivenPropertyValueSpecification<number>'
       return:
         description: ''
-        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        type: number | DataDrivenPropertyValueSpecification&lt;number&gt;
   - name: rotation
     uid: azure-maps-control.atlas.TextOptions.rotation
     package: azure-maps-control
@@ -314,10 +315,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'rotation?: number | Expression'
+      content: 'rotation?: number | DataDrivenPropertyValueSpecification<number>'
       return:
         description: ''
-        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        type: number | DataDrivenPropertyValueSpecification&lt;number&gt;
   - name: rotationAlignment
     uid: azure-maps-control.atlas.TextOptions.rotationAlignment
     package: azure-maps-control
@@ -362,10 +363,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'size?: number | Expression'
+      content: 'size?: number | DataDrivenPropertyValueSpecification<number>'
       return:
         description: ''
-        type: number | <xref uid="azure-maps-control.atlas.Expression" />
+        type: number | DataDrivenPropertyValueSpecification&lt;number&gt;
   - name: textField
     uid: azure-maps-control.atlas.TextOptions.textField
     package: azure-maps-control
@@ -374,10 +375,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'textField?: string | Expression'
+      content: 'textField?: string | DataDrivenPropertyValueSpecification<string>'
       return:
         description: ''
-        type: string | <xref uid="azure-maps-control.atlas.Expression" />
+        type: string | DataDrivenPropertyValueSpecification&lt;string&gt;
   - name: variableAnchor
     uid: azure-maps-control.atlas.TextOptions.variableAnchor
     package: azure-maps-control
@@ -425,12 +426,8 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: >-
-        variableAnchor?: ("center" | "left" | "right" | "top" | "bottom" |
-        "top-left" | "top-right" | "bottom-left" | "bottom-right")[]
+      content: 'variableAnchor?: PositionAnchor[]'
       return:
         description: ''
-        type: >-
-          ("center" | "left" | "right" | "top" | "bottom" | "top-left" |
-          "top-right" | "bottom-left" | "bottom-right")[]
+        type: '<xref uid="azure-maps-control.PositionAnchor" />[]'
 extends: <xref uid="azure-maps-control.atlas.Options" />

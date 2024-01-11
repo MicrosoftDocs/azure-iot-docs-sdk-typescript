@@ -131,7 +131,10 @@ methods:
   - name: setOptions(PolygonLayerOptions)
     uid: azure-maps-control.atlas.layer.PolygonLayer.setOptions
     package: azure-maps-control
-    summary: Sets the options of the polygon layer.
+    summary: |-
+      Sets the options of the polygon layer.
+      When `fillPattern` is set, `fillColor` will be ignored.
+      To set `fillColor`, make sure `fillPattern` is set to `undefined`.
     remarks: ''
     isDeprecated: false
     syntax:

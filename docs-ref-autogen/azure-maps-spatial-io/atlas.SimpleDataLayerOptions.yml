@@ -24,6 +24,21 @@ properties:
       return:
         description: ''
         type: boolean
+  - name: bubbleRadiusFactor
+    uid: azure-maps-spatial-io.atlas.SimpleDataLayerOptions.bubbleRadiusFactor
+    package: azure-maps-spatial-io
+    summary: |-
+      A numerical factor used to adjust the size of map bubbles dynamically.
+      It multiplies the original bubble size to determine the final size.
+      Default: `8`
+    fullName: bubbleRadiusFactor
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'bubbleRadiusFactor?: number'
+      return:
+        description: ''
+        type: number
   - name: enablePopups
     uid: azure-maps-spatial-io.atlas.SimpleDataLayerOptions.enablePopups
     package: azure-maps-spatial-io

@@ -53,6 +53,36 @@ methods:
       return:
         description: ''
         type: <xref uid="azure-maps-control.atlas.source.Source" />
+  - name: >-
+      getFeatureState(string | Shape | Feature<atlas.data.Geometry, any>, string
+      | Source, string)
+    uid: azure-maps-control.atlas.SourceManager.getFeatureState
+    package: azure-maps-control
+    summary: Gets the state of a feature
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getFeatureState(feature: string | Shape |
+        Feature<atlas.data.Geometry, any>, source: string | Source,
+        sourceLayer?: string): object
+      parameters:
+        - id: feature
+          type: >-
+            string | <xref uid="azure-maps-control.atlas.Shape" /> | <xref
+            uid="azure-maps-control.atlas.data.Feature" />&lt;<xref
+            uid="azure-maps-control.atlas.data.Geometry" />, any&gt;
+          description: the ID of the feature
+        - id: source
+          type: string | <xref uid="azure-maps-control.atlas.source.Source" />
+          description: the ID of the source
+        - id: sourceLayer
+          type: string
+          description: |
+            the ID of the layer
+      return:
+        description: ''
+        type: object
   - name: 'getRenderedShapes(string | Source, Expression, string)'
     uid: azure-maps-control.atlas.SourceManager.getRenderedShapes
     package: azure-maps-control
@@ -128,3 +158,62 @@ methods:
             />&gt;
           description: |+
 
+  - name: >-
+      removeFeatureState(string | Shape | Feature<atlas.data.Geometry, any>,
+      string | Source, string, string)
+    uid: azure-maps-control.atlas.SourceManager.removeFeatureState
+    package: azure-maps-control
+    summary: Removes the state or a single key value of the state of a feature.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function removeFeatureState(feature: string | Shape |
+        Feature<atlas.data.Geometry, any>, source: string | Source,
+        sourceLayer?: string, key?: string)
+      parameters:
+        - id: feature
+          type: >-
+            string | <xref uid="azure-maps-control.atlas.Shape" /> | <xref
+            uid="azure-maps-control.atlas.data.Feature" />&lt;<xref
+            uid="azure-maps-control.atlas.data.Geometry" />, any&gt;
+          description: the ID of the feature
+        - id: source
+          type: string | <xref uid="azure-maps-control.atlas.source.Source" />
+          description: the ID of the source
+        - id: sourceLayer
+          type: string
+          description: the ID of the layer
+        - id: key
+          type: string
+          description: |
+            the key in the feature state to update
+  - name: >-
+      setFeatureState(string | Shape | Feature<atlas.data.Geometry, any>, string
+      | Source, object, string)
+    uid: azure-maps-control.atlas.SourceManager.setFeatureState
+    package: azure-maps-control
+    summary: Sets the state of the feature by passing in a key value pair object.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function setFeatureState(feature: string | Shape |
+        Feature<atlas.data.Geometry, any>, source: string | Source, state:
+        object, sourceLayer?: string)
+      parameters:
+        - id: feature
+          type: >-
+            string | <xref uid="azure-maps-control.atlas.Shape" /> | <xref
+            uid="azure-maps-control.atlas.data.Feature" />&lt;<xref
+            uid="azure-maps-control.atlas.data.Geometry" />, any&gt;
+          description: the ID of the feature
+        - id: source
+          type: string | <xref uid="azure-maps-control.atlas.source.Source" />
+          description: the ID of the source
+        - id: state
+          type: object
+          description: ''
+        - id: sourceLayer
+          type: string
+          description: the ID of the layer

@@ -73,6 +73,26 @@ properties:
       return:
         description: ''
         type: boolean
+  - name: enableAccessibilityLocationFallback
+    uid: >-
+      azure-maps-control.atlas.ServiceOptions.enableAccessibilityLocationFallback
+    package: azure-maps-control
+    summary: >-
+      Enable the fallback to the REST API geocoder for detecting location
+      accessibility if extracting location from vector data fails.
+
+      Disabling this option will prevent the generation of geocode API requests
+      but may lead to a lack of location information for screen readers.
+
+      default: true
+    fullName: enableAccessibilityLocationFallback
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'enableAccessibilityLocationFallback?: boolean'
+      return:
+        description: ''
+        type: boolean
   - name: fadeDuration
     uid: azure-maps-control.atlas.ServiceOptions.fadeDuration
     package: azure-maps-control

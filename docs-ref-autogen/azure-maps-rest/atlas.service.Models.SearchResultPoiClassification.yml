@@ -1,0 +1,45 @@
+### YamlMime:TSType
+name: SearchResultPoiClassification
+uid: azure-maps-rest.atlas.service.Models.SearchResultPoiClassification
+package: azure-maps-rest
+summary: The classification for the POI being returned
+fullName: SearchResultPoiClassification
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: code
+    uid: azure-maps-rest.atlas.service.Models.SearchResultPoiClassification.code
+    package: azure-maps-rest
+    summary: >-
+      Code property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: code
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'code?: string'
+      return:
+        description: ''
+        type: string
+  - name: names
+    uid: azure-maps-rest.atlas.service.Models.SearchResultPoiClassification.names
+    package: azure-maps-rest
+    summary: >-
+      Names array
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: names
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'names?: SearchResultPoiClassificationName[]'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-maps-rest.atlas.service.Models.SearchResultPoiClassificationName"
+          />[]

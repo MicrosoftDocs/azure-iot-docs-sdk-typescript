@@ -3,14 +3,15 @@ uid: azure-maps-indoor
 name: azure-maps-indoor
 summary: ''
 type: package
-classes:
-  - azure-maps-indoor.export=.control.LevelControl
-  - azure-maps-indoor.export=.control.LevelControlOptions
-  - azure-maps-indoor.export=.indoor.IndoorManager
-  - azure-maps-indoor.export=.indoor.IndoorManagerOptions
 interfaces:
-  - azure-maps-indoor.export=.indoor.IFacilityChangeEvent
-  - azure-maps-indoor.export=.indoor.IIndoorManagerEvents
-  - azure-maps-indoor.export=.indoor.IIndoorReadyEvent
-  - azure-maps-indoor.export=.indoor.ILevelChangeEvent
-  - azure-maps-indoor.export=.indoor.IMap
+  - azure-maps-indoor.azure-maps-control.EventManager
+  - azure-maps-indoor.atlas.indoor.IFacilityChangeEvent
+  - azure-maps-indoor.atlas.indoor.IIndoorManagerEvents
+  - azure-maps-indoor.atlas.indoor.IIndoorReadyEvent
+  - azure-maps-indoor.atlas.indoor.ILevelChangeEvent
+  - azure-maps-indoor.atlas.indoor.IMap
+classes:
+  - azure-maps-indoor.atlas.control.LevelControl
+  - azure-maps-indoor.atlas.control.LevelControlOptions
+  - azure-maps-indoor.atlas.indoor.IndoorManager
+  - azure-maps-indoor.atlas.indoor.IndoorManagerOptions

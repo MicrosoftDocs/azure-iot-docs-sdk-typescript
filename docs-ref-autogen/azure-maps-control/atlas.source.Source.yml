@@ -1,0 +1,37 @@
+### YamlMime:TSType
+name: Source
+uid: azure-maps-control.atlas.source.Source
+package: azure-maps-control
+summary: |-
+  A base abstract class in which all other source objects extend.
+  A source must be added to a layer before it is visible on the map.
+fullName: Source<T>
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: Source(string)
+    uid: azure-maps-control.atlas.source.Source.constructor
+    package: azure-maps-control
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new Source(id?: string)'
+      parameters:
+        - id: id
+          type: string
+          description: ''
+methods:
+  - name: getId()
+    uid: azure-maps-control.atlas.source.Source.getId
+    package: azure-maps-control
+    summary: Gets the id of the data source
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getId(): string'
+      return:
+        description: ''
+        type: string
+extends: <xref uid="azure-maps-control.atlas.internal.EventEmitter" />&lt;T&gt;

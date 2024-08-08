@@ -1,0 +1,285 @@
+### YamlMime:TSType
+name: StyleOptions
+uid: azure-maps-control.atlas.StyleOptions
+package: azure-maps-control
+summary: The options for the map's style.
+fullName: StyleOptions
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: antialias
+    uid: azure-maps-control.atlas.StyleOptions.antialias
+    package: azure-maps-control
+    summary: >-
+      If true, the gl context will be created with MSAA antialiasing, which can
+      be useful for antialiasing WebGL layers.
+    fullName: antialias
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'antialias?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: autoResize
+    uid: azure-maps-control.atlas.StyleOptions.autoResize
+    package: azure-maps-control
+    summary: >-
+      If true the map will automatically resize whenever the window's size
+      changes.
+
+      Otherwise map.resize() must be called.
+
+      Default `true`.
+    fullName: autoResize
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'autoResize?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: language
+    uid: azure-maps-control.atlas.StyleOptions.language
+    package: azure-maps-control
+    summary: >-
+      The language of the map labels.
+
+      [Supported
+      language](https://docs.microsoft.com/en-us/azure/azure-maps/supported-languages).
+
+      Default `atlas.getLanguage()`.
+    fullName: language
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'language?: string'
+      return:
+        description: ''
+        type: string
+  - name: light
+    uid: azure-maps-control.atlas.StyleOptions.light
+    package: azure-maps-control
+    summary: Sets the lighting options of the map.
+    fullName: light
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'light?: LightOptions'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.atlas.LightOptions" />
+  - name: preserveDrawingBuffer
+    uid: azure-maps-control.atlas.StyleOptions.preserveDrawingBuffer
+    package: azure-maps-control
+    summary: >-
+      If true, the map's canvas can be exported to a PNG using
+      map.getCanvas().toDataURL().
+
+      This option may only be set when initializing the map.
+
+      Default `false`
+    fullName: preserveDrawingBuffer
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'preserveDrawingBuffer?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: progressiveLoading
+    uid: azure-maps-control.atlas.StyleOptions.progressiveLoading
+    package: azure-maps-control
+    summary: >-
+      If true, the map will try to defer non-essential map layers and show
+      essential layers as early as possible.
+
+      This option may only be set when initializing the map.
+
+      Default `false`
+    fullName: progressiveLoading
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'progressiveLoading?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: progressiveLoadingInitialLayerGroups
+    uid: azure-maps-control.atlas.StyleOptions.progressiveLoadingInitialLayerGroups
+    package: azure-maps-control
+    summary: >-
+      The list of layer groups to be loaded at the initial stage. Passing an
+      empty array will disable the progressive loading.
+
+      This option may only be set when initializing the map.
+
+      Default `['base']`
+    fullName: progressiveLoadingInitialLayerGroups
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'progressiveLoadingInitialLayerGroups?: string[]'
+      return:
+        description: ''
+        type: 'string[]'
+  - name: renderWorldCopies
+    uid: azure-maps-control.atlas.StyleOptions.renderWorldCopies
+    package: azure-maps-control
+    summary: >-
+      Specifies if multiple copies of the world should be rendered when zoomed
+      out.
+
+      Default `true`
+    fullName: renderWorldCopies
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'renderWorldCopies?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: showBuildingModels
+    uid: azure-maps-control.atlas.StyleOptions.showBuildingModels
+    package: azure-maps-control
+    summary: |-
+      Specifies if buildings will be rendered with their models.
+      If false all buildings will be rendered as just their footprints.
+      Default `false`
+    fullName: showBuildingModels
+    remarks: ''
+    isDeprecated: true
+    customDeprecatedMessage: ''
+    syntax:
+      content: 'showBuildingModels?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: showFeedbackLink
+    uid: azure-maps-control.atlas.StyleOptions.showFeedbackLink
+    package: azure-maps-control
+    summary: |-
+      Specifies if the feedback link should be displayed on the map or not.
+      Default `true`
+    fullName: showFeedbackLink
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'showFeedbackLink?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: showLabels
+    uid: azure-maps-control.atlas.StyleOptions.showLabels
+    package: azure-maps-control
+    summary: Specifies if the map should display labels
+    fullName: showLabels
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'showLabels?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: showLogo
+    uid: azure-maps-control.atlas.StyleOptions.showLogo
+    package: azure-maps-control
+    summary: |-
+      Specifies if the Microsoft logo should be hidden or not.
+      If set to true a Microsoft copyright string will be added to the map.
+      Default `true`
+    fullName: showLogo
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'showLogo?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: showTileBoundaries
+    uid: azure-maps-control.atlas.StyleOptions.showTileBoundaries
+    package: azure-maps-control
+    summary: >-
+      Specifies if the map should render an outline around each tile and the
+      tile ID.
+
+      These tile boundaries are useful for debugging.
+
+      The uncompressed file size of the first vector source is drawn in the top
+      left corner of each tile,
+
+      next to the tile ID.
+
+      Default `false`
+    fullName: showTileBoundaries
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'showTileBoundaries?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: style
+    uid: azure-maps-control.atlas.StyleOptions.style
+    package: azure-maps-control
+    summary: >-
+      The name of the style to use when rendering the map. Available styles can
+      be found in the
+
+      [supported
+      styles](https://docs.microsoft.com/en-us/azure/azure-maps/supported-map-styles)
+      article. The
+
+      default style is "road".
+    fullName: style
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'style?: string'
+      return:
+        description: ''
+        type: string
+  - name: userRegion
+    uid: azure-maps-control.atlas.StyleOptions.userRegion
+    package: azure-maps-control
+    summary: ''
+    fullName: userRegion
+    remarks: ''
+    isDeprecated: true
+    customDeprecatedMessage: use `view` instead.
+    syntax:
+      content: 'userRegion?: string'
+      return:
+        description: ''
+        type: string
+  - name: view
+    uid: azure-maps-control.atlas.StyleOptions.view
+    package: azure-maps-control
+    summary: >-
+      Specifies which set of geopolitically disputed borders and labels are
+      displayed on the map. The View parameter (also referred to as “user region
+      parameter”) is a 2-letter ISO-3166 Country Code that will show the correct
+      maps for that country/region. Country/Regions that are not on the View
+      list or if unspecified will default to the “Unified” View.
+
+      Please see the supported
+      [Views](https://aka.ms/AzureMapsLocalizationViews)
+
+      It is your responsibility to determine the location of your users, and
+      then set the View parameter correctly for that location. The View
+      parameter in Azure Maps must be used in compliance with applicable laws,
+      including those regarding mapping, of the country where maps, images and
+      other data and third party content that You are authorized to access via
+      Azure Maps is made available.
+
+      default: `undefined`
+    fullName: view
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'view?: string'
+      return:
+        description: ''
+        type: string
+extends: <xref uid="azure-maps-control.atlas.Options" />

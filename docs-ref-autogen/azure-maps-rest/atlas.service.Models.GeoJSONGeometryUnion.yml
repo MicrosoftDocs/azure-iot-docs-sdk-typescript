@@ -1,0 +1,17 @@
+### YamlMime:TSTypeAlias
+name: GeoJSONGeometryUnion
+uid: azure-maps-rest.atlas.service.Models.GeoJSONGeometryUnion
+package: azure-maps-rest
+summary: Contains the possible cases for GeoJSONGeometry.
+fullName: GeoJSONGeometryUnion
+remarks: ''
+isDeprecated: false
+syntax: |
+  type GeoJSONGeometryUnion =
+    | GeoJSONGeometry
+    | LineString
+    | MultiPoint
+    | Point
+    | MultiPolygon
+    | Polygon
+    | MultiLineString

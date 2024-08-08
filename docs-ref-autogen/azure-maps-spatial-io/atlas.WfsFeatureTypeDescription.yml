@@ -1,0 +1,82 @@
+### YamlMime:TSType
+name: WfsFeatureTypeDescription
+uid: azure-maps-spatial-io.atlas.WfsFeatureTypeDescription
+package: azure-maps-spatial-io
+summary: Details about a feature type.
+fullName: WfsFeatureTypeDescription
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: capability
+    uid: azure-maps-spatial-io.atlas.WfsFeatureTypeDescription.capability
+    package: azure-maps-spatial-io
+    summary: The capability of the feature type as captured from GetCapabilities.
+    fullName: capability
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'capability: WfsFeatureType'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-spatial-io.atlas.WfsFeatureType" />
+  - name: geomPropertyName
+    uid: azure-maps-spatial-io.atlas.WfsFeatureTypeDescription.geomPropertyName
+    package: azure-maps-spatial-io
+    summary: The first property the contains geometry data.
+    fullName: geomPropertyName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'geomPropertyName: string'
+      return:
+        description: ''
+        type: string
+  - name: name
+    uid: azure-maps-spatial-io.atlas.WfsFeatureTypeDescription.name
+    package: azure-maps-spatial-io
+    summary: The name of the feature type.
+    fullName: name
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+  - name: namespace
+    uid: azure-maps-spatial-io.atlas.WfsFeatureTypeDescription.namespace
+    package: azure-maps-spatial-io
+    summary: The namespace of the feature type.
+    fullName: namespace
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'namespace: string'
+      return:
+        description: ''
+        type: string
+  - name: namespacePrefix
+    uid: azure-maps-spatial-io.atlas.WfsFeatureTypeDescription.namespacePrefix
+    package: azure-maps-spatial-io
+    summary: The namespace prefix used in combination with the feature type name.
+    fullName: namespacePrefix
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'namespacePrefix: string'
+      return:
+        description: ''
+        type: string
+  - name: propertyTypes
+    uid: azure-maps-spatial-io.atlas.WfsFeatureTypeDescription.propertyTypes
+    package: azure-maps-spatial-io
+    summary: The value type of each property.
+    fullName: propertyTypes
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'propertyTypes: Record<string, string>'
+      return:
+        description: ''
+        type: 'Record&lt;string, string&gt;'

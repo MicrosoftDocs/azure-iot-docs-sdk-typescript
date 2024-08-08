@@ -1,0 +1,162 @@
+### YamlMime:TSType
+name: RouteResultSection
+uid: azure-maps-rest.atlas.service.Models.RouteResultSection
+package: azure-maps-rest
+summary: An interface representing RouteResultSection.
+fullName: RouteResultSection
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: delayInSeconds
+    uid: azure-maps-rest.atlas.service.Models.RouteResultSection.delayInSeconds
+    package: azure-maps-rest
+    summary: >-
+      Delay in seconds caused by the incident.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: delayInSeconds
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'delayInSeconds?: number'
+      return:
+        description: ''
+        type: number
+  - name: effectiveSpeedInKmh
+    uid: >-
+      azure-maps-rest.atlas.service.Models.RouteResultSection.effectiveSpeedInKmh
+    package: azure-maps-rest
+    summary: >-
+      Effective speed of the incident in km/h, averaged over its entire length.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: effectiveSpeedInKmh
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'effectiveSpeedInKmh?: number'
+      return:
+        description: ''
+        type: number
+  - name: endPointIndex
+    uid: azure-maps-rest.atlas.service.Models.RouteResultSection.endPointIndex
+    package: azure-maps-rest
+    summary: >-
+      End Point Index property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: endPointIndex
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'endPointIndex?: number'
+      return:
+        description: ''
+        type: number
+  - name: magnitudeOfDelay
+    uid: azure-maps-rest.atlas.service.Models.RouteResultSection.magnitudeOfDelay
+    package: azure-maps-rest
+    summary: >-
+      The magnitude of delay caused by the incident. These values correspond to
+      the values of the
+
+      response field <ty> of the Get Traffic Incident Detail API. Possible
+      values include: '0', '1',
+
+      '2', '3', '4'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: magnitudeOfDelay
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'magnitudeOfDelay?: MagnitudeOfDelay'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.MagnitudeOfDelay" />
+  - name: sectionType
+    uid: azure-maps-rest.atlas.service.Models.RouteResultSection.sectionType
+    package: azure-maps-rest
+    summary: >-
+      Section Type property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: sectionType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'sectionType?: string'
+      return:
+        description: ''
+        type: string
+  - name: simpleCategory
+    uid: azure-maps-rest.atlas.service.Models.RouteResultSection.simpleCategory
+    package: azure-maps-rest
+    summary: >-
+      Type of the incident. Can currently be JAM, ROAD_WORK, ROAD_CLOSURE, or
+      OTHER. See "tec" for
+
+      detailed information.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: simpleCategory
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'simpleCategory?: string'
+      return:
+        description: ''
+        type: string
+  - name: startPointIndex
+    uid: azure-maps-rest.atlas.service.Models.RouteResultSection.startPointIndex
+    package: azure-maps-rest
+    summary: >-
+      Start Point Index property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: startPointIndex
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'startPointIndex?: number'
+      return:
+        description: ''
+        type: number
+  - name: tec
+    uid: azure-maps-rest.atlas.service.Models.RouteResultSection.tec
+    package: azure-maps-rest
+    summary: ''
+    fullName: tec
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'tec?: RouteResultSectionTec'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.atlas.service.Models.RouteResultSectionTec"
+          />
+  - name: travelMode
+    uid: azure-maps-rest.atlas.service.Models.RouteResultSection.travelMode
+    package: azure-maps-rest
+    summary: >-
+      Travel Mode property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: travelMode
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'travelMode?: string'
+      return:
+        description: ''
+        type: string

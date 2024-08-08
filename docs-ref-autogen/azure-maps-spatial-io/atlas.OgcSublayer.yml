@@ -1,0 +1,106 @@
+### YamlMime:TSType
+name: OgcSublayer
+uid: azure-maps-spatial-io.atlas.OgcSublayer
+package: azure-maps-spatial-io
+summary: Sublayer information for OGC WMS and WMTS services.
+fullName: OgcSublayer
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: bounds
+    uid: azure-maps-spatial-io.atlas.OgcSublayer.bounds
+    package: azure-maps-spatial-io
+    summary: The bounding box of the layer.
+    fullName: bounds
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'bounds: azmaps.data.BoundingBox'
+      return:
+        description: ''
+        type: <xref uid="azmaps.data.BoundingBox" />
+  - name: description
+    uid: azure-maps-spatial-io.atlas.OgcSublayer.description
+    package: azure-maps-spatial-io
+    summary: A description or abstract for the layer.
+    fullName: description
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'description?: string'
+      return:
+        description: ''
+        type: string
+  - name: dimensions
+    uid: azure-maps-spatial-io.atlas.OgcSublayer.dimensions
+    package: azure-maps-spatial-io
+    summary: Custom dimension values supported by the layer.
+    fullName: dimensions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'dimensions: OgcDimension[]'
+      return:
+        description: ''
+        type: '<xref uid="azure-maps-spatial-io.atlas.OgcDimension" />[]'
+  - name: id
+    uid: azure-maps-spatial-io.atlas.OgcSublayer.id
+    package: azure-maps-spatial-io
+    summary: Unique identifier for the layer.
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id?: string'
+      return:
+        description: ''
+        type: string
+  - name: maxZoom
+    uid: azure-maps-spatial-io.atlas.OgcSublayer.maxZoom
+    package: azure-maps-spatial-io
+    summary: An integer specifying the maximum zoom level to render the layer at.
+    fullName: maxZoom
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'maxZoom: number'
+      return:
+        description: ''
+        type: number
+  - name: minZoom
+    uid: azure-maps-spatial-io.atlas.OgcSublayer.minZoom
+    package: azure-maps-spatial-io
+    summary: An integer specifying the minimum zoom level to render the layer at.
+    fullName: minZoom
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'minZoom: number'
+      return:
+        description: ''
+        type: number
+  - name: styles
+    uid: azure-maps-spatial-io.atlas.OgcSublayer.styles
+    package: azure-maps-spatial-io
+    summary: A list of the supported styles.
+    fullName: styles
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'styles: OgcStyle[]'
+      return:
+        description: ''
+        type: '<xref uid="azure-maps-spatial-io.atlas.OgcStyle" />[]'
+  - name: title
+    uid: azure-maps-spatial-io.atlas.OgcSublayer.title
+    package: azure-maps-spatial-io
+    summary: The title for the layer.
+    fullName: title
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'title?: string'
+      return:
+        description: ''
+        type: string

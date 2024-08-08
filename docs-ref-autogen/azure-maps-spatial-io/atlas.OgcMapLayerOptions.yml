@@ -1,0 +1,329 @@
+### YamlMime:TSType
+name: OgcMapLayerOptions
+uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions
+package: azure-maps-spatial-io
+summary: Options for an OGC layer.
+fullName: OgcMapLayerOptions
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: activeLayers
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.activeLayers
+    package: azure-maps-spatial-io
+    summary: Specifies the sublayers in the service to render.
+    fullName: activeLayers
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'activeLayers?: Array<string | OgcSublayer>'
+      return:
+        description: ''
+        type: >-
+          Array&lt;string | <xref uid="azure-maps-spatial-io.atlas.OgcSublayer"
+          />&gt;
+  - name: bringIntoView
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.bringIntoView
+    package: azure-maps-spatial-io
+    summary: >-
+      Indicates if the map should set the map view to the bounding box of the
+      layer. Not persistent.
+    fullName: bringIntoView
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'bringIntoView?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: debug
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.debug
+    package: azure-maps-spatial-io
+    summary: >-
+      Indicates if errors related to accessing the service should be logged to
+      the console.
+    fullName: debug
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'debug?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: dimensions
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.dimensions
+    package: azure-maps-spatial-io
+    summary: Custom dimensions to add to tile requests.
+    fullName: dimensions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'dimensions?: Record<string, string>'
+      return:
+        description: ''
+        type: 'Record&lt;string, string&gt;'
+  - name: proxyService
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.proxyService
+    package: azure-maps-spatial-io
+    summary: >-
+      A URL to a proxy service that can have a URL to an external service
+      appended it.
+
+      This will be needed to access services that are hosted on non-CORs enabled
+      endpoints.
+    fullName: proxyService
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'proxyService?: string'
+      return:
+        description: ''
+        type: string
+  - name: service
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.service
+    package: azure-maps-spatial-io
+    summary: >-
+      Specifies the type of web mapping service to connect to.
+
+      If not specified, will try and determine based on the URL.
+
+      Defaults to 'WMTS' if not specified or if can't be determined from the
+      URL.
+    fullName: service
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'service?: "WMS" | "WMTS"'
+      return:
+        description: ''
+        type: '"WMS" | "WMTS"'
+  - name: styles
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.styles
+    package: azure-maps-spatial-io
+    summary: The styles of the active layers.
+    fullName: styles
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'styles?: Array<string | OgcStyle>'
+      return:
+        description: ''
+        type: >-
+          Array&lt;string | <xref uid="azure-maps-spatial-io.atlas.OgcStyle"
+          />&gt;
+  - name: url
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.url
+    package: azure-maps-spatial-io
+    summary: The URL that points to the service.
+    fullName: url
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'url?: string'
+      return:
+        description: ''
+        type: string
+  - name: version
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.version
+    package: azure-maps-spatial-io
+    summary: >-
+      The version of the service to target. If not specified, will automatically
+      try and determine this.
+    fullName: version
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'version?: string'
+      return:
+        description: ''
+        type: string
+inheritedProperties:
+  - name: contrast
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.contrast
+    package: azure-maps-spatial-io
+    summary: >-
+      A number between -1 and 1 that increases or decreases the contrast of the
+      overlay.
+
+      Default `0`.
+    fullName: contrast
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'contrast?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> MediaLayerOptions.contrast
+  - name: fadeDuration
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.fadeDuration
+    package: azure-maps-spatial-io
+    summary: >-
+      The duration in milliseconds of a fade transition when a new tile is
+      added.
+
+      Must be greater or equal to 0.
+
+      Default `300`.
+    fullName: fadeDuration
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'fadeDuration?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> MediaLayerOptions.fadeDuration
+  - name: filter
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.filter
+    package: azure-maps-spatial-io
+    summary: |-
+      An expression specifying conditions on source features.
+      Only features that match the filter are displayed.
+    fullName: filter
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'filter?: Expression'
+      return:
+        description: ''
+        type: Expression
+    inheritanceDescription: <b>Inherited From</b> LayerOptions.filter
+  - name: hueRotation
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.hueRotation
+    package: azure-maps-spatial-io
+    summary: |-
+      Rotates hues around the color wheel.
+      A number in degrees.
+      Default `0`.
+    fullName: hueRotation
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'hueRotation?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> MediaLayerOptions.hueRotation
+  - name: maxBrightness
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.maxBrightness
+    package: azure-maps-spatial-io
+    summary: >-
+      A number between 0 and 1 that increases or decreases the maximum
+      brightness of the overlay.
+
+      Default `1`.
+    fullName: maxBrightness
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'maxBrightness?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> MediaLayerOptions.maxBrightness
+  - name: maxZoom
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.maxZoom
+    package: azure-maps-spatial-io
+    summary: >-
+      An integer specifying the maximum zoom level to render the layer at.
+
+      This value is exclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `24`.
+    fullName: maxZoom
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'maxZoom?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> LayerOptions.maxZoom
+  - name: minBrightness
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.minBrightness
+    package: azure-maps-spatial-io
+    summary: >-
+      A number between 0 and 1 that increases or decreases the minimum
+      brightness of the overlay.
+
+      Default `0`.
+    fullName: minBrightness
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'minBrightness?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> MediaLayerOptions.minBrightness
+  - name: minZoom
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.minZoom
+    package: azure-maps-spatial-io
+    summary: >-
+      An integer specifying the minimum zoom level to render the layer at.
+
+      This value is inclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `0`.
+    fullName: minZoom
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'minZoom?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> LayerOptions.minZoom
+  - name: opacity
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.opacity
+    package: azure-maps-spatial-io
+    summary: >-
+      A number between 0 and 1 that indicates the opacity at which the overlay
+      will be drawn.
+
+      Default `1`.
+    fullName: opacity
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'opacity?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> MediaLayerOptions.opacity
+  - name: saturation
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.saturation
+    package: azure-maps-spatial-io
+    summary: >-
+      A number between -1 and 1 that increases or decreases the saturation of
+      the overlay.
+
+      Default `0`.
+    fullName: saturation
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'saturation?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> MediaLayerOptions.saturation
+  - name: visible
+    uid: azure-maps-spatial-io.atlas.OgcMapLayerOptions.visible
+    package: azure-maps-spatial-io
+    summary: |-
+      Specifies if the layer is visible or not.
+      Default `true`.
+    fullName: visible
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'visible?: boolean'
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: <b>Inherited From</b> LayerOptions.visible
+extends: MediaLayerOptions

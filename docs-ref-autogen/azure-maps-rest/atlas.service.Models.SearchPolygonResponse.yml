@@ -1,0 +1,28 @@
+### YamlMime:TSType
+name: SearchPolygonResponse
+uid: azure-maps-rest.atlas.service.Models.SearchPolygonResponse
+package: azure-maps-rest
+summary: This object is returned from a successful Search Polygon call
+fullName: SearchPolygonResponse
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: additionalData
+    uid: azure-maps-rest.atlas.service.Models.SearchPolygonResponse.additionalData
+    package: azure-maps-rest
+    summary: >-
+      Results array
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: additionalData
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'additionalData?: SearchPolygonResult[]'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.atlas.service.Models.SearchPolygonResult"
+          />[]

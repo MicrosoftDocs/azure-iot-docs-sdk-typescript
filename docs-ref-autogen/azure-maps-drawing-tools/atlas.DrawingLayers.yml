@@ -1,0 +1,62 @@
+### YamlMime:TSType
+name: DrawingLayers
+uid: azure-maps-drawing-tools.atlas.DrawingLayers
+package: azure-maps-drawing-tools
+summary: A collection of the layers used by the drawing manager for rendering shapes.
+fullName: DrawingLayers
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: lineLayer
+    uid: azure-maps-drawing-tools.atlas.DrawingLayers.lineLayer
+    package: azure-maps-drawing-tools
+    summary: The layer used for rendering LineStrings.
+    fullName: lineLayer
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'lineLayer?: azmaps.layer.LineLayer'
+      return:
+        description: ''
+        type: <xref uid="azmaps.layer.LineLayer" />
+  - name: pointLayer
+    uid: azure-maps-drawing-tools.atlas.DrawingLayers.pointLayer
+    package: azure-maps-drawing-tools
+    summary: The layer used for rendering Points.
+    fullName: pointLayer
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'pointLayer?: azmaps.layer.SymbolLayer'
+      return:
+        description: ''
+        type: <xref uid="azmaps.layer.SymbolLayer" />
+  - name: polygonLayer
+    uid: azure-maps-drawing-tools.atlas.DrawingLayers.polygonLayer
+    package: azure-maps-drawing-tools
+    summary: >-
+      The layer used for rendering the interior area of Polygons, Circles, and
+      Rectangles.
+    fullName: polygonLayer
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'polygonLayer?: azmaps.layer.PolygonLayer'
+      return:
+        description: ''
+        type: <xref uid="azmaps.layer.PolygonLayer" />
+  - name: polygonOutlineLayer
+    uid: azure-maps-drawing-tools.atlas.DrawingLayers.polygonOutlineLayer
+    package: azure-maps-drawing-tools
+    summary: >-
+      The layer used for rendering the outlines of Polygons, Circles, and
+      Rectangles.
+    fullName: polygonOutlineLayer
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'polygonOutlineLayer?: azmaps.layer.LineLayer'
+      return:
+        description: ''
+        type: <xref uid="azmaps.layer.LineLayer" />

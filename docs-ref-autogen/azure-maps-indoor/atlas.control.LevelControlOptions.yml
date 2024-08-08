@@ -1,0 +1,52 @@
+### YamlMime:TSType
+name: LevelControlOptions
+uid: azure-maps-indoor.atlas.control.LevelControlOptions
+package: azure-maps-indoor
+summary: The options for a LevelControlOptions object.
+fullName: LevelControlOptions
+remarks: ''
+isDeprecated: false
+type: class
+properties:
+  - name: levelLabel
+    uid: azure-maps-indoor.atlas.control.LevelControlOptions.levelLabel
+    package: azure-maps-indoor
+    summary: |-
+      Level label type
+      Default `ordinal`
+    fullName: levelLabel
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'levelLabel?: "ordinal" | "name"'
+      return:
+        description: ''
+        type: '"ordinal" | "name"'
+  - name: position
+    uid: azure-maps-indoor.atlas.control.LevelControlOptions.position
+    package: azure-maps-indoor
+    summary: |-
+      The position of the control.
+      Default `atlas.ControlPosition.TopRight`
+    fullName: position
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'position?: azmaps.ControlPosition'
+      return:
+        description: ''
+        type: <xref uid="azmaps.ControlPosition" />
+  - name: style
+    uid: azure-maps-indoor.atlas.control.LevelControlOptions.style
+    package: azure-maps-indoor
+    summary: |-
+      The style of the control.
+      Default `ControlStyle.light`.
+    fullName: style
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'style?: azmaps.ControlStyle'
+      return:
+        description: ''
+        type: <xref uid="azmaps.ControlStyle" />

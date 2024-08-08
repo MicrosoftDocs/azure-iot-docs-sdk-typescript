@@ -1,0 +1,38 @@
+### YamlMime:TSType
+name: CsvHeader
+uid: azure-maps-spatial-io.atlas.CsvHeader
+package: azure-maps-spatial-io
+summary: Column header definition for a delimited file.
+fullName: CsvHeader
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: names
+    uid: azure-maps-spatial-io.atlas.CsvHeader.names
+    package: azure-maps-spatial-io
+    summary: The name of each column.
+    fullName: names
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'names?: string[]'
+      return:
+        description: ''
+        type: 'string[]'
+  - name: types
+    uid: azure-maps-spatial-io.atlas.CsvHeader.types
+    package: azure-maps-spatial-io
+    summary: >-
+      The type of each column; string, number, boolean, date, geography (Well
+      Known Text string).
+
+      If unspecified or null, will default to string.
+    fullName: types
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'types: Array<"string" | "number" | "date" | "boolean" | "geography">'
+      return:
+        description: ''
+        type: Array&lt;"string" | "number" | "date" | "boolean" | "geography"&gt;

@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: SearchGetSearchNearbyResponse
+uid: azure-maps-rest.atlas.service.Models.SearchGetSearchNearbyResponse
+package: azure-maps-rest
+summary: Contains response data for the getSearchNearby operation.
+fullName: SearchGetSearchNearbyResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SearchGetSearchNearbyResponse = SearchNearbyResponse & {
+    _response: HttpResponse & {
+      bodyAsText: string,
+      parsedBody: SearchNearbyResponse,
+    },
+  }

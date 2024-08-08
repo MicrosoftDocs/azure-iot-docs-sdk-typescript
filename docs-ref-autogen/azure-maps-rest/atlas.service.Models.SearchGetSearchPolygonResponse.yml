@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: SearchGetSearchPolygonResponse
+uid: azure-maps-rest.atlas.service.Models.SearchGetSearchPolygonResponse
+package: azure-maps-rest
+summary: Contains response data for the getSearchPolygon operation.
+fullName: SearchGetSearchPolygonResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SearchGetSearchPolygonResponse = SearchPolygonResponse & {
+    _response: HttpResponse & {
+      bodyAsText: string,
+      parsedBody: SearchPolygonResponse,
+    },
+  }

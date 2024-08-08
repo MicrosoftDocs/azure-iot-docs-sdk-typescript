@@ -1,0 +1,146 @@
+### YamlMime:TSType
+name: MobilityGetTransitStopInfoPreviewOptionalParams
+uid: >-
+  azure-maps-rest.atlas.service.Models.MobilityGetTransitStopInfoPreviewOptionalParams
+package: azure-maps-rest
+summary: Optional Parameters.
+fullName: MobilityGetTransitStopInfoPreviewOptionalParams
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: detailType
+    uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetTransitStopInfoPreviewOptionalParams.detailType
+    package: azure-maps-rest
+    summary: >-
+      Specify additional details requested respective to the transit stop as a
+      commma separated
+
+      list.
+    fullName: detailType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'detailType?: TransitStopDetailType[]'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.atlas.service.Models.TransitStopDetailType"
+          />[]
+  - name: language
+    uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetTransitStopInfoPreviewOptionalParams.language
+    package: azure-maps-rest
+    summary: >-
+      Language in which search results will be returned.  Only NGT is supported.
+      Please refer to
+
+      [Supported
+      languages](https://docs.microsoft.com/azure/azure-maps/supported-languages)
+      for
+
+      details.
+    fullName: language
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'language?: string'
+      return:
+        description: ''
+        type: string
+  - name: queryType
+    uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetTransitStopInfoPreviewOptionalParams.queryType
+    package: azure-maps-rest
+    summary: >-
+      The type of the unique query parameter of the stop. By default
+      queryType=stopId. Possible
+
+      values include: 'stopId', 'stopKey'
+    fullName: queryType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'queryType?: TransitStopQueryType'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.atlas.service.Models.TransitStopQueryType"
+          />
+inheritedProperties:
+  - name: abortSignal
+    uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetTransitStopInfoPreviewOptionalParams.abortSignal
+    package: azure-maps-rest
+    summary: The signal which can be used to abort requests.
+    fullName: abortSignal
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'abortSignal?: AbortSignalLike'
+      return:
+        description: ''
+        type: AbortSignalLike
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.abortSignal
+  - name: customHeaders
+    uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetTransitStopInfoPreviewOptionalParams.customHeaders
+    package: azure-maps-rest
+    summary: |-
+      {object} [customHeaders] User defined custom request headers that
+      will be applied before the request is sent.
+    fullName: customHeaders
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'customHeaders?: [key: string]: string'
+      return:
+        description: ''
+        type: '[key: string]\: string'
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.customHeaders
+  - name: onDownloadProgress
+    uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetTransitStopInfoPreviewOptionalParams.onDownloadProgress
+    package: azure-maps-rest
+    summary: Callback which fires upon download progress.
+    fullName: onDownloadProgress
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'onDownloadProgress?: (progress: TransferProgressEvent) => void'
+      return:
+        description: ''
+        type: '(progress: TransferProgressEvent) =&gt; void'
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.onDownloadProgress
+  - name: onUploadProgress
+    uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetTransitStopInfoPreviewOptionalParams.onUploadProgress
+    package: azure-maps-rest
+    summary: Callback which fires upon upload progress.
+    fullName: onUploadProgress
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'onUploadProgress?: (progress: TransferProgressEvent) => void'
+      return:
+        description: ''
+        type: '(progress: TransferProgressEvent) =&gt; void'
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.onUploadProgress
+  - name: timeout
+    uid: >-
+      azure-maps-rest.atlas.service.Models.MobilityGetTransitStopInfoPreviewOptionalParams.timeout
+    package: azure-maps-rest
+    summary: >-
+      The number of milliseconds a request can take before automatically being
+      terminated.
+    fullName: timeout
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'timeout?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> RequestOptionsBase.timeout
+extends: RequestOptionsBase

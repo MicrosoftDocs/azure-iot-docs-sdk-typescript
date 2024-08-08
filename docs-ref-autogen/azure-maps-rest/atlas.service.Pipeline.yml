@@ -1,0 +1,78 @@
+### YamlMime:TSType
+name: Pipeline
+uid: azure-maps-rest.atlas.service.Pipeline
+package: azure-maps-rest
+summary: >-
+  A Pipeline class containing HTTP request policies.
+
+  You can create a default Pipeline by calling MapsURL.newPipeline().
+
+  Or you can create a Pipeline with your own policies by the constructor of
+  Pipeline.
+
+  Refer to MapsURL.newPipeline() and provided policies as reference before
+
+  implementing your customized Pipeline.
+fullName: Pipeline
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: 'Pipeline(RequestPolicyFactory[], IPipelineOptions)'
+    uid: azure-maps-rest.atlas.service.Pipeline.constructor
+    package: azure-maps-rest
+    summary: >-
+      Creates an instance of Pipeline. Customize HTTPClient by implementing
+      IHttpClient interface.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new Pipeline(factories: RequestPolicyFactory[], options?:
+        IPipelineOptions)
+      parameters:
+        - id: factories
+          type: '<xref uid="azure-maps-rest.atlas.service.RequestPolicyFactory" />[]'
+          description: ''
+        - id: options
+          type: <xref uid="azure-maps-rest.atlas.service.IPipelineOptions" />
+          description: ''
+properties:
+  - name: factories
+    uid: azure-maps-rest.atlas.service.Pipeline.factories
+    package: azure-maps-rest
+    summary: ''
+    fullName: factories
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'factories: msRest.RequestPolicyFactory[]'
+      return:
+        description: ''
+        type: '<xref uid="msRest.RequestPolicyFactory" />[]'
+  - name: options
+    uid: azure-maps-rest.atlas.service.Pipeline.options
+    package: azure-maps-rest
+    summary: ''
+    fullName: options
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'options: IPipelineOptions'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.IPipelineOptions" />
+methods:
+  - name: toServiceClientOptions()
+    uid: azure-maps-rest.atlas.service.Pipeline.toServiceClientOptions
+    package: azure-maps-rest
+    summary: |-
+      Transfer Pipeline object to ServiceClientOptions object which required by
+      ServiceClient constructor.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function toServiceClientOptions(): ServiceClientOptions'
+      return:
+        description: ''
+        type: ServiceClientOptions

@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: MobilityGetCarShareInfoPreviewResponse
+uid: azure-maps-rest.atlas.service.Models.MobilityGetCarShareInfoPreviewResponse
+package: azure-maps-rest
+summary: Contains response data for the getCarShareInfoPreview operation.
+fullName: MobilityGetCarShareInfoPreviewResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type MobilityGetCarShareInfoPreviewResponse = CarShareResponse & {
+    _response: HttpResponse & {
+      bodyAsText: string,
+      parsedBody: CarShareResponse,
+    },
+  }

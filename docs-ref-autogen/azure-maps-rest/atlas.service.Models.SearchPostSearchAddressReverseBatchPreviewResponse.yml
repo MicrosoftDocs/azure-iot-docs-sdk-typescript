@@ -1,0 +1,18 @@
+### YamlMime:TSTypeAlias
+name: SearchPostSearchAddressReverseBatchPreviewResponse
+uid: >-
+  azure-maps-rest.atlas.service.Models.SearchPostSearchAddressReverseBatchPreviewResponse
+package: azure-maps-rest
+summary: Contains response data for the postSearchAddressReverseBatchPreview operation.
+fullName: SearchPostSearchAddressReverseBatchPreviewResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SearchPostSearchAddressReverseBatchPreviewResponse = BatchResponse &
+    SearchPostSearchAddressReverseBatchPreviewHeaders & {
+      _response: HttpResponse & {
+        bodyAsText: string,
+        parsedBody: BatchResponse,
+        parsedHeaders: SearchPostSearchAddressReverseBatchPreviewHeaders,
+      },
+    }

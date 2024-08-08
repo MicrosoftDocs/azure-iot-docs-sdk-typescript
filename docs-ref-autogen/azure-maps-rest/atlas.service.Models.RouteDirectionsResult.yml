@@ -1,0 +1,72 @@
+### YamlMime:TSType
+name: RouteDirectionsResult
+uid: azure-maps-rest.atlas.service.Models.RouteDirectionsResult
+package: azure-maps-rest
+summary: An interface representing RouteDirectionsResult.
+fullName: RouteDirectionsResult
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: guidance
+    uid: azure-maps-rest.atlas.service.Models.RouteDirectionsResult.guidance
+    package: azure-maps-rest
+    summary: ''
+    fullName: guidance
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'guidance?: RouteResultGuidance'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.atlas.service.Models.RouteResultGuidance"
+          />
+  - name: legs
+    uid: azure-maps-rest.atlas.service.Models.RouteDirectionsResult.legs
+    package: azure-maps-rest
+    summary: >-
+      Legs array
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: legs
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'legs?: RouteResultLeg[]'
+      return:
+        description: ''
+        type: '<xref uid="azure-maps-rest.atlas.service.Models.RouteResultLeg" />[]'
+  - name: sections
+    uid: azure-maps-rest.atlas.service.Models.RouteDirectionsResult.sections
+    package: azure-maps-rest
+    summary: >-
+      Sections array
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: sections
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'sections?: RouteResultSection[]'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.atlas.service.Models.RouteResultSection"
+          />[]
+  - name: summary
+    uid: azure-maps-rest.atlas.service.Models.RouteDirectionsResult.summary
+    package: azure-maps-rest
+    summary: ''
+    fullName: summary
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'summary?: RouteDirectionsSummary'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-maps-rest.atlas.service.Models.RouteDirectionsSummary" />

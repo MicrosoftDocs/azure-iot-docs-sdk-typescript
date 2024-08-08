@@ -1,0 +1,12 @@
+### YamlMime:TSTypeAlias
+name: SpatialGetBufferResponse
+uid: azure-maps-rest.atlas.service.Models.SpatialGetBufferResponse
+package: azure-maps-rest
+summary: Contains response data for the getBuffer operation.
+fullName: SpatialGetBufferResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SpatialGetBufferResponse = BufferResponse & {
+    _response: HttpResponse & { bodyAsText: string, parsedBody: BufferResponse },
+  }

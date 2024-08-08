@@ -1,0 +1,50 @@
+### YamlMime:TSType
+name: SimpleXmlReader
+uid: azure-maps-spatial-io.atlas.io.core.SimpleXmlReader
+package: azure-maps-spatial-io
+summary: >-
+  A simple and fast xml reader that converts an XML string into a JSON object.
+
+  Ignores tags that start with "<!" or "<?" as these are usually comments, XML
+  schema, or doctype tags.
+
+  Supports CData tag: <![[CData ]]>
+
+  Can extract all namespaces in the document.
+fullName: SimpleXmlReader
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: SimpleXmlReader(boolean)
+    uid: azure-maps-spatial-io.atlas.io.core.SimpleXmlReader.constructor
+    package: azure-maps-spatial-io
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new SimpleXmlReader(parseNamespaces?: boolean)'
+      parameters:
+        - id: parseNamespaces
+          type: boolean
+          description: >
+            A boolean that indicates if namespaces should be parsed for the
+            document.
+
+            Default: true.
+methods:
+  - name: parse(string)
+    uid: azure-maps-spatial-io.atlas.io.core.SimpleXmlReader.parse
+    package: azure-maps-spatial-io
+    summary: Parse an XML string into an XmlDocument object.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function parse(xml: string): XmlDocument'
+      parameters:
+        - id: xml
+          type: string
+          description: The xml string to parse.
+      return:
+        description: An XmlDocument object generated from an xml string.
+        type: <xref uid="azure-maps-spatial-io.atlas.io.core.XmlDocument" />

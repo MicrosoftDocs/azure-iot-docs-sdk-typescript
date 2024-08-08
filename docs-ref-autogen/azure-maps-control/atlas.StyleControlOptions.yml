@@ -1,0 +1,88 @@
+### YamlMime:TSType
+name: StyleControlOptions
+uid: azure-maps-control.atlas.StyleControlOptions
+package: azure-maps-control
+summary: The options for a StyleControl object.
+fullName: StyleControlOptions
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: autoSelectionMode
+    uid: azure-maps-control.atlas.StyleControlOptions.autoSelectionMode
+    package: azure-maps-control
+    summary: >-
+      Whether to let style control automatically set the style, once user select
+      a map style.
+
+      If set to `false`, then clicking on style will not set the set the style
+      automatically.
+
+      Default `true`
+    fullName: autoSelectionMode
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'autoSelectionMode?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: layout
+    uid: azure-maps-control.atlas.StyleControlOptions.layout
+    package: azure-maps-control
+    summary: |-
+      The layout to display the styles in.<br />
+      `"icons"`: A row of clickable icons for each style.<br />
+      `"list"`: A scrollable list with the icons and names for each style.<br />
+      Default `"icons"`
+    fullName: layout
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'layout?: "icons" | "list"'
+      return:
+        description: ''
+        type: '"icons" | "list"'
+  - name: mapStyles
+    uid: azure-maps-control.atlas.StyleControlOptions.mapStyles
+    package: azure-maps-control
+    summary: >-
+      The map styles to show in the control.
+
+      Style names are case sensitive.
+
+      If an included style isn't supported by the map it will be ignored.
+
+      Available styles can be found in the
+
+      [supported
+      styles](https://docs.microsoft.com/en-us/azure/azure-maps/supported-map-styles)
+      article.
+
+      If "all" is specified, all map styles will be shown.
+
+      Default `["road", "grayscale_light", "grayscale_dark", "night",
+      "road_shaded_relief"]`
+    fullName: mapStyles
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'mapStyles?: string[] | "all"'
+      return:
+        description: ''
+        type: 'string[] | "all"'
+  - name: style
+    uid: azure-maps-control.atlas.StyleControlOptions.style
+    package: azure-maps-control
+    summary: |-
+      The style of the control.
+      Default `ControlStyle.light`.
+    fullName: style
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'style?: ControlStyle'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.atlas.ControlStyle" />
+extends: <xref uid="azure-maps-control.atlas.Options" />

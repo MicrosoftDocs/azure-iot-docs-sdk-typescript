@@ -1,0 +1,63 @@
+### YamlMime:TSType
+name: IsBetween
+uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsBetween
+package: azure-maps-spatial-io
+summary: Checks to see if a value is between two other specified values.
+fullName: IsBetween
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: >-
+      IsBetween(PropertyName | Literal | Filter, Literal, Literal,
+      BinaryComparisonOptions)
+    uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsBetween.constructor
+    package: azure-maps-spatial-io
+    summary: Checks to see if a value is between two other specified values.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new IsBetween(value: PropertyName | Literal | Filter, lowerBoundary:
+        Literal, upperBoundary: Literal, options?: BinaryComparisonOptions)
+      parameters:
+        - id: value
+          type: >-
+            <xref uid="azure-maps-spatial-io.atlas.io.ogc.filter.PropertyName"
+            /> | <xref uid="azure-maps-spatial-io.atlas.io.ogc.filter.Literal"
+            /> | <xref uid="azure-maps-spatial-io.atlas.io.ogc.filter.Filter" />
+          description: The value to compare.
+        - id: lowerBoundary
+          type: <xref uid="azure-maps-spatial-io.atlas.io.ogc.filter.Literal" />
+          description: The minimum value of the comparison.
+        - id: upperBoundary
+          type: <xref uid="azure-maps-spatial-io.atlas.io.ogc.filter.Literal" />
+          description: The maximum value of the comparison.
+        - id: options
+          type: >-
+            <xref
+            uid="azure-maps-spatial-io.atlas.io.ogc.filter.BinaryComparisonOptions"
+            />
+          description: |
+            Options for the comparison.
+inheritedMethods:
+  - name: toXml(string)
+    uid: azure-maps-spatial-io.atlas.io.ogc.filter.IsBetween.toXml
+    package: azure-maps-spatial-io
+    summary: Generates an XML version of the filter.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function toXml(version?: string): string'
+      parameters:
+        - id: version
+          type: string
+          description: |
+            The WFS service version.
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Filter.toXml](xref:azure-maps-spatial-io.atlas.io.ogc.filter.Filter.toXml)
+extends: <xref uid="azure-maps-spatial-io.atlas.io.ogc.filter.Filter" />

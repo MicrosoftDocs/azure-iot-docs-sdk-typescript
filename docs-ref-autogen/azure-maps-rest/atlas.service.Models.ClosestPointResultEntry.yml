@@ -1,0 +1,55 @@
+### YamlMime:TSType
+name: ClosestPointResultEntry
+uid: azure-maps-rest.atlas.service.Models.ClosestPointResultEntry
+package: azure-maps-rest
+summary: Closest Point Result Entry Object
+fullName: ClosestPointResultEntry
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: distanceInMeters
+    uid: >-
+      azure-maps-rest.atlas.service.Models.ClosestPointResultEntry.distanceInMeters
+    package: azure-maps-rest
+    summary: >-
+      The distance in meters from the source point to the closest point
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: distanceInMeters
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'distanceInMeters?: number'
+      return:
+        description: ''
+        type: number
+  - name: geometryId
+    uid: azure-maps-rest.atlas.service.Models.ClosestPointResultEntry.geometryId
+    package: azure-maps-rest
+    summary: >-
+      The unique id identifies a geometry
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: geometryId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'geometryId?: string'
+      return:
+        description: ''
+        type: string
+  - name: position
+    uid: azure-maps-rest.atlas.service.Models.ClosestPointResultEntry.position
+    package: azure-maps-rest
+    summary: ''
+    fullName: position
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'position?: SpatialCoordinate'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.SpatialCoordinate" />

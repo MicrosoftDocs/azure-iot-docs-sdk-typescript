@@ -1,0 +1,147 @@
+### YamlMime:TSType
+name: ReferenceTimeByCoordinates
+uid: azure-maps-rest.atlas.service.Models.ReferenceTimeByCoordinates
+package: azure-maps-rest
+summary: Details in effect at the local time.
+fullName: ReferenceTimeByCoordinates
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: daylightSavings
+    uid: >-
+      azure-maps-rest.atlas.service.Models.ReferenceTimeByCoordinates.daylightSavings
+    package: azure-maps-rest
+    summary: >-
+      Time saving in minutes in effect at the `ReferenceUTCTimestamp`.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: daylightSavings
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'daylightSavings?: string'
+      return:
+        description: ''
+        type: string
+  - name: posixTz
+    uid: azure-maps-rest.atlas.service.Models.ReferenceTimeByCoordinates.posixTz
+    package: azure-maps-rest
+    summary: >-
+      POSIX string used to set the time zone environment variable.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: posixTz
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'posixTz?: string'
+      return:
+        description: ''
+        type: string
+  - name: posixTzValidYear
+    uid: >-
+      azure-maps-rest.atlas.service.Models.ReferenceTimeByCoordinates.posixTzValidYear
+    package: azure-maps-rest
+    summary: >-
+      The year this POSIX string is valid for. Note: A POSIX string will only be
+      valid in the given
+
+      year.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: posixTzValidYear
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'posixTzValidYear?: number'
+      return:
+        description: ''
+        type: number
+  - name: standardOffset
+    uid: >-
+      azure-maps-rest.atlas.service.Models.ReferenceTimeByCoordinates.standardOffset
+    package: azure-maps-rest
+    summary: >-
+      UTC offset in effect at the `ReferenceUTCTimestamp`.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: standardOffset
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'standardOffset?: string'
+      return:
+        description: ''
+        type: string
+  - name: sunrise
+    uid: azure-maps-rest.atlas.service.Models.ReferenceTimeByCoordinates.sunrise
+    package: azure-maps-rest
+    summary: >-
+      Sunrise at the given time zone as shown in the `Tag` property.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: sunrise
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'sunrise?: string'
+      return:
+        description: ''
+        type: string
+  - name: sunset
+    uid: azure-maps-rest.atlas.service.Models.ReferenceTimeByCoordinates.sunset
+    package: azure-maps-rest
+    summary: >-
+      Sunset at the given time zone as shown in the `Tag` property.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: sunset
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'sunset?: string'
+      return:
+        description: ''
+        type: string
+  - name: tag
+    uid: azure-maps-rest.atlas.service.Models.ReferenceTimeByCoordinates.tag
+    package: azure-maps-rest
+    summary: >-
+      Time zone name in effect at the reference timestamp (i.e. PST or PDT
+      depending whether
+
+      Daylight Savings Time is in effect).
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: tag
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'tag?: string'
+      return:
+        description: ''
+        type: string
+  - name: wallTime
+    uid: azure-maps-rest.atlas.service.Models.ReferenceTimeByCoordinates.wallTime
+    package: azure-maps-rest
+    summary: >-
+      Current wall time at the given time zone as shown in the `Tag` property.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: wallTime
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'wallTime?: string'
+      return:
+        description: ''
+        type: string

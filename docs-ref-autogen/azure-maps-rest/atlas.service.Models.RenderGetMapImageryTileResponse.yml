@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: RenderGetMapImageryTileResponse
+uid: azure-maps-rest.atlas.service.Models.RenderGetMapImageryTileResponse
+package: azure-maps-rest
+summary: Contains response data for the getMapImageryTile operation.
+fullName: RenderGetMapImageryTileResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type RenderGetMapImageryTileResponse = {
+    _response: HttpResponse,
+    blobBody?: Promise<Blob>,
+    readableStreamBody?: NodeJS.ReadableStream,
+  }

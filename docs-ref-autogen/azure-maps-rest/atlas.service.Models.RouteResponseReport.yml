@@ -1,0 +1,29 @@
+### YamlMime:TSType
+name: RouteResponseReport
+uid: azure-maps-rest.atlas.service.Models.RouteResponseReport
+package: azure-maps-rest
+summary: Reports the effective settings used in the current call.
+fullName: RouteResponseReport
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: effectiveSettings
+    uid: azure-maps-rest.atlas.service.Models.RouteResponseReport.effectiveSettings
+    package: azure-maps-rest
+    summary: >-
+      Effective parameters or data used when calling this Route API.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: effectiveSettings
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'effectiveSettings?: RouteResponseReportEffectiveSetting[]'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-maps-rest.atlas.service.Models.RouteResponseReportEffectiveSetting"
+          />[]

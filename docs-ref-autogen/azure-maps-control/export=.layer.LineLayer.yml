@@ -1,0 +1,149 @@
+### YamlMime:TSType
+name: LineLayer
+uid: azure-maps-control.export=.layer.LineLayer
+package: azure-maps-control
+summary: |-
+  Renders line data on the map. Can be used with SimpleLine, SimplePolygon,
+  CirclePolygon, LineString, MultiLineString, Polygon, and MultiPolygon objects.
+fullName: LineLayer
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: LineLayer(string | Source<SourceEvents>, string, LineLayerOptions)
+    uid: azure-maps-control.export=.layer.LineLayer.constructor
+    package: azure-maps-control
+    summary: Constructs a new LineLayer.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new LineLayer(source: string | Source<SourceEvents>, id?: string,
+        options?: LineLayerOptions)
+      parameters:
+        - id: source
+          type: >-
+            string | <xref uid="azure-maps-control.export" />=.<xref
+            uid="source.Source" />&lt;<xref uid="azure-maps-control.export"
+            />=.<xref uid="source.SourceEvents" />&gt;
+          description: The id or instance of a data source which the layer will render.
+        - id: id
+          type: string
+          description: >-
+            The id of the layer. If not specified a random one will be
+            generated.
+        - id: options
+          type: <xref uid="azure-maps-control.export" />=.LineLayerOptions
+          description: The options of the line layer.
+inheritedProperties:
+  - name: metadata
+    uid: azure-maps-control.export=.layer.LineLayer.metadata
+    package: azure-maps-control
+    summary: A property for associating custom data with the layer.
+    fullName: metadata
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'metadata?: any'
+      return:
+        description: ''
+        type: any
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.metadata](xref:azure-maps-control.export=.layer.Layer.metadata)
+inheritedMethods:
+  - name: getId()
+    uid: azure-maps-control.export=.layer.LineLayer.getId
+    package: azure-maps-control
+    summary: Gets the id of the layer
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getId(): string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.getId](xref:azure-maps-control.export=.layer.Layer.getId)
+  - name: getMap()
+    uid: azure-maps-control.export=.layer.LineLayer.getMap
+    package: azure-maps-control
+    summary: Gets the map that the layer is currently added to, or null.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getMap(): Map'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.export" />=.Map
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.getMap](xref:azure-maps-control.export=.layer.Layer.getMap)
+  - name: onAdd(Map)
+    uid: azure-maps-control.export=.layer.LineLayer.onAdd
+    package: azure-maps-control
+    summary: Initialization method for the layer which is called when added to the map.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function onAdd(map: Map)'
+      parameters:
+        - id: map
+          type: <xref uid="azure-maps-control.export" />=.Map
+          description: The map the layer has been added to.
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.onAdd](xref:azure-maps-control.export=.layer.Layer.onAdd)
+  - name: onRemove()
+    uid: azure-maps-control.export=.layer.LineLayer.onRemove
+    package: azure-maps-control
+    summary: |-
+      Method that is called when the layer is removed from the map.
+      Should perform any necessary cleanup for the layer.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function onRemove()
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.onRemove](xref:azure-maps-control.export=.layer.Layer.onRemove)
+methods:
+  - name: getOptions()
+    uid: azure-maps-control.export=.layer.LineLayer.getOptions
+    package: azure-maps-control
+    summary: Gets the options of the line layer.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getOptions(): LineLayerOptions'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.export" />=.LineLayerOptions
+  - name: getSource()
+    uid: azure-maps-control.export=.layer.LineLayer.getSource
+    package: azure-maps-control
+    summary: Gets the source provided when creating the layer.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getSource(): string | Source<SourceEvents>'
+      return:
+        description: ''
+        type: >-
+          string | <xref uid="azure-maps-control.export" />=.<xref
+          uid="source.Source" />&lt;<xref uid="azure-maps-control.export"
+          />=.<xref uid="source.SourceEvents" />&gt;
+  - name: setOptions(LineLayerOptions)
+    uid: azure-maps-control.export=.layer.LineLayer.setOptions
+    package: azure-maps-control
+    summary: Sets the options of the line layer.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function setOptions(options: LineLayerOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-maps-control.export" />=.LineLayerOptions
+          description: The new options of the line layer.
+extends: <xref uid="azure-maps-control.export" />=.<xref uid="layer.Layer" />

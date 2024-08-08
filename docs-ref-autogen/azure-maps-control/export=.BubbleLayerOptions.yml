@@ -1,0 +1,244 @@
+### YamlMime:TSType
+name: BubbleLayerOptions
+uid: azure-maps-control.export=.BubbleLayerOptions
+package: azure-maps-control
+summary: Options used when rendering Point objects in a BubbleLayer.
+fullName: BubbleLayerOptions
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: blur
+    uid: azure-maps-control.export=.BubbleLayerOptions.blur
+    package: azure-maps-control
+    summary: >-
+      The amount to blur the circles.
+
+      A value of 1 blurs the circles such that only the center point if at full
+      opacity.
+
+      Default `0`.
+    fullName: blur
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'blur?: DataDrivenPropertyValueSpecification<number>'
+      return:
+        description: ''
+        type: DataDrivenPropertyValueSpecification&lt;number&gt;
+  - name: color
+    uid: azure-maps-control.export=.BubbleLayerOptions.color
+    package: azure-maps-control
+    summary: |-
+      The color to fill the circle symbol with.
+      Default `"#1A73AA"`.
+    fullName: color
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'color?: DataDrivenPropertyValueSpecification<string>'
+      return:
+        description: ''
+        type: DataDrivenPropertyValueSpecification&lt;string&gt;
+  - name: opacity
+    uid: azure-maps-control.export=.BubbleLayerOptions.opacity
+    package: azure-maps-control
+    summary: >-
+      A number between 0 and 1 that indicates the opacity at which the circles
+      will be drawn.
+
+      Default `1`.
+    fullName: opacity
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'opacity?: DataDrivenPropertyValueSpecification<number>'
+      return:
+        description: ''
+        type: DataDrivenPropertyValueSpecification&lt;number&gt;
+  - name: pitchAlignment
+    uid: azure-maps-control.export=.BubbleLayerOptions.pitchAlignment
+    package: azure-maps-control
+    summary: |-
+      Specifies the orientation of circle when map is pitched.<br />
+      `"map"`: The circle is aligned to the plane of the map.<br />
+      `"viewport"`: The circle is aligned to the plane of the viewport.<br />
+      Default: `"viewport"`
+    fullName: pitchAlignment
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'pitchAlignment?: "map" | "viewport"'
+      return:
+        description: ''
+        type: '"map" | "viewport"'
+  - name: radius
+    uid: azure-maps-control.export=.BubbleLayerOptions.radius
+    package: azure-maps-control
+    summary: |-
+      The radius of the circle symbols in pixels.
+      Must be greater than or equal to 0.
+      Default `8`.
+    fullName: radius
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'radius?: DataDrivenPropertyValueSpecification<number>'
+      return:
+        description: ''
+        type: DataDrivenPropertyValueSpecification&lt;number&gt;
+  - name: source
+    uid: azure-maps-control.export=.BubbleLayerOptions.source
+    package: azure-maps-control
+    summary: The id or instance of a data source which the layer will render.
+    fullName: source
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'source?: string | Source<SourceEvents>'
+      return:
+        description: ''
+        type: >-
+          string | <xref uid="azure-maps-control.export" />=.<xref
+          uid="source.Source" />&lt;<xref uid="azure-maps-control.export"
+          />=.<xref uid="source.SourceEvents" />&gt;
+  - name: sourceLayer
+    uid: azure-maps-control.export=.BubbleLayerOptions.sourceLayer
+    package: azure-maps-control
+    summary: >-
+      Required when the source of the layer is a VectorTileSource.
+
+      A vector source can have multiple layers within it, this identifies which
+      one to render in this layer.
+
+      Prohibited for all other types of sources.
+    fullName: sourceLayer
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'sourceLayer?: string'
+      return:
+        description: ''
+        type: string
+  - name: strokeColor
+    uid: azure-maps-control.export=.BubbleLayerOptions.strokeColor
+    package: azure-maps-control
+    summary: |-
+      The color of the circles' outlines.
+      Default `"#FFFFFF"`.
+    fullName: strokeColor
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'strokeColor?: DataDrivenPropertyValueSpecification<string>'
+      return:
+        description: ''
+        type: DataDrivenPropertyValueSpecification&lt;string&gt;
+  - name: strokeOpacity
+    uid: azure-maps-control.export=.BubbleLayerOptions.strokeOpacity
+    package: azure-maps-control
+    summary: >-
+      A number between 0 and 1 that indicates the opacity at which the circles'
+      outlines will be drawn.
+
+      Default `1`.
+    fullName: strokeOpacity
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'strokeOpacity?: DataDrivenPropertyValueSpecification<number>'
+      return:
+        description: ''
+        type: DataDrivenPropertyValueSpecification&lt;number&gt;
+  - name: strokeWidth
+    uid: azure-maps-control.export=.BubbleLayerOptions.strokeWidth
+    package: azure-maps-control
+    summary: |-
+      The width of the circles' outlines in pixels.
+      Default `2`.
+    fullName: strokeWidth
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'strokeWidth?: DataDrivenPropertyValueSpecification<number>'
+      return:
+        description: ''
+        type: DataDrivenPropertyValueSpecification&lt;number&gt;
+inheritedProperties:
+  - name: filter
+    uid: azure-maps-control.export=.BubbleLayerOptions.filter
+    package: azure-maps-control
+    summary: |-
+      An expression specifying conditions on source features.
+      Only features that match the filter are displayed.
+    fullName: filter
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'filter?: ExpressionFilterSpecification'
+      return:
+        description: ''
+        type: ExpressionFilterSpecification
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.filter](xref:azure-maps-control.LayerOptions.filter)
+  - name: maxZoom
+    uid: azure-maps-control.export=.BubbleLayerOptions.maxZoom
+    package: azure-maps-control
+    summary: >-
+      An integer specifying the maximum zoom level to render the layer at.
+
+      This value is exclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `24`.
+    fullName: maxZoom
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'maxZoom?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.maxZoom](xref:azure-maps-control.LayerOptions.maxZoom)
+  - name: minZoom
+    uid: azure-maps-control.export=.BubbleLayerOptions.minZoom
+    package: azure-maps-control
+    summary: >-
+      An integer specifying the minimum zoom level to render the layer at.
+
+      This value is inclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `0`.
+    fullName: minZoom
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'minZoom?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.minZoom](xref:azure-maps-control.LayerOptions.minZoom)
+  - name: visible
+    uid: azure-maps-control.export=.BubbleLayerOptions.visible
+    package: azure-maps-control
+    summary: |-
+      Specifies if the layer is visible or not.
+      Default `true`.
+    fullName: visible
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'visible?: boolean'
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.visible](xref:azure-maps-control.LayerOptions.visible)
+extends: <xref uid="azure-maps-control.export" />=.LayerOptions

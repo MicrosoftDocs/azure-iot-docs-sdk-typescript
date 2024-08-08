@@ -1,0 +1,210 @@
+### YamlMime:TSType
+name: HeatMapLayerOptions
+uid: azure-maps-control.HeatMapLayerOptions
+package: azure-maps-control
+summary: Options used when rendering Point objects in a HeatMapLayer.
+fullName: HeatMapLayerOptions
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: color
+    uid: azure-maps-control.HeatMapLayerOptions.color
+    package: azure-maps-control
+    summary: >-
+      Specifies the color gradient used to colorize the pixels in the heatmap.
+
+      This is defined using an expression that uses `["heatmap-density"]` as
+      input.
+
+      Default `["interpolate",["linear"],["heatmap-density"],0,"rgba(0,0,
+      255,0)",0.1,"royalblue",0.3,"cyan",0.5,"lime",0.7,"yellow",1,"red"]`
+    fullName: color
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'color?: ExpressionFilterSpecification'
+      return:
+        description: ''
+        type: ExpressionFilterSpecification
+  - name: intensity
+    uid: azure-maps-control.HeatMapLayerOptions.intensity
+    package: azure-maps-control
+    summary: >-
+      Similar to `heatmap-weight` but specifies the global heatmap intensity.
+
+      The higher this value is, the more ‘weight’ each point will contribute to
+      the appearance.
+
+      Default `1`
+    fullName: intensity
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'intensity?: PropertyValueSpecification<number>'
+      return:
+        description: ''
+        type: PropertyValueSpecification&lt;number&gt;
+  - name: opacity
+    uid: azure-maps-control.HeatMapLayerOptions.opacity
+    package: azure-maps-control
+    summary: >-
+      The opacity at which the heatmap layer will be rendered defined as a
+      number between 0 and 1.
+
+      Default `1`.
+    fullName: opacity
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'opacity?: PropertyValueSpecification<number>'
+      return:
+        description: ''
+        type: PropertyValueSpecification&lt;number&gt;
+  - name: radius
+    uid: azure-maps-control.HeatMapLayerOptions.radius
+    package: azure-maps-control
+    summary: |-
+      The radius in pixels used to render a data point on the heatmap.
+      The radius must be a number greater or equal to 1.
+      Default `30`.
+    fullName: radius
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'radius?: PropertyValueSpecification<number>'
+      return:
+        description: ''
+        type: PropertyValueSpecification&lt;number&gt;
+  - name: source
+    uid: azure-maps-control.HeatMapLayerOptions.source
+    package: azure-maps-control
+    summary: The id or instance of a data source which the layer will render.
+    fullName: source
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'source?: string | Source<SourceEvents>'
+      return:
+        description: ''
+        type: >-
+          string | <xref uid="azure-maps-control.export" />=.<xref
+          uid="source.Source" />&lt;<xref uid="azure-maps-control.export"
+          />=.<xref uid="source.SourceEvents" />&gt;
+  - name: sourceLayer
+    uid: azure-maps-control.HeatMapLayerOptions.sourceLayer
+    package: azure-maps-control
+    summary: >-
+      Required when the source of the layer is a VectorTileSource.
+
+      A vector source can have multiple layers within it, this identifies which
+      one to render in this layer.
+
+      Prohibited for all other types of sources.
+    fullName: sourceLayer
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'sourceLayer?: string'
+      return:
+        description: ''
+        type: string
+  - name: weight
+    uid: azure-maps-control.HeatMapLayerOptions.weight
+    package: azure-maps-control
+    summary: >-
+      Specifies how much an individual data point contributes to the heatmap.
+
+      Must be a number greater than 0. A value of 5 would be equivalent to
+      having 5 points of weight 1 in the same spot.
+
+      This is useful when clustering points to allow heatmap rendering or large
+      datasets.
+
+      Default `1`
+    fullName: weight
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'weight?: PropertyValueSpecification<number>'
+      return:
+        description: ''
+        type: PropertyValueSpecification&lt;number&gt;
+inheritedProperties:
+  - name: filter
+    uid: azure-maps-control.HeatMapLayerOptions.filter
+    package: azure-maps-control
+    summary: |-
+      An expression specifying conditions on source features.
+      Only features that match the filter are displayed.
+    fullName: filter
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'filter?: ExpressionFilterSpecification'
+      return:
+        description: ''
+        type: ExpressionFilterSpecification
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.filter](xref:azure-maps-control.LayerOptions.filter)
+  - name: maxZoom
+    uid: azure-maps-control.HeatMapLayerOptions.maxZoom
+    package: azure-maps-control
+    summary: >-
+      An integer specifying the maximum zoom level to render the layer at.
+
+      This value is exclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `24`.
+    fullName: maxZoom
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'maxZoom?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.maxZoom](xref:azure-maps-control.LayerOptions.maxZoom)
+  - name: minZoom
+    uid: azure-maps-control.HeatMapLayerOptions.minZoom
+    package: azure-maps-control
+    summary: >-
+      An integer specifying the minimum zoom level to render the layer at.
+
+      This value is inclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `0`.
+    fullName: minZoom
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'minZoom?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.minZoom](xref:azure-maps-control.LayerOptions.minZoom)
+  - name: visible
+    uid: azure-maps-control.HeatMapLayerOptions.visible
+    package: azure-maps-control
+    summary: |-
+      Specifies if the layer is visible or not.
+      Default `true`.
+    fullName: visible
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'visible?: boolean'
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.visible](xref:azure-maps-control.LayerOptions.visible)
+extends: <xref uid="azure-maps-control.export" />=.LayerOptions

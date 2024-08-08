@@ -1,0 +1,137 @@
+### YamlMime:TSType
+name: KmlReadOptions
+uid: azure-maps-spatial-io.export=.KmlReadOptions
+package: azure-maps-spatial-io
+summary: Options that customize how KML files are read and parsed.
+fullName: KmlReadOptions
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: extrudePolygons
+    uid: azure-maps-spatial-io.export=.KmlReadOptions.extrudePolygons
+    package: azure-maps-spatial-io
+    summary: >-
+      Specifies if polygon extrusion information should be captured in KML
+      files.
+
+      If set to true, and a polygon has extrusion data, a height property will
+      be added to polygon features properties
+
+      to indicate how much the polygon should be extruded vertically in meters.
+
+      Default: `true`
+    fullName: extrudePolygons
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'extrudePolygons?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: ignoreVisibility
+    uid: azure-maps-spatial-io.export=.KmlReadOptions.ignoreVisibility
+    package: azure-maps-spatial-io
+    summary: >-
+      Specifies if shapes visible tags should be used to set the visible
+      property of it's equivalent GeoJSON object.
+
+      Default: `true`
+    fullName: ignoreVisibility
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'ignoreVisibility?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: maxNetworkLinkDepth
+    uid: azure-maps-spatial-io.export=.KmlReadOptions.maxNetworkLinkDepth
+    package: azure-maps-spatial-io
+    summary: >-
+      The maximum depth of network links in a KML file.
+
+      Example: when set to 3; file1 links to file2 which links to file3 but
+      won't open links in file3.
+
+      Default: `3`
+    fullName: maxNetworkLinkDepth
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'maxNetworkLinkDepth?: number'
+      return:
+        description: ''
+        type: number
+  - name: maxNetworkLinks
+    uid: azure-maps-spatial-io.export=.KmlReadOptions.maxNetworkLinks
+    package: azure-maps-spatial-io
+    summary: |-
+      The maximum number of network links that a single KML file can have.
+      Default: `10`
+    fullName: maxNetworkLinks
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'maxNetworkLinks?: number'
+      return:
+        description: ''
+        type: number
+inheritedProperties:
+  - name: maxFeatures
+    uid: azure-maps-spatial-io.export=.KmlReadOptions.maxFeatures
+    package: azure-maps-spatial-io
+    summary: |-
+      Specifies the maximum number of features to read from the data set.
+      If not specified, will read all features.
+    fullName: maxFeatures
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'maxFeatures?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseSpatialXmlReadOptions.maxFeatures](xref:azure-maps-spatial-io.BaseSpatialXmlReadOptions.maxFeatures)
+  - name: parseStyles
+    uid: azure-maps-spatial-io.export=.KmlReadOptions.parseStyles
+    package: azure-maps-spatial-io
+    summary: >-
+      Specifies if style information should be parsed from the XML file and
+      included as properties of the features.
+
+      Default: `true`
+    fullName: parseStyles
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'parseStyles?: boolean'
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseSpatialXmlReadOptions.parseStyles](xref:azure-maps-spatial-io.BaseSpatialXmlReadOptions.parseStyles)
+  - name: proxyService
+    uid: azure-maps-spatial-io.export=.KmlReadOptions.proxyService
+    package: azure-maps-spatial-io
+    summary: >-
+      A URL to a proxy service that can have a URL to an external file appended
+      it.
+
+      This will be needed to access files that are hosted on non-CORs enabled
+      endpoints.
+    fullName: proxyService
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'proxyService?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseSpatialXmlReadOptions.proxyService](xref:azure-maps-spatial-io.BaseSpatialXmlReadOptions.proxyService)
+extends: <xref uid="azure-maps-spatial-io.export" />=.BaseSpatialXmlReadOptions

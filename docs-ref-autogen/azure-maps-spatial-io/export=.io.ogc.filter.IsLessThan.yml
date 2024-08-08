@@ -1,0 +1,68 @@
+### YamlMime:TSType
+name: IsLessThan
+uid: azure-maps-spatial-io.export=.io.ogc.filter.IsLessThan
+package: azure-maps-spatial-io
+summary: Checks to see if one value is less than another.
+fullName: IsLessThan
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: >-
+      IsLessThan(Filter | PropertyName | Literal, Filter | PropertyName |
+      Literal, BinaryComparisonOptions)
+    uid: azure-maps-spatial-io.export=.io.ogc.filter.IsLessThan.constructor
+    package: azure-maps-spatial-io
+    summary: Checks to see if one value is less than another.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new IsLessThan(value1: Filter | PropertyName | Literal, value2: Filter |
+        PropertyName | Literal, options?: BinaryComparisonOptions)
+      parameters:
+        - id: value1
+          type: >-
+            <xref uid="azure-maps-spatial-io.export" />=.<xref
+            uid="io.ogc.filter.Filter" /> | <xref
+            uid="azure-maps-spatial-io.export" />=.<xref
+            uid="io.ogc.filter.PropertyName" /> | <xref
+            uid="azure-maps-spatial-io.export" />=.<xref
+            uid="io.ogc.filter.Literal" />
+          description: The first value to compare.
+        - id: value2
+          type: >-
+            <xref uid="azure-maps-spatial-io.export" />=.<xref
+            uid="io.ogc.filter.Filter" /> | <xref
+            uid="azure-maps-spatial-io.export" />=.<xref
+            uid="io.ogc.filter.PropertyName" /> | <xref
+            uid="azure-maps-spatial-io.export" />=.<xref
+            uid="io.ogc.filter.Literal" />
+          description: The second value to compare.
+        - id: options
+          type: >-
+            <xref uid="azure-maps-spatial-io.export" />=.<xref
+            uid="io.ogc.filter.BinaryComparisonOptions" />
+          description: Options for the comparison.
+inheritedMethods:
+  - name: toXml(string)
+    uid: azure-maps-spatial-io.export=.io.ogc.filter.IsLessThan.toXml
+    package: azure-maps-spatial-io
+    summary: Generates an XML version of the filter.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function toXml(version?: string): string'
+      parameters:
+        - id: version
+          type: string
+          description: The WFS service version.
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BinaryComparisonOpType.toXml](xref:azure-maps-spatial-io.export=.io.ogc.filter.BinaryComparisonOpType.toXml)
+extends: >-
+  <xref uid="azure-maps-spatial-io.export" />=.<xref
+  uid="io.ogc.filter.BinaryComparisonOpType" />

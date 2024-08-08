@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: TimezoneGetTimezoneByIDResponse
+uid: azure-maps-rest.export=.Models.TimezoneGetTimezoneByIDResponse
+package: azure-maps-rest
+summary: Contains response data for the getTimezoneByID operation.
+fullName: TimezoneGetTimezoneByIDResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type TimezoneGetTimezoneByIDResponse = TimezoneByIdResult & {
+    _response: msRest.HttpResponse & {
+      bodyAsText: string
+      parsedBody: TimezoneByIdResult
+    }
+  }

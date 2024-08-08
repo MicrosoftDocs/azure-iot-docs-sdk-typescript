@@ -1,0 +1,88 @@
+### YamlMime:TSType
+name: MultiPoint
+uid: azure-maps-control.export=.data.MultiPoint
+package: azure-maps-control
+summary: >-
+  A GeoJSON MultiPoint object - a JSON object that represents multiple
+  geographic positions. The full description
+
+  is detailed in [RFC 7946](https://tools.ietf.org/html/rfc7946#section-3.1.3).
+fullName: MultiPoint
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: MultiPoint(Position[], BoundingBox)
+    uid: azure-maps-control.export=.data.MultiPoint.constructor
+    package: azure-maps-control
+    summary: Constructs a MultiPoint.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new MultiPoint(coordinates: Position[], bbox?: BoundingBox)'
+      parameters:
+        - id: coordinates
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            />[]
+          description: The array of multiple positions defining the multipoint.
+        - id: bbox
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.BoundingBox" />
+          description: The bounding box of the multipoint.
+properties:
+  - name: bbox
+    uid: azure-maps-control.export=.data.MultiPoint.bbox
+    package: azure-maps-control
+    summary: The bounding box of the multipoint.
+    fullName: bbox
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'public bbox?: BoundingBox'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-control.export" />=.<xref uid="data.BoundingBox"
+          />
+  - name: coordinates
+    uid: azure-maps-control.export=.data.MultiPoint.coordinates
+    package: azure-maps-control
+    summary: The array of multiple positions defining the multipoint.
+    fullName: coordinates
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'public coordinates: Position[]'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+          />[]
+  - name: type
+    uid: azure-maps-control.export=.data.MultiPoint.type
+    package: azure-maps-control
+    summary: A GeoJSON type descriptor with value "MutliPoint".
+    fullName: type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'public type: string'
+      return:
+        description: ''
+        type: string
+  - name: TYPE
+    uid: azure-maps-control.export=.data.MultiPoint.TYPE
+    package: azure-maps-control
+    summary: >-
+      A static GeoJSON type descriptor for the MultiPoint class to be used in
+      runtime comparisons.
+    fullName: TYPE
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'public static TYPE: string'
+      return:
+        description: ''
+        type: string

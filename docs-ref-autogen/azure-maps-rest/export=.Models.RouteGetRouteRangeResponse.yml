@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: RouteGetRouteRangeResponse
+uid: azure-maps-rest.export=.Models.RouteGetRouteRangeResponse
+package: azure-maps-rest
+summary: Contains response data for the getRouteRange operation.
+fullName: RouteGetRouteRangeResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type RouteGetRouteRangeResponse = RouteRangeResponse & {
+    _response: msRest.HttpResponse & {
+      bodyAsText: string
+      parsedBody: RouteRangeResponse
+    }
+  }

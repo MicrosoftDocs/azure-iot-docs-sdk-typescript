@@ -1,0 +1,121 @@
+### YamlMime:TSType
+name: TimezoneById
+uid: azure-maps-rest.export=.Models.TimezoneById
+package: azure-maps-rest
+summary: An interface representing TimezoneById.
+fullName: TimezoneById
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: aliases
+    uid: azure-maps-rest.export=.Models.TimezoneById.aliases
+    package: azure-maps-rest
+    summary: >-
+      An array of time zone ID aliases.  Only returned when [options]=*zoneinfo*
+      or *all*.
+
+
+      Note: may be null.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: aliases
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'aliases?: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: countries
+    uid: azure-maps-rest.export=.Models.TimezoneById.countries
+    package: azure-maps-rest
+    summary: >-
+      An array of country records. Only returned when [options]=*zoneinfo* or
+      *all*.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: countries
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'countries?: Country[]'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.export" />=.<xref uid="Models.Country" />[]
+  - name: id
+    uid: azure-maps-rest.export=.Models.TimezoneById.id
+    package: azure-maps-rest
+    summary: >-
+      Id property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id?: string'
+      return:
+        description: ''
+        type: string
+  - name: names
+    uid: azure-maps-rest.export=.Models.TimezoneById.names
+    package: azure-maps-rest
+    summary: ''
+    fullName: names
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'names?: Names'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.export" />=.<xref uid="Models.Names" />
+  - name: referenceTime
+    uid: azure-maps-rest.export=.Models.TimezoneById.referenceTime
+    package: azure-maps-rest
+    summary: ''
+    fullName: referenceTime
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'referenceTime?: ReferenceTimeById'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.export" />=.<xref
+          uid="Models.ReferenceTimeById" />
+  - name: representativePoint
+    uid: azure-maps-rest.export=.Models.TimezoneById.representativePoint
+    package: azure-maps-rest
+    summary: ''
+    fullName: representativePoint
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'representativePoint?: RepresentativePoint'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.export" />=.<xref
+          uid="Models.RepresentativePoint" />
+  - name: timeTransitions
+    uid: azure-maps-rest.export=.Models.TimezoneById.timeTransitions
+    package: azure-maps-rest
+    summary: >-
+      Time zone DST transitions from [transitionsFrom] until timestamp + 1 year.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: timeTransitions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'timeTransitions?: TimeTransition[]'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.export" />=.<xref
+          uid="Models.TimeTransition" />[]

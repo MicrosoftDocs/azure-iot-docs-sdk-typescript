@@ -3,17 +3,19 @@ uid: azure-maps-drawing-tools
 name: azure-maps-drawing-tools
 summary: ''
 type: package
-interfaces:
-  - azure-maps-drawing-tools.azure-maps-control.EventManager
-  - azure-maps-drawing-tools.atlas.drawing.DrawingManagerEvents
-  - azure-maps-drawing-tools.atlas.drawing.SnapGridManagerOptions
-  - azure-maps-drawing-tools.atlas.DrawingLayers
-  - azure-maps-drawing-tools.atlas.DrawingManagerOptions
-  - azure-maps-drawing-tools.atlas.DrawingToolbarOptions
 classes:
-  - azure-maps-drawing-tools.atlas.control.DrawingToolbar
-  - azure-maps-drawing-tools.atlas.drawing.DrawingManager
-  - azure-maps-drawing-tools.atlas.drawing.SnapGridManager
+  - azure-maps-drawing-tools.export=.control.DrawingToolbar
+  - azure-maps-drawing-tools.export=.drawing.DrawingManager
+  - azure-maps-drawing-tools.export=.drawing.SnapGridManager
 enums:
-  - azure-maps-drawing-tools.atlas.drawing.DrawingInteractionType
-  - azure-maps-drawing-tools.atlas.drawing.DrawingMode
+  - azure-maps-drawing-tools.export=.drawing.DrawingInteractionType
+  - azure-maps-drawing-tools.export=.drawing.DrawingMode
+interfaces:
+  - azure-maps-drawing-tools.export=.drawing.DrawingManagerEvents
+  - azure-maps-drawing-tools.export=.drawing.SnapGridManagerOptions
+  - azure-maps-drawing-tools.export=.DrawingLayers
+  - azure-maps-drawing-tools.export=.DrawingManagerOptions
+  - azure-maps-drawing-tools.export=.DrawingToolbarOptions
+  - azure-maps-drawing-tools.DrawingLayers
+  - azure-maps-drawing-tools.DrawingManagerOptions
+  - azure-maps-drawing-tools.DrawingToolbarOptions

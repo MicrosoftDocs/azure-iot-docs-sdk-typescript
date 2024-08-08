@@ -1,0 +1,106 @@
+### YamlMime:TSType
+name: Layer
+uid: azure-maps-control.export=.layer.Layer
+package: azure-maps-control
+summary: Abstract class for other layer classes to extend.
+fullName: Layer<T>
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: Layer<T>(string)
+    uid: azure-maps-control.export=.layer.Layer.constructor
+    package: azure-maps-control
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new Layer(id?: string)'
+      parameters:
+        - id: id
+          type: string
+          description: ''
+properties:
+  - name: metadata
+    uid: azure-maps-control.export=.layer.Layer.metadata
+    package: azure-maps-control
+    summary: A property for associating custom data with the layer.
+    fullName: metadata
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'metadata?: any'
+      return:
+        description: ''
+        type: any
+methods:
+  - name: getId()
+    uid: azure-maps-control.export=.layer.Layer.getId
+    package: azure-maps-control
+    summary: Gets the id of the layer
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getId(): string'
+      return:
+        description: ''
+        type: string
+  - name: getMap()
+    uid: azure-maps-control.export=.layer.Layer.getMap
+    package: azure-maps-control
+    summary: Gets the map that the layer is currently added to, or null.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getMap(): Map'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.export" />=.Map
+  - name: getOptions()
+    uid: azure-maps-control.export=.layer.Layer.getOptions
+    package: azure-maps-control
+    summary: Gets the options of the layer.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getOptions(): LayerOptions'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.export" />=.LayerOptions
+  - name: onAdd(Map)
+    uid: azure-maps-control.export=.layer.Layer.onAdd
+    package: azure-maps-control
+    summary: Initialization method for the layer which is called when added to the map.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function onAdd(map: Map)'
+      parameters:
+        - id: map
+          type: <xref uid="azure-maps-control.export" />=.Map
+          description: The map the layer has been added to.
+  - name: onRemove()
+    uid: azure-maps-control.export=.layer.Layer.onRemove
+    package: azure-maps-control
+    summary: |-
+      Method that is called when the layer is removed from the map.
+      Should perform any necessary cleanup for the layer.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function onRemove()
+  - name: setOptions(LayerOptions)
+    uid: azure-maps-control.export=.layer.Layer.setOptions
+    package: azure-maps-control
+    summary: Sets the options of the layer.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function setOptions(options: LayerOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-maps-control.export" />=.LayerOptions
+          description: The new options of the layer.
+extends: >-
+  <xref uid="azure-maps-control.export" />=.<xref uid="internal.EventEmitter"
+  />&lt;T&gt;

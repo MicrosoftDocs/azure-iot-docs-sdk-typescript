@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: Merge
+uid: azure-maps-rest.export=.Merge
+package: azure-maps-rest
+summary: ''
+fullName: Merge<T, K>
+remarks: ''
+isDeprecated: false
+syntax: |
+  type Merge<T, K> = { [P in keyof T]: P extends keyof K ? K[P] : T[P] }

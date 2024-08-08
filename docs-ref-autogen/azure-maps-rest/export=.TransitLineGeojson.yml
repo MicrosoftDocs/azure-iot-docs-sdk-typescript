@@ -1,0 +1,38 @@
+### YamlMime:TSType
+name: TransitLineGeojson
+uid: azure-maps-rest.export=.TransitLineGeojson
+package: azure-maps-rest
+summary: >-
+  A helper extension providing methods for accessing the response data in
+  GeoJSON format.
+fullName: TransitLineGeojson
+remarks: ''
+isDeprecated: false
+type: class
+methods:
+  - name: getFeatures()
+    uid: azure-maps-rest.export=.TransitLineGeojson.getFeatures
+    package: azure-maps-rest
+    summary: >-
+      Returns a GeoJSON feature collection built from the results.
+
+      If stop details were requested the collection will contain `Point`
+      features representing each stop.
+
+      If pattern details were requested the collection will contain `LineString`
+      features representing each pattern.
+
+      Features representing stops will have properties matching the `Stop`,
+      except `position` will be omitted.
+
+      Features representing patterns will have properties matching the
+      `Pattern`, except geometry will be omitted.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getFeatures(): FeatureCollection<Point | LineString,
+        GeoJsonProperties>
+      return:
+        description: ''
+        type: FeatureCollection&lt;Point | LineString, GeoJsonProperties&gt;

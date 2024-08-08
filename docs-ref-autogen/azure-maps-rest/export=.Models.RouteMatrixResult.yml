@@ -1,0 +1,40 @@
+### YamlMime:TSType
+name: RouteMatrixResult
+uid: azure-maps-rest.export=.Models.RouteMatrixResult
+package: azure-maps-rest
+summary: Matrix result object
+fullName: RouteMatrixResult
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: response
+    uid: azure-maps-rest.export=.Models.RouteMatrixResult.response
+    package: azure-maps-rest
+    summary: ''
+    fullName: response
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'response?: RouteMatrixResultResponse'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.export" />=.<xref
+          uid="Models.RouteMatrixResultResponse" />
+  - name: statusCode
+    uid: azure-maps-rest.export=.Models.RouteMatrixResult.statusCode
+    package: azure-maps-rest
+    summary: >-
+      StatusCode property for the current cell in the input matrix.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: statusCode
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'statusCode?: number'
+      return:
+        description: ''
+        type: number

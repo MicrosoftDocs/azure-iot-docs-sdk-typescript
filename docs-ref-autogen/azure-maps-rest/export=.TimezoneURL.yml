@@ -1,0 +1,162 @@
+### YamlMime:TSType
+name: TimezoneURL
+uid: azure-maps-rest.export=.TimezoneURL
+package: azure-maps-rest
+summary: A TimezoneURL represents a URL to the Azure Maps timezone operations.
+fullName: TimezoneURL
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: TimezoneURL(Pipeline, string)
+    uid: azure-maps-rest.export=.TimezoneURL.constructor
+    package: azure-maps-rest
+    summary: Creates an instance of TimezoneURL.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new TimezoneURL(pipeline: Pipeline, mapsUrl?: string)'
+      parameters:
+        - id: pipeline
+          type: <xref uid="azure-maps-rest.export" />=.Pipeline
+          description: |-
+            Call MapsURL.newPipeline() to create a default
+            pipeline, or provide a customized pipeline.
+        - id: mapsUrl
+          type: string
+          description: >-
+            A URL string pointing to Azure Maps service, default is
+
+            `"https://atlas.microsoft.com"`.
+
+            If no protocol is specified, e.g. `"atlas.microsoft.com"`, then
+            `https` will be assumed.
+inheritedProperties:
+  - name: mapsUrl
+    uid: azure-maps-rest.export=.TimezoneURL.mapsUrl
+    package: azure-maps-rest
+    summary: Base URL string value.
+    fullName: mapsUrl
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'mapsUrl: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MapsURL.mapsUrl](xref:azure-maps-rest.export=.MapsURL.mapsUrl)
+inheritedMethods:
+  - name: newPipeline(Credential, INewPipelineOptions)
+    uid: azure-maps-rest.export=.TimezoneURL.newPipeline
+    package: azure-maps-rest
+    summary: >-
+      A static method used to create a new Pipeline object with Credential
+      provided.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function newPipeline(credential: Credential, pipelineOptions?:
+        INewPipelineOptions): Pipeline
+      parameters:
+        - id: credential
+          type: <xref uid="azure-maps-rest.export" />=.Credential
+          description: >-
+            Such as SubscriptionKeyCredential, TokenCredential, and
+            MapControlCredential.
+        - id: pipelineOptions
+          type: <xref uid="azure-maps-rest.export" />=.INewPipelineOptions
+          description: Optional. Options.
+      return:
+        description: A new Pipeline object.
+        type: <xref uid="azure-maps-rest.export" />=.Pipeline
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MapsURL.newPipeline](xref:azure-maps-rest.export=.MapsURL.newPipeline)
+methods:
+  - name: >-
+      getTimezoneByCoordinates(Aborter, Position,
+      TimezoneGetTimezoneByCoordinatesOptionalParams)
+    uid: azure-maps-rest.export=.TimezoneURL.getTimezoneByCoordinates
+    package: azure-maps-rest
+    summary: >-
+      This API returns current, historical, and future time zone information for
+      a specified
+
+      latitude-longitude pair. In addition, the API provides sunset and sunrise
+      times for a given
+
+      location.
+
+
+      Uses the Get Timezone By Coordinates API:
+      https://docs.microsoft.com/rest/api/maps/timezone/gettimezonebycoordinates
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getTimezoneByCoordinates(aborter: Aborter, coordinate:
+        Position, options?: TimezoneGetTimezoneByCoordinatesOptionalParams):
+        Promise<GetTimezoneByCoordinatesResponse>
+      parameters:
+        - id: aborter
+          type: <xref uid="azure-maps-rest.export" />=.Aborter
+          description: ''
+        - id: coordinate
+          type: Position
+          description: >-
+            Coordinates of the point for which time zone information is
+            requested. The
+
+            applicable query is specified as a comma separated string composed
+            by latitude followed by
+
+            longitude e.g. "47.641268,-122.125679".
+        - id: options
+          type: >-
+            <xref uid="azure-maps-rest.export" />=.<xref
+            uid="Models.TimezoneGetTimezoneByCoordinatesOptionalParams" />
+          description: The optional parameters
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-maps-rest.export"
+          />=.GetTimezoneByCoordinatesResponse&gt;
+  - name: getTimezoneById(Aborter, string, TimezoneGetTimezoneByIDOptionalParams)
+    uid: azure-maps-rest.export=.TimezoneURL.getTimezoneById
+    package: azure-maps-rest
+    summary: >-
+      This API returns current, historical, and future time zone information for
+      the specified IANA
+
+      time zone ID.
+
+
+      Uses the Get Timezone By ID API:
+      https://docs.microsoft.com/rest/api/maps/timezone/gettimezonebyid
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getTimezoneById(aborter: Aborter, id: string, options?:
+        TimezoneGetTimezoneByIDOptionalParams): Promise<GetTimezoneByIdResponse>
+      parameters:
+        - id: aborter
+          type: <xref uid="azure-maps-rest.export" />=.Aborter
+          description: ''
+        - id: id
+          type: string
+          description: The IANA time zone ID.
+        - id: options
+          type: >-
+            <xref uid="azure-maps-rest.export" />=.<xref
+            uid="Models.TimezoneGetTimezoneByIDOptionalParams" />
+          description: The optional parameters
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-maps-rest.export"
+          />=.GetTimezoneByIdResponse&gt;
+extends: <xref uid="azure-maps-rest.export" />=.MapsURL

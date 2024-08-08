@@ -1,0 +1,38 @@
+### YamlMime:TSType
+name: XmlDocument
+uid: azure-maps-spatial-io.export=.io.core.XmlDocument
+package: azure-maps-spatial-io
+summary: Represents an XML Document object.
+fullName: XmlDocument
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: namespaces
+    uid: azure-maps-spatial-io.export=.io.core.XmlDocument.namespaces
+    package: azure-maps-spatial-io
+    summary: |-
+      A list of namespaces in the document. The key is the namespace prefix,
+      and the value is the namespace URL.
+    fullName: namespaces
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'namespaces?: Record<string, string>'
+      return:
+        description: ''
+        type: Record&lt;string, string&gt;
+  - name: root
+    uid: azure-maps-spatial-io.export=.io.core.XmlDocument.root
+    package: azure-maps-spatial-io
+    summary: The root node of the XMl document.
+    fullName: root
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'root?: XmlNode'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-spatial-io.export" />=.<xref
+          uid="io.core.XmlNode" />

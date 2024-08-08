@@ -1,0 +1,201 @@
+### YamlMime:TSType
+name: IndoorManager
+uid: azure-maps-indoor.export=.indoor.IndoorManager
+package: azure-maps-indoor
+summary: |-
+  [ Indoor Manager for Azure Maps Control ]
+
+  This module applies filtering logic to mapbox layers
+  so that indoor tilesets with multiple floors worth of
+  overlapping features can be presented.
+
+  This module was written because of a constraint in mapbox
+  styles that prevents feature state from being used in
+  expressions that drive layout properties like visibility
+  and sort-key. If this constraint were removed, the logic
+  in this module could be captured in a style definition.
+
+             [ Event/Data Flow ]
+
+  ┌─────────────────┐  ┌────────────────┐
+  │      event:     │  │     event:     │
+  │   "sourcedata"  │  │ "levelchanged" │
+  └────────┬────────┘  └────────┬───────┘
+           │                    │
+           ▼                    ▼
+  ┌─────────────────┐  ┌────────────────┐
+  │ facilityMapping │  │ selectedLevels │
+  └────────┬────────┘  └────────┬───────┘
+           │                    │
+           │                    │
+           │  ┌──────────────┐  │    ┌────────────────────┐
+           └─►│ masterFilter │◄─┘    │ mapbox.getLayers() │
+              └───────┬──────┘       └────────┬───────────┘
+                      │                       │
+                      ▼                       │
+              ┌──────────────┐                │
+              │  filterList  │◄───────────────┘
+              └───────┬──────┘
+                      │
+                      ▼
+           ┌────────────────────┐
+           │ mapbox.setFilter() │
+           └────────────────────┘
+fullName: IndoorManager
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: IndoorManager(IMap, IndoorManagerOptions)
+    uid: azure-maps-indoor.export=.indoor.IndoorManager.constructor
+    package: azure-maps-indoor
+    summary: Constructs an IndoorManager.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new IndoorManager(map: IMap, options?: IndoorManagerOptions)'
+      parameters:
+        - id: map
+          type: <xref uid="azure-maps-indoor.export" />=.<xref uid="indoor.IMap" />
+          description: The map to overlay indoor styles on.
+        - id: options
+          type: >-
+            <xref uid="azure-maps-indoor.export" />=.<xref
+            uid="indoor.IndoorManagerOptions" />
+          description: The options for the manager.
+properties:
+  - name: getCreatorSourceId
+    uid: azure-maps-indoor.export=.indoor.IndoorManager.getCreatorSourceId
+    package: azure-maps-indoor
+    summary: Retrieves the source name of the Creator's tileset.
+    fullName: getCreatorSourceId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'getCreatorSourceId: () => string'
+      return:
+        description: ''
+        type: () =&gt; string
+  - name: getCurrentFacility
+    uid: azure-maps-indoor.export=.indoor.IndoorManager.getCurrentFacility
+    package: azure-maps-indoor
+    summary: |-
+      Retrieves the currently selected facility.
+      The format is [ "facilityId": string, levelOrdinal: number ].
+    fullName: getCurrentFacility
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'getCurrentFacility: () => [string, number]'
+      return:
+        description: ''
+        type: () =&gt; [string, number]
+  - name: getCurrentFacilityDetails
+    uid: azure-maps-indoor.export=.indoor.IndoorManager.getCurrentFacilityDetails
+    package: azure-maps-indoor
+    summary: >-
+      Retrieves the details of currently selected facility: tilesetId,
+      facilityId and levelOrdinal.
+
+      The format is [ "tilesetId:facilityId": string, levelOrdinal: number ].
+    fullName: getCurrentFacilityDetails
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'getCurrentFacilityDetails: () => [string, number]'
+      return:
+        description: ''
+        type: () =&gt; [string, number]
+  - name: getOptions
+    uid: azure-maps-indoor.export=.indoor.IndoorManager.getOptions
+    package: azure-maps-indoor
+    summary: Gets the options used by the IndoorManager.
+    fullName: getOptions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'getOptions: () => IndoorManagerOptions'
+      return:
+        description: ''
+        type: () =&gt; IndoorManagerOptions
+  - name: setFacility
+    uid: azure-maps-indoor.export=.indoor.IndoorManager.setFacility
+    package: azure-maps-indoor
+    summary: |-
+      Sets the current facility and its ordinal.
+      If an empty string is provided for the facilityId,
+      it will reset any facility selection and remove the level picker.
+    fullName: setFacility
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'setFacility: (newFacilityId: string, newLevelOrdinal: number) => void'
+      return:
+        description: ''
+        type: '(newFacilityId: string, newLevelOrdinal: number) =&gt; void'
+  - name: setOptions
+    uid: azure-maps-indoor.export=.indoor.IndoorManager.setOptions
+    package: azure-maps-indoor
+    summary: Sets the options used by the IndoorManager.
+    fullName: setOptions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'setOptions: (options?: IndoorManagerOptions) => void'
+      return:
+        description: ''
+        type: '(options?: IndoorManagerOptions) =&gt; void'
+methods:
+  - name: dispose()
+    uid: azure-maps-indoor.export=.indoor.IndoorManager.dispose
+    package: azure-maps-indoor
+    summary: |-
+      Disposes the IndoorManager.
+      When disposed, all resources used by the IndoorManager are released.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function dispose()
+  - name: focusCamera(CameraBoundsOptions & AnimationOptions, string)
+    uid: azure-maps-indoor.export=.indoor.IndoorManager.focusCamera
+    package: azure-maps-indoor
+    summary: Focuses the camera on indoor facilities.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function focusCamera(options?: CameraBoundsOptions & AnimationOptions,
+        tilesetId?: string)
+      parameters:
+        - id: options
+          type: CameraBoundsOptions & AnimationOptions
+          description: camera bounds options.
+        - id: tilesetId
+          type: string
+          description: >-
+            when indoor map configuration is used, tilesetId can be provided to
+            focus on a specific facility only, otherwise bounds that enclose all
+            facilities will be used.
+  - name: setDynamicStyling(boolean)
+    uid: azure-maps-indoor.export=.indoor.IndoorManager.setDynamicStyling
+    package: azure-maps-indoor
+    summary: >-
+      Turn on or off Dynamic Styling.
+
+      Turn on Dynamic Styling will involve calls to Get State Tile.
+
+      Turn off Dynamic Styling will stop calling Get State Tile.
+
+      Requires Initiate Indoor Manager with options that have statesetId value
+      set.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function setDynamicStyling(enable: boolean)'
+      parameters:
+        - id: enable
+          type: boolean
+          description: true to enable Dynamic Styling; false to disable Dynamic Styling.
+extends: >-
+  EventEmitter&lt;<xref uid="azure-maps-indoor.export" />=.<xref
+  uid="indoor.IIndoorManagerEvents" />&gt;

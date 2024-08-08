@@ -1,0 +1,43 @@
+### YamlMime:TSType
+name: SearchResultEntryPoint
+uid: azure-maps-rest.export=.Models.SearchResultEntryPoint
+package: azure-maps-rest
+summary: The entry point for the POI being returned.
+fullName: SearchResultEntryPoint
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: position
+    uid: azure-maps-rest.export=.Models.SearchResultEntryPoint.position
+    package: azure-maps-rest
+    summary: ''
+    fullName: position
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'position?: CoordinateAbbreviated'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.export" />=.<xref
+          uid="Models.CoordinateAbbreviated" />
+  - name: type
+    uid: azure-maps-rest.export=.Models.SearchResultEntryPoint.type
+    package: azure-maps-rest
+    summary: >-
+      The type of entry point. Value can be either _main_ or _minor_. Possible
+      values include:
+
+      'main', 'minor'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'type?: Type'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.export" />=.<xref uid="Models.Type" />

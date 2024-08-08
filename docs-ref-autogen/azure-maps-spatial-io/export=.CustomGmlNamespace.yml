@@ -1,0 +1,70 @@
+### YamlMime:TSType
+name: CustomGmlNamespace
+uid: azure-maps-spatial-io.export=.CustomGmlNamespace
+package: azure-maps-spatial-io
+summary: Defines a custom XML namespace.
+fullName: CustomGmlNamespace
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: featureTagName
+    uid: azure-maps-spatial-io.export=.CustomGmlNamespace.featureTagName
+    package: azure-maps-spatial-io
+    summary: The tag name to wrap feature members with.
+    fullName: featureTagName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'featureTagName: string'
+      return:
+        description: ''
+        type: string
+  - name: geometryTagName
+    uid: azure-maps-spatial-io.export=.CustomGmlNamespace.geometryTagName
+    package: azure-maps-spatial-io
+    summary: The tag name to wrap the geometry with.
+    fullName: geometryTagName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'geometryTagName: string'
+      return:
+        description: ''
+        type: string
+  - name: namespaceUrl
+    uid: azure-maps-spatial-io.export=.CustomGmlNamespace.namespaceUrl
+    package: azure-maps-spatial-io
+    summary: A URL that points to the namespace schema.
+    fullName: namespaceUrl
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'namespaceUrl: string'
+      return:
+        description: ''
+        type: string
+  - name: prefix
+    uid: azure-maps-spatial-io.export=.CustomGmlNamespace.prefix
+    package: azure-maps-spatial-io
+    summary: A prefix value to append to the tag names.
+    fullName: prefix
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'prefix: string'
+      return:
+        description: ''
+        type: string
+  - name: tagNames
+    uid: azure-maps-spatial-io.export=.CustomGmlNamespace.tagNames
+    package: azure-maps-spatial-io
+    summary: An array of tag names that are allowed by this namespace.
+    fullName: tagNames
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'tagNames: string[]'
+      return:
+        description: ''
+        type: string[]

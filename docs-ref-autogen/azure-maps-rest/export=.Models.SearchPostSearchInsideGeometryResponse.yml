@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: SearchPostSearchInsideGeometryResponse
+uid: azure-maps-rest.export=.Models.SearchPostSearchInsideGeometryResponse
+package: azure-maps-rest
+summary: Contains response data for the postSearchInsideGeometry operation.
+fullName: SearchPostSearchInsideGeometryResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SearchPostSearchInsideGeometryResponse = SearchGeometryResponse & {
+    _response: msRest.HttpResponse & {
+      bodyAsText: string
+      parsedBody: SearchGeometryResponse
+    }
+  }

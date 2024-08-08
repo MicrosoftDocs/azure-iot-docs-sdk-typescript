@@ -1,0 +1,32 @@
+### YamlMime:TSType
+name: MetroAreaGeojson
+uid: azure-maps-rest.export=.MetroAreaGeojson
+package: azure-maps-rest
+summary: >-
+  A helper extension providing methods for accessing the response data in
+  GeoJSON format.
+fullName: MetroAreaGeojson
+remarks: ''
+isDeprecated: false
+type: class
+methods:
+  - name: getFeatures()
+    uid: azure-maps-rest.export=.MetroAreaGeojson.getFeatures
+    package: azure-maps-rest
+    summary: >-
+      Returns a GeoJSON feature collection built from the results.
+
+      Each feature in the collection is a Polygon representing one area.
+
+      The properties of each feature match the properties of the
+      `MetroAreaResult`, except
+
+      the `geometry` property is omitted because it is redundant with the
+      feature's geometry.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getFeatures(): FeatureCollection<Polygon, GeoJsonProperties>'
+      return:
+        description: ''
+        type: FeatureCollection&lt;Polygon, GeoJsonProperties&gt;

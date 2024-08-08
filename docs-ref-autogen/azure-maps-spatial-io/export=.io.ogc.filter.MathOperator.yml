@@ -1,0 +1,62 @@
+### YamlMime:TSType
+name: MathOperator
+uid: azure-maps-spatial-io.export=.io.ogc.filter.MathOperator
+package: azure-maps-spatial-io
+summary: An abstract class in which all math operator filters inherit from.
+fullName: MathOperator
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: >-
+      MathOperator(string, number | Filter | PropertyName, number | Filter |
+      PropertyName)
+    uid: azure-maps-spatial-io.export=.io.ogc.filter.MathOperator.constructor
+    package: azure-maps-spatial-io
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new MathOperator(operator: string, _value1: number | Filter |
+        PropertyName, _value2: number | Filter | PropertyName)
+      parameters:
+        - id: operator
+          type: string
+          description: ''
+        - id: _value1
+          type: >-
+            number | <xref uid="azure-maps-spatial-io.export" />=.<xref
+            uid="io.ogc.filter.Filter" /> | <xref
+            uid="azure-maps-spatial-io.export" />=.<xref
+            uid="io.ogc.filter.PropertyName" />
+          description: ''
+        - id: _value2
+          type: >-
+            number | <xref uid="azure-maps-spatial-io.export" />=.<xref
+            uid="io.ogc.filter.Filter" /> | <xref
+            uid="azure-maps-spatial-io.export" />=.<xref
+            uid="io.ogc.filter.PropertyName" />
+          description: ''
+inheritedMethods:
+  - name: toXml(string)
+    uid: azure-maps-spatial-io.export=.io.ogc.filter.MathOperator.toXml
+    package: azure-maps-spatial-io
+    summary: Generates an XML version of the filter.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function toXml(version?: string): string'
+      parameters:
+        - id: version
+          type: string
+          description: The WFS service version.
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Filter.toXml](xref:azure-maps-spatial-io.export=.io.ogc.filter.Filter.toXml)
+extends: >-
+  <xref uid="azure-maps-spatial-io.export" />=.<xref uid="io.ogc.filter.Filter"
+  />

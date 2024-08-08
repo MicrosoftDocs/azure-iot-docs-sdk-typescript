@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: SpatialFeatureCollection
+uid: azure-maps-rest.export=.SpatialFeatureCollection
+package: azure-maps-rest
+summary: >-
+  A GeoJSON `FeatureCollection` whose features each specify a `geometryId` in
+  their properties.
+fullName: SpatialFeatureCollection
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SpatialFeatureCollection = GeoJSON.FeatureCollection<
+    GeoJSON,
+    { [key: string]: any }
+  >

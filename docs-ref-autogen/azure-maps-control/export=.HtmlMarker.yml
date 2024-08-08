@@ -1,0 +1,68 @@
+### YamlMime:TSType
+name: HtmlMarker
+uid: azure-maps-control.export=.HtmlMarker
+package: azure-maps-control
+summary: This class wraps an HTML element that can be displayed on the map.
+fullName: HtmlMarker
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: HtmlMarker(HtmlMarkerOptions)
+    uid: azure-maps-control.export=.HtmlMarker.constructor
+    package: azure-maps-control
+    summary: Constructs a new HtmlMarker.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new HtmlMarker(options?: HtmlMarkerOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-maps-control.export" />=.HtmlMarkerOptions
+          description: The options for the HtmlMarker.
+methods:
+  - name: getElement()
+    uid: azure-maps-control.export=.HtmlMarker.getElement
+    package: azure-maps-control
+    summary: Returns the underlying `Marker`'s HTML element.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getElement(): HTMLElement'
+      return:
+        description: ''
+        type: HTMLElement
+  - name: getOptions()
+    uid: azure-maps-control.export=.HtmlMarker.getOptions
+    package: azure-maps-control
+    summary: Gets the HTML marker options.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getOptions(): HtmlMarkerOptions'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.export" />=.HtmlMarkerOptions
+  - name: setOptions(HtmlMarkerOptions)
+    uid: azure-maps-control.export=.HtmlMarker.setOptions
+    package: azure-maps-control
+    summary: Sets the options of the marker.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function setOptions(options: HtmlMarkerOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-maps-control.export" />=.HtmlMarkerOptions
+          description: The options for the marker.
+  - name: togglePopup()
+    uid: azure-maps-control.export=.HtmlMarker.togglePopup
+    package: azure-maps-control
+    summary: Toggles the popup attached to the marker.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function togglePopup()
+extends: >-
+  <xref uid="azure-maps-control.export" />=.<xref uid="internal.EventEmitter"
+  />&lt;<xref uid="azure-maps-control.export" />=.HtmlMarkerEvents&gt;

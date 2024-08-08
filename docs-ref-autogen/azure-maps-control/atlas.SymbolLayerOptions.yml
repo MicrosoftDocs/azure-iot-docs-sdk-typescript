@@ -43,19 +43,16 @@ properties:
     uid: azure-maps-control.atlas.SymbolLayerOptions.placement
     package: azure-maps-control
     summary: >-
-      Specifies the label placement relative to its geometry.
+      Specifies the label placement relative to its geometry.<br />
 
-      <p>`"point"`: The label is placed at the point where the geometry is
-      located.</p>
+      `"point"`: The label is placed at the point where the geometry is
+      located.<br />
 
-      <p>`"line"`: The label is placed along the line of the geometry.
+      `"line"`: The label is placed along the line of the geometry.
 
-      Can only be used on LineString and Polygon geometries.</p>
-
-      <p> `"line-center"`: The label is placed at the center of the line of the
-      geometry.
-
-      Can only be used on `LineString` and `Polygon` geometries </p>
+      Can only be used on LineString and Polygon geometries.<br />
+       `"line-center"`: The label is placed at the center of the line of the geometry.
+      Can only be used on `LineString` and `Polygon` geometries <br />
 
       Default `"point"`.
     fullName: placement
@@ -137,20 +134,20 @@ properties:
       the viewport.
 
       To control the order and prioritization of symbols otherwise, use
-      `sortKey`.
+      `sortKey`.<br />
 
-      <p>`"auto"`: Sorts symbols by `sortKey` if set. Otherwise behaves like
-      `"viewport-y"`.
+      `"auto"`: Sorts symbols by `sortKey` if set. Otherwise behaves like
+      `"viewport-y"`.<br />
 
-      <p>`"viewport-y"`: Sorts symbols by their y position if `allowOverlap` is
+      `"viewport-y"`: Sorts symbols by their y position if `allowOverlap` is
       `true` or
 
-      if `ignorePlacement` is `false`.
+      if `ignorePlacement` is `false`.<br />
 
-      <p>`"source"`: Sorts symbols by `sortKey` if set. Otherwise, symbols are
+      `"source"`: Sorts symbols by `sortKey` if set. Otherwise, symbols are
       rendered in the
 
-      same order as the source data.
+      same order as the source data.<br />
 
       Default `"auto"`
     fullName: zOrder

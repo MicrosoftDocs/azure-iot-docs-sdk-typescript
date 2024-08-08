@@ -56,6 +56,17 @@ methods:
       return:
         description: ''
         type: <xref uid="azure-maps-control.atlas.Map" />
+  - name: getOptions()
+    uid: azure-maps-control.atlas.layer.Layer.getOptions
+    package: azure-maps-control
+    summary: Gets the options of the layer.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getOptions(): LayerOptions'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.atlas.LayerOptions" />
   - name: onAdd(Map)
     uid: azure-maps-control.atlas.layer.Layer.onAdd
     package: azure-maps-control
@@ -79,4 +90,17 @@ methods:
     isDeprecated: false
     syntax:
       content: function onRemove()
+  - name: setOptions(LayerOptions)
+    uid: azure-maps-control.atlas.layer.Layer.setOptions
+    package: azure-maps-control
+    summary: Sets the options of the layer.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function setOptions(options: LayerOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-maps-control.atlas.LayerOptions" />
+          description: |
+            The new options of the layer.
 extends: <xref uid="azure-maps-control.atlas.internal.EventEmitter" />&lt;T&gt;

@@ -54,23 +54,23 @@ properties:
 
       and either reside in a VectorTileSource or represent a cluster point.
 
-      Clusters have the following properties:
+      Clusters have the following properties:<br />
 
-      <p>cluster: `boolean` - Indicates that the point is a cluster.
+      `cluster`: `boolean` - Indicates that the point is a cluster.
 
       This will be set to true if Point object represents a cluster.
 
       All other point objects are unlikely to have this value unless
 
       a property with this same name was added to the Point property data from
-      your app.</p>
+      your app.<br />
 
-      <p>cluster_id: `string` - A unique id for the cluster.</p>
+      `cluster_id`: `string` - A unique id for the cluster.<br />
 
-      <p>point_count: `number` - The number of points inside the cluster.</p>
+      `point_count`: `number` - The number of points inside the cluster.<br />
 
-      <p>point_count_abbreviated: `string` - An abbreviated string version of
-      the point count. i.e. `"10K"`</p>
+      `point_count_abbreviated`: `string` - An abbreviated string version of the
+      point count. i.e. `"10K"`
     fullName: shapes
     remarks: ''
     isDeprecated: false

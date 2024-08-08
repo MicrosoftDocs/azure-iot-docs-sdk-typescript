@@ -135,6 +135,9 @@ properties:
       The minimum zoom level that the map can be zoomed out to during the
       animation. Must be between 0 and 24, and less than or equal to `maxZoom`.
 
+      Setting `minZoom` below 1 may result in an empty map when the zoom level
+      is less than 1.
+
       `default 1`
     fullName: minZoom
     remarks: ''

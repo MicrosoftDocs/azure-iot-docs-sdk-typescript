@@ -114,6 +114,27 @@ functions:
           description: >
             Specifies if it should override existing templates if one with the
             same name already exists.
+  - name: 'addProtocol(string, (args: any[]) => Promise<any>)'
+    uid: azure-maps-control.atlas.addProtocol
+    package: azure-maps-control
+    summary: >-
+      Adds a custom load resource function that will be called when using a URL
+      that starts with a custom url schema.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addProtocol(customProtocol: string, loadFn: (args: any[]) =>
+        Promise<any>)
+      parameters:
+        - id: customProtocol
+          type: string
+          description: 'the protocol to hook, for example ''custom'''
+        - id: loadFn
+          type: '(args: any[]) =&gt; Promise&lt;any&gt;'
+          description: >
+            the function to use when trying to fetch a tile specified by the
+            customProtocol
   - name: clearPrewarmedResources()
     uid: azure-maps-control.atlas.clearPrewarmedResources
     package: azure-maps-control
@@ -353,6 +374,19 @@ functions:
     isDeprecated: false
     syntax:
       content: function prewarm()
+  - name: removeProtocol(string)
+    uid: azure-maps-control.atlas.removeProtocol
+    package: azure-maps-control
+    summary: Removes a previously added protocol in the main thread.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function removeProtocol(customProtocol: string)'
+      parameters:
+        - id: customProtocol
+          type: string
+          description: |
+            the custom protocol to remove registration for
   - name: setAuthenticationOptions(AuthenticationOptions)
     uid: azure-maps-control.atlas.setAuthenticationOptions
     package: azure-maps-control

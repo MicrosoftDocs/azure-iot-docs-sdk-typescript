@@ -69,10 +69,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'fillPattern?: string'
+      content: 'fillPattern?: string | DataDrivenPropertyValueSpecification<string>'
       return:
         description: ''
-        type: string
+        type: string | DataDrivenPropertyValueSpecification&lt;string&gt;
   - name: height
     uid: azure-maps-control.atlas.PolygonExtrusionLayerOptions.height
     package: azure-maps-control

@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: MobilityGetNearbyTransitPreviewResponse
+uid: azure-maps-rest.export=.Models.MobilityGetNearbyTransitPreviewResponse
+package: azure-maps-rest
+summary: Contains response data for the getNearbyTransitPreview operation.
+fullName: MobilityGetNearbyTransitPreviewResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type MobilityGetNearbyTransitPreviewResponse = NearbyTransitResponse & {
+    _response: msRest.HttpResponse & {
+      bodyAsText: string
+      parsedBody: NearbyTransitResponse
+    }
+  }

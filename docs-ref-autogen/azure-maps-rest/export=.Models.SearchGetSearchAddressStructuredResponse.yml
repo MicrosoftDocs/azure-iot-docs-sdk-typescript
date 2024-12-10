@@ -1,0 +1,16 @@
+### YamlMime:TSTypeAlias
+name: SearchGetSearchAddressStructuredResponse
+uid: azure-maps-rest.export=.Models.SearchGetSearchAddressStructuredResponse
+package: azure-maps-rest
+summary: Contains response data for the getSearchAddressStructured operation.
+fullName: SearchGetSearchAddressStructuredResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SearchGetSearchAddressStructuredResponse =
+    SearchAddressStructuredResponse & {
+      _response: msRest.HttpResponse & {
+        bodyAsText: string
+        parsedBody: SearchAddressStructuredResponse
+      }
+    }

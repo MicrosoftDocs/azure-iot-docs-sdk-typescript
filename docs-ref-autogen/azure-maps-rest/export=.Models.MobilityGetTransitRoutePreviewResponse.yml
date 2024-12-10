@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: MobilityGetTransitRoutePreviewResponse
+uid: azure-maps-rest.export=.Models.MobilityGetTransitRoutePreviewResponse
+package: azure-maps-rest
+summary: Contains response data for the getTransitRoutePreview operation.
+fullName: MobilityGetTransitRoutePreviewResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type MobilityGetTransitRoutePreviewResponse = TransitRouteResponse & {
+    _response: msRest.HttpResponse & {
+      bodyAsText: string
+      parsedBody: TransitRouteResponse
+    }
+  }

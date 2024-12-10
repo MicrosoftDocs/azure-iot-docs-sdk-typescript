@@ -1,0 +1,123 @@
+### YamlMime:TSType
+name: Stop
+uid: azure-maps-rest.export=.Models.Stop
+package: azure-maps-rest
+summary: The stop's basic info
+fullName: Stop
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: mainAgencyId
+    uid: azure-maps-rest.export=.Models.Stop.mainAgencyId
+    package: azure-maps-rest
+    summary: >-
+      The Id of the transit agency of most lines stopping at this stop. For
+      example '5872'.
+    fullName: mainAgencyId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'mainAgencyId?: string'
+      return:
+        description: ''
+        type: string
+  - name: mainAgencyName
+    uid: azure-maps-rest.export=.Models.Stop.mainAgencyName
+    package: azure-maps-rest
+    summary: >-
+      The name of the agency of most lines stopping at this stop, for example,
+      'Metro Transit'.
+    fullName: mainAgencyName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'mainAgencyName?: string'
+      return:
+        description: ''
+        type: string
+  - name: mainTransitType
+    uid: azure-maps-rest.export=.Models.Stop.mainTransitType
+    package: azure-maps-rest
+    summary: >-
+      The transit type of most lines stopping at this stop. One of Tram, Subway,
+      Rail, Bus, Ferry,
+
+      CableCar, Gondola, Funicular
+    fullName: mainTransitType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'mainTransitType?: string'
+      return:
+        description: ''
+        type: string
+  - name: position
+    uid: azure-maps-rest.export=.Models.Stop.position
+    package: azure-maps-rest
+    summary: The Stop's location, latitude and longitude.
+    fullName: position
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'position?: Coordinate'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.export" />=.<xref uid="Models.Coordinate"
+          />
+  - name: stopCode
+    uid: azure-maps-rest.export=.Models.Stop.stopCode
+    package: azure-maps-rest
+    summary: The stop code displayed at the physical stop. Returned if available.
+    fullName: stopCode
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'stopCode?: string'
+      return:
+        description: ''
+        type: string
+  - name: stopId
+    uid: azure-maps-rest.export=.Models.Stop.stopId
+    package: azure-maps-rest
+    summary: >-
+      The unique Azure Maps identifier for the respective public transit stop.
+      When referring stops
+
+      overtime, it is suggested to use stopId that will not change if the
+      physical stop exists.
+    fullName: stopId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'stopId?: string'
+      return:
+        description: ''
+        type: string
+  - name: stopKey
+    uid: azure-maps-rest.export=.Models.Stop.stopKey
+    package: azure-maps-rest
+    summary: >-
+      The GTFS stop Id. GTFS stop Ids are provided by the transit authority and
+      subject to change.
+    fullName: stopKey
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'stopKey?: string'
+      return:
+        description: ''
+        type: string
+  - name: stopName
+    uid: azure-maps-rest.export=.Models.Stop.stopName
+    package: azure-maps-rest
+    summary: The name of the stop.
+    fullName: stopName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'stopName?: string'
+      return:
+        description: ''
+        type: string

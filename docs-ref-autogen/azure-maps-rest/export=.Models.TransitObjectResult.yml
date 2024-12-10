@@ -1,0 +1,76 @@
+### YamlMime:TSType
+name: TransitObjectResult
+uid: azure-maps-rest.export=.Models.TransitObjectResult
+package: azure-maps-rest
+summary: An interface representing TransitObjectResult.
+fullName: TransitObjectResult
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: id
+    uid: azure-maps-rest.export=.Models.TransitObjectResult.id
+    package: azure-maps-rest
+    summary: >-
+      The object identifier found as a result of the query, for example, stopId
+      for stops.
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id?: string'
+      return:
+        description: ''
+        type: string
+  - name: objectDetails
+    uid: azure-maps-rest.export=.Models.TransitObjectResult.objectDetails
+    package: azure-maps-rest
+    summary: The object specific details.
+    fullName: objectDetails
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'objectDetails?: any'
+      return:
+        description: ''
+        type: any
+  - name: position
+    uid: azure-maps-rest.export=.Models.TransitObjectResult.position
+    package: azure-maps-rest
+    summary: The transit object's position.
+    fullName: position
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'position?: Coordinate'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.export" />=.<xref uid="Models.Coordinate"
+          />
+  - name: type
+    uid: azure-maps-rest.export=.Models.TransitObjectResult.type
+    package: azure-maps-rest
+    summary: The type of object found as a result of the query.
+    fullName: type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'type?: string'
+      return:
+        description: ''
+        type: string
+  - name: viewport
+    uid: azure-maps-rest.export=.Models.TransitObjectResult.viewport
+    package: azure-maps-rest
+    summary: ''
+    fullName: viewport
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'viewport?: ResultViewport'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.export" />=.<xref
+          uid="Models.ResultViewport" />

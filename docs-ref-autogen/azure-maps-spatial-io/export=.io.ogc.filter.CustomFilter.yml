@@ -1,0 +1,45 @@
+### YamlMime:TSType
+name: CustomFilter
+uid: azure-maps-spatial-io.export=.io.ogc.filter.CustomFilter
+package: azure-maps-spatial-io
+summary: >-
+  Represents a custom defined XML Filter string component. Do not wrap with the
+  <Filter> tag.
+fullName: CustomFilter
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: CustomFilter(string)
+    uid: azure-maps-spatial-io.export=.io.ogc.filter.CustomFilter.constructor
+    package: azure-maps-spatial-io
+    summary: >-
+      Represents a custom defined XML Filter string component. Do not wrap with
+      the <Filter> tag.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new CustomFilter(xmlFilter: string)'
+      parameters:
+        - id: xmlFilter
+          type: string
+          description: The raw filter XML.
+methods:
+  - name: toXml(string)
+    uid: azure-maps-spatial-io.export=.io.ogc.filter.CustomFilter.toXml
+    package: azure-maps-spatial-io
+    summary: Generates an XML version of the filter.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function toXml(version?: string): string'
+      parameters:
+        - id: version
+          type: string
+          description: The WFS service version.
+      return:
+        description: ''
+        type: string
+extends: >-
+  <xref uid="azure-maps-spatial-io.export" />=.<xref uid="io.ogc.filter.Filter"
+  />

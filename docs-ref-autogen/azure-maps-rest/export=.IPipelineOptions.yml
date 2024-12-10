@@ -1,0 +1,34 @@
+### YamlMime:TSType
+name: IPipelineOptions
+uid: azure-maps-rest.export=.IPipelineOptions
+package: azure-maps-rest
+summary: Option interface for Pipeline constructor.
+fullName: IPipelineOptions
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: HTTPClient
+    uid: azure-maps-rest.export=.IPipelineOptions.HTTPClient
+    package: azure-maps-rest
+    summary: ''
+    fullName: HTTPClient
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'HTTPClient?: HttpClient'
+      return:
+        description: ''
+        type: <xref uid="@azure/ms-rest-js.HttpClient" />
+  - name: logger
+    uid: azure-maps-rest.export=.IPipelineOptions.logger
+    package: azure-maps-rest
+    summary: ''
+    fullName: logger
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'logger?: HttpPipelineLogger'
+      return:
+        description: ''
+        type: <xref uid="@azure/ms-rest-js.HttpPipelineLogger" />

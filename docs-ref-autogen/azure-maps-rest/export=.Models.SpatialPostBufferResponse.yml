@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: SpatialPostBufferResponse
+uid: azure-maps-rest.export=.Models.SpatialPostBufferResponse
+package: azure-maps-rest
+summary: Contains response data for the postBuffer operation.
+fullName: SpatialPostBufferResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SpatialPostBufferResponse = BufferResponse & {
+    _response: msRest.HttpResponse & {
+      bodyAsText: string
+      parsedBody: BufferResponse
+    }
+  }

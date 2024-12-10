@@ -1,0 +1,81 @@
+### YamlMime:TSType
+name: SnapGridManagerOptions
+uid: azure-maps-drawing-tools.export=.drawing.SnapGridManagerOptions
+package: azure-maps-drawing-tools
+summary: Options for the SnapGridManager.
+fullName: SnapGridManagerOptions
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: enabled
+    uid: azure-maps-drawing-tools.export=.drawing.SnapGridManagerOptions.enabled
+    package: azure-maps-drawing-tools
+    summary: >-
+      Specifies if the snapping functions are enabled. If not, the original
+      shapes and positions will be returned. Default: `true`
+    fullName: enabled
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'enabled?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: removeDuplicates
+    uid: >-
+      azure-maps-drawing-tools.export=.drawing.SnapGridManagerOptions.removeDuplicates
+    package: azure-maps-drawing-tools
+    summary: >-
+      Specifies duplicate sequential positions should be removed when snapping.
+      Default: `true`
+    fullName: removeDuplicates
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'removeDuplicates?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: resolution
+    uid: azure-maps-drawing-tools.export=.drawing.SnapGridManagerOptions.resolution
+    package: azure-maps-drawing-tools
+    summary: >-
+      Specifies the size of the snapping grid in pixels. The grid will be square
+      and relative to the nearest integer zoom level. The grid will scale by a
+      factor of 2 relative to physical real-world area with each zoom level.
+      Default: 15
+    fullName: resolution
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'resolution?: number'
+      return:
+        description: ''
+        type: number
+  - name: showGrid
+    uid: azure-maps-drawing-tools.export=.drawing.SnapGridManagerOptions.showGrid
+    package: azure-maps-drawing-tools
+    summary: 'Specifies if grid lines should be displayed on the map. Default: `false`'
+    fullName: showGrid
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'showGrid?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: simplify
+    uid: azure-maps-drawing-tools.export=.drawing.SnapGridManagerOptions.simplify
+    package: azure-maps-drawing-tools
+    summary: >-
+      Specifies if a Douglas-Peucker simplification should occur while snapping
+      to create smoother lines. Default: `true`
+    fullName: simplify
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'simplify?: boolean'
+      return:
+        description: ''
+        type: boolean

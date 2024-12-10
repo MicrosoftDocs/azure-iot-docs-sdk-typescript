@@ -1,20 +1,16 @@
 ### YamlMime:TSPackage
 uid: azure-maps-indoor
 name: azure-maps-indoor
-summary: >-
-  **Azure Maps Web SDK Indoor Module service retirement.**
-  The Azure Maps Web SDK Indoor Module and Creator services have been retired and will no longer be available or supported after September 30th, 2025.
-  For more information, see [Creator Services Retirement](https://aka.ms/AzureMapsCreatorDeprecation).
+summary: ''
 type: package
-interfaces:
-  - azure-maps-indoor.azure-maps-control.EventManager
-  - azure-maps-indoor.atlas.indoor.IFacilityChangeEvent
-  - azure-maps-indoor.atlas.indoor.IIndoorManagerEvents
-  - azure-maps-indoor.atlas.indoor.IIndoorReadyEvent
-  - azure-maps-indoor.atlas.indoor.ILevelChangeEvent
-  - azure-maps-indoor.atlas.indoor.IMap
 classes:
-  - azure-maps-indoor.atlas.control.LevelControl
-  - azure-maps-indoor.atlas.control.LevelControlOptions
-  - azure-maps-indoor.atlas.indoor.IndoorManager
-  - azure-maps-indoor.atlas.indoor.IndoorManagerOptions
+  - azure-maps-indoor.export=.control.LevelControl
+  - azure-maps-indoor.export=.control.LevelControlOptions
+  - azure-maps-indoor.export=.indoor.IndoorManager
+  - azure-maps-indoor.export=.indoor.IndoorManagerOptions
+interfaces:
+  - azure-maps-indoor.export=.indoor.IFacilityChangeEvent
+  - azure-maps-indoor.export=.indoor.IIndoorManagerEvents
+  - azure-maps-indoor.export=.indoor.IIndoorReadyEvent
+  - azure-maps-indoor.export=.indoor.ILevelChangeEvent
+  - azure-maps-indoor.export=.indoor.IMap

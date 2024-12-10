@@ -1,0 +1,36 @@
+### YamlMime:TSType
+name: MultiPolygon
+uid: azure-maps-rest.export=.Models.MultiPolygon
+package: azure-maps-rest
+summary: |-
+  A valid `GeoJSON MultiPolygon` object type. Please refer to [RFC
+  7946](https://tools.ietf.org/html/rfc7946#section-3.1.7) for details.
+fullName: MultiPolygon
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: coordinates
+    uid: azure-maps-rest.export=.Models.MultiPolygon.coordinates
+    package: azure-maps-rest
+    summary: Contains a list of valid `GeoJSON` Polygon objects.
+    fullName: coordinates
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'coordinates: number[][][][]'
+      return:
+        description: ''
+        type: number[][][][]
+  - name: type
+    uid: azure-maps-rest.export=.Models.MultiPolygon.type
+    package: azure-maps-rest
+    summary: Polymorphic Discriminator
+    fullName: type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'type: "MultiPolygon"'
+      return:
+        description: ''
+        type: '"MultiPolygon"'

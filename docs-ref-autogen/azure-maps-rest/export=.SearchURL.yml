@@ -1,0 +1,777 @@
+### YamlMime:TSType
+name: SearchURL
+uid: azure-maps-rest.export=.SearchURL
+package: azure-maps-rest
+summary: A SearchURL represents a URL to the Azure Maps search operations.
+fullName: SearchURL
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: SearchURL(Pipeline, string)
+    uid: azure-maps-rest.export=.SearchURL.constructor
+    package: azure-maps-rest
+    summary: Creates an instance of SearchURL.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new SearchURL(pipeline: Pipeline, mapsUrl?: string)'
+      parameters:
+        - id: pipeline
+          type: <xref uid="azure-maps-rest.export" />=.Pipeline
+          description: |-
+            Call MapsURL.newPipeline() to create a default
+            pipeline, or provide a customized pipeline.
+        - id: mapsUrl
+          type: string
+          description: >-
+            A URL string pointing to Azure Maps service, default is
+
+            `"https://atlas.microsoft.com"`.
+
+            If no protocol is specified, e.g. `"atlas.microsoft.com"`, then
+            `https` will be assumed.
+inheritedProperties:
+  - name: mapsUrl
+    uid: azure-maps-rest.export=.SearchURL.mapsUrl
+    package: azure-maps-rest
+    summary: Base URL string value.
+    fullName: mapsUrl
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'mapsUrl: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MapsURL.mapsUrl](xref:azure-maps-rest.export=.MapsURL.mapsUrl)
+inheritedMethods:
+  - name: newPipeline(Credential, INewPipelineOptions)
+    uid: azure-maps-rest.export=.SearchURL.newPipeline
+    package: azure-maps-rest
+    summary: >-
+      A static method used to create a new Pipeline object with Credential
+      provided.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function newPipeline(credential: Credential, pipelineOptions?:
+        INewPipelineOptions): Pipeline
+      parameters:
+        - id: credential
+          type: <xref uid="azure-maps-rest.export" />=.Credential
+          description: >-
+            Such as SubscriptionKeyCredential, TokenCredential, and
+            MapControlCredential.
+        - id: pipelineOptions
+          type: <xref uid="azure-maps-rest.export" />=.INewPipelineOptions
+          description: Optional. Options.
+      return:
+        description: A new Pipeline object.
+        type: <xref uid="azure-maps-rest.export" />=.Pipeline
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [MapsURL.newPipeline](xref:azure-maps-rest.export=.MapsURL.newPipeline)
+methods:
+  - name: searchAddress(Aborter, string, SearchGetSearchAddressOptionalParams)
+    uid: azure-maps-rest.export=.SearchURL.searchAddress
+    package: azure-maps-rest
+    summary: >-
+      **Address Geocoding** In many cases, the complete search service might be
+      too much, for
+
+      instance if you are only interested in traditional geocoding.
+
+      Search can also be accessed for address look up exclusively.
+
+      The geocoding is performed by hitting the geocode endpoint with just the
+      address or
+
+      partial address in question.
+
+      The geocoding search index will be queried for everything above the street
+      level data.
+
+      No POIs will be returned.
+
+      Note that the geocoder is very tolerant of typos and incomplete addresses.
+
+      It will also handle everything from exact street addresses or street or
+      intersections
+
+      as well as higher level geographies such as city centers, counties, states
+      etc.
+
+      Uses the Get Search Address API:
+      https://docs.microsoft.com/rest/api/maps/search/getsearchaddress
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function searchAddress(aborter: Aborter, query: string, options?:
+        SearchGetSearchAddressOptionalParams): Promise<SearchAddressResponse>
+      parameters:
+        - id: aborter
+          type: <xref uid="azure-maps-rest.export" />=.Aborter
+          description: >-
+            Create a new Aborter instance with Aborter.none or
+            Aborter.timeout(),
+
+            goto documents of Aborter for more examples about request
+            cancellation.
+        - id: query
+          type: string
+          description: The address to search for (e.g., "1 Microsoft way, Redmond, WA").
+        - id: options
+          type: >-
+            <xref uid="azure-maps-rest.export" />=.<xref
+            uid="Models.SearchGetSearchAddressOptionalParams" />
+          description: The optional parameters
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-maps-rest.export"
+          />=.SearchAddressResponse&gt;
+  - name: >-
+      searchAddressReverse(Aborter, Position,
+      SearchGetSearchAddressReverseOptionalParams)
+    uid: azure-maps-rest.export=.SearchURL.searchAddressReverse
+    package: azure-maps-rest
+    summary: >-
+      **Reverse Geocode to an Address** There may be times when you need to
+      translate a
+
+      coordinate (example: -122.3862, 37.786505) into a human understandable
+      street address.
+
+      Most often this is needed in tracking applications where you receive a GPS
+      feed from the device or
+
+      asset and wish to know what address where the coordinate is located.
+
+      This endpoint will return address information for a given coordinate.
+
+      Uses the Get Search Address Reverse API:
+      https://docs.microsoft.com/rest/api/maps/search/getsearchaddressreverse
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function searchAddressReverse(aborter: Aborter, position: Position,
+        options?: SearchGetSearchAddressReverseOptionalParams):
+        Promise<SearchAddressReverseResponse>
+      parameters:
+        - id: aborter
+          type: <xref uid="azure-maps-rest.export" />=.Aborter
+          description: >-
+            Create a new Aborter instance with Aborter.none or
+            Aborter.timeout(),
+
+            goto documents of Aborter for more examples about request
+            cancellation.
+        - id: position
+          type: Position
+          description: >-
+            The position to reverse search,
+
+            a coordinate array of `[longitude, latitude]` e.g. `[-122.125679,
+            47.641268]`.
+        - id: options
+          type: >-
+            <xref uid="azure-maps-rest.export" />=.<xref
+            uid="Models.SearchGetSearchAddressReverseOptionalParams" />
+          description: The optional parameters
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-maps-rest.export"
+          />=.SearchAddressReverseResponse&gt;
+  - name: >-
+      searchAddressReverseCrossStreet(Aborter, Position,
+      SearchGetSearchAddressReverseCrossStreetOptionalParams)
+    uid: azure-maps-rest.export=.SearchURL.searchAddressReverseCrossStreet
+    package: azure-maps-rest
+    summary: >-
+      **Reverse Geocode to a Cross Street** There may be times when you need to
+      translate a
+
+      coordinate (example: -122.3862, 37.786505) into a human understandable
+      cross street.
+
+      Most often this is needed in tracking applications where you receive a GPS
+      feed from the device or asset
+
+      and wish to know what address where the coordinate is located.
+
+      This endpoint will return cross street information for a given coordinate.
+
+      Uses the Get Search Address Reverse Cross Street API:
+      https://docs.microsoft.com/rest/api/maps/search/getsearchaddressreversecrossstreet
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function searchAddressReverseCrossStreet(aborter: Aborter, position:
+        Position, options?:
+        SearchGetSearchAddressReverseCrossStreetOptionalParams):
+        Promise<SearchAddressReverseCrossStreetResponse>
+      parameters:
+        - id: aborter
+          type: <xref uid="azure-maps-rest.export" />=.Aborter
+          description: >-
+            Create a new Aborter instance with Aborter.none or
+            Aborter.timeout(),
+
+            goto documents of Aborter for more examples about request
+            cancellation.
+        - id: position
+          type: Position
+          description: >-
+            The position to reverse search,
+
+            a coordinate array of `[longitude, latitude]` e.g. `[-122.125679,
+            47.641268]`.
+        - id: options
+          type: >-
+            <xref uid="azure-maps-rest.export" />=.<xref
+            uid="Models.SearchGetSearchAddressReverseCrossStreetOptionalParams"
+            />
+          description: The optional parameters
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-maps-rest.export"
+          />=.SearchAddressReverseCrossStreetResponse&gt;
+  - name: >-
+      searchAddressStructured(Aborter, string,
+      SearchGetSearchAddressStructuredOptionalParams)
+    uid: azure-maps-rest.export=.SearchURL.searchAddressStructured
+    package: azure-maps-rest
+    summary: >-
+      **Structured Address Geocoding** Azure Address Geocoding can also be
+      accessed for
+
+      structured address look up exclusively.
+
+      The geocoding search index will be queried for everything above the street
+      level data.
+
+      No POIs will be returned. Note that the geocoder is very tolerant of typos
+      and incomplete addresses.
+
+      It will also handle everything from exact street addresses or street or
+      intersections as well as
+
+      higher level geographies such as city centers, counties, states etc.
+
+      Uses the Get Search Address Structured API:
+      https://docs.microsoft.com/rest/api/maps/search/getsearchaddressstructured
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function searchAddressStructured(aborter: Aborter, countryCode: string,
+        options?: SearchGetSearchAddressStructuredOptionalParams):
+        Promise<SearchAddressStructuredResponse>
+      parameters:
+        - id: aborter
+          type: <xref uid="azure-maps-rest.export" />=.Aborter
+          description: >-
+            Create a new Aborter instance with Aborter.none or
+            Aborter.timeout(),
+
+            goto documents of Aborter for more examples about request
+            cancellation.
+        - id: countryCode
+          type: string
+          description: >-
+            The 2 or 3 letter
+
+            [ISO3166-1](https://www.iso.org/iso-3166-country-codes.html) country
+            code portion of an address.
+
+            E.g. US.
+        - id: options
+          type: >-
+            <xref uid="azure-maps-rest.export" />=.<xref
+            uid="Models.SearchGetSearchAddressStructuredOptionalParams" />
+          description: The optional parameters
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-maps-rest.export"
+          />=.SearchAddressStructuredResponse&gt;
+  - name: >-
+      searchAlongRoute(Aborter, string, number, SearchAlongRouteRequestBody,
+      SearchPostSearchAlongRouteOptionalParams)
+    uid: azure-maps-rest.export=.SearchURL.searchAlongRoute
+    package: azure-maps-rest
+    summary: >-
+      The Search Along Route endpoint allows you to perform a fuzzy search for
+      POIs along a specified
+
+      route.
+
+      This search is constrained by specifying the `maxDetourTime` limiting
+      measure.
+
+      To send the route-points you will use a `body` which will contain the
+      `route` object represented
+
+      as a `GeoJSON LineString` type and the `Content-Type` header will be set
+      to `application/json`.
+
+      Each route-point in `route` is represented as a `GeoJSON Position` type
+      i.e. an array where the
+
+      _longitude_ value is followed by the _latitude_ value and the _altitude_
+      value is ignored.
+
+      The `route` should contain at least 2 route-points.
+
+      It is possible that original route will be altered, some of it's points
+      may be skipped.
+
+      If the route that passes through the found point is faster than the
+      original one, the `detourTime` value in
+
+      the response is negative.
+
+      Uses the Post Search Along Route API:
+      https://docs.microsoft.com/rest/api/maps/search/postsearchalongroute
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function searchAlongRoute(aborter: Aborter, query: string,
+        maxDetourTime: number, body: SearchAlongRouteRequestBody, options?:
+        SearchPostSearchAlongRouteOptionalParams):
+        Promise<SearchAlongRouteResponse>
+      parameters:
+        - id: aborter
+          type: <xref uid="azure-maps-rest.export" />=.Aborter
+          description: >-
+            Create a new Aborter instance with Aborter.none or
+            Aborter.timeout(),
+
+            goto documents of Aborter for more examples about request
+            cancellation.
+        - id: query
+          type: string
+          description: The applicable query string (e.g., "seattle", "pizza").
+        - id: maxDetourTime
+          type: number
+          description: >-
+            Maximum detour time of the point of interest in seconds. Max value
+            is 3600
+
+            seconds
+        - id: body
+          type: >-
+            <xref uid="azure-maps-rest.export" />=.<xref
+            uid="Models.SearchAlongRouteRequestBody" />
+          description: >-
+            This represents the route to search along and should be a
+
+            valid `GeoJSON LineString` type. Please refer to [RFC
+
+            7946](https://tools.ietf.org/html/rfc7946#section-3.1.4) for
+            details.
+        - id: options
+          type: >-
+            <xref uid="azure-maps-rest.export" />=.<xref
+            uid="Models.SearchPostSearchAlongRouteOptionalParams" />
+          description: The optional parameters
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-maps-rest.export"
+          />=.SearchAlongRouteResponse&gt;
+  - name: >-
+      searchFuzzy(Aborter, string | Position,
+      SearchGetSearchFuzzyOptionalParams)
+    uid: azure-maps-rest.export=.SearchURL.searchFuzzy
+    package: azure-maps-rest
+    summary: >-
+      **Free Form Search** The basic default API is Free Form Search which
+      handles the most
+
+      fuzzy of inputs handling any combination of address or POI tokens.
+
+      This search API is the canonical 'single line search'.
+
+      The Free Form Search API is a seamless combination of POI search and
+      geocoding.
+
+      The API can also be weighted with a contextual position (lat./lon. pair),
+      or
+
+      fully constrained by a coordinate and radius, or it can be executed more
+      generally without any
+
+      geo biasing anchor point.
+
+      We strongly advise you to use the 'countrySet' parameter to specify only
+      the countries for
+
+      which your application needs coverage, as the default behavior will be to
+      search the entire world,
+
+      potentially returning unnecessary results. E.g.: `countrySet`=US,FR.
+      Please see [Search Coverage]
+
+      (https://docs.microsoft.com/azure/location-based-services/geocoding-coverage)
+      for
+
+      a complete list of all the supported countries.
+
+      Most Search queries default to `maxFuzzyLevel`=2 to gain performance and
+      also reduce unusual results.
+
+      This new default can be overridden as needed per request by passing in the
+      query param `maxFuzzyLevel`=3 or 4.
+
+      Uses the Get Search Fuzzy API:
+      https://docs.microsoft.com/rest/api/maps/search/getsearchfuzzy
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function searchFuzzy(aborter: Aborter, query: string | Position,
+        options?: SearchGetSearchFuzzyOptionalParams):
+        Promise<SearchFuzzyResponse>
+      parameters:
+        - id: aborter
+          type: <xref uid="azure-maps-rest.export" />=.Aborter
+          description: >-
+            Create a new Aborter instance with Aborter.none or
+            Aborter.timeout(),
+
+            goto documents of Aborter for more examples about request
+            cancellation.
+        - id: query
+          type: string | Position
+          description: >-
+            The applicable query string (e.g., "seattle", "pizza").
+
+            Can _also_ be specified as a coordinate array of `[longitude,
+            latitude]` (e.g., `[-122.125679, 47.641268]`).
+        - id: options
+          type: >-
+            <xref uid="azure-maps-rest.export" />=.<xref
+            uid="Models.SearchGetSearchFuzzyOptionalParams" />
+          description: The optional parameters
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-maps-rest.export"
+          />=.SearchFuzzyResponse&gt;
+  - name: >-
+      searchInsideGeometry(Aborter, string, SearchInsideGeometryRequestBody,
+      SearchPostSearchInsideGeometryOptionalParams)
+    uid: azure-maps-rest.export=.SearchURL.searchInsideGeometry
+    package: azure-maps-rest
+    summary: >-
+      The Search Geometry endpoint allows you to perform a free form search
+      inside a single geometry
+
+      or many of them.
+
+      The search results that fall inside the geometry/geometries will be
+      returned.
+
+      The geographical features to be searched can be modeled as Polygon and/or
+      Circle geometries
+
+      represented using any one of the following `GeoJSON` types: **GeoJSON
+      FeatureCollection**,
+
+      The `geometry` can be represented as a `GeoJSON FeatureCollection` object.
+
+      This is the recommended option if the geometry contains both Polygons and
+      Circles.
+
+      The `FeatureCollection` can contain a max of 50 `GeoJSON Feature` objects.
+
+      Each `Feature` object should represent either a Polygon or a Circle with
+      the following conditions:
+
+      A `Feature` object for the Polygon geometry can have a max of 50
+      coordinates and it's properties must be empty.
+
+      A `Feature` object for the Circle geometry is composed of a _center_
+      represented using a `GeoJSON Point` type and a _radius_ value
+
+      (in meters) which must be specified in the object's properties along with
+      the _subType_ property
+
+      whose value should be 'Circle'.
+
+      Please see the Examples section below for a sample `FeatureCollection`
+      representation.
+
+      **GeoJSON GeometryCollection**, The `geometry` can be represented as a
+      `GeoJSON GeometryCollection` object.
+
+      This is the recommended option if the geometry contains a list of Polygons
+      only.
+
+      The `GeometryCollection` can contain a max of 50 `GeoJSON Polygon`
+      objects.
+
+      Each `Polygon` object can have a max of 50 coordinates.
+
+      Please see the Examples section below for a sample `GeometryCollection`
+      representation.
+
+      **GeoJSON Polygon**, The `geometry` can be represented as a `GeoJSON
+      Polygon` object.
+
+      This is the recommended option if the geometry contains a single Polygon.
+
+      The `Polygon` object can have a max of 50 coordinates.
+
+      Uses the Post Search Inside Geometry API:
+      https://docs.microsoft.com/rest/api/maps/search/postsearchinsidegeometry
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function searchInsideGeometry(aborter: Aborter, query: string, body:
+        SearchInsideGeometryRequestBody, options?:
+        SearchPostSearchInsideGeometryOptionalParams):
+        Promise<SearchInsideGeometryResponse>
+      parameters:
+        - id: aborter
+          type: <xref uid="azure-maps-rest.export" />=.Aborter
+          description: >-
+            Create a new Aborter instance with Aborter.none or
+            Aborter.timeout(),
+
+            goto documents of Aborter for more examples about request
+            cancellation.
+        - id: query
+          type: string
+          description: The applicable query string (e.g., "seattle", "pizza").
+        - id: body
+          type: >-
+            <xref uid="azure-maps-rest.export" />=.<xref
+            uid="Models.SearchInsideGeometryRequestBody" />
+          description: >-
+            This represents the geometry for one or more geographical
+
+            features (parks, state boundary etc.) to search in and should be a
+            GeoJSON compliant type.
+
+            Please refer to [RFC 7946](https://tools.ietf.org/html/rfc7946) for
+            details.
+        - id: options
+          type: >-
+            <xref uid="azure-maps-rest.export" />=.<xref
+            uid="Models.SearchPostSearchInsideGeometryOptionalParams" />
+          description: The optional parameters
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-maps-rest.export"
+          />=.SearchInsideGeometryResponse&gt;
+  - name: searchNearby(Aborter, Position, SearchGetSearchNearbyOptionalParams)
+    uid: azure-maps-rest.export=.SearchURL.searchNearby
+    package: azure-maps-rest
+    summary: >-
+      **Nearby Search** If you have a use case for only retrieving POI results
+      around a
+
+      specific location, the nearby search method may be the right choice.
+
+      This endpoint will only return POI results, and does not take in a search
+      query parameter.
+
+      Uses the Get Search Nearby API:
+      https://docs.microsoft.com/rest/api/maps/search/getsearchnearby
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function searchNearby(aborter: Aborter, location: Position, options?:
+        SearchGetSearchNearbyOptionalParams): Promise<SearchNearbyResponse>
+      parameters:
+        - id: aborter
+          type: <xref uid="azure-maps-rest.export" />=.Aborter
+          description: >-
+            Create a new Aborter instance with Aborter.none or
+            Aborter.timeout(),
+
+            goto documents of Aborter for more examples about request
+            cancellation.
+        - id: location
+          type: Position
+          description: >-
+            Location where results should be biased.
+
+            Should be an array of `[longitude, latitude]`, E.g. `[-121.89,
+            37.337]`.
+        - id: options
+          type: >-
+            <xref uid="azure-maps-rest.export" />=.<xref
+            uid="Models.SearchGetSearchNearbyOptionalParams" />
+          description: The optional parameters
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-maps-rest.export"
+          />=.SearchNearbyResponse&gt;
+  - name: searchPOI(Aborter, string, SearchGetSearchPOIOptionalParams)
+    uid: azure-maps-rest.export=.SearchURL.searchPOI
+    package: azure-maps-rest
+    summary: >-
+      **Get POI by Name** If your search use case only requires POI results, you
+      may use the
+
+      POI endpoint for searching.
+
+      This endpoint will only return POI results.
+
+      Uses the Get Search POI API:
+      https://docs.microsoft.com/rest/api/maps/search/getsearchpoi
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function searchPOI(aborter: Aborter, query: string, options?:
+        SearchGetSearchPOIOptionalParams): Promise<SearchPOIResponse>
+      parameters:
+        - id: aborter
+          type: <xref uid="azure-maps-rest.export" />=.Aborter
+          description: >-
+            Create a new Aborter instance with Aborter.none or
+            Aborter.timeout(),
+
+            goto documents of Aborter for more examples about request
+            cancellation.
+        - id: query
+          type: string
+          description: The POI name to search for (e.g., "statue of liberty", "starbucks").
+        - id: options
+          type: >-
+            <xref uid="azure-maps-rest.export" />=.<xref
+            uid="Models.SearchGetSearchPOIOptionalParams" />
+          description: The optional parameters
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-maps-rest.export"
+          />=.SearchPOIResponse&gt;
+  - name: >-
+      searchPOICategory(Aborter, string,
+      SearchGetSearchPOICategoryOptionalParams)
+    uid: azure-maps-rest.export=.SearchURL.searchPOICategory
+    package: azure-maps-rest
+    summary: >-
+      **Get POI by Category** If your search use case only requires POI results
+      filtered by
+
+      category, you may use the category endpoint.
+
+      This endpoint will only return POI results which are categorized as
+      specified.
+
+      List of available categories can be found
+      [here](https://docs.microsoft.com/azure/azure-maps/search-categories).
+
+      Uses the Get Search POI Category API:
+      https://docs.microsoft.com/rest/api/maps/search/getsearchpoicategory
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function searchPOICategory(aborter: Aborter, query: string, options?:
+        SearchGetSearchPOICategoryOptionalParams):
+        Promise<SearchPOICategoryResponse>
+      parameters:
+        - id: aborter
+          type: <xref uid="azure-maps-rest.export" />=.Aborter
+          description: >-
+            Create a new Aborter instance with Aborter.none or
+            Aborter.timeout(),
+
+            goto documents of Aborter for more examples about request
+            cancellation.
+        - id: query
+          type: string
+          description: The POI category to search for (e.g., "AIRPORT", "BEACH").
+        - id: options
+          type: >-
+            <xref uid="azure-maps-rest.export" />=.<xref
+            uid="Models.SearchGetSearchPOICategoryOptionalParams" />
+          description: The optional parameters
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-maps-rest.export"
+          />=.SearchPOICategoryResponse&gt;
+  - name: searchPolygon(Aborter, string[])
+    uid: azure-maps-rest.export=.SearchURL.searchPolygon
+    package: azure-maps-rest
+    summary: >-
+      The Search Polygon API allows you to request the geometry data such as a
+      city or country
+
+      outline for a set of entities, previously retrieved from an Online Search
+      request in GeoJSON
+
+      format. The geometry  ID is returned in the dataSources object under
+      "geometry" and "id" in
+
+      either a Search Address or Search Fuzzy call.
+
+
+      Please note that any geometry ID retrieved from an Online Search endpoint
+      has a limited
+
+      lifetime. The client  should not store geometry IDs in persistent storage
+      for later referral, as
+
+      the stability of these identifiers is  not guaranteed for a long period of
+      time. It is expected
+
+      that a request to the Polygon method is made within a  few minutes of the
+      request to the Online
+
+      Search method that provided the ID. The service allows for batch  requests
+      up to 20 identifiers.
+
+
+      Uses the Get Search Polygon API:
+      https://docs.microsoft.com/rest/api/maps/search/getsearchpolygon
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function searchPolygon(aborter: Aborter, geometries: string[]):
+        Promise<SearchPolygonResponse>
+      parameters:
+        - id: aborter
+          type: <xref uid="azure-maps-rest.export" />=.Aborter
+          description: >-
+            Create a new Aborter instance with Aborter.none or
+            Aborter.timeout(),
+
+            goto documents of Aborter for more examples about request
+            cancellation.
+        - id: geometries
+          type: string[]
+          description: >-
+            Comma separated list of geometry UUIDs, previously retrieved from an
+            Online
+
+            Search request.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-maps-rest.export"
+          />=.SearchPolygonResponse&gt;
+extends: <xref uid="azure-maps-rest.export" />=.MapsURL

@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: RenderGetCopyrightForTileResponse
+uid: azure-maps-rest.export=.Models.RenderGetCopyrightForTileResponse
+package: azure-maps-rest
+summary: Contains response data for the getCopyrightForTile operation.
+fullName: RenderGetCopyrightForTileResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type RenderGetCopyrightForTileResponse = CopyrightTileResult & {
+    _response: msRest.HttpResponse & {
+      bodyAsText: string
+      parsedBody: CopyrightTileResult
+    }
+  }

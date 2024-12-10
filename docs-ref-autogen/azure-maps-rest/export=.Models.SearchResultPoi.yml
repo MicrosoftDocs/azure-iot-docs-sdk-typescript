@@ -1,0 +1,110 @@
+### YamlMime:TSType
+name: SearchResultPoi
+uid: azure-maps-rest.export=.Models.SearchResultPoi
+package: azure-maps-rest
+summary: Details of the poi including the name, phone, url, and categories.
+fullName: SearchResultPoi
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: brands
+    uid: azure-maps-rest.export=.Models.SearchResultPoi.brands
+    package: azure-maps-rest
+    summary: >-
+      Brands array
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: brands
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'brands?: SearchResultPoiBrand[]'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.export" />=.<xref
+          uid="Models.SearchResultPoiBrand" />[]
+  - name: categories
+    uid: azure-maps-rest.export=.Models.SearchResultPoi.categories
+    package: azure-maps-rest
+    summary: >-
+      __[Deprecated]__ Use classifications instead. Categories array
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: categories
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'categories?: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: classifications
+    uid: azure-maps-rest.export=.Models.SearchResultPoi.classifications
+    package: azure-maps-rest
+    summary: >-
+      Classification array
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: classifications
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'classifications?: SearchResultPoiClassification[]'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.export" />=.<xref
+          uid="Models.SearchResultPoiClassification" />[]
+  - name: name
+    uid: azure-maps-rest.export=.Models.SearchResultPoi.name
+    package: azure-maps-rest
+    summary: >-
+      Name property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: name
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'name?: string'
+      return:
+        description: ''
+        type: string
+  - name: phone
+    uid: azure-maps-rest.export=.Models.SearchResultPoi.phone
+    package: azure-maps-rest
+    summary: >-
+      Phone property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: phone
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'phone?: string'
+      return:
+        description: ''
+        type: string
+  - name: url
+    uid: azure-maps-rest.export=.Models.SearchResultPoi.url
+    package: azure-maps-rest
+    summary: >-
+      URL property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: url
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'url?: string'
+      return:
+        description: ''
+        type: string

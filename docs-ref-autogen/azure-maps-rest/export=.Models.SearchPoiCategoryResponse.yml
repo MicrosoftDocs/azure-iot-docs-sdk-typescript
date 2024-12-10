@@ -1,0 +1,42 @@
+### YamlMime:TSType
+name: SearchPoiCategoryResponse
+uid: azure-maps-rest.export=.Models.SearchPoiCategoryResponse
+package: azure-maps-rest
+summary: This object is returned from a successful Search POI Category call
+fullName: SearchPoiCategoryResponse
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: results
+    uid: azure-maps-rest.export=.Models.SearchPoiCategoryResponse.results
+    package: azure-maps-rest
+    summary: >-
+      Results array
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: results
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'results?: SearchPoiCategoryResult[]'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.export" />=.<xref
+          uid="Models.SearchPoiCategoryResult" />[]
+  - name: summary
+    uid: azure-maps-rest.export=.Models.SearchPoiCategoryResponse.summary
+    package: azure-maps-rest
+    summary: ''
+    fullName: summary
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'summary?: SearchPoiCategorySummary'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.export" />=.<xref
+          uid="Models.SearchPoiCategorySummary" />

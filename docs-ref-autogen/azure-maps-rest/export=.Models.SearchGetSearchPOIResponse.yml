@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: SearchGetSearchPOIResponse
+uid: azure-maps-rest.export=.Models.SearchGetSearchPOIResponse
+package: azure-maps-rest
+summary: Contains response data for the getSearchPOI operation.
+fullName: SearchGetSearchPOIResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SearchGetSearchPOIResponse = SearchPoiResponse & {
+    _response: msRest.HttpResponse & {
+      bodyAsText: string
+      parsedBody: SearchPoiResponse
+    }
+  }

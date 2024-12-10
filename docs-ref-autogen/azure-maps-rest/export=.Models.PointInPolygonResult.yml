@@ -1,0 +1,42 @@
+### YamlMime:TSType
+name: PointInPolygonResult
+uid: azure-maps-rest.export=.Models.PointInPolygonResult
+package: azure-maps-rest
+summary: Point In Polygon Result Object
+fullName: PointInPolygonResult
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: intersectingGeometries
+    uid: azure-maps-rest.export=.Models.PointInPolygonResult.intersectingGeometries
+    package: azure-maps-rest
+    summary: >-
+      Geometries array
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: intersectingGeometries
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'intersectingGeometries?: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: pointInPolygons
+    uid: azure-maps-rest.export=.Models.PointInPolygonResult.pointInPolygons
+    package: azure-maps-rest
+    summary: >-
+      Point In Polygons Property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: pointInPolygons
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'pointInPolygons?: boolean'
+      return:
+        description: ''
+        type: boolean

@@ -1,0 +1,257 @@
+### YamlMime:TSType
+name: SimpleStyleProperties
+uid: azure-maps-spatial-io.export=.SimpleStyleProperties
+package: azure-maps-spatial-io
+summary: >-
+  A set of common properties that may be included in feature properties
+
+  capture style information and common content when reading or writing a spatial
+  data.
+
+  The SimpleDataLayer uses these properties to dynamically style the data it
+  renders.
+
+  Most of these are the property values used in the geometries respective layer
+  options.
+fullName: SimpleStyleProperties
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: anchor
+    uid: azure-maps-spatial-io.export=.SimpleStyleProperties.anchor
+    package: azure-maps-spatial-io
+    summary: Icon anchor value.
+    fullName: anchor
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        anchor?: "center" | "left" | "right" | "top" | "bottom" | "top-left" |
+        "top-right" | "bottom-left" | "bottom-right"
+      return:
+        description: ''
+        type: >-
+          "center" | "left" | "right" | "top" | "bottom" | "top-left" |
+          "top-right" | "bottom-left" | "bottom-right"
+  - name: base
+    uid: azure-maps-spatial-io.export=.SimpleStyleProperties.base
+    package: azure-maps-spatial-io
+    summary: >-
+      For extruded polygons, this value represents the how high the polygon is
+      above the ground in meters.
+    fullName: base
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'base?: number'
+      return:
+        description: ''
+        type: number
+  - name: color
+    uid: azure-maps-spatial-io.export=.SimpleStyleProperties.color
+    package: azure-maps-spatial-io
+    summary: For points, the color when displayed on a bubble layer.
+    fullName: color
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'color?: string'
+      return:
+        description: ''
+        type: string
+  - name: description
+    uid: azure-maps-spatial-io.export=.SimpleStyleProperties.description
+    package: azure-maps-spatial-io
+    summary: >-
+      A common description field. Some XML files use 'desc' instead, this value
+      will be copied to this property.
+    fullName: description
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'description?: string'
+      return:
+        description: ''
+        type: string
+  - name: fillColor
+    uid: azure-maps-spatial-io.export=.SimpleStyleProperties.fillColor
+    package: azure-maps-spatial-io
+    summary: For polygons, the fill color of a polygon.
+    fullName: fillColor
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'fillColor?: string'
+      return:
+        description: ''
+        type: string
+  - name: fillOpacity
+    uid: azure-maps-spatial-io.export=.SimpleStyleProperties.fillOpacity
+    package: azure-maps-spatial-io
+    summary: For polygons, the opacity of fill color.
+    fullName: fillOpacity
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'fillOpacity?: number'
+      return:
+        description: ''
+        type: number
+  - name: height
+    uid: azure-maps-spatial-io.export=.SimpleStyleProperties.height
+    package: azure-maps-spatial-io
+    summary: >-
+      For extruded polygons, this value represents the height of the polygon in
+      meters.
+    fullName: height
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'height?: number'
+      return:
+        description: ''
+        type: number
+  - name: image
+    uid: azure-maps-spatial-io.export=.SimpleStyleProperties.image
+    package: azure-maps-spatial-io
+    summary: For points, the icon image name when displayed in a Symbol layer.
+    fullName: image
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'image?: string'
+      return:
+        description: ''
+        type: string
+  - name: imageUrl
+    uid: azure-maps-spatial-io.export=.SimpleStyleProperties.imageUrl
+    package: azure-maps-spatial-io
+    summary: >-
+      For points, the URL to a icon image. Can be a data URI or a URL that
+      points to a CORs enabled endpoint.
+    fullName: imageUrl
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'imageUrl?: string'
+      return:
+        description: ''
+        type: string
+  - name: offset
+    uid: azure-maps-spatial-io.export=.SimpleStyleProperties.offset
+    package: azure-maps-spatial-io
+    summary: >-
+      For points, the icon offset value to apply to icons when displayed in the
+      symbol layer.
+    fullName: offset
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'offset?: [number, number]'
+      return:
+        description: ''
+        type: '[number, number]'
+  - name: popupTemplate
+    uid: azure-maps-spatial-io.export=.SimpleStyleProperties.popupTemplate
+    package: azure-maps-spatial-io
+    summary: A template used to define how content is rendered inside of a popup.
+    fullName: popupTemplate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'popupTemplate?: PopupTemplate'
+      return:
+        description: ''
+        type: PopupTemplate
+  - name: rotation
+    uid: azure-maps-spatial-io.export=.SimpleStyleProperties.rotation
+    package: azure-maps-spatial-io
+    summary: >-
+      For points, the rotation value to apply to icons when displayed in the
+      symbol layer.
+    fullName: rotation
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'rotation?: number'
+      return:
+        description: ''
+        type: number
+  - name: size
+    uid: azure-maps-spatial-io.export=.SimpleStyleProperties.size
+    package: azure-maps-spatial-io
+    summary: >-
+      For points, the scale value to apply to icons when displayed in the symbol
+      or bubble layer.
+    fullName: size
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'size?: number'
+      return:
+        description: ''
+        type: number
+  - name: strokeColor
+    uid: azure-maps-spatial-io.export=.SimpleStyleProperties.strokeColor
+    package: azure-maps-spatial-io
+    summary: For lines and polygons, the color of a line or our polygon outline.
+    fullName: strokeColor
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'strokeColor?: string'
+      return:
+        description: ''
+        type: string
+  - name: strokeOpacity
+    uid: azure-maps-spatial-io.export=.SimpleStyleProperties.strokeOpacity
+    package: azure-maps-spatial-io
+    summary: For lines and polygons, the opacity of a line or our polygon outline.
+    fullName: strokeOpacity
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'strokeOpacity?: number'
+      return:
+        description: ''
+        type: number
+  - name: strokeWidth
+    uid: azure-maps-spatial-io.export=.SimpleStyleProperties.strokeWidth
+    package: azure-maps-spatial-io
+    summary: For lines and polygons, the width of a line or our polygon outline.
+    fullName: strokeWidth
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'strokeWidth?: number'
+      return:
+        description: ''
+        type: number
+  - name: title
+    uid: azure-maps-spatial-io.export=.SimpleStyleProperties.title
+    package: azure-maps-spatial-io
+    summary: >-
+      A common title field. Some XML files use 'name' instead, this value will
+      be copied to this property.
+    fullName: title
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'title?: string'
+      return:
+        description: ''
+        type: string
+  - name: visible
+    uid: azure-maps-spatial-io.export=.SimpleStyleProperties.visible
+    package: azure-maps-spatial-io
+    summary: If the feature is visible or not.
+    fullName: visible
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'visible?: boolean'
+      return:
+        description: ''
+        type: boolean
+extends: Record&lt;string, any&gt;

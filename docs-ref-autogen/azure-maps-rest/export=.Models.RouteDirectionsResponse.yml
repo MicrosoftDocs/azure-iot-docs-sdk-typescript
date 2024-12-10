@@ -1,0 +1,135 @@
+### YamlMime:TSType
+name: RouteDirectionsResponse
+uid: azure-maps-rest.export=.Models.RouteDirectionsResponse
+package: azure-maps-rest
+summary: This object is returned from a successful Route Directions call
+fullName: RouteDirectionsResponse
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: copyright
+    uid: azure-maps-rest.export=.Models.RouteDirectionsResponse.copyright
+    package: azure-maps-rest
+    summary: >-
+      Copyright property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: copyright
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'copyright?: string'
+      return:
+        description: ''
+        type: string
+  - name: formatVersion
+    uid: azure-maps-rest.export=.Models.RouteDirectionsResponse.formatVersion
+    package: azure-maps-rest
+    summary: >-
+      Format Version property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: formatVersion
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'formatVersion?: string'
+      return:
+        description: ''
+        type: string
+  - name: optimizedWaypoints
+    uid: azure-maps-rest.export=.Models.RouteDirectionsResponse.optimizedWaypoints
+    package: azure-maps-rest
+    summary: >-
+      Optimized sequence of waypoints. It shows the index from the user provided
+      waypoint sequence
+
+      for the original and optimized list. For instance, a response:
+
+
+      ```
+
+      <optimizedWaypoints>
+
+      <waypoint providedIndex="0" optimizedIndex="1"/>
+
+      <waypoint providedIndex="1" optimizedIndex="2"/>
+
+      <waypoint providedIndex="2" optimizedIndex="0"/>
+
+      </optimizedWaypoints>
+
+      ```
+
+
+      means that the original sequence is [0, 1, 2] and optimized sequence is
+      [1, 2, 0]. Since the
+
+      index starts by 0 the original is "first, second, third" while the
+      optimized is "second,
+
+      third, first".
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: optimizedWaypoints
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'optimizedWaypoints?: RouteOptimizedWaypoint[]'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.export" />=.<xref
+          uid="Models.RouteOptimizedWaypoint" />[]
+  - name: privacy
+    uid: azure-maps-rest.export=.Models.RouteDirectionsResponse.privacy
+    package: azure-maps-rest
+    summary: >-
+      Privacy property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: privacy
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'privacy?: string'
+      return:
+        description: ''
+        type: string
+  - name: report
+    uid: azure-maps-rest.export=.Models.RouteDirectionsResponse.report
+    package: azure-maps-rest
+    summary: ''
+    fullName: report
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'report?: RouteResponseReport'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.export" />=.<xref
+          uid="Models.RouteResponseReport" />
+  - name: routes
+    uid: azure-maps-rest.export=.Models.RouteDirectionsResponse.routes
+    package: azure-maps-rest
+    summary: >-
+      Routes array
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: routes
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'routes?: RouteDirectionsResult[]'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.export" />=.<xref
+          uid="Models.RouteDirectionsResult" />[]

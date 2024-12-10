@@ -1,0 +1,17 @@
+### YamlMime:TSTypeAlias
+name: RoutePostRouteDirectionsBatchPreviewResponse
+uid: azure-maps-rest.export=.Models.RoutePostRouteDirectionsBatchPreviewResponse
+package: azure-maps-rest
+summary: Contains response data for the postRouteDirectionsBatchPreview operation.
+fullName: RoutePostRouteDirectionsBatchPreviewResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type RoutePostRouteDirectionsBatchPreviewResponse = BatchResponse &
+    RoutePostRouteDirectionsBatchPreviewHeaders & {
+      _response: msRest.HttpResponse & {
+        bodyAsText: string
+        parsedBody: BatchResponse
+        parsedHeaders: RoutePostRouteDirectionsBatchPreviewHeaders
+      }
+    }

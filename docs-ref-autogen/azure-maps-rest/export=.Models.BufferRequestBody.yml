@@ -1,0 +1,45 @@
+### YamlMime:TSType
+name: BufferRequestBody
+uid: azure-maps-rest.export=.Models.BufferRequestBody
+package: azure-maps-rest
+summary: >-
+  An object with a FeatureCollection and a list of distances.  All the feature's
+  properties should
+
+  contain `geometryId`, which is used for identifying the geometry and is
+  case-sensitive.
+fullName: BufferRequestBody
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: distances
+    uid: azure-maps-rest.export=.Models.BufferRequestBody.distances
+    package: azure-maps-rest
+    summary: >-
+      List of the distances to compute the buffer for, one-to-one per Feature in
+      the collection, or
+
+      one for all Features in the collection.
+    fullName: distances
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'distances?: number[]'
+      return:
+        description: ''
+        type: number[]
+  - name: geometries
+    uid: azure-maps-rest.export=.Models.BufferRequestBody.geometries
+    package: azure-maps-rest
+    summary: ''
+    fullName: geometries
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'geometries?: GeoJSONFeatureCollection'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.export" />=.<xref
+          uid="Models.GeoJSONFeatureCollection" />

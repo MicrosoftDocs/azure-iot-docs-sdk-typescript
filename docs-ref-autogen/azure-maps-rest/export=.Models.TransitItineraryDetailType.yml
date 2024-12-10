@@ -1,0 +1,31 @@
+### YamlMime:TSEnum
+name: TransitItineraryDetailType
+uid: azure-maps-rest.export=.Models.TransitItineraryDetailType
+package: azure-maps-rest
+summary: |-
+  Defines values for TransitItineraryDetailType.
+  Possible values include: 'geometry', 'schedule'
+fullName: TransitItineraryDetailType
+remarks: ''
+isDeprecated: false
+fields:
+  - name: Geometry
+    uid: azure-maps-rest.export=.Models.TransitItineraryDetailType.Geometry
+    package: azure-maps-rest
+    summary: >-
+      Shape of an in GeoJSON format. For public transit legs will return also
+      the stops that the leg
+
+      passes through. For walk and bike legs, will return also the turn-by-turn
+      navigation data.
+  - name: Schedule
+    uid: azure-maps-rest.export=.Models.TransitItineraryDetailType.Schedule
+    package: azure-maps-rest
+    summary: >-
+      Static schedule data as to all departures of Public Transit legs from the
+      current time of the
+
+      day to the end of the current day. Data is guaranteed to be returned only
+      between the current
+
+      day and 3 days forward.

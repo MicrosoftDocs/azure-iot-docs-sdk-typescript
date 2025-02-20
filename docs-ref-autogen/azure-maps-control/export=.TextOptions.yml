@@ -1,0 +1,609 @@
+### YamlMime:TSType
+name: TextOptions
+uid: azure-maps-control.export=.TextOptions
+package: azure-maps-control
+summary: Options used to customize the text in a SymbolLayer
+fullName: TextOptions
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: allowOverlap
+    uid: azure-maps-control.export=.TextOptions.allowOverlap
+    package: azure-maps-control
+    summary: >-
+      Specifies if the text will be visible if it collides with other symbols.
+
+      If true, the text will be visible even if it collides with other
+      previously drawn symbols.
+
+      Default `false`.
+    fullName: allowOverlap
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'allowOverlap?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: anchor
+    uid: azure-maps-control.export=.TextOptions.anchor
+    package: azure-maps-control
+    summary: >-
+      Specifies which part of the icon is placed closest to the icons anchor
+      position on the map.<br />
+
+      `"center"`: The center of the icon is placed closest to the anchor.<br />
+
+      `"left"`: The left side of the icon is placed closest to the anchor.<br />
+
+      `"right"`: The right side of the icon is placed closest to the anchor.<br
+      />
+
+      `"top"`: The top of the icon is placed closest to the anchor.<br />
+
+      `"bottom"`: The bottom of the icon is placed closest to the anchor.<br />
+
+      `"top-left"`: The top left corner of the icon is placed closest to the
+      anchor.<br />
+
+      `"top-right"`: The top right corner of the icon is placed closest to the
+      anchor.<br />
+
+      `"bottom-left"`: The bottom left corner of the icon is placed closest to
+      the anchor.<br />
+
+      `"bottom-right"`: The bottom right corner of the icon is placed closest to
+      the anchor.<br />
+
+      Default `"center"`.
+    fullName: anchor
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        anchor?: ["array", unknown] | ["array", ExpressionSpecification |
+        ExpressionInputType, unknown] | ["array", ExpressionSpecification |
+        ExpressionInputType, number | ExpressionSpecification, unknown] |
+        ["boolean", Object, unknown] | CollatorExpressionSpecification |
+        ["format", Object] | ["image", unknown] | ["literal", unknown] |
+        ["number", unknown, Object] | ["number-format", number |
+        ExpressionSpecification, { currency?: string | ExpressionSpecification,
+        locale?: string | ExpressionSpecification, max-fraction-digits?: number
+        | ExpressionSpecification, min-fraction-digits?: number |
+        ExpressionSpecification }] | ["object", unknown, Object] | ["string",
+        unknown, Object] | ["to-boolean", unknown] | ["to-color", unknown,
+        Object] | ["to-number", unknown, Object] | ["to-string", unknown] |
+        ["accumulated"] | ["feature-state", string] | ["geometry-type"] | ["id"]
+        | ["line-progress"] | ["properties"] | ["at", number |
+        ExpressionSpecification, ExpressionSpecification] | ["get", string |
+        ExpressionSpecification, Object] | ["has", string |
+        ExpressionSpecification, Object] | ["in", ExpressionSpecification |
+        ExpressionInputType, ExpressionSpecification | ExpressionInputType] |
+        ["index-of", ExpressionSpecification | ExpressionInputType,
+        ExpressionSpecification | ExpressionInputType] | ["length", string |
+        ExpressionSpecification] | ["slice", string | ExpressionSpecification,
+        number | ExpressionSpecification, Object] | ["!", boolean |
+        ExpressionSpecification] | ["!=", ExpressionSpecification |
+        ExpressionInputType, ExpressionSpecification | ExpressionInputType,
+        Object] | ["<", ExpressionSpecification | ExpressionInputType,
+        ExpressionSpecification | ExpressionInputType, Object] | ["<=",
+        ExpressionSpecification | ExpressionInputType, ExpressionSpecification |
+        ExpressionInputType, Object] | ["==", ExpressionSpecification |
+        ExpressionInputType, ExpressionSpecification | ExpressionInputType,
+        Object] | [">", ExpressionSpecification | ExpressionInputType,
+        ExpressionSpecification | ExpressionInputType, Object] | [">=",
+        ExpressionSpecification | ExpressionInputType, ExpressionSpecification |
+        ExpressionInputType, Object] | ["all", Object] | ["any", Object] |
+        ["case", boolean | ExpressionSpecification, ExpressionSpecification |
+        ExpressionInputType, Object, ExpressionSpecification |
+        ExpressionInputType] | ["coalesce", Object] | ["match",
+        ExpressionSpecification | ExpressionInputType, ExpressionInputType |
+        ExpressionInputType[], ExpressionSpecification | ExpressionInputType,
+        Object, ExpressionSpecification | ExpressionInputType] | ["within",
+        unknown] | ["distance", unknown] | ["interpolate",
+        InterpolationSpecification, number | ExpressionSpecification, Object] |
+        ["interpolate-hcl", InterpolationSpecification, number |
+        ExpressionSpecification, Object] | ["interpolate-lab",
+        InterpolationSpecification, number | ExpressionSpecification, Object] |
+        ["step", number | ExpressionSpecification, ExpressionSpecification |
+        ExpressionInputType, Object] | ["let", string, ExpressionSpecification |
+        ExpressionInputType, Object] | ["var", string] | ["concat", Object] |
+        ["downcase", string | ExpressionSpecification] | ["is-supported-script",
+        string | ExpressionSpecification] | ["resolved-locale",
+        CollatorExpressionSpecification] | ["upcase", string |
+        ExpressionSpecification] | ["rgb", number | ExpressionSpecification,
+        number | ExpressionSpecification, number | ExpressionSpecification] |
+        ["rgba", number | ExpressionSpecification, number |
+        ExpressionSpecification, number | ExpressionSpecification, number |
+        ExpressionSpecification] | ["to-rgba", string | ExpressionSpecification]
+        | ["-", number | ExpressionSpecification, Object] | ["*", number |
+        ExpressionSpecification, number | ExpressionSpecification, Object] |
+        ["/", number | ExpressionSpecification, number |
+        ExpressionSpecification] | ["%", number | ExpressionSpecification,
+        number | ExpressionSpecification] | ["^", number |
+        ExpressionSpecification, number | ExpressionSpecification] | ["+",
+        Object] | ["abs", number | ExpressionSpecification] | ["acos", number |
+        ExpressionSpecification] | ["asin", number | ExpressionSpecification] |
+        ["atan", number | ExpressionSpecification] | ["ceil", number |
+        ExpressionSpecification] | ["cos", number | ExpressionSpecification] |
+        ["distance", ExpressionSpecification | Record<string, unknown>] |
+        ["ExpressionSpecification"] | ["floor", number |
+        ExpressionSpecification] | ["ln", number | ExpressionSpecification] |
+        ["ln2"] | ["log10", number | ExpressionSpecification] | ["log2", number
+        | ExpressionSpecification] | ["max", number | ExpressionSpecification,
+        Object] | ["min", number | ExpressionSpecification, Object] | ["pi"] |
+        ["round", number | ExpressionSpecification] | ["sin", number |
+        ExpressionSpecification] | ["sqrt", number | ExpressionSpecification] |
+        ["tan", number | ExpressionSpecification] | ["zoom"] |
+        ["heatmap-density"] | "center" | "top" | "bottom" | "left" | "right" |
+        "top-left" | "top-right" | "bottom-left" | "bottom-right" | { stops:
+        [number, PositionAnchor][], type: "exponential" } | { stops: [number,
+        PositionAnchor][], type: "interval" } | { default?: PositionAnchor,
+        property: string, stops: [number, PositionAnchor][], type: "exponential"
+        } | { default?: PositionAnchor, property: string, stops: [number,
+        PositionAnchor][], type: "interval" } | { default?: PositionAnchor,
+        property: string, stops: [string | number | boolean, PositionAnchor][],
+        type: "categorical" } | { default?: PositionAnchor, property: string,
+        type: "identity" } | { default?: PositionAnchor, property: string,
+        stops: [{ value: number, zoom: number }, PositionAnchor][], type:
+        "exponential" } | { default?: PositionAnchor, property: string, stops:
+        [{ value: number, zoom: number }, PositionAnchor][], type: "interval" }
+        | { default?: PositionAnchor, property: string, stops: [{ value: string
+        | number | boolean, zoom: number }, PositionAnchor][], type:
+        "categorical" }
+      return:
+        description: ''
+        type: >-
+          ["array", unknown] | ["array", ExpressionSpecification |
+          ExpressionInputType, unknown] | ["array", ExpressionSpecification |
+          ExpressionInputType, number | ExpressionSpecification, unknown] |
+          ["boolean", Object, unknown] | CollatorExpressionSpecification |
+          ["format", Object] | ["image", unknown] | ["literal", unknown] |
+          ["number", unknown, Object] | ["number-format", number |
+          ExpressionSpecification, { currency?: string |
+          ExpressionSpecification, locale?: string | ExpressionSpecification,
+          max-fraction-digits?: number | ExpressionSpecification,
+          min-fraction-digits?: number | ExpressionSpecification }] | ["object",
+          unknown, Object] | ["string", unknown, Object] | ["to-boolean",
+          unknown] | ["to-color", unknown, Object] | ["to-number", unknown,
+          Object] | ["to-string", unknown] | ["accumulated"] | ["feature-state",
+          string] | ["geometry-type"] | ["id"] | ["line-progress"] |
+          ["properties"] | ["at", number | ExpressionSpecification,
+          ExpressionSpecification] | ["get", string | ExpressionSpecification,
+          Object] | ["has", string | ExpressionSpecification, Object] | ["in",
+          ExpressionSpecification | ExpressionInputType, ExpressionSpecification
+          | ExpressionInputType] | ["index-of", ExpressionSpecification |
+          ExpressionInputType, ExpressionSpecification | ExpressionInputType] |
+          ["length", string | ExpressionSpecification] | ["slice", string |
+          ExpressionSpecification, number | ExpressionSpecification, Object] |
+          ["!", boolean | ExpressionSpecification] | ["!=",
+          ExpressionSpecification | ExpressionInputType, ExpressionSpecification
+          | ExpressionInputType, Object] | ["&lt;", ExpressionSpecification |
+          ExpressionInputType, ExpressionSpecification | ExpressionInputType,
+          Object] | ["&lt;=", ExpressionSpecification | ExpressionInputType,
+          ExpressionSpecification | ExpressionInputType, Object] | ["==",
+          ExpressionSpecification | ExpressionInputType, ExpressionSpecification
+          | ExpressionInputType, Object] | ["&gt;", ExpressionSpecification |
+          ExpressionInputType, ExpressionSpecification | ExpressionInputType,
+          Object] | ["&gt;=", ExpressionSpecification | ExpressionInputType,
+          ExpressionSpecification | ExpressionInputType, Object] | ["all",
+          Object] | ["any", Object] | ["case", boolean |
+          ExpressionSpecification, ExpressionSpecification |
+          ExpressionInputType, Object, ExpressionSpecification |
+          ExpressionInputType] | ["coalesce", Object] | ["match",
+          ExpressionSpecification | ExpressionInputType, ExpressionInputType |
+          ExpressionInputType[], ExpressionSpecification | ExpressionInputType,
+          Object, ExpressionSpecification | ExpressionInputType] | ["within",
+          unknown] | ["distance", unknown] | ["interpolate",
+          InterpolationSpecification, number | ExpressionSpecification, Object]
+          | ["interpolate-hcl", InterpolationSpecification, number |
+          ExpressionSpecification, Object] | ["interpolate-lab",
+          InterpolationSpecification, number | ExpressionSpecification, Object]
+          | ["step", number | ExpressionSpecification, ExpressionSpecification |
+          ExpressionInputType, Object] | ["let", string, ExpressionSpecification
+          | ExpressionInputType, Object] | ["var", string] | ["concat", Object]
+          | ["downcase", string | ExpressionSpecification] |
+          ["is-supported-script", string | ExpressionSpecification] |
+          ["resolved-locale", CollatorExpressionSpecification] | ["upcase",
+          string | ExpressionSpecification] | ["rgb", number |
+          ExpressionSpecification, number | ExpressionSpecification, number |
+          ExpressionSpecification] | ["rgba", number | ExpressionSpecification,
+          number | ExpressionSpecification, number | ExpressionSpecification,
+          number | ExpressionSpecification] | ["to-rgba", string |
+          ExpressionSpecification] | ["-", number | ExpressionSpecification,
+          Object] | ["*", number | ExpressionSpecification, number |
+          ExpressionSpecification, Object] | ["/", number |
+          ExpressionSpecification, number | ExpressionSpecification] | ["%",
+          number | ExpressionSpecification, number | ExpressionSpecification] |
+          ["^", number | ExpressionSpecification, number |
+          ExpressionSpecification] | ["+", Object] | ["abs", number |
+          ExpressionSpecification] | ["acos", number | ExpressionSpecification]
+          | ["asin", number | ExpressionSpecification] | ["atan", number |
+          ExpressionSpecification] | ["ceil", number | ExpressionSpecification]
+          | ["cos", number | ExpressionSpecification] | ["distance",
+          ExpressionSpecification | Record&lt;string, unknown&gt;] |
+          ["ExpressionSpecification"] | ["floor", number |
+          ExpressionSpecification] | ["ln", number | ExpressionSpecification] |
+          ["ln2"] | ["log10", number | ExpressionSpecification] | ["log2",
+          number | ExpressionSpecification] | ["max", number |
+          ExpressionSpecification, Object] | ["min", number |
+          ExpressionSpecification, Object] | ["pi"] | ["round", number |
+          ExpressionSpecification] | ["sin", number | ExpressionSpecification] |
+          ["sqrt", number | ExpressionSpecification] | ["tan", number |
+          ExpressionSpecification] | ["zoom"] | ["heatmap-density"] | "center" |
+          "top" | "bottom" | "left" | "right" | "top-left" | "top-right" |
+          "bottom-left" | "bottom-right" | { stops: [number, PositionAnchor][],
+          type: "exponential" } | { stops: [number, PositionAnchor][], type:
+          "interval" } | { default?: PositionAnchor, property: string, stops:
+          [number, PositionAnchor][], type: "exponential" } | { default?:
+          PositionAnchor, property: string, stops: [number, PositionAnchor][],
+          type: "interval" } | { default?: PositionAnchor, property: string,
+          stops: [string | number | boolean, PositionAnchor][], type:
+          "categorical" } | { default?: PositionAnchor, property: string, type:
+          "identity" } | { default?: PositionAnchor, property: string, stops: [{
+          value: number, zoom: number }, PositionAnchor][], type: "exponential"
+          } | { default?: PositionAnchor, property: string, stops: [{ value:
+          number, zoom: number }, PositionAnchor][], type: "interval" } | {
+          default?: PositionAnchor, property: string, stops: [{ value: string |
+          number | boolean, zoom: number }, PositionAnchor][], type:
+          "categorical" }
+  - name: color
+    uid: azure-maps-control.export=.TextOptions.color
+    package: azure-maps-control
+    summary: |-
+      The color of the text.
+      Default `"#000000"`.
+    fullName: color
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'color?: DataDrivenPropertyValueSpecification<string>'
+      return:
+        description: ''
+        type: DataDrivenPropertyValueSpecification&lt;string&gt;
+  - name: font
+    uid: azure-maps-control.export=.TextOptions.font
+    package: azure-maps-control
+    summary: >-
+      The font stack to use for displaying text.
+
+      Possible values: `"SegoeFrutigerHelveticaMYingHei-Bold"`,
+      `"SegoeFrutigerHelveticaMYingHei-Medium"`,
+
+      `"SegoeFrutigerHelveticaMYingHei-Regular"`, `"SegoeUi-Bold"`,
+      `"SegoeUi-Light"`, `"SegoeUi-Regular"`,
+
+      `"SegoeUi-SemiBold"`, `"SegoeUi-SemiLight"`, `"SegoeUi-SymbolRegular"`,
+      `"StandardCondensedSegoeUi-Black"`,
+
+      `"StandardCondensedSegoeUi-Bold"`, `"StandardCondensedSegoeUi-Light"`,
+      `"StandardCondensedSegoeUi-Regular"`,
+
+      `"StandardFont-Black"`, `"StandardFont-Bold"`, `"StandardFont-Light"`,
+      `"StandardFont-Regular"`,
+
+      `"StandardFontCondensed-Black"`, `"StandardFontCondensed-Bold"`,
+      `"StandardFontCondensed-Light"`,
+
+      `"StandardFontCondensed-Regular"`.
+
+      Default `["StandardFont-Regular"]`.
+    fullName: font
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'font?: DataDrivenPropertyValueSpecification<string[]>'
+      return:
+        description: ''
+        type: DataDrivenPropertyValueSpecification&lt;string[]&gt;
+  - name: haloBlur
+    uid: azure-maps-control.export=.TextOptions.haloBlur
+    package: azure-maps-control
+    summary: |-
+      The halo's fadeout distance towards the outside in pixels.
+      Must be a number greater or equal to 0.
+      Default `0`.
+    fullName: haloBlur
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'haloBlur?: DataDrivenPropertyValueSpecification<number>'
+      return:
+        description: ''
+        type: DataDrivenPropertyValueSpecification&lt;number&gt;
+  - name: haloColor
+    uid: azure-maps-control.export=.TextOptions.haloColor
+    package: azure-maps-control
+    summary: |-
+      The color of the text's halo, which helps it stand out from backgrounds.
+      Default `"rgba(0,0,0,0)"`.
+    fullName: haloColor
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'haloColor?: DataDrivenPropertyValueSpecification<string>'
+      return:
+        description: ''
+        type: DataDrivenPropertyValueSpecification&lt;string&gt;
+  - name: haloWidth
+    uid: azure-maps-control.export=.TextOptions.haloWidth
+    package: azure-maps-control
+    summary: |-
+      The distance of the halo to the font outline in pixels.
+      Must be a number greater or equal to 0.
+      The maximum text halo width is 1/4 of the font size.
+      Default `0`.
+    fullName: haloWidth
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'haloWidth?: DataDrivenPropertyValueSpecification<number>'
+      return:
+        description: ''
+        type: DataDrivenPropertyValueSpecification&lt;number&gt;
+  - name: ignorePlacement
+    uid: azure-maps-control.export=.TextOptions.ignorePlacement
+    package: azure-maps-control
+    summary: |-
+      Specifies if the other symbols are allowed to collide with the text.
+      If true, other symbols can be visible even if they collide with the text.
+      Default `false`.
+    fullName: ignorePlacement
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'ignorePlacement?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: justify
+    uid: azure-maps-control.export=.TextOptions.justify
+    package: azure-maps-control
+    summary: |-
+      Text justification options.<br />
+      `"auto"`: The text is aligned towards the anchor position.<br />
+      `"left"`: The text is aligned to the left.<br />
+      `"center"`: The text is centered.<br />
+      `"right"`: The text is aligned to the right.<br />
+      Default `"center"`.
+    fullName: justify
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'justify?: "center" | "left" | "right" | "auto"'
+      return:
+        description: ''
+        type: '"center" | "left" | "right" | "auto"'
+  - name: offset
+    uid: azure-maps-control.export=.TextOptions.offset
+    package: azure-maps-control
+    summary: >-
+      Specifies an offset distance of the icon from its anchor in ems.
+
+      Positive values indicate right and down, while negative values indicate
+      left and up.
+
+      Default `[0, 0]`.
+    fullName: offset
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'offset?: DataDrivenPropertyValueSpecification<Pixel>'
+      return:
+        description: ''
+        type: >-
+          DataDrivenPropertyValueSpecification&lt;<xref
+          uid="azure-maps-control.export" />=.Pixel&gt;
+  - name: opacity
+    uid: azure-maps-control.export=.TextOptions.opacity
+    package: azure-maps-control
+    summary: >-
+      A number between 0 and 1 that indicates the opacity at which the text will
+      be drawn.
+
+      Default `1`.
+    fullName: opacity
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'opacity?: DataDrivenPropertyValueSpecification<number>'
+      return:
+        description: ''
+        type: DataDrivenPropertyValueSpecification&lt;number&gt;
+  - name: optional
+    uid: azure-maps-control.export=.TextOptions.optional
+    package: azure-maps-control
+    summary: |-
+      Specifies if the text can be hidden if it is overlapped by another symbol.
+      If true, icons will display without their corresponding text
+      when the text collides wit other symbols and the icon does not.
+      Default `false`.
+    fullName: optional
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'optional?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: padding
+    uid: azure-maps-control.export=.TextOptions.padding
+    package: azure-maps-control
+    summary: >-
+      Size of the additional area around the text bounding box used for
+      detecting
+
+      symbol collisions.
+
+      Default `2`.
+    fullName: padding
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'padding?: PropertyValueSpecification<number>'
+      return:
+        description: ''
+        type: PropertyValueSpecification&lt;number&gt;
+  - name: pitchAlignment
+    uid: azure-maps-control.export=.TextOptions.pitchAlignment
+    package: azure-maps-control
+    summary: |-
+      Specifies the orientation of the text when the map is pitched.<br />
+      `"auto"`: Automatically matches the value of `rotationAlignment`.<br />
+      `"map"`: The text is aligned to the plane of the map.<br />
+      `"viewport"`: The text is aligned to the plane of the viewport.<br />
+      Default: `"auto"`
+    fullName: pitchAlignment
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'pitchAlignment?: "map" | "viewport" | "auto"'
+      return:
+        description: ''
+        type: '"map" | "viewport" | "auto"'
+  - name: radialOffset
+    uid: azure-maps-control.export=.TextOptions.radialOffset
+    package: azure-maps-control
+    summary: >-
+      Radial offset of text, in the direction of the symbol's anchor. Useful in
+      combination
+
+      with `variableAnchor`, which defaults to using the two-dimensional
+      `offset` if present.
+
+      Default: `0`
+    fullName: radialOffset
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'radialOffset?: DataDrivenPropertyValueSpecification<number>'
+      return:
+        description: ''
+        type: DataDrivenPropertyValueSpecification&lt;number&gt;
+  - name: rotation
+    uid: azure-maps-control.export=.TextOptions.rotation
+    package: azure-maps-control
+    summary: |-
+      The amount to rotate the text clockwise in degrees.
+      Default `0`
+    fullName: rotation
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'rotation?: DataDrivenPropertyValueSpecification<number>'
+      return:
+        description: ''
+        type: DataDrivenPropertyValueSpecification&lt;number&gt;
+  - name: rotationAlignment
+    uid: azure-maps-control.export=.TextOptions.rotationAlignment
+    package: azure-maps-control
+    summary: >-
+      In combination with the `placement` property of the `SymbolLayerOptions`,
+
+      specifies the rotation behavior of the individual glyphs forming the
+      text.<br />
+
+      `"auto"`: When the `placement` is set to `"point"`, this is equivalent to
+      `"map"`.
+
+      When the `placement` is set to `"line"` this is equivalent to `"map"`.<br
+      />
+
+      `"map"`: When the `placement` is set to `"point"`, aligns text east-west.
+
+      When the `placement` is set to `"line"`, aligns text x-axes with the
+      line.<br />
+
+      `"viewport"`: Produces glyphs whose x-axes are aligned with the x-axis of
+      the viewport,
+
+      regardless of the value of `placement`.<br />
+
+      Default: `"auto"`
+    fullName: rotationAlignment
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'rotationAlignment?: "map" | "viewport" | "auto"'
+      return:
+        description: ''
+        type: '"map" | "viewport" | "auto"'
+  - name: size
+    uid: azure-maps-control.export=.TextOptions.size
+    package: azure-maps-control
+    summary: |-
+      The size of the font in pixels.
+      Must be a number greater or equal to 0.
+      Default `16`.
+    fullName: size
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'size?: DataDrivenPropertyValueSpecification<number>'
+      return:
+        description: ''
+        type: DataDrivenPropertyValueSpecification&lt;number&gt;
+  - name: textField
+    uid: azure-maps-control.export=.TextOptions.textField
+    package: azure-maps-control
+    summary: Specifies the name of a property on the features to use for a text label.
+    fullName: textField
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'textField?: DataDrivenPropertyValueSpecification<string>'
+      return:
+        description: ''
+        type: DataDrivenPropertyValueSpecification&lt;string&gt;
+  - name: variableAnchor
+    uid: azure-maps-control.export=.TextOptions.variableAnchor
+    package: azure-maps-control
+    summary: >-
+      List of potential anchor locations, to increase the chance of placing
+      high-priority
+
+      labels on the map. The renderer will attempt to place the label at each
+      location,
+
+      in order, before moving onto the next label. Use `justify: "auto"` to
+      choose text
+
+      justification based on anchor position. To apply an offset use the
+      `radialOffset` or
+
+      two-dimensional `offset` options.<br />
+
+      `"center"`: The center of the icon is placed closest to the anchor.<br />
+
+      `"left"`: The left side of the icon is placed closest to the anchor.<br />
+
+      `"right"`: The right side of the icon is placed closest to the anchor.<br
+      />
+
+      `"top"`: The top of the icon is placed closest to the anchor.<br />
+
+      `"bottom"`: The bottom of the icon is placed closest to the anchor.<br />
+
+      `"top-left"`: The top left corner of the icon is placed closest to the
+      anchor.<br />
+
+      `"top-right"`: The top right corner of the icon is placed closest to the
+      anchor.<br />
+
+      `"bottom-left"`: The bottom left corner of the icon is placed closest to
+      the anchor.<br />
+
+      `"bottom-right"`: The bottom right corner of the icon is placed closest to
+      the anchor.<br />
+
+      Default: `undefined`
+    fullName: variableAnchor
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'variableAnchor?: PositionAnchor[]'
+      return:
+        description: ''
+        type: PositionAnchor[]
+extends: <xref uid="azure-maps-control.export" />=.Options

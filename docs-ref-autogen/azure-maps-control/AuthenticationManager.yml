@@ -1,0 +1,91 @@
+### YamlMime:TSType
+name: AuthenticationManager
+uid: azure-maps-control.AuthenticationManager
+package: azure-maps-control
+summary: |-
+  A manager for the map control's authentication.
+  Exposed through the authentication property of the atlas.Map class.
+  Cannot be instantiated by the user.
+fullName: AuthenticationManager
+remarks: ''
+isDeprecated: false
+type: interface
+methods:
+  - name: dispose()
+    uid: azure-maps-control.AuthenticationManager.dispose
+    package: azure-maps-control
+    summary: Cleans up any resources used by the authentication manager.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function dispose()
+  - name: getAuthType()
+    uid: azure-maps-control.AuthenticationManager.getAuthType
+    package: azure-maps-control
+    summary: Returns the current authentication type in use.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getAuthType(): AuthenticationType'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.export" />=.AuthenticationType
+  - name: getClientId()
+    uid: azure-maps-control.AuthenticationManager.getClientId
+    package: azure-maps-control
+    summary: Returns the current client ID in use.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getClientId(): string'
+      return:
+        description: ''
+        type: string
+  - name: getToken()
+    uid: azure-maps-control.AuthenticationManager.getToken
+    package: azure-maps-control
+    summary: >-
+      Returns the access token with an audience URI of
+      https://atlas.microsoft.com.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getToken(): null | string'
+      return:
+        description: ''
+        type: null | string
+  - name: initialize()
+    uid: azure-maps-control.AuthenticationManager.initialize
+    package: azure-maps-control
+    summary: >-
+      Initializes the authentication mechanism specified in
+      AuthenticationOptions.
+
+      If this method has been called before the original initialize promise is
+      returned.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function initialize(): Promise<void>'
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: signRequest(RequestParameters)
+    uid: azure-maps-control.AuthenticationManager.signRequest
+    package: azure-maps-control
+    summary: >-
+      Adds the necessary authentication query parameters or headers to a
+      RequestParameters.
+
+      Returns the updated RequestParameters.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function signRequest(params: RequestParameters): RequestParameters'
+      parameters:
+        - id: params
+          type: <xref uid="azure-maps-control.export" />=.RequestParameters
+          description: The RequestParameters to update.
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.export" />=.RequestParameters

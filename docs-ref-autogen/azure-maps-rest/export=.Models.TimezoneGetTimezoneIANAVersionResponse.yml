@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: TimezoneGetTimezoneIANAVersionResponse
+uid: azure-maps-rest.export=.Models.TimezoneGetTimezoneIANAVersionResponse
+package: azure-maps-rest
+summary: Contains response data for the getTimezoneIANAVersion operation.
+fullName: TimezoneGetTimezoneIANAVersionResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type TimezoneGetTimezoneIANAVersionResponse = TimezoneIanaVersionResult & {
+    _response: msRest.HttpResponse & {
+      bodyAsText: string
+      parsedBody: TimezoneIanaVersionResult
+    }
+  }

@@ -1,0 +1,62 @@
+### YamlMime:TSType
+name: DrawingLayers
+uid: azure-maps-drawing-tools.DrawingLayers
+package: azure-maps-drawing-tools
+summary: A collection of the layers used by the drawing manager for rendering shapes.
+fullName: DrawingLayers
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: lineLayer
+    uid: azure-maps-drawing-tools.DrawingLayers.lineLayer
+    package: azure-maps-drawing-tools
+    summary: The layer used for rendering LineStrings.
+    fullName: lineLayer
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'lineLayer?: LineLayer'
+      return:
+        description: ''
+        type: LineLayer
+  - name: pointLayer
+    uid: azure-maps-drawing-tools.DrawingLayers.pointLayer
+    package: azure-maps-drawing-tools
+    summary: The layer used for rendering Points.
+    fullName: pointLayer
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'pointLayer?: SymbolLayer'
+      return:
+        description: ''
+        type: SymbolLayer
+  - name: polygonLayer
+    uid: azure-maps-drawing-tools.DrawingLayers.polygonLayer
+    package: azure-maps-drawing-tools
+    summary: >-
+      The layer used for rendering the interior area of Polygons, Circles, and
+      Rectangles.
+    fullName: polygonLayer
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'polygonLayer?: PolygonLayer'
+      return:
+        description: ''
+        type: PolygonLayer
+  - name: polygonOutlineLayer
+    uid: azure-maps-drawing-tools.DrawingLayers.polygonOutlineLayer
+    package: azure-maps-drawing-tools
+    summary: >-
+      The layer used for rendering the outlines of Polygons, Circles, and
+      Rectangles.
+    fullName: polygonOutlineLayer
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'polygonOutlineLayer?: LineLayer'
+      return:
+        description: ''
+        type: LineLayer

@@ -1,0 +1,100 @@
+### YamlMime:TSType
+name: WebGLLayerOptions
+uid: azure-maps-control.WebGLLayerOptions
+package: azure-maps-control
+summary: Options used to render graphics in a WebGLLayer.
+fullName: WebGLLayerOptions
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: renderer
+    uid: azure-maps-control.WebGLLayerOptions.renderer
+    package: azure-maps-control
+    summary: An object that contains the rendering logic.
+    fullName: renderer
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'renderer?: WebGLRenderer'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.export" />=.WebGLRenderer
+inheritedProperties:
+  - name: filter
+    uid: azure-maps-control.WebGLLayerOptions.filter
+    package: azure-maps-control
+    summary: |-
+      An expression specifying conditions on source features.
+      Only features that match the filter are displayed.
+    fullName: filter
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'filter?: ExpressionFilterSpecification'
+      return:
+        description: ''
+        type: ExpressionFilterSpecification
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.filter](xref:azure-maps-control.LayerOptions.filter)
+  - name: maxZoom
+    uid: azure-maps-control.WebGLLayerOptions.maxZoom
+    package: azure-maps-control
+    summary: >-
+      An integer specifying the maximum zoom level to render the layer at.
+
+      This value is exclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `24`.
+    fullName: maxZoom
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'maxZoom?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.maxZoom](xref:azure-maps-control.LayerOptions.maxZoom)
+  - name: minZoom
+    uid: azure-maps-control.WebGLLayerOptions.minZoom
+    package: azure-maps-control
+    summary: >-
+      An integer specifying the minimum zoom level to render the layer at.
+
+      This value is inclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `0`.
+    fullName: minZoom
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'minZoom?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.minZoom](xref:azure-maps-control.LayerOptions.minZoom)
+  - name: visible
+    uid: azure-maps-control.WebGLLayerOptions.visible
+    package: azure-maps-control
+    summary: |-
+      Specifies if the layer is visible or not.
+      Default `true`.
+    fullName: visible
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'visible?: boolean'
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.visible](xref:azure-maps-control.LayerOptions.visible)
+extends: <xref uid="azure-maps-control.export" />=.LayerOptions

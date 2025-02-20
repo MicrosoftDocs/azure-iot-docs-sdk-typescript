@@ -1,0 +1,243 @@
+### YamlMime:TSType
+name: ImageLayer
+uid: azure-maps-control.export=.layer.ImageLayer
+package: azure-maps-control
+summary: >-
+  Overlays an image on the map with each corner anchored to a coordinate on the
+  map. Also known as a ground or image overlay.
+fullName: ImageLayer
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: ImageLayer(ImageLayerOptions, string)
+    uid: azure-maps-control.export=.layer.ImageLayer.constructor
+    package: azure-maps-control
+    summary: Constructs a new ImageLayer.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new ImageLayer(options: ImageLayerOptions, id?: string)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-maps-control.export" />=.ImageLayerOptions
+          description: The options for the tile layer.
+        - id: id
+          type: string
+          description: >-
+            The id of the layer. If not specified a random one will be
+            generated.
+inheritedProperties:
+  - name: metadata
+    uid: azure-maps-control.export=.layer.ImageLayer.metadata
+    package: azure-maps-control
+    summary: A property for associating custom data with the layer.
+    fullName: metadata
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'metadata?: any'
+      return:
+        description: ''
+        type: any
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.metadata](xref:azure-maps-control.export=.layer.Layer.metadata)
+inheritedMethods:
+  - name: getId()
+    uid: azure-maps-control.export=.layer.ImageLayer.getId
+    package: azure-maps-control
+    summary: Gets the id of the layer
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getId(): string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.getId](xref:azure-maps-control.export=.layer.Layer.getId)
+  - name: getMap()
+    uid: azure-maps-control.export=.layer.ImageLayer.getMap
+    package: azure-maps-control
+    summary: Gets the map that the layer is currently added to, or null.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getMap(): Map'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.export" />=.Map
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.getMap](xref:azure-maps-control.export=.layer.Layer.getMap)
+  - name: onAdd(Map)
+    uid: azure-maps-control.export=.layer.ImageLayer.onAdd
+    package: azure-maps-control
+    summary: Initialization method for the layer which is called when added to the map.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function onAdd(map: Map)'
+      parameters:
+        - id: map
+          type: <xref uid="azure-maps-control.export" />=.Map
+          description: The map the layer has been added to.
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.onAdd](xref:azure-maps-control.export=.layer.Layer.onAdd)
+  - name: onRemove()
+    uid: azure-maps-control.export=.layer.ImageLayer.onRemove
+    package: azure-maps-control
+    summary: |-
+      Method that is called when the layer is removed from the map.
+      Should perform any necessary cleanup for the layer.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function onRemove()
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.onRemove](xref:azure-maps-control.export=.layer.Layer.onRemove)
+methods:
+  - name: getCoordinatesFromEdges(number, number, number, number, number)
+    uid: azure-maps-control.export=.layer.ImageLayer.getCoordinatesFromEdges
+    package: azure-maps-control
+    summary: >-
+      Calculates coordinates for a rotated image layer when provided with the
+      bounding box edges and rotation value.
+
+      Note: If your rotation value is from a KML Ground Overlay it will need to
+      be converted to a clockwise rotation using the following formula:
+      `rotation = 360 – KmlRotation`
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function getCoordinatesFromEdges(north: number, south: number,
+        east: number, west: number, rotation?: number): Position[]
+      parameters:
+        - id: north
+          type: number
+          description: The north edge of the bounding box.
+        - id: south
+          type: number
+          description: The south edge of the bounding box.
+        - id: east
+          type: number
+          description: The east edge of the bounding box.
+        - id: west
+          type: number
+          description: The west edge of the bounding box.
+        - id: rotation
+          type: number
+          description: Clockwise rotation in degrees
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+          />[]
+  - name: getCoordinatesFromEdges(number, number, number, number, number)
+    uid: azure-maps-control.export=.layer.ImageLayer.getCoordinatesFromEdges_1
+    package: azure-maps-control
+    summary: >-
+      Calculates coordinates for a rotated image layer when provided with the
+      bounding box edges and rotation value.
+
+      Note: If your rotation value is from a KML Ground Overlay it will need to
+      be converted to a clockwise rotation using the following formula:
+      `rotation = 360 – KmlRotation`
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function getCoordinatesFromEdges(north: number, south: number,
+        east: number, west: number, rotation?: number): Position[]
+      parameters:
+        - id: north
+          type: number
+          description: The north edge of the bounding box.
+        - id: south
+          type: number
+          description: The south edge of the bounding box.
+        - id: east
+          type: number
+          description: The east edge of the bounding box.
+        - id: west
+          type: number
+          description: The west edge of the bounding box.
+        - id: rotation
+          type: number
+          description: Clockwise rotation in degrees
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+          />[]
+  - name: getOptions()
+    uid: azure-maps-control.export=.layer.ImageLayer.getOptions
+    package: azure-maps-control
+    summary: Gets the options of the tile layer.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getOptions(): ImageLayerOptions'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.export" />=.ImageLayerOptions
+  - name: getPixels(Position[])
+    uid: azure-maps-control.export=.layer.ImageLayer.getPixels
+    package: azure-maps-control
+    summary: >-
+      Calculates the approximate pixels on the source image that align with the
+      provided positions.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getPixels(positions: Position[]): Promise<Pixel[]>'
+      parameters:
+        - id: positions
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            />[]
+          description: >-
+            the provided positions from the source image used to calculate the
+            pixels
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azure-maps-control.export" />=.Pixel[]&gt;
+  - name: getPositions(Pixel[])
+    uid: azure-maps-control.export=.layer.ImageLayer.getPositions
+    package: azure-maps-control
+    summary: >-
+      Calculates the approximate positions that align with the provided pixels
+      from the source image.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getPositions(pixels: Pixel[]): Promise<Position[]>'
+      parameters:
+        - id: pixels
+          type: <xref uid="azure-maps-control.export" />=.Pixel[]
+          description: >-
+            the provided pixels from the source image used to calculate the
+            positions
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-maps-control.export" />=.<xref
+          uid="data.Position" />[]&gt;
+  - name: setOptions(ImageLayerOptions)
+    uid: azure-maps-control.export=.layer.ImageLayer.setOptions
+    package: azure-maps-control
+    summary: Sets the options of the tile layer.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function setOptions(options: ImageLayerOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-maps-control.export" />=.ImageLayerOptions
+          description: ''
+extends: <xref uid="azure-maps-control.export" />=.<xref uid="layer.Layer" />

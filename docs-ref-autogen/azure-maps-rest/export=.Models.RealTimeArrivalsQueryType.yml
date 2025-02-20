@@ -1,0 +1,48 @@
+### YamlMime:TSEnum
+name: RealTimeArrivalsQueryType
+uid: azure-maps-rest.export=.Models.RealTimeArrivalsQueryType
+package: azure-maps-rest
+summary: |-
+  Defines values for RealTimeArrivalsQueryType.
+  Possible values include: 'stops', 'line', 'lineAndStop', 'position'
+fullName: RealTimeArrivalsQueryType
+remarks: ''
+isDeprecated: false
+fields:
+  - name: Line
+    uid: azure-maps-rest.export=.Models.RealTimeArrivalsQueryType.Line
+    package: azure-maps-rest
+    summary: >-
+      Returns the next live arrival times for each stop within the specified
+      line. lineId, for
+
+      example, '3785742'.
+  - name: LineAndStop
+    uid: azure-maps-rest.export=.Models.RealTimeArrivalsQueryType.LineAndStop
+    package: azure-maps-rest
+    summary: >-
+      Returns up to three next Live Arrival times for a given line at a given
+      stop. Comma-separated
+
+      list including lineId and stop identifier, for example, 1228526,14014071
+      (lineId,stopId).
+  - name: Position
+    uid: azure-maps-rest.export=.Models.RealTimeArrivalsQueryType.Position
+    package: azure-maps-rest
+    summary: >-
+      Returns arrivals of a line to stops near the user’s location. The
+      applicable location query
+
+      specified as a comma separated string composed by latitude followed by
+      longitude e.g.
+
+      "47.641268,-122.125679".
+  - name: Stops
+    uid: azure-maps-rest.export=.Models.RealTimeArrivalsQueryType.Stops
+    package: azure-maps-rest
+    summary: >-
+      One or multiple stops as a comma separated list. Returns the requested
+      number of live arrivals
+
+      for all lines arriving at the specified stop. Defined by parameter
+      stopQueryType.

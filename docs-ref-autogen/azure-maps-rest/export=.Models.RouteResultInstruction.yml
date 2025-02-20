@@ -1,0 +1,211 @@
+### YamlMime:TSType
+name: RouteResultInstruction
+uid: azure-maps-rest.export=.Models.RouteResultInstruction
+package: azure-maps-rest
+summary: >-
+  A set of attributes describing a maneuver, e.g. 'Turn right', 'Keep left',
+  'Take the ferry',
+
+  'Take the motorway', 'Arrive'.
+fullName: RouteResultInstruction
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: countryCode
+    uid: azure-maps-rest.export=.Models.RouteResultInstruction.countryCode
+    package: azure-maps-rest
+    summary: >-
+      3-character [ISO 3166-1](https://www.iso.org/iso-3166-country-codes.html)
+      alpha-3 country
+
+      code. E.g. USA.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: countryCode
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'countryCode?: string'
+      return:
+        description: ''
+        type: string
+  - name: drivingSide
+    uid: azure-maps-rest.export=.Models.RouteResultInstruction.drivingSide
+    package: azure-maps-rest
+    summary: >-
+      Indicates left-hand vs. right-hand side driving at the point of the
+      maneuver. Possible values
+
+      include: 'LEFT', 'RIGHT'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: drivingSide
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'drivingSide?: DrivingSide'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.export" />=.<xref uid="Models.DrivingSide"
+          />
+  - name: instructionType
+    uid: azure-maps-rest.export=.Models.RouteResultInstruction.instructionType
+    package: azure-maps-rest
+    summary: >-
+      Type of the instruction, e.g., turn or change of road form. Possible
+      values include: 'TURN',
+
+      'ROAD_CHANGE', 'LOCATION_DEPARTURE', 'LOCATION_ARRIVAL', 'DIRECTION_INFO',
+      'LOCATION_WAYPOINT'
+    fullName: instructionType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'instructionType?: GuidanceInstructionType'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.export" />=.<xref
+          uid="Models.GuidanceInstructionType" />
+  - name: maneuver
+    uid: azure-maps-rest.export=.Models.RouteResultInstruction.maneuver
+    package: azure-maps-rest
+    summary: >-
+      A code identifying the maneuver. Possible values include: 'ARRIVE',
+      'ARRIVE_LEFT',
+
+      'ARRIVE_RIGHT', 'DEPART', 'STRAIGHT', 'KEEP_RIGHT', 'BEAR_RIGHT',
+      'TURN_RIGHT', 'SHARP_RIGHT',
+
+      'KEEP_LEFT', 'BEAR_LEFT', 'TURN_LEFT', 'SHARP_LEFT', 'MAKE_UTURN',
+      'ENTER_MOTORWAY',
+
+      'ENTER_FREEWAY', 'ENTER_HIGHWAY', 'TAKE_EXIT', 'MOTORWAY_EXIT_LEFT',
+      'MOTORWAY_EXIT_RIGHT',
+
+      'TAKE_FERRY', 'ROUNDABOUT_CROSS', 'ROUNDABOUT_RIGHT', 'ROUNDABOUT_LEFT',
+      'ROUNDABOUT_BACK',
+
+      'TRY_MAKE_UTURN', 'FOLLOW', 'SWITCH_PARALLEL_ROAD', 'SWITCH_MAIN_ROAD',
+      'ENTRANCE_RAMP',
+
+      'WAYPOINT_LEFT', 'WAYPOINT_RIGHT', 'WAYPOINT_REACHED'
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: maneuver
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'maneuver?: GuidanceManeuver'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.export" />=.<xref
+          uid="Models.GuidanceManeuver" />
+  - name: message
+    uid: azure-maps-rest.export=.Models.RouteResultInstruction.message
+    package: azure-maps-rest
+    summary: >-
+      A human-readable message for the maneuver.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: message
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'message?: string'
+      return:
+        description: ''
+        type: string
+  - name: point
+    uid: azure-maps-rest.export=.Models.RouteResultInstruction.point
+    package: azure-maps-rest
+    summary: ''
+    fullName: point
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'point?: Coordinate'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.export" />=.<xref uid="Models.Coordinate"
+          />
+  - name: possibleCombineWithNext
+    uid: >-
+      azure-maps-rest.export=.Models.RouteResultInstruction.possibleCombineWithNext
+    package: azure-maps-rest
+    summary: >-
+      It is possible to optionally combine the instruction with the next one.
+      This can be used to
+
+      build messages like "Turn left and then turn right".
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: possibleCombineWithNext
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'possibleCombineWithNext?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: routeOffsetInMeters
+    uid: azure-maps-rest.export=.Models.RouteResultInstruction.routeOffsetInMeters
+    package: azure-maps-rest
+    summary: >-
+      Distance from the start of the route to the point of the instruction.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: routeOffsetInMeters
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'routeOffsetInMeters?: number'
+      return:
+        description: ''
+        type: number
+  - name: street
+    uid: azure-maps-rest.export=.Models.RouteResultInstruction.street
+    package: azure-maps-rest
+    summary: >-
+      Street name of the next significant road segment after the maneuver, or of
+      the street that
+
+      should be followed.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: street
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'street?: string'
+      return:
+        description: ''
+        type: string
+  - name: travelTimeInSeconds
+    uid: azure-maps-rest.export=.Models.RouteResultInstruction.travelTimeInSeconds
+    package: azure-maps-rest
+    summary: >-
+      Estimated travel time up to the point corresponding to
+      routeOffsetInMeters.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: travelTimeInSeconds
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'travelTimeInSeconds?: number'
+      return:
+        description: ''
+        type: number

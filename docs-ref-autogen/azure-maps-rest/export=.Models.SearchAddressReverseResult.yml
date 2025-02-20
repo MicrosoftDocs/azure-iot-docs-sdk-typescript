@@ -1,0 +1,65 @@
+### YamlMime:TSType
+name: SearchAddressReverseResult
+uid: azure-maps-rest.export=.Models.SearchAddressReverseResult
+package: azure-maps-rest
+summary: An interface representing SearchAddressReverseResult.
+fullName: SearchAddressReverseResult
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: address
+    uid: azure-maps-rest.export=.Models.SearchAddressReverseResult.address
+    package: azure-maps-rest
+    summary: ''
+    fullName: address
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'address?: SearchResultAddress'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.export" />=.<xref
+          uid="Models.SearchResultAddress" />
+  - name: matchType
+    uid: azure-maps-rest.export=.Models.SearchAddressReverseResult.matchType
+    package: azure-maps-rest
+    summary: >-
+      Information on the type of match.
+
+
+      One of:
+
+      * AddressPoint
+
+      * HouseNumberRange
+
+      * Street
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: matchType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'matchType?: string'
+      return:
+        description: ''
+        type: string
+  - name: position
+    uid: azure-maps-rest.export=.Models.SearchAddressReverseResult.position
+    package: azure-maps-rest
+    summary: >-
+      Position property in the form of "{latitude},{longitude}"
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: position
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'position?: string'
+      return:
+        description: ''
+        type: string

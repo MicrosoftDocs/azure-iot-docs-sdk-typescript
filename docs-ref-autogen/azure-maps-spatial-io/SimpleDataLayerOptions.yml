@@ -1,0 +1,101 @@
+### YamlMime:TSType
+name: SimpleDataLayerOptions
+uid: azure-maps-spatial-io.SimpleDataLayerOptions
+package: azure-maps-spatial-io
+summary: Options used to customize how the SimpleDataLayer renders.
+fullName: SimpleDataLayerOptions
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: allowExtrusions
+    uid: azure-maps-spatial-io.SimpleDataLayerOptions.allowExtrusions
+    package: azure-maps-spatial-io
+    summary: >-
+      Specifies if polygons that have a `height` property should be rendered as
+      extruded polygons.
+
+      Default: `true`
+    fullName: allowExtrusions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'allowExtrusions?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: bubbleRadiusFactor
+    uid: azure-maps-spatial-io.SimpleDataLayerOptions.bubbleRadiusFactor
+    package: azure-maps-spatial-io
+    summary: |-
+      A numerical factor used to adjust the size of map bubbles dynamically.
+      It multiplies the original bubble size to determine the final size.
+      Default: `8`
+    fullName: bubbleRadiusFactor
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'bubbleRadiusFactor?: number'
+      return:
+        description: ''
+        type: number
+  - name: enablePopups
+    uid: azure-maps-spatial-io.SimpleDataLayerOptions.enablePopups
+    package: azure-maps-spatial-io
+    summary: |-
+      Specifies if popups should appear when shapes are clicked.
+      Default: `true`
+    fullName: enablePopups
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'enablePopups?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: popupTemplate
+    uid: azure-maps-spatial-io.SimpleDataLayerOptions.popupTemplate
+    package: azure-maps-spatial-io
+    summary: >-
+      A popup template that will be used if a shape doesn't have a popupTemplate
+      property itself.
+    fullName: popupTemplate
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'popupTemplate?: PopupTemplate'
+      return:
+        description: ''
+        type: PopupTemplate
+  - name: showPointTitles
+    uid: azure-maps-spatial-io.SimpleDataLayerOptions.showPointTitles
+    package: azure-maps-spatial-io
+    summary: >-
+      If a point feature has a `title` or `name` property,
+
+      this option specifies if it should be displayed on the map under the
+      marker.
+
+      Default: `false`
+    fullName: showPointTitles
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'showPointTitles?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: visible
+    uid: azure-maps-spatial-io.SimpleDataLayerOptions.visible
+    package: azure-maps-spatial-io
+    summary: |-
+      A boolean indicating if the layer is visible or not.
+      Default: `true`
+    fullName: visible
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'visible?: boolean'
+      return:
+        description: ''
+        type: boolean

@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: GetTransitLineInfoResponse
+uid: azure-maps-rest.export=.GetTransitLineInfoResponse
+package: azure-maps-rest
+summary: ''
+fullName: GetTransitLineInfoResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type GetTransitLineInfoResponse = Response<
+    Models.TransitLineInfoResponse,
+    Models.MobilityGetTransitLineInfoPreviewResponse,
+    TransitLineGeojson
+  >

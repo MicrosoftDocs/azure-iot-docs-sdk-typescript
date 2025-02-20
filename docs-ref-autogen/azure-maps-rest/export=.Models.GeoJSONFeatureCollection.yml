@@ -1,0 +1,40 @@
+### YamlMime:TSType
+name: GeoJSONFeatureCollection
+uid: azure-maps-rest.export=.Models.GeoJSONFeatureCollection
+package: azure-maps-rest
+summary: |-
+  A valid `GeoJSON FeatureCollection` object type. Please refer to [RFC
+  7946](https://tools.ietf.org/html/rfc7946#section-3.3) for details.
+fullName: GeoJSONFeatureCollection
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: features
+    uid: azure-maps-rest.export=.Models.GeoJSONFeatureCollection.features
+    package: azure-maps-rest
+    summary: Contains a list of valid `GeoJSON Feature` objects.
+    fullName: features
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'features: GeoJSONFeatureCollectionFeaturesItem[]'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.export" />=.<xref
+          uid="Models.GeoJSONFeatureCollectionFeaturesItem" />[]
+  - name: type
+    uid: azure-maps-rest.export=.Models.GeoJSONFeatureCollection.type
+    package: azure-maps-rest
+    summary: >-
+      Specifies the `type` for the object. Value should always be equal to
+      "FeatureCollection".
+    fullName: type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'type: string'
+      return:
+        description: ''
+        type: string

@@ -1,0 +1,30 @@
+### YamlMime:TSType
+name: UploadDataResponse
+uid: azure-maps-rest.export=.Models.UploadDataResponse
+package: azure-maps-rest
+summary: >-
+  The response model for the spatial data upload API. Returns a unique data id
+  (udid) for the
+
+  uploaded content.
+fullName: UploadDataResponse
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: udid
+    uid: azure-maps-rest.export=.Models.UploadDataResponse.udid
+    package: azure-maps-rest
+    summary: >-
+      A unique data id (udid) for the uploaded content.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: udid
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'udid?: string'
+      return:
+        description: ''
+        type: string

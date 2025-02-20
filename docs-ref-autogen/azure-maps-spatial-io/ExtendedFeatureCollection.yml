@@ -1,0 +1,63 @@
+### YamlMime:TSType
+name: ExtendedFeatureCollection
+uid: azure-maps-spatial-io.ExtendedFeatureCollection
+package: azure-maps-spatial-io
+summary: A Feature Collection that has properties for the collection.
+fullName: ExtendedFeatureCollection
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: properties
+    uid: azure-maps-spatial-io.ExtendedFeatureCollection.properties
+    package: azure-maps-spatial-io
+    summary: Properties of the feature collection.
+    fullName: properties
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'properties?: any'
+      return:
+        description: ''
+        type: any
+inheritedProperties:
+  - name: bbox
+    uid: azure-maps-spatial-io.ExtendedFeatureCollection.bbox
+    package: azure-maps-spatial-io
+    summary: The bounding box of the feature collection.
+    fullName: bbox
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'bbox?: BoundingBox'
+      return:
+        description: ''
+        type: BoundingBox
+    inheritanceDescription: <b>Inherited From</b> azmaps.data.FeatureCollection.bbox
+  - name: features
+    uid: azure-maps-spatial-io.ExtendedFeatureCollection.features
+    package: azure-maps-spatial-io
+    summary: The collection of GeoJSON features contained in the feature collection.
+    fullName: features
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'features: Feature<Geometry, any>[]'
+      return:
+        description: ''
+        type: Feature&lt;Geometry, any&gt;[]
+    inheritanceDescription: <b>Inherited From</b> azmaps.data.FeatureCollection.features
+  - name: type
+    uid: azure-maps-spatial-io.ExtendedFeatureCollection.type
+    package: azure-maps-spatial-io
+    summary: A GeoJSON type descriptor with value "FeatureCollection".
+    fullName: type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'type: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> azmaps.data.FeatureCollection.type
+extends: FeatureCollection

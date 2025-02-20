@@ -1,0 +1,37 @@
+### YamlMime:TSEnum
+name: MapTileLayer
+uid: azure-maps-rest.export=.Models.MapTileLayer
+package: azure-maps-rest
+summary: |-
+  Defines values for MapTileLayer.
+  Possible values include: 'basic', 'hybrid', 'labels', 'terra'
+fullName: MapTileLayer
+remarks: ''
+isDeprecated: false
+fields:
+  - name: Basic
+    uid: azure-maps-rest.export=.Models.MapTileLayer.Basic
+    package: azure-maps-rest
+    summary: >-
+      Returns a tile containing all map features including polygons, borders,
+      roads and labels.
+  - name: Hybrid
+    uid: azure-maps-rest.export=.Models.MapTileLayer.Hybrid
+    package: azure-maps-rest
+    summary: >-
+      Returns a tile containing borders, roads, and labels, and can be overlaid
+      on other tiles (such
+
+      as satellite imagery) to produce hybrid tiles.
+  - name: Labels
+    uid: azure-maps-rest.export=.Models.MapTileLayer.Labels
+    package: azure-maps-rest
+    summary: Returns a tile of just the map's label information.
+  - name: Terra
+    uid: azure-maps-rest.export=.Models.MapTileLayer.Terra
+    package: azure-maps-rest
+    summary: >-
+      Map canvas complete with shaded relief tiles. Zoom levels 0-6 (inclusive)
+      are supported. Png
+
+      is the only supported TileFormat and only available MapTileSize is 512.

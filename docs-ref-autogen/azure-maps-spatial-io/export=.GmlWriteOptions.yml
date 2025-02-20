@@ -1,0 +1,181 @@
+### YamlMime:TSType
+name: GmlWriteOptions
+uid: azure-maps-spatial-io.export=.GmlWriteOptions
+package: azure-maps-spatial-io
+summary: Options that are used to customize how to write GML.
+fullName: GmlWriteOptions
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: customNamespace
+    uid: azure-maps-spatial-io.export=.GmlWriteOptions.customNamespace
+    package: azure-maps-spatial-io
+    summary: Namespace used for writing custom feature data in GML.
+    fullName: customNamespace
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'customNamespace?: CustomGmlNamespace'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-spatial-io.export" />=.CustomGmlNamespace
+  - name: includeNamespace
+    uid: azure-maps-spatial-io.export=.GmlWriteOptions.includeNamespace
+    package: azure-maps-spatial-io
+    summary: >-
+      A boolean indicating if the GML namespace should be included as part of
+      the generated XML.
+
+      If set to false, the GML tags will be prefixed with gml: with the
+      assumption
+
+      that the namespace is specified in the XML document.
+
+      Default: `true`
+    fullName: includeNamespace
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'includeNamespace?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: includeSrsName
+    uid: azure-maps-spatial-io.export=.GmlWriteOptions.includeSrsName
+    package: azure-maps-spatial-io
+    summary: |-
+      Specifies if the srsName value should be written.
+      Default: `false`
+    fullName: includeSrsName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'includeSrsName?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: srsName
+    uid: azure-maps-spatial-io.export=.GmlWriteOptions.srsName
+    package: azure-maps-spatial-io
+    summary: |-
+      The SRS name to add to the geometries.
+      Default: `"urn:ogc:def:crs:EPSG::4326"`
+    fullName: srsName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'srsName?: string'
+      return:
+        description: ''
+        type: string
+inheritedProperties:
+  - name: format
+    uid: azure-maps-spatial-io.export=.GmlWriteOptions.format
+    package: azure-maps-spatial-io
+    summary: |-
+      The spatial data format to write the shapes to.
+      Default: `"GeoJSON"`
+    fullName: format
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'format?: "KML" | "GPX" | "GeoRSS" | "GML" | "GeoJSON" | "CSV"'
+      return:
+        description: ''
+        type: '"KML" | "GPX" | "GeoRSS" | "GML" | "GeoJSON" | "CSV"'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SpatialXmlWriteOptions.format](xref:azure-maps-spatial-io.SpatialXmlWriteOptions.format)
+  - name: indentChars
+    uid: azure-maps-spatial-io.export=.GmlWriteOptions.indentChars
+    package: azure-maps-spatial-io
+    summary: |-
+      The characters to use to create an indent in the XML data.
+      Default: `"\t"`
+    fullName: indentChars
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'indentChars?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SpatialXmlWriteOptions.indentChars](xref:azure-maps-spatial-io.SpatialXmlWriteOptions.indentChars)
+  - name: newLineChars
+    uid: azure-maps-spatial-io.export=.GmlWriteOptions.newLineChars
+    package: azure-maps-spatial-io
+    summary: |-
+      The characters to use to create a new line in the XML data.
+      Default: `"\r\n"`
+    fullName: newLineChars
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'newLineChars?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SpatialXmlWriteOptions.newLineChars](xref:azure-maps-spatial-io.SpatialXmlWriteOptions.newLineChars)
+  - name: prettyPrint
+    uid: azure-maps-spatial-io.export=.GmlWriteOptions.prettyPrint
+    package: azure-maps-spatial-io
+    summary: >-
+      A boolean indicating if the generated XML should be use new lines and
+      indents
+
+      to make the generated nicely formatted.
+
+      Default: `true`
+    fullName: prettyPrint
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'prettyPrint?: boolean'
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SpatialXmlWriteOptions.prettyPrint](xref:azure-maps-spatial-io.SpatialXmlWriteOptions.prettyPrint)
+  - name: roundPositions
+    uid: azure-maps-spatial-io.export=.GmlWriteOptions.roundPositions
+    package: azure-maps-spatial-io
+    summary: >-
+      A boolean indicating if Position and BoundingBox values should be rounded
+      off to 6 decimals.
+
+      Default: `false`
+    fullName: roundPositions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'roundPositions?: boolean'
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SpatialXmlWriteOptions.roundPositions](xref:azure-maps-spatial-io.SpatialXmlWriteOptions.roundPositions)
+  - name: writeIds
+    uid: azure-maps-spatial-io.export=.GmlWriteOptions.writeIds
+    package: azure-maps-spatial-io
+    summary: |-
+      Specifies if ID values should be written.
+      Default: false
+    fullName: writeIds
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'writeIds?: boolean'
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SpatialXmlWriteOptions.writeIds](xref:azure-maps-spatial-io.SpatialXmlWriteOptions.writeIds)
+extends: <xref uid="azure-maps-spatial-io.export" />=.SpatialXmlWriteOptions

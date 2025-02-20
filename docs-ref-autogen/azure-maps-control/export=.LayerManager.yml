@@ -1,0 +1,208 @@
+### YamlMime:TSType
+name: LayerManager
+uid: azure-maps-control.export=.LayerManager
+package: azure-maps-control
+summary: |-
+  A manager for the map control's layers.
+  Exposed through the layers property of the atlas.Map class.
+  Cannot be instantiated by the user.
+fullName: LayerManager
+remarks: ''
+isDeprecated: false
+type: interface
+methods:
+  - name: >-
+      add(Layer<LayerEvents> | Layer<LayerEvents>[], string |
+      Layer<LayerEvents>)
+    uid: azure-maps-control.export=.LayerManager.add
+    package: azure-maps-control
+    summary: |-
+      Adds one or more layers to the map.
+      The map must be ready before a layer can be added.
+      Use the map.events.add method with event type 'ready'.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function add(layer: Layer<LayerEvents> | Layer<LayerEvents>[], before?:
+        string | Layer<LayerEvents>)
+      parameters:
+        - id: layer
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="layer.Layer"
+            />&lt;<xref uid="azure-maps-control.export" />=.<xref
+            uid="layer.LayerEvents" />&gt; | <xref
+            uid="azure-maps-control.export" />=.<xref uid="layer.Layer"
+            />&lt;<xref uid="azure-maps-control.export" />=.<xref
+            uid="layer.LayerEvents" />&gt;[]
+          description: The layer(s) to add.
+        - id: before
+          type: >-
+            string | <xref uid="azure-maps-control.export" />=.<xref
+            uid="layer.Layer" />&lt;<xref uid="azure-maps-control.export"
+            />=.<xref uid="layer.LayerEvents" />&gt;
+          description: >-
+            Optionally specify a layer or layer id to insert the new layer(s)
+            before it.
+  - name: clear()
+    uid: azure-maps-control.export=.LayerManager.clear
+    package: azure-maps-control
+    summary: Removes all layers from the map.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function clear()
+  - name: getLayerById(string)
+    uid: azure-maps-control.export=.LayerManager.getLayerById
+    package: azure-maps-control
+    summary: Retrieves a layer with the specified id.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getLayerById(id: string): Layer<LayerEvents>'
+      parameters:
+        - id: id
+          type: string
+          description: The id of the layer to retrieve.
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-control.export" />=.<xref uid="layer.Layer"
+          />&lt;<xref uid="azure-maps-control.export" />=.<xref
+          uid="layer.LayerEvents" />&gt;
+  - name: getLayers()
+    uid: azure-maps-control.export=.LayerManager.getLayers
+    package: azure-maps-control
+    summary: Retrieves all layers that have been added to the map.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getLayers(): Layer<LayerEvents>[]'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-control.export" />=.<xref uid="layer.Layer"
+          />&lt;<xref uid="azure-maps-control.export" />=.<xref
+          uid="layer.LayerEvents" />&gt;[]
+  - name: >-
+      getRenderedShapes(Position | BoundingBox | Point, string |
+      Layer<LayerEvents> | (string | Layer<LayerEvents>)[],
+      ExpressionFilterSpecification)
+    uid: azure-maps-control.export=.LayerManager.getRenderedShapes
+    package: azure-maps-control
+    summary: >-
+      Retrieve all Shapes and GeoJSON features that are visible on the map that
+      are in a DataSource or VectorTileSource.
+
+      Shape objects are editable, while Feature objects are not editable and
+      either reside in a VectorTileSource or represent a cluster point.
+
+      Clusters have the following properties:<br />
+
+      `cluster`: `boolean` - Indicates that the point is a cluster.
+
+      This will be set to true if Point object represents a cluster.
+
+      All other point objects are unlikely to have this value unless
+
+      a property with this same name was added to the Point property data from
+      your app.<br />
+
+      `cluster_id`: `string` - A unique id for the cluster.<br />
+
+      `point_count`: `number` - The number of points inside the cluster.<br />
+
+      `point_count_abbreviated`: `string` - An abbreviated string version of the
+      point count. i.e. `"10K"`<br />
+
+      Features/Shapes that are not visible or who's layer zoom range does not
+      include the current zoom level will not be returned.
+
+      Symbol features/Shapes that have been hidden due to text or icon
+      collisions are not included.
+
+      Features/Shapes from all other layers are included even if they have no
+      contribution to the map rendering, e.g. alpha set to zero.
+
+      The topmost rendered features/shapes appears first in the returned array
+      and subsequent features are sorted in descending z-order.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getRenderedShapes(geometry?: Position | BoundingBox | Point,
+        layers?: string | Layer<LayerEvents> | (string | Layer<LayerEvents>)[],
+        filter?: ExpressionFilterSpecification): (Feature<Geometry, any> |
+        Shape)[]
+      parameters:
+        - id: geometry
+          type: >-
+            <xref uid="azure-maps-control.export" />=.<xref uid="data.Position"
+            /> | <xref uid="azure-maps-control.export" />=.<xref
+            uid="data.BoundingBox" /> | <xref uid="azure-maps-control.export"
+            />=.<xref uid="data.Point" />
+          description: >-
+            A Position, Point, or BoundingBox that returned features must
+            intersect. If not specified the whole visible world is used.
+        - id: layers
+          type: >-
+            string | <xref uid="azure-maps-control.export" />=.<xref
+            uid="layer.Layer" />&lt;<xref uid="azure-maps-control.export"
+            />=.<xref uid="layer.LayerEvents" />&gt; | (string | <xref
+            uid="azure-maps-control.export" />=.<xref uid="layer.Layer"
+            />&lt;<xref uid="azure-maps-control.export" />=.<xref
+            uid="layer.LayerEvents" />&gt;)[]
+          description: An array of layers or their ids to limit the query to.
+        - id: filter
+          type: ExpressionFilterSpecification
+          description: A expression to filter the returned features by.
+      return:
+        description: ''
+        type: >-
+          (<xref uid="azure-maps-control.export" />=.<xref uid="data.Feature"
+          />&lt;<xref uid="azure-maps-control.export" />=.<xref
+          uid="data.Geometry" />, any&gt; | <xref
+          uid="azure-maps-control.export" />=.Shape)[]
+  - name: move(string | Layer<LayerEvents>, string | Layer<LayerEvents>)
+    uid: azure-maps-control.export=.LayerManager.move
+    package: azure-maps-control
+    summary: Moves a layer to a different z-position.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function move(layer: string | Layer<LayerEvents>, before?: string |
+        Layer<LayerEvents>)
+      parameters:
+        - id: layer
+          type: >-
+            string | <xref uid="azure-maps-control.export" />=.<xref
+            uid="layer.Layer" />&lt;<xref uid="azure-maps-control.export"
+            />=.<xref uid="layer.LayerEvents" />&gt;
+          description: The layer or id of the layer to move.
+        - id: before
+          type: >-
+            string | <xref uid="azure-maps-control.export" />=.<xref
+            uid="layer.Layer" />&lt;<xref uid="azure-maps-control.export"
+            />=.<xref uid="layer.LayerEvents" />&gt;
+          description: Optionally specify to move the layer before this.
+  - name: remove(string | Layer<LayerEvents> | (string | Layer<LayerEvents>)[])
+    uid: azure-maps-control.export=.LayerManager.remove
+    package: azure-maps-control
+    summary: Removes one or more layers from the map.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function remove(layer: string | Layer<LayerEvents> | (string |
+        Layer<LayerEvents>)[])
+      parameters:
+        - id: layer
+          type: >-
+            string | <xref uid="azure-maps-control.export" />=.<xref
+            uid="layer.Layer" />&lt;<xref uid="azure-maps-control.export"
+            />=.<xref uid="layer.LayerEvents" />&gt; | (string | <xref
+            uid="azure-maps-control.export" />=.<xref uid="layer.Layer"
+            />&lt;<xref uid="azure-maps-control.export" />=.<xref
+            uid="layer.LayerEvents" />&gt;)[]
+          description: One or more layers or their ids for removal.

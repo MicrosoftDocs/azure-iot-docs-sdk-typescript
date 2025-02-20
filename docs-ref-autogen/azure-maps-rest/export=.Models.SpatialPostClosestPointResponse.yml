@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: SpatialPostClosestPointResponse
+uid: azure-maps-rest.export=.Models.SpatialPostClosestPointResponse
+package: azure-maps-rest
+summary: Contains response data for the postClosestPoint operation.
+fullName: SpatialPostClosestPointResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SpatialPostClosestPointResponse = PostClosestPointResponse & {
+    _response: msRest.HttpResponse & {
+      bodyAsText: string
+      parsedBody: PostClosestPointResponse
+    }
+  }

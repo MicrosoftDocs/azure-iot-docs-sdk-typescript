@@ -1,0 +1,201 @@
+### YamlMime:TSType
+name: MediaLayerOptions
+uid: azure-maps-control.MediaLayerOptions
+package: azure-maps-control
+summary: Options used when rendering canvas, image, raster tile, and video layers
+fullName: MediaLayerOptions
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: contrast
+    uid: azure-maps-control.MediaLayerOptions.contrast
+    package: azure-maps-control
+    summary: >-
+      A number between -1 and 1 that increases or decreases the contrast of the
+      overlay.
+
+      Default `0`.
+    fullName: contrast
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'contrast?: number'
+      return:
+        description: ''
+        type: number
+  - name: fadeDuration
+    uid: azure-maps-control.MediaLayerOptions.fadeDuration
+    package: azure-maps-control
+    summary: >-
+      The duration in milliseconds of a fade transition when a new tile is
+      added.
+
+      Must be greater or equal to 0.
+
+      Default `300`.
+    fullName: fadeDuration
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'fadeDuration?: number'
+      return:
+        description: ''
+        type: number
+  - name: hueRotation
+    uid: azure-maps-control.MediaLayerOptions.hueRotation
+    package: azure-maps-control
+    summary: |-
+      Rotates hues around the color wheel.
+      A number in degrees.
+      Default `0`.
+    fullName: hueRotation
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'hueRotation?: number'
+      return:
+        description: ''
+        type: number
+  - name: maxBrightness
+    uid: azure-maps-control.MediaLayerOptions.maxBrightness
+    package: azure-maps-control
+    summary: >-
+      A number between 0 and 1 that increases or decreases the maximum
+      brightness of the overlay.
+
+      Default `1`.
+    fullName: maxBrightness
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'maxBrightness?: number'
+      return:
+        description: ''
+        type: number
+  - name: minBrightness
+    uid: azure-maps-control.MediaLayerOptions.minBrightness
+    package: azure-maps-control
+    summary: >-
+      A number between 0 and 1 that increases or decreases the minimum
+      brightness of the overlay.
+
+      Default `0`.
+    fullName: minBrightness
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'minBrightness?: number'
+      return:
+        description: ''
+        type: number
+  - name: opacity
+    uid: azure-maps-control.MediaLayerOptions.opacity
+    package: azure-maps-control
+    summary: >-
+      A number between 0 and 1 that indicates the opacity at which the overlay
+      will be drawn.
+
+      Default `1`.
+    fullName: opacity
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'opacity?: number'
+      return:
+        description: ''
+        type: number
+  - name: saturation
+    uid: azure-maps-control.MediaLayerOptions.saturation
+    package: azure-maps-control
+    summary: >-
+      A number between -1 and 1 that increases or decreases the saturation of
+      the overlay.
+
+      Default `0`.
+    fullName: saturation
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'saturation?: number'
+      return:
+        description: ''
+        type: number
+inheritedProperties:
+  - name: filter
+    uid: azure-maps-control.MediaLayerOptions.filter
+    package: azure-maps-control
+    summary: |-
+      An expression specifying conditions on source features.
+      Only features that match the filter are displayed.
+    fullName: filter
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'filter?: ExpressionFilterSpecification'
+      return:
+        description: ''
+        type: ExpressionFilterSpecification
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.filter](xref:azure-maps-control.LayerOptions.filter)
+  - name: maxZoom
+    uid: azure-maps-control.MediaLayerOptions.maxZoom
+    package: azure-maps-control
+    summary: >-
+      An integer specifying the maximum zoom level to render the layer at.
+
+      This value is exclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `24`.
+    fullName: maxZoom
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'maxZoom?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.maxZoom](xref:azure-maps-control.LayerOptions.maxZoom)
+  - name: minZoom
+    uid: azure-maps-control.MediaLayerOptions.minZoom
+    package: azure-maps-control
+    summary: >-
+      An integer specifying the minimum zoom level to render the layer at.
+
+      This value is inclusive, i.e. the layer will be visible at `maxZoom > zoom
+      >= minZoom`.
+
+      Default `0`.
+    fullName: minZoom
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'minZoom?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.minZoom](xref:azure-maps-control.LayerOptions.minZoom)
+  - name: visible
+    uid: azure-maps-control.MediaLayerOptions.visible
+    package: azure-maps-control
+    summary: |-
+      Specifies if the layer is visible or not.
+      Default `true`.
+    fullName: visible
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'visible?: boolean'
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LayerOptions.visible](xref:azure-maps-control.LayerOptions.visible)
+extends: <xref uid="azure-maps-control.export" />=.LayerOptions

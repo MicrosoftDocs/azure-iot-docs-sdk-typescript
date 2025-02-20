@@ -1,0 +1,50 @@
+### YamlMime:TSType
+name: RequestParameters
+uid: azure-maps-control.export=.RequestParameters
+package: azure-maps-control
+summary: >-
+  This is the object type expected to be returned by the transformRequest
+  callback.
+fullName: RequestParameters
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: credentials
+    uid: azure-maps-control.export=.RequestParameters.credentials
+    package: azure-maps-control
+    summary: >-
+      Used to specify the cross-origin request (CORs) credentials setting. Can
+      be `'same-origin'` or `'include'`.
+    fullName: credentials
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'credentials?: string'
+      return:
+        description: ''
+        type: string
+  - name: headers
+    uid: azure-maps-control.export=.RequestParameters.headers
+    package: azure-maps-control
+    summary: The headers to be sent with the request.
+    fullName: headers
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'headers?: object'
+      return:
+        description: ''
+        type: object
+  - name: url
+    uid: azure-maps-control.export=.RequestParameters.url
+    package: azure-maps-control
+    summary: The url to be requested.
+    fullName: url
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'url?: string'
+      return:
+        description: ''
+        type: string

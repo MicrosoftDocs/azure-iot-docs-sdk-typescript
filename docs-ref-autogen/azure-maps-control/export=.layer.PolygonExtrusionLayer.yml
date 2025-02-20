@@ -1,0 +1,153 @@
+### YamlMime:TSType
+name: PolygonExtrusionLayer
+uid: azure-maps-control.export=.layer.PolygonExtrusionLayer
+package: azure-maps-control
+summary: Renders extruded filled `Polygon` and `MultiPolygon` objects on the map.
+fullName: PolygonExtrusionLayer
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: >-
+      PolygonExtrusionLayer(string | Source<SourceEvents>, string,
+      PolygonExtrusionLayerOptions)
+    uid: azure-maps-control.export=.layer.PolygonExtrusionLayer.constructor
+    package: azure-maps-control
+    summary: Constructs a new PolygonExtrusionLayer.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new PolygonExtrusionLayer(source: string | Source<SourceEvents>, id?:
+        string, options?: PolygonExtrusionLayerOptions)
+      parameters:
+        - id: source
+          type: >-
+            string | <xref uid="azure-maps-control.export" />=.<xref
+            uid="source.Source" />&lt;<xref uid="azure-maps-control.export"
+            />=.<xref uid="source.SourceEvents" />&gt;
+          description: The id or instance of a data source which the layer will render.
+        - id: id
+          type: string
+          description: >-
+            The id of the layer. If not specified a random one will be
+            generated.
+        - id: options
+          type: >-
+            <xref uid="azure-maps-control.export"
+            />=.PolygonExtrusionLayerOptions
+          description: The options of the polygon extrusion layer.
+inheritedProperties:
+  - name: metadata
+    uid: azure-maps-control.export=.layer.PolygonExtrusionLayer.metadata
+    package: azure-maps-control
+    summary: A property for associating custom data with the layer.
+    fullName: metadata
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'metadata?: any'
+      return:
+        description: ''
+        type: any
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.metadata](xref:azure-maps-control.export=.layer.Layer.metadata)
+inheritedMethods:
+  - name: getId()
+    uid: azure-maps-control.export=.layer.PolygonExtrusionLayer.getId
+    package: azure-maps-control
+    summary: Gets the id of the layer
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getId(): string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.getId](xref:azure-maps-control.export=.layer.Layer.getId)
+  - name: getMap()
+    uid: azure-maps-control.export=.layer.PolygonExtrusionLayer.getMap
+    package: azure-maps-control
+    summary: Gets the map that the layer is currently added to, or null.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getMap(): Map'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.export" />=.Map
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.getMap](xref:azure-maps-control.export=.layer.Layer.getMap)
+  - name: onAdd(Map)
+    uid: azure-maps-control.export=.layer.PolygonExtrusionLayer.onAdd
+    package: azure-maps-control
+    summary: Initialization method for the layer which is called when added to the map.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function onAdd(map: Map)'
+      parameters:
+        - id: map
+          type: <xref uid="azure-maps-control.export" />=.Map
+          description: The map the layer has been added to.
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.onAdd](xref:azure-maps-control.export=.layer.Layer.onAdd)
+  - name: onRemove()
+    uid: azure-maps-control.export=.layer.PolygonExtrusionLayer.onRemove
+    package: azure-maps-control
+    summary: |-
+      Method that is called when the layer is removed from the map.
+      Should perform any necessary cleanup for the layer.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function onRemove()
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [Layer.onRemove](xref:azure-maps-control.export=.layer.Layer.onRemove)
+methods:
+  - name: getOptions()
+    uid: azure-maps-control.export=.layer.PolygonExtrusionLayer.getOptions
+    package: azure-maps-control
+    summary: Gets the options of the polygon layer.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getOptions(): PolygonExtrusionLayerOptions'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.export" />=.PolygonExtrusionLayerOptions
+  - name: getSource()
+    uid: azure-maps-control.export=.layer.PolygonExtrusionLayer.getSource
+    package: azure-maps-control
+    summary: Gets the source provided when creating the layer.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getSource(): string | Source<SourceEvents>'
+      return:
+        description: ''
+        type: >-
+          string | <xref uid="azure-maps-control.export" />=.<xref
+          uid="source.Source" />&lt;<xref uid="azure-maps-control.export"
+          />=.<xref uid="source.SourceEvents" />&gt;
+  - name: setOptions(PolygonExtrusionLayerOptions)
+    uid: azure-maps-control.export=.layer.PolygonExtrusionLayer.setOptions
+    package: azure-maps-control
+    summary: Sets the options of the polygon layer.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function setOptions(options: PolygonExtrusionLayerOptions)'
+      parameters:
+        - id: options
+          type: >-
+            <xref uid="azure-maps-control.export"
+            />=.PolygonExtrusionLayerOptions
+          description: ''
+extends: <xref uid="azure-maps-control.export" />=.<xref uid="layer.Layer" />

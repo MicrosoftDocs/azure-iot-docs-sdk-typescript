@@ -1,0 +1,35 @@
+### YamlMime:TSEnum
+name: TransitStopDetailType
+uid: azure-maps-rest.export=.Models.TransitStopDetailType
+package: azure-maps-rest
+summary: |-
+  Defines values for TransitStopDetailType.
+  Possible values include: 'alerts', 'alertDetails', 'lines', 'lineGroups'
+fullName: TransitStopDetailType
+remarks: ''
+isDeprecated: false
+fields:
+  - name: AlertDetails
+    uid: azure-maps-rest.export=.Models.TransitStopDetailType.AlertDetails
+    package: azure-maps-rest
+    summary: >-
+      Can only be used in conjunction with detailType=alerts.Return additional
+      details associated
+
+      with the active service alerts.
+  - name: Alerts
+    uid: azure-maps-rest.export=.Models.TransitStopDetailType.Alerts
+    package: azure-maps-rest
+    summary: >-
+      Return any active service alerts for the specified stop. Response provides
+      brief information
+
+      for disruption in service and all basic data associated with the alert.
+  - name: LineGroups
+    uid: azure-maps-rest.export=.Models.TransitStopDetailType.LineGroups
+    package: azure-maps-rest
+    summary: Return line groups that stops at the specified stop.
+  - name: Lines
+    uid: azure-maps-rest.export=.Models.TransitStopDetailType.Lines
+    package: azure-maps-rest
+    summary: Return transit lines that stops at the specified stop.

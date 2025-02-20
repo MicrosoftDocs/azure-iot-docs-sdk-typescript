@@ -1,0 +1,60 @@
+### YamlMime:TSType
+name: MetroAreaResult
+uid: azure-maps-rest.export=.Models.MetroAreaResult
+package: azure-maps-rest
+summary: Details of the metro area.
+fullName: MetroAreaResult
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: geometry
+    uid: azure-maps-rest.export=.Models.MetroAreaResult.geometry
+    package: azure-maps-rest
+    summary: ''
+    fullName: geometry
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'geometry?: Polygon'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.export" />=.<xref uid="Models.Polygon" />
+  - name: metroId
+    uid: azure-maps-rest.export=.Models.MetroAreaResult.metroId
+    package: azure-maps-rest
+    summary: The metro area's Id for use with other API calls.
+    fullName: metroId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'metroId?: number'
+      return:
+        description: ''
+        type: number
+  - name: metroName
+    uid: azure-maps-rest.export=.Models.MetroAreaResult.metroName
+    package: azure-maps-rest
+    summary: The main display name of the metro.
+    fullName: metroName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'metroName?: string'
+      return:
+        description: ''
+        type: string
+  - name: viewport
+    uid: azure-maps-rest.export=.Models.MetroAreaResult.viewport
+    package: azure-maps-rest
+    summary: ''
+    fullName: viewport
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'viewport?: ResultViewport'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.export" />=.<xref
+          uid="Models.ResultViewport" />

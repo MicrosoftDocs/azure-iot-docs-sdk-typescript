@@ -1,0 +1,41 @@
+### YamlMime:TSType
+name: BaseSpatialDataReadOptions
+uid: azure-maps-spatial-io.export=.BaseSpatialDataReadOptions
+package: azure-maps-spatial-io
+summary: Options used for reading spatial data files.
+fullName: BaseSpatialDataReadOptions
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: maxFeatures
+    uid: azure-maps-spatial-io.export=.BaseSpatialDataReadOptions.maxFeatures
+    package: azure-maps-spatial-io
+    summary: |-
+      Specifies the maximum number of features to read from the data set.
+      If not specified, will read all features.
+    fullName: maxFeatures
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'maxFeatures?: number'
+      return:
+        description: ''
+        type: number
+  - name: proxyService
+    uid: azure-maps-spatial-io.export=.BaseSpatialDataReadOptions.proxyService
+    package: azure-maps-spatial-io
+    summary: >-
+      A URL to a proxy service that can have a URL to an external file appended
+      it.
+
+      This will be needed to access files that are hosted on non-CORs enabled
+      endpoints.
+    fullName: proxyService
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'proxyService?: string'
+      return:
+        description: ''
+        type: string

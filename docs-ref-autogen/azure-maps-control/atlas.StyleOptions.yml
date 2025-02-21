@@ -50,6 +50,8 @@ properties:
       language](https://docs.microsoft.com/en-us/azure/azure-maps/supported-languages).
 
       Default `atlas.getLanguage()`.
+
+      If set to "auto", the browser's preferred language will be used.
     fullName: language
     remarks: ''
     isDeprecated: false
@@ -240,6 +242,20 @@ properties:
       return:
         description: ''
         type: string
+  - name: styleOverrides
+    uid: azure-maps-control.atlas.StyleOptions.styleOverrides
+    package: azure-maps-control
+    summary: |-
+      Override the default styles for the map elements.​
+      Default `undefined`
+    fullName: styleOverrides
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'styleOverrides?: StyleOverrides'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.atlas.StyleOverrides" />
   - name: userRegion
     uid: azure-maps-control.atlas.StyleOptions.userRegion
     package: azure-maps-control

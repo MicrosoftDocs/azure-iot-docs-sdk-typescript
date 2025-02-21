@@ -1,0 +1,43 @@
+### YamlMime:TSType
+name: GmlWriter
+uid: azure-maps-spatial-io.atlas.io.core.GmlWriter
+package: azure-maps-spatial-io
+summary: A static class that writes GML data.
+fullName: GmlWriter
+remarks: ''
+isDeprecated: false
+type: class
+methods:
+  - name: >-
+      write(azmaps.data.Geometry | azmaps.data.Feature<azmaps.data.Geometry,
+      any> | azmaps.data.FeatureCollection | SpatialDataSet, GmlWriteOptions,
+      boolean)
+    uid: azure-maps-spatial-io.atlas.io.core.GmlWriter.write
+    package: azure-maps-spatial-io
+    summary: Writes a GeoJSON Geometry object as a GML formatted string.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function write(shape: azmaps.data.Geometry |
+        azmaps.data.Feature<azmaps.data.Geometry, any> |
+        azmaps.data.FeatureCollection | SpatialDataSet, options?:
+        GmlWriteOptions, addEncodingTag?: boolean): string
+      parameters:
+        - id: shape
+          type: >-
+            <xref uid="azmaps.data.Geometry" /> | <xref
+            uid="azmaps.data.Feature" />&lt;<xref uid="azmaps.data.Geometry" />,
+            any&gt; | <xref uid="azmaps.data.FeatureCollection" /> | <xref
+            uid="azure-maps-spatial-io.atlas.SpatialDataSet" />
+          description: GeoJSON Geometry object to write.
+        - id: options
+          type: <xref uid="azure-maps-spatial-io.atlas.GmlWriteOptions" />
+          description: |
+            Write options.
+        - id: addEncodingTag
+          type: boolean
+          description: ''
+      return:
+        description: ''
+        type: string

@@ -1,0 +1,1142 @@
+### YamlMime:TSType
+name: BoundingBox
+uid: azure-maps-control.atlas.data.BoundingBox
+package: azure-maps-control
+summary: >-
+  A GeoJSON BoundingBox object - an array that defines a shape whose edges
+  follow lines of constant longitude,
+
+  latitude, and elevation. All axes of the most southwesterly point are followed
+  by all axes of the more northeasterly
+
+  point. The axes order of the BoundingBox follows the axes order of geometries.
+  The full description is detailed in
+
+  [RFC 7946](https://tools.ietf.org/html/rfc7946#section-5).
+fullName: BoundingBox
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: 'BoundingBox(number[])'
+    uid: azure-maps-control.atlas.data.BoundingBox.constructor
+    package: azure-maps-control
+    summary: Constructs a BoundingBox
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new BoundingBox(positions: number[])'
+      parameters:
+        - id: positions
+          type: 'number[]'
+          description: >
+            Can be either [west, south, east, north] or [west, south,
+            elevation1, east, north, elevation2]
+  - name: 'BoundingBox(Position, Position)'
+    uid: azure-maps-control.atlas.data.BoundingBox.constructor_1
+    package: azure-maps-control
+    summary: Constructs a BoundingBox.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new BoundingBox(southwestPosition: Position, northeastPosition:
+        Position)
+      parameters:
+        - id: southwestPosition
+          type: <xref uid="azure-maps-control.atlas.data.Position" />
+          description: The southwestern most position of the bounding box.
+        - id: northeastPosition
+          type: <xref uid="azure-maps-control.atlas.data.Position" />
+          description: |
+            The northeastern most position of the bounding box.
+properties:
+  - name: Array
+    uid: azure-maps-control.atlas.data.BoundingBox.Array
+    package: azure-maps-control
+    summary: ''
+    fullName: Array
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static Array: ArrayConstructor'
+      return:
+        description: ''
+        type: ArrayConstructor
+inheritedProperties:
+  - name: length
+    uid: azure-maps-control.atlas.data.BoundingBox.length
+    package: azure-maps-control
+    summary: >-
+      Gets or sets the length of the array. This is a number one higher than the
+      highest element defined in an array.
+    fullName: length
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'length: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> Array.length
+inheritedMethods:
+  - name: 'concat((T | ConcatArray<T>)[])'
+    uid: azure-maps-control.atlas.data.BoundingBox.concat_1
+    package: azure-maps-control
+    summary: Combines two or more arrays.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function concat(items: (T | ConcatArray<T>)[]): number[]'
+      parameters:
+        - id: items
+          type: '(T | ConcatArray&lt;T&gt;)[]'
+          description: |
+            Additional items to add to the end of array1.
+      return:
+        description: ''
+        type: 'number[]'
+    inheritanceDescription: <b>Inherited From</b> Array.concat
+  - name: 'concat(ConcatArray<number>[])'
+    uid: azure-maps-control.atlas.data.BoundingBox.concat
+    package: azure-maps-control
+    summary: Combines two or more arrays.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function concat(items: ConcatArray<number>[]): number[]'
+      parameters:
+        - id: items
+          type: 'ConcatArray&lt;number&gt;[]'
+          description: |
+            Additional items to add to the end of array1.
+      return:
+        description: ''
+        type: 'number[]'
+    inheritanceDescription: <b>Inherited From</b> Array.concat
+  - name: 'every((value: number, index: number, array: number[]) => unknown, any)'
+    uid: azure-maps-control.atlas.data.BoundingBox.every
+    package: azure-maps-control
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every(callbackfn: (value: number, index: number, array:
+        number[]) => unknown, thisArg?: any): boolean
+      parameters:
+        - id: callbackfn
+          type: '(value: number, index: number, array: number[]) =&gt; unknown'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the callbackfn function for each element in the array until the
+            callbackfn returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: <b>Inherited From</b> Array.every
+  - name: 'filter((value: number, index: number, array: number[]) => unknown, any)'
+    uid: azure-maps-control.atlas.data.BoundingBox.filter_1
+    package: azure-maps-control
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function filter(callbackfn: (value: number, index: number, array:
+        number[]) => unknown, thisArg?: any): number[]
+      parameters:
+        - id: callbackfn
+          type: '(value: number, index: number, array: number[]) =&gt; unknown'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+      return:
+        description: ''
+        type: 'number[]'
+    inheritanceDescription: <b>Inherited From</b> Array.filter
+  - name: 'filter<S>((value: number, index: number, array: number[]) => value, any)'
+    uid: azure-maps-control.atlas.data.BoundingBox.filter
+    package: azure-maps-control
+    summary: >-
+      Returns the elements of an array that meet the condition specified in a
+      callback function.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function filter<S>(callbackfn: (value: number, index: number, array:
+        number[]) => value, thisArg?: any): S[]
+      parameters:
+        - id: callbackfn
+          type: '(value: number, index: number, array: number[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The filter method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+      return:
+        description: ''
+        type: 'S[]'
+    inheritanceDescription: <b>Inherited From</b> Array.filter
+  - name: 'forEach((value: number, index: number, array: number[]) => void, any)'
+    uid: azure-maps-control.atlas.data.BoundingBox.forEach
+    package: azure-maps-control
+    summary: Performs the specified action for each element in an array.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function forEach(callbackfn: (value: number, index: number, array:
+        number[]) => void, thisArg?: any)
+      parameters:
+        - id: callbackfn
+          type: '(value: number, index: number, array: number[]) =&gt; void'
+          description: >-
+            A function that accepts up to three arguments. forEach calls the
+            callbackfn function one time for each element in the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+    inheritanceDescription: <b>Inherited From</b> Array.forEach
+  - name: 'indexOf(number, number)'
+    uid: azure-maps-control.atlas.data.BoundingBox.indexOf
+    package: azure-maps-control
+    summary: Returns the index of the first occurrence of a value in an array.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function indexOf(searchElement: number, fromIndex?: number): number'
+      parameters:
+        - id: searchElement
+          type: number
+          description: The value to locate in the array.
+        - id: fromIndex
+          type: number
+          description: >
+            The array index at which to begin the search. If fromIndex is
+            omitted, the search starts at index 0.
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> Array.indexOf
+  - name: join(string)
+    uid: azure-maps-control.atlas.data.BoundingBox.join
+    package: azure-maps-control
+    summary: >-
+      Adds all the elements of an array separated by the specified separator
+      string.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function join(separator?: string): string'
+      parameters:
+        - id: separator
+          type: string
+          description: >
+            A string used to separate one element of an array from the next in
+            the resulting String. If omitted, the array elements are separated
+            with a comma.
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Array.join
+  - name: 'lastIndexOf(number, number)'
+    uid: azure-maps-control.atlas.data.BoundingBox.lastIndexOf
+    package: azure-maps-control
+    summary: Returns the index of the last occurrence of a specified value in an array.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function lastIndexOf(searchElement: number, fromIndex?: number): number'
+      parameters:
+        - id: searchElement
+          type: number
+          description: The value to locate in the array.
+        - id: fromIndex
+          type: number
+          description: >
+            The array index at which to begin the search. If fromIndex is
+            omitted, the search starts at the last index in the array.
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> Array.lastIndexOf
+  - name: 'map<U>((value: number, index: number, array: number[]) => U, any)'
+    uid: azure-maps-control.atlas.data.BoundingBox.map
+    package: azure-maps-control
+    summary: >-
+      Calls a defined callback function on each element of an array, and returns
+      an array that contains the results.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function map<U>(callbackfn: (value: number, index: number, array:
+        number[]) => U, thisArg?: any): U[]
+      parameters:
+        - id: callbackfn
+          type: '(value: number, index: number, array: number[]) =&gt; U'
+          description: >-
+            A function that accepts up to three arguments. The map method calls
+            the callbackfn function one time for each element in the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function. If thisArg is omitted, undefined is used as the this
+            value.
+      return:
+        description: ''
+        type: 'U[]'
+    inheritanceDescription: <b>Inherited From</b> Array.map
+  - name: pop()
+    uid: azure-maps-control.atlas.data.BoundingBox.pop
+    package: azure-maps-control
+    summary: Removes the last element from an array and returns it.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function pop(): number | undefined'
+      return:
+        description: ''
+        type: number | undefined
+    inheritanceDescription: <b>Inherited From</b> Array.pop
+  - name: 'push(number[])'
+    uid: azure-maps-control.atlas.data.BoundingBox.push
+    package: azure-maps-control
+    summary: 'Appends new elements to an array, and returns the new length of the array.'
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function push(items: number[]): number'
+      parameters:
+        - id: items
+          type: 'number[]'
+          description: |
+            New elements of the Array.
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> Array.push
+  - name: >-
+      reduce((previousValue: number, currentValue: number, currentIndex: number,
+      array: number[]) => number)
+    uid: azure-maps-control.atlas.data.BoundingBox.reduce
+    package: azure-maps-control
+    summary: >-
+      Calls the specified callback function for all the elements in an array.
+      The return value of the callback function is the accumulated result, and
+      is provided as an argument in the next call to the callback function.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function reduce(callbackfn: (previousValue: number, currentValue:
+        number, currentIndex: number, array: number[]) => number): number
+      parameters:
+        - id: callbackfn
+          type: >-
+            (previousValue: number, currentValue: number, currentIndex: number,
+            array: number[]) =&gt; number
+          description: >-
+            A function that accepts up to four arguments. The reduce method
+            calls the callbackfn function one time for each element in the
+            array.
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> Array.reduce
+  - name: >-
+      reduce((previousValue: number, currentValue: number, currentIndex: number,
+      array: number[]) => number, number)
+    uid: azure-maps-control.atlas.data.BoundingBox.reduce_1
+    package: azure-maps-control
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function reduce(callbackfn: (previousValue: number, currentValue:
+        number, currentIndex: number, array: number[]) => number, initialValue:
+        number): number
+      parameters:
+        - id: callbackfn
+          type: >-
+            (previousValue: number, currentValue: number, currentIndex: number,
+            array: number[]) =&gt; number
+          description: ''
+        - id: initialValue
+          type: number
+          description: ''
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> Array.reduce
+  - name: >-
+      reduce<U>((previousValue: U, currentValue: number, currentIndex: number,
+      array: number[]) => U, U)
+    uid: azure-maps-control.atlas.data.BoundingBox.reduce_2
+    package: azure-maps-control
+    summary: >-
+      Calls the specified callback function for all the elements in an array.
+      The return value of the callback function is the accumulated result, and
+      is provided as an argument in the next call to the callback function.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function reduce<U>(callbackfn: (previousValue: U, currentValue: number,
+        currentIndex: number, array: number[]) => U, initialValue: U): U
+      parameters:
+        - id: callbackfn
+          type: >-
+            (previousValue: U, currentValue: number, currentIndex: number,
+            array: number[]) =&gt; U
+          description: >-
+            A function that accepts up to four arguments. The reduce method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: initialValue
+          type: U
+          description: >
+            If initialValue is specified, it is used as the initial value to
+            start the accumulation. The first call to the callbackfn function
+            provides this value as an argument instead of an array value.
+      return:
+        description: ''
+        type: U
+    inheritanceDescription: <b>Inherited From</b> Array.reduce
+  - name: >-
+      reduceRight((previousValue: number, currentValue: number, currentIndex:
+      number, array: number[]) => number)
+    uid: azure-maps-control.atlas.data.BoundingBox.reduceRight
+    package: azure-maps-control
+    summary: >-
+      Calls the specified callback function for all the elements in an array, in
+      descending order. The return value of the callback function is the
+      accumulated result, and is provided as an argument in the next call to the
+      callback function.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function reduceRight(callbackfn: (previousValue: number, currentValue:
+        number, currentIndex: number, array: number[]) => number): number
+      parameters:
+        - id: callbackfn
+          type: >-
+            (previousValue: number, currentValue: number, currentIndex: number,
+            array: number[]) =&gt; number
+          description: >-
+            A function that accepts up to four arguments. The reduceRight method
+            calls the callbackfn function one time for each element in the
+            array.
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> Array.reduceRight
+  - name: >-
+      reduceRight((previousValue: number, currentValue: number, currentIndex:
+      number, array: number[]) => number, number)
+    uid: azure-maps-control.atlas.data.BoundingBox.reduceRight_1
+    package: azure-maps-control
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function reduceRight(callbackfn: (previousValue: number, currentValue:
+        number, currentIndex: number, array: number[]) => number, initialValue:
+        number): number
+      parameters:
+        - id: callbackfn
+          type: >-
+            (previousValue: number, currentValue: number, currentIndex: number,
+            array: number[]) =&gt; number
+          description: ''
+        - id: initialValue
+          type: number
+          description: ''
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> Array.reduceRight
+  - name: >-
+      reduceRight<U>((previousValue: U, currentValue: number, currentIndex:
+      number, array: number[]) => U, U)
+    uid: azure-maps-control.atlas.data.BoundingBox.reduceRight_2
+    package: azure-maps-control
+    summary: >-
+      Calls the specified callback function for all the elements in an array, in
+      descending order. The return value of the callback function is the
+      accumulated result, and is provided as an argument in the next call to the
+      callback function.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function reduceRight<U>(callbackfn: (previousValue: U, currentValue:
+        number, currentIndex: number, array: number[]) => U, initialValue: U): U
+      parameters:
+        - id: callbackfn
+          type: >-
+            (previousValue: U, currentValue: number, currentIndex: number,
+            array: number[]) =&gt; U
+          description: >-
+            A function that accepts up to four arguments. The reduceRight method
+            calls the callbackfn function one time for each element in the
+            array.
+        - id: initialValue
+          type: U
+          description: >
+            If initialValue is specified, it is used as the initial value to
+            start the accumulation. The first call to the callbackfn function
+            provides this value as an argument instead of an array value.
+      return:
+        description: ''
+        type: U
+    inheritanceDescription: <b>Inherited From</b> Array.reduceRight
+  - name: reverse()
+    uid: azure-maps-control.atlas.data.BoundingBox.reverse
+    package: azure-maps-control
+    summary: Reverses the elements in an Array.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function reverse(): number[]'
+      return:
+        description: ''
+        type: 'number[]'
+    inheritanceDescription: <b>Inherited From</b> Array.reverse
+  - name: shift()
+    uid: azure-maps-control.atlas.data.BoundingBox.shift
+    package: azure-maps-control
+    summary: Removes the first element from an array and returns it.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function shift(): number | undefined'
+      return:
+        description: ''
+        type: number | undefined
+    inheritanceDescription: <b>Inherited From</b> Array.shift
+  - name: 'slice(number, number)'
+    uid: azure-maps-control.atlas.data.BoundingBox.slice
+    package: azure-maps-control
+    summary: Returns a section of an array.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function slice(start?: number, end?: number): number[]'
+      parameters:
+        - id: start
+          type: number
+          description: The beginning of the specified portion of the array.
+        - id: end
+          type: number
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
+      return:
+        description: ''
+        type: 'number[]'
+    inheritanceDescription: <b>Inherited From</b> Array.slice
+  - name: 'some((value: number, index: number, array: number[]) => unknown, any)'
+    uid: azure-maps-control.atlas.data.BoundingBox.some
+    package: azure-maps-control
+    summary: >-
+      Determines whether the specified callback function returns true for any
+      element of an array.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function some(callbackfn: (value: number, index: number, array:
+        number[]) => unknown, thisArg?: any): boolean
+      parameters:
+        - id: callbackfn
+          type: '(value: number, index: number, array: number[]) =&gt; unknown'
+          description: >-
+            A function that accepts up to three arguments. The some method calls
+
+            the callbackfn function for each element in the array until the
+            callbackfn returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the callbackfn
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: <b>Inherited From</b> Array.some
+  - name: 'sort((a: number, b: number) => number)'
+    uid: azure-maps-control.atlas.data.BoundingBox.sort
+    package: azure-maps-control
+    summary: Sorts an array.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function sort(compareFn?: (a: number, b: number) => number): this'
+      parameters:
+        - id: compareFn
+          type: '(a: number, b: number) =&gt; number'
+          description: >
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
+      return:
+        description: ''
+        type: this
+    inheritanceDescription: <b>Inherited From</b> Array.sort
+  - name: 'splice(number, number)'
+    uid: azure-maps-control.atlas.data.BoundingBox.splice
+    package: azure-maps-control
+    summary: >-
+      Removes elements from an array and, if necessary, inserts new elements in
+      their place, returning the deleted elements.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function splice(start: number, deleteCount?: number): number[]'
+      parameters:
+        - id: start
+          type: number
+          description: >-
+            The zero-based location in the array from which to start removing
+            elements.
+        - id: deleteCount
+          type: number
+          description: |
+            The number of elements to remove.
+      return:
+        description: ''
+        type: 'number[]'
+    inheritanceDescription: <b>Inherited From</b> Array.splice
+  - name: 'splice(number, number, number[])'
+    uid: azure-maps-control.atlas.data.BoundingBox.splice_1
+    package: azure-maps-control
+    summary: >-
+      Removes elements from an array and, if necessary, inserts new elements in
+      their place, returning the deleted elements.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function splice(start: number, deleteCount: number, items: number[]):
+        number[]
+      parameters:
+        - id: start
+          type: number
+          description: >-
+            The zero-based location in the array from which to start removing
+            elements.
+        - id: deleteCount
+          type: number
+          description: The number of elements to remove.
+        - id: items
+          type: 'number[]'
+          description: |
+            Elements to insert into the array in place of the deleted elements.
+      return:
+        description: ''
+        type: 'number[]'
+    inheritanceDescription: <b>Inherited From</b> Array.splice
+  - name: toLocaleString()
+    uid: azure-maps-control.atlas.data.BoundingBox.toLocaleString
+    package: azure-maps-control
+    summary: >-
+      Returns a string representation of an array. The elements are converted to
+      string using their toLocalString methods.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function toLocaleString(): string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Array.toLocaleString
+  - name: toString()
+    uid: azure-maps-control.atlas.data.BoundingBox.toString
+    package: azure-maps-control
+    summary: Returns a string representation of an array.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function toString(): string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Array.toString
+  - name: 'unshift(number[])'
+    uid: azure-maps-control.atlas.data.BoundingBox.unshift
+    package: azure-maps-control
+    summary: Inserts new elements at the start of an array.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function unshift(items: number[]): number'
+      parameters:
+        - id: items
+          type: 'number[]'
+          description: |
+            Elements to insert at the start of the Array.
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> Array.unshift
+methods:
+  - name: 'containsPosition(BoundingBox, Position)'
+    uid: azure-maps-control.atlas.data.BoundingBox.containsPosition
+    package: azure-maps-control
+    summary: Determines if a position is within a bounding box.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function containsPosition(bounds: BoundingBox, position:
+        Position): boolean
+      parameters:
+        - id: bounds
+          type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+          description: The bounding box to see if the position is in.
+        - id: position
+          type: <xref uid="azure-maps-control.atlas.data.Position" />
+          description: The position to see if it is in the bounding box.
+      return:
+        description: True if the position is within the bounding box.
+        type: boolean
+  - name: crossesAntimeridian(BoundingBox)
+    uid: azure-maps-control.atlas.data.BoundingBox.crossesAntimeridian
+    package: azure-maps-control
+    summary: >-
+      Returns a boolean indicating if the bounding box crosses the antimeridian
+      or not.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function crossesAntimeridian(bounds: BoundingBox): boolean'
+      parameters:
+        - id: bounds
+          type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+          description: The bounding box to check.
+      return:
+        description: >-
+          A boolean indicating if the bounding box crosses the antimeridian or
+          not.
+        type: boolean
+  - name: fromBoundingBox(BoundingBox)
+    uid: azure-maps-control.atlas.data.BoundingBox.fromBoundingBox
+    package: azure-maps-control
+    summary: Clones a bounding box.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function fromBoundingBox(boundingBox: BoundingBox): BoundingBox'
+      parameters:
+        - id: boundingBox
+          type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+          description: |
+            The bounding box to clone.
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+  - name: >-
+      fromData(FeatureCollection | Feature<Geometry, any> | Geometry | Shape |
+      Array<FeatureCollection | Feature<Geometry, any> | Geometry | Shape>)
+    uid: azure-maps-control.atlas.data.BoundingBox.fromData
+    package: azure-maps-control
+    summary: >-
+      Calculates the bounding box of a FeatureCollection, Feature, Geometry,
+      Shape or array of these objects.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function fromData(data: FeatureCollection | Feature<Geometry,
+        any> | Geometry | Shape | Array<FeatureCollection | Feature<Geometry,
+        any> | Geometry | Shape>): BoundingBox
+      parameters:
+        - id: data
+          type: >-
+            <xref uid="azure-maps-control.atlas.data.FeatureCollection" /> |
+            <xref uid="azure-maps-control.atlas.data.Feature" />&lt;<xref
+            uid="azure-maps-control.atlas.data.Geometry" />, any&gt; | <xref
+            uid="azure-maps-control.atlas.data.Geometry" /> | <xref
+            uid="azure-maps-control.atlas.Shape" /> | Array&lt;<xref
+            uid="azure-maps-control.atlas.data.FeatureCollection" /> | <xref
+            uid="azure-maps-control.atlas.data.Feature" />&lt;<xref
+            uid="azure-maps-control.atlas.data.Geometry" />, any&gt; | <xref
+            uid="azure-maps-control.atlas.data.Geometry" /> | <xref
+            uid="azure-maps-control.atlas.Shape" />&gt;
+          description: >-
+            The FeatureCollection, Feature, Geometry, Shape or array of these
+            objects to calculate the bounding box for.
+      return:
+        description: 'A bounding box in the format [minLon, minLat, maxLon, maxLat].'
+        type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+  - name: 'fromDimensions(Position, number, number)'
+    uid: azure-maps-control.atlas.data.BoundingBox.fromDimensions
+    package: azure-maps-control
+    summary: Constructs a BoundingBox from the specified dimensions.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function fromDimensions(center: Position, width: number, height:
+        number): BoundingBox
+      parameters:
+        - id: center
+          type: <xref uid="azure-maps-control.atlas.data.Position" />
+          description: The center position of the bounding box.
+        - id: width
+          type: number
+          description: The width of the bounding box.
+        - id: height
+          type: number
+          description: |
+            The height of the bounding box.
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+  - name: 'fromEdges(number, number, number, number)'
+    uid: azure-maps-control.atlas.data.BoundingBox.fromEdges
+    package: azure-maps-control
+    summary: Constructs a BoundingBox from the specified edges.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function fromEdges(west: number, south: number, east: number,
+        north: number): BoundingBox
+      parameters:
+        - id: west
+          type: number
+          description: The west edge of the bounding box.
+        - id: south
+          type: number
+          description: The south edge of the bounding box.
+        - id: east
+          type: number
+          description: The east edge of the bounding box.
+        - id: north
+          type: number
+          description: |
+            The north edge of the bounding box.
+      return:
+        description: ''
+        type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+  - name: 'fromLatLngs(Array<object | number[]>)'
+    uid: azure-maps-control.atlas.data.BoundingBox.fromLatLngs
+    package: azure-maps-control
+    summary: >-
+      Creates a BoundingBox from any array of objects that contain coordinate
+      information.
+
+      Each object is either an array in the format; [lat, lng] or [lat, lng,
+      elv], or an object with the any combination of the following properties:
+
+      Longitude: lng, longitude, lon, x
+
+      Latitude: lat, latitude, y
+
+      Elevation: elv, elevation, alt, altitude, z
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function fromLatLngs(latLngs: Array<object | number[]>):
+        BoundingBox
+      parameters:
+        - id: latLngs
+          type: 'Array&lt;object | number[]&gt;'
+          description: The objects that contain coordinate information.
+      return:
+        description: A BoundingBox that contains all the provided coordinate information.
+        type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+  - name: 'fromPositions(Position[])'
+    uid: azure-maps-control.atlas.data.BoundingBox.fromPositions
+    package: azure-maps-control
+    summary: Creates a BoundingBox that contains all provided Position objects.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function fromPositions(positions: Position[]): BoundingBox'
+      parameters:
+        - id: positions
+          type: '<xref uid="azure-maps-control.atlas.data.Position" />[]'
+          description: An array of locations to use to generate the bounding box.
+      return:
+        description: A bounding box that contains all given positions.
+        type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+  - name: getCenter(BoundingBox)
+    uid: azure-maps-control.atlas.data.BoundingBox.getCenter
+    package: azure-maps-control
+    summary: Calculates the center of a bounding box.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function getCenter(bounds: BoundingBox): Position'
+      parameters:
+        - id: bounds
+          type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+          description: A bounding box to calculate the center of.
+      return:
+        description: A position that represents the center of the bounding box.
+        type: <xref uid="azure-maps-control.atlas.data.Position" />
+  - name: getEast(BoundingBox)
+    uid: azure-maps-control.atlas.data.BoundingBox.getEast
+    package: azure-maps-control
+    summary: Returns the east position value of the bounding box.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function getEast(bounds: BoundingBox): number'
+      parameters:
+        - id: bounds
+          type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+          description: The bounding box to get the position from.
+      return:
+        description: The east position value of the bounding box.
+        type: number
+  - name: getHeight(BoundingBox)
+    uid: azure-maps-control.atlas.data.BoundingBox.getHeight
+    package: azure-maps-control
+    summary: Gets the height of a bounding box in degrees.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function getHeight(bounds: BoundingBox): number'
+      parameters:
+        - id: bounds
+          type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+          description: The bounding box to check.
+      return:
+        description: The height of the bounding box in degrees.
+        type: number
+  - name: getNorth(BoundingBox)
+    uid: azure-maps-control.atlas.data.BoundingBox.getNorth
+    package: azure-maps-control
+    summary: Returns the north position value of the bounding box.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function getNorth(bounds: BoundingBox): number'
+      parameters:
+        - id: bounds
+          type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+          description: The bounding box to get the position from.
+      return:
+        description: The north position value of the bounding box.
+        type: number
+  - name: getNorthEast(BoundingBox)
+    uid: azure-maps-control.atlas.data.BoundingBox.getNorthEast
+    package: azure-maps-control
+    summary: Returns the north east position of the bounding box.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function getNorthEast(bounds: BoundingBox): Position'
+      parameters:
+        - id: bounds
+          type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+          description: The bounding box to get the position from.
+      return:
+        description: The north east position of the bounding box.
+        type: <xref uid="azure-maps-control.atlas.data.Position" />
+  - name: getNorthWest(BoundingBox)
+    uid: azure-maps-control.atlas.data.BoundingBox.getNorthWest
+    package: azure-maps-control
+    summary: Returns the north west position of the bounding box.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function getNorthWest(bounds: BoundingBox): Position'
+      parameters:
+        - id: bounds
+          type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+          description: The bounding box to get the position from.
+      return:
+        description: The north west position of the bounding box.
+        type: <xref uid="azure-maps-control.atlas.data.Position" />
+  - name: getSouth(BoundingBox)
+    uid: azure-maps-control.atlas.data.BoundingBox.getSouth
+    package: azure-maps-control
+    summary: Returns the south position value of the bounding box.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function getSouth(bounds: BoundingBox): number'
+      parameters:
+        - id: bounds
+          type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+          description: The bounding box to get the position from.
+      return:
+        description: The south position value of the bounding box.
+        type: number
+  - name: getSouthEast(BoundingBox)
+    uid: azure-maps-control.atlas.data.BoundingBox.getSouthEast
+    package: azure-maps-control
+    summary: Returns the south east position of the bounding box.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function getSouthEast(bounds: BoundingBox): Position'
+      parameters:
+        - id: bounds
+          type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+          description: The bounding box to get the position from.
+      return:
+        description: The south east position of the bounding box.
+        type: <xref uid="azure-maps-control.atlas.data.Position" />
+  - name: getSouthWest(BoundingBox)
+    uid: azure-maps-control.atlas.data.BoundingBox.getSouthWest
+    package: azure-maps-control
+    summary: Returns the south west position of the bounding box.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function getSouthWest(bounds: BoundingBox): Position'
+      parameters:
+        - id: bounds
+          type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+          description: The bounding box to get the position from.
+      return:
+        description: The south west position of the bounding box.
+        type: <xref uid="azure-maps-control.atlas.data.Position" />
+  - name: getWest(BoundingBox)
+    uid: azure-maps-control.atlas.data.BoundingBox.getWest
+    package: azure-maps-control
+    summary: Returns the west position value of the bounding box.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function getWest(bounds: BoundingBox): number'
+      parameters:
+        - id: bounds
+          type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+          description: The bounding box to get the position from.
+      return:
+        description: The west position value of the bounding box.
+        type: number
+  - name: getWidth(BoundingBox)
+    uid: azure-maps-control.atlas.data.BoundingBox.getWidth
+    package: azure-maps-control
+    summary: Gets the width of a bounding box in degrees.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function getWidth(bounds: BoundingBox): number'
+      parameters:
+        - id: bounds
+          type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+          description: The bounding box to check.
+      return:
+        description: The width of the bounding box in degrees.
+        type: number
+  - name: 'intersect(BoundingBox, BoundingBox)'
+    uid: azure-maps-control.atlas.data.BoundingBox.intersect
+    package: azure-maps-control
+    summary: Determines is two bounding boxes intersect.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function intersect(bounds1: BoundingBox, bounds2: BoundingBox):
+        boolean
+      parameters:
+        - id: bounds1
+          type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+          description: The first bounding box to compare with.
+        - id: bounds2
+          type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+          description: The second bounding box to compare with.
+      return:
+        description: true if the provided bounding boxes intersect.
+        type: boolean
+  - name: 'merge(BoundingBox, BoundingBox)'
+    uid: azure-maps-control.atlas.data.BoundingBox.merge
+    package: azure-maps-control
+    summary: Merges two bounding boxes together.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function merge(bounds1: BoundingBox, bounds2: BoundingBox):
+        BoundingBox
+      parameters:
+        - id: bounds1
+          type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+          description: The first bounding box to merge with.
+        - id: bounds2
+          type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+          description: The second bounding box to merge with.
+      return:
+        description: 'A bounding box in the format [minLon, minLat, maxLon, maxLat].'
+        type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+  - name: splitOnAntimeridian(BoundingBox)
+    uid: azure-maps-control.atlas.data.BoundingBox.splitOnAntimeridian
+    package: azure-maps-control
+    summary: >-
+      Splits a BoundingBox that crosses the Antimeridian into two BoundingBox's.
+      One entirely west of the Antimerdian and another entirely east of the
+      Antimerdian.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function splitOnAntimeridian(bounds: BoundingBox): BoundingBox[]'
+      parameters:
+        - id: bounds
+          type: <xref uid="azure-maps-control.atlas.data.BoundingBox" />
+          description: |+
+
+      return:
+        description: ''
+        type: '<xref uid="azure-maps-control.atlas.data.BoundingBox" />[]'
+extends: Array&lt;number&gt;

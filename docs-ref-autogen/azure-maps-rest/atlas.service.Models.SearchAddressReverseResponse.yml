@@ -1,0 +1,45 @@
+### YamlMime:TSType
+name: SearchAddressReverseResponse
+uid: azure-maps-rest.atlas.service.Models.SearchAddressReverseResponse
+package: azure-maps-rest
+summary: This object is returned from a successful Search Address Reverse call
+fullName: SearchAddressReverseResponse
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: addresses
+    uid: >-
+      azure-maps-rest.atlas.service.Models.SearchAddressReverseResponse.addresses
+    package: azure-maps-rest
+    summary: >-
+      Addresses array
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: addresses
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'addresses?: SearchAddressReverseResult[]'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-maps-rest.atlas.service.Models.SearchAddressReverseResult"
+          />[]
+  - name: summary
+    uid: azure-maps-rest.atlas.service.Models.SearchAddressReverseResponse.summary
+    package: azure-maps-rest
+    summary: ''
+    fullName: summary
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'summary?: SearchAddressReverseSummary'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-maps-rest.atlas.service.Models.SearchAddressReverseSummary"
+          />

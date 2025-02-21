@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: RouteGetRouteDirectionsResponse
+uid: azure-maps-rest.atlas.service.Models.RouteGetRouteDirectionsResponse
+package: azure-maps-rest
+summary: Contains response data for the getRouteDirections operation.
+fullName: RouteGetRouteDirectionsResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type RouteGetRouteDirectionsResponse = RouteDirectionsResponse & {
+    _response: HttpResponse & {
+      bodyAsText: string,
+      parsedBody: RouteDirectionsResponse,
+    },
+  }

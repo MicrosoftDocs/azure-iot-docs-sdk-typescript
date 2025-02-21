@@ -1,0 +1,16 @@
+### YamlMime:TSTypeAlias
+name: MobilityGetTransitItineraryPreviewResponse
+uid: >-
+  azure-maps-rest.atlas.service.Models.MobilityGetTransitItineraryPreviewResponse
+package: azure-maps-rest
+summary: Contains response data for the getTransitItineraryPreview operation.
+fullName: MobilityGetTransitItineraryPreviewResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type MobilityGetTransitItineraryPreviewResponse = TransitItineraryResponse & {
+    _response: HttpResponse & {
+      bodyAsText: string,
+      parsedBody: TransitItineraryResponse,
+    },
+  }

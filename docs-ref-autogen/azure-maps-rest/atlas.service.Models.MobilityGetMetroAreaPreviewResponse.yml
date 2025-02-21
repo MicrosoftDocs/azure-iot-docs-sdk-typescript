@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: MobilityGetMetroAreaPreviewResponse
+uid: azure-maps-rest.atlas.service.Models.MobilityGetMetroAreaPreviewResponse
+package: azure-maps-rest
+summary: Contains response data for the getMetroAreaPreview operation.
+fullName: MobilityGetMetroAreaPreviewResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type MobilityGetMetroAreaPreviewResponse = MetroAreaResponse & {
+    _response: HttpResponse & {
+      bodyAsText: string,
+      parsedBody: MetroAreaResponse,
+    },
+  }

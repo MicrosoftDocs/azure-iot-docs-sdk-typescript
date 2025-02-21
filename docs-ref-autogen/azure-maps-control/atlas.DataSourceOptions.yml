@@ -1,0 +1,206 @@
+### YamlMime:TSType
+name: DataSourceOptions
+uid: azure-maps-control.atlas.DataSourceOptions
+package: azure-maps-control
+summary: |-
+  A data source for managing shape data that will be displayed on the map.
+  A data source must be added to a layer before it is visible on the map.
+  Options for a `DataSourceOptions`.
+fullName: DataSourceOptions
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: buffer
+    uid: azure-maps-control.atlas.DataSourceOptions.buffer
+    package: azure-maps-control
+    summary: >-
+      The size of the buffer around each tile.
+
+      A buffer value of 0 will provide better performance but will be more
+      likely to generate artifacts when rendering.
+
+      Larger buffers will produce left artifacts but will result in slower
+      performance.
+
+      default `128`
+    fullName: buffer
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'buffer?: number'
+      return:
+        description: ''
+        type: number
+  - name: cluster
+    uid: azure-maps-control.atlas.DataSourceOptions.cluster
+    package: azure-maps-control
+    summary: >-
+      A boolean indicating if Point features in the source should be clustered
+      or not.
+
+      If set to true, points will be clustered together into groups by radius.
+
+      default `false`
+    fullName: cluster
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'cluster?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: clusterMaxZoom
+    uid: azure-maps-control.atlas.DataSourceOptions.clusterMaxZoom
+    package: azure-maps-control
+    summary: >-
+      The maximum zoom level in which to cluster points.
+
+      Defaults to one zoom less than `maxZoom` so that last zoom features are
+      not clustered.
+    fullName: clusterMaxZoom
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'clusterMaxZoom?: number'
+      return:
+        description: ''
+        type: number
+  - name: clusterMinPoints
+    uid: azure-maps-control.atlas.DataSourceOptions.clusterMinPoints
+    package: azure-maps-control
+    summary: >-
+      Minimum number of points necessary to form a cluster if clustering is
+      enabled.
+    fullName: clusterMinPoints
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'clusterMinPoints?: number | undefined'
+      return:
+        description: ''
+        type: number | undefined
+  - name: clusterProperties
+    uid: azure-maps-control.atlas.DataSourceOptions.clusterProperties
+    package: azure-maps-control
+    summary: >-
+      Defines custom properties that are calculated using expressions against
+      all the points within each cluster and added to the properties of each
+      cluster point.
+    fullName: clusterProperties
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'clusterProperties?: Record<string, AggregateExpression>'
+      return:
+        description: ''
+        type: >-
+          Record&lt;string, <xref
+          uid="azure-maps-control.atlas.AggregateExpression" />&gt;
+  - name: clusterRadius
+    uid: azure-maps-control.atlas.DataSourceOptions.clusterRadius
+    package: azure-maps-control
+    summary: |-
+      The radius of each cluster in pixels.
+      default `50`
+    fullName: clusterRadius
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'clusterRadius?: number'
+      return:
+        description: ''
+        type: number
+  - name: filter
+    uid: azure-maps-control.atlas.DataSourceOptions.filter
+    package: azure-maps-control
+    summary: >-
+      An expression for filtering features prior to processing them for
+      rendering.
+    fullName: filter
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'filter?: any'
+      return:
+        description: ''
+        type: any
+  - name: generateId
+    uid: azure-maps-control.atlas.DataSourceOptions.generateId
+    package: azure-maps-control
+    summary: >-
+      Whether to generate ids for the geojson features. When enabled, the
+      feature.id property will be auto assigned based on its index in the
+      features array, over-writing any previous values.
+    fullName: generateId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'generateId?: boolean | undefined'
+      return:
+        description: ''
+        type: boolean | undefined
+  - name: lineMetrics
+    uid: azure-maps-control.atlas.DataSourceOptions.lineMetrics
+    package: azure-maps-control
+    summary: |-
+      Specifies whether to calculate line distance metrics.
+      This is required for line layers that specify `lineGradient` values.
+      default `false`
+    fullName: lineMetrics
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'lineMetrics?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: maxZoom
+    uid: azure-maps-control.atlas.DataSourceOptions.maxZoom
+    package: azure-maps-control
+    summary: >-
+      Maximum zoom level at which to create vector tiles (higher means greater
+      detail at high zoom levels).
+
+      default `18`
+    fullName: maxZoom
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'maxZoom?: number'
+      return:
+        description: ''
+        type: number
+  - name: promoteId
+    uid: azure-maps-control.atlas.DataSourceOptions.promoteId
+    package: azure-maps-control
+    summary: >-
+      A specified property name to be used as a feature ID (for feature state).
+
+      This can either be a property name or an object in the form
+      `{<sourceLayer>: <propertyName>}`.
+    fullName: promoteId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'promoteId?: [key: string]: string | string | undefined'
+      return:
+        description: ''
+        type: '[key: string]\: string | string | undefined'
+  - name: tolerance
+    uid: azure-maps-control.atlas.DataSourceOptions.tolerance
+    package: azure-maps-control
+    summary: >-
+      The Douglas-Peucker simplification tolerance that is applied to the data
+      when rendering (higher means simpler geometries and faster performance).
+
+      default `0.375`
+    fullName: tolerance
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'tolerance?: number'
+      return:
+        description: ''
+        type: number
+extends: <xref uid="azure-maps-control.atlas.Options" />

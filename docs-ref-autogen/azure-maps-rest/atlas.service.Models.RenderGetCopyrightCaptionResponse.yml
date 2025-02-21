@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: RenderGetCopyrightCaptionResponse
+uid: azure-maps-rest.atlas.service.Models.RenderGetCopyrightCaptionResponse
+package: azure-maps-rest
+summary: Contains response data for the getCopyrightCaption operation.
+fullName: RenderGetCopyrightCaptionResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type RenderGetCopyrightCaptionResponse = CopyrightCaptionResult & {
+    _response: HttpResponse & {
+      bodyAsText: string,
+      parsedBody: CopyrightCaptionResult,
+    },
+  }

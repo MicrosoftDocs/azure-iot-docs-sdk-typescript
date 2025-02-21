@@ -1,0 +1,164 @@
+### YamlMime:TSType
+name: SpatialCsvWriteOptions
+uid: azure-maps-spatial-io.atlas.SpatialCsvWriteOptions
+package: azure-maps-spatial-io
+summary: Options for writing delimited files.
+fullName: SpatialCsvWriteOptions
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: delimiter
+    uid: azure-maps-spatial-io.atlas.SpatialCsvWriteOptions.delimiter
+    package: azure-maps-spatial-io
+    summary: |-
+      The delimiter character that separates the cells in a row of data.
+      Default: `","`
+    fullName: delimiter
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'delimiter?: string'
+      return:
+        description: ''
+        type: string
+  - name: elvColName
+    uid: azure-maps-spatial-io.atlas.SpatialCsvWriteOptions.elvColName
+    package: azure-maps-spatial-io
+    summary: |-
+      If `spatialformat` is 'latlonelv' this specifies
+      the name of the elevation column to be written in the header.
+      Default: `"elv"`
+    fullName: elvColName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'elvColName?: string'
+      return:
+        description: ''
+        type: string
+  - name: geoColName
+    uid: azure-maps-spatial-io.atlas.SpatialCsvWriteOptions.geoColName
+    package: azure-maps-spatial-io
+    summary: >-
+      The column name for the column in which the GeoJSON geometry is written
+      to.
+
+      Default: `"geo"`
+    fullName: geoColName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'geoColName?: string'
+      return:
+        description: ''
+        type: string
+  - name: includeTypesInHeader
+    uid: azure-maps-spatial-io.atlas.SpatialCsvWriteOptions.includeTypesInHeader
+    package: azure-maps-spatial-io
+    summary: >-
+      Specifies if OData type information should be included in the header
+      beside each column name in brackets.
+
+      Possible type values: string, number, boolean, date, geography
+
+      Default: false
+    fullName: includeTypesInHeader
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'includeTypesInHeader?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: latColName
+    uid: azure-maps-spatial-io.atlas.SpatialCsvWriteOptions.latColName
+    package: azure-maps-spatial-io
+    summary: |-
+      If `spatialformat` is "latlon" or "latlonelv" this specifies
+      the name of the latitude column to be written in the header.
+      Default: `"lat"`
+    fullName: latColName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'latColName?: string'
+      return:
+        description: ''
+        type: string
+  - name: lonColName
+    uid: azure-maps-spatial-io.atlas.SpatialCsvWriteOptions.lonColName
+    package: azure-maps-spatial-io
+    summary: |-
+      If `spatialformat` is "latlon" or "latlonelv" this specifies
+      the name of the longitude column to be written in the header.
+      Default: `"lon"`
+    fullName: lonColName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'lonColName?: string'
+      return:
+        description: ''
+        type: string
+  - name: spatialformat
+    uid: azure-maps-spatial-io.atlas.SpatialCsvWriteOptions.spatialformat
+    package: azure-maps-spatial-io
+    summary: >-
+      Specifies how the GeoJSON data should be written.
+
+      If set to 'latlon' and the geometry is a Point type a latitude and
+      longitude columns will be added.
+
+      If the geometry is not a Point, its row will not be written.
+
+      If set to 'latlonelv' an elevation column will also be added.
+
+      Elevation data will be retrieved from 3rd value in position of Point if
+      specified or by set to 0.
+
+      If set to 'wkt' the geometry value will be written as a Well-Known Text
+      string.
+
+      Default: `"wkt"`
+    fullName: spatialformat
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'spatialformat?: "latlon" | "latlonelv" | "wkt"'
+      return:
+        description: ''
+        type: '"latlon" | "latlonelv" | "wkt"'
+  - name: textQualifier
+    uid: azure-maps-spatial-io.atlas.SpatialCsvWriteOptions.textQualifier
+    package: azure-maps-spatial-io
+    summary: |-
+      Specifies the value that wraps text strings that contain the delimiter.
+      Default: `"`
+    fullName: textQualifier
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'textQualifier?: string'
+      return:
+        description: ''
+        type: string
+inheritedProperties:
+  - name: format
+    uid: azure-maps-spatial-io.atlas.SpatialCsvWriteOptions.format
+    package: azure-maps-spatial-io
+    summary: |-
+      The spatial data format to write the shapes to.
+      Default: `"GeoJSON"`
+    fullName: format
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'format?: "KML" | "GPX" | "GeoRSS" | "GML" | "GeoJSON" | "CSV"'
+      return:
+        description: ''
+        type: '"KML" | "GPX" | "GeoRSS" | "GML" | "GeoJSON" | "CSV"'
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SpatialDataWriteOptions.format](xref:azure-maps-spatial-io.atlas.SpatialDataWriteOptions.format)
+extends: <xref uid="azure-maps-spatial-io.atlas.SpatialDataWriteOptions" />

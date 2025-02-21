@@ -1,0 +1,42 @@
+### YamlMime:TSType
+name: SearchAlongRouteResponse
+uid: azure-maps-rest.atlas.service.Models.SearchAlongRouteResponse
+package: azure-maps-rest
+summary: This object is returned from a successful Search Along Route call.
+fullName: SearchAlongRouteResponse
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: results
+    uid: azure-maps-rest.atlas.service.Models.SearchAlongRouteResponse.results
+    package: azure-maps-rest
+    summary: >-
+      A list of Search Along Route results.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: results
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'results?: SearchAlongRouteResult[]'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-maps-rest.atlas.service.Models.SearchAlongRouteResult" />[]
+  - name: summary
+    uid: azure-maps-rest.atlas.service.Models.SearchAlongRouteResponse.summary
+    package: azure-maps-rest
+    summary: ''
+    fullName: summary
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'summary?: SearchAlongRouteSummary'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-maps-rest.atlas.service.Models.SearchAlongRouteSummary" />

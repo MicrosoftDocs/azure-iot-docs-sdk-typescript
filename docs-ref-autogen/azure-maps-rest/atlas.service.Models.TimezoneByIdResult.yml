@@ -1,0 +1,71 @@
+### YamlMime:TSType
+name: TimezoneByIdResult
+uid: azure-maps-rest.atlas.service.Models.TimezoneByIdResult
+package: azure-maps-rest
+summary: This object is returned from a successful Timezone By ID call
+fullName: TimezoneByIdResult
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: count
+    uid: azure-maps-rest.atlas.service.Models.TimezoneByIdResult.count
+    package: azure-maps-rest
+    summary: >-
+      Count property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: count
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'count?: number'
+      return:
+        description: ''
+        type: number
+  - name: referenceUtcTimestamp
+    uid: >-
+      azure-maps-rest.atlas.service.Models.TimezoneByIdResult.referenceUtcTimestamp
+    package: azure-maps-rest
+    summary: >-
+      Reference Utc Timestamp property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: referenceUtcTimestamp
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'referenceUtcTimestamp?: Date'
+      return:
+        description: ''
+        type: Date
+  - name: timeZones
+    uid: azure-maps-rest.atlas.service.Models.TimezoneByIdResult.timeZones
+    package: azure-maps-rest
+    summary: ''
+    fullName: timeZones
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'timeZones?: TimezoneById[]'
+      return:
+        description: ''
+        type: '<xref uid="azure-maps-rest.atlas.service.Models.TimezoneById" />[]'
+  - name: version
+    uid: azure-maps-rest.atlas.service.Models.TimezoneByIdResult.version
+    package: azure-maps-rest
+    summary: >-
+      Version property
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: version
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'version?: string'
+      return:
+        description: ''
+        type: string

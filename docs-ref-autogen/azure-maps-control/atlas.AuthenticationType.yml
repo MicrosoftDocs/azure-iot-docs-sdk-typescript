@@ -1,0 +1,49 @@
+### YamlMime:TSEnum
+name: AuthenticationType
+uid: azure-maps-control.atlas.AuthenticationType
+package: azure-maps-control
+summary: An enumeration used to specify the type of authentication mechanism to use.
+fullName: AuthenticationType
+remarks: ''
+isDeprecated: false
+fields:
+  - name: aad
+    uid: azure-maps-control.atlas.AuthenticationType.aad
+    package: azure-maps-control
+    summary: >-
+      The AAD implicit grant mechanism. Recommended for pages protected by a
+      sign-in.
+
+      By default the page will be redirected to the AAD login when the map
+      control initializes.
+
+      Specify a logged-in `PublicClientApplication` in the
+      `AuthenticationOptions`
+
+      for greater control over when/how the users signs in.
+
+      Literal value `"aad"`
+  - name: anonymous
+    uid: azure-maps-control.atlas.AuthenticationType.anonymous
+    package: azure-maps-control
+    summary: >-
+      The anonymous authentication mechanism. Recommended for public pages.
+
+      Allows a callback responsible for acquiring an authentication token to be
+      provided.
+
+      Literal value `"anonymous"`
+  - name: sas
+    uid: azure-maps-control.atlas.AuthenticationType.sas
+    package: azure-maps-control
+    summary: >-
+      The shared access signature authentication mechanism. Allows a callback
+      responsible for acquiring a token to be provided on requests.
+
+      Literal value `"sas"`.
+  - name: subscriptionKey
+    uid: azure-maps-control.atlas.AuthenticationType.subscriptionKey
+    package: azure-maps-control
+    summary: |-
+      The subscription key authentication mechanism.
+      Literal value `"subscriptionKey"`

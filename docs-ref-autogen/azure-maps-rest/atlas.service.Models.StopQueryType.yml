@@ -1,0 +1,28 @@
+### YamlMime:TSEnum
+name: StopQueryType
+uid: azure-maps-rest.atlas.service.Models.StopQueryType
+package: azure-maps-rest
+summary: |-
+  Defines values for StopQueryType.
+  Possible values include: 'stopId', 'stopKey'
+fullName: StopQueryType
+remarks: ''
+isDeprecated: false
+fields:
+  - name: StopId
+    uid: azure-maps-rest.atlas.service.Models.StopQueryType.StopId
+    package: azure-maps-rest
+    summary: >-
+      The unique identifier for the respective public transit stop. When
+      referring stops overtime,
+
+      it is suggested to use stopId that will not change if the physical stop
+      exists.
+  - name: StopKey
+    uid: azure-maps-rest.atlas.service.Models.StopQueryType.StopKey
+    package: azure-maps-rest
+    summary: >-
+      The GTFS stop Id. GTFS stop Ids are provided by the transit authority and
+      are subject to
+
+      change.

@@ -1,0 +1,78 @@
+### YamlMime:TSType
+name: AffineTransform
+uid: azure-maps-control.atlas.math.AffineTransform
+package: azure-maps-control
+summary: An Affine Transform class generated from a set of reference points.
+fullName: AffineTransform
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: 'AffineTransform(number[][], number[][])'
+    uid: azure-maps-control.atlas.math.AffineTransform.constructor
+    package: azure-maps-control
+    summary: An Affine Transform class generated from a set of reference points.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new AffineTransform(source: number[][], target: number[][])'
+      parameters:
+        - id: source
+          type: 'number[][]'
+          description: >-
+            A set of reference points from the source reference system to
+            transform from.
+        - id: target
+          type: 'number[][]'
+          description: >
+            A set of reference points from the target reference system to
+            transform to.
+methods:
+  - name: 'toSource(number[][], number)'
+    uid: azure-maps-control.atlas.math.AffineTransform.toSource
+    package: azure-maps-control
+    summary: >-
+      Converts an array of points from the target reference system to the source
+      reference system.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function toSource(targetPoints: number[][], decimals?: number):
+        number[][]
+      parameters:
+        - id: targetPoints
+          type: 'number[][]'
+          description: An array of points from the target reference system to transform.
+        - id: decimals
+          type: number
+          description: Number of decimal places to round the results off to.
+      return:
+        description: >-
+          An array of points that have been transformed to the source reference
+          system.
+        type: 'number[][]'
+  - name: 'toTarget(number[][], number)'
+    uid: azure-maps-control.atlas.math.AffineTransform.toTarget
+    package: azure-maps-control
+    summary: >-
+      Converts an array of points from the source reference system to the target
+      reference system.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function toTarget(sourcePoints: number[][], decimals?: number):
+        number[][]
+      parameters:
+        - id: sourcePoints
+          type: 'number[][]'
+          description: An array of points from the source reference system to transform.
+        - id: decimals
+          type: number
+          description: Number of decimal places to round the results off to.
+      return:
+        description: >-
+          An array of points that have been transformed to the target reference
+          system.
+        type: 'number[][]'

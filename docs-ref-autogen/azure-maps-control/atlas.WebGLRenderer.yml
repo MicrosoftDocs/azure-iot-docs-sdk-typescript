@@ -1,0 +1,148 @@
+### YamlMime:TSType
+name: WebGLRenderer
+uid: azure-maps-control.atlas.WebGLRenderer
+package: azure-maps-control
+summary: Interface for rendering WebGL graphics in a WebGLLayer.
+fullName: WebGLRenderer
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: renderingMode
+    uid: azure-maps-control.atlas.WebGLRenderer.renderingMode
+    package: azure-maps-control
+    summary: Either "2d" or "3d". Defaults to "2d".
+    fullName: renderingMode
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'renderingMode?: "2d" | "3d"'
+      return:
+        description: ''
+        type: '"2d" | "3d"'
+methods:
+  - name: 'onAdd(Map, WebGLRenderingContext)'
+    uid: azure-maps-control.atlas.WebGLRenderer.onAdd
+    package: azure-maps-control
+    summary: >-
+      Optional method called when the layer has been added to the Map.
+
+      This gives the layer a chance to initialize gl resources and register
+      event listeners.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function onAdd(map: Map, gl: WebGLRenderingContext)'
+      parameters:
+        - id: map
+          type: <xref uid="azure-maps-control.atlas.Map" />
+          description: The Map this WebGL layer was just added to.
+        - id: gl
+          type: WebGLRenderingContext
+          description: |
+            The gl context for the map.
+  - name: 'onRemove(Map, WebGLRenderingContext)'
+    uid: azure-maps-control.atlas.WebGLRenderer.onRemove
+    package: azure-maps-control
+    summary: >-
+      Optional method called when the layer has been removed from the Map.
+
+      This gives the layer a chance to clean up gl resources and event
+      listeners.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function onRemove(map: Map, gl: WebGLRenderingContext)'
+      parameters:
+        - id: map
+          type: <xref uid="azure-maps-control.atlas.Map" />
+          description: The Map this WebGL layer was just added to.
+        - id: gl
+          type: WebGLRenderingContext
+          description: |
+            The gl context for the map.
+  - name: 'prerender(WebGLRenderingContext, number[])'
+    uid: azure-maps-control.atlas.WebGLRenderer.prerender
+    package: azure-maps-control
+    summary: >-
+      Optional method called during a render frame to allow a layer to prepare
+      resources
+
+      or render into a texture.
+
+      The layer cannot make any assumptions about the current GL state and must
+      bind a framebuffer
+
+      before rendering.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function prerender(gl: WebGLRenderingContext, matrix: number[])'
+      parameters:
+        - id: gl
+          type: WebGLRenderingContext
+          description: The map's gl context.
+        - id: matrix
+          type: 'number[]'
+          description: >
+            The map's camera matrix. It projects spherical mercator coordinates
+            to gl
+                          coordinates. The mercator coordinate  [0, 0] represents the top left corner of
+                          the mercator world and  [1, 1] represents the bottom right corner. When the
+                          renderingMode is  "3d" , the z coordinate is conformal. A box with identical
+                          x, y, and z lengths in mercator units would be rendered as a cube.
+                          MercatorCoordinate .fromLatLng can be used to project a  LngLat to a mercator
+                          coordinate.
+  - name: 'render(WebGLRenderingContext, number[])'
+    uid: azure-maps-control.atlas.WebGLRenderer.render
+    package: azure-maps-control
+    summary: >
+      Called during a render frame allowing the layer to draw into the GL
+      context.
+
+      The layer can assume blending and depth state is set to allow the layer to
+      properly blend
+
+      and clip other layers. The layer cannot make any other assumptions about
+      the current GL state.
+
+
+      If the layer needs to render to a texture, it should implement the
+      prerender method to do this
+
+      and only use the render method for drawing directly into the main
+      framebuffer.
+
+
+      The blend function is set to gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA).
+      This expects
+
+      colors to be provided in premultiplied alpha form where the r, g and b
+      values are already
+
+      multiplied by the a value. If you are unable to provide colors in
+      premultiplied form you may
+
+      want to change the blend function to
+
+      gl.blendFuncSeparate(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA, gl.ONE,
+      gl.ONE_MINUS_SRC_ALPHA).
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function render(gl: WebGLRenderingContext, matrix: number[])'
+      parameters:
+        - id: gl
+          type: WebGLRenderingContext
+          description: The map's gl context.
+        - id: matrix
+          type: 'number[]'
+          description: >
+            The map's camera matrix. It projects spherical mercator coordinates
+            to gl
+                          coordinates. The mercator coordinate  [0, 0] represents the top left corner of
+                          the mercator world and  [1, 1] represents the bottom right corner. When the
+                          renderingMode is  "3d" , the z coordinate is conformal. A box with identical
+                          x, y, and z lengths in mercator units would be rendered as a cube.
+                          MercatorCoordinate .fromLatLng can be used to project a  LngLat to a mercator
+                          coordinate.

@@ -1,0 +1,16 @@
+### YamlMime:TSTypeAlias
+name: MobilityGetRealTimeArrivalsPreviewResponse
+uid: >-
+  azure-maps-rest.atlas.service.Models.MobilityGetRealTimeArrivalsPreviewResponse
+package: azure-maps-rest
+summary: Contains response data for the getRealTimeArrivalsPreview operation.
+fullName: MobilityGetRealTimeArrivalsPreviewResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type MobilityGetRealTimeArrivalsPreviewResponse = RealTimeArrivalsResponse & {
+    _response: HttpResponse & {
+      bodyAsText: string,
+      parsedBody: RealTimeArrivalsResponse,
+    },
+  }

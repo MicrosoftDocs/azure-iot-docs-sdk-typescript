@@ -1,0 +1,49 @@
+### YamlMime:TSType
+name: Direction
+uid: azure-maps-rest.atlas.service.Models.Direction
+package: azure-maps-rest
+summary: The walking directions guidance.
+fullName: Direction
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: absoluteDirection
+    uid: azure-maps-rest.atlas.service.Models.Direction.absoluteDirection
+    package: azure-maps-rest
+    summary: >-
+      The absolute walking direction associated with this step. Possible values
+      include: 'north',
+
+      'northeast', 'east', 'southeast', 'south', 'southwest', 'west',
+      'northwest'
+    fullName: absoluteDirection
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'absoluteDirection?: AbsoluteDirection'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.AbsoluteDirection" />
+  - name: relativeDirection
+    uid: azure-maps-rest.atlas.service.Models.Direction.relativeDirection
+    package: azure-maps-rest
+    summary: >-
+      The relative walking direction associated with applicable step. Possible
+      values include:
+
+      'depart', 'hardLeft', 'left', 'slightlyLeft', 'continue', 'slightlyRight',
+      'right',
+
+      'hardRight', 'circleClockwise', 'circleCounterclockwise', 'elevator',
+      'uturnLeft',
+
+      'uturnRight'
+    fullName: relativeDirection
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'relativeDirection?: RelativeDirection'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-rest.atlas.service.Models.RelativeDirection" />

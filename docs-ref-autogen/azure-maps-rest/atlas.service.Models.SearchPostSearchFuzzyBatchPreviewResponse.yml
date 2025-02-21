@@ -1,0 +1,17 @@
+### YamlMime:TSTypeAlias
+name: SearchPostSearchFuzzyBatchPreviewResponse
+uid: azure-maps-rest.atlas.service.Models.SearchPostSearchFuzzyBatchPreviewResponse
+package: azure-maps-rest
+summary: Contains response data for the postSearchFuzzyBatchPreview operation.
+fullName: SearchPostSearchFuzzyBatchPreviewResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SearchPostSearchFuzzyBatchPreviewResponse = BatchResponse &
+    SearchPostSearchFuzzyBatchPreviewHeaders & {
+      _response: HttpResponse & {
+        bodyAsText: string,
+        parsedBody: BatchResponse,
+        parsedHeaders: SearchPostSearchFuzzyBatchPreviewHeaders,
+      },
+    }

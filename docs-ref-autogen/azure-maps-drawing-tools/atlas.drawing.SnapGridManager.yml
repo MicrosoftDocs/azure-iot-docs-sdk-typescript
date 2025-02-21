@@ -1,0 +1,123 @@
+### YamlMime:TSType
+name: SnapGridManager
+uid: azure-maps-drawing-tools.atlas.drawing.SnapGridManager
+package: azure-maps-drawing-tools
+summary: >-
+  Manages a pixel based grid for snapping positions at integer based zoom
+  levels.
+fullName: SnapGridManager
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: 'SnapGridManager(azmaps.Map, SnapGridManagerOptions)'
+    uid: azure-maps-drawing-tools.atlas.drawing.SnapGridManager.constructor
+    package: azure-maps-drawing-tools
+    summary: >-
+      Manages a pixel based grid for snapping positions at integer based zoom
+      levels.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new SnapGridManager(map: azmaps.Map, options?: SnapGridManagerOptions)'
+      parameters:
+        - id: map
+          type: <xref uid="azmaps.Map" />
+          description: The map to attache the snap grid manager to.
+        - id: options
+          type: >-
+            <xref
+            uid="azure-maps-drawing-tools.atlas.drawing.SnapGridManagerOptions"
+            />
+          description: |
+            Options to apply to the snap grid manager.
+methods:
+  - name: dispose()
+    uid: azure-maps-drawing-tools.atlas.drawing.SnapGridManager.dispose
+    package: azure-maps-drawing-tools
+    summary: Disposes the manager.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function dispose()
+  - name: getGridLayer()
+    uid: azure-maps-drawing-tools.atlas.drawing.SnapGridManager.getGridLayer
+    package: azure-maps-drawing-tools
+    summary: Gets the line layer used to render the grid lines.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getGridLayer(): azmaps.layer.LineLayer'
+      return:
+        description: A line layer used to render the grid lines.
+        type: <xref uid="azmaps.layer.LineLayer" />
+  - name: getOptions()
+    uid: azure-maps-drawing-tools.atlas.drawing.SnapGridManager.getOptions
+    package: azure-maps-drawing-tools
+    summary: Gets the options used by the SnapGridManager.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getOptions(): SnapGridManagerOptions'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-maps-drawing-tools.atlas.drawing.SnapGridManagerOptions" />
+  - name: setOptions(SnapGridManagerOptions)
+    uid: azure-maps-drawing-tools.atlas.drawing.SnapGridManager.setOptions
+    package: azure-maps-drawing-tools
+    summary: Sets the options of the snap grid manager.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function setOptions(options: SnapGridManagerOptions)'
+      parameters:
+        - id: options
+          type: >-
+            <xref
+            uid="azure-maps-drawing-tools.atlas.drawing.SnapGridManagerOptions"
+            />
+          description: |
+            Options to set.
+  - name: 'snapPositions(azmaps.data.Position[], number)'
+    uid: azure-maps-drawing-tools.atlas.drawing.SnapGridManager.snapPositions
+    package: azure-maps-drawing-tools
+    summary: >-
+      Snaps an array of positions to the grid. If `optimize` is set, duplicate
+      sequential positions will be removed from the shape.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function snapPositions(positions: azmaps.data.Position[], zoom?:
+        number): azmaps.data.Position[]
+      parameters:
+        - id: positions
+          type: '<xref uid="azmaps.data.Position" />[]'
+          description: The positions to snap.
+        - id: zoom
+          type: number
+          description: >-
+            Optionally specify which zoom level to optimize the snapping for. If
+            not specified, the map's zoom level will be used.
+      return:
+        description: A new array of snapped positions.
+        type: '<xref uid="azmaps.data.Position" />[]'
+  - name: 'snapShape(azmaps, number)'
+    uid: azure-maps-drawing-tools.atlas.drawing.SnapGridManager.snapShape
+    package: azure-maps-drawing-tools
+    summary: Snaps a Shape or GeoJSON feature coordinates to the grid.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function snapShape(shape: azmaps, zoom?: number)'
+      parameters:
+        - id: shape
+          type: azmaps
+          description: A shape or GeoJSON feature to snap.
+        - id: zoom
+          type: number
+          description: >
+            Optionally specify which zoom level to optimize the snapping for. If
+            not specified, the maps zoom level will be used.

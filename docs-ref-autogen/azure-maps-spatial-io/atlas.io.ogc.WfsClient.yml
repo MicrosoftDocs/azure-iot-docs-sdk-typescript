@@ -1,0 +1,124 @@
+### YamlMime:TSType
+name: WfsClient
+uid: azure-maps-spatial-io.atlas.io.ogc.WfsClient
+package: azure-maps-spatial-io
+summary: A class that manages connections to an OGC Web Mapping Feature Service (WFS)
+fullName: WfsClient
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: WfsClient(WfsServiceOptions)
+    uid: azure-maps-spatial-io.atlas.io.ogc.WfsClient.constructor
+    package: azure-maps-spatial-io
+    summary: >-
+      A class for connecting to a OGC Web Feature Services (WFS). May require
+      CORs or a proxy via transformRequest.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new WfsClient(options: WfsServiceOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-maps-spatial-io.atlas.WfsServiceOptions" />
+          description: |
+            Options that define how to connect to a WFS service.
+methods:
+  - name: 'describeFeatureTypes(string | string[])'
+    uid: azure-maps-spatial-io.atlas.io.ogc.WfsClient.describeFeatureTypes
+    package: azure-maps-spatial-io
+    summary: >-
+      Retrieves details about one or more feature types. The order of the
+      results may not align with input.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function describeFeatureTypes(featureTypeNames: string | string[]):
+        Promise<WfsFeatureTypeDescription[]>
+      parameters:
+        - id: featureTypeNames
+          type: 'string | string[]'
+          description: |
+            One or more feature type names to retrieve details for.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="azure-maps-spatial-io.atlas.WfsFeatureTypeDescription" />[]&gt;
+  - name: getCapabilities()
+    uid: azure-maps-spatial-io.atlas.io.ogc.WfsClient.getCapabilities
+    package: azure-maps-spatial-io
+    summary: >-
+      Requests service metadata, which contains a description of the server’s
+      information,
+
+      content, and acceptable request parameter values.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getCapabilities(): Promise<WfsCapabilities>'
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="azure-maps-spatial-io.atlas.WfsCapabilities"
+          />&gt;
+  - name: getFeatureCount(WfsFeatureRequest)
+    uid: azure-maps-spatial-io.atlas.io.ogc.WfsClient.getFeatureCount
+    package: azure-maps-spatial-io
+    summary: >-
+      Retrieves the number of features that match the query. Sets the WFS
+      `resultType` parameter to `"hits"`
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getFeatureCount(request: WfsFeatureRequest): Promise<number>'
+      parameters:
+        - id: request
+          type: <xref uid="azure-maps-spatial-io.atlas.WfsFeatureRequest" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;number&gt;
+  - name: getFeatureInfo(WfsFeatureRequest)
+    uid: azure-maps-spatial-io.atlas.io.ogc.WfsClient.getFeatureInfo
+    package: azure-maps-spatial-io
+    summary: |-
+      Queries features from the service and returns a raw JSON response.
+      This may not include geometery information depending on filter parameters.
+      Sets the WFS `resultType` parameter to `"results"`.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getFeatureInfo(request: WfsFeatureRequest):
+        Promise<Record<string, any>>
+      parameters:
+        - id: request
+          type: <xref uid="azure-maps-spatial-io.atlas.WfsFeatureRequest" />
+          description: |
+            The request details for the WFS service.
+      return:
+        description: ''
+        type: 'Promise&lt;Record&lt;string, any&gt;&gt;'
+  - name: getFeatures(WfsFeatureRequest)
+    uid: azure-maps-spatial-io.atlas.io.ogc.WfsClient.getFeatures
+    package: azure-maps-spatial-io
+    summary: |-
+      Queries features from the service and returns a GeoJSON FeatureCollection.
+      Sets the WFS `resultType` parameter to `"results"`.
+      If geometry details are filtered out, null will be returned.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getFeatures(request: WfsFeatureRequest):
+        Promise<azmaps.data.FeatureCollection>
+      parameters:
+        - id: request
+          type: <xref uid="azure-maps-spatial-io.atlas.WfsFeatureRequest" />
+          description: |
+            The request details for the WFS service.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="azmaps.data.FeatureCollection" />&gt;

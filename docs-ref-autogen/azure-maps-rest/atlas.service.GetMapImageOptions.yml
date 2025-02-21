@@ -1,0 +1,13 @@
+### YamlMime:TSTypeAlias
+name: GetMapImageOptions
+uid: azure-maps-rest.atlas.service.GetMapImageOptions
+package: azure-maps-rest
+summary: ''
+fullName: GetMapImageOptions
+remarks: ''
+isDeprecated: false
+syntax: |
+  type GetMapImageOptions = Merge<
+    RenderGetMapImageOptionalParams,
+    { bbox?: GeoJSON.BBox, center?: GeoJSON.Position }
+  >

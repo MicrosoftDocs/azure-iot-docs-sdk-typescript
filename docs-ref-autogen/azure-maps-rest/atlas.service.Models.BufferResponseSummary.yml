@@ -1,0 +1,42 @@
+### YamlMime:TSType
+name: BufferResponseSummary
+uid: azure-maps-rest.atlas.service.Models.BufferResponseSummary
+package: azure-maps-rest
+summary: Summary of the call.
+fullName: BufferResponseSummary
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: information
+    uid: azure-maps-rest.atlas.service.Models.BufferResponseSummary.information
+    package: azure-maps-rest
+    summary: >-
+      The information about what happened during the call.
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: information
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'information?: string'
+      return:
+        description: ''
+        type: string
+  - name: udid
+    uid: azure-maps-rest.atlas.service.Models.BufferResponseSummary.udid
+    package: azure-maps-rest
+    summary: >-
+      The udid for the user data if one exists
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: udid
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'udid?: string'
+      return:
+        description: ''
+        type: string

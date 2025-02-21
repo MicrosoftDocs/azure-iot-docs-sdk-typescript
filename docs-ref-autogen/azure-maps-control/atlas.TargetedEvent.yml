@@ -1,0 +1,36 @@
+### YamlMime:TSType
+name: TargetedEvent
+uid: azure-maps-control.atlas.TargetedEvent
+package: azure-maps-control
+summary: ''
+fullName: TargetedEvent
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: target
+    uid: azure-maps-control.atlas.TargetedEvent.target
+    package: azure-maps-control
+    summary: The target object the event occurred on.
+    fullName: target
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'target?: HtmlMarker | Popup'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-control.atlas.HtmlMarker" /> | <xref
+          uid="azure-maps-control.atlas.Popup" />
+  - name: type
+    uid: azure-maps-control.atlas.TargetedEvent.type
+    package: azure-maps-control
+    summary: The event type.
+    fullName: type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'type: string'
+      return:
+        description: ''
+        type: string

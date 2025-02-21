@@ -1,0 +1,152 @@
+### YamlMime:TSType
+name: SimpleDataLayer
+uid: azure-maps-spatial-io.atlas.layer.SimpleDataLayer
+package: azure-maps-spatial-io
+summary: >-
+  A layer that simplifies the rendering of geospatial data on the map.
+
+  **Note:** Because this layer wraps other layers which will be added/removed
+  with this
+
+  some layer ordering operations are not supported.
+
+  Adding this layer before another, adding another layer before this, and moving
+  this layer are not supported.
+
+  These restrictions only apply to this layer and not the layers wrapped by
+  this.
+fullName: SimpleDataLayer<T>
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: 'SimpleDataLayer(azmaps.source.DataSource, SimpleDataLayerOptions)'
+    uid: azure-maps-spatial-io.atlas.layer.SimpleDataLayer.constructor
+    package: azure-maps-spatial-io
+    summary: Constructs a new SimpleDataLayer.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new SimpleDataLayer(datasource: azmaps.source.DataSource, options?:
+        SimpleDataLayerOptions)
+      parameters:
+        - id: datasource
+          type: <xref uid="azmaps.source.DataSource" />
+          description: The data source that contains the data.
+        - id: options
+          type: <xref uid="azure-maps-spatial-io.atlas.SimpleDataLayerOptions" />
+          description: |
+            The options of the simple data layer.
+inheritedProperties:
+  - name: metadata
+    uid: azure-maps-spatial-io.atlas.layer.SimpleDataLayer.metadata
+    package: azure-maps-spatial-io
+    summary: A property for associating custom data with the layer.
+    fullName: metadata
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'metadata?: any'
+      return:
+        description: ''
+        type: any
+    inheritanceDescription: <b>Inherited From</b> Layer.metadata
+inheritedMethods:
+  - name: getId()
+    uid: azure-maps-spatial-io.atlas.layer.SimpleDataLayer.getId
+    package: azure-maps-spatial-io
+    summary: Gets the id of the layer
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getId(): string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Layer.getId
+  - name: getMap()
+    uid: azure-maps-spatial-io.atlas.layer.SimpleDataLayer.getMap
+    package: azure-maps-spatial-io
+    summary: 'Gets the map that the layer is currently added to, or null.'
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getMap(): Map'
+      return:
+        description: ''
+        type: Map
+    inheritanceDescription: <b>Inherited From</b> Layer.getMap
+methods:
+  - name: closePopup()
+    uid: azure-maps-spatial-io.atlas.layer.SimpleDataLayer.closePopup
+    package: azure-maps-spatial-io
+    summary: Closes the popup.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function closePopup()
+  - name: dispose()
+    uid: azure-maps-spatial-io.atlas.layer.SimpleDataLayer.dispose
+    package: azure-maps-spatial-io
+    summary: Cleans up any resources this layer is consuming.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function dispose()
+  - name: getLayers()
+    uid: azure-maps-spatial-io.atlas.layer.SimpleDataLayer.getLayers
+    package: azure-maps-spatial-io
+    summary: 'Gets the group of layers wrapped by this class, used for rendering data.'
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getLayers(): SimpleDataLayerGroup'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-spatial-io.atlas.SimpleDataLayerGroup" />
+  - name: getOptions()
+    uid: azure-maps-spatial-io.atlas.layer.SimpleDataLayer.getOptions
+    package: azure-maps-spatial-io
+    summary: Gets the options of the layer.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getOptions(): SimpleDataLayerOptions'
+      return:
+        description: ''
+        type: <xref uid="azure-maps-spatial-io.atlas.SimpleDataLayerOptions" />
+  - name: onAdd(azmaps.Map)
+    uid: azure-maps-spatial-io.atlas.layer.SimpleDataLayer.onAdd
+    package: azure-maps-spatial-io
+    summary: The event logic that processes when the layer is added to the map.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function onAdd(map: azmaps.Map)'
+      parameters:
+        - id: map
+          type: <xref uid="azmaps.Map" />
+          description: ''
+  - name: onRemove()
+    uid: azure-maps-spatial-io.atlas.layer.SimpleDataLayer.onRemove
+    package: azure-maps-spatial-io
+    summary: The event logic that processes when the layer is removed from the map.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function onRemove()
+  - name: setOptions(SimpleDataLayerOptions)
+    uid: azure-maps-spatial-io.atlas.layer.SimpleDataLayer.setOptions
+    package: azure-maps-spatial-io
+    summary: Sets the options of the layer.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function setOptions(options: SimpleDataLayerOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="azure-maps-spatial-io.atlas.SimpleDataLayerOptions" />
+          description: |
+            The new options for the layer.
+extends: Layer

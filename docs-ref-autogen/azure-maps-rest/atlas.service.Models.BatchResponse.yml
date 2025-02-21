@@ -1,0 +1,44 @@
+### YamlMime:TSType
+name: BatchResponse
+uid: azure-maps-rest.atlas.service.Models.BatchResponse
+package: azure-maps-rest
+summary: This object is returned from a successful Batch service call
+fullName: BatchResponse
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: batchItems
+    uid: azure-maps-rest.atlas.service.Models.BatchResponse.batchItems
+    package: azure-maps-rest
+    summary: >-
+      Array containing the batch results
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: batchItems
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'batchItems?: any[]'
+      return:
+        description: ''
+        type: 'any[]'
+  - name: summary
+    uid: azure-maps-rest.atlas.service.Models.BatchResponse.summary
+    package: azure-maps-rest
+    summary: >-
+      Summary for the batch request
+
+      **NOTE: This property will not be serialized. It can only be populated by
+      the server.**
+    fullName: summary
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'summary?: BatchResponseSummary'
+      return:
+        description: ''
+        type: >-
+          <xref uid="azure-maps-rest.atlas.service.Models.BatchResponseSummary"
+          />
